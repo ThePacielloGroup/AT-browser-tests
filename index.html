@@ -2,7 +2,7 @@
 
 <html lang="en">
 <head>
-		<title>The elements of HTML</title>
+		<title>Aural UI of HTML elements</title>
         <meta charset="utf-8"> 
       <script src="scripts/html5shiv.js"> </script> 
 		<style>
@@ -44,8 +44,8 @@
     <p>Found a bug? Please <a href="https://github.com/ThePacielloGroup/AT-browser-tests/issues?state=open">report it</a>.</p>
 
     <p>&nbsp;</p>
-    <p>A list of HTML:</p></header>
-
+    </header>
+<h2>List of HTML elements:</h2>
 				
 <nav><ul id="toc-min" class="navlist">
 				  <li><a href="#toc-a">A</a></li>
@@ -100,7 +100,7 @@
 					</tfoot>
 					<tbody>
 						<tr id="toc-a" class="match">
-							<th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-a-element"><code>a</code></a></th>
+							<th scope="row"><a href="test-files/test1.html"><code>a</code></a> with href</th>
 							<th scope="row">&nbsp;</th>
 							<th scope="row">&nbsp;</th>
 							<th scope="row">&nbsp;</th>
@@ -108,6 +108,15 @@
 							<th scope="row">&nbsp;</th>
 							<th scope="row">&nbsp;</th>
 						</tr>
+						<tr id="toc-a2" class="match">
+						  <th scope="row"><a href="test-files/test2.html"><code>a</code></a> with no href</th>
+						  <th scope="row">&nbsp;</th>
+						  <th scope="row">&nbsp;</th>
+						  <th scope="row">&nbsp;</th>
+						  <th scope="row">&nbsp;</th>
+						  <th scope="row">&nbsp;</th>
+						  <th scope="row">&nbsp;</th>
+					  </tr>
 						<tr>
 							<th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-abbr-element"><code>abbr</code></a></th>
 							<th scope="row">&nbsp;</th>
@@ -1831,7 +1840,7 @@
 	  <h2>Acknowledgements</h2>
           <p>Deblyn Prado, Manuel Strehl, Jens O. Meiert, Michael Steidl, Sime Vidas. 
 	</footer>
-	<script>
+<script>
 		[].slice.call(document.querySelector('main').querySelectorAll('img')).forEach(function (img) { 
 			img.offsetParent.style.backgroundColor = img.title === 'yes' ? '#9f9' : '#f99'; 
 		});

@@ -8,3 +8,13 @@ Results page: http://thepaciellogroup.github.io/AT-browser-tests/
 
 Process
 =======
+Initial: fork repo.
+
+* create test file from template.html
+* test file with screen reader(s)
+* add results to Results page
+* get information about interaction/navigation for element from screen reader documentation and add to Results page
+* record audio of interaction with element ONLY, then add audio to Results page
+* add any notes
+* Create Pull request to this repo.
+* repeat above.

@@ -6,6 +6,8 @@ Collaboration with CA on mapping of HTML features to accessibility APIs and how 
  
 Results page: http://thepaciellogroup.github.io/AT-browser-tests/ 
 
+Test Files: https://github.com/ThePacielloGroup/AT-browser-tests/tree/gh-pages/test-files
+
 Process
 =======
 Initial: fork repo.

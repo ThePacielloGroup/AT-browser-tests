@@ -29,7 +29,7 @@
 }  
      #logo {float:left}
 	 
-	 td a {display:inline-block; width:100%;height:100%;margin:0px;}
+	
 	a:hover , a:focus {background-color:#99FF99; outline:dashed thin #030;}
 	 
 	    </style>
@@ -147,7 +147,7 @@
 						  <td>&nbsp;</td>
 					  </tr>
 						<tr>
-							<th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-abbr-element"><code>abbr</code></a></th>
+							<th scope="row"><a href="test-files/abbr.html"><code>abbr</code></a></th>
 							<td>&nbsp;</td>
 							<td><p>No special commands</p>
 						    <p>JAWS can read <code>title</code> text associated with abbreviations on  web  pages. <br>
@@ -173,21 +173,29 @@
 						<tr>
 							<th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#the-article-element"><code>article</code></a></th>
 							<td>&nbsp;</td>
-							<td>&nbsp;</td>
+							<td><ul>
+							  <li>Move to Next Region 	<kbd>SEMICOLON</kbd> (JAWS14) <kbd>R</kbd> (JAWS15) </li>
+							  <li>Move to Previous Region 	<kbd>SHIFT+SEMICOLON</kbd> (JAWS14) <kbd>SHIFT+R</kbd> (JAWS15) </li>
+							  <li>Select a Region 	<kbd>INSERT+CTRL+SEMICOLON</kbd> (JAWS14) <kbd>INSERT+CTRL+R</kbd> (JAWS15)</li>
+							  </ul>						    </td>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 						</tr>
 						<tr>
 							<th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#the-aside-element"><code>aside</code></a></th>
 							<td>&nbsp;</td>
-							<td>&nbsp;</td>
+							<td><ul>
+							  <li>Move to Next Region <kbd>SEMICOLON</kbd> (JAWS14) <kbd>R</kbd> (JAWS15) </li>
+							  <li>Move to Previous Region <kbd>SHIFT+SEMICOLON</kbd> (JAWS14) <kbd>SHIFT+R</kbd> (JAWS15) </li>
+							  <li>Select a Region <kbd>INSERT+CTRL+SEMICOLON</kbd> (JAWS14) <kbd>INSERT+CTRL+R</kbd> (JAWS15)</li>
+						    </ul></td>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 						</tr>
 						<tr>
 							<th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content.html#the-audio-element"><code>audio</code></a></th>
 							<td>&nbsp;</td>
-							<td>&nbsp;</td>
+							<td>If the audio element has a <code>controls</code> attribute the buttons in the UI are navigable using <a href="#button-commands">button</a> commands.</td>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 						</tr>
@@ -223,7 +231,11 @@
 						<tr>
 							<th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/grouping-content.html#the-blockquote-element"><code>blockquote</code></a></th>
 							<td>&nbsp;</td>
-							<td>&nbsp;</td>
+							<td><ul>
+							  <li>List Block quotes 	<kbd>CTRL+INSERT+Q</kbd></li>
+							  <li>Next Blockquote 	<kbd>Q</kbd></li>
+							  <li>Previous  Blockquote 	<kbd>SHIFT+Q</kbd></li>
+							  </ul>						    </td>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 						</tr>
@@ -244,23 +256,27 @@
 						<tr>
 							<th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/the-button-element.html#the-button-element"><code>button</code></a></th>
 							<td>&nbsp;</td>
-							<td>&nbsp;</td>
+							<td><ul id="button-commands" tabindex="-1">
+							  <li>List Buttons <kbd>CTRL+INSERT+B</kbd></li>
+							  <li>Next Button 	<kbd>B</kbd></li>
+							  <li>Previous button <kbd>B</kbd></li>
+							  </ul>						    </td>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 						</tr>
 						<tr id="toc-c">
 							<th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/the-canvas-element.html#the-canvas-element"><code>canvas</code></a></th>
 							<td>&nbsp;</td>
-							<td>No special commands</td>
+							<td><p>No special commands</p></td>
 							<td>&nbsp;</td>
-							<td>&nbsp;</td>
+							<td><strong>Note: </strong>HTML content included in the <a href="http://www.paciellogroup.com/blog/2015/02/html5-canvas-sub-dom/">HTML5 canvas sub DOM</a> is announced and navigable by screen reader users and is navigable by keyboard users</td>
 						</tr>
 						<tr>
 							<th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-caption-element"><code>caption</code></a></th>
 							<td>&nbsp;</td>
+							<td>No special commands</td>
 							<td>&nbsp;</td>
-							<td>&nbsp;</td>
-							<td>&nbsp;</td>
+							<td>Announced when table is navigated to. Used as table title in table list (List Tables 	<kbd>CTRL+INSERT+T</kbd>) dialog.</td>
 						</tr>
 						<tr>
 							<th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-cite-element"><code>cite</code></a></th>
@@ -345,9 +361,9 @@
 							<th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/grouping-content.html#the-div-element"><code>div</code></a></th>
 							<td><em>none expected</em></td>
 							<td><ul>
-							  <li>Move to Next Division 	Z </li>
-							  <li>Move to Prior Division 	SHIFT+Z </li>
-							  <li>List Divisions 	CTRL+INSERT+Z</li>
+							  <li>Move to Next Division 	<kbd>Z</kbd></li>
+							  <li>Move to Prior Division 	<kbd>SHIFT+Z</kbd></li>
+							  <li>List Divisions 	<kbd>CTRL+INSERT+Z</kbd></li>
 							  </ul>						    </td>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
@@ -404,7 +420,11 @@
 						<tr>
 							<th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#the-footer-element"><code>footer</code></a></th>
 							<td>&nbsp;</td>
-							<td>&nbsp;</td>
+							<td><ul>
+							  <li>Move to Next Region <kbd>SEMICOLON</kbd> (JAWS14) <kbd>R</kbd> (JAWS15) </li>
+							  <li>Move to Previous Region <kbd>SHIFT+SEMICOLON</kbd> (JAWS14) <kbd>SHIFT+R</kbd> (JAWS15) </li>
+							  <li>Select a Region <kbd>INSERT+CTRL+SEMICOLON</kbd> (JAWS14) <kbd>INSERT+CTRL+R</kbd> (JAWS15)</li>
+						    </ul></td>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 						</tr>
@@ -419,15 +439,15 @@
 							<th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#the-h1-element"><code>h1-h6</code></a></th>
 							<td>&nbsp;</td>
 							<td><ul>
-							  <li>List Headings 	INSERT+F6 </li>
-							  <li>Next Heading 	H</li>
-							  <li> Prior Heading 	SHIFT+H </li>
-							  <li>First Heading 	ALT+INSERT+HOME </li>
-							  <li>Last Heading 	ALT+INSERT+END </li>
-							  <li>Next Heading at Level -	1 through 6 </li>
-							  <li>Prior Heading at Level 	SHIFT+1 through 6 </li>
-							  <li>First Heading at Level 	ALT+CTRL+INSERT+1 through 6 </li>
-							  <li>Last Heading at Level 	ALT+CTRL+INSERT+ SHIFT+1 through 6</li>
+							  <li>List Headings 	<kbd>INSERT</kbd>+<kbd>F6 </kbd></li>
+							  <li>Next Heading 	<kbd>H</kbd></li>
+							  <li> Prior Heading 	<kbd>SHIFT+H</kbd></li>
+							  <li>First Heading 	<kbd>ALT+INSERT+HOME</kbd> </li>
+							  <li>Last Heading 	<kbd>ALT+INSERT+END </kbd></li>
+							  <li>Next Heading at Level -	number keys <code>1</code> through <kbd>6</kbd></li>
+							  <li>Prior Heading at Level 	<kbd>SHIFT+1</kbd> through <kbd>6 </kbd></li>
+							  <li>First Heading at Level 	<kbd>ALT</kbd><code>+CTRL+INSERT+1</code> through <kbd>6</kbd></li>
+							  <li>Last Heading at Level 	<kbd>ALT+CTRL+INSERT+ SHIFT+1</kbd> through <kbd>6</kbd></li>
 							  </ul>						    </td>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
@@ -442,7 +462,11 @@
 						<tr>
 							<th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#the-header-element"><code>header</code></a></th>
 							<td>&nbsp;</td>
-							<td>&nbsp;</td>
+							<td><ul>
+							  <li>Move to Next Region <kbd>SEMICOLON</kbd> (JAWS14) <kbd>R</kbd> (JAWS15) </li>
+							  <li>Move to Previous Region <kbd>SHIFT+SEMICOLON</kbd> (JAWS14) <kbd>SHIFT+R</kbd> (JAWS15) </li>
+							  <li>Select a Region <kbd>INSERT+CTRL+SEMICOLON</kbd> (JAWS14) <kbd>INSERT+CTRL+R</kbd> (JAWS15)</li>
+						    </ul></td>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 						</tr>
@@ -695,7 +719,11 @@
 						<tr id="toc-m">
 							<th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/grouping-content.html#the-main-element"><code>main</code></a></th>
 							<td>&nbsp;</td>
-							<td>&nbsp;</td>
+							<td><ul>
+							  <li>Move to Next Region <kbd>SEMICOLON</kbd> (JAWS14) <kbd>R</kbd> (JAWS15) </li>
+							  <li>Move to Previous Region <kbd>SHIFT+SEMICOLON</kbd> (JAWS14) <kbd>SHIFT+R</kbd> (JAWS15) </li>
+							  <li>Select a Region <kbd>INSERT+CTRL+SEMICOLON</kbd> (JAWS14) <kbd>INSERT+CTRL+R</kbd> (JAWS15)</li>
+						    </ul></td>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 						</tr>
@@ -752,7 +780,11 @@
 						<tr id="toc-n">
 							<th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#the-nav-element"><code>nav</code></a></th>
 							<td>&nbsp;</td>
-							<td>&nbsp;</td>
+							<td><ul>
+							  <li>Move to Next Region <kbd>SEMICOLON</kbd> (JAWS14) <kbd>R</kbd> (JAWS15) </li>
+							  <li>Move to Previous Region <kbd>SHIFT+SEMICOLON</kbd> (JAWS14) <kbd>SHIFT+R</kbd> (JAWS15) </li>
+							  <li>Select a Region <kbd>INSERT+CTRL+SEMICOLON</kbd> (JAWS14) <kbd>INSERT+CTRL+R</kbd> (JAWS15)</li>
+						    </ul></td>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 						</tr>
@@ -1056,9 +1088,13 @@
 						  <td>&nbsp;</td>
 					  </tr>
 						<tr id="toc-t">
-							<th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-table-element"><code>table</code></a></th>
+							<th scope="row"><a href="test-files/table-caption-thead-tbody-tfoot-tr-th-td.html"><code>table</code></a></th>
 							<td>&nbsp;</td>
-							<td>&nbsp;</td>
+							<td><ul>
+							  <li>List Tables 	<kbd>CTRL+INSERT+T</kbd></li>
+							  <li>Next Table 	<kbd>T </kbd></li>
+							  <li>Previous Table <kbd>T</kbd></li>
+							  </ul>						    </td>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 						</tr>

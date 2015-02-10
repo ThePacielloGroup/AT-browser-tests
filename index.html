@@ -153,7 +153,7 @@
 						    <p>JAWS can read <code>title</code> text associated with abbreviations on  web  pages. <br>
 					        To enable this feature, open Settings Center and expand the  Web/HTML/PDFs  group. Next, expand the Reading group and use the  abbreviation and acronym  options</p></td>
 							<td>&nbsp;</td>
-							<td>&nbsp;</td>
+							<td>Note that expansions are not announced by default and that exapnsions provided using the title attribute are not available to keyboard only users. Refer to <a href="http://www.paciellogroup.com/blog/2013/01/using-the-html-title-attribute-updated/">Using the HTML title attribute</a>.</td>
 						</tr>
 						<tr>
 							<th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#the-address-element"><code>address</code></a></th>
@@ -431,7 +431,13 @@
 						<tr>
 							<th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#the-form-element"><code>form</code></a></th>
 							<td>&nbsp;</td>
-							<td>&nbsp;</td>
+							<td><ul>
+							  <li>List of Form Fields 	<kbd>INSERT+F5</kbd></li>
+							  <li>Move To First Form Field 	<kbd>INSERT+CTRL+HOME </kbd></li>
+							  <li>Move To Next Form Field 	<kbd>F</kbd></li>
+							  <li>Move To Prior Form Field 	<kbd>SHIFT+F</kbd></li>
+							  <li>Move To Last Form Field 	<kbd>INSERT+CTRL+END</kbd></li>
+							  </ul>						    </td>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 						</tr>
@@ -471,16 +477,19 @@
 							<td>&nbsp;</td>
 						</tr>
 						<tr>
-							<th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/grouping-content.html#the-hr-element"><code>hr</code></a></th>
-							<td>&nbsp;</td>
-							<td>No special commands</td>
+							<th scope="row"><a href="test-files/hr.html"><code>hr</code></a></th>
+							<td>&quot;separator&quot;</td>
+							<td><ul>
+							  <li>Move to Next Separator 	<code>DASH</code></li>
+							  <li> Move to Prior Separator 	<code>SHIFT+DASH</code></li>
+							  </ul>						    </td>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 						</tr>
 						<tr>
 							<th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/semantics.html#the-html-element"><code>html</code></a></th>
 							<td><em>none expected</em></td>
-							<td>&nbsp;</td>
+							<td>No special commands</td>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 						</tr>
@@ -492,14 +501,21 @@
 							<td>&nbsp;</td>
 						</tr>
 						<tr>
-							<th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/the-iframe-element.html#the-iframe-element"><code>iframe</code></a></th>
+						  <th scope="row"><a href="test-files/iframe.html"><code>iframe</code></a></th>
+						  <td>&nbsp;</td>
+						  <td>&nbsp;</td>
+						  <td>&nbsp;</td>
+						  <td>&nbsp;</td>
+					  </tr>
+						<tr>
+							<th scope="row"><a href="test-files/iframe-title.html"><code>iframe with title</code></a></th>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 						</tr>
 						<tr>
-							<th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/edits.html#the-img-element"><code>img</code></a></th>
+							<th scope="row"><a href="test-files/img-alt.html"><code>img</code></a></th>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
@@ -515,7 +531,11 @@
 						<tr>
 						  <th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#button-state-(type=button)"><code>input [button]</code></a></th>
 						  <td>&nbsp;</td>
-						  <td>&nbsp;</td>
+						  <td><ul id="button-commands2" tabindex="-1">
+						    <li>List Buttons <kbd>CTRL+INSERT+B</kbd></li>
+						    <li>Next Button <kbd>B</kbd></li>
+						    <li>Previous button <kbd>B</kbd></li>
+					      </ul></td>
 						  <td>&nbsp;</td>
 						  <td>&nbsp;</td>
 					  </tr>
@@ -550,28 +570,46 @@
 						<tr>
 						  <th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#e-mail-state-%28type=email%29"><code>input [email]</code></a></th>
 						  <td>&nbsp;</td>
-						  <td>&nbsp;</td>
+						  <td><ul>
+						    <li>List Edit Boxes <kbd>CTRL+INSERT+E</kbd></li>
+						    <li>Move To Next Edit Box <kbd>E </kbd></li>
+						    <li>Move to Prior Edit Box <kbd>SHIFT+E</kbd></li>
+					      </ul></td>
 						  <td>&nbsp;</td>
 						  <td>&nbsp;</td>
 					  </tr>
 						<tr>
 						  <th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#file-upload-state-(type=file)"><code>input [file]</code></a></th>
 						  <td>&nbsp;</td>
+						  <td><ul>
+						    <li>List Buttons <kbd>CTRL+INSERT+B</kbd></li>
+						    <li>Next Button <kbd>B</kbd></li>
+						    <li>Previous button <kbd>B</kbd></li>
+						    </ul>
+					        <ul>
+					          <li>List Edit Boxes <kbd>CTRL+INSERT+E</kbd></li>
+					          <li>Move To Next Edit Box <kbd>E </kbd></li>
+					          <li>Move to Prior Edit Box <kbd>SHIFT+E</kbd> </li>
+					        </ul>
+				       </td>
 						  <td>&nbsp;</td>
-						  <td>&nbsp;</td>
-						  <td>&nbsp;</td>
+						  <td>As it's a composite control, it can be navigated to using either button or edit commands.</td>
 					  </tr>
 						<tr>
 						  <th scope="row"><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#hidden-state-(type=hidden)">input [hidden]</a></code></th>
-						  <td>&nbsp;</td>
-						  <td>&nbsp;</td>
+						  <td><em>none expected</em></td>
+						  <td>No special commands</td>
 						  <td>&nbsp;</td>
 						  <td>&nbsp;</td>
 					  </tr>
 						<tr>
 						  <th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#image-button-state-(type=image)"><code>input [image]</code></a></th>
 						  <td>&nbsp;</td>
-						  <td>&nbsp;</td>
+						  <td><ul>
+						    <li>List Buttons <kbd>CTRL+INSERT+B</kbd></li>
+						    <li>Next Button <kbd>B</kbd></li>
+						    <li>Previous button <kbd>B</kbd></li>
+						    </ul></td>
 						  <td>&nbsp;</td>
 						  <td>&nbsp;</td>
 					  </tr>
@@ -585,14 +623,28 @@
 						<tr>
 						  <th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#number-state-(type=number)"><code>input [number]</code></a></th>
 						  <td>&nbsp;</td>
+						  <td><ul>
+						    <li>List Edit Boxes <kbd>CTRL+INSERT+E</kbd></li>
+						    <li>Move To Next Edit Box <kbd>E </kbd></li>
+						    <li>Move to Prior Edit Box <kbd>SHIFT+E</kbd></li>
+					      </ul></td>
 						  <td>&nbsp;</td>
-						  <td>&nbsp;</td>
-						  <td>&nbsp;</td>
+						  <td>spin buttons included in button commands.
+					        <ul>
+					          <li>List Buttons <kbd>CTRL+INSERT+B</kbd></li>
+					          <li>Next Button <kbd>B</kbd></li>
+					          <li>Previous button <kbd>B</kbd>				          </li>
+					        </ul>
+				          </td>
 					  </tr>
 						<tr>
 						  <th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#password-state-(type=password)"><code>input [password]</code></a></th>
 						  <td>&nbsp;</td>
-						  <td>&nbsp;</td>
+						  <td><ul>
+						    <li>List Edit Boxes 	<kbd>CTRL+INSERT+E</kbd></li>
+						    <li>Move To Next Edit Box 	<kbd>E </kbd></li>
+						    <li>Move to Prior Edit Box 	<kbd>SHIFT+E</kbd></li>
+						    </ul>					      </td>
 						  <td>&nbsp;</td>
 						  <td>&nbsp;</td>
 					  </tr>
@@ -613,35 +665,55 @@
 						<tr>
 						  <th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#reset-button-state-(type=reset)"><code>input [reset]</code></a></th>
 						  <td>&nbsp;</td>
-						  <td>&nbsp;</td>
+						  <td><ul>
+						    <li>List Buttons <kbd>CTRL+INSERT+B</kbd></li>
+						    <li>Next Button <kbd>B</kbd></li>
+						    <li>Previous button <kbd>B</kbd></li>
+					      </ul></td>
 						  <td>&nbsp;</td>
 						  <td>&nbsp;</td>
 					  </tr>
 						<tr>
 						  <th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#text-(type=text)-state-and-search-state-(type=search)"><code>input [search]</code></a></th>
 						  <td>&nbsp;</td>
-						  <td>&nbsp;</td>
+						  <td><ul>
+						    <li>List Edit Boxes <kbd>CTRL+INSERT+E</kbd></li>
+						    <li>Move To Next Edit Box <kbd>E </kbd></li>
+						    <li>Move to Prior Edit Box <kbd>SHIFT+E</kbd></li>
+					      </ul></td>
 						  <td>&nbsp;</td>
 						  <td>&nbsp;</td>
 					  </tr>
 						<tr>
 						  <th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#submit-button-state-(type=submit)"><code>input [submit]</code></a></th>
 						  <td>&nbsp;</td>
-						  <td>&nbsp;</td>
+						  <td><ul>
+						    <li>List Buttons <kbd>CTRL+INSERT+B</kbd></li>
+						    <li>Next Button <kbd>B</kbd></li>
+						    <li>Previous button <kbd>B</kbd></li>
+					      </ul></td>
 						  <td>&nbsp;</td>
 						  <td>&nbsp;</td>
 					  </tr>
 						<tr>
 						  <th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#telephone-state-(type=tel)"><code>input [tel]</code></a></th>
 						  <td>&nbsp;</td>
-						  <td>&nbsp;</td>
+						  <td><ul>
+						    <li>List Edit Boxes <kbd>CTRL+INSERT+E</kbd></li>
+						    <li>Move To Next Edit Box <kbd>E </kbd></li>
+						    <li>Move to Prior Edit Box <kbd>SHIFT+E</kbd></li>
+					      </ul></td>
 						  <td>&nbsp;</td>
 						  <td>&nbsp;</td>
 					  </tr>
 						<tr>
 						  <th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#text-(type=text)-state-and-search-state-(type=search)"><code>input [text]</code></a></th>
 						  <td>&nbsp;</td>
-						  <td>&nbsp;</td>
+						  <td><ul>
+						    <li>List Edit Boxes <kbd>CTRL+INSERT+E</kbd></li>
+						    <li>Move To Next Edit Box <kbd>E </kbd></li>
+						    <li>Move to Prior Edit Box <kbd>SHIFT+E</kbd></li>
+					      </ul></td>
 						  <td>&nbsp;</td>
 						  <td>&nbsp;</td>
 					  </tr>
@@ -655,7 +727,11 @@
 						<tr>
 						  <th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#url-state-(type=url)"><code>input [url]</code></a></th>
 						  <td>&nbsp;</td>
-						  <td>&nbsp;</td>
+						  <td><ul>
+						    <li>List Edit Boxes <kbd>CTRL+INSERT+E</kbd></li>
+						    <li>Move To Next Edit Box <kbd>E </kbd></li>
+						    <li>Move to Prior Edit Box <kbd>SHIFT+E</kbd></li>
+					      </ul></td>
 						  <td>&nbsp;</td>
 						  <td>&nbsp;</td>
 					  </tr>
@@ -728,7 +804,7 @@
 							<td>&nbsp;</td>
 						</tr>
 						<tr>
-							<th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/the-map-element.html#the-map-element"><code>map</code></a></th>
+							<th scope="row"><a href="test-files/imagemap.html"><code>map</code></a></th>
 							<td><em>none expected</em></td>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>

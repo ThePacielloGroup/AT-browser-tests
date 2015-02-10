@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>test file xx: area + map + img elements</title>
+</head>
+<body>
+<h1><code>img</code> element with <code>usemap</code> attribute pointing to <code>map</code> element with one <code>area</code> element</h1>
+<h2>alt=""</h2>
+<img alt="" src="http://www.html5accessibility.com/images/HTML5_Logo.png" usemap="#poot">
+
+  <h2> no alt </h2>
+  <img src="http://www.html5accessibility.com/images/HTML5_Logo.png" usemap="#poot">
+  <h2>alt="HTML5" </h2>
+<img src="http://www.html5accessibility.com/images/HTML5_Logo.png" usemap="#poot" alt="HTML5">
+ <map name="poot">
+ <area shape="rect" alt="test" coords="19,24,112,129" href="http://google.com">
+ </map>
+  
+<h2>Code</h2>
+<p>&lt;img src=&quot;HTML5_Logo.png&quot; usemap=&quot;#poot&quot; alt=&quot;HTML5&quot;&gt;<br>
+&lt;map name=&quot;poot&quot;&gt;<br>
+&lt;area shape=&quot;rect&quot; alt=&quot;test&quot; coords=&quot;19,24,112,129&quot; href=&quot;http://google.com&quot;&gt;<br>
+&lt;/map&gt;</p>
+<h2>Reference</h2>
+<ul>
+  <li><a href="http://www.w3.org/TR/html5/embedded-content-0.html#the-map-element">HTML5 map element</a><a href="http://www.w3.org/TR/html5/text-level-semantics.html#the-abbr-element"></a></li>
+  <li><a href="http://www.w3.org/TR/html5/embedded-content-0.html#the-area-element">HTML5 area element</a></li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>test file: select + option + optgroup element</title>
+</head>
+
+<body>
+<h1><code>select + option + optgroup</code> element</h1>
+<p>
+<select>
+<option value="1">a</option>
+<option value="2">b</option>
+</select> </p>
+<h2>with label </h2>
+<p>
+<label> choose <select>
+      <option value="1">a</option>
+      <option value="2">b</option>
+</select></label>  </p>
+
+<h2>with label + selected on option a</h2>
+<p>
+<label> choose <select>
+      <option value="1" selected>a</option>
+      <option value="2">b</option>
+</select></label>  </p>
+    <h2>with label + required </h2>
+<p>
+<label> choose <select required>
+      <option value="1">a</option>
+      <option value="2">b</option>
+    </select></label>  </p>
+    <h2>with label + disabled </h2>
+<p>
+<label> choose <select disabled>
+      <option value="1">a</option>
+      <option value="2">b</option>
+    </select></label>  </p>
+ <h2>with size attribute</h2>   
+    <select name="" size="3">
+  <option value="a">a</option>
+  <option value="b">b</option>
+  </select>
+  <h2>with size + multiple attribute</h2>
+  <select multiple size="3">
+  <option value="a">a</option>
+  <option value="b">b</option>
+  </select>
+  <h2>with label and optgroup</h2>
+<p>
+<label> choose 
+<select>
+<optgroup label="part 1">
+<option value="1">a</option>
+<option value="2">b</option>
+</optgroup>
+<optgroup label="part 2">
+<option value="1">a</option>
+<option value="2">b</option>
+</optgroup>
+</select>
+</label>  </p>
+<h2>Code</h2>
+<p>&lt;label&gt; choose <br>
+  &lt;select&gt;<br>
+  &lt;optgroup label=&quot;part 1&quot;&gt;<br>
+  &lt;option value=&quot;1&quot;&gt;a&lt;/option&gt;<br>
+  &lt;option value=&quot;2&quot;&gt;b&lt;/option&gt;<br>
+  &lt;/optgroup&gt;<br>
+  &lt;optgroup label=&quot;part 2&quot;&gt;<br>
+  &lt;option value=&quot;1&quot;&gt;a&lt;/option&gt;<br>
+  &lt;option value=&quot;2&quot;&gt;b&lt;/option&gt;<br>
+  &lt;/optgroup&gt;<br>
+  &lt;/select&gt;<br>
+&lt;/label&gt;</p>
+<h2>Reference</h2>
+<ul>
+  <li><a href="http://www.w3.org/TR/html5/forms.html#the-select-element">HTML5 select element</a></li>
+  <li><a href="http://www.w3.org/TR/html5/forms.html#the-option-element">HTML5 option element</a></li>
+  <li><a href="http://www.w3.org/TR/html5/forms.html#the-optgroup-element">HTML5 optgroup element</a></li>
+</ul>
+</body>
+</html>
+

@@ -105,10 +105,10 @@
     </caption>
 					<thead>
 						<tr>
-							<th scope="col">Element</th>
+							<th scope="col">Element [test file linked]</th>
 							<th scope="col">AURAL UI - JAWS</th>
 							<th scope="col">Interaction - JAWS</th>
-							<th scope="col">audio - JAWS</th>
+							<th scope="col">audio of JAWS announcing test file content</th>
 							<th scope="col">notes - JAWS</th>
 						</tr>
 					</thead>
@@ -163,12 +163,16 @@
 						<tr id="toc-a2">
 						  <th scope="row"><a href="test-files/test2.html"><code>a</code></a> with no href</th>
 						  <td><em>element content</em></td>
-						  <td>No special commands</td>
+						  <td><ul>
+						    <li>List of Anchors <kbd>CTRL+INSERT+A</kbd></li>
+						    <li>Next Anchor <kbd>A</kbd></li>
+						    <li>Previous Anchor <kbd>SHIFT+A</kbd></li>
+						    </ul>					      </td>
 						  <td> <audio controls>
   							 <source src="audio/a.mp3" type="audio/mpeg">
                              <source src="audio/a.ogg" type="audio/ogg">
                           </audio> </td>
-						  <td>No semantics conveyed</td>
+						  <td>Semantics conveyed via navigation</td>
 					  </tr>
 						<tr>
 							<th scope="row"><a href="test-files/abbr.html"><code>abbr</code></a></th>
@@ -237,7 +241,7 @@
 							<td><!--<audio controls>
   							 <source src="audio/aside.mp3" type="audio/mpeg">
                              <source src="audio/aside.ogg" type="audio/ogg">
-                          </audio>--> </td>
+                          </audio>--> &nbsp;</td>
 							<td>&nbsp;</td>
 						</tr>
 						<tr id="toc-b">
@@ -586,21 +590,33 @@
 						<tr>
 						  <th scope="row"><a href="test-files/iframe.html"><code>iframe</code></a></th>
 						  <td>&nbsp;</td>
-						  <td>&nbsp;</td>
+						  <td><ul>
+						    <li>List of Frames <kbd>INSERT+F9</kbd></li>
+						    <li>Next Frame 	<kbd>M</kbd></li>
+						    <li>Previous Frame <kbd>SHIFT+	M </kbd></li>
+						    </ul>					      </td>
 						  <td>&nbsp;</td>
 						  <td>&nbsp;</td>
 					  </tr>
 						<tr>
 							<th scope="row"><a href="test-files/iframe-title.html"><code>iframe with title</code></a></th>
 							<td>&nbsp;</td>
-							<td>&nbsp;</td>
+							<td><ul>
+							  <li>List of Frames <kbd>INSERT+F9</kbd></li>
+							  <li>Next Frame <kbd>M</kbd></li>
+							  <li>Previous Frame <kbd>SHIFT+	M </kbd></li>
+						    </ul></td>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 						</tr>
 						<tr>
 							<th scope="row"><a href="test-files/img-alt.html"><code>img</code></a></th>
 							<td>&quot;graphic&quot; <em>alt attribute content</em></td>
-							<td>List of Graphics <kbd>CTRL+INSERT+G</kbd></td>
+							<td><ul>
+							  <li>List of Graphics <kbd>CTRL+INSERT+G</kbd></li>
+							  <li>Next Graphic <kbd>G</kbd></li>
+							  <li>Previous Graphic <kbd>SHIFT+G</kbd></li>
+							  </ul>						    </td>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 						</tr>
@@ -957,7 +973,10 @@
 						<tr id="toc-o">
 							<th scope="row"><a href="test-files/object.html"><code>object</code></a></th>
 							<td>&nbsp;</td>
-							<td>&nbsp;</td>
+							<td><ul>
+							  <li>Next Object Tag 	<kbd>O</kbd></li>
+							  <li>Previous Object Tag <kbd>SHIFT+O</kbd></li>
+							  </ul>						    </td>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 						</tr>
@@ -999,6 +1018,7 @@
 							<th scope="row"><a href="test-files/p.html"><code>p</code></a></th>
 							<td>element content</td>
 							<td><ul>
+							  <li>List of Paragraphs <kbd>CTRL+INSERT+P</kbd></li>
 							  <li>Next Paragraph 	<kbd>P</kbd></li>
 							  <li>Previous Paragraph <kbd>SHIFT+P</kbd></li>
 							  </ul>						    </td>
@@ -1117,7 +1137,8 @@
 						<tr>
 							<th scope="row"><a href="test-files/select-option.html"><code>select</code></a></th>
 							<td>&nbsp;</td>
-							<td>&nbsp;</td>
+							<td><p>List of Combo boxes 	<kbd>CTRL+INSERT+C</kbd></p>
+						    <p>&nbsp;</p></td>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 						</tr>

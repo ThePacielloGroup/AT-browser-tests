@@ -31,7 +31,18 @@
 	 
 	
 	a:hover , a:focus {background-color:#99FF99; outline:dashed thin #030;}
-	 
+	kbd {
+    background-color: #F1F1F1;
+    border: 1px solid #666;
+    border-radius: 5px;
+    color: #333;
+    padding: 0px 2px;
+    margin: 1px;
+    font-weight: bold;
+    font-family: Arial,Helvetica,sans-serif;
+    min-width: 17px;
+    display: inline-block;
+    text-align: center;}
 	    </style>
 		<link href="http://www.w3.org/StyleSheets/TR/w3c-unofficial" rel="stylesheet" type="text/css"/>
 	</head>
@@ -502,7 +513,7 @@
 							  <li> Prior Heading 	<kbd>SHIFT+H</kbd></li>
 							  <li>First Heading 	<kbd>ALT+INSERT+HOME</kbd> </li>
 							  <li>Last Heading 	<kbd>ALT+INSERT+END </kbd></li>
-							  <li>Next Heading at Level -	number keys <code>1</code> through <kbd>6</kbd></li>
+							  <li>Next Heading at Level -	number keys <kbd>1</kbd> through <kbd>6</kbd></li>
 							  <li>Prior Heading at Level 	<kbd>SHIFT+1</kbd> through <kbd>6 </kbd></li>
 							  <li>First Heading at Level 	<kbd>ALT</kbd><code>+CTRL+INSERT+1</code> through <kbd>6</kbd></li>
 							  <li>Last Heading at Level 	<kbd>ALT+CTRL+INSERT+ SHIFT+1</kbd> through <kbd>6</kbd></li>
@@ -532,8 +543,8 @@
 							<th scope="row"><a href="test-files/hr.html"><code>hr</code></a></th>
 							<td>&quot;separator&quot;</td>
 							<td><ul>
-							  <li>Move to Next Separator 	<code>DASH</code></li>
-							  <li> Move to Prior Separator 	<code>SHIFT+DASH</code></li>
+							  <li>Move to Next Separator 	<kbd>DASH</kbd></li>
+							  <li> Move to Prior Separator 	<kbd>SHIFT+DASH</kbd></li>
 							  </ul>						    </td>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
@@ -569,7 +580,7 @@
 						<tr>
 							<th scope="row"><a href="test-files/img-alt.html"><code>img</code></a></th>
 							<td>&quot;graphic&quot; <em>alt attribute content</em></td>
-							<td>&nbsp;</td>
+							<td>List of Graphics <kbd>CTRL+INSERT+G</kbd></td>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 						</tr>
@@ -930,7 +941,13 @@
 						<tr>
 							<th scope="row"><a href="test-files/ol-li.html"><code>ol</code></a></th>
 							<td>&nbsp;</td>
-							<td>&nbsp;</td>
+							<td><ul>
+							  <li>List of Lists <kbd>CTRL+INSERT+L</kbd></li>
+							  <li>Next List 	<kbd>L</kbd></li>
+							  <li>Previous List <kbd>SHIFT+I</kbd></li>
+							  <li> Next Item in a List 	<kbd>I</kbd></li>
+							  <li>Previous item in a List <kbd>SHIFT+I</kbd></li>
+							  </ul>						    </td>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 						</tr>

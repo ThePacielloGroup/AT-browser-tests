@@ -168,15 +168,22 @@
 						  <td>an anchor</td>
 						  <td><em>element content</em></td>
 						  <td><ul>
-						    <li>List of Anchors <kbd>CTRL+INSERT+A</kbd></li>
-						    <li>Next Anchor <kbd>A</kbd></li>
-						    <li>Previous Anchor <kbd>SHIFT+A</kbd></li>
+						    <li>JAWS &lt;15
+						      <ul>
+						        <li>List of Anchors <kbd>CTRL+INSERT+A</kbd></li>
+						        <li>Next Anchor <kbd>A</kbd></li>
+						        <li>Previous Anchor <kbd>SHIFT+A</kbd></li>
+					          </ul>
+						    </li>
+						    <li>JAWS 15+ no special commands</li>
 						    </ul>					      </td>
 						  <td> <audio controls>
   							 <source src="audio/a.mp3" type="audio/mpeg">
                              <source src="audio/a.ogg" type="audio/ogg">
                           </audio> </td>
-						  <td>Semantics conveyed via navigation</td>
+						  <td><p>Semantics conveyed via navigation (JAWS &lt;15)</p>
+						    <p>No semantics conveyed  (JAWS15+)</p>
+					      <p>&nbsp;</p></td>
 					  </tr>
 						<tr>
 							<th scope="row"><a href="test-files/abbr.html"><code>abbr</code></a></th>
@@ -1488,7 +1495,7 @@
 							<td>&nbsp;</td>
 						</tr>
 						<tr>
-							<th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/the-video-element.html#the-track-element"><code>track</code></a></th>
+							<th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/the-video-element.html#the-track-element"><code>track [no test]</code></a></th>
 							<td>Timed text track</td>
 							<td><em><strong>none expected</strong></em></td>
 							<td>No special commands</td>
@@ -1498,8 +1505,8 @@
 			
 						
 						<tr id="toc-u">
-							<th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-u-element"><code>u</code></a></th>
-							<td>&nbsp;</td>
+							<th scope="row"><a href="test-files/u.html"><code>u</code></a></th>
+							<td>Keywords</td>
 							<td><em>element content</em></td>
 							<td>No special commands</td>
 							<td>&nbsp;</td>
@@ -1507,7 +1514,7 @@
 						</tr>
 						<tr>
 							<th scope="row"><a href="test-files/ul-li.html"><code>ul</code></a></th>
-							<td>&nbsp;</td>
+							<td>Unordered List</td>
 							<td>&nbsp;</td>
 							<td><ul>
 							  <li>List All Ordered, Unordered, and Definition Lists <kbd>CTRL+INSERT+L</kbd></li>
@@ -1520,8 +1527,8 @@
 							<td>&nbsp;</td>
 						</tr>
 						<tr id="toc-v">
-							<th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-var-element"><code>var</code></a></th>
-							<td>&nbsp;</td>
+							<th scope="row"><a href="test-files/var.html"><code>var</code></a></th>
+							<td>Variable</td>
 							<td><em>element content</em></td>
 							<td>No special commands</td>
 							<td>&nbsp;</td>
@@ -1529,7 +1536,7 @@
 						</tr>
 						<tr>
 							<th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content.html#the-video-element"><code>video</code></a></th>
-							<td>&nbsp;</td>
+							<td>Video Player</td>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
@@ -1537,7 +1544,7 @@
 						</tr>
 						<tr id="toc-w">
 							<th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-wbr-element"><code>wbr</code></a></th>
-							<td>&nbsp;</td>
+							<td>Line breaking opportunity</td>
 							<td><em><strong>none expected</strong></em></td>
 							<td>No special commands</td>
 							<td>&nbsp;</td>

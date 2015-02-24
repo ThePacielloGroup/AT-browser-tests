@@ -2,65 +2,74 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<!-- FIXME number -->
-<title>test file ____n____: table element with caption, thead, tbody, tfoot, tr, th and td</title>
+<title>test file: table element with caption, thead, tbody, tfoot, tr, th and td</title>
 <style>
 table, tr, td, th {border:thin solid #666; border-collapse:collapse;padding: 5px;}
 </style>
 </head>
 
 <body>
-<h1>test file <mark>n</mark>: <code>table</code> element with <code>caption</code>, <code>thead</code>, <code>tbody</code>, <code>tfoot</code>, <code>tr</code>, <code>th</code> and <code>td</code></h1>
-<table>
-  <caption>Table Caption</caption>
+<h1>test file: <code>table</code> element with <code>caption</code>, <code>thead</code>, <code>tbody</code>, <code>tfoot</code>, <code>tr</code>, <code>th</code> and <code>td</code></h1>
+<table summary="lemons and pears table with one level of row and column headers" border="1">
+  <caption>
+    Prices for lemons and pears in London
+  </caption>
   <thead>
     <tr>
-      <th>Column A</th>
-      <th>Column B</th>
+      <td></td>
+      <th>Lemons</th>
+      <th>Pears</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>Data Row 1, Column A</td>
-      <td>Data Row 1, Column B</td>
+      <th>Wholesale</th>
+      <td>&pound;1.00</td>
+      <td>&pound;1.50</td>
     </tr>
     <tr>
-      <td>Data Row 2, Column A</td>
-      <td>Data Row 2, Column B</td>
+      <th>Retail</th>
+      <td>&pound;2.00</td>
+      <td>&pound;2.50</td>
     </tr>
   </tbody>
   <tfoot>
-    <tr>
-      <td>Foot of Column A</td>
-      <td>Foot of Column B</td>
+  <tr>
+      <th>Increase: wholesale versus retail</th>
+      <td>&pound;1.00</td>
+      <td>&pound;1.00</td>
     </tr>
-  </tfoot>
+    </tfoot>
 </table>
 <h2>Code</h2>
-<pre><code>&lt;table&gt;
-  &lt;caption&gt;Table Caption&lt;/caption&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Column A&lt;/th&gt;
-      &lt;th&gt;Column B&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Data Row 1, Column A&lt;/td&gt;
-      &lt;td&gt;Data Row 1, Column B&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Data Row 2, Column A&lt;/td&gt;
-      &lt;td&gt;Data Row 2, Column B&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-  &lt;tfoot&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Foot of Column A&lt;/td&gt;
-      &lt;td&gt;Foot of Column B&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tfoot&gt;
+<pre><code>&lt;table border=&quot;1&quot;&gt;
+&lt;caption&gt;Prices for lemons and pears in London&lt;/caption&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;th&gt;Lemons&lt;/th&gt;
+&lt;th&gt;Pears&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;th&gt;Wholesale&lt;/th&gt;
+&lt;td&gt;$1.00&lt;/td&gt;
+&lt;td&gt;$1.50&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;Retail&lt;/th&gt;
+&lt;td&gt;$2.00&lt;/td&gt;
+&lt;td&gt;$2.50&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;tfoot&gt;
+&lt;tr&gt;
+&lt;th&gt;Increase: wholesale versus retail&lt;/th&gt;
+&lt;td&gt;$1.00&lt;/td&gt;
+&lt;td&gt;$1.00&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tfoot&gt;
 &lt;/table&gt;
 </code></pre>
 <h2>Reference</h2>
@@ -68,7 +77,10 @@ table, tr, td, th {border:thin solid #666; border-collapse:collapse;padding: 5px
   <li><p><a href="http://www.w3.org/TR/html5/tabular-data.html#the-table-element">HTML5 table element</a></p></li>
   <li><p><a href="http://www.w3.org/TR/html5/tabular-data.html#the-caption-element">HTML5 caption element</a></p></li>
   <li><p><a href="http://www.w3.org/TR/html5/tabular-data.html#the-thead-element">HTML5 thead element</a></p></li>
-  <li><p><a href="http://www.w3.org/TR/html5/tabular-data.html#the-tbody-element">HTML5 tbody element</a></p></li>
+  <li><p><a href="http://www.w3.org/TR/html5/tabular-data.html#the-tbody-element">HTML5 tbody element</a></p>
+  </li>
+  <li><p><a href="http://www.w3.org/TR/html5/tabular-data.html#the-tfoot-element">HTML5 foot element</a></p>
+  </li>
   <li><p><a href="http://www.w3.org/TR/html5/tabular-data.html#the-tr-element">HTML5 tr element</a></p></li>
   <li><p><a href="http://www.w3.org/TR/html5/tabular-data.html#the-th-element">HTML5 th element</a></p></li>
   <li><p><a href="http://www.w3.org/TR/html5/tabular-data.html#the-td-element">HTML5 td element</a></p></li>

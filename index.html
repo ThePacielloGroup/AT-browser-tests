@@ -281,10 +281,10 @@
 						<tr>
 							<th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/semantics.html#the-base-element"><code>base</code></a></th>
 							<td>Base URL and default target <a href="http://www.w3.org/TR/html5/browsers.html#browsing-context">browsing context</a> for <a data-anolis-xref="attr-hyperlink-target" href="http://www.w3.org/TR/html5/links.html#attr-hyperlink-target">hyperlinks</a> and <a data-anolis-xref="attr-fs-target" href="http://www.w3.org/TR/html5/forms.html#attr-fs-target">forms</a></td>
-							<td><em>none expected</em></td>
+							<td><em><strong>none expected</strong></em></td>
 							<td>No special commands</td>
 							<td>&nbsp;</td>
-							<td>No UI</td>
+							<td><strong>No UI</strong></td>
 						</tr>
 						<tr>
 							<th scope="row"><a href="test-files/bdi.html"><code>bdi</code></a></th>
@@ -404,7 +404,7 @@
 							<td>&nbsp;</td>
 						</tr>
 						<tr>
-							<th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-colgroup-element"><code>colgroup [no test]</code></a></th>
+							<th scope="row"><a href="test-files/tables-complex.html"><code>colgroup</code></a></th>
 							<td>Group of columns in a table</td>
 							<td><em>none expected</em></td>
 							<td>No special commands</td>
@@ -634,7 +634,7 @@
 						<tr>
 							<th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/semantics.html#the-html-element"><code>html [no test]</code></a></th>
 							<td>Root element</td>
-							<td><em>none expected</em></td>
+							<td><em><strong>none expected</strong></em></td>
 							<td>No special commands</td>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
@@ -763,10 +763,10 @@
 						<tr>
 						  <th scope="row"><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#hidden-state-(type=hidden)">input [hidden] - [no test]</a></code></th>
 						  <td>hidden form control</td>
-						  <td><em>none expected</em></td>
+						  <td><em><strong>none expected</strong></em></td>
 						  <td>No special commands</td>
 						  <td>&nbsp;</td>
-						  <td>No UI</td>
+						  <td><strong>No UI</strong></td>
 					  </tr>
 						<tr>
 						  <th scope="row"><a href="test-files/input-image.html"><code>input [image]</code></a></th>
@@ -780,14 +780,14 @@
 						  <td>&nbsp;</td>
 						  <td>&nbsp;</td>
 					  </tr>
-						<tr>
+						<!--<tr>
 						  <th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#month-state-(type=month)"><code>input [month]</code></a></th>
 						  <td>&nbsp;</td>
 						  <td>&nbsp;</td>
 						  <td>&nbsp;</td>
 						  <td>&nbsp;</td>
 						  <td>&nbsp;</td>
-					  </tr>
+					  </tr>-->
 						<tr>
 						  <th scope="row"><a href="test-files/input-number.html"><code>input [number]</code></a></th>
 						  <td>spin box control</td>
@@ -820,7 +820,7 @@
 					  </tr>
 						<tr>
 						  <th scope="row"><a href="test-files/input-range.html"><code>input [range]</code></a></th>
-						  <td>&nbsp;</td>
+						  <td>slider control</td>
 						  <td>&nbsp;</td>
 						  <td>&nbsp;</td>
 						  <td>&nbsp;</td>
@@ -847,7 +847,7 @@
 						  <td>&nbsp;</td>
 					  </tr>
 						<tr>
-						  <th scope="row"><a href="test-files/input-submit.html"><code>input [search]</code></a></th>
+						  <th scope="row"><a href="test-files/input-search.html"><code>input [search]</code></a></th>
 						  <td>text control for inputting search terms</td>
 						  <td>&nbsp;</td>
 						  <td><ul>
@@ -896,7 +896,7 @@
 					  </tr>
 						<tr>
 						  <th scope="row"><a href="test-files/input--time.html"><code>input [time]</code></a></th>
-						  <td>&nbsp;</td>
+						  <td>control for setting a specific <a data-anolis-xref="concept-time" href="http://www.w3.org/TR/html5/infrastructure.html#concept-time">time</a>.</td>
 						  <td>&nbsp;</td>
 						  <td>&nbsp;</td>
 						  <td>&nbsp;</td>
@@ -914,14 +914,14 @@
 						  <td>&nbsp;</td>
 						  <td>&nbsp;</td>
 					  </tr>
-						<tr>
+						<!--<tr>
 						  <th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#week-state-(type=week)"><code>input [week]</code></a></th>
 						  <td>&nbsp;</td>
 						  <td>&nbsp;</td>
 						  <td>&nbsp;</td>
 						  <td>&nbsp;</td>
 						  <td>&nbsp;</td>
-					  </tr>
+					  </tr>-->
 						<tr>
 						  <th scope="row"><a href="test-files/del-ins.html"><code>ins</code></a></th>
 						  <td>An addition to the document</td>
@@ -1131,7 +1131,7 @@
 							  <li>Previous Paragraph <kbd>SHIFT+P</kbd></li>
 							  </ul>						    </td>
 							<td>&nbsp;</td>
-							<td>No semantics conveyed</td>
+							<td>no aural semantics, conveyed via navigation and paragraph list.</td>
 						</tr>
 						<tr>
 							<th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/the-iframe-element.html#the-param-element"><code>param [no test]</code></a></th>
@@ -1433,7 +1433,15 @@
 							<th scope="row"><a href="test-files/table-caption-thead-tbody-tfoot-tr-th-td.html"><code>td</code></a></th>
 							<td>Data cell in a data table</td>
 							<td>&nbsp;</td>
-							<td>&nbsp;</td>
+							<td><ul>
+							  <li>Jump to Table Cell (from within a table) <kbd>CTRL+WINDOWS Key+J</kbd></li>
+							  <li>Return to Previous Cell <kbd>CTRL+SHIFT+WINDOWS Key+J</kbd></li>
+							  <li>Read current cell <kbd>CTRL+ALT+NUM PAD 5</kbd></li>
+							  <li>Move to and Read Next Cell <kbd>CTRL+ALT+RIGHT ARROW</kbd></li>
+							  <li>Move to and Read Prior Cell <kbd>CTRL+ALT+LEFT ARROW</kbd></li>
+							  <li>Move to and Read Cell Above <kbd>CTRL+ALT+UP ARROW</kbd></li>
+							  <li>Move to and Read Cell Below <kbd>CTRL+ALT+DOWN ARROW</kbd></li>
+							  </ul></td>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 						</tr>
@@ -1446,7 +1454,7 @@
 							<td><strong>No UI</strong></td>
 						</tr>
 						<tr>
-							<th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/the-button-element.html#the-textarea-element"><code>textarea</code></a></th>
+							<th scope="row"><a href="test-files/textarea.html"><code>textarea</code></a></th>
 							<td>Multiline text field</td>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
@@ -1497,7 +1505,13 @@
 							<th scope="row"><a href="test-files/table-caption-thead-tbody-tfoot-tr-th-td.html"><code>tr</code></a></th>
 							<td>Data table row</td>
 							<td>&nbsp;</td>
-							<td>&nbsp;</td>
+							<td><ul>
+							  <li>Read Next Row <kbd>WINDOWS Key+ALT+DOWN ARROW</kbd></li>
+							  <li>Read Prior Row 	<kbd>WINDOWS Key+ALT+UP ARROW </kbd></li>
+							  <li>Read Current Row 	<kbd>ALT+WINDOWS Key+COMMA</kbd></li>
+							  <li> Read from Beginning of Row to Current Cell 	<kbd>INSERT+SHIFT+HOME</kbd></li>
+							  <li>Read from Current Cell to End of Row 	<kbd>INSERT+SHIFT+PAGE UP</kbd></li>
+							  </ul>						    </td>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 						</tr>
@@ -1550,7 +1564,7 @@
 							<td>&nbsp;</td>
 						</tr>
 						<tr id="toc-w">
-							<th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-wbr-element"><code>wbr</code></a></th>
+							<th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-wbr-element"><code>wbr [no test]</code></a></th>
 							<td>Line breaking opportunity</td>
 							<td><em><strong>none expected</strong></em></td>
 							<td>No special commands</td>

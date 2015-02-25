@@ -365,8 +365,7 @@
   							 <source src="audio/canvas.mp3" type="audio/mpeg">
                              <source src="audio/canvas.ogg" type="audio/ogg">
                           </audio> </td>
-							<td><p>No semantics conveyed</p>
-						    <p><strong>Note: </strong>HTML content included in the <a href="http://www.paciellogroup.com/blog/2015/02/html5-canvas-sub-dom/">HTML5 canvas sub DOM</a> is announced and navigable by screen reader users and is navigable by keyboard users</p></td>
+							<td><p>The canvas is 'transparent' for screen reader users. HTML content included in the <a href="http://www.paciellogroup.com/blog/2015/02/html5-canvas-sub-dom/">HTML5 canvas sub DOM</a> is announced and navigable by screen reader users and is navigable by keyboard users.</p></td>
 						</tr>
 						<tr>
 							<th scope="row"><a href="test-files/table-caption-thead-tbody-tfoot-tr-th-td.html"><code>caption</code></a></th>
@@ -439,7 +438,7 @@
 							<td><em>element content</em></td>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
-							<td>No semantics conveyed</td>
+							<td>Included as part of <code>dt</code> list item, user must use <kbd>arrow down</kbd> for content to be announced. If user navigates via list item navigation (Next Item in a List <kbd>I</kbd>)  from <code>dt</code> then <code>dd</code> content will not be announced.</td>
 						</tr>
 						<tr>
 							<th scope="row"><a href="test-files/del-ins.html"><code>del</code></a></th>
@@ -494,27 +493,26 @@
 							<th scope="row"><a href="test-files/dl-dt-dd.html"><code>dl</code></a></th>
 							<td>Association list consisting of zero or more name-value groups</td>
 							<td>&nbsp;</td>
-							<td>
-						      <ul>
-						        <li>List All Ordered, Unordered, and Definition Lists <kbd>CTRL+INSERT+L</kbd></li>
-						        <li>Next List <kbd>L</kbd></li>
-						        <li>Previous List <kbd>SHIFT+I</kbd></li>
-						        <li> Next Item in a List <kbd>I</kbd></li>
-						        <li>Previous item in a List <kbd>SHIFT+I</kbd></li>
-					        </ul></td>
-							<td><audio controls>
-  							 <source src="audio/dl-dt-dd.mp3" type="audio/mpeg">
-                             <source src="audio/dl-dt-dd.ogg" type="audio/ogg">
-                          </audio> </td>
+							<td><ul>
+							  <li>List All Ordered, Unordered, and Definition Lists <kbd>CTRL+INSERT+L</kbd></li>
+							  <li>Next List <kbd>L</kbd></li>
+							  <li>Previous List <kbd>SHIFT+I</kbd></li>
+							  <li> Next Item in a List <kbd>I</kbd></li>
+							  <li>Previous item in a List <kbd>SHIFT+I</kbd></li>
+							  </ul></td>
+							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 						</tr>
 						<tr>
 							<th scope="row"><a href="test-files/dl-dt-dd.html"><code>dt</code></a></th>
 							<td>Legend for corresponding <a href="http://www.w3.org/TR/html5/grouping-content.html#the-dd-element">dd</a> element(s)</td>
 							<td><em>element content</em></td>
+							<td><ul>
+							  <li>Next Item in a List <kbd>I</kbd></li>
+							  <li> Previous Item in a List <kbd>SHIFT+I</kbd></li>
+							  </ul></td>
 							<td>&nbsp;</td>
-							<td>&nbsp;</td>
-							<td>No semantics conveyed</td>
+							<td>Identified as a list item</td>
 						</tr>
 						<tr id="toc-e">
 							<th scope="row"><a href="test-files/em.html"><code>em</code></a></th>
@@ -1745,7 +1743,11 @@
            <th scope="row"><a href="test-files/button.html"><code>button</code></a></th>
            <td>Button control</td>
            <td>&nbsp;</td>
-           <td>&nbsp;</td>
+           <td><ul>
+             <li>List Buttons <kbd>CTRL+INSERT+B</kbd></li>
+             <li>Next Button <kbd>B</kbd></li>
+             <li>Previous button <kbd>B</kbd></li>
+           </ul></td>
            <td>&nbsp;</td>
            <td>&nbsp;</td>
          </tr>
@@ -1758,8 +1760,7 @@
              <source src="audio/canvas.mp3" type="audio/mpeg">
              <source src="audio/canvas.ogg" type="audio/ogg">
            </audio></td>
-           <td><p>No semantics conveyed</p>
-             <p><strong>Note: </strong>HTML content included in the <a href="http://www.paciellogroup.com/blog/2015/02/html5-canvas-sub-dom/">HTML5 canvas sub DOM</a> is announced and navigable by screen reader users and is navigable by keyboard users</p></td>
+           <td><p>&nbsp;</p></td>
          </tr>
          <tr>
            <th scope="row"><a href="test-files/table-caption-thead-tbody-tfoot-tr-th-td.html"><code>caption</code></a></th>
@@ -1832,7 +1833,7 @@
            <td>&nbsp;</td>
            <td>&nbsp;</td>
            <td>&nbsp;</td>
-           <td>No semantics conveyed</td>
+           <td>&nbsp;</td>
          </tr>
          <tr>
            <th scope="row"><a href="test-files/del-ins.html"><code>del</code></a></th>
@@ -1881,7 +1882,13 @@
            <th scope="row"><a href="test-files/dl-dt-dd.html"><code>dl</code></a></th>
            <td>Association list consisting of zero or more name-value groups</td>
            <td>&nbsp;</td>
-           <td>&nbsp;</td>
+           <td><ul>
+             <li>List All Ordered, Unordered, and Definition Lists <kbd>CTRL+INSERT+L</kbd></li>
+             <li>Next List <kbd>L</kbd></li>
+             <li>Previous List <kbd>SHIFT+I</kbd></li>
+             <li> Next Item in a List <kbd>I</kbd></li>
+             <li>Previous item in a List <kbd>SHIFT+I</kbd></li>
+           </ul></td>
            <td>&nbsp;</td>
            <td>&nbsp;</td>
          </tr>
@@ -1889,9 +1896,12 @@
            <th scope="row"><a href="test-files/dl-dt-dd.html"><code>dt</code></a></th>
            <td>Legend for corresponding <a href="http://www.w3.org/TR/html5/grouping-content.html#the-dd-element">dd</a> element(s)</td>
            <td><em>element content</em></td>
+           <td><ul>
+             <li>Next Item in a List <kbd>I</kbd></li>
+             <li> Previous Item in a List <kbd>SHIFT+I</kbd></li>
+           </ul></td>
            <td>&nbsp;</td>
-           <td>&nbsp;</td>
-           <td>No semantics conveyed</td>
+           <td>Identified as a list item</td>
          </tr>
          <tr id="toc-e2">
            <th scope="row"><a href="test-files/em.html"><code>em</code></a></th>
@@ -2088,11 +2098,7 @@
            <th scope="row"><a href="test-files/input-image.html"><code>input [image]</code></a></th>
            <td>Button control</td>
            <td>&nbsp;</td>
-           <td><ul>
-             <li>List Buttons <kbd>CTRL+INSERT+B</kbd></li>
-             <li>Next Button <kbd>B</kbd></li>
-             <li>Previous button <kbd>B</kbd></li>
-           </ul></td>
+           <td>&nbsp;</td>
            <td>&nbsp;</td>
            <td>&nbsp;</td>
          </tr>
@@ -2108,28 +2114,15 @@
            <th scope="row"><a href="test-files/input-number.html"><code>input [number]</code></a></th>
            <td>spin box control</td>
            <td>&nbsp;</td>
-           <td><ul>
-             <li>List Edit Boxes <kbd>CTRL+INSERT+E</kbd></li>
-             <li>Move To Next Edit Box <kbd>E </kbd></li>
-             <li>Move to Prior Edit Box <kbd>SHIFT+E</kbd></li>
-           </ul></td>
            <td>&nbsp;</td>
-           <td>spin buttons included in button commands.
-             <ul>
-               <li>List Buttons <kbd>CTRL+INSERT+B</kbd></li>
-               <li>Next Button <kbd>B</kbd></li>
-               <li>Previous button <kbd>B</kbd></li>
-             </ul></td>
+           <td>&nbsp;</td>
+           <td>&nbsp;</td>
          </tr>
          <tr>
            <th scope="row"><a href="test-files/input-password.html"><code>input [password]</code></a></th>
            <td>text control for inputting a password</td>
            <td>&nbsp;</td>
-           <td><ul>
-             <li>List Edit Boxes <kbd>CTRL+INSERT+E</kbd></li>
-             <li>Move To Next Edit Box <kbd>E </kbd></li>
-             <li>Move to Prior Edit Box <kbd>SHIFT+E</kbd></li>
-           </ul></td>
+           <td>&nbsp;</td>
            <td>&nbsp;</td>
            <td>&nbsp;</td>
          </tr>
@@ -2145,11 +2138,7 @@
            <th scope="row"><a href="test-files/input-radio.html"><code>input [radio]</code></a></th>
            <td>&nbsp;</td>
            <td>&nbsp;</td>
-           <td><ul>
-             <li>List Radio buttons 	<kbd>CTRL+INSERT+R</kbd> (JAWS 14) <kbd>CTRL+INSERT+A</kbd> (JAWS 15+)</li>
-             <li>Next Radio Button 	<kbd>R</kbd> (JAWS 14) <kbd>A</kbd> (JAWS 15+)</li>
-             <li>Previous Radio Button<kbd> SHIFT+R</kbd> (JAWS 14) <kbd>SHIFT+ A</kbd> (JAWS 15+)</li>
-           </ul>           </td>
+           <td>&nbsp;</td>
            <td>&nbsp;</td>
            <td>&nbsp;</td>
          </tr>
@@ -2157,11 +2146,7 @@
            <th scope="row"><a href="test-files/input-reset.html"><code>input [reset]</code></a></th>
            <td>Button control for resetting a form</td>
            <td>&nbsp;</td>
-           <td><ul>
-             <li>List Buttons <kbd>CTRL+INSERT+B</kbd></li>
-             <li>Next Button <kbd>B</kbd></li>
-             <li>Previous button <kbd>B</kbd></li>
-           </ul></td>
+           <td>&nbsp;</td>
            <td>&nbsp;</td>
            <td>&nbsp;</td>
          </tr>
@@ -2169,11 +2154,7 @@
            <th scope="row"><a href="test-files/input-search.html"><code>input [search]</code></a></th>
            <td>text control for inputting search terms</td>
            <td>&nbsp;</td>
-           <td><ul>
-             <li>List Edit Boxes <kbd>CTRL+INSERT+E</kbd></li>
-             <li>Move To Next Edit Box <kbd>E </kbd></li>
-             <li>Move to Prior Edit Box <kbd>SHIFT+E</kbd></li>
-           </ul></td>
+           <td>&nbsp;</td>
            <td>&nbsp;</td>
            <td>&nbsp;</td>
          </tr>
@@ -2181,11 +2162,7 @@
            <th scope="row"><a href="test-files/input-submit.html"><code>input [submit]</code></a></th>
            <td>Button control for submitting a form</td>
            <td>&nbsp;</td>
-           <td><ul>
-             <li>List Buttons <kbd>CTRL+INSERT+B</kbd></li>
-             <li>Next Button <kbd>B</kbd></li>
-             <li>Previous button <kbd>B</kbd></li>
-           </ul></td>
+           <td>&nbsp;</td>
            <td>&nbsp;</td>
            <td>&nbsp;</td>
          </tr>
@@ -2193,11 +2170,7 @@
            <th scope="row"><a href="test-files/input-tel.html"><code>input [tel]</code></a></th>
            <td>text box control for inputting a phone number</td>
            <td>&nbsp;</td>
-           <td><ul>
-             <li>List Edit Boxes <kbd>CTRL+INSERT+E</kbd></li>
-             <li>Move To Next Edit Box <kbd>E </kbd></li>
-             <li>Move to Prior Edit Box <kbd>SHIFT+E</kbd></li>
-           </ul></td>
+           <td>&nbsp;</td>
            <td>&nbsp;</td>
            <td>&nbsp;</td>
          </tr>
@@ -2205,11 +2178,7 @@
            <th scope="row"><a href="test-files/input-text.html"><code>input [text]</code></a></th>
            <td>text box control</td>
            <td>&nbsp;</td>
-           <td><ul>
-             <li>List Edit Boxes <kbd>CTRL+INSERT+E</kbd></li>
-             <li>Move To Next Edit Box <kbd>E </kbd></li>
-             <li>Move to Prior Edit Box <kbd>SHIFT+E</kbd></li>
-           </ul></td>
+           <td>&nbsp;</td>
            <td>&nbsp;</td>
            <td>&nbsp;</td>
          </tr>
@@ -2285,10 +2254,7 @@
            <th scope="row"><a href="test-files/ul-li.html"><code>li</code></a></th>
            <td>List item</td>
            <td>&nbsp;</td>
-           <td><ul>
-             <li> Next Item in a List <kbd>I</kbd></li>
-             <li> Previous Item in a List <kbd>SHIFT+I</kbd></li>
-           </ul></td>
+           <td>&nbsp;</td>
            <td>&nbsp;</td>
            <td>&nbsp;</td>
          </tr>
@@ -2304,12 +2270,7 @@
            <th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/grouping-content.html#the-main-element"><code>main</code></a></th>
            <td>Main content of a document </td>
            <td>&nbsp;</td>
-           <td><ul>
-             <li>Move to Main Region <kbd>Q</kbd></li>
-             <li>Move to Next Region <kbd>SEMICOLON</kbd> (JAWS14) <kbd>R</kbd> (JAWS15) </li>
-             <li>Move to Previous Region <kbd>SHIFT+SEMICOLON</kbd> (JAWS14) <kbd>SHIFT+R</kbd> (JAWS15) </li>
-             <li>Select a Region <kbd>INSERT+CTRL+SEMICOLON</kbd> (JAWS14) <kbd>INSERT+CTRL+R</kbd> (JAWS15)</li>
-           </ul></td>
+           <td>&nbsp;</td>
            <td>&nbsp;</td>
            <td>&nbsp;</td>
          </tr>
@@ -2373,11 +2334,7 @@
            <th scope="row"><a href="test-files/nav.html"><code>nav</code></a></th>
            <td>Section with navigational links</td>
            <td>&nbsp;</td>
-           <td><ul>
-             <li>Move to Next Region <kbd>SEMICOLON</kbd> (JAWS14) <kbd>R</kbd> (JAWS15) </li>
-             <li>Move to Previous Region <kbd>SHIFT+SEMICOLON</kbd> (JAWS14) <kbd>SHIFT+R</kbd> (JAWS15) </li>
-             <li>Select a Region <kbd>INSERT+CTRL+SEMICOLON</kbd> (JAWS14) <kbd>INSERT+CTRL+R</kbd> (JAWS15)</li>
-           </ul></td>
+           <td>&nbsp;</td>
            <td>&nbsp;</td>
            <td>&nbsp;</td>
          </tr>
@@ -2393,10 +2350,7 @@
            <th scope="row"><a href="test-files/object.html"><code>object</code></a></th>
            <td>Image, <a href="http://www.w3.org/TR/html5/browsers.html#nested-browsing-context">nested browsing context</a>, or <a href="http://www.w3.org/TR/html5/infrastructure.html#plugin">plugin</a></td>
            <td>&nbsp;</td>
-           <td><ul>
-             <li>Next Object Tag <kbd>O</kbd></li>
-             <li>Previous Object Tag <kbd>SHIFT+O</kbd></li>
-           </ul></td>
+           <td>&nbsp;</td>
            <td>&nbsp;</td>
            <td>&nbsp;</td>
          </tr>
@@ -2404,13 +2358,7 @@
            <th scope="row"><a href="test-files/ol-li.html"><code>ol</code></a></th>
            <td>Ordered list</td>
            <td>&nbsp;</td>
-           <td><ul>
-             <li>List All Ordered, Unordered, and Definition Lists <kbd>CTRL+INSERT+L</kbd></li>
-             <li>Next List <kbd>L</kbd></li>
-             <li>Previous List <kbd>SHIFT+I</kbd></li>
-             <li> Next Item in a List <kbd>I</kbd></li>
-             <li>Previous item in a List <kbd>SHIFT+I</kbd></li>
-           </ul></td>
+           <td>&nbsp;</td>
            <td>&nbsp;</td>
            <td>&nbsp;</td>
          </tr>
@@ -2442,13 +2390,9 @@
            <th scope="row"><a href="test-files/p.html"><code>p</code></a></th>
            <td>Paragraph</td>
            <td>element content</td>
-           <td><ul>
-             <li>List of Paragraphs <kbd>CTRL+INSERT+P</kbd></li>
-             <li>Next Paragraph <kbd>P</kbd></li>
-             <li>Previous Paragraph <kbd>SHIFT+P</kbd></li>
-           </ul></td>
            <td>&nbsp;</td>
-           <td>no aural semantics, conveyed via navigation and paragraph list.</td>
+           <td>&nbsp;</td>
+           <td>&nbsp;</td>
          </tr>
          <tr>
            <th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/the-iframe-element.html#the-param-element"><code>param [no test]</code></a></th>
@@ -2578,13 +2522,13 @@
            <td>&nbsp;</td>
            <td>&nbsp;</td>
            <td>&nbsp;</td>
-           <td>No semantics conveyed unless the section has an accessible name.</td>
+           <td>&nbsp;</td>
          </tr>
          <tr>
            <th scope="row"><a href="test-files/select-option.html"><code>select</code></a></th>
            <td>List box control</td>
            <td>&nbsp;</td>
-           <td><p>List of Combo boxes <kbd>CTRL+INSERT+C</kbd></p>
+           <td><p>&nbsp;</p>
              <p>&nbsp;</p></td>
            <td>&nbsp;</td>
            <td>&nbsp;</td>
@@ -2726,14 +2670,7 @@
              <p><a href="test-files/tables-complex.html"><code>complex table test</code></a></p></th>
            <td>Data table</td>
            <td>&nbsp;</td>
-           <td><ul>
-             <li>List Tables <kbd>CTRL+INSERT+T</kbd></li>
-             <li>Next Table <kbd>T </kbd></li>
-             <li>Previous Table <kbd>SHIFT+T</kbd></li>
-             <li>Select Table use <kbd>F8</kbd>. To select an entire table, move  to the line that reads, "Table with x columns and y rows," and press <kbd>F8</kbd>.</li>
-             <li>Read Next Column 	<kbd>WINDOWS Key+ALT+RIGHT ARROW</kbd></li>
-             <li>Read Prior Column 	<kbd>WINDOWS Key+ALT+LEFT ARROW</kbd></li>
-           </ul></td>
+           <td>&nbsp;</td>
            <td>&nbsp;</td>
            <td>&nbsp;</td>
          </tr>
@@ -2749,15 +2686,7 @@
            <th scope="row"><a href="test-files/table-caption-thead-tbody-tfoot-tr-th-td.html"><code>td</code></a></th>
            <td>Data cell in a data table</td>
            <td>&nbsp;</td>
-           <td><ul>
-             <li>Jump to Table Cell (from within a table) <kbd>CTRL+WINDOWS Key+J</kbd></li>
-             <li>Return to Previous Cell <kbd>CTRL+SHIFT+WINDOWS Key+J</kbd></li>
-             <li>Read current cell <kbd>CTRL+ALT+NUM PAD 5</kbd></li>
-             <li>Move to and Read Next Cell <kbd>CTRL+ALT+RIGHT ARROW</kbd></li>
-             <li>Move to and Read Prior Cell <kbd>CTRL+ALT+LEFT ARROW</kbd></li>
-             <li>Move to and Read Cell Above <kbd>CTRL+ALT+UP ARROW</kbd></li>
-             <li>Move to and Read Cell Below <kbd>CTRL+ALT+DOWN ARROW</kbd></li>
-           </ul></td>
+           <td>&nbsp;</td>
            <td>&nbsp;</td>
            <td>&nbsp;</td>
          </tr>

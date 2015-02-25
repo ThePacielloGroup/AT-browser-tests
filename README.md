@@ -12,8 +12,7 @@ Process
 =======
 Initial: fork repo.
 
-* create test file from template.html
-* test file with screen reader(s)
+* test file (linked from first column of results page) for each element with screen reader(s)
 * add results to Results page
 * get information about interaction/navigation for element from screen reader documentation and add to Results page
 * record audio of interaction with element ONLY, then add audio to Results page

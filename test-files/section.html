@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>test file: article element</title>
+<title>test file: section element</title>
 </head>
 
 <body>
 <!-- h1 includes element and attribute(s) in test -->
-<h1><code>article</code> element</h1>
+<h1><code>section</code> element</h1>
 <ul>
 <li>Plain</li>
 <li>With <code>&lt;h1&gt;</code></li>
@@ -15,50 +15,50 @@
 <li>With <code>&lt;h1&gt;</code> referenced by <code>aria-labelledby</code></li>
 </ul>
 <!-- element and attribute(s) working example -->
-<article>
+<section>
 Lorem ipsum...
-</article>
+</section>
 <hr>
-<article>
+<section>
 <h1>Once upon a time</h1>
 Lorem ipsum...
-</article>
+</section>
 <hr>
-<article aria-label="Once upon a time">
+<section aria-label="Once upon a time">
 Lorem ipsum...
-</article>
+</section>
 <hr>
-<article aria-labelledby="article-title">
-<h1 id="article-title">Once upon a time</h1>
+<section aria-labelledby="section-title">
+<h1 id="section-title">Once upon a time</h1>
 Lorem ipsum...
-</article>
+</section>
 <!-- element and attribute(s) code -->
 <h2>Code</h2>
-<pre><code>&lt;article&gt;
+<pre><code>&lt;section&gt;
 Lorem ipsum...
-&lt;/article&gt;
+&lt;/section&gt;
 </code></pre>
 <hr>
-<pre><code>&lt;article&gt;
+<pre><code>&lt;section&gt;
 &lt;h1&gt;Once upon a time&lt;/h1&gt;
 Lorem ipsum...
-&lt;/article&gt;
+&lt;/section&gt;
 </code></pre>
 <hr>
-<pre><code>&lt;article aria-label=&quot;Once upon a time&quot;&gt;
+<pre><code>&lt;section aria-label=&quot;Once upon a time&quot;&gt;
 Lorem ipsum...
-&lt;/article&gt;
+&lt;/section&gt;
 </code></pre>
 <hr>
-<pre><code>&lt;article aria-labelledby=&quot;article-title&quot;&gt;
-&lt;h1 id=&quot;article-title&quot;&gt;Once upon a time&lt;/h1&gt;
+<pre><code>&lt;section aria-labelledby=&quot;section-title&quot;&gt;
+&lt;h1 id=&quot;section-title&quot;&gt;Once upon a time&lt;/h1&gt;
 Lorem ipsum...
-&lt;/article&gt;
+&lt;/section&gt;
 </code></pre>
 <!-- link(s) to element and attribute(s) in test -->
 <h2>Reference</h2>
 <p>
-<a href="http://www.w3.org/TR/html5/sections.html#the-article-element">HTML5 article element</a>
+<a href="http://www.w3.org/TR/html5/sections.html#the-section-element">HTML5 section element</a>
 </p>
 </body>
 </html>

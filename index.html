@@ -54,7 +54,7 @@
 <body>
    <header> <img src="images/HTML5_Logo.png" width="128" height="128" alt="HTML5 logo" id="logo">
      <h1>Aural UI of the Elements of <abbr title="Hypertext Markup Language">HTML</abbr></h1>
-     <p>A Work <em>in progress</em>: Last updated 25 February 2015</p>
+     <p>A Work <em>in progress</em>: Last updated 26 February 2015</p>
     <p><strong>Editors:</strong> Steve Faulkner and L&eacute;onie Watson</p>
     <p><strong>Github Repo:</strong> <a href="https://github.com/ThePacielloGroup/AT-browser-tests">ThePacielloGroup/AT-browser-tests </a></p>
     <p>Found a bug? Please <a href="https://github.com/ThePacielloGroup/AT-browser-tests/issues?state=open">report it</a>.</p>
@@ -981,7 +981,7 @@
 						</tr>
 						
 						<tr id="toc-m">
-							<th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/grouping-content.html#the-main-element"><code>main</code></a></th>
+							<th scope="row"><a href="test-files/main.html"><code>main</code></a></th>
 							<td>Main content of a document </td>
 							<td>&nbsp;</td>
 							<td><ul>
@@ -1576,8 +1576,8 @@
 	  <h2>VoiceOver tests:</h2> 
 	 <p class="note">todo</p>
      <h2>NVDA tests:</h2> 
-	 <p class="note">todo</p>
-     <table class="alt">
+	 <div class="note"><strong>todo</strong>
+<table class="alt">
        <caption>
          NVDA and Firefox on Windows 8.1
        </caption>
@@ -1631,10 +1631,7 @@
            <td>Contact information for a page or <a href="http://www.w3.org/TR/html5/sections.html#the-article-element">article</a> element</td>
            <td><em>element content</em></td>
            <td>No special commands</td>
-           <td><audio controls>
-             <source src="audio/address.mp3" type="audio/mpeg">
-             <source src="audio/address.ogg" type="audio/ogg">
-           </audio></td>
+           <td> </td>
            <td>No semantics conveyed</td>
          </tr>
          <tr>
@@ -1678,10 +1675,7 @@
            <td>Keywords</td>
            <td><em>element content</em></td>
            <td>No special commands</td>
-           <td><audio controls>
-             <source src="audio/b.mp3" type="audio/mpeg">
-             <source src="audio/b.ogg" type="audio/ogg">
-           </audio></td>
+           <td></td>
            <td>No semantics conveyed</td>
          </tr>
          <tr>
@@ -1697,10 +1691,7 @@
            <td>Text directionality isolation</td>
            <td><em>element content</em></td>
            <td>No special commands</td>
-           <td><audio controls>
-             <source src="audio/bdi.mp3" type="audio/mpeg">
-             <source src="audio/bdi.ogg" type="audio/ogg">
-           </audio></td>
+           <td></td>
            <td>No semantics conveyed</td>
          </tr>
          <tr>
@@ -1708,10 +1699,7 @@
            <td>Text directionality formatting</td>
            <td><em>element content</em></td>
            <td>No special commands</td>
-           <td><audio controls>
-             <source src="audio/bdo.mp3" type="audio/mpeg">
-             <source src="audio/bdo.ogg" type="audio/ogg">
-           </audio></td>
+           <td></td>
            <td>No semantics conveyed</td>
          </tr>
          <tr>
@@ -1743,11 +1731,7 @@
            <th scope="row"><a href="test-files/button.html"><code>button</code></a></th>
            <td>Button control</td>
            <td>&nbsp;</td>
-           <td><ul>
-             <li>List Buttons <kbd>CTRL+INSERT+B</kbd></li>
-             <li>Next Button <kbd>B</kbd></li>
-             <li>Previous button <kbd>B</kbd></li>
-           </ul></td>
+           <td>&nbsp;</td>
            <td>&nbsp;</td>
            <td>&nbsp;</td>
          </tr>
@@ -1756,10 +1740,7 @@
            <td>Scriptable bitmap canvas</td>
            <td><em>element content</em></td>
            <td><p>No special commands</p></td>
-           <td><audio controls>
-             <source src="audio/canvas.mp3" type="audio/mpeg">
-             <source src="audio/canvas.ogg" type="audio/ogg">
-           </audio></td>
+           <td></td>
            <td><p>&nbsp;</p></td>
          </tr>
          <tr>
@@ -1783,10 +1764,7 @@
            <td>Computer code</td>
            <td><em>element content</em></td>
            <td>No special commands</td>
-           <td><audio controls>
-             <source src="audio/code.mp3" type="audio/mpeg">
-             <source src="audio/code.ogg" type="audio/ogg">
-           </audio></td>
+           <td></td>
            <td>No semantics conveyed</td>
          </tr>
          <tr>
@@ -1810,10 +1788,7 @@
            <td>Machine-readable equivalent</td>
            <td><em>element content</em></td>
            <td>No special commands</td>
-           <td><audio controls>
-             <source src="audio/data.mp3" type="audio/mpeg">
-             <source src="audio/data.ogg" type="audio/ogg">
-           </audio></td>
+           <td></td>
            <td>No semantics conveyed</td>
          </tr>
          <tr>
@@ -1821,10 +1796,7 @@
            <td>Container for options for <a data-anolis-xref="attr-input-list" href="http://www.w3.org/TR/html5/forms.html#attr-input-list">combo box control</a></td>
            <td>&nbsp;</td>
            <td>&nbsp;</td>
-           <td><audio controls>
-             <source src="audio/datalist.mp3" type="audio/mpeg">
-             <source src="audio/datalist.ogg" type="audio/ogg">
-           </audio></td>
+           <td></td>
            <td>&nbsp;</td>
          </tr>
          <tr>
@@ -1840,10 +1812,7 @@
            <td>A removal from the document</td>
            <td><em>element content</em></td>
            <td>No special commands</td>
-           <td><audio controls>
-             <source src="audio/del-ins.mp3" type="audio/mpeg">
-             <source src="audio/del-ins.ogg" type="audio/ogg">
-           </audio></td>
+           <td></td>
            <td>No semantics conveyed</td>
          </tr>
          <!--<tr>
@@ -1882,13 +1851,7 @@
            <th scope="row"><a href="test-files/dl-dt-dd.html"><code>dl</code></a></th>
            <td>Association list consisting of zero or more name-value groups</td>
            <td>&nbsp;</td>
-           <td><ul>
-             <li>List All Ordered, Unordered, and Definition Lists <kbd>CTRL+INSERT+L</kbd></li>
-             <li>Next List <kbd>L</kbd></li>
-             <li>Previous List <kbd>SHIFT+I</kbd></li>
-             <li> Next Item in a List <kbd>I</kbd></li>
-             <li>Previous item in a List <kbd>SHIFT+I</kbd></li>
-           </ul></td>
+           <td>&nbsp;</td>
            <td>&nbsp;</td>
            <td>&nbsp;</td>
          </tr>
@@ -1896,12 +1859,9 @@
            <th scope="row"><a href="test-files/dl-dt-dd.html"><code>dt</code></a></th>
            <td>Legend for corresponding <a href="http://www.w3.org/TR/html5/grouping-content.html#the-dd-element">dd</a> element(s)</td>
            <td><em>element content</em></td>
-           <td><ul>
-             <li>Next Item in a List <kbd>I</kbd></li>
-             <li> Previous Item in a List <kbd>SHIFT+I</kbd></li>
-           </ul></td>
            <td>&nbsp;</td>
-           <td>Identified as a list item</td>
+           <td>&nbsp;</td>
+           <td>&nbsp;</td>
          </tr>
          <tr id="toc-e2">
            <th scope="row"><a href="test-files/em.html"><code>em</code></a></th>
@@ -2194,11 +2154,7 @@
            <th scope="row"><a href="test-files/input-url.html"><code>input [url]</code></a></th>
            <td>text control for inputting a URL</td>
            <td>&nbsp;</td>
-           <td><ul>
-             <li>List Edit Boxes <kbd>CTRL+INSERT+E</kbd></li>
-             <li>Move To Next Edit Box <kbd>E </kbd></li>
-             <li>Move to Prior Edit Box <kbd>SHIFT+E</kbd></li>
-           </ul></td>
+           <td>&nbsp;</td>
            <td>&nbsp;</td>
            <td>&nbsp;</td>
          </tr>
@@ -2267,7 +2223,7 @@
            <td><strong>No UI</strong></td>
          </tr>
          <tr id="toc-m2">
-           <th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/grouping-content.html#the-main-element"><code>main</code></a></th>
+           <th scope="row"><a href="test-files/main.html"><code>main</code></a></th>
            <td>Main content of a document </td>
            <td>&nbsp;</td>
            <td>&nbsp;</td>
@@ -2816,7 +2772,7 @@
          </tr>
        </tbody>
      </table>
-     <h2>&nbsp;</h2>
+  </div>
      <h2>ORCA tests:</h2> 
 	 <p class="note">todo</p>
 	  <h2>Chromevox tests:</h2> 

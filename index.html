@@ -54,7 +54,7 @@
 <body>
    <header> <img src="images/HTML5_Logo.png" width="128" height="128" alt="HTML5 logo" id="logo">
      <h1>Aural UI of the Elements of <abbr title="Hypertext Markup Language">HTML</abbr></h1>
-     <p>A Work <em>in progress</em>: Last updated 28 February 2015</p>
+     <p>A Work <em>in progress</em>: Last updated 1 March 2015</p>
     <p><strong>Editors:</strong> Steve Faulkner and L&eacute;onie Watson</p>
     <p><strong>Github Repo:</strong> <a href="https://github.com/ThePacielloGroup/AT-browser-tests">ThePacielloGroup/AT-browser-tests </a></p>
     <p>Found a bug? Please <a href="https://github.com/ThePacielloGroup/AT-browser-tests/issues?state=open">report it</a>.</p>
@@ -111,17 +111,19 @@
     </caption>
 					<thead>
 						<tr>
-							<th width="95" scope="col">Element [test file linked]</th>
-							<th width="124" scope="col">Element represents</th>
+							<th width="84" scope="col">Element [test file linked]</th>
+							<th width="142" scope="col">Element represents</th>
 							<th width="149" scope="col">AURAL UI - JAWS</th>
-							<th width="316" scope="col">Interaction - JAWS</th>
-							<th width="178" scope="col">audio of JAWS announcing test file content</th>
-							<th width="333" scope="col">notes - JAWS</th>
+							<th width="308" scope="col">Interaction - JAWS</th>
+							<th width="95" scope="col">audio of JAWS announcing test file content</th>
+							<th width="72" scope="col"><p>Element Semantics conveyed?</p></th>
+							<th width="341" scope="col">notes - JAWS</th>
 						</tr>
 					</thead>
 					<tfoot>
 						<tr>
 							<th scope="col">Element</th>
+							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
@@ -167,6 +169,7 @@
   							 <source src="audio/a-href-Tab.mp3" type="audio/mpeg">
                              <source src="audio/a-href-Tab.ogg" type="audio/ogg">
                           </audio></p></td>
+							<td><img src="images/tick.png" width="16" height="16" alt="yes"></td>
 							<td><code>link</code> role announced before link text when cursored to, after via tab.</td>
 					  </tr>
 						<tr id="toc-a2">
@@ -187,6 +190,8 @@
   							 <source src="audio/a.mp3" type="audio/mpeg">
                              <source src="audio/a.ogg" type="audio/ogg">
                           </audio> </td>
+						  <td><p>JAWS &lt;15<img src="images/tick.png" width="16" height="16" alt="yes"></p>
+					      <p>JAWS 15+ <img src="images/cross.png" width="16" height="16" alt="no"></p></td>
 						  <td><p>Semantics conveyed via navigation (JAWS &lt;15)</p>
 						    <p>No semantics conveyed  (JAWS15+)</p>
 					      <p>&nbsp;</p></td>
@@ -202,6 +207,8 @@
   							 <source src="audio/abbr.mp3" type="audio/mpeg">
                              <source src="audio/abbr.ogg" type="audio/ogg">
                           </audio> </td>
+							<td><p>By default <img src="images/cross.png" width="16" height="16" alt="no"></p>
+						    <p>via preference<img src="images/tick.png" width="16" height="16" alt="yes"></p></td>
 							<td><p>No semantics conveyed by default</p>
 						    <p>Note that expansions are not announced by default and that exapnsions provided using the title attribute are not available to keyboard only users. Refer to <a href="http://www.paciellogroup.com/blog/2013/01/using-the-html-title-attribute-updated/">Using the HTML title attribute</a>.</p></td>
 						</tr>
@@ -214,12 +221,14 @@
   							 <source src="audio/address.mp3" type="audio/mpeg">
                              <source src="audio/address.ogg" type="audio/ogg">
                           </audio> </td>
+							<td><img src="images/cross.png" width="16" height="16" alt="no"></td>
 							<td>No semantics conveyed</td>
 						</tr>
 						
 						<tr>
 							<th scope="row"><a href="test-files/area.html"><code>area</code></a></th>
 							<td>Hyperlink or dead area on an image map</td>
+							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
@@ -238,6 +247,7 @@
   							 <source src="audio/article.mp3" type="audio/mpeg">
                              <source src="audio/article.ogg" type="audio/ogg">
                           </audio> </td>
+							<td><img src="images/tick.png" width="16" height="16" alt="yes"></td>
 							<td>Included as a navigable region</td>
 						</tr>
 						<tr>
@@ -254,6 +264,7 @@
   							 <source src="audio/aside.mp3" type="audio/mpeg">
                              <source src="audio/aside.ogg" type="audio/ogg">
                           </audio> </td>
+							<td><img src="images/tick.png" width="16" height="16" alt="yes"></td>
 							<td>Included as a navigable region</td>
 						</tr>
 						<tr>
@@ -265,6 +276,7 @@
   							 <source src="audio/aside.mp3" type="audio/mpeg">
                              <source src="audio/aside.ogg" type="audio/ogg">
                           </audio>--> &nbsp;</td>
+							<td><img src="images/tick.png" width="16" height="16" alt="yes"></td>
 							<td>&nbsp;</td>
 						</tr>
 						<tr id="toc-b">
@@ -276,6 +288,7 @@
   							 <source src="audio/b.mp3" type="audio/mpeg">
                              <source src="audio/b.ogg" type="audio/ogg">
                           </audio> </td>
+							<td><img src="images/cross.png" width="16" height="16" alt="no"></td>
 							<td>No semantics conveyed</td>
 						</tr>
 						<tr>
@@ -283,6 +296,7 @@
 							<td>Base URL and default target <a href="http://www.w3.org/TR/html5/browsers.html#browsing-context">browsing context</a> for <a data-anolis-xref="attr-hyperlink-target" href="http://www.w3.org/TR/html5/links.html#attr-hyperlink-target">hyperlinks</a> and <a data-anolis-xref="attr-fs-target" href="http://www.w3.org/TR/html5/forms.html#attr-fs-target">forms</a></td>
 							<td><em><strong>none expected</strong></em></td>
 							<td>No special commands</td>
+							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 							<td><strong>No UI</strong></td>
 						</tr>
@@ -295,6 +309,7 @@
   							 <source src="audio/bdi.mp3" type="audio/mpeg">
                              <source src="audio/bdi.ogg" type="audio/ogg">
                           </audio> </td>
+							<td><img src="images/cross.png" width="16" height="16" alt="no"></td>
 							<td>No semantics conveyed</td>
 						</tr>
 						<tr>
@@ -306,6 +321,7 @@
   							 <source src="audio/bdo.mp3" type="audio/mpeg">
                              <source src="audio/bdo.ogg" type="audio/ogg">
                           </audio> </td>
+							<td><img src="images/cross.png" width="16" height="16" alt="no"></td>
 							<td>No semantics conveyed</td>
 						</tr>
 						
@@ -322,6 +338,7 @@
   							 <source src="audio/blockquote-cite.mp3" type="audio/mpeg">
                              <source src="audio/blockquote-cite.ogg" type="audio/ogg">
                           </audio> </td>
+							<td><img src="images/tick.png" width="16" height="16" alt="yes"></td>
 							<td>&nbsp;</td>
 						</tr>
 						<tr>
@@ -329,6 +346,7 @@
 							<td>Document body</td>
 							<td><em>element content</em></td>
 							<td>No special commands</td>
+							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 							<td><p>No semantics conveyed</p>
 						    <p>Is included in  focus order in most browsers.</p></td>
@@ -338,6 +356,7 @@
 							<td>Line break, e.g. in poem or postal address</td>
 							<td>&nbsp;</td>
 							<td>No special commands</td>
+							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 							<td><em>line break?</em></td>
 						</tr>
@@ -354,6 +373,7 @@
   							 <source src="audio/button.mp3" type="audio/mpeg">
                              <source src="audio/button.ogg" type="audio/ogg">
                           </audio> </td>
+							<td><img src="images/tick.png" width="16" height="16" alt="yes"></td>
 							<td>&nbsp;</td>
 						</tr>
 						<tr id="toc-c">
@@ -365,6 +385,7 @@
   							 <source src="audio/canvas.mp3" type="audio/mpeg">
                              <source src="audio/canvas.ogg" type="audio/ogg">
                           </audio> </td>
+							<td><img src="images/tick.png" width="16" height="16" alt="yes"></td>
 							<td><p>The canvas is 'transparent' for screen reader users. HTML content included in the <a href="http://www.paciellogroup.com/blog/2015/02/html5-canvas-sub-dom/">HTML5 canvas sub DOM</a> is announced and navigable by screen reader users and is navigable by keyboard users.</p></td>
 						</tr>
 						<tr>
@@ -373,7 +394,8 @@
 							<td>&nbsp;</td>
 							<td>No special commands</td>
 							<td>&nbsp;</td>
-							<td>Announced when atable is navigated to. Used as table title in the table list (List Tables 	<kbd>CTRL+INSERT+T</kbd>) dialog.</td>
+							<td><img src="images/tick.png" width="16" height="16" alt="yes"></td>
+							<td>Announced when a table is navigated to. Used as table title in the table list (List Tables 	<kbd>CTRL+INSERT+T</kbd>) dialog.</td>
 						</tr>
 						<tr>
 							<th scope="row"><a href="test-files/blockquote-cite.html"><code>cite</code></a></th>
@@ -381,6 +403,7 @@
 							<td><em>element content</em></td>
 							<td>No special commands</td>
 							<td>&nbsp;</td>
+							<td><img src="images/cross.png" width="16" height="16" alt="no"></td>
 							<td>No semantics conveyed</td>
 						</tr>
 						<tr>
@@ -392,6 +415,7 @@
   							 <source src="audio/code.mp3" type="audio/mpeg">
                              <source src="audio/code.ogg" type="audio/ogg">
                           </audio> </td>
+							<td><img src="images/cross.png" width="16" height="16" alt="no"></td>
 							<td>No semantics conveyed</td>
 						</tr>
 						<tr>
@@ -401,6 +425,7 @@
 							<td>No special commands</td>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
+							<td>&nbsp;</td>
 						</tr>
 						<tr>
 							<th scope="row"><a href="test-files/tables-complex.html"><code>colgroup</code></a></th>
@@ -408,6 +433,7 @@
 							<td><em>none expected</em></td>
 							<td>No special commands</td>
 							<td>&nbsp;</td>
+							<td><img src="images/cross.png" width="16" height="16" alt="no"></td>
 							<td>&nbsp;</td>
 						</tr>
 						<tr id="toc-d">
@@ -419,6 +445,7 @@
   							 <source src="audio/data.mp3" type="audio/mpeg">
                              <source src="audio/data.ogg" type="audio/ogg">
                           </audio> </td>
+							<td><img src="images/cross.png" width="16" height="16" alt="no"></td>
 							<td>No semantics conveyed</td>
 						</tr>
 						<tr>
@@ -431,13 +458,18 @@
                              <source src="audio/datalist.ogg" type="audio/ogg">
                           </audio> </td>
 							<td>&nbsp;</td>
+							<td>&nbsp;</td>
 						</tr>
 						<tr>
 							<th scope="row"><a href="test-files/dl-dt-dd.html"><code>dd</code></a></th>
 							<td>Content for corresponding <a href="http://www.w3.org/TR/html5/grouping-content.html#the-dt-element">dt</a> element(s)</td>
 							<td><em>element content</em></td>
 							<td>&nbsp;</td>
-							<td>&nbsp;</td>
+							<td><audio controls>
+  							 <source src="audio/dl-dt-dd.mp3" type="audio/mpeg">
+                             <source src="audio/dl-dt-dd..ogg" type="audio/ogg">
+                          </audio></td>
+							<td><img src="images/tick.png" width="16" height="16" alt="yes"></td>
 							<td>Included as part of <code>dt</code> list item, user must use <kbd>arrow down</kbd> for content to be announced. If user navigates via list item navigation (Next Item in a List <kbd>I</kbd>)  from <code>dt</code> then <code>dd</code> content will not be announced.</td>
 						</tr>
 						<tr>
@@ -449,6 +481,7 @@
   							 <source src="audio/del-ins.mp3" type="audio/mpeg">
                              <source src="audio/del-ins.ogg" type="audio/ogg">
                           </audio> </td>
+							<td><img src="images/cross.png" width="16" height="16" alt="no"></td>
 							<td>No semantics conveyed</td>
 						</tr>
 						<!--<tr>
@@ -465,6 +498,7 @@
 							<td><em>element content</em></td>
 							<td>No special commands</td>
 							<td>&nbsp;</td>
+							<td><img src="images/cross.png" width="16" height="16" alt="no"></td>
 							<td>No semantics conveyed</td>
 						</tr>
 						<!-- <tr>
@@ -487,6 +521,7 @@
 							  <li>List Divisions 	<kbd>CTRL+INSERT+Z</kbd></li>
 							  </ul>						    </td>
 							<td>&nbsp;</td>
+							<td><img src="images/tick.png" width="16" height="16" alt="yes"></td>
 							<td>No semantics conveyed</td>
 						</tr>
 						<tr>
@@ -500,7 +535,11 @@
 							  <li> Next Item in a List <kbd>I</kbd></li>
 							  <li>Previous item in a List <kbd>SHIFT+I</kbd></li>
 							  </ul></td>
-							<td>&nbsp;</td>
+							<td><audio controls>
+  							 <source src="audio/dl-dt-dd.mp3" type="audio/mpeg">
+                             <source src="audio/dl-dt-dd.ogg" type="audio/ogg">
+                          </audio></td>
+							<td><img src="images/tick.png" width="16" height="16" alt="yes"></td>
 							<td>&nbsp;</td>
 						</tr>
 						<tr>
@@ -511,7 +550,11 @@
 							  <li>Next Item in a List <kbd>I</kbd></li>
 							  <li> Previous Item in a List <kbd>SHIFT+I</kbd></li>
 							  </ul></td>
-							<td>&nbsp;</td>
+							<td><audio controls>
+  							 <source src="audio/dl-dt-dd.mp3" type="audio/mpeg">
+                             <source src="audio/dl-dt-dd.ogg" type="audio/ogg">
+                          </audio></td>
+							<td><img src="images/tick.png" width="16" height="16" alt="yes"></td>
 							<td>Identified as a list item</td>
 						</tr>
 						<tr id="toc-e">
@@ -523,12 +566,14 @@
   							 <source src="audio/em.mp3" type="audio/mpeg">
                              <source src="audio/em.ogg" type="audio/ogg">
                           </audio></td>
+							<td><img src="images/cross.png" width="16" height="16" alt="no"></td>
 							<td>No semantics conveyed</td>
 						</tr>
 						<tr>
 							<th scope="row"><a href="test-files/embed.html"><code>embed</code></a></th>
 							<td><a href="http://www.w3.org/TR/html5/infrastructure.html#plugin">Plugin</a></td>
 						  <td>&nbsp;</td>
+							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
@@ -543,6 +588,7 @@
                              <source src="audio/fieldset-legend.ogg" type="audio/ogg">
                           </audio></td>
 							<td>&nbsp;</td>
+							<td>&nbsp;</td>
 						</tr>
 						<tr>
 							<th scope="row"><a href="test-files/figure-figcaption.html"><code>figcaption</code></a></th>
@@ -553,6 +599,7 @@
   							 <source src="audio/figure-figcaption.mp3" type="audio/mpeg">
                              <source src="audio/figure-figcaption.ogg" type="audio/ogg">
                           </audio></td>
+							<td><img src="images/tick.png" width="16" height="16" alt="yes"></td>
 							<td>&nbsp;</td>
 						</tr>
 						<tr>
@@ -564,6 +611,7 @@
   							 <source src="audio/figure.mp3" type="audio/mpeg">
                              <source src="audio/figure.ogg" type="audio/ogg">
                           </audio></td>
+							<td><img src="images/tick.png" width="16" height="16" alt="yes"></td>
 							<td>&nbsp;</td>
 						</tr>
 						<tr>
@@ -579,6 +627,7 @@
   							 <source src="audio/footer.mp3" type="audio/mpeg">
                              <source src="audio/footer.ogg" type="audio/ogg">
                           </audio></td>
+							<td><img src="images/tick.png" width="16" height="16" alt="yes"></td>
 							<td>&nbsp;</td>
 						</tr>
 						<tr>
@@ -596,6 +645,7 @@
   							 <source src="audio/figure.mp3" type="audio/mpeg">
                              <source src="audio/figure.ogg" type="audio/ogg">
                           </audio>--></td>
+							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 						</tr>
 						<tr id="toc-h">
@@ -617,6 +667,7 @@
   							 <source src="audio/h1-h2-h3-h4-h5-h6.mp3" type="audio/mpeg">
                              <source src="audio/h1-h2-h3-h4-h5-h6.ogg" type="audio/ogg">
                           </audio></td>
+							<td><img src="images/tick.png" width="16" height="16" alt="yes"></td>
 							<td>&nbsp;</td>
 						</tr>
 						<tr>
@@ -624,6 +675,7 @@
 							<td>Container for document metadata</td>
 							<td><em><strong>none expected</strong></em></td>
 							<td>No special commands</td>
+							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 							<td><strong>No UI</strong></td>
 						</tr>
@@ -640,6 +692,7 @@
   							 <source src="audio/header.mp3" type="audio/mpeg">
                              <source src="audio/header.ogg" type="audio/ogg">
                           </audio></td>
+							<td><img src="images/tick.png" width="16" height="16" alt="yes"></td>
 							<td>&nbsp;</td>
 						</tr>
 						<tr>
@@ -654,6 +707,7 @@
   							 <source src="audio/hr.mp3" type="audio/mpeg">
                              <source src="audio/hr.ogg" type="audio/ogg">
                           </audio></td>
+							<td><img src="images/tick.png" width="16" height="16" alt="yes"></td>
 							<td>&nbsp;</td>
 						</tr>
 						<tr>
@@ -663,13 +717,18 @@
 							<td>No special commands</td>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
+							<td>&nbsp;</td>
 						</tr>
 						<tr id="toc-i">
 							<th scope="row"><a href="test-files/i.html"><code>i</code></a></th>
 							<td>Alternate voice</td>
 							<td><em>element content</em></td>
 							<td>No special commands</td>
-							<td>&nbsp;</td>
+							<td><audio controls>
+  							 <source src="audio/i.mp3" type="audio/mpeg">
+                             <source src="audio/i.ogg" type="audio/ogg">
+                          </audio></td>
+							<td><img src="images/cross.png" width="16" height="16" alt="no"></td>
 							<td>No semantics conveyed</td>
 						</tr>
 						<tr>
@@ -681,7 +740,11 @@
 						    <li>Next Frame 	<kbd>M</kbd></li>
 						    <li>Previous Frame <kbd>SHIFT+	M </kbd></li>
 						    </ul>					      </td>
-						  <td>&nbsp;</td>
+						  <td><audio controls>
+  							 <source src="audio/iframe.mp3" type="audio/mpeg">
+                             <source src="audio/iframe.ogg" type="audio/ogg">
+                          </audio></td>
+						  <td><img src="images/tick.png" width="16" height="16" alt="yes"></td>
 						  <td>&nbsp;</td>
 					  </tr>
 						<tr>
@@ -693,7 +756,11 @@
 							  <li>Next Frame <kbd>M</kbd></li>
 							  <li>Previous Frame <kbd>SHIFT+	M </kbd></li>
 						    </ul></td>
-							<td>&nbsp;</td>
+							<td><audio controls>
+  							 <source src="audio/iframe-title.mp3" type="audio/mpeg">
+                             <source src="audio/iframe-title.ogg" type="audio/ogg">
+                          </audio></td>
+							<td><img src="images/tick.png" width="16" height="16" alt="yes"></td>
 							<td>&nbsp;</td>
 						</tr>
 						<tr>
@@ -705,7 +772,11 @@
 							  <li>Next Graphic <kbd>G</kbd></li>
 							  <li>Previous Graphic <kbd>SHIFT+G</kbd></li>
 							  </ul>						    </td>
-							<td>&nbsp;</td>
+							<td><audio controls>
+  							 <source src="audio/img-alt.mp3" type="audio/mpeg">
+                             <source src="audio/img-alt.ogg" type="audio/ogg">
+                          </audio></td>
+							<td><img src="images/tick.png" width="16" height="16" alt="yes"></td>
 							<td>&nbsp;</td>
 						</tr>
 						<tr>
@@ -717,7 +788,11 @@
 						    <li>Next Button <kbd>B</kbd></li>
 						    <li>Previous button <kbd>B</kbd></li>
 					      </ul></td>
-						  <td>&nbsp;</td>
+						  <td><audio controls>
+  							 <source src="audio/input-type-button.mp3" type="audio/mpeg">
+                             <source src="audio/input-type-button.ogg" type="audio/ogg">
+                          </audio></td>
+						  <td><img src="images/tick.png" width="16" height="16" alt="yes"></td>
 						  <td>&nbsp;</td>
 					  </tr>
 						<tr>
@@ -729,7 +804,11 @@
 						    <li>Move To Next Check Box <kbd>X </kbd></li>
 						    <li>Move to Prior Check Box <kbd>SHIFT+X</kbd></li>
 					      </ul></td>
-						  <td>&nbsp;</td>
+						  <td><audio controls>
+  							 <source src="audio/input-type-checkbox.mp3" type="audio/mpeg">
+                             <source src="audio/input-type-checkbox.ogg" type="audio/ogg">
+                          </audio></td>
+						  <td><img src="images/tick.png" width="16" height="16" alt="yes"></td>
 						  <td>&nbsp;</td>
 					  </tr>
 						<tr>
@@ -737,6 +816,10 @@
 						  <td>Colour picker control</td>
 						  <td>&nbsp;</td>
 						  <td>no special commands?</td>
+						  <td><audio controls>
+  							 <source src="audio/input-type-color.mp3" type="audio/mpeg">
+                             <source src="audio/input-type-color.ogg" type="audio/ogg">
+                          </audio></td>
 						  <td>&nbsp;</td>
 						  <td>Identified as button by JAWS but not navigable using button navigation keys.</td>
 					  </tr>
@@ -745,7 +828,11 @@
 						  <td>date (day/month year) picker control</td>
 						  <td>&nbsp;</td>
 						  <td>&nbsp;</td>
-						  <td>&nbsp;</td>
+						  <td><audio controls>
+  							 <source src="audio/input-type-date.mp3" type="audio/mpeg">
+                             <source src="audio/input-type-date.ogg" type="audio/ogg">
+                          </audio></td>
+						  <td><img src="images/tick.png" width="16" height="16" alt="yes"></td>
 						  <td>&nbsp;</td>
 					  </tr>
 						<!--<tr>
@@ -765,6 +852,10 @@
 						    <li>Move to Prior Edit Box <kbd>SHIFT+E</kbd></li>
 					      </ul></td>
 						  <td>&nbsp;</td>
+						  <td><audio controls>
+  							 <source src="audio/input-type-email.mp3" type="audio/mpeg">
+                             <source src="audio/input-type-email.ogg" type="audio/ogg">
+                          </audio></td>
 						  <td>&nbsp;</td>
 					  </tr>
 						<tr>
@@ -782,7 +873,11 @@
 					          <li>Move to Prior Edit Box <kbd>SHIFT+E</kbd> </li>
 					        </ul>
 				       </td>
-						  <td>&nbsp;</td>
+						  <td><audio controls>
+  							 <source src="audio/input-type-file.mp3" type="audio/mpeg">
+                             <source src="audio/input-type-file.ogg" type="audio/ogg">
+                          </audio></td>
+						  <td><img src="images/tick.png" width="16" height="16" alt="yes"></td>
 						  <td>As it's a composite control, it can be navigated to using either button or edit commands.</td>
 					  </tr>
 						<tr>
@@ -790,6 +885,7 @@
 						  <td>hidden form control</td>
 						  <td><em><strong>none expected</strong></em></td>
 						  <td>No special commands</td>
+						  <td>&nbsp;</td>
 						  <td>&nbsp;</td>
 						  <td><strong>No UI</strong></td>
 					  </tr>
@@ -802,7 +898,11 @@
 						    <li>Next Button <kbd>B</kbd></li>
 						    <li>Previous button <kbd>B</kbd></li>
 						    </ul></td>
-						  <td>&nbsp;</td>
+						  <td><audio controls>
+  							 <source src="audio/input-type-image.mp3" type="audio/mpeg">
+                             <source src="audio/input-type-image.ogg" type="audio/ogg">
+                          </audio></td>
+						  <td><img src="images/tick.png" width="16" height="16" alt="yes"></td>
 						  <td>&nbsp;</td>
 					  </tr>
 						<!--<tr>
@@ -822,7 +922,11 @@
 						    <li>Move To Next Edit Box <kbd>E </kbd></li>
 						    <li>Move to Prior Edit Box <kbd>SHIFT+E</kbd></li>
 					      </ul></td>
-						  <td>&nbsp;</td>
+						  <td><audio controls>
+  							 <source src="audio/input-type-number.mp3" type="audio/mpeg">
+                             <source src="audio/input-type-number.ogg" type="audio/ogg">
+                          </audio></td>
+						  <td><img src="images/tick.png" width="16" height="16" alt="yes"></td>
 						  <td>spin buttons included in button commands.
 					        <ul>
 					          <li>List Buttons <kbd>CTRL+INSERT+B</kbd></li>
@@ -840,7 +944,11 @@
 						    <li>Move To Next Edit Box 	<kbd>E </kbd></li>
 						    <li>Move to Prior Edit Box 	<kbd>SHIFT+E</kbd></li>
 						    </ul>					      </td>
-						  <td>&nbsp;</td>
+						  <td><audio controls>
+  							 <source src="audio/input-type-password.mp3" type="audio/mpeg">
+                             <source src="audio/input-type-password.ogg" type="audio/ogg">
+                          </audio></td>
+						  <td><img src="images/tick.png" width="16" height="16" alt="yes"></td>
 						  <td>&nbsp;</td>
 					  </tr>
 						<tr>
@@ -848,7 +956,11 @@
 						  <td>slider control</td>
 						  <td>&nbsp;</td>
 						  <td>&nbsp;</td>
-						  <td>&nbsp;</td>
+						  <td><audio controls>
+  							 <source src="audio/input-type-range.mp3" type="audio/mpeg">
+                             <source src="audio/input-type-range.ogg" type="audio/ogg">
+                          </audio></td>
+						  <td><img src="images/tick.png" width="16" height="16" alt="yes"></td>
 						  <td>&nbsp;</td>
 					  </tr>
 						<tr>
@@ -856,7 +968,11 @@
 						  <td>&nbsp;</td>
 						  <td>&nbsp;</td>
 						  <td>&nbsp;</td>
-						  <td>&nbsp;</td>
+						  <td><audio controls>
+  							 <source src="audio/input-type-radio.mp3" type="audio/mpeg">
+                             <source src="audio/input-type-radio.ogg" type="audio/ogg">
+                          </audio></td>
+						  <td><img src="images/tick.png" width="16" height="16" alt="yes"></td>
 						  <td>&nbsp;</td>
 					  </tr>
 						<tr>
@@ -868,7 +984,11 @@
 						    <li>Next Button <kbd>B</kbd></li>
 						    <li>Previous button <kbd>B</kbd></li>
 					      </ul></td>
-						  <td>&nbsp;</td>
+						  <td><audio controls>
+  							 <source src="audio/input-type-reset.mp3" type="audio/mpeg">
+                             <source src="audio/input-type-reset.ogg" type="audio/ogg">
+                          </audio></td>
+						  <td><img src="images/tick.png" width="16" height="16" alt="yes"></td>
 						  <td>&nbsp;</td>
 					  </tr>
 						<tr>
@@ -880,6 +1000,10 @@
 						    <li>Move To Next Edit Box <kbd>E </kbd></li>
 						    <li>Move to Prior Edit Box <kbd>SHIFT+E</kbd></li>
 					      </ul></td>
+						  <td><audio controls>
+  							 <source src="audio/input-type-search.mp3" type="audio/mpeg">
+                             <source src="audio/input-type-search.ogg" type="audio/ogg">
+                          </audio></td>
 						  <td>&nbsp;</td>
 						  <td>&nbsp;</td>
 					  </tr>
@@ -892,7 +1016,11 @@
 						    <li>Next Button <kbd>B</kbd></li>
 						    <li>Previous button <kbd>B</kbd></li>
 					      </ul></td>
-						  <td>&nbsp;</td>
+						  <td><audio controls>
+  							 <source src="audio/input-type-submit.mp3" type="audio/mpeg">
+                             <source src="audio/input-type-submit.ogg" type="audio/ogg">
+                          </audio></td>
+						  <td><img src="images/tick.png" width="16" height="16" alt="yes"></td>
 						  <td>&nbsp;</td>
 					  </tr>
 						<tr>
@@ -904,6 +1032,10 @@
 						    <li>Move To Next Edit Box <kbd>E </kbd></li>
 						    <li>Move to Prior Edit Box <kbd>SHIFT+E</kbd></li>
 					      </ul></td>
+						  <td><audio controls>
+  							 <source src="audio/input-type-tel.mp3" type="audio/mpeg">
+                             <source src="audio/input-type-tel.ogg" type="audio/ogg">
+                          </audio></td>
 						  <td>&nbsp;</td>
 						  <td>&nbsp;</td>
 					  </tr>
@@ -916,7 +1048,11 @@
 						    <li>Move To Next Edit Box <kbd>E </kbd></li>
 						    <li>Move to Prior Edit Box <kbd>SHIFT+E</kbd></li>
 					      </ul></td>
-						  <td>&nbsp;</td>
+						  <td><audio controls>
+  							 <source src="audio/input-type-test.mp3" type="audio/mpeg">
+                             <source src="audio/input-type-text.ogg" type="audio/ogg">
+                          </audio></td>
+						  <td><img src="images/tick.png" width="16" height="16" alt="yes"></td>
 						  <td>&nbsp;</td>
 					  </tr>
 						<tr>
@@ -924,7 +1060,11 @@
 						  <td>control for setting a specific <a data-anolis-xref="concept-time" href="http://www.w3.org/TR/html5/infrastructure.html#concept-time">time</a>.</td>
 						  <td>&nbsp;</td>
 						  <td>&nbsp;</td>
-						  <td>&nbsp;</td>
+						  <td><audio controls>
+  							 <source src="audio/input-type-time.mp3" type="audio/mpeg">
+                             <source src="audio/input-type-time.ogg" type="audio/ogg">
+                          </audio></td>
+						  <td><img src="images/tick.png" width="16" height="16" alt="yes"></td>
 						  <td>&nbsp;</td>
 					  </tr>
 						<tr>
@@ -936,6 +1076,10 @@
 						    <li>Move To Next Edit Box <kbd>E </kbd></li>
 						    <li>Move to Prior Edit Box <kbd>SHIFT+E</kbd></li>
 					      </ul></td>
+						  <td><audio controls>
+  							 <source src="audio/input-type-url.mp3" type="audio/mpeg">
+                             <source src="audio/input-type-url.ogg" type="audio/ogg">
+                          </audio></td>
 						  <td>&nbsp;</td>
 						  <td>&nbsp;</td>
 					  </tr>
@@ -952,6 +1096,10 @@
 						  <td>An addition to the document</td>
 						  <td><em>element content</em></td>
 						  <td>No special commands</td>
+						  <td><audio controls>
+  							 <source src="audio/ins.mp3" type="audio/mpeg">
+                             <source src="audio/ins.ogg" type="audio/ogg">
+                          </audio></td>
 						  <td>&nbsp;</td>
 						  <td>No semantics conveyed</td>
 					  </tr>
@@ -960,12 +1108,17 @@
 							<td>User input</td>
 							<td><em>element content</em></td>
 							<td>No special commands</td>
+							<td><audio controls>
+  							 <source src="audio/kbd.mp3" type="audio/mpeg">
+                             <source src="audio/kbd.ogg" type="audio/ogg">
+                          </audio></td>
 							<td>&nbsp;</td>
 							<td>No semantics conveyed</td>
 						</tr>
 						<tr>
 							<th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/the-button-element.html#the-keygen-element"><code>keygen [no test]</code></a></th>
 							<td>Cryptographic key-pair generator form control</td>
+							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
@@ -981,6 +1134,7 @@
                              <source src="audio/label.ogg" type="audio/ogg">
                           </audio></td>
 							<td>&nbsp;</td>
+							<td>&nbsp;</td>
 						</tr>
 						<tr>
 							<th scope="row"><a href="test-files/fieldset-legend.html"><code>legend</code></a></th>
@@ -991,6 +1145,7 @@
   							 <source src="audio/fieldset-legend.mp3" type="audio/mpeg">
                              <source src="audio/fieldset-legend.ogg" type="audio/ogg">
                           </audio></td>
+							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 						</tr>
 						<tr>
@@ -1003,12 +1158,14 @@
 						    </ul></td>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
+							<td>&nbsp;</td>
 						</tr>
 						<tr>
 							<th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/semantics.html#the-link-element"><code>link [no test]</code></a></th>
 							<td>Link metadata</td>
 							<td><em><strong>none expected</strong></em></td>
 							<td>No special commands</td>
+							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 							<td><strong>No UI</strong></td>
 						</tr>
@@ -1025,12 +1182,14 @@
 						    </ul></td>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
+							<td>&nbsp;</td>
 						</tr>
 						<tr>
 							<th scope="row"><a href="test-files/imagemap.html"><code>map</code></a></th>
 							<td><a href="http://www.w3.org/TR/html5/embedded-content-0.html#image-map">Image map</a></td>
 							<td><em><strong>none expected</strong></em></td>
 							<td>No special commands</td>
+							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 							<td><strong>No UI</strong></td>
 						</tr>
@@ -1040,6 +1199,7 @@
 							<td><em>element content</em></td>
 							<td>No special commands</td>
 							<td>&nbsp;</td>
+							<td>&nbsp;</td>
 							<td>No semantics conveyed</td>
 						</tr>
 						<tr>
@@ -1047,6 +1207,7 @@
 						  <td>&nbsp;</td>
 						  <td>&nbsp;</td>
 						  <td>No special commands</td>
+						  <td>&nbsp;</td>
 						  <td>&nbsp;</td>
 						  <td>&nbsp;</td>
 					  </tr>
@@ -1072,6 +1233,7 @@
 							<td><em><strong>none expected</strong></em></td>
 							<td>No special commands</td>
 							<td>&nbsp;</td>
+							<td>&nbsp;</td>
 							<td><strong>No UI</strong></td>
 						</tr>
 						<tr>
@@ -1079,6 +1241,7 @@
 							<td>Gauge</td>
 							<td>&nbsp;</td>
 							<td>No special commands</td>
+							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 						</tr>
@@ -1094,11 +1257,13 @@
 						    </ul></td>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
+							<td>&nbsp;</td>
 						</tr>
 						<tr>
 							<th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/scripting-1.html#the-noscript-element"><code>noscript [no test]</code></a></th>
 							<td>Fallback content for script</td>
 							<td><em>none expected</em></td>
+							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
@@ -1111,6 +1276,7 @@
 							  <li>Next Object Tag 	<kbd>O</kbd></li>
 							  <li>Previous Object Tag <kbd>SHIFT+O</kbd></li>
 							  </ul>						    </td>
+							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 						</tr>
@@ -1127,12 +1293,14 @@
 						    </ul></td>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
+							<td>&nbsp;</td>
 						</tr>
 						<tr>
 							<th scope="row"><a href="test-files/select-option.html"><code>optgroup</code></a></th>
 							<td>Group of options in a list box</td>
 							<td>&nbsp;</td>
 							<td>No special commands</td>
+							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 						</tr>
@@ -1143,10 +1311,12 @@
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
+							<td>&nbsp;</td>
 						</tr>
 						<tr>
 							<th scope="row"><a href="test-files/output.html"><code>output</code></a></th>
 							<td>Calculated output value</td>
+							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
@@ -1162,6 +1332,7 @@
 							  <li>Previous Paragraph <kbd>SHIFT+P</kbd></li>
 							  </ul>						    </td>
 							<td>&nbsp;</td>
+							<td>&nbsp;</td>
 							<td>no aural semantics, conveyed via navigation and paragraph list.</td>
 						</tr>
 						<tr>
@@ -1169,6 +1340,7 @@
 							<td>Parameter for <a href="http://www.w3.org/TR/html5/embedded-content-0.html#the-object-element">object</a></td>
 							<td><em><strong>none expected</strong></em></td>
 							<td>No special commands</td>
+							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 							<td><strong>No UI</strong></td>
 						</tr>
@@ -1178,6 +1350,7 @@
 						  <td><em><strong>none expected</strong></em></td>
 						  <td>No special commands</td>
 						  <td>&nbsp;</td>
+						  <td>&nbsp;</td>
 						  <td><strong>No UI</strong></td>
 					  </tr>
 						<tr>
@@ -1185,6 +1358,7 @@
 							<td>Block of preformatted text</td>
 							<td>element content</td>
 							<td>No special commands</td>
+							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 							<td>No semantics conveyed</td>
 						</tr>
@@ -1205,12 +1379,14 @@
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
+							<td>&nbsp;</td>
 						</tr>
 						<tr id="toc-q">
 							<th scope="row"><a href="test-files/q.html"><code>q</code></a></th>
 							<td>Quotation</td>
 							<td><em>element content</em></td>
 							<td>No special commands</td>
+							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 							<td>?</td>
 						</tr>
@@ -1221,6 +1397,7 @@
 							<td><em>element content</em></td>
 							<td>No special commands</td>
 							<td>&nbsp;</td>
+							<td>&nbsp;</td>
 							<td>No semantics conveyed</td>
 						</tr>
 						<tr>
@@ -1228,6 +1405,7 @@
 							<td>&nbsp;</td>
 							<td><em>element content</em></td>
 							<td>No special commands</td>
+							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 							<td>No semantics conveyed</td>
 						</tr>
@@ -1237,6 +1415,7 @@
 							<td><em>element content</em></td>
 							<td>No special commands</td>
 							<td>&nbsp;</td>
+							<td>&nbsp;</td>
 							<td>No semantics conveyed</td>
 						</tr>
 						<tr>
@@ -1245,6 +1424,7 @@
 							<td><em>element content</em></td>
 							<td>No special commands</td>
 							<td>&nbsp;</td>
+							<td>&nbsp;</td>
 							<td>No semantics conveyed</td>
 						</tr>
 						<tr>
@@ -1252,6 +1432,7 @@
 							<td>&nbsp;</td>
 							<td><em>element content</em></td>
 							<td>No special commands</td>
+							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 							<td>No semantics conveyed</td>
 						</tr>
@@ -1262,12 +1443,14 @@
 							<td>No special commands</td>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
+							<td>&nbsp;</td>
 						</tr>
 						<tr>
 							<th scope="row"><a href="test-files/samp.html"><code>samp</code></a></th>
 							<td>Computer output</td>
 							<td><em>element content</em></td>
 							<td>No special commands</td>
+							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 							<td>No semantics conveyed</td>
 						</tr>
@@ -1278,6 +1461,7 @@
 						  <td>&nbsp;</td>
 						  <td>&nbsp;</td>
 						  <td>&nbsp;</td>
+						  <td>&nbsp;</td>
 					  </tr>
 						<tr>
 							<th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/scripting-1.html#the-script-element"><code>script no test]</code></a></th>
@@ -1285,11 +1469,13 @@
 							<td><em><strong>none expected</strong></em></td>
 							<td>No special commands</td>
 							<td>&nbsp;</td>
+							<td>&nbsp;</td>
 							<td><strong>No UI</strong></td>
 						</tr>
 						<tr>
 							<th scope="row"><a href="test-files/section.html"><code>section</code></a></th>
 							<td>Generic document or application section</td>
+							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
@@ -1301,6 +1487,7 @@
 							<td>&nbsp;</td>
 							<td><p>List of Combo boxes 	<kbd>CTRL+INSERT+C</kbd></p>
 						    <p>&nbsp;</p></td>
+							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 						</tr>
@@ -1370,6 +1557,7 @@
 							<td><em>element content</em></td>
 							<td>No special commands</td>
 							<td>&nbsp;</td>
+							<td>&nbsp;</td>
 							<td>No semantics conveyed</td>
 						</tr>
 						<tr>
@@ -1378,6 +1566,7 @@
 							<td><em>none expected</em></td>
 							<td>No special commands</td>
 							<td>&nbsp;</td>
+							<td>&nbsp;</td>
 							<td>No UI</td>
 						</tr>
 						<tr>
@@ -1385,6 +1574,7 @@
 							<td>Generic phrasing container</td>
 							<td><em>none expected</em></td>
 							<td>No special commands</td>
+							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 							<td>No semantics conveyed</td>
 						</tr>
@@ -1395,6 +1585,7 @@
 							<td><em>element content</em></td>
 							<td>No special commands</td>
 							<td>&nbsp;</td>
+							<td>&nbsp;</td>
 							<td>No semantics conveyed</td>
 						</tr>
 						<tr>
@@ -1403,6 +1594,7 @@
 							<td><em><strong>none expected</strong></em></td>
 							<td>No special commands</td>
 							<td>&nbsp;</td>
+							<td>&nbsp;</td>
 							<td><strong>No UI</strong></td>
 						</tr>
 						<tr>
@@ -1410,6 +1602,7 @@
 							<td> Subscript</td>
 							<td><em>element content</em></td>
 							<td>No special commands</td>
+							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 							<td>No semantics conveyed</td>
 						</tr>
@@ -1428,6 +1621,7 @@
 							<td><em>element content</em></td>
 							<td>No special commands</td>
 							<td>&nbsp;</td>
+							<td>&nbsp;</td>
 							<td>No semantics conveyed</td>
 						</tr>
 						<tr>
@@ -1435,6 +1629,7 @@
 						  <td>&nbsp;</td>
 						  <td>&nbsp;</td>
 						  <td>No special commands</td>
+						  <td>&nbsp;</td>
 						  <td>&nbsp;</td>
 						  <td>&nbsp;</td>
 					  </tr>
@@ -1451,12 +1646,14 @@
 							  </ul>						    </td>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
+							<td>&nbsp;</td>
 						</tr>
 						<tr>
 							<th scope="row"><a href="test-files/table-caption-thead-tbody-tfoot-tr-th-td.html"><code>tbody</code></a></th>
 							<td>Group of rows in a data table</td>
 							<td><em>element content</em></td>
 							<td>No special commands</td>
+							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 							<td>No semantics conveyed</td>
 						</tr>
@@ -1475,6 +1672,7 @@
 							  </ul></td>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
+							<td>&nbsp;</td>
 						</tr>
 						<tr>
 							<th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/scripting-1.html#the-template-element"><code>template [no test]</code></a></th>
@@ -1482,11 +1680,13 @@
 							<td><em><strong>none expected</strong></em></td>
 							<td>No special commands</td>
 							<td>&nbsp;</td>
+							<td>&nbsp;</td>
 							<td><strong>No UI</strong></td>
 						</tr>
 						<tr>
 							<th scope="row"><a href="test-files/textarea.html"><code>textarea</code></a></th>
 							<td>Multiline text field</td>
+							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
@@ -1498,11 +1698,13 @@
 							<td><em>element content</em></td>
 							<td>No special commands</td>
 							<td>&nbsp;</td>
+							<td>&nbsp;</td>
 							<td>No semantics conveyed</td>
 						</tr>
 						<tr>
 							<th scope="row"><a href="test-files/table-caption-thead-tbody-tfoot-tr-th-td.html"><code>th</code></a></th>
 							<td>Header cell in a data table</td>
+							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
@@ -1514,6 +1716,7 @@
 							<td><em>element content</em></td>
 							<td>No special commands</td>
 							<td>&nbsp;</td>
+							<td>&nbsp;</td>
 							<td>No semantics conveyed</td>
 						</tr>
 						<tr>
@@ -1523,12 +1726,14 @@
 							<td>No special commands</td>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
+							<td>&nbsp;</td>
 						</tr>
 						<tr>
 							<th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/semantics.html#the-title-element"><code>title [no test]</code></a></th>
 							<td>Document title</td>
 							<td><em>element content</em></td>
 							<td>Read Window Title <kbd>INSERT+T</kbd></td>
+							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 							<td>Semantics conveyed via navigation and announcement key stroke.</td>
 						</tr>
@@ -1545,12 +1750,14 @@
 							  </ul>						    </td>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
+							<td>&nbsp;</td>
 						</tr>
 						<tr>
 							<th scope="row"><a href="test-files/video.html"><code>track</code></a></th>
 							<td>Timed text track</td>
 							<td><em>caption display control</em></td>
 							<td>No special commands</td>
+							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 						</tr>
@@ -1561,6 +1768,7 @@
 							<td>Keywords</td>
 							<td><em>element content</em></td>
 							<td>No special commands</td>
+							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 							<td>No semantics conveyed</td>
 						</tr>
@@ -1577,12 +1785,14 @@
 						    </ul></td>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
+							<td>&nbsp;</td>
 						</tr>
 						<tr id="toc-v">
 							<th scope="row"><a href="test-files/var.html"><code>var</code></a></th>
 							<td>Variable</td>
 							<td><em>element content</em></td>
 							<td>No special commands</td>
+							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 							<td>No semantics conveyed</td>
 						</tr>
@@ -1593,12 +1803,14 @@
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
+							<td>&nbsp;</td>
 						</tr>
 						<tr id="toc-w">
 							<th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-wbr-element"><code>wbr [no test]</code></a></th>
 							<td>Line breaking opportunity</td>
 							<td><em><strong>none expected</strong></em></td>
 							<td>No special commands</td>
+							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 							<td><strong>No UI</strong></td>
 						</tr>

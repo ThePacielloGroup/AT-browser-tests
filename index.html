@@ -1,114 +1,125 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-		<title>Aural UI of HTML elements</title>
-        <meta charset="utf-8"> 
-      <script src="scripts/html5shiv.js"> </script> 
-		<style>
+	<title>Aural UI of HTML elements</title>
+	<meta charset="utf-8"> 
+	<script src="scripts/html5shiv.js"></script> 
+	<style>
 		.note {
 			padding: 0.5em 2em;
 			background: none repeat scroll 0 0 #e9fbe9;
+			border-left: 0.25em solid #52e052; }
+		
+		table {
+		    border-collapse: collapse;
+		    border: 1px solid #630;
+		    font: 0.8em Arial, Verdana, Helvetica, sans-serif; }  
 
-    border-left: 0.25em solid #52e052;}
 		th, td {
-    text-align: left;
-    vertical-align: top;
-    padding: 0.3em;
-    border: 1px solid #630;}
+			text-align: left;
+		    vertical-align: top;
+		    padding: 0.3em;
+		    border: 1px solid #630; }
 
-    tbody tr:hover { outline:solid 2px #666666; }
+		th[scope='row'] { text-align:left; } 
+
+		tbody tr:hover { outline:solid 2px #666666; }
 	
         .navlist li {
-    display: inline;
-    list-style-type: none;
-    padding-right: 20px;
-}
+		    display: inline;
+		    list-style-type: none;
+		    padding-right: 20px; }
 
-     th[scope='row'] {text-align:left} 
-	 
-	 table {
-    border-collapse: collapse;
-    border: 1px solid #630;
-    font: 0.8em arial,Verdana,helvetica,sans-serif;
-}  
-     #logo {float:left}
-	 
-	
-	a:hover , a:focus {background-color:#99FF99; outline:solid thin #030;}
-	kbd {
-    background-color: #F1F1F1;
-    border: 1px solid #666;
-    border-radius: 5px;
-    color: #333;
-    padding: 0px 2px;
-    margin: 1px;
-    font-weight: bold;
-    font-family: Arial,Helvetica,sans-serif;
-    min-width: 17px;
-    display: inline-block;
-    text-align: center;}
+		#logo {float:left}
+
+		a:hover, a:focus { background-color:#99FF99; outline:solid thin #030; }
+
+		kbd {
+			background-color: #F1F1F1;
+			border: 1px solid #666;
+			border-radius: 5px;
+			color: #333;
+			padding: 0px 2px;
+			margin: 1px;
+			font-weight: bold;
+			font-family: Arial,Helvetica,sans-serif;
+			min-width: 17px;
+			display: inline-block;
+			text-align: center; }
+
 	    </style>
-		<link href="http://www.w3.org/StyleSheets/TR/w3c-unofficial" rel="stylesheet" type="text/css"/>
-	</head>
+	<link href="http://www.w3.org/StyleSheets/TR/w3c-unofficial" rel="stylesheet" type="text/css"/>
+</head>
 <body>
-   <header> <img src="images/HTML5_Logo.png" width="128" height="128" alt="HTML5 logo" id="logo">
-     <h1>Aural UI of the Elements of <abbr title="Hypertext Markup Language">HTML</abbr></h1>
-     <p>A Work <em>in progress</em>: Last updated 2 March 2015</p>
-    <p><strong>Editors:</strong> Steve Faulkner and L&eacute;onie Watson</p>
-    <p><strong>Github Repo:</strong> <a href="https://github.com/ThePacielloGroup/AT-browser-tests">ThePacielloGroup/AT-browser-tests </a></p>
-    <p>Found a bug? Please <a href="https://github.com/ThePacielloGroup/AT-browser-tests/issues?state=open">report it</a>.</p>
-  <a href="https://github.com/ThePacielloGroup/AT-browser-tests"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a> </header>
-    <h3>How HTML elements are supported by screen readers</h3>
-    <p>Typical support patterns of HTML elements by screen readers:</p>
-<ul>
-      <li>Identification of an element by role as the user moves through the content.</li>
-      <li>Announcement of the text content of an element.</li>
-      <li>Announcement of the start and end of an element.</li>
-      <li>Change in voice as the content of an element is announced.</li>
-      <li>Announcement of an elements accessible name and/or description</li>
-      <li>Announcement of states and properties.</li>
-      <li>Emission of a beep or other sound when an element with a particulat state or property receives <a href="http://juicystudio.com/article/making-ajax-work-with-screen-readers.php#jawsvirtual" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://juicystudio.com/article/making-ajax-work-with-screen-readers.php#jawsvirtual', 'virtual focus');">virtual focus</a>.</li>
-      <li>Instructions on how to operate interactive elements such as form controls.</li>
-      <li>Navigation of elements by keyboard and &ldquo;quick access&rdquo; lists of a  particular elements, list items are linked to each instance of an  element on the page.</li>
-    </ul>
-    <p><strong>Note:</strong> The combination of patterns supported varies  from element to element and support for a particular element varies  between screen reader software.    </p>
-<p class="note">JAWS testing - In progress</p>
+	<header>
+		<img src="images/HTML5_Logo.png" width="128" height="128" alt="HTML5 logo" id="logo">
+		<h1>Aural UI of the Elements of <abbr title="Hypertext Markup Language">HTML</abbr></h1>
 
-<h2>List of HTML elements in JAWS tests:</h2>
-				
-<nav><ul id="toc-min" class="navlist">
-				  <li><a href="#toc-a">A</a></li>
-					<li><a href="#toc-b">B</a></li>
-					<li><a href="#toc-c">C</a></li>
-					<li><a href="#toc-d">D</a></li>
-					<li><a href="#toc-e">E</a></li>
-					<li><a href="#toc-f">F</a></li>
-					<li>G</li>
-					<li><a href="#toc-h">H</a></li>
-					<li><a href="#toc-i">I</a></li>
-					<li>J</li>
-					<li><a href="#toc-k">K</a></li>
-					<li><a href="#toc-l">L</a></li>
-					<li><a href="#toc-m">M</a></li>
-					<li><a href="#toc-n">N</a></li>
-					<li><a href="#toc-o">O</a></li>
-					<li><a href="#toc-p">P</a></li>
-					<li><a href="#toc-q">Q</a></li>
-					<li><a href="#toc-r">R</a></li>
-					<li><a href="#toc-s">S</a></li>
-					<li><a href="#toc-t">T</a></li>
-					<li><a href="#toc-u">U</a></li>
-					<li><a href="#toc-v">V</a></li>
-					<li><a href="#toc-w">W</a></li>
-					<li>X</li>
-					<li>Y</li>
-					<li>Z</li>
-</ul></nav>
-	<main>			<table class="alt">
-    <caption>
-    JAWS and Firefox on Windows 8.1
-    </caption>
+		<p>A Work <em>in progress</em>: Last updated 3 March 2015</p>
+		<p><strong>Editors:</strong> Steve Faulkner and L&eacute;onie Watson</p>
+		<p><strong>Github Repo:</strong> <a href="https://github.com/ThePacielloGroup/AT-browser-tests">ThePacielloGroup/AT-browser-tests</a></p>
+
+		<p>Found a bug? Please <a href="https://github.com/ThePacielloGroup/AT-browser-tests/issues?state=open">report it</a>.</p>
+
+		<a href="https://github.com/ThePacielloGroup/AT-browser-tests"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
+	</header>
+    
+	<h3>How HTML elements are supported by screen readers</h3>
+	<p>Typical support patterns of HTML elements by screen readers:</p>
+	<ul>
+		<li>Identification of an element by role as the user moves through the content.</li>
+		<li>Announcement of the text content of an element.</li>
+		<li>Announcement of the start and end of an element.</li>
+		<li>Change in voice as the content of an element is announced.</li>
+		<li>Announcement of an elements accessible name and/or description</li>
+		<li>Announcement of states and properties.</li>
+		<li>Emission of a beep or other sound when an element with a particulat state or property receives <a href="http://juicystudio.com/article/making-ajax-work-with-screen-readers.php#jawsvirtual" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://juicystudio.com/article/making-ajax-work-with-screen-readers.php#jawsvirtual', 'virtual focus');">virtual focus</a>.</li>
+		<li>Instructions on how to operate interactive elements such as form controls.</li>
+		<li>Navigation of elements by keyboard and &ldquo;quick access&rdquo; lists of a  particular elements, list items are linked to each instance of an  element on the page.</li>
+    </ul>
+    <p><strong>Note:</strong> The combination of patterns supported varies from element to element and support for a particular element varies between screen reader software.</p>
+
+	<p class="note">JAWS testing - In progress</p>
+
+	<h2>List of HTML elements in JAWS tests:</h2>
+
+	<nav>
+		<ul id="toc-min" class="navlist">
+			<li><a href="#toc-a">A</a></li>
+			<li><a href="#toc-b">B</a></li>
+			<li><a href="#toc-c">C</a></li>
+			<li><a href="#toc-d">D</a></li>
+			<li><a href="#toc-e">E</a></li>
+			<li><a href="#toc-f">F</a></li>
+			<li>G</li>
+			<li><a href="#toc-h">H</a></li>
+			<li><a href="#toc-i">I</a></li>
+			<li>J</li>
+			<li><a href="#toc-k">K</a></li>
+			<li><a href="#toc-l">L</a></li>
+			<li><a href="#toc-m">M</a></li>
+			<li><a href="#toc-n">N</a></li>
+			<li><a href="#toc-o">O</a></li>
+			<li><a href="#toc-p">P</a></li>
+			<li><a href="#toc-q">Q</a></li>
+			<li><a href="#toc-r">R</a></li>
+			<li><a href="#toc-s">S</a></li>
+			<li><a href="#toc-t">T</a></li>
+			<li><a href="#toc-u">U</a></li>
+			<li><a href="#toc-v">V</a></li>
+			<li><a href="#toc-w">W</a></li>
+			<li>X</li>
+			<li>Y</li>
+			<li>Z</li>
+		</ul>
+	</nav>
+
+	<main>
+
+		<table class="alt">
+		    <caption>
+		    JAWS and Firefox on Windows 8.1
+		    </caption>
 					<thead>
 						<tr>
 							<th scope="col">Element [test file linked]</th>

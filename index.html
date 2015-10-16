@@ -45,7 +45,7 @@
 			font-family: Arial,Helvetica,sans-serif;
 			min-width: 17px;
 			display: inline-block;
-			text-align: center; }
+			 }
 
 	</style>
 	<link href="http://www.w3.org/StyleSheets/TR/w3c-unofficial" rel="stylesheet" type="text/css"/>
@@ -240,7 +240,7 @@
 					<td><img src="images/tick.png" width="16" height="16" alt="yes"></td>
 					<td>Included as a navigable region</td>
 				</tr>
-				<tr>
+				<tr id="jaws-el-aside" tabindex="-1">
 					<th scope="row"><a href="test-files/aside.html"><code>aside</code></a></th>
 					<td>Sidebar for tangentially related content</td>
 					<td>
@@ -403,7 +403,7 @@
 				<tr>
 					<th scope="row"><a href="test-files/table-caption-thead-tbody-tfoot-tr-th-td.html"><code>caption</code></a></th>
 					<td>Table caption</td>
-					<td>&nbsp;</td>
+					<td><em>element content</em></td>
 					<td>No special commands</td>
 					<td>&nbsp;</td>
 					<td><img src="images/tick.png" width="16" height="16" alt="yes"></td>
@@ -628,7 +628,7 @@
 				<tr>
 					<th scope="row"><a href="test-files/figure-figcaption.html"><code>figcaption</code></a></th>
 					<td>Caption for <a href="http://www.w3.org/TR/html5/grouping-content.html#the-figure-element">figure</a></td>
-					<td>&nbsp;</td>
+					<td><em>element content</em></td>
 					<td>No special commands</td>
 					<td>
 						<audio preload="none" controls>
@@ -642,7 +642,7 @@
 				<tr>
 					<th scope="row"><a href="test-files/figure.html"><code>figure</code></a></th>
 					<td>Figure with optional caption</td>
-					<td>&nbsp;</td>
+					<td>&quot;group start&quot;<em> figcaption content , element content, figcaption content  &quot;group end&quot;<em> </em></em></td>
 					<td>No special commands</td>
 					<td>
 						<audio preload="none" controls>
@@ -1431,7 +1431,7 @@
 					</td>
 					<td>&nbsp;</td>
 					<td>&nbsp;</td>
-					<td>&nbsp;</td>
+					<td><p>When navigating by this element, Window-Eyes will automatically  read the entire contents of the paragraph that gains focus. By default,  Window-Eyes also hides multiple blank lines that might separate one paragraph  from another. To see these lines, turn "Speak Blank Lines in Smart Paragraph  Mode" on inside the Browse Mode section of the Window-Eyes control panel. </p></td>
 				</tr>
 				<tr>
 					<th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/scripting-1.html#the-noscript-element"><code>noscript [no test]</code></a></th>
@@ -2051,7 +2051,7 @@
 	  <h2>VoiceOver tests:</h2> 
 	 <p class="note">todo</p>
      <h2>NVDA tests:</h2> 
-	 <div class="note"><strong>todo</strong>
+	<p class="note">todo</p>
 <table class="alt">
        <caption>
          NVDA and Firefox on Windows 8.1
@@ -2088,7 +2088,7 @@
                <source src="audio/NVDA/a-href.ogg" type="audio/ogg">
              </audio>
            </p>
-             </td>
+           </td>
            <td>&nbsp;</td>
          </tr>
          <tr id="toc-a4">
@@ -3441,17 +3441,31 @@
            <td><strong>No UI</strong></td>
          </tr>
        </tbody>
-     </table>
-  </div>
+</table>
      <h2>Window Eyes tests (in progress):</h2>
-     <div class="note"><strong>todo</strong>
+     <H3>Basic Navigation</H3>
+<p>The basic movement commands for navigating a web page are much like the basic  movement commands of a word processor:  
+     <UL>
+       <LI><kbd>Left arrow</kbd> and <kbd>Right arrow</kbd> keys move character by character.
+       <LI><kbd>Control-Left</kbd> and <kbd>Control-Right arrow</kbd> keys move word by word.
+       <LI><kbd>Up arrow</kbd> and <kbd>Down arrow</kbd> keys move line by line.
+       <LI><kbd>Home</kbd> - Moves to the beginning of the line and reads the character under the  virtual cursor.
+       <LI><kbd>End</kbd> - Moves to the end of the line and reads the character under the virtual  cursor.
+       <LI><kbd>Control-Home</kbd> - Moves to the beginning of the document and reads the line  under the virtual cursor.
+       <LI><kbd>Control-End</kbd> - Moves to the end of the document and reads the line under the  virtual cursor.
+       <LI><kbd>Page Up</kbd> - Reads the previous twenty four lines in the document and moves the  virtual cursor back twenty four lines.
+       <LI><kbd>Page Down</kbd> - Reads the next twenty four lines in the document and moves the  virtual cursor down twenty four lines.
+       <LI><kbd>Tab</kbd> - Moves your focus to the next link or control on the web page and reads  it.
+       <LI><kbd>Shift-Tab</kbd> - Moves your focus to the previous link or control on the web page  and reads it. </LI>
+     </UL>
+     <div class="note"><strong>todo</strong></div>
        <table class="alt">
          <caption>
            NVDA and Firefox on Windows 8.1
          </caption>
          <thead>
            <tr>
-             <th width="95" scope="col">Element [test file linked]</th>
+             <th width="95" height="49" scope="col">Element [test file linked]</th>
              <th width="124" scope="col">Element represents</th>
              <th width="149" scope="col">AURAL UI - Window Eyes</th>
              <th width="316" scope="col">Interaction - Window Eyes</th>
@@ -3474,7 +3488,13 @@
              <th scope="row"><a href="test-files/a-href.html"><code>a</code></a> with href</th>
              <td>a hyperlink</td>
              <td>&nbsp;</td>
-             <td>&nbsp;</td>
+             <td><UL>
+               <LI><kbd>L</kbd>
+               = Next Link
+               <LI> <kbd>Shift-L</kbd> = Previous Link
+               <LI>                <kbd>V</kbd> = Next Visited Link
+               <LI><kbd>Shift-V </kbd> = Previous Visited Link</LI>
+             </UL></td>
              <td><p role="group" aria-labelledby="l1"><strong id="l3">Link via tab</strong><br>
                <audio preload="none" controls>
                  <source src="audio/NVDA/a-href.mp3" type="audio/mpeg">
@@ -3487,7 +3507,10 @@
              <th scope="row"><a href="test-files/a-no-href.html"><code>a</code></a> with no href</th>
              <td>an anchor</td>
              <td>&nbsp;</td>
-             <td>&nbsp;</td>
+             <td><ul>
+               <LI><kbd>A</kbd> = Next Anchor
+               <LI><kbd>Shift-A</kbd> = Previous Anchor </LI>
+             </ul></td>
              <td><audio preload="none" controls>
                <source src="audio/NVDA/a-no-href.mp3" type="audio/mpeg">
                <source src="audio/NVDA/a-no-href.ogg" type="audio/ogg">
@@ -3539,12 +3562,15 @@
              <th scope="row"><a href="test-files/aside.html"><code>aside</code></a></th>
              <td>Sidebar for tangentially related content</td>
              <td>&nbsp;</td>
-             <td>&nbsp;</td>
+             <td><ul>
+               <LI><kbd>Semicolon</kbd> = Moves to next region
+               <LI><kbd>Shift-Semicolon</kbd> = Moves to previous region</LI>
+             </ul></td>
              <td><audio preload="none" controls>
                <source src="audio/NVDA/aside.mp3" type="audio/mpeg">
                <source src="audio/NVDA/aside.ogg" type="audio/ogg">
              </audio></td>
-             <td>&nbsp;</td>
+             <td>When a region is reached, Window-Eyes will announce the landmark and its type  and move your cursor to the landmark's position.</td>
            </tr>
            <tr>
              <th scope="row"><a href="test-files/audio.html"><code>audio</code></a></th>
@@ -3603,7 +3629,12 @@
              <th scope="row"><a href="test-files/blockquote-cite.html"><code>blockquote</code></a></th>
              <td>A section quoted from another source</td>
              <td>&nbsp;</td>
-             <td>&nbsp;</td>
+             <td><ul>
+               <LI><kbd>Q</kbd> = Next Block quote
+               <LI><kbd>Shift-Q</kbd> = Previous Block quote
+               <LI><kbd>Left Bracket-Q</kbd> = Beginning of current Block quote
+               <LI><kbd>Right Bracket-Q</kbd> = End of current Block quote </LI>
+             </ul></td>
              <td><audio preload="none" controls>
                <source src="audio/NVDA/blockquote-cite.mp3" type="audio/mpeg">
                <source src="audio/NVDA/blockquote-cite.ogg" type="audio/ogg">
@@ -3772,7 +3803,14 @@
              <th scope="row"><a href="test-files/dl-dt-dd.html"><code>dl</code></a></th>
              <td>Association list consisting of zero or more name-value groups</td>
              <td>&nbsp;</td>
-             <td>&nbsp;</td>
+             <td><UL>
+               <LI><kbd>S</kbd> = Next List
+               <LI><kbd>Shift-S</kbd> = Previous List
+               <LI><kbd>I</kbd> = Next List Item
+               <LI><kbd>Shift-I</kbd> = Previous List Item
+               <LI><kbd>Left Bracket-S</kbd> = Move to the first list item
+               <LI><kbd>Right Bracket-S</kbd> = Move to the last list item </LI>
+             </UL></td>
              <td><audio preload="none" controls>
                <source src="audio/dl-dt-dd.mp3" type="audio/mpeg">
                <source src="audio/dl-dt-dd.ogg" type="audio/ogg">
@@ -3846,7 +3884,10 @@
              <th scope="row"><a href="test-files/footer.html"><code>footer</code></a></th>
              <td>Footer for a page or section</td>
              <td>&nbsp;</td>
-             <td>&nbsp;</td>
+             <td><ul>
+               <LI><kbd>Semicolon</kbd> = Moves to next region
+               <LI><kbd>Shift-Semicolon</kbd> = Moves to previous region </LI>
+             </ul></td>
              <td><audio preload="none" controls>
                <source src="audio/NVDA/footer.mp3" type="audio/mpeg">
                <source src="audio/NVDA/footer.ogg" type="audio/ogg">
@@ -3857,18 +3898,26 @@
              <th scope="row"><a href="test-files/form.html"><code>form</code></a></th>
              <td>User-submittable form</td>
              <td>&nbsp;</td>
-             <td>&nbsp;</td>
+             <td><ul>
+               <LI><kbd>Semicolon</kbd> = Moves to next region
+               <LI><kbd>Shift-Semicolon</kbd> = Moves to previous region </LI>
+             </ul></td>
              <td><!--<audio preload="none" controls>
 					<source src="audio/figure.mp3" type="audio/mpeg">
 					<source src="audio/figure.ogg" type="audio/ogg">
 					</audio>--></td>
-             <td>&nbsp;</td>
+             <td>? need to check</td>
            </tr>
            <tr id="toc-h3">
              <th scope="row"><a href="test-files/h1-h6.html"><code>h1-h6</code></a></th>
              <td>Section heading</td>
              <td>&nbsp;</td>
-             <td>&nbsp;</td>
+             <td><UL>
+               <LI><kbd>H</kbd> = Next Heading
+               <LI><kbd>Shift-H</kbd> = Previous Heading
+               <LI>Number followed by <kbd>H</kbd> = Next Heading with a level of number (where number is  a value between <kbd>1</kbd> and <kbd>6</kbd>)
+               <LI>Number followed by <kbd>Shift-H</kbd> = Previous Heading with a level of number (where  number is a value between <kbd>1</kbd> and <kbd>6</kbd>) </LI>
+             </UL></td>
              <td><!--<audio preload="none" controls>
              <source src="audio/h1-h2-h3-h4-h5-h6.mp3" type="audio/mpeg">
              <source src="audio/h1-h2-h3-h4-h5-h6.ogg" type="audio/ogg">
@@ -3887,7 +3936,10 @@
              <th scope="row"><a href="test-files/header.html"><code>header</code></a></th>
              <td>Introductory or navigational aids for a page or section</td>
              <td>&nbsp;</td>
-             <td>&nbsp;</td>
+             <td><ul>
+               <LI><kbd>Semicolon</kbd> = Moves to next region
+               <LI><kbd>Shift-Semicolon</kbd> = Moves to previous region</LI>
+             </ul></td>
              <td><audio preload="none" controls>
                <source src="audio/NVDA/header.mp3" type="audio/mpeg">
                <source src="audio/NVDA/header.ogg" type="audio/ogg">
@@ -3928,7 +3980,12 @@
              <th scope="row"><a href="test-files/iframe.html"><code>iframe</code></a></th>
              <td><a href="http://www.w3.org/TR/html5/browsers.html#nested-browsing-context">Nested browsing context</a></td>
              <td>&nbsp;</td>
-             <td>&nbsp;</td>
+             <td><ul>
+               <LI><kbd>M</kbd> = Next Frame
+               <LI><kbd>Shift-M</kbd> = Previous Frame
+               <LI><kbd>Left-Bracket-M</kbd> = Beginning of current frame
+               <LI><kbd>Right-Bracket-M</kbd> = End of current frame </LI>
+             </ul></td>
              <td><!--<audio preload="none" controls>
              <source src="audio/iframe.mp3" type="audio/mpeg">
              <source src="audio/iframe.ogg" type="audio/ogg">
@@ -3950,7 +4007,10 @@
              <th scope="row"><a href="test-files/img-alt.html"><code>img</code></a></th>
              <td>Image</td>
              <td>&nbsp;</td>
-             <td>&nbsp;</td>
+             <td><ul>
+               <LI><kbd>G</kbd> = Next Graphic
+               <LI><kbd>Shift-G</kbd> = Previous Graphic </LI>
+             </ul></td>
              <td><!--<audio preload="none" controls>
              <source src="audio/imgalt.mp3" type="audio/mpeg">
              <source src="audio/imgalt.ogg" type="audio/ogg">
@@ -3961,7 +4021,10 @@
              <th scope="row"><a href="test-files/input-button.html"><code>input [button]</code></a></th>
              <td>Button control</td>
              <td>&nbsp;</td>
-             <td>&nbsp;</td>
+             <td><ul>
+               <LI><kbd>F</kbd> = Next Form Control
+               <LI><kbd>Shift-F</kbd> = Previous Form Control </LI>
+             </ul></td>
              <td><audio preload="none" controls>
                <source src="audio/NVDA/input-type-button.mp3" type="audio/mpeg">
                <source src="audio/NVDA/input-type-button.ogg" type="audio/ogg">
@@ -3972,7 +4035,10 @@
              <th scope="row"><a href="test-files/input-checkbox.html"><code>input [checkbox]</code></a></th>
              <td>Checkbox control</td>
              <td>&nbsp;</td>
-             <td>&nbsp;</td>
+             <td><ul>
+               <LI><kbd>X</kbd> = Next Check Box
+               <LI><kbd>Shift-X</kbd> = Previous Check Box </LI>
+             </ul></td>
              <td><audio preload="none" controls>
                <source src="audio/NVDA/input-type-checkbox.mp3" type="audio/mpeg">
                <source src="audio/NVDA/input-type-checkbox.ogg" type="audio/ogg">
@@ -3983,7 +4049,10 @@
              <th scope="row"><a href="test-files/input-color.html"><code>input [color]</code></a></th>
              <td>Colour picker control</td>
              <td>&nbsp;</td>
-             <td>no special commands?</td>
+             <td><ul>
+               <LI><kbd>F</kbd> = Next Form Control
+               <LI><kbd>Shift-F</kbd> = Previous Form Control </LI>
+             </ul></td>
              <td><!--<audio preload="none" controls>
              <source src="audio/input-type-color.mp3" type="audio/mpeg">
              <source src="audio/input-type-color.ogg" type="audio/ogg">
@@ -3994,7 +4063,10 @@
              <th scope="row"><a href="test-files/input-date.html"><code>input [date]</code></a></th>
              <td>date (day/month year) picker control</td>
              <td>&nbsp;</td>
-             <td>&nbsp;</td>
+             <td><ul>
+               <LI><kbd>F</kbd> = Next Form Control
+               <LI><kbd>Shift-F</kbd> = Previous Form Control </LI>
+             </ul></td>
              <td><audio preload="none" controls>
                <source src="audio/NVDA/input-type-date.mp3" type="audio/mpeg">
                <source src="audio/NVDA/input-type-date.ogg" type="audio/ogg">
@@ -4012,7 +4084,10 @@
              <th scope="row"><a href="test-files/input-email.html"><code>input [email]</code></a></th>
              <td>text control for inputting email address</td>
              <td>&nbsp;</td>
-             <td>&nbsp;</td>
+             <td><ul>
+               <LI><kbd>F</kbd> = Next Form Control
+               <LI><kbd>Shift-F</kbd> = Previous Form Control </LI>
+             </ul></td>
              <td><audio preload="none" controls>
                <source src="audio/NVDA/input-type-email.mp3" type="audio/mpeg">
                <source src="audio/NVDA/input-type-email.ogg" type="audio/ogg">
@@ -4023,7 +4098,10 @@
              <th scope="row"><a href="test-files/input-file-upload.html"><code>input [file]</code></a></th>
              <td>File chooser control</td>
              <td>&nbsp;</td>
-             <td>&nbsp;</td>
+             <td><ul>
+               <LI><kbd>F</kbd> = Next Form Control
+               <LI><kbd>Shift-F</kbd> = Previous Form Control </LI>
+             </ul></td>
              <td><audio preload="none" controls>
                <source src="audio/NVDA/input-type-file.mp3" type="audio/mpeg">
                <source src="audio/NVDA/input-type-file.ogg" type="audio/ogg">
@@ -4042,7 +4120,10 @@
              <th scope="row"><a href="test-files/input-image.html"><code>input [image]</code></a></th>
              <td>Button control</td>
              <td>&nbsp;</td>
-             <td>&nbsp;</td>
+             <td><ul>
+               <LI><kbd>F</kbd> = Next Form Control
+               <LI><kbd>Shift-F</kbd> = Previous Form Control </LI>
+             </ul></td>
              <td><audio preload="none" controls>
                <source src="audio/NVDA/input-type-image.mp3" type="audio/mpeg">
                <source src="audio/NVDA/input-type-image.ogg" type="audio/ogg">
@@ -4061,7 +4142,10 @@
              <th scope="row"><a href="test-files/input-number.html"><code>input [number]</code></a></th>
              <td>spin box control</td>
              <td>&nbsp;</td>
-             <td>&nbsp;</td>
+             <td><ul>
+               <LI><kbd>F</kbd> = Next Form Control
+               <LI><kbd>Shift-F</kbd> = Previous Form Control </LI>
+             </ul></td>
              <td><audio preload="none" controls>
                <source src="audio/NVDA/input-type-number.mp3" type="audio/mpeg">
                <source src="audio/NVDA/input-type-number.ogg" type="audio/ogg">
@@ -4072,7 +4156,10 @@
              <th scope="row"><a href="test-files/input-password.html"><code>input [password]</code></a></th>
              <td>text control for inputting a password</td>
              <td>&nbsp;</td>
-             <td>&nbsp;</td>
+             <td><ul>
+               <LI><kbd>F</kbd> = Next Form Control
+               <LI><kbd>Shift-F</kbd> = Previous Form Control </LI>
+             </ul></td>
              <td><audio preload="none" controls>
                <source src="audio/NVDA/input-type-password.mp3" type="audio/mpeg">
                <source src="audio/NVDA/input-type-password.ogg" type="audio/ogg">
@@ -4083,7 +4170,10 @@
              <th scope="row"><a href="test-files/input-range.html"><code>input [range]</code></a></th>
              <td>slider control</td>
              <td>&nbsp;</td>
-             <td>&nbsp;</td>
+             <td><ul>
+               <LI><kbd>F</kbd> = Next Form Control
+               <LI><kbd>Shift-F</kbd> = Previous Form Control </LI>
+             </ul></td>
              <td><audio preload="none" controls>
                <source src="audio/NVDA/input-type-range.mp3" type="audio/mpeg">
                <source src="audio/NVDA/input-type-range.ogg" type="audio/ogg">
@@ -4094,7 +4184,10 @@
              <th scope="row"><a href="test-files/input-radio.html"><code>input [radio]</code></a></th>
              <td>&nbsp;</td>
              <td>&nbsp;</td>
-             <td>&nbsp;</td>
+             <td><ul>
+               <LI><kbd>F</kbd> = Next Form Control
+               <LI><kbd>Shift-F</kbd> = Previous Form Control </LI>
+             </ul></td>
              <td><audio preload="none" controls>
                <source src="audio/NVDA/input-type-radio.mp3" type="audio/mpeg">
                <source src="audio/NVDA/input-type-radio.ogg" type="audio/ogg">
@@ -4105,7 +4198,10 @@
              <th scope="row"><a href="test-files/input-reset.html"><code>input [reset]</code></a></th>
              <td>Button control for resetting a form</td>
              <td>&nbsp;</td>
-             <td>&nbsp;</td>
+             <td><ul>
+               <LI><kbd>F</kbd> = Next Form Control
+               <LI><kbd>Shift-F</kbd> = Previous Form Control </LI>
+             </ul></td>
              <td><audio preload="none" controls>
                <source src="audio/NVDA/input-type-reset.mp3" type="audio/mpeg">
                <source src="audio/NVDA/input-type-reset.ogg" type="audio/ogg">
@@ -4116,7 +4212,10 @@
              <th scope="row"><a href="test-files/input-search.html"><code>input [search]</code></a></th>
              <td>text control for inputting search terms</td>
              <td>&nbsp;</td>
-             <td>&nbsp;</td>
+             <td><ul>
+               <LI><kbd>F</kbd> = Next Form Control
+               <LI><kbd>Shift-F</kbd> = Previous Form Control </LI>
+             </ul></td>
              <td><audio preload="none" controls>
                <source src="audio/NVDA/input-typesearch.mp3" type="audio/mpeg">
                <source src="audio/NVDA/input-typesearch.ogg" type="audio/ogg">
@@ -4127,7 +4226,10 @@
              <th scope="row"><a href="test-files/input-submit.html"><code>input [submit]</code></a></th>
              <td>Button control for submitting a form</td>
              <td>&nbsp;</td>
-             <td>&nbsp;</td>
+             <td><ul>
+               <LI><kbd>F</kbd> = Next Form Control
+               <LI><kbd>Shift-F</kbd> = Previous Form Control </LI>
+             </ul></td>
              <td><audio preload="none" controls>
                <source src="audio/NVDA/input-type-submit.mp3" type="audio/mpeg">
                <source src="audio/NVDA/input-type-submit.ogg" type="audio/ogg">
@@ -4138,7 +4240,10 @@
              <th scope="row"><a href="test-files/input-tel.html"><code>input [tel]</code></a></th>
              <td>text box control for inputting a phone number</td>
              <td>&nbsp;</td>
-             <td>&nbsp;</td>
+             <td><ul>
+               <LI><kbd>F</kbd> = Next Form Control
+               <LI><kbd>Shift-F</kbd> = Previous Form Control </LI>
+             </ul></td>
              <td><audio preload="none" controls>
                <source src="audio/NVDA/input-type-tel.mp3" type="audio/mpeg">
                <source src="audio/NVDA/input-type-tel.ogg" type="audio/ogg">
@@ -4149,7 +4254,10 @@
              <th scope="row"><a href="test-files/input-text.html"><code>input [text]</code></a></th>
              <td>text box control</td>
              <td>&nbsp;</td>
-             <td>&nbsp;</td>
+             <td><ul>
+               <LI><kbd>F</kbd> = Next Form Control
+               <LI><kbd>Shift-F</kbd> = Previous Form Control </LI>
+             </ul></td>
              <td><audio preload="none" controls>
                <source src="audio/NVDA/input-type-test.mp3" type="audio/mpeg">
                <source src="audio/NVDA/input-type-text.ogg" type="audio/ogg">
@@ -4160,7 +4268,10 @@
              <th scope="row"><a href="test-files/input--time.html"><code>input [time]</code></a></th>
              <td>control for setting a specific <a data-anolis-xref="concept-time" href="http://www.w3.org/TR/html5/infrastructure.html#concept-time">time</a>.</td>
              <td>&nbsp;</td>
-             <td>&nbsp;</td>
+             <td><ul>
+               <LI><kbd>F</kbd> = Next Form Control
+               <LI><kbd>Shift-F</kbd> = Previous Form Control </LI>
+             </ul></td>
              <td><!--<audio preload="none" controls>
              <source src="audio/input-type-time.mp3" type="audio/mpeg">
              <source src="audio/input-type-time.ogg" type="audio/ogg">
@@ -4171,7 +4282,10 @@
              <th scope="row"><a href="test-files/input-url.html"><code>input [url]</code></a></th>
              <td>text control for inputting a URL</td>
              <td>&nbsp;</td>
-             <td>&nbsp;</td>
+             <td><ul>
+               <LI><kbd>F</kbd> = Next Form Control
+               <LI><kbd>Shift-F</kbd> = Previous Form Control </LI>
+             </ul></td>
              <td><!--<audio preload="none" controls>
              <source src="audio/NVDA/input-type-url.mp3" type="audio/mpeg">
              <source src="audio/NVDA/input-type-url.ogg" type="audio/ogg">
@@ -4261,7 +4375,10 @@
              <th scope="row"><a href="test-files/main.html"><code>main</code></a></th>
              <td>Main content of a document </td>
              <td>&nbsp;</td>
-             <td>&nbsp;</td>
+             <td><ul>
+               <LI><kbd>Semicolon</kbd> = Moves to next region
+               <LI><kbd>Shift-Semicolon</kbd> = Moves to previous region</LI>
+             </ul></td>
              <td>&nbsp;</td>
              <td>&nbsp;</td>
            </tr>
@@ -4325,7 +4442,10 @@
              <th scope="row"><a href="test-files/nav.html"><code>nav</code></a></th>
              <td>Section with navigational links</td>
              <td>&nbsp;</td>
-             <td>&nbsp;</td>
+             <td><ul>
+               <LI><kbd>Semicolon</kbd> = Moves to next region
+               <LI><kbd>Shift-Semicolon</kbd> = Moves to previous region </LI>
+             </ul></td>
              <td>&nbsp;</td>
              <td>&nbsp;</td>
            </tr>
@@ -4381,7 +4501,12 @@
              <th scope="row"><a href="test-files/p.html"><code>p</code></a></th>
              <td>Paragraph</td>
              <td>element content</td>
-             <td>&nbsp;</td>
+             <td><ul>
+               <LI><kbd>P</kbd> = Next Paragraph
+               <LI><kbd>Shift-P</kbd> = Previous Paragraph
+               <LI><kbd>Left Bracket-P</kbd> = Beginning of current Paragraph
+               <LI><kbd>Right Bracket-P</kbd> = End of current Paragraph </LI>
+             </ul></td>
              <td>&nbsp;</td>
              <td>&nbsp;</td>
            </tr>
@@ -4431,9 +4556,14 @@
              <th scope="row"><a href="test-files/q.html"><code>q</code></a></th>
              <td>Quotation</td>
              <td><em>element content</em></td>
-             <td>No special commands</td>
+             <td><ul>
+               <LI><kbd>Q</kbd> = Next Block quote
+               <LI><kbd>Shift-Q</kbd> = Previous Block quote
+               <LI><kbd>Left Bracket-Q</kbd> = Beginning of current Block quote
+               <LI><kbd>Right Bracket-Q</kbd> = End of current Block quote</LI>
+             </ul></td>
              <td>&nbsp;</td>
-             <td>?</td>
+             <td>same commands as blockquote - need to test</td>
            </tr>
            <tr id="toc-r3">
              <th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-rb-element"><code>rb</code></a></th>
@@ -4519,7 +4649,11 @@
              <th scope="row"><a href="test-files/select-option.html"><code>select</code></a></th>
              <td>List box control</td>
              <td>&nbsp;</td>
-             <td><p>&nbsp;</p>
+             <td><ul>
+               <LI><kbd>F</kbd> = Next Form Control
+               <LI><kbd>Shift-F</kbd> = Previous Form Control </LI>
+             </ul>
+               <p>&nbsp;</p>
                <p>&nbsp;</p></td>
              <td>&nbsp;</td>
              <td>&nbsp;</td>
@@ -4693,7 +4827,10 @@
              <th scope="row"><a href="test-files/textarea.html"><code>textarea</code></a></th>
              <td>Multiline text field</td>
              <td>&nbsp;</td>
-             <td>&nbsp;</td>
+             <td><ul>
+               <LI><kbd>F</kbd> = Next Form Control
+               <LI><kbd>Shift-F</kbd> = Previous Form Control </LI>
+             </ul></td>
              <td>&nbsp;</td>
              <td>&nbsp;</td>
            </tr>
@@ -4834,7 +4971,6 @@
            </tr>
          </tbody>
        </table>
-     </div>
      <h2></h2>
      <h2>ORCA tests:</h2> 
 	 <p class="note">todo</p>

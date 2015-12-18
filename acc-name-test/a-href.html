@@ -5,36 +5,98 @@
 <title>test file: a element with href</title>
 <link href="http://www.w3.org/StyleSheets/TR/w3c-unofficial" rel="stylesheet" type="text/css">
 <style>
-		.note {
-			padding: 0.5em 2em;
-			background: none repeat scroll 0 0 #e9fbe9;
-			border-left: 0.25em solid #52e052; }
 		
-		table {
-		    border-collapse: collapse;
-		    border: 1px solid #630;
-		    font: 0.8em Arial, Verdana, Helvetica, sans-serif; }  
+body
 
-		th, td {
-			text-align: left;
-		    vertical-align: top;
-		    padding: 0.3em;
-		    border: 1px solid #630; }
-
-		th[scope='row'] { text-align:left; } 
-
-		tbody tr:hover { outline:solid 2px #666666; }
+{
+	font: normal 85%  arial, Verdana, helvetica, sans-serif;
+	color: #333;
+	background: #fff;
+	padding: 0 1em;
 	
-        .navlist li {
-		    display: inline;
-		    list-style-type: none;
-		    padding-right: 20px; }
+	
+}
 
-		#logo {float:left}
+caption {text-align:left;font-weight:bold;font-size:large}
 
-		a:hover, a:focus { background-color:#99FF99; outline:solid thin #030; }
+h1, h2, h3
 
-		kbd {
+{
+
+	color: #630;
+
+	background: #fff;
+
+	padding-bottom: 0.5em;
+
+	margin-bottom: 0;
+
+}
+
+
+
+table
+
+{
+
+	border-collapse: collapse;
+
+	border: 1px solid #630;	
+	
+font: normal 90% arial, Verdana, helvetica, sans-serif;
+}
+
+
+
+th, td
+
+{
+
+	text-align: left;
+
+	vertical-align: top;
+
+	padding: 0.3em;
+
+	border: 1px solid #630;
+
+}
+
+td h1 {font-size:85%;margin:0 0 0 0;}
+td p {margin:0 0 0 0;}
+thead th, thead td
+
+{
+
+	font-weight: bold;
+
+	text-align: center;
+
+}
+
+td span {border: 2px solid #9acd32;display:inline-block;padding:2px;}
+/*span:focus {background:#f5f5f5;border: 2px solid #a0522d;}
+td:focus {background:#f5f5f5;border: 2px solid #a0522d;}*/
+caption {text-align:left}
+
+
+td.suggested {background:#90ee90;}
+	td.partial {background:#eee8aa;}
+	td.nosupport{background:#ffb6c1;}
+	
+
+	div.example{border: 1px dashed #b8860b;padding: 5px;margin-top:5px;background:#FFFFFF}
+	
+	td ul {padding-left:4px;list-style-type:none}
+	img {border: 1px solid #630;	}
+	.test {border: 1px solid #666666;padding:4px;margin-top:15px;background:#FFFFCC}
+	
+	#labels {text-indent:-1000px;height:1px}
+    
+body {background-image:none !important; padding-left:1em}
+
+.suggested {background-color:#6F3}
+kbd {
 			background-color: #F1F1F1;
 			border: 1px solid #666;
 			border-radius: 5px;
@@ -46,13 +108,14 @@
 			min-width: 17px;
 			display: inline-block;
 			 }
-body {background-image:none !important; padding-left:1em}
 	</style>
     
 </head>
 
 <body>
-<h1><code>a</code> element with <code>href</code></h1>
+<h1>Testing screen reader label and description announcement on <code>a</code> elements with <code>href</code></h1>
+<p>Last updated 18 December 2015</p>
+<h2>tests</h2>
 <ol>
   <li><a href="http://www.w3.org/TR/html/text-level-semantics.html#the-a-element">element</a></li>
   <li><a href="http://www.w3.org/TR/html/text-level-semantics.html#the-a-element" aria-label="test label">element with aria-label</a></li>
@@ -60,7 +123,7 @@ body {background-image:none !important; padding-left:1em}
   <li><a href="http://www.w3.org/TR/html/text-level-semantics.html#the-a-element" title="test label" style="display:inline-block;width:10px;height:10px;background:green"></a> empty element with title</li>
   <li><a href="http://www.w3.org/TR/html/text-level-semantics.html#the-a-element" aria-label="test label" title="test description">element with aria-label and title</a></li>
 </ol>
-<h2>Suggested announcement</h2>
+<h2>Expected announcement</h2>
 <ol>
   <li>&quot;element&quot;</li>
   <li>&quot;test label&quot;</li>
@@ -68,8 +131,37 @@ body {background-image:none !important; padding-left:1em}
   <li>&quot;test label&quot;</li>
   <li>&quot;test label, test description&quot;</li>
 </ol>
+<h3>Notes</h3>
+<p>Latest versions of 3 windows screen readers:</p>
+<ul>
+  <li>JAWS</li>
+  <li>NVDA</li>
+  <li>Window Eyes</li>
+</ul>
+<p> Latest versions of 3 browsers:</p>
+<ul>
+  <li>Firefox</li>
+  <li>Chrome</li>
+  <li>Internet Explorer</li>
+</ul>
+<p>3 ways to interact with the links were tested:</p>
+<ul>
+  <li>cursor: using the <kbd>up/down</kbd> arrow keys </li>
+  <li>nav key: using the screen readers link navigation keys (<kbd>U/V</kbd> for JAWS and NVDA, <code><kbd>U/L</kbd></code> for Window Eyes)</li>
+  <li>tab key: using the <code><kbd>tab</kbd></code> key</li>
+</ul>
+<h2>Results Overview</h2>
+<p>The announcement of label and description for links varies across screen reader, interaction method and browser.</p>
+<ul>
+  <li>All screen readers announce the link label correctly across all browsers independent of interaction method (except NVDA does not announce the label when provided via aria-label (test 2) when Chrome is used).</li>
+  <li>Window Eyes does not announce the description at all, but has the most consistent label announcement across interaction methods and browsers.</li>
+  <li>JAWS only announces the description when a user tabs to a link.</li>
+  <li>NVDA only announces the description when using the link nav keys or tab keys in Firefox and Chrome. It does not announce the description at all with IE.</li>
+  <li>Results in the tables that differ from the expected output are marked <span class="nosupport"><img src="../images/github-fork.png" width="20" height="14" alt="different"></span></li>
+</ul>
+<p>&nbsp;</p>
 <h2>Screen reader output</h2>
-<table width="100%" border="0">
+<table border="0">
 <caption>Using Firefox 42</caption>
   <tr>
     <th scope="col">test</th>
@@ -85,146 +177,146 @@ body {background-image:none !important; padding-left:1em}
   </tr>
   <tr>
     <td>1</td>
-    <td>&quot;element&quot;</td>
-    <td>&quot;element&quot;</td>
-    <td>&quot;element&quot;</td>
-    <td>&quot;element&quot;</td>
-    <td>&quot;element&quot;</td>
-    <td>&quot;element&quot;</td>
-    <td>&quot;element&quot;</td>
-    <td>&quot;element&quot;</td>
-    <td>&quot;element&quot;</td>
+    <td class="suggested">&quot;element&quot;</td>
+    <td class="suggested">&quot;element&quot;</td>
+    <td class="suggested">&quot;element&quot;</td>
+    <td class="suggested">&quot;element&quot;</td>
+    <td class="suggested">&quot;element&quot;</td>
+    <td class="suggested">&quot;element&quot;</td>
+    <td class="suggested">&quot;element&quot;</td>
+    <td class="suggested">&quot;element&quot;</td>
+    <td class="suggested">&quot;element&quot;</td>
   </tr>
   <tr>
     <td>2</td>
-    <td>&quot;test label&quot;</td>
-    <td>&quot;test label&quot;</td>
-    <td>&quot;test label&quot;</td>
-    <td>&quot;test label&quot;</td>
-    <td>&quot;test label&quot;</td>
-    <td>&quot;test label&quot;</td>
-    <td>&quot;test label&quot;</td>
-    <td>&quot;test label&quot;</td>
-    <td>&quot;test label&quot;</td>
+    <td class="suggested">&quot;test label&quot;</td>
+    <td class="suggested">&quot;test label&quot;</td>
+    <td class="suggested">&quot;test label&quot;</td>
+    <td class="suggested">&quot;test label&quot;</td>
+    <td class="suggested">&quot;test label&quot;</td>
+    <td class="suggested">&quot;test label&quot;</td>
+    <td class="suggested">&quot;test label&quot;</td>
+    <td class="suggested">&quot;test label&quot;</td>
+    <td class="suggested">&quot;test label&quot;</td>
   </tr>
   <tr>
     <td>3</td>
-    <td>&quot;element with title&quot;</td>
-    <td>&quot;element with title&quot;</td>
-    <td>&quot;element with title, test description&quot;</td>
-    <td>&quot;element with title&quot;</td>
-    <td>&quot;element with title, test description&quot;</td>
-    <td>&quot;element with title, test description&quot;</td>
-    <td>&quot;element with title&quot;</td>
-    <td>&quot;element with title&quot;</td>
-    <td>&quot;element with title&quot;</td>
+    <td class="nosupport">&quot;element with title&quot; <img src="../images/github-fork.png" width="20" height="14" alt="different"></td>
+    <td class="nosupport">&quot;element with title&quot; <img src="../images/github-fork.png" width="20" height="14" alt="different"></td>
+    <td class="suggested">&quot;element with title, test description&quot;</td>
+    <td class="nosupport">&quot;element with title&quot; <img src="../images/github-fork.png" width="20" height="14" alt="different"></td>
+    <td class="suggested">&quot;element with title, test description&quot;</td>
+    <td class="suggested">&quot;element with title, test description&quot;</td>
+    <td class="nosupport">&quot;element with title&quot; <img src="../images/github-fork.png" width="20" height="14" alt="different"></td>
+    <td class="nosupport">&quot;element with title&quot; <img src="../images/github-fork.png" width="20" height="14" alt="different"></td>
+    <td class="nosupport">&quot;element with title&quot; <img src="../images/github-fork.png" width="20" height="14" alt="different"></td>
   </tr>
   <tr>
     <td>4</td>
-    <td>&quot;test label&quot;</td>
-    <td>&quot;test label&quot;</td>
-    <td>&quot;test label&quot;</td>
-    <td>&quot;test label&quot;</td>
-    <td>&quot;test label&quot;</td>
-    <td>&quot;test label&quot;</td>
-    <td>&quot;test label&quot;</td>
-    <td>&quot;test label&quot;</td>
-    <td>&quot;test label&quot;</td>
+    <td class="suggested">&quot;test label&quot;</td>
+    <td class="suggested">&quot;test label&quot;</td>
+    <td class="suggested">&quot;test label&quot;</td>
+    <td class="suggested">&quot;test label&quot;</td>
+    <td class="suggested">&quot;test label&quot;</td>
+    <td class="suggested">&quot;test label&quot;</td>
+    <td class="suggested">&quot;test label&quot;</td>
+    <td class="suggested">&quot;test label&quot;</td>
+    <td class="suggested">&quot;test label&quot;</td>
   </tr>
   <tr>
     <td>5</td>
-    <td>&quot;test label&quot;</td>
-    <td>&quot;test label&quot;</td>
-    <td>&quot;test label, test description&quot;</td>
-    <td>&quot;test label&quot;</td>
-    <td>&quot;test label, test description&quot;</td>
-    <td>&quot;test label, test description&quot;</td>
-    <td>&quot;test label&quot;</td>
-    <td>&quot;test label&quot;</td>
-    <td>&quot;test label&quot;</td>
+    <td class="nosupport">&quot;test label&quot; <img src="../images/github-fork.png" width="20" height="14" alt="different"></td>
+    <td class="nosupport">&quot;test label&quot; <img src="../images/github-fork.png" width="20" height="14" alt="different"></td>
+    <td class="suggested">&quot;test label, test description&quot;</td>
+    <td class="nosupport">&quot;test label&quot; <img src="../images/github-fork.png" width="20" height="14" alt="different"></td>
+    <td class="suggested">&quot;test label, test description&quot;</td>
+    <td class="suggested">&quot;test label, test description&quot;</td>
+    <td class="nosupport">&quot;test label&quot; <img src="../images/github-fork.png" width="20" height="14" alt="different"></td>
+    <td class="nosupport">&quot;test label&quot; <img src="../images/github-fork.png" width="20" height="14" alt="different"></td>
+    <td class="nosupport">&quot;test label&quot; <img src="../images/github-fork.png" width="20" height="14" alt="different"></td>
   </tr>
 </table>
 <p>&nbsp;</p>
-<table width="100%" border="0">
+<table border="0">
   <caption>
     Using Chrome 47
   </caption>
   <tr>
-    <th width="3%" scope="col">test</th>
-    <th width="8%" scope="col">JAWS  cursor</th>
-    <th width="8%" scope="col">JAWS  nav key</th>
-    <th width="14%" scope="col">JAWS  tab key</th>
-    <th width="8%" scope="col">NVDA cursor</th>
-    <th width="14%" scope="col">NVDA nav key</th>
-    <th width="18%" scope="col">NVDA tab key</th>
-    <th width="9%" scope="col">Window Eyes cursor</th>
-    <th width="9%" scope="col">Window Eyes nav key </th>
-    <th width="9%" scope="col">Window Eyes tab key</th>
+    <th scope="col">test</th>
+    <th scope="col">JAWS  cursor</th>
+    <th scope="col">JAWS  nav key</th>
+    <th scope="col">JAWS  tab key</th>
+    <th scope="col">NVDA cursor</th>
+    <th scope="col">NVDA nav key</th>
+    <th scope="col">NVDA tab key</th>
+    <th scope="col">Window Eyes cursor</th>
+    <th scope="col">Window Eyes nav key </th>
+    <th scope="col">Window Eyes tab key</th>
   </tr>
   <tr>
     <td>1</td>
-    <td>&quot;element&quot;</td>
-    <td>&quot;element&quot;</td>
-    <td>&quot;element&quot;</td>
-    <td>&quot;element&quot;</td>
-    <td>&quot;element&quot;</td>
-    <td>&quot;element&quot;</td>
-    <td>&quot;element&quot;</td>
-    <td>&quot;element&quot;</td>
-    <td>&quot;element&quot;</td>
+    <td class="suggested">&quot;element&quot;</td>
+    <td class="suggested">&quot;element&quot;</td>
+    <td class="suggested">&quot;element&quot;</td>
+    <td class="suggested">&quot;element&quot;</td>
+    <td class="suggested">&quot;element&quot;</td>
+    <td class="suggested">&quot;element&quot;</td>
+    <td class="suggested">&quot;element&quot;</td>
+    <td class="suggested">&quot;element&quot;</td>
+    <td class="suggested">&quot;element&quot;</td>
   </tr>
   <tr>
     <td>2</td>
-    <td>&quot;test label&quot;</td>
-    <td>&quot;test label&quot;</td>
-    <td>&quot;test label&quot;</td>
-    <td>&quot;test label&quot;</td>
-    <td>&quot;test label&quot;</td>
-    <td>&quot;element with aria-label&quot;</td>
-    <td>&quot;test label&quot;</td>
-    <td>&quot;test label&quot;</td>
-    <td>&quot;test label&quot;</td>
+    <td class="suggested">&quot;test label&quot;</td>
+    <td class="suggested">&quot;test label&quot;</td>
+    <td class="suggested">&quot;test label&quot;</td>
+    <td class="suggested">&quot;test label&quot;</td>
+    <td class="suggested">&quot;test label&quot;</td>
+    <td class="nosupport">&quot;element with aria-label&quot; <img src="../images/github-fork.png" width="20" height="14" alt="different"></td>
+    <td class="suggested">&quot;test label&quot;</td>
+    <td class="suggested">&quot;test label&quot;</td>
+    <td class="suggested">&quot;test label&quot;</td>
   </tr>
   <tr>
     <td>3</td>
-    <td>&quot;element with title&quot;</td>
-    <td>&quot;element with title&quot;</td>
-    <td>&quot;element with title, test description&quot;</td>
-    <td>&quot;element with title&quot;</td>
-    <td>&quot;element with title, test description&quot;</td>
-    <td>&quot;element with title, test description&quot;</td>
-    <td>&quot;element with title&quot;</td>
-    <td>&quot;element with title&quot;</td>
-    <td>&quot;element with title&quot;</td>
+    <td class="nosupport">&quot;element with title&quot; <img src="../images/github-fork.png" width="20" height="14" alt="different"></td>
+    <td class="nosupport">&quot;element with title&quot; <img src="../images/github-fork.png" width="20" height="14" alt="different"></td>
+    <td class="suggested">&quot;element with title, test description&quot;</td>
+    <td class="nosupport">&quot;element with title&quot; <img src="../images/github-fork.png" width="20" height="14" alt="different"></td>
+    <td class="suggested">&quot;element with title, test description&quot;</td>
+    <td class="suggested">&quot;element with title, test description&quot;</td>
+    <td class="nosupport">&quot;element with title&quot; <img src="../images/github-fork.png" width="20" height="14" alt="different"></td>
+    <td class="nosupport">&quot;element with title&quot; <img src="../images/github-fork.png" width="20" height="14" alt="different"></td>
+    <td class="nosupport">&quot;element with title&quot; <img src="../images/github-fork.png" width="20" height="14" alt="different"></td>
   </tr>
   <tr>
     <td>4</td>
-    <td>&quot;test label&quot;</td>
-    <td>&quot;test label&quot;</td>
-    <td>&quot;test label&quot;</td>
-    <td>&quot;test label&quot;</td>
-    <td>&quot;test label&quot;</td>
-    <td>&quot;test label&quot;</td>
-    <td>&quot;test label&quot;</td>
-    <td>&quot;test label&quot;</td>
-    <td>&quot;test label&quot;</td>
+    <td class="suggested">&quot;test label&quot;</td>
+    <td class="suggested">&quot;test label&quot;</td>
+    <td class="suggested">&quot;test label&quot;</td>
+    <td class="suggested">&quot;test label&quot;</td>
+    <td class="suggested">&quot;test label&quot;</td>
+    <td class="suggested">&quot;test label&quot;</td>
+    <td class="suggested">&quot;test label&quot;</td>
+    <td class="suggested">&quot;test label&quot;</td>
+    <td class="suggested">&quot;test label&quot;</td>
   </tr>
   <tr>
     <td>5</td>
-    <td>&quot;test label&quot;</td>
-    <td>&quot;test label&quot;</td>
-    <td>&quot;test label, test description&quot;</td>
-    <td>&quot;test label&quot;</td>
-    <td>&quot;test label, test description&quot;</td>
-    <td>&quot;element with aria-label and title, test description&quot;</td>
-    <td>&quot;test label&quot;</td>
-    <td>&quot;test label&quot;</td>
-    <td>&quot;test label&quot;</td>
+    <td class="nosupport">&quot;test label&quot; <img src="../images/github-fork.png" width="20" height="14" alt="different"></td>
+    <td class="nosupport">&quot;test label&quot; <img src="../images/github-fork.png" width="20" height="14" alt="different"></td>
+    <td class="suggested">&quot;test label, test description&quot;</td>
+    <td class="nosupport">&quot;test label&quot; <img src="../images/github-fork.png" width="20" height="14" alt="different"></td>
+    <td class="suggested">&quot;test label, test description&quot;</td>
+    <td class="suggested">&quot;element with aria-label and title, test description&quot;</td>
+    <td class="nosupport">&quot;test label&quot; <img src="../images/github-fork.png" width="20" height="14" alt="different"></td>
+    <td class="nosupport">&quot;test label&quot; <img src="../images/github-fork.png" width="20" height="14" alt="different"></td>
+    <td class="nosupport">&quot;test label&quot; <img src="../images/github-fork.png" width="20" height="14" alt="different"></td>
   </tr>
 </table>
 
 <p>&nbsp;</p>
-<table width="100%" border="0">
+<table border="0">
   <caption>
     Using IE 11
   </caption>
@@ -242,63 +334,63 @@ body {background-image:none !important; padding-left:1em}
   </tr>
   <tr>
     <td>1</td>
-    <td>&quot;element&quot;</td>
-    <td>&quot;element&quot;</td>
-    <td>&quot;element&quot;</td>
-    <td>&quot;element&quot;</td>
-    <td>&quot;element&quot;</td>
-    <td>&quot;element&quot;</td>
-    <td>&quot;element&quot;</td>
-    <td>&quot;element&quot;</td>
-    <td>&quot;element&quot;</td>
+    <td class="suggested">&quot;element&quot;</td>
+    <td class="suggested">&quot;element&quot;</td>
+    <td class="suggested">&quot;element&quot;</td>
+    <td class="suggested">&quot;element&quot;</td>
+    <td class="suggested">&quot;element&quot;</td>
+    <td class="suggested">&quot;element&quot;</td>
+    <td class="suggested">&quot;element&quot;</td>
+    <td class="suggested">&quot;element&quot;</td>
+    <td class="suggested">&quot;element&quot;</td>
   </tr>
   <tr>
     <td>2</td>
-    <td>&quot;test label&quot;</td>
-    <td>&quot;test label&quot;</td>
-    <td>&quot;test label&quot;</td>
-    <td>&quot;test label&quot;</td>
-    <td>&quot;test label&quot;</td>
-    <td>&quot;test label&quot;</td>
-    <td>&quot;test label&quot;</td>
-    <td>&quot;test label&quot;</td>
-    <td>&quot;test label&quot;</td>
+    <td class="suggested">&quot;test label&quot;</td>
+    <td class="suggested">&quot;test label&quot;</td>
+    <td class="suggested">&quot;test label&quot;</td>
+    <td class="suggested">&quot;test label&quot;</td>
+    <td class="suggested">&quot;test label&quot;</td>
+    <td class="suggested">&quot;test label&quot;</td>
+    <td class="suggested">&quot;test label&quot;</td>
+    <td class="suggested">&quot;test label&quot;</td>
+    <td class="suggested">&quot;test label&quot;</td>
   </tr>
   <tr>
     <td>3</td>
-    <td>&quot;element with title&quot;</td>
-    <td>&quot;element with title&quot;</td>
-    <td>&quot;element with title, test description&quot;</td>
-    <td>&quot;element with title&quot;</td>
-    <td>&quot;element with title&quot;</td>
-    <td>&quot;element with title&quot;</td>
-    <td>&quot;element with title&quot;</td>
-    <td>&quot;element with title&quot;</td>
-    <td>&quot;element with title&quot;</td>
+    <td class="nosupport">&quot;element with title&quot; <img src="../images/github-fork.png" width="20" height="14" alt="different"></td>
+    <td class="nosupport">&quot;element with title&quot; <img src="../images/github-fork.png" width="20" height="14" alt="different"></td>
+    <td class="suggested">&quot;element with title, test description&quot;</td>
+    <td class="nosupport">&quot;element with title&quot; <img src="../images/github-fork.png" width="20" height="14" alt="different"></td>
+    <td class="nosupport">&quot;element with title&quot; <img src="../images/github-fork.png" width="20" height="14" alt="different"></td>
+    <td class="nosupport">&quot;element with title&quot; <img src="../images/github-fork.png" width="20" height="14" alt="different"></td>
+    <td class="nosupport">&quot;element with title&quot; <img src="../images/github-fork.png" width="20" height="14" alt="different"></td>
+    <td class="nosupport">&quot;element with title&quot; <img src="../images/github-fork.png" width="20" height="14" alt="different"></td>
+    <td class="nosupport">&quot;element with title&quot; <img src="../images/github-fork.png" width="20" height="14" alt="different"></td>
   </tr>
   <tr>
     <td>4</td>
-    <td>&quot;test label&quot;</td>
-    <td>&quot;test label&quot;</td>
-    <td>&quot;test label&quot;</td>
-    <td>&quot;test label&quot;</td>
-    <td>&quot;test label&quot;</td>
-    <td>&quot;test label&quot;</td>
-    <td>&quot;test label&quot;</td>
-    <td>&quot;test label&quot;</td>
-    <td>&quot;test label&quot;</td>
+    <td class="suggested">&quot;test label&quot;</td>
+    <td class="suggested">&quot;test label&quot;</td>
+    <td class="suggested">&quot;test label&quot;</td>
+    <td class="suggested">&quot;test label&quot;</td>
+    <td class="suggested">&quot;test label&quot;</td>
+    <td class="suggested">&quot;test label&quot;</td>
+    <td class="suggested">&quot;test label&quot;</td>
+    <td class="suggested">&quot;test label&quot;</td>
+    <td class="suggested">&quot;test label&quot;</td>
   </tr>
   <tr>
     <td>5</td>
-    <td>&quot;test label&quot;</td>
-    <td>&quot;test label&quot;</td>
-    <td>&quot;test label, test description&quot;</td>
-    <td>&quot;test label&quot;</td>
-    <td>&quot;test label&quot;</td>
-    <td>&quot;test label&quot;</td>
-    <td>&quot;test label&quot;</td>
-    <td>&quot;test label&quot;</td>
-    <td>&quot;test label&quot;</td>
+    <td class="nosupport">&quot;test label&quot; <img src="../images/github-fork.png" width="20" height="14" alt="different"></td>
+    <td class="nosupport">&quot;test label&quot; <img src="../images/github-fork.png" width="20" height="14" alt="different"></td>
+    <td class="suggested">&quot;test label, test description&quot;</td>
+    <td class="nosupport">&quot;test label&quot; <img src="../images/github-fork.png" width="20" height="14" alt="different"></td>
+    <td class="nosupport">&quot;test label&quot; <img src="../images/github-fork.png" width="20" height="14" alt="different"></td>
+    <td class="nosupport">&quot;test label&quot; <img src="../images/github-fork.png" width="20" height="14" alt="different"></td>
+    <td class="nosupport">&quot;test label&quot; <img src="../images/github-fork.png" width="20" height="14" alt="different"></td>
+    <td class="nosupport">&quot;test label&quot; <img src="../images/github-fork.png" width="20" height="14" alt="different"></td>
+    <td class="nosupport">&quot;test label&quot; <img src="../images/github-fork.png" width="20" height="14" alt="different"></td>
   </tr>
 </table>
 <h2>&nbsp;</h2>

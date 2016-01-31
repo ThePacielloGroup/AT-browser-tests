@@ -1,18 +1,17 @@
 <!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<title>test file: aside element</title>
-</head>
-
-<body>
+	<head>
+		<meta charset="utf-8">
+		<title>test file: aside element</title>
+	</head>
+	<body>
 <!-- h1 includes element and attribute(s) in test -->
 <h1><code>aside</code> element</h1>
 <ul>
 <li>Plain</li>
-<li>With <code>&lt;h1&gt;</code></li>
+<li>With <code>&lt;h1></code></li>
 <li>With <code>aria-label</code>
-<li>With <code>&lt;h1&gt;</code> referenced by <code>aria-labelledby</code></li>
+<li>With <code>&lt;h1></code> referenced by <code>aria-labelledby</code></li>
 </ul>
 <!-- element and attribute(s) working example -->
 <aside>
@@ -33,32 +32,31 @@ Lorem ipsum...
 Lorem ipsum...
 </aside>
 <!-- element and attribute(s) code -->
-<h2>Code</h2>
-<pre><code>&lt;aside&gt;
+		<h2>Code</h2>
+		<pre><code>&lt;aside>
 Lorem ipsum...
-&lt;/aside&gt;
+&lt;/aside>
 </code></pre>
 <hr>
-<pre><code>&lt;aside&gt;
-&lt;h1&gt;Once upon a time&lt;/h1&gt;
+<pre><code>&lt;aside>
+&lt;h1>Once upon a time&lt;/h1>
 Lorem ipsum...
-&lt;/aside&gt;
+&lt;/aside>
 </code></pre>
 <hr>
-<pre><code>&lt;aside aria-label=&quot;Once upon a time&quot;&gt;
+<pre><code>&lt;aside aria-label="Once upon a time">
 Lorem ipsum...
-&lt;/aside&gt;
+&lt;/aside>
 </code></pre>
 <hr>
-<pre><code>&lt;aside aria-labelledby=&quot;aside-title&quot;&gt;
-&lt;h1 id=&quot;aside-title&quot;&gt;Once upon a time&lt;/h1&gt;
+<pre><code>&lt;aside aria-labelledby="aside-title">
+&lt;h1 id="aside-title">Once upon a time&lt;/h1>
 Lorem ipsum...
-&lt;/aside&gt;
+&lt;/aside>
 </code></pre>
 <!-- link(s) to element and attribute(s) in test -->
-<h2>Reference</h2>
-<p>
-<a href="http://www.w3.org/TR/html/grouping-content.html#the-aside-element">HTML5 aside element</a>
+		<h2>Reference</h2>
+		<p><a href="http://www.w3.org/TR/html/grouping-content.html#the-aside-element">HTML5 aside element</a>
 </p>
-</body>
+	</body>
 </html>

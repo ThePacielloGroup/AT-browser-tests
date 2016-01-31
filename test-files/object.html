@@ -1,27 +1,21 @@
 <!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<title> 3: object element</title>
-</head>
+	<head>
+		<meta charset="utf-8">
+		<title> 3: object element</title>
+	</head>
+	<body>
+		<h1><code>object</code> element</h1>
+		<p><object data="../images/circle.svg" type="image/svg+xml">fallback text</object></p>
 
-<body>
-<h1><code>object</code> element</h1>
-<p>
-<object data="../images/circle.svg" type="image/svg+xml">
-fallback text
-</object> </p>
-<h2>broken data source </h2>
-<p>
-<object data="circle.svg" type="image/svg+xml">
-fallback text
-</object> </p>
-<h2>Code</h2>
-<p>&lt;object data=&quot;test.svg&quot; type=&quot;image/svg+xml&quot;&gt;<br>
-  fallback text<br>
-&lt;/object&gt;</p>
-<h2>Reference</h2>
-<p><a href="http://www.w3.org/TR/html5/embedded-content-0.html#the-object-element">HTML5 object element</a></p>
-</body>
+		<h2>broken data source </h2>
+		<p><object data="circle.svg" type="image/svg+xml">fallback text</object></p>
+
+		<h2>Code</h2>
+		<pre><code>&lt;object data="test.svg" type="image/svg+xml">fallback text&lt;/object></code></pre>
+
+		<h2>Reference</h2>
+		<p><a href="http://www.w3.org/TR/html5/embedded-content-0.html#the-object-element">HTML5 object element</a></p>
+	</body>
 </html>
 

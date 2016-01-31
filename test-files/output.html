@@ -1,35 +1,29 @@
 <!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<title>test file: output element</title>
-</head>
+	<head>
+		<meta charset="utf-8">
+		<title>test file: output element</title>
+	</head>
+	<body>
+		<!-- h1 includes element and attribute(s) in test -->
+		<h1><code>output</code> element</h1>
+		<!-- element and attribute(s) working example -->
+		<p><form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+			<input type="range" name="b" value="50" /> +
+			<input type="number" name="a" value="10" /> =
+			<output name="result"></output>
+		</form></p>
 
-<body>
+		<!-- element and attribute(s) code -->
+		<h2>Code</h2>
+		<pre></code>&lt;form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+	&lt;input type="range" name="b" id="b" value="50" /> +<br>
+	&lt;input type="number" name="a" id="a" value="10" /> =<br>
+	&lt;output name="result" for="b a">&lt;/output><br>
+&lt;/form></code></pre>
 
-<!-- h1 includes element and attribute(s) in test -->
-<h1><code>output</code> element</h1>
-
-<!-- element and attribute(s) working example -->
-
-<p>
-<form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
-<input type="range" name="b" value="50" /> +
-<input type="number" name="a" value="10" /> =
-<output name="result"></output>
-</form></p>
-
-<!-- element and attribute(s) code -->
-<h2>Code</h2>
-<p>&lt;form oninput=&quot;result.value=parseInt(a.value)+parseInt(b.value)&quot;&gt;<br>
-  &lt;input type=&quot;range&quot; name=&quot;b&quot; id=&quot;b&quot; value=&quot;50&quot; /&gt; +<br>
-  &lt;input type=&quot;number&quot; name=&quot;a&quot; id=&quot;a&quot; value=&quot;10&quot; /&gt; =<br>
-  &lt;output name=&quot;result&quot; for=&quot;b a&quot;&gt;&lt;/output&gt;<br>
-&lt;/form&gt;</p>
-<!-- link(s) to element and attribute(s) in test -->
-<h2>Reference</h2>
-<p>
-<a href="http://www.w3.org/TR/html5/forms.html#the-output-element">HTML5 output element</a>
-</p>
-</body>
+		<!-- link(s) to element and attribute(s) in test -->
+		<h2>Reference</h2>
+		<p><a href="http://www.w3.org/TR/html5/forms.html#the-output-element">HTML5 output element</a></p>
+	</body>
 </html>

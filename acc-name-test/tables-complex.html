@@ -1,16 +1,15 @@
 <!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
+	<head>
+		<meta charset="utf-8">
 <!-- FIXME number -->
-<title>test file: complex tables - table element with caption, thead, tbody, tfoot, tr, th and td</title>
+		<title>test file: complex tables - table element with caption, thead, tbody, tfoot, tr, th and td</title>
 <style>
 table, tr, td, th {border:thin solid #666; border-collapse:collapse;padding: 5px;}
 </style>
-</head>
-
-<body>
-<h1>test file: <code>table</code> element with <code>caption</code>, <code>thead</code>, <code>tbody</code>, <code>tfoot</code>, <code>tr</code>, <code>th</code>,<code> colgroup</code> and <code>td</code></h1>
+	</head>
+	<body>
+		<h1>test file: <code>table</code> element with <code>caption</code>, <code>thead</code>, <code>tbody</code>, <code>tfoot</code>, <code>tr</code>, <code>th</code>,<code> colgroup</code> and <code>td</code></h1>
 <h2>Table 1: Oranges and Apples – complex table using id and headers<br>
 </h2>
 <p> This table provides information about the wholesale and retail price  of both imported and domestic oranges and apples in Sydney and  Melbourne. There are two levels of row and column headers. </p>
@@ -69,7 +68,7 @@ table, tr, td, th {border:thin solid #666; border-collapse:collapse;padding: 5px
     </tr>
   </tbody>
 </table>
-<h2> Table 2: Nuts and Bolts – complex table using scope, colgroup and scope=&quot;rowgroup&quot;.<br>
+<h2> Table 2: Nuts and Bolts – complex table using scope, colgroup and scope="rowgroup".<br>
 </h2>
 <p> This table provides information about the wholesale and retail prices  for two sizes of brass and steel nuts and bolts. There are two levels of  row and column headers. </p>
 <table summary="Wholesale and retail prices for 10 and 20 centimetre brass and steel nuts and bolts. There are two levels of column headings." border="1">
@@ -212,124 +211,124 @@ table, tr, td, th {border:thin solid #666; border-collapse:collapse;padding: 5px
 </table>
 <h2>Code (table 1)</h2>
 <pre>
-&lt;table summary=&quot;Wholesale and retail prices of imported and domestic oranges and apples in 
-Sydney and Melbourne. There are two levels of column headings.&quot; border=&quot;1&quot;&gt;
-&lt;caption&gt;
+&lt;table summary="Wholesale and retail prices of imported and domestic oranges and apples in 
+Sydney and Melbourne. There are two levels of column headings." border="1">
+&lt;caption>
 Imported and domestic orange and apple prices in Sydney and Melbourne
-&lt;/caption&gt;  
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;th colspan=&quot;2&quot; id=&quot;imported&quot;&gt;Imported&lt;/th&gt;
-&lt;th colspan=&quot;2&quot; id=&quot;domestic&quot;&gt;Domestic&lt;/th&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;th id=&quot;oranges-imp&quot;&gt;Oranges&lt;/th&gt;
-&lt;th id=&quot;apples-imp&quot;&gt;Apples&lt;/th&gt;
-&lt;th id=&quot;oranges-dom&quot;&gt;Oranges&lt;/th&gt;
-&lt;th id=&quot;apples-dom&quot;&gt;Apples&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;th id=&quot;sydney&quot; colspan=&quot;5&quot;&gt;Sydney&lt;/th&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;th headers=&quot;sydney&quot; id=&quot;wholesale-sydney&quot;&gt;Wholesale&lt;/th&gt;
-&lt;td headers=&quot;imported oranges-imp sydney wholesale-sydney&quot;&gt;$1.00&lt;/td&gt;
-&lt;td headers=&quot;imported apples-imp sydney wholesale-sydney&quot;&gt;$1.25&lt;/td&gt;
-&lt;td headers=&quot;domestic oranges-dom sydney wholesale-sydney&quot;&gt;$1.20&lt;/td&gt;
-&lt;td headers=&quot;domestic apples-dom sydney wholesale-sydney&quot;&gt;$1.00&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;th headers=&quot;sydney&quot; id=&quot;retail-sydney&quot;&gt;Retail&lt;/th&gt;
-&lt;td headers=&quot;imported oranges-imp sydney retail-sydney&quot;&gt;$2.00&lt;/td&gt;
-&lt;td headers=&quot;imported apples-imp sydney retail-sydney&quot;&gt;$3.00&lt;/td&gt;
-&lt;td headers=&quot;domestic oranges-dom sydney retail-sydney&quot;&gt;$1.80&lt;/td&gt;
-&lt;td headers=&quot;domestic apples-dom sydney retail-sydney&quot;&gt;$1.60&lt;/td&gt;
-&lt;/tr&gt; 
-&lt;tr&gt;
-&lt;th id=&quot;melbourne&quot; colspan=&quot;5&quot;&gt;Melbourne&lt;/th&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;th headers=&quot;melbourne&quot; id=&quot;wholesale-melbourne&quot;&gt;Wholesale&lt;/th&gt;
-&lt;td headers=&quot;imported oranges-imp melbourne wholesale-melbourne&quot;&gt;$1.20&lt;/td&gt;
-&lt;td headers=&quot;imported apples-imp melbourne wholesale-melbourne&quot;&gt;$1.30&lt;/td&gt;
-&lt;td headers=&quot;domestic oranges-dom melbourne wholesale-melbourne&quot;&gt;$1.00&lt;/td&gt;
-&lt;td headers=&quot;domestic apples-dom melbourne wholesale-melbourne&quot;&gt;$0.80&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;th headers=&quot;melbourne&quot; id=&quot;retail-melbourne&quot;&gt;Retail&lt;/th&gt;
-&lt;td headers=&quot;imported oranges-imp melbourne retail-melbourne&quot;&gt;$1.60&lt;/td&gt;
-&lt;td headers=&quot;imported apples-imp melbourne retail-melbourne&quot;&gt;$2.00&lt;/td&gt;
-&lt;td headers=&quot;domestic oranges-dom melbourne retail-melbourne&quot;&gt;$2.00&lt;/td&gt;
-&lt;td headers=&quot;domestic apples-dom melbourne retail-melbourne&quot;&gt;$1.50&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;</pre>
+&lt;/caption>  
+&lt;thead>
+&lt;tr>
+&lt;td>&lt;/td>
+&lt;th colspan="2" id="imported">Imported&lt;/th>
+&lt;th colspan="2" id="domestic">Domestic&lt;/th>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;/td>
+&lt;th id="oranges-imp">Oranges&lt;/th>
+&lt;th id="apples-imp">Apples&lt;/th>
+&lt;th id="oranges-dom">Oranges&lt;/th>
+&lt;th id="apples-dom">Apples&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;th id="sydney" colspan="5">Sydney&lt;/th>
+&lt;/tr>
+&lt;tr>
+&lt;th headers="sydney" id="wholesale-sydney">Wholesale&lt;/th>
+&lt;td headers="imported oranges-imp sydney wholesale-sydney">$1.00&lt;/td>
+&lt;td headers="imported apples-imp sydney wholesale-sydney">$1.25&lt;/td>
+&lt;td headers="domestic oranges-dom sydney wholesale-sydney">$1.20&lt;/td>
+&lt;td headers="domestic apples-dom sydney wholesale-sydney">$1.00&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th headers="sydney" id="retail-sydney">Retail&lt;/th>
+&lt;td headers="imported oranges-imp sydney retail-sydney">$2.00&lt;/td>
+&lt;td headers="imported apples-imp sydney retail-sydney">$3.00&lt;/td>
+&lt;td headers="domestic oranges-dom sydney retail-sydney">$1.80&lt;/td>
+&lt;td headers="domestic apples-dom sydney retail-sydney">$1.60&lt;/td>
+&lt;/tr> 
+&lt;tr>
+&lt;th id="melbourne" colspan="5">Melbourne&lt;/th>
+&lt;/tr>
+&lt;tr>
+&lt;th headers="melbourne" id="wholesale-melbourne">Wholesale&lt;/th>
+&lt;td headers="imported oranges-imp melbourne wholesale-melbourne">$1.20&lt;/td>
+&lt;td headers="imported apples-imp melbourne wholesale-melbourne">$1.30&lt;/td>
+&lt;td headers="domestic oranges-dom melbourne wholesale-melbourne">$1.00&lt;/td>
+&lt;td headers="domestic apples-dom melbourne wholesale-melbourne">$0.80&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th headers="melbourne" id="retail-melbourne">Retail&lt;/th>
+&lt;td headers="imported oranges-imp melbourne retail-melbourne">$1.60&lt;/td>
+&lt;td headers="imported apples-imp melbourne retail-melbourne">$2.00&lt;/td>
+&lt;td headers="domestic oranges-dom melbourne retail-melbourne">$2.00&lt;/td>
+&lt;td headers="domestic apples-dom melbourne retail-melbourne">$1.50&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table></pre>
 <h2>Code (table 2)</h2>
-<pre>&lt;table summary=&quot;Wholesale and retail prices for 10 and 20 centimetre brass and steel nuts and bolts. There are two levels of column headings.&quot; border=&quot;1&quot;&gt;
-&lt;caption&gt;
+<pre>&lt;table summary="Wholesale and retail prices for 10 and 20 centimetre brass and steel nuts and bolts. There are two levels of column headings." border="1">
+&lt;caption>
  Prices of Brass and Steel nuts and bolts
- &lt;/caption&gt;
-&lt;colgroup&gt;
-&lt;/colgroup&gt;
-&lt;colgroup span=&quot;2&quot;&gt;
-&lt;/colgroup&gt;
-&lt;colgroup span=&quot;2&quot;&gt;
-&lt;/colgroup&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;th scope=&quot;colgroup&quot; colspan=&quot;2&quot;&gt;Brass&lt;/th&gt;
-&lt;th scope=&quot;colgroup&quot; colspan=&quot;2&quot;&gt;Steel&lt;/th&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;th scope=&quot;col&quot;&gt;Bolts&lt;/th&gt;
-&lt;th scope=&quot;col&quot;&gt;Nuts&lt;/th&gt;
-&lt;th scope=&quot;col&quot;&gt;Bolts&lt;/th&gt;
-&lt;th scope=&quot;col&quot;&gt;Nuts&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;th scope=&quot;rowgroup&quot; colspan=&quot;5&quot;&gt;10cm&lt;/th&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;th scope=&quot;row&quot;&gt;Wholesale&lt;/th&gt;
-&lt;td&gt;$1.00&lt;/td&gt;
-&lt;td&gt;$1.25&lt;/td&gt;
-&lt;td&gt;$1.20&lt;/td&gt;
-&lt;td&gt;$1.00&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;th scope=&quot;row&quot;&gt;Retail&lt;/th&gt;
-&lt;td&gt;$2.00&lt;/td&gt;
-&lt;td&gt;$3.00&lt;/td&gt;
-&lt;td&gt;$1.80&lt;/td&gt;
-&lt;td&gt;$1.60&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;th scope=&quot;rowgroup&quot; colspan=&quot;5&quot;&gt;20cm&lt;/th&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;th scope=&quot;row&quot;&gt;Wholesale&lt;/th&gt;
-&lt;td&gt;$1.20&lt;/td&gt;
-&lt;td&gt;$1.30&lt;/td&gt;
-&lt;td&gt;$1.00&lt;/td&gt;
-&lt;td&gt;$0.80&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;th scope=&quot;row&quot;&gt;Retail&lt;/th&gt;
-&lt;td&gt;$1.60&lt;/td&gt;
-&lt;td&gt;$2.00&lt;/td&gt;
-&lt;td&gt;$2.00&lt;/td&gt;
-&lt;td&gt;$1.50&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;</pre>
+ &lt;/caption>
+&lt;colgroup>
+&lt;/colgroup>
+&lt;colgroup span="2">
+&lt;/colgroup>
+&lt;colgroup span="2">
+&lt;/colgroup>
+&lt;thead>
+&lt;tr>
+&lt;td>&lt;/td>
+&lt;th scope="colgroup" colspan="2">Brass&lt;/th>
+&lt;th scope="colgroup" colspan="2">Steel&lt;/th>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;/td>
+&lt;th scope="col">Bolts&lt;/th>
+&lt;th scope="col">Nuts&lt;/th>
+&lt;th scope="col">Bolts&lt;/th>
+&lt;th scope="col">Nuts&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;th scope="rowgroup" colspan="5">10cm&lt;/th>
+&lt;/tr>
+&lt;tr>
+&lt;th scope="row">Wholesale&lt;/th>
+&lt;td>$1.00&lt;/td>
+&lt;td>$1.25&lt;/td>
+&lt;td>$1.20&lt;/td>
+&lt;td>$1.00&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th scope="row">Retail&lt;/th>
+&lt;td>$2.00&lt;/td>
+&lt;td>$3.00&lt;/td>
+&lt;td>$1.80&lt;/td>
+&lt;td>$1.60&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th scope="rowgroup" colspan="5">20cm&lt;/th>
+&lt;/tr>
+&lt;tr>
+&lt;th scope="row">Wholesale&lt;/th>
+&lt;td>$1.20&lt;/td>
+&lt;td>$1.30&lt;/td>
+&lt;td>$1.00&lt;/td>
+&lt;td>$0.80&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;th scope="row">Retail&lt;/th>
+&lt;td>$1.60&lt;/td>
+&lt;td>$2.00&lt;/td>
+&lt;td>$2.00&lt;/td>
+&lt;td>$1.50&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table></pre>
 <h2>Reference</h2>
 <ul>
   <li><p><a href="http://www.w3.org/TR/html5/tabular-data.html#the-table-element">HTML5 table element</a></p></li>
@@ -345,5 +344,5 @@ Imported and domestic orange and apple prices in Sydney and Melbourne
   </li>
 </ul>
 <p>Data table example from <a href="http://usability.com.au/2005/06/accessible-data-tables-2005/">http://usability.com.au/2005/06/accessible-data-tables-2005/</a></p>
-</body>
+	</body>
 </html>

@@ -1,38 +1,33 @@
 <!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<title>test file: label element</title>
-</head>
+	<head>
+		<meta charset="utf-8">
+		<title>test file: label element</title>
+	</head>
+	<body>
+		<!-- h1 includes element and attribute(s) in test -->
+		<h1><code>label</code> element</h1>
+		<!-- element and attribute(s) working example -->
+		<p><label>name</label></p>
 
-<body>
-<!-- h1 includes element and attribute(s) in test -->
-<h1><code>label</code> element</h1>
-<!-- element and attribute(s) working example -->
-<p>
-  <label>name</label>
-</p>
+		<h2>next to input</h2>
+		<p><label>name</label> <input type="text"></p>
 
-<h2>next to input</h2>
-<p>
-  <label>name</label>
-  <input type="text">
+		<h2>wrapped around input</h2>
+		<p><label>name <input type="text"></label></p>
+
+		<h2>associated using for/id</h2>
+		<p><label for="tst">name <input type="text" id="tst"></label></p>
+
+		<h2>with label + placeholder</h2>
+		<p><label>name <input type="text" placeholder="first name"></label></p>
+
+		<h2>Code</h2>
+		<p>&lt;label for="tst">name &lt;input type="text" id="tst">&lt;/label></p>
+
+		<!-- link(s) to element and attribute(s) in test -->
+		<h2>Reference</h2>
+		<p><a href="http://www.w3.org/TR/html5/forms.html#the-label-element">HTML5 label element</a>
 </p>
-<h2>wrapped around input</h2>
-<p><label>name <input type="text"></label></p>
-<h2>associated using for/id</h2>
-<p><label for="tst">name <input type="text" id="tst"></label></p>
-<h2>with label + placeholder</h2>
-<p><label>name <input type="text" placeholder="first name"></label></p>
-<p>
-  <!-- element and attribute(s) code -->
-</p>
-<h2>Code</h2>
-<p>&lt;label for=&quot;tst&quot;&gt;name &lt;input type=&quot;text&quot; id=&quot;tst&quot;&gt;&lt;/label&gt;</p>
-<!-- link(s) to element and attribute(s) in test -->
-<h2>Reference</h2>
-<p>
-<a href="http://www.w3.org/TR/html5/forms.html#the-label-element">HTML5 label element</a>
-</p>
-</body>
+	</body>
 </html>

@@ -5,23 +5,20 @@
 		<title>test file: output element</title>
 	</head>
 	<body>
+		<h1><code>output</code> element</h1>
+		<p>
+		<form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+		<input type="range" name="b" value="50" /> +
+		<input type="number" name="a" value="10" /> =
+		<output name="result"></output>
+		</form></p>
 
-<h1><code>output</code> element</h1>
-
-
-<p>
-<form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
-<input type="range" name="b" value="50" /> +
-<input type="number" name="a" value="10" /> =
-<output name="result"></output>
-</form></p>
-
-<h2>Code</h2>
-<p>&lt;form oninput="result.value=parseInt(a.value)+parseInt(b.value)"><br>
-  &lt;input type="range" name="b" id="b" value="50" /> +<br>
-  &lt;input type="number" name="a" id="a" value="10" /> =<br>
-  &lt;output name="result" for="b a">&lt;/output><br>
-&lt;/form></p>
+		<h2>Code</h2>
+		<p>&lt;form oninput="result.value=parseInt(a.value)+parseInt(b.value)"><br>
+		&lt;input type="range" name="b" id="b" value="50" /> +<br>
+		&lt;input type="number" name="a" id="a" value="10" /> =<br>
+		&lt;output name="result" for="b a">&lt;/output><br>
+		&lt;/form></p>
 
 		<h2>Reference</h2>
 		<p><a href="http://www.w3.org/TR/html5/forms.html#the-output-element">HTML5 output element</a>

@@ -1,44 +1,38 @@
 <!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<title>test file: canvas element</title>
-</head>
+	<head>
+		<meta charset="utf-8">
+		<title>test file: canvas element</title>
+	</head>
+	<body>
+		<h1><code>canvas</code> element</h1>
 
-<body>
-<!-- h1 includes element and attribute(s) in test -->
-<h1><code>canvas</code> element</h1>
-<!-- element and attribute(s) working example -->
+		<canvas id="myCanvas" width="338" height="258">
+		<p>The woman in the painting is wearing a flowing white dress. A large piece of intricately
+		patterned fabric is draped over the side. In her right hand she holds the chain mooring the boat. Her expression
+		is mournful. She stares at a crucifix lying in front of her. Beside it are three candles. Two have blown out.</p>
+		</canvas>
 
-<canvas id="myCanvas" width="338" height="258">
-    <p>The woman in the painting is wearing a flowing white dress. A large piece of intricately 
-  patterned fabric is draped over the side. In her right hand she holds the chain mooring the boat. Her expression 
-  is mournful. She stares at a crucifix lying in front of her. Beside it are three candles. Two have blown out.</p>
-</canvas>
+		<script>
+		var canvas = document.getElementById('myCanvas');
+		var context = canvas.getContext('2d');
+		var imageObj = new Image();
 
-<script>
-  
-	var canvas = document.getElementById('myCanvas');
-      var context = canvas.getContext('2d');
-      var imageObj = new Image();
+		imageObj.onload = function() {
+			context.drawImage(imageObj, 0, 0);
+		};
+		imageObj.src = '../images/shalott.jpg';
 
-      imageObj.onload = function() {
-        context.drawImage(imageObj, 0, 0);
-      };
-      imageObj.src = '../images/shalott.jpg';
-	
-      </script>
-<!-- element and attribute(s) code -->
-<h2>Code</h2>
-<p>&lt;canvas id=&quot;myCanvas&quot; width=&quot;338&quot; height=&quot;258&quot;&gt;<br>
-&lt;p&gt;The woman in the painting is wearing a flowing white dress. A large piece of intricately <br>
-patterned fabric is draped over the side. In her right hand she holds the chain mooring the boat. Her expression <br>
-is mournful. She stares at a crucifix lying in front of her. Beside it are three candles. Two have blown out.&lt;/p&gt;<br>
-&lt;/canvas&gt;</p>
-<!-- link(s) to element and attribute(s) in test -->
-<h2>Reference</h2>
-<p>
-<a href="http://www.w3.org/TR/html5/scripting-1.html#the-canvas-element">HTML5 canvas element</a>
-</p>
-</body>
+		</script>
+
+		<h2>Code</h2>
+		<p>&lt;canvas id="myCanvas" width="338" height="258"><br>
+		&lt;p>The woman in the painting is wearing a flowing white dress. A large piece of intricately <br>
+		patterned fabric is draped over the side. In her right hand she holds the chain mooring the boat. Her expression <br>
+		is mournful. She stares at a crucifix lying in front of her. Beside it are three candles. Two have blown out.&lt;/p><br>
+		&lt;/canvas></p>
+
+		<h2>Reference</h2>
+		<p><a href="http://www.w3.org/TR/html5/scripting-1.html#the-canvas-element">HTML5 canvas element</a></p>
+	</body>
 </html>

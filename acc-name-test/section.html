@@ -1,64 +1,56 @@
 <!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<title>test file: section element</title>
-</head>
+	<head>
+		<meta charset="utf-8">
+		<title>test file: section element</title>
+	</head>
+	<body>
+		<h1><code>section</code> element</h1>
+		<ul>
+		<li>Plain</li>
+		<li>With <code>&lt;h1></code></li>
+		<li>With <code>aria-label</code>
+		<li>With <code>&lt;h1></code> referenced by <code>aria-labelledby</code></li>
+		</ul>
+		<section>
+		Lorem ipsum...
+		</section>
+		<hr>
+		<section>
+		<h1>Once upon a time</h1>
+		Lorem ipsum...
+		</section>
+		<hr>
+		<section aria-label="Once upon a time">
+		Lorem ipsum...
+		</section>
+		<hr>
+		<section aria-labelledby="section-title">
+		<h1 id="section-title">Once upon a time</h1>
+		Lorem ipsum...
+		</section>
 
-<body>
-<!-- h1 includes element and attribute(s) in test -->
-<h1><code>section</code> element</h1>
-<ul>
-<li>Plain</li>
-<li>With <code>&lt;h1&gt;</code></li>
-<li>With <code>aria-label</code>
-<li>With <code>&lt;h1&gt;</code> referenced by <code>aria-labelledby</code></li>
-</ul>
-<!-- element and attribute(s) working example -->
-<section>
+		<h2>Code</h2>
+		<pre><code>&lt;section>
 Lorem ipsum...
-</section>
+&lt;/section></code></pre>
 <hr>
-<section>
-<h1>Once upon a time</h1>
+<pre><code>&lt;section>
+&lt;h1>Once upon a time&lt;/h1>
 Lorem ipsum...
-</section>
+&lt;/section></code></pre>
 <hr>
-<section aria-label="Once upon a time">
+<pre><code>&lt;section aria-label="Once upon a time">
 Lorem ipsum...
-</section>
+&lt;/section></code></pre>
 <hr>
-<section aria-labelledby="section-title">
-<h1 id="section-title">Once upon a time</h1>
+<pre><code>&lt;section aria-labelledby="section-title">
+&lt;h1 id="section-title">Once upon a time&lt;/h1>
 Lorem ipsum...
-</section>
-<!-- element and attribute(s) code -->
-<h2>Code</h2>
-<pre><code>&lt;section&gt;
-Lorem ipsum...
-&lt;/section&gt;
-</code></pre>
-<hr>
-<pre><code>&lt;section&gt;
-&lt;h1&gt;Once upon a time&lt;/h1&gt;
-Lorem ipsum...
-&lt;/section&gt;
-</code></pre>
-<hr>
-<pre><code>&lt;section aria-label=&quot;Once upon a time&quot;&gt;
-Lorem ipsum...
-&lt;/section&gt;
-</code></pre>
-<hr>
-<pre><code>&lt;section aria-labelledby=&quot;section-title&quot;&gt;
-&lt;h1 id=&quot;section-title&quot;&gt;Once upon a time&lt;/h1&gt;
-Lorem ipsum...
-&lt;/section&gt;
-</code></pre>
-<!-- link(s) to element and attribute(s) in test -->
-<h2>Reference</h2>
-<p>
-<a href="http://www.w3.org/TR/html5/sections.html#the-section-element">HTML5 section element</a>
+&lt;/section></code></pre>
+
+		<h2>Reference</h2>
+		<p><a href="http://www.w3.org/TR/html5/sections.html#the-section-element">HTML5 section element</a>
 </p>
-</body>
+	</body>
 </html>

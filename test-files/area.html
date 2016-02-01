@@ -1,53 +1,60 @@
 <!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<title>test file: area element with map attribute</title>
-</head>
+	<head>
+		<meta charset="utf-8">
+		<title>test file: area element with map attribute</title>
+	</head>
+	<body>
+		<h1><code>area</code> element with <code>map</code> attribute</h1>
+		<p>
+			<img src="../images/seven_wonders.jpg" usemap="#imagemap"
+			     alt="Seven Wonders of the World"/>
+		</p>
 
-<body>
-<h1><code>area</code> element with <code>map</code> attribute</h1>
-<p>
-<img src="../images/seven_wonders.jpg" usemap="#imagemap"
-     alt="Seven Wonders of the World"/> 
-</p>
-<map name="imagemap"> 
-<area href="Chichen_Itza.html" shape="rect" coords="0,0,93,65"
-       alt="chichen Itza"/>
-<area href="Christ_on_Corcovado_mountain.html" shape="rect" coords="93,1,186,65"
-      alt="Christ on Corcovado Mountain"/> 
-<area href="great_wall_china.html" shape="rect" coords="0,66,94,132"
-      alt="great wall of china"/>
-<area href="Machu_Picchu.html" shape="rect" coords="92,64,186,132"
-      alt="machu picchu"/>
-<area href="Al_Kanzneh.html" shape="rect" coords="0,133,94,201"
-      alt="al kanzneh"/>
-<area href="Taj_Mahal.html" shape="rect" coords="92,134,186,203"
-       alt="taj mahal"/> 
-<area href="Colosseum_Rome.html" shape="rect" coords="0,202,186,260"
-      alt="colosseum Rome"/>
-</map>
-<h2>Code</h2>
-<p><code>&lt;img src=&quot;../images/seven_wonders.jpg&quot; usemap=&quot;#imagemap&quot;
-alt=&quot;Seven Wonders of the World&quot;&gt;</code></p>
-<p><code>&lt;map name=&quot;imagemap&quot;&gt;</code><code><br>
-  &lt;area href=&quot;Chichen_Itza.html&quot; shape=&quot;rect&quot; coords=&quot;0,0,93,65&quot;
-  alt=&quot;chichen Itza&quot;&gt;<br>
-</code><code>&lt;area href=&quot;Christ_on_Corcovado_mountain.html&quot; shape=&quot;rect&quot; coords=&quot;93,1,186,65&quot;
-  alt=&quot;Christ on Corcovado Mountain&quot;&gt;<br>
-</code><code>&lt;area href=&quot;great_wall_china.html&quot; shape=&quot;rect&quot; coords=&quot;0,66,94,132&quot;
-  alt=&quot;great wall of china&quot;&gt; <br>
-  &lt;area href=&quot;Machu_Picchu.html&quot; shape=&quot;rect&quot; coords=&quot;92,64,186,132&quot;
-  alt=&quot;machu picchu&quot;&gt; <br>
-  &lt;area href=&quot;Al_Kanzneh.html&quot; shape=&quot;rect&quot; coords=&quot;0,133,94,201&quot;
-  alt=&quot;al kanzneh&quot;&gt; <br>
-  &lt;area href=&quot;Taj_Mahal.html&quot; shape=&quot;rect&quot; coords=&quot;92,134,186,203&quot;
-  alt=&quot;taj mahal&quot;&gt; 
-  <br>
-  &lt;area href=&quot;Colosseum_Rome.html&quot; shape=&quot;rect&quot; coords=&quot;0,202,186,260&quot;
-  alt=&quot;colosseum Rome&quot;&gt; <br>
-  &lt;/map&gt;</code></p>
-<h2>Reference</h2>
-<p><a href="http://www.w3.org/TR/html5/text-level-semantics.html#the-abbr-element">HTML5 area element</a></p>
-</body>
+		<map name="imagemap">
+			<area href="Chichen_Itza.html" shape="rect" coords="0,0,93,65"
+			      alt="chichen Itza"/>
+			<area href="Christ_on_Corcovado_mountain.html" shape="rect" coords="93,1,186,65"
+			      alt="Christ on Corcovado Mountain"/>
+			<area href="great_wall_china.html" shape="rect" coords="0,66,94,132"
+			      alt="great wall of china"/>
+			<area href="Machu_Picchu.html" shape="rect" coords="92,64,186,132"
+			      alt="machu picchu"/>
+			<area href="Al_Kanzneh.html" shape="rect" coords="0,133,94,201"
+			      alt="al kanzneh"/>
+			<area href="Taj_Mahal.html" shape="rect" coords="92,134,186,203"
+			      alt="taj mahal"/>
+			<area href="Colosseum_Rome.html" shape="rect" coords="0,202,186,260"
+			      alt="colosseum Rome"/>
+		</map>
+
+		<h2>Code</h2>
+		<pre><code>&lt;img src="../images/seven_wonders.jpg" usemap="#imagemap"
+     alt="Seven Wonders of the World">
+
+&lt;map name="imagemap">
+	&lt;area href="Chichen_Itza.html" shape="rect" coords="0,0,93,65"
+	      alt="chichen Itza">
+	&lt;area href="Christ_on_Corcovado_mountain.html" shape="rect" coords="93,1,186,65"
+	      alt="Christ on Corcovado Mountain">
+	&lt;area href="great_wall_china.html" shape="rect" coords="0,66,94,132"
+	      alt="great wall of china">
+	&lt;area href="Machu_Picchu.html" shape="rect" coords="92,64,186,132"
+	      alt="machu picchu">
+	&lt;area href="Al_Kanzneh.html" shape="rect" coords="0,133,94,201"
+	      alt="al kanzneh">
+	&lt;area href="Taj_Mahal.html" shape="rect" coords="92,134,186,203"
+	      alt="taj mahal">
+	&lt;area href="Colosseum_Rome.html" shape="rect" coords="0,202,186,260"
+	      alt="colosseum Rome"> <br>
+&lt;/map></code></pre>
+
+		<h2>Reference</h2>
+		<ul>
+			<li><a href="https://www.w3.org/TR/html51/semantics.html#the-area-element">HTML5 area element</a></li>
+			<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-area">HTML Accessibility API Mappings for area element</a></li>
+			<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-link">Core Accessibility API Mappings for link role</a></li>
+			<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-area-nohref">HTML Accessibility API Mappings for area element without href</a></li>
+		</ul>
+	</body>
 </html>

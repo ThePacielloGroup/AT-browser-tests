@@ -1,37 +1,43 @@
 <!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<title>test file: input type=url element</title>
-</head>
+	<head>
+		<meta charset="utf-8">
+		<title>test file: input type=url element</title>
+	</head>
+	<body>
+		<h1><code>input type=url</code> element</h1>
+		<form>
+			<p><input type="url"></p>
 
-<body>
-<!-- h1 includes element and attribute(s) in test -->
-<h1><code>input type=url</code> element</h1>
-<!-- element and attribute(s) working example -->
-<form><p>
-  <input type="url">
-</p>
-<h2>with label </h2>
-<p>
-  <label>your web site 
-    <input type="url"></label></p>
-<h2>with label + placeholder</h2>
-<p><label>your web site <input type="url" placeholder="http://"></label></p>
-<h2>with label + placeholder + required</h2>
-<p><label>your web site <input type="url" placeholder="http://" required></label></p>
-<h2>with label + placeholder + readonly</h2>
-<p><label>your web site <input type="url" placeholder="http://" readonly></label></p>
-<h2>with label + placeholder + disabled</h2>
-<p><label>your web site <input type="url" placeholder="http://" disabled></label></p>
-<input type="submit"></form>
-  <!-- element and attribute(s) code -->
-<h2>Code</h2>
-<p>&lt;label&gt;your web site &lt;input type=&quot;url&quot;&gt;&lt;/label&gt;</p>
-<!-- link(s) to element and attribute(s) in test -->
-<h2>Reference</h2>
-<p>
-<a href="http://www.w3.org/TR/html/forms.html#url-state-(type=url)">HTML5 input type=url element</a>
-</p>
-</body>
+			<h2>with label </h2>
+			<p><label>your web site <input type="url"></label></p>
+
+			<h2>with label + placeholder</h2>
+			<p><label>your web site <input type="url" placeholder="http://"></label></p>
+
+			<h2>with label + placeholder + required</h2>
+			<p><label>your web site <input type="url" placeholder="http://" required></label></p>
+
+			<h2>with label + placeholder + readonly</h2>
+			<p><label>your web site <input type="url" placeholder="http://" readonly></label></p>
+
+			<h2>with label + placeholder + disabled</h2>
+			<p><label>your web site <input type="url" placeholder="http://" disabled></label></p>
+
+			<input type="submit">
+		</form>
+
+		<h2>Code</h2>
+		<pre><code>&lt;label>your web site &lt;input type="url">&lt;/label></code></pre>
+
+		<h2>Reference</h2>
+		<ul>
+			<li><a href="http://www.w3.org/TR/html/forms.html#url-state-(type=url)">HTML5 input type=url element</a></li>
+			<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-input-url">HTML Accessibility API Mappings for input type=url element without list attribute</a></li>
+			<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-textbox">Core Accessibility API Mappings for textbox role</a></li>
+			<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-input-textetc-autocomplete">HTML Accessibility API Mappings for input type=url element with list attribute</a></li>
+			<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-combobox">Core Accessibility API Mappings for combobox role</a></li>
+			<li><a href="https://www.w3.org/TR/core-aam-1.1/#ariaOwns">Core Accessibility API Mappings for aria-owns property</a></li>
+		</ul>
+	</body>
 </html>

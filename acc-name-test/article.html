@@ -1,64 +1,61 @@
 <!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<title>test file: article element</title>
-</head>
+	<head>
+		<meta charset="utf-8">
+		<title>test file: article element</title>
+	</head>
+	<body>
+		<h1><code>article</code> element</h1>
+		<ul>
+			<li>Plain</li>
+			<li>With <code>&lt;h1></code></li>
+			<li>With <code>aria-label</code>
+			<li>With <code>&lt;h1></code> referenced by <code>aria-labelledby</code></li>
+		</ul>
+		<article>
+		Lorem ipsum...
+		</article>
+		<hr>
 
-<body>
-<!-- h1 includes element and attribute(s) in test -->
-<h1><code>article</code> element</h1>
-<ul>
-<li>Plain</li>
-<li>With <code>&lt;h1&gt;</code></li>
-<li>With <code>aria-label</code>
-<li>With <code>&lt;h1&gt;</code> referenced by <code>aria-labelledby</code></li>
-</ul>
-<!-- element and attribute(s) working example -->
-<article>
+		<article>
+		<h1>Once upon a time</h1>
+		Lorem ipsum...
+		</article>
+		<hr>
+
+		<article aria-label="Once upon a time">
+		Lorem ipsum...
+		</article>
+		<hr>
+
+		<article aria-labelledby="article-title">
+		<h1 id="article-title">Once upon a time</h1>
+		Lorem ipsum...
+		</article>
+
+		<h2>Code</h2>
+		<pre><code>&lt;article>
 Lorem ipsum...
-</article>
+&lt;/article></code></pre>
 <hr>
-<article>
-<h1>Once upon a time</h1>
+
+<pre><code>&lt;article>
+&lt;h1>Once upon a time&lt;/h1>
 Lorem ipsum...
-</article>
+&lt;/article></code></pre>
 <hr>
-<article aria-label="Once upon a time">
+
+<pre><code>&lt;article aria-label="Once upon a time">
 Lorem ipsum...
-</article>
+&lt;/article></code></pre>
 <hr>
-<article aria-labelledby="article-title">
-<h1 id="article-title">Once upon a time</h1>
+
+<pre><code>&lt;article aria-labelledby="article-title">
+&lt;h1 id="article-title">Once upon a time&lt;/h1>
 Lorem ipsum...
-</article>
-<!-- element and attribute(s) code -->
-<h2>Code</h2>
-<pre><code>&lt;article&gt;
-Lorem ipsum...
-&lt;/article&gt;
-</code></pre>
-<hr>
-<pre><code>&lt;article&gt;
-&lt;h1&gt;Once upon a time&lt;/h1&gt;
-Lorem ipsum...
-&lt;/article&gt;
-</code></pre>
-<hr>
-<pre><code>&lt;article aria-label=&quot;Once upon a time&quot;&gt;
-Lorem ipsum...
-&lt;/article&gt;
-</code></pre>
-<hr>
-<pre><code>&lt;article aria-labelledby=&quot;article-title&quot;&gt;
-&lt;h1 id=&quot;article-title&quot;&gt;Once upon a time&lt;/h1&gt;
-Lorem ipsum...
-&lt;/article&gt;
-</code></pre>
-<!-- link(s) to element and attribute(s) in test -->
-<h2>Reference</h2>
-<p>
-<a href="http://www.w3.org/TR/html5/sections.html#the-article-element">HTML5 article element</a>
-</p>
-</body>
+&lt;/article></code></pre>
+
+		<h2>Reference</h2>
+		<p><a href="http://www.w3.org/TR/html5/sections.html#the-article-element">HTML5 article element</a></p>
+	</body>
 </html>

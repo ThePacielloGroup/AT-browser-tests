@@ -1,36 +1,38 @@
 <!doctype html>
 <html>
-<head>
-<meta charset="utf-8">
-<title>test file: a element with no href</title>
-</head>
+	<head>
+		<meta charset="utf-8">
+		<title>test file: a element with no href</title>
+	</head>
+	<body>
+		<h1><code>a</code> element with no <code>href</code></h1>
+		<ol>
+			<li><a name="test1" id="test1">element</a></li>
+			<li><a name="test2" id="test2" aria-label="test label">element with aria-label</a></li>
+			<li><a name="test3" id="test3" title="test description">element with title</a></li>
+			<li><a name="test4" id="test4" title="test label"></a> empty element with title</li>
+			<li><a name="test4" id="test4" aria-label="test label" title="test description">element with aria-label and title</a></li>
+		</ol>
 
-<body>
-<h1><code>a</code> element with no <code>href</code></h1>
-<ol>
-  <li><a name="test1" id="test1">element</a></li>
-  <li><a name="test2" id="test2" aria-label="test label">element with aria-label</a></li>
-  <li><a name="test3" id="test3" title="test description">element with title</a></li>
-  <li><a name="test4" id="test4" title="test label"></a> empty element with title</li>
-  <li><a name="test4" id="test4" aria-label="test label" title="test description">element with aria-label and title</a></li>
-</ol>
-<h2>Suggested announcement</h2>
-<ol>
-  <li>&quot;element&quot;</li>
-  <li>&quot;test label&quot;</li>
-  <li>&quot;element with title, test description&quot;</li>
-  <li>&quot;test label&quot;</li>
-  <li>&quot;test label, test description&quot;</li>
-</ol>
-<h2>Code</h2>
-<p>&lt;ol&gt;<br>
-&lt;li&gt;&lt;a name=&quot;test1&quot; id=&quot;test1&quot;&gt;element&lt;/a&gt;&lt;/li&gt;<br>
-&lt;li&gt;&lt;a name=&quot;test2&quot; id=&quot;test2&quot; aria-label=&quot;test label&quot;&gt;element with aria-label&lt;/a&gt;&lt;/li&gt;<br>
-&lt;li&gt;&lt;a name=&quot;test3&quot; id=&quot;test3&quot; title=&quot;test description&quot;&gt;element with title&lt;/a&gt;&lt;/li&gt;<br>
-&lt;li&gt;&lt;a name=&quot;test4&quot; id=&quot;test4&quot; title=&quot;test label&quot;&gt;&lt;/a&gt; empty element with title&lt;/li&gt;<br>
-&lt;li&gt;&lt;a name=&quot;test4&quot; id=&quot;test4&quot; aria-label=&quot;test label&quot; title=&quot;test description&quot;&gt;element with aria-label and title&lt;/a&gt;&lt;/li&gt;<br>
-&lt;/ol&gt;</p>
-<h2>Reference</h2>
-<p><a href="http://www.w3.org/TR/html/text-level-semantics.html#the-a-element">HTML5 a element</a></p>
-</body>
+		<h2>Suggested announcement</h2>
+		<ol>
+			<li>"element"</li>
+			<li>"test label"</li>
+			<li>"element with title, test description"</li>
+			<li>"test label"</li>
+			<li>"test label, test description"</li>
+		</ol>
+
+		<h2>Code</h2>
+		<pre><code>&lt;ol>
+&lt;li>&lt;a name="test1" id="test1">element&lt;/a>&lt;/li>
+&lt;li>&lt;a name="test2" id="test2" aria-label="test label">element with aria-label&lt;/a>&lt;/li>
+&lt;li>&lt;a name="test3" id="test3" title="test description">element with title&lt;/a>&lt;/li>
+&lt;li>&lt;a name="test4" id="test4" title="test label">&lt;/a> empty element with title&lt;/li>
+&lt;li>&lt;a name="test4" id="test4" aria-label="test label" title="test description">element with aria-label and title&lt;/a>&lt;/li>
+&lt;/ol></code></pre>
+
+		<h2>Reference</h2>
+		<p><a href="http://www.w3.org/TR/html/text-level-semantics.html#the-a-element">HTML5 a element</a></p>
+	</body>
 </html>

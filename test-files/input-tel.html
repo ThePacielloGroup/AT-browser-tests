@@ -1,39 +1,43 @@
 <!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<title>test file: input type=tel element</title>
-</head>
+	<head>
+		<meta charset="utf-8">
+		<title>test file: input type=tel element</title>
+	</head>
+	<body>
+		<h1><code>input type=tel</code> element</h1>
+		<form>
+			<p><input type="tel"></p>
 
-<body>
-<!-- h1 includes element and attribute(s) in test -->
-<h1><code>input type=tel</code> element</h1>
-<!-- element and attribute(s) working example -->
-<form><p>
-  <input type="tel">
-</p>
-<h2>with label </h2>
-<p>
-  <label>home phone 
-    <input type="tel"></label></p>
-<h2>with label + placeholder</h2>
-<p>
-  <label>home phone 
-    <input type="tel" placeholder="phone number"></label></p>
-<h2>with label + placeholder + required</h2>
-<p><label>home phone <input type="tel" placeholder="phone number" required></label></p>
-<h2>with label + placeholder + readonly</h2>
-<p><label>home phone <input type="tel" placeholder="phone number" readonly></label></p>
-<h2>with label + placeholder + disabled</h2>
-<p><label>home phone <input type="tel" placeholder="phone number" disabled></label></p>
-<input type="submit"></form>
-  <!-- element and attribute(s) code -->
-<h2>Code</h2>
-<p>&lt;label&gt;home phone &lt;input type=&quot;tel&quot;&gt;&lt;/label&gt;</p>
-<!-- link(s) to element and attribute(s) in test -->
-<h2>Reference</h2>
-<p>
-<a href="http://www.w3.org/TR/html/forms.html#telephone-state-(type=tel)">HTML5 input type=tel element</a>
-</p>
-</body>
+			<h2>with label </h2>
+			<p><label>home phone <input type="tel"></label></p>
+
+			<h2>with label + placeholder</h2>
+			<p><label>home phone <input type="tel" placeholder="phone number"></label></p>
+
+			<h2>with label + placeholder + required</h2>
+			<p><label>home phone <input type="tel" placeholder="phone number" required></label></p>
+
+			<h2>with label + placeholder + readonly</h2>
+			<p><label>home phone <input type="tel" placeholder="phone number" readonly></label></p>
+
+			<h2>with label + placeholder + disabled</h2>
+			<p><label>home phone <input type="tel" placeholder="phone number" disabled></label></p>
+
+			<input type="submit">
+		</form>
+
+		<h2>Code</h2>
+		<pre><code>&lt;label>home phone &lt;input type="tel">&lt;/label></code></pre>
+
+		<h2>Reference</h2>
+		<ul>
+			<li><a href="http://www.w3.org/TR/html/forms.html#telephone-state-(type=tel)">HTML5 input type=tel element</a></li>
+			<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-input-tel">HTML Accessibility API Mappings for input type=tel element without list attribute</a></li>
+			<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-textbox">Core Accessibility API Mappings for textbox role</a></li>
+			<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-input-textetc-autocomplete">HTML Accessibility API Mappings for input type=tel element with list attribute</a></li>
+			<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-combobox">Core Accessibility API Mappings for combobox role</a></li>
+			<li><a href="https://www.w3.org/TR/core-aam-1.1/#ariaOwns">Core Accessibility API Mappings for aria-owns property</a></li>
+		</ul>
+	</body>
 </html>

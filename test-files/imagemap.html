@@ -1,34 +1,40 @@
 <!doctype html>
 <html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>test file: area + map + img elements</title>
 <head>
-<meta charset="utf-8">
-<title>test file: area + map + img elements</title>
-</head>
 <body>
-<h1><code>img</code> element with <code>usemap</code> attribute pointing to <code>map</code> element with one <code>area</code> element</h1>
-<!--<h2>alt=""</h2>
-<img alt="" src="http://www.html5accessibility.com/images/HTML5_Logo.png" usemap="#poot">
+		<h1><code>img</code> element with <code>usemap</code> attribute pointing to <code>map</code> element with one <code>area</code> element</h1>
+		<!--<h2>alt=""</h2>
+		<img alt="" src="http://www.html5accessibility.com/images/HTML5_Logo.png" usemap="#poot">
 
-  <h2> no alt </h2>
-  <img src="http://www.html5accessibility.com/images/HTML5_Logo.png" usemap="#poot">-->
-  <h2>image (with alt="HTML5") with 2 area links ('google' and 'Yahoo')</h2>
-<img src="http://www.html5accessibility.com/images/HTML5_Logo.png" usemap="#poot" alt="HTML5">
- <map name="poot">
- <area shape="rect" alt="google" coords="19,24,112,129" href="http://google.com">
- <area shape="rect" alt="Yahoo" coords="19,4,114,24" href="http://search.yahoo.com/">
- </map>
-  
-<h2>Code</h2>
-<pre>
-&lt;img src=&quot;http://www.html5accessibility.com/images/HTML5_Logo.png&quot; usemap=&quot;#poot&quot; alt=&quot;HTML5&quot;&gt;
-&lt;map name=&quot;poot&quot;&gt; 
-&lt;area shape=&quot;rect&quot; alt=&quot;google&quot; coords=&quot;19,24,112,129&quot; href=&quot;http://google.com&quot;&gt; 
-&lt;area shape=&quot;rect&quot; alt=&quot;Yahoo&quot; coords=&quot;19,4,114,24&quot; href=&quot;http://search.yahoo.com/&quot;&gt; 
-&lt;/map&gt; </pre>
-<h2>Reference</h2>
-<ul>
-  <li><a href="http://www.w3.org/TR/html5/embedded-content-0.html#the-map-element">HTML5 map element</a><a href="http://www.w3.org/TR/html5/text-level-semantics.html#the-abbr-element"></a></li>
-  <li><a href="http://www.w3.org/TR/html5/embedded-content-0.html#the-area-element">HTML5 area element</a></li>
-</ul>
-</body>
+		  <h2> no alt </h2>
+		  <img src="http://www.html5accessibility.com/images/HTML5_Logo.png" usemap="#poot">-->
+
+		<h2>image (with alt="HTML5") with 2 area links ('google' and 'Yahoo')</h2>
+		<img src="http://www.html5accessibility.com/images/HTML5_Logo.png" usemap="#poot" alt="HTML5">
+
+		<map name="poot">
+			<area shape="rect" alt="google" coords="19,24,112,129" href="http://google.com">
+			<area shape="rect" alt="Yahoo" coords="19,4,114,24" href="http://search.yahoo.com/">
+		</map>
+
+		<h2>Code</h2>
+		<pre><code>&lt;img src="http://www.html5accessibility.com/images/HTML5_Logo.png" usemap="#poot" alt="HTML5">
+&lt;map name="poot">
+	&lt;area shape="rect" alt="google" coords="19,24,112,129" href="http://google.com">
+	&lt;area shape="rect" alt="Yahoo" coords="19,4,114,24" href="http://search.yahoo.com/">
+&lt;/map></code></pre>
+
+		<h2>Reference</h2>
+		<ul>
+			<li><a href="http://www.w3.org/TR/html5/embedded-content-0.html#the-map-element">HTML5 map element</a></li>
+			<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-map">HTML Accessibility API Mappings for map element</a></li>
+			<li><a href="http://www.w3.org/TR/html5/embedded-content-0.html#the-area-element">HTML5 area element</a></li>
+			<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-area">HTML Accessibility API Mappings for area element</a></li>
+			<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-link">Core Accessibility API Mappings for link role</a></li>
+			<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-area-nohref">HTML Accessibility API Mappings for area element without href</a></li>
+		</ul>
+	</body>
 </html>

@@ -1,30 +1,49 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<title>test file: footer element</title>
 	</head>
 	<body>
-		<h1><code>footer</code> element</h1>
-		<footer>Lorem ipsum...</footer>
-
-		<article>
-			<footer>Lorem ipsum...</footer>
-		</article>
-
-		<h2>Code</h2>
-		<pre><code>&lt;footer>Lorem ipsum...&lt;/footer></code></pre>
-
-		<pre><code>&lt;article>
-	&lt;footer>Lorem ipsum...&lt;/footer>
-&lt;/article></code></pre>
-
+		<h1>Browser test for <code>footer</code> element</h1>
+		
+		<h2>Pass Criteria</h2>
+		<ul>
+			<li>#1: Element is supported</li>
+			<li>#2: Element has correct HTML and Core Accessibility API mappings</li>
+		</ul>
+		
 		<h2>Reference</h2>
 		<ul>
 			<li><a href="http://www.w3.org/TR/html/sections.html#the-footer-element">HTML5 footer element</a></li>
-			<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-footer-ancestorbody">HTML Accessibility API Mappings for footer element (nearest sectioning content/root is body)</a></li>
-			<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-contentinfo">Core Accessibility API Mappings for contentinfo role</a></li>
-			<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-footer">HTML Accessibility API Mappings for footer element (nearest sectioning content/root is not body)</a></li>
+			<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-footer-ancestorbody">HTML Accessibility API Mappings for footer element (nearest sectioning content/root is body)</a> [Test: FT-001]</li>
+			<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-contentinfo">Core Accessibility API Mappings for contentinfo role</a> [Test: FT-001]</li>
+			<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-footer">HTML Accessibility API Mappings for footer element (nearest sectioning content/root is not body)</a> [Test: FT-002]</li>
 		</ul>
+		
+		<div>
+			<h2 id="ft-001">Test ft-001: Root Footer</h2>
+			
+			<h3>Test</h3>
+			<footer>Lorem ipsum...</footer>
+			
+			<h3>Code</h3>
+			<pre><code>&lt;footer>Lorem ipsum...&lt;/footer></code></pre>
+		</div>
+
+		<div>
+			<h2 id="ft-002">Test ft-002: Nested Footer </h2>
+
+			<h3>Test</h3>
+			<article>
+				<footer>Lorem ipsum...</footer>
+			</article>
+
+			<h3>Code</h3>
+			<pre><code>&lt;article>
+	&lt;footer>Lorem ipsum...&lt;/footer>
+&lt;/article></code></pre>
+		</div>
+
 	</body>
 </html>

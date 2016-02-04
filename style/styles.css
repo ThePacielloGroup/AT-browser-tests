@@ -1,0 +1,14 @@
+.criteria,
+.reference {
+	float: left;
+	width: 50%;
+}
+
+.reference + div:before,
+.reference + div::before {
+	display: block;
+	width: 100%;
+	height: 1px; 
+	content: ""; 
+	clear: both;
+}

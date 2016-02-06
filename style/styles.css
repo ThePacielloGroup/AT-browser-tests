@@ -1,84 +1,54 @@
+@font-face {
+	font-family: "League Spartan";
+	src: url("../fonts/leaguespartan-bold.eot");
+	src: url("../fonts/leaguespartan-bold.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/leaguespartan-bold.woff2") format("woff2"),
+		url("../fonts/leaguespartan-bold.woff") format("woff"),
+		url("../fonts/leaguespartan-bold.ttf") format("truetype"),
+		url("../fonts/leaguespartan-bold.svg#league_spartanbold") format("svg");
+	font-weight: bold;
+	font-style: normal;
+}
+
 * {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
+html {
+	border: .75em solid #fff;
+	min-height: 100vh;
+}
+
 body {
 	margin: 1.5em auto;
 	width: 90%;
 	max-width: 54em;
-	font: normal normal 105%/1 'HKGroteskRegular', sans-serif;
-	background: #eff9f1;
+	font: normal normal 105%/1 "WorkSansRegular", sans-serif;
+	background: #f7f7f5;
 	color: #333;
 }
 
 /* Nicer link underlines */
 a:link, a:visited {
-	border-bottom: 1px solid;
-	border-bottom-color: rgba(92,87,71,0.5);
+	border-bottom: 1px solid rgba(42, 122, 130, .5);
 	text-decoration: none;
-	color: #5c5747;
-	transition: background 200ms ease-in-out, color 300ms ease-in-out;
+	color: #2b7a82;
 }
 
 a:hover {
-	background: #5c5747;
-	color: #f4f4f1;
+	border-bottom-color: #333;
+	color: #333;
 }
 
 a:active {
-	background: #000;
+	background: #333;
 	color: #fff;
-}
-
-/* Headings selected as direct descendents so that headings in tests are not targeted */
-
-body > h1 {
-	margin: 1em 0 0;
-	padding: 0.5em;
-	background: #000;
-	color: #eff9f1;
-	font-weight: 400;
-	font-family: 'HKGroteskLight', sans-serif;
-}
-
-body > h2, body > div > h2,
-body > div > h3,
-.reference {
-	font-weight: 700;
-	font-family: 'HKGroteskBold', sans-serif;
-	color: #000;
-}
-
-body > div:not(.criteria):not(.reference) > h2 {
-	margin: 2em 0 0;
-	padding-top: .5em;
-	border-top: 6px solid;
-}
-
-body > div > h3,
-.criteria h2,
-.reference h2,
-.reference li {
-	font-size: .8125em; /* 13px */
-	text-transform: uppercase;
-	letter-spacing: 0.05em;
-}
-
-body > div > h3 {
-	margin: 1.5em 0 1em;
-	padding-top: .5em;
-	border-top: 2px solid hsla(0, 0%, 0%, .2);
 }
 
 p, ul, ol {
 	line-height: 1.4;
-}
-
-ul, ol {
-	margin-left: 1em;
-	padding: 0;
 }
 
 li + li {
@@ -86,48 +56,130 @@ li + li {
 }
 
 code {
-	font-weight: 400;
+	text-transform: none;
 }
 
-.criteria,
-.reference {
-	margin-top: 2em;
+/* Direct descendents = scoped to avoid test markup */
+body > h1 {
+	margin: 0;
+	font: 1.75em/1 "WorkSansLight", sans-serif;
 }
+
+body > div > h2,
+body > div > h3,
+.reference {
+	font-weight: 700;
+	font-family: "League Spartan", sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+	line-height: 1.25;
+}
+
+/* Test titles */
+body > div > h2 {
+	margin: 3em 0 1.333em; /* 72px | 32px at large breakpoint */
+	padding-top: 3em;
+	border-top: 1px solid;
+	font-size: 1.111em; /* 20px at large breakpoint */
+}
+
+body > div > h2:before {
+	display: block;
+	position: absolute;
+	left: 0;
+	background: #333;
+	content: "";
+}
+
+/* Criteria, reference, and code titles */
+.criteria h2,
+.reference h2,
+body > div > h3 {
+	margin: 2.5em 0 1em;
+	font-size: .722em; /* 13px at large breakpoint */
+}
+
+/* Reference labels and code titles */
+.reference li,
+body > div > h3 {
+	color: #666;
+}
+
+/*	CRITERIA AND REFERENCE
+ *	--------------------------------------------- */
 
 .criteria h2,
 .reference h2 {
-	margin-top: 0;
+	position: relative;
+	margin-top: 3em;
+	padding-top: 1.5em;
+	border-top: 0;
 }
 
-/* Scope this here so that tests don't get targeted */
+.criteria h2:before,
+.reference h2:before {
+	top: 0;
+	width: 2.5em;
+	height: .5em;
+}
+
+/* Scoped to avoid tests */
 .criteria ul,
 .reference ul {
-	margin-bottom: 0;
+	margin: 0;
+	padding: 0;
 }
 
-/* Need extra space for long links */
-.reference ul {
-	line-height: 1.7;
+.reference li {
+	white-space: nowrap;
+	font-size: .611em; /* 11px */
+	line-height: 2;
+}
+
+.reference a {
+	white-space: normal;
 }
 
 /* Unset the styles on text next to links in references.
    Doing it this way to reduce excess markup. */
 .reference a {
-	font: 400 1.231em 'HKGroteskRegular', sans-serif;
+	font: 400 1.636em "WorkSansRegular", sans-serif;
 	text-transform: none;
 	letter-spacing: 0;
 }
 
-/* Breakpoints are driven by where the design looks good */
+/*	TESTS
+ *	--------------------------------------------- */
+
+body > div:not(.criteria):not(.reference) {
+	background: #fff;
+}
+
+body > div:not(.criteria):not(.reference) > h2 {
+	position: relative;
+	padding-left: 1.5em;
+}
+
+body > div:not(.criteria):not(.reference) > h2:before {
+	width: 1em;
+	height: 1em;
+}
+
+body > div:not(.criteria):not(.reference):nth-child(2n) > h2:before {
+	border-radius: .5em;
+}
+
+/*	MEDIUM BREAKPOINT
+ *	--------------------------------------------- */
+
 @media (min-width: 50em) {
 
-	body {
-		margin: 2.5em auto;
+	html {
+		border-width: 1.25em;
 	}
 
-	body > h2,
-	body > div > h3 {
-		margin-top: 2em;
+	body {
+		margin: 3.5em auto;
 	}
 
 	.criteria,
@@ -138,30 +190,11 @@ code {
 	}
 
 	.criteria {
-		padding-right: 2em;
+		padding-right: 1em;
 	}
 
 	.reference {
-		padding-left: 2em;
-	}
-
-	.criteria:before,
-	.reference:before {
-		position: absolute;
-		top: 0;
-		display: block;
-		width: 2px;
-		height: 100%;
-		background: #000;
-		content: "";
-	}
-
-	.criteria:before {
-		right: -1px;
-	}
-
-	.reference:before {
-		left: -1px;
+		padding-left: 1em;
 	}
 
 	/* Clear the criteria and reference floats w/o extra markup */
@@ -176,12 +209,14 @@ code {
 
 }
 
+/*	LARGE BREAKPOINT
+ *	--------------------------------------------- */
+
 @media (min-width: 75em) {
 
 	/* @TODO: Test viewport-based type on a giant monitor to see where this breaks down */
 	body {
 		font-size: 112.5%;
-		font-size: 1.325vw;
 	}
 
 }

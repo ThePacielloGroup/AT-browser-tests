@@ -77,6 +77,7 @@ body > h1 {
 }
 
 .meta h2:before,
+.meta li:before,
 .test-title:before {
 	display: block;
 	position: absolute;
@@ -118,6 +119,19 @@ body > h1 {
 .meta ul {
 	margin: 0;
 	padding: 0;
+	list-style: none;
+}
+
+.meta li {
+	position: relative;
+}
+
+.meta li:before {
+	top: .5em;
+	left: -12px;
+	margin-top: 2px;
+	width: 4px;
+	height: 4px;
 }
 
 .reference li {
@@ -204,6 +218,21 @@ body > h1 {
 .test pre {
 	margin-top: 20px;
 	padding-bottom: 20px;
+}
+
+/*	SMALL BREAKPOINT
+ *	--------------------------------------------- */
+
+@media (max-width: 30em) {
+
+	.meta li {
+		padding-left: 12px;
+	}
+
+	.meta li:before {
+		left: 0;
+	}
+
 }
 
 /*	MEDIUM BREAKPOINT

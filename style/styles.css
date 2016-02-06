@@ -57,6 +57,7 @@ li + li {
 
 code {
 	text-transform: none;
+	font-family: Consolas, monaco, monospace;
 }
 
 /* Direct descendents = scoped to avoid test markup */

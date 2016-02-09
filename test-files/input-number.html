@@ -12,7 +12,14 @@
 			<ul>
 				<li>#1: Element is supported</li>
 				<li>#2: Element has correct HTML and Core Accessibility API mappings</li>
-				<li>#3: Control is keyboard accessible</li>
+				<li>#3: Control is keyboard accessible:
+					<ul>
+						<li>#3.1: Control MUST be focusable, including any child controls</li>
+						<li>#3.2: MUST be able to type and select text</li>
+						<li>#3.3: MUST be able to submit a value</li>
+						<li>#3.4: Any child controls, such as number spinners, MUST be able to be activated</li>
+					</ul>
+				</li>
 			</ul>
 		</div>
 
@@ -30,34 +37,34 @@
 		<h2>with label </h2>
 		<p>
 			<label>amount
-			<input type="number"></label>
+			<input id="input1" type="number"></label>
 		</p>
 
 		<h2>with label + placeholder</h2>
 		<p>
 			<label>amount
-			<input type="number" placeholder="pick a number"></label>
+			<input id="input2" type="number" placeholder="pick a number"></label>
 		</p>
 
 		<h2>with label +  required</h2>
 		<p>
 			<label>amount
-			<input type="number" required></label>
+			<input id="input3" type="number" required></label>
 		</p>
 
 		<h2>with label +  readonly</h2>
 		<p>
 			<label>amount
-			<input type="number" readonly></label>
+			<input id="input4" type="number" readonly></label>
 		</p>
 
 		<h2>with label + disabled</h2>
 		<p>
 			<label>amount
-			<input type="number" disabled></label>
+			<input id="input5" type="number" disabled></label>
 		</p>
 
 		<h2>Code</h2>
-		<p>&lt;label>amount &lt;input type="number">&lt;/label></p>
+		<pre><code>&lt;label>amount &lt;input id="input1" type="number">&lt;/label></code></pre>
 	</body>
 </html>

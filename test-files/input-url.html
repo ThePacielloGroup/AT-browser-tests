@@ -12,7 +12,13 @@
 			<ul>
 				<li>#1: Element is supported</li>
 				<li>#2: Element has correct HTML and Core Accessibility API mappings</li>
-				<li>#3: Control is keyboard accessible</li>
+				<li>#3: Control is keyboard accessible:
+					<ul>
+						<li>#3.1: Control MUST be focusable</li>
+						<li>#3.2: MUST be able to type and select text</li>
+						<li>#3.3: MUST be able to submit a value</li>
+					</ul>
+				</li>
 			</ul>
 		</div>
 
@@ -29,27 +35,27 @@
 		</div>
 
 		<form>
-			<p><input type="url"></p>
+			<p><input id="input1" type="url"></p>
 
 			<h2>with label </h2>
-			<p><label>your web site <input type="url"></label></p>
+			<p><label>your web site <input id="input2" type="url"></label></p>
 
 			<h2>with label + placeholder</h2>
-			<p><label>your web site <input type="url" placeholder="http://"></label></p>
+			<p><label>your web site <input id="input3" type="url" placeholder="http://"></label></p>
 
 			<h2>with label + placeholder + required</h2>
-			<p><label>your web site <input type="url" placeholder="http://" required></label></p>
+			<p><label>your web site <input id="input4" type="url" placeholder="http://" required></label></p>
 
 			<h2>with label + placeholder + readonly</h2>
-			<p><label>your web site <input type="url" placeholder="http://" readonly></label></p>
+			<p><label>your web site <input id="input5" type="url" placeholder="http://" readonly></label></p>
 
 			<h2>with label + placeholder + disabled</h2>
-			<p><label>your web site <input type="url" placeholder="http://" disabled></label></p>
+			<p><label>your web site <input id="input6" type="url" placeholder="http://" disabled></label></p>
 
 			<input type="submit">
 		</form>
 
 		<h2>Code</h2>
-		<pre><code>&lt;label>your web site &lt;input type="url">&lt;/label></code></pre>
+		<pre><code>&lt;label>your web site &lt;input id="input1" type="url">&lt;/label></code></pre>
 	</body>
 </html>

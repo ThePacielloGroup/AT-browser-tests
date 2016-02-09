@@ -12,7 +12,12 @@
 			<ul>
 				<li>#1: Element is supported</li>
 				<li>#2: Element has correct HTML and Core Accessibility API mappings</li>
-				<li>#3: Control is keyboard accessible</li>
+				<li>#3: Control is keyboard accessible:
+					<ul>
+						<li>#3.1: Control MUST be focusable</li>
+						<li>#3.2: MUST be able to submit a value</li>
+					</ul>
+				</li>
 			</ul>
 		</div>
 
@@ -31,21 +36,21 @@
 		<p><input type="email"></p>
 
 		<h2>with label </h2>
-		<p><label>sign up <input type="email"></label></p>
+		<p><label>sign up <input id="input1" type="email"></label></p>
 
 		<h2>with label + placeholder</h2>
-		<p><label>sign up <input type="email" placeholder="you@email.com"></label></p>
+		<p><label>sign up <input id="input2" type="email" placeholder="you@email.com"></label></p>
 
 		<h2>with label + placeholder + required</h2>
-		<p><label>sign up <input type="email" placeholder="you@email.com" required></label></p>
+		<p><label>sign up <input id="input3" type="email" placeholder="you@email.com" required></label></p>
 
 		<h2>with label + placeholder + readonly</h2>
-		<p><label>sign up <input type="email" placeholder="you@email.com" readonly></label></p>
+		<p><label>sign up <input id="input4" type="email" placeholder="you@email.com" readonly></label></p>
 
 		<h2>with label + placeholder + disabled</h2>
-		<p><label>sign up <input type="email" placeholder="you@email.com" disabled></label></p>
+		<p><label>sign up <input id="input5" type="email" placeholder="you@email.com" disabled></label></p>
 
 		<h2>Code</h2>
-		<p>&lt;label>sign up &lt;input type="email">&lt;/label></p>
+		<pre><code>&lt;label>sign up &lt;input id="input1" type="email">&lt;/label></code></pre>
 	</body>
 </html>

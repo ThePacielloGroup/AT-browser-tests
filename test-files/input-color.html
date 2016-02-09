@@ -12,7 +12,12 @@
 			<ul>
 				<li>#1: Element is supported</li>
 				<li>#2: Element has correct HTML and Core Accessibility API mappings</li>
-				<li>#3: Control is keyboard accessible</li>
+				<li>#3: Control is keyboard accessible:
+					<ul>
+						<li>#3.1: Control MUST be focusable, including any child controls</li>
+						<li>#3.2: MUST be able to open color control and select a color</li>
+					</ul>
+				</li>
 			</ul>
 		</div>
 
@@ -28,17 +33,17 @@
 
 		<h2> with label</h2>
 		<p>
-			<label for="col1">choose a shade</label>
-			<input id="col1" type="color">
+			<label for="input1">choose a shade</label>
+			<input id="input1" type="color">
 		</p>
 
 		<h2> with label + disabled</h2>
 		<p>
-			<label for="col">choose a shade</label>
-			<input id="col" type="color" disabled>
+			<label for="input2">choose a shade</label>
+			<input id="input2" type="color" disabled>
 		</p>
 
 		<h2>Code</h2>
-		<pre data-number=""><code>&lt;label for="col">choose a shade&lt;/label><br>&lt;input id="col" type="color"></code></pre>
+		<pre data-number=""><code>&lt;label for="input1">choose a shade&lt;/label><br>&lt;input id="input1" type="color"></code></pre>
 	</body>
 </html>

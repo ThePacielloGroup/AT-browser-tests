@@ -12,7 +12,12 @@
 			<ul>
 				<li>#1: Elements are supported</li>
 				<li>#2: Elements have correct HTML and Core Accessibility API mappings</li>
-				<li>#3: Control is keyboard accessible</li>
+				<li>#3: Control is keyboard accessible:
+					<ul>
+						<li>#3.1: Control MUST be focusable</li>
+						<li>#3.2: MUST be able to expand and collapse control</li>
+					</ul>
+				</li>
 			</ul>
 		</div>
 
@@ -26,13 +31,13 @@
 			</ul>
 		</div>
 
-		<details>
+		<details id="details1">
 			<summary>Why use HTML5?</summary>
 			<p>You should use HTML5 because...</p>
 		</details>
 
 		<h2>Code</h2>
-		<pre><code>&lt;details>
+		<pre><code>&lt;details id="details1">
 	&lt;summary>Why use HTML5?&lt;/summary>
 	&lt;p>You should use HTML5 because...&lt;/p>
 &lt;/details></code></pre>

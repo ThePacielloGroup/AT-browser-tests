@@ -136,6 +136,14 @@ body > h1 {
 	height: 4px;
 }
 
+.meta ul ul {
+	margin: .5em 0 0 1em;
+}
+
+.meta li li:before {
+	transform: rotate(45deg);
+}
+
 .reference li {
 	white-space: nowrap;
 	font-size: .611em; /* 11px */

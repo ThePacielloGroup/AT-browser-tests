@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>test file: menu element with type=toolbar</title>
+	</head>
+	<body>
+		<h1><code>menu type="toolbar"</code> element</h1>
+
+		<div class="criteria">
+			<h2>Pass Criteria</h2>
+			<ul>
+				<li>#1: Element is supported</li>
+				<li>#2: Element has correct HTML and Core Accessibility API mappings</li>
+				<li>#3: Control is keyboard accessible</li>
+			</ul>
+		</div>
+
+		<div class="reference">
+			<h2>Reference</h2>
+			<ul>
+				<li><a href="http://www.w3.org/TR/html51/semantics.html#the-menu-element">HTML5.1 menu element</a></li>
+				<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-menu-toolbar">HTML Accessibility API Mappings for menu element with toolbar state</a></li>
+				<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-toolbar">Core Accessibility API Mappings for toolbar role</a></li>
+			</ul>
+		</div>
+
+		<menu id="menu1" type="toolbar">
+			<li>Toolbar item one</li>
+			<li>Toolbar item two</li>
+  		</menu>
+
+		<h2>Code</h2>
+		<pre><code>&lt;menu id="menu1" type="toolbar">
+	&lt;li>Toolbar item one&lt;/li>
+	&lt;li>Toolbar item two&lt;/li>
+&lt;/menu></code></pre>
+	</body>
+</html>

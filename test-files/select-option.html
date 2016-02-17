@@ -7,7 +7,7 @@
 	<body>
 		<h1><code>select + option + optgroup</code> element</h1>
 		<p>
-		<select>
+		<select id="select1">
 			<option value="1">a</option>
 			<option value="2">b</option>
 		</select></p>
@@ -15,7 +15,7 @@
 		<h2>with label </h2>
 		<p>
 			<label> choose
-				<select>
+				<select id="select2">
 					<option value="1">a</option>
 					<option value="2">b</option>
 				</select>
@@ -25,7 +25,7 @@
 		<h2>with label + selected on option a</h2>
 		<p>
 			<label> choose
-				<select>
+				<select id="select3">
 					<option value="1" selected>a</option>
 					<option value="2">b</option>
 				</select>
@@ -35,7 +35,7 @@
 		<h2>with label + required </h2>
 		<p>
 			<label> choose
-				<select required>
+				<select id="select4" required>
 					<option value="1">a</option>
 					<option value="2">b</option>
 				</select>
@@ -45,7 +45,7 @@
 		<h2>with label + disabled </h2>
 		<p>
 			<label> choose
-				<select disabled>
+				<select id="select5" disabled>
 					<option value="1">a</option>
 					<option value="2">b</option>
 				</select>
@@ -53,13 +53,13 @@
 		</p>
 
 		<h2>with size attribute</h2>
-		<select name="" size="3">
+		<select id="select6" name="" size="3">
 			<option value="a">a</option>
 			<option value="b">b</option>
 		</select>
 
 		<h2>with size + multiple attribute</h2>
-		<select multiple size="3">
+		<select id="select7" multiple size="3">
 			<option value="a">a</option>
 			<option value="b">b</option>
 		</select>
@@ -67,7 +67,7 @@
 		<h2>with label and optgroup</h2>
 		<p>
 			<label> choose
-				<select>
+				<select id="select8">
 					<optgroup label="part 1">
 						<option value="1">a</option>
 						<option value="2">b</option>

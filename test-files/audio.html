@@ -12,7 +12,12 @@
 			<ul>
 				<li>#1: Element is supported</li>
 				<li>#2: Element has correct HTML and Core Accessibility API mappings</li>
-				<li>#3: Controls are keyboard accessible</li>
+				<li>#3: Controls are keyboard accessible:
+					<ul>
+						<li>#3.1: Controls MUST be focusable</li>
+						<li>#3.2: MUST be able to activate controls, including any child menu/controls</li>
+					</ul>
+				</li>
 			</ul>
 		</div>
 
@@ -25,14 +30,14 @@
 		</div>
 
 		<p>
-			<audio controls>
+			<audio id="audio1" controls>
 				<source src="../audio/jeffbob.mp3" type="audio/mpeg">
 				<source src="../audio/jeffbob.ogg" type="audio/ogg">
 			</audio>
 		</p>
 
 		<h2>Code</h2>
-		<pre>&lt;audio controls>
+		<pre>&lt;audio id="audio1" controls>
 	&lt;source src="audio/jeffbob.mp3" type="audio/mpeg">
 	&lt;source src="audio/jeffbob.ogg" type="audio/ogg">
 &lt;/audio></pre>

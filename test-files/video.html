@@ -12,7 +12,13 @@
 			<ul>
 				<li>#1: Elements are supported</li>
 				<li>#2: Elementa have correct HTML and Core Accessibility API mappings</li>
-				<li>#3: Controls are keyboard accessible</li>
+				<li>#3: At least one subtitle format is supported (WebVTT or TTML)</li>
+				<li>#4: Controls are keyboard accessible:
+					<ul>
+						<li>#4.1: Controls MUST be focusable</li>
+						<li>#4.2: MUST be able to activate controls, including any child menu/controls</li>
+					</ul>
+				</li>
 			</ul>
 		</div>
 
@@ -27,7 +33,7 @@
 		</div>
 
 		<p>
-			<video controls width="300" height="300">
+			<video id="video1" controls width="300" height="300">
   				<source src="../images/elo.mp4" type="video/mp4">
 				<source src="../images/elo.ogg" type="video/ogg">
 				<track kind="captions" srclang="en" src="../images/elo.vtt" label="English" default>
@@ -35,7 +41,7 @@
 		</p>
 
 		<h2>Code</h2>
-		<pre><code>&lt;video controls width="300" height="300">
+		<pre><code>&lt;video id="video1" controls width="300" height="300">
 	&lt;source src="../images/elo.mp4" type="video/mp4">
 	&lt;source src="../images/elo.ogg" type="video/ogg">
 	&lt;track kind="captions" srclang="en" src="../images/elo.vtt" label="English">

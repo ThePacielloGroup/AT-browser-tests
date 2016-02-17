@@ -6,6 +6,24 @@
 	</head>
 	<body>
 		<h1><code>output</code> element</h1>
+
+		<div class="criteria">
+			<h2>Pass Criteria</h2>
+			<ul>
+				<li>#1: Element is supported</li>
+				<li>#2: Element has correct HTML and Core Accessibility API mappings</li>
+			</ul>
+		</div>
+
+		<div class="reference">
+			<h2>Reference</h2>
+			<ul>
+				<li><a href="http://www.w3.org/TR/html5/forms.html#the-output-element">HTML5 output element</a></li>
+				<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-output">HTML Accessibility API Mappings for output element</a></li>
+				<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-status">Core Accessibility API Mappings for status role</a></li>
+			</ul>
+		</div>
+
 		<p><form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
 			<input type="range" name="b" value="50" /> +
 			<input type="number" name="a" value="10" /> =
@@ -18,12 +36,5 @@
 	&lt;input type="number" name="a" id="a" value="10" /> =<br>
 	&lt;output name="result" for="b a">&lt;/output><br>
 &lt;/form></code></pre>
-
-		<h2>Reference</h2>
-		<ul>
-			<li><a href="http://www.w3.org/TR/html5/forms.html#the-output-element">HTML5 output element</a></li>
-			<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-output">HTML Accessibility API Mappings for output element</a></li>
-			<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-status">Core Accessibility API Mappings for status role</a></li>
-		</ul>
 	</body>
 </html>

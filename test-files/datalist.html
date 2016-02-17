@@ -6,6 +6,26 @@
 	</head>
 	<body>
 		<h1><code>input</code> element + <code>datalist</code> elmement</h1>
+
+		<div class="criteria">
+			<h2>Pass Criteria</h2>
+			<ul>
+				<li>#1: Element is supported</li>
+				<li>#2: Element has correct HTML and Core Accessibility API mappings</li>
+				<li>#3: Control is keyboard accessible</li>
+			</ul>
+		</div>
+
+		<div class="reference">
+			<h2>Reference</h2>
+			<ul>
+				<li><a href="http://www.w3.org/TR/html/forms.html#the-datalist-element">HTML5 datalist element</a></li>
+				<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-datalist">HTML Accessibility API Mappings for datalist element</a></li>
+				<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-listbox">Core Accessibility API Mappings for listbox role</a></li>
+				<li><a href="https://www.w3.org/TR/core-aam-1.1/#ariaMultiselectableFalse">Core Accessibility API Mappings for aria-multiselectable="false"</a></li>
+			</ul>
+		</div>
+
 		<label>sites <input list="hpurls" placeholder="text+list" type="text"></label>
 		<datalist id="hpurls">
 			<option value="http://www.google.com/" label="Google">Google</option>
@@ -18,13 +38,5 @@
 	&lt;option value="http://www.google.com/" label="Google">&lt;/option><br>
 	&lt;option value="http://www.reddit.com/" label="Reddit">&lt;/option><br>
 &lt;/datalist></code></pre>
-
-		<h2>Reference</h2>
-		<ul>
-			<li><a href="http://www.w3.org/TR/html/forms.html#the-datalist-element">HTML5 datalist element</a></li>
-			<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-datalist">HTML Accessibility API Mappings for datalist element</a></li>
-			<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-listbox">Core Accessibility API Mappings for listbox role</a></li>
-			<li><a href="https://www.w3.org/TR/core-aam-1.1/#ariaMultiselectableFalse">Core Accessibility API Mappings for aria-multiselectable="false"</a></li>
-		</ul>
 	</body>
 </html>

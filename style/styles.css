@@ -1,18 +1,13 @@
 @font-face {
 	font-family: "League Spartan";
-	src: url("../fonts/leaguespartan-bold.eot");
-	src: url("../fonts/leaguespartan-bold.eot?#iefix") format("embedded-opentype"),
-		url("../fonts/leaguespartan-bold.woff2") format("woff2"),
-		url("../fonts/leaguespartan-bold.woff") format("woff"),
-		url("../fonts/leaguespartan-bold.ttf") format("truetype"),
-		url("../fonts/leaguespartan-bold.svg#league_spartanbold") format("svg");
+	src: url("../fonts/leaguespartan-bold.woff2") format("woff2"),
+	     url("../fonts/leaguespartan-bold.woff") format("woff"),
+	     url("../fonts/leaguespartan-bold.ttf") format("truetype");
 	font-weight: bold;
-	font-style: normal;
 }
 
 * {
 	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
@@ -38,7 +33,7 @@ a:link, a:visited {
 }
 
 a:hover {
-	border-bottom-color: #333;
+	border-bottom-color: currentColor;
 	color: #333;
 }
 
@@ -71,10 +66,10 @@ body > h1 {
 .reference,
 .test-title,
 .code-title {
-	font-weight: 700;
 	font-family: "League Spartan", sans-serif;
+	font-weight: 700;
 	text-transform: uppercase;
-	letter-spacing: 0.08em;
+	letter-spacing: .08em;
 	line-height: 1.25;
 }
 

@@ -176,24 +176,18 @@ body > h1 {
 
 .test {
 	margin-top: 2em;
+}
+
+.test-case,
+.test pre {
+	padding: 20px;
 	background: hsla(0, 0%, 100%, .75);
-}
-
-.test > * {
-	margin-right: 20px;
-	margin-left: 20px;
-}
-
-.test-title,
-.code-title {
-	margin-right: 0;
-	margin-left: 0;
-	background: #f7f7f5;
+	border: 2px solid hsla(0, 0%, 0%, .1);
 }
 
 .test-title {
 	position: relative;
-	margin: 0 0 20px;
+	margin: 0;
 	padding: 2em 0 1.333em 1.5em;
 	font-size: 1.111em; /* 20px at large breakpoint */
 }
@@ -233,8 +227,7 @@ body > h1 {
 }
 
 .test pre {
-	margin-top: 20px;
-	padding-bottom: 20px;
+	margin-top: 0;
 }
 
 /*	SMALL BREAKPOINT

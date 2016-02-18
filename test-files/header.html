@@ -31,9 +31,11 @@
 		<div class="test">
 			<h2 class="test-title" id="hd-001">Test hd-001: Header element, sectioning content/root is body</h2>
 
-			<header>
-				<h1>header element</h1>
-			</header>
+			<div class="test-case">
+				<header>
+					<h1>header element</h1>
+				</header>
+			</div>
 	
 			<h3 class="code-title">Code</h3>
 	<pre><code>&lt;header>
@@ -44,12 +46,14 @@
 		<div class="test">
 			<h2 class="test-title" id="hd-002">Test hd-002: Header element,  sectioning content/root is <em>not</em> body</h2>
 
-			<article>
-				<header>
-					<h2>Example header</h2>
-				</header>
-				...
-			</article>
+			<div class="test-case">
+				<article>
+					<header>
+						<h2>Example header</h2>
+					</header>
+					...
+				</article>
+			</div>
 			
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;article>

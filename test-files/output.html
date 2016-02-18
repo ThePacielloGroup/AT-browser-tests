@@ -29,11 +29,13 @@
 		<div class="test">
 			<h2 class="test-title" id="op-001">Test op-001: Output calculated from two inputs</h2>
 
-			<form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
-				<input type="range" name="b" value="50" /> +
-				<input type="number" name="a" value="10" /> =
-				<output name="result"></output>
-			</form>
+			<div class="test-case">
+				<form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+					<input type="range" name="b" value="50" /> +
+					<input type="number" name="a" value="10" /> =
+					<output name="result"></output>
+				</form>
+			</div>
 			
 			<h3 class="code-title">Code</h3>
 			<pre></code>&lt;form oninput="result.value=parseInt(a.value)+parseInt(b.value)">

@@ -28,8 +28,10 @@
 
 		<div class="test">
 			<h2 class="test-title" id="as-001">Test as-001: Plain aside</h2>
-	
-			<aside>Lorem ipsum...</aside>
+
+			<div class="test-case">					
+				<aside>Lorem ipsum...</aside>
+			</div>
 
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;aside>Lorem ipsum...&lt;/aside></code></pre>
@@ -38,10 +40,12 @@
 		<div class="test">
 			<h2 class="test-title" id="as-002">Test as-002: Aside with <code>&lt;h1></code></h2>
 
-			<aside>
-				<h1>Once upon a time</h1>
-				Lorem ipsum...
-			</aside>
+			<div class="test-case">				
+				<aside>
+					<h1>Once upon a time</h1>
+					Lorem ipsum...
+				</aside>
+			</div>
 			
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;aside>
@@ -52,8 +56,10 @@
 
 		<div class="test">
 			<h2 class="test-title" id="as-003">Test as-003: Aside with <code>aria-label</code></h2>
-	
-			<aside aria-label="Once upon a time">Lorem ipsum...</aside>
+
+			<div class="test-case">					
+				<aside aria-label="Once upon a time">Lorem ipsum...</aside>
+			</div>
 
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;aside aria-label="Once upon a time">Lorem ipsum...&lt;/aside></code></pre>
@@ -61,11 +67,13 @@
 
 		<div class="test">
 			<h2 class="test-title" id="as-004">Test as-004: Aside with <code>&lt;h1></code> referenced by <code>aria-labelledby</code></h2>
-	
-			<aside aria-labelledby="aside-title">
-				<h1 id="aside-title">Once upon a time</h1>
-				Lorem ipsum...
-			</aside>
+
+			<div class="test-case">					
+				<aside aria-labelledby="aside-title">
+					<h1 id="aside-title">Once upon a time</h1>
+					Lorem ipsum...
+				</aside>
+			</div>
 
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;aside aria-labelledby="aside-title">

@@ -29,7 +29,9 @@
 		<div class="test">
 			<h2 class="test-title" id="ar-001">Test ar-001: Plain Article</h2>
 
-			<article>Lorem ipsum...</article>
+			<div class="test-case">
+				<article>Lorem ipsum...</article>
+			</div>
 			
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;article>Lorem ipsum...&lt;/article></code></pre>
@@ -38,10 +40,12 @@
 		<div class="test">
 			<h2 class="test-title" id="ar-002">Test ar-002: Article with <code>&lt;h1></code></h2>
 
-			<article>
-				<h1>Once upon a time</h1>
-				Lorem ipsum...
-			</article>
+			<div class="test-case">
+				<article>
+					<h1>Once upon a time</h1>
+					Lorem ipsum...
+				</article>
+			</div>
 			
 			<h3 class="code-title">Code</h3>
 					<pre><code>&lt;article>
@@ -53,7 +57,9 @@
 		<div class="test">
 			<h2 class="test-title" id="ar-003">Test ar-003: Article with <code>aria-label</code></h2>
 
-			<article aria-label="Once upon a time">Lorem ipsum...</article>
+			<div class="test-case">
+				<article aria-label="Once upon a time">Lorem ipsum...</article>
+			</div>
 			
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;article aria-label="Once upon a time">Lorem ipsum...&lt;/article></code></pre>
@@ -62,10 +68,12 @@
 		<div class="test">
 			<h2 class="test-title" id="ar-004">Test ar-004: Article with <code>&lt;h1></code> referenced by <code>aria-labelledby</code></h2>
 
-			<article aria-labelledby="article-title">
-				<h1 id="article-title">Once upon a time</h1>
-				Lorem ipsum...
-			</article>
+			<div class="test-case">
+				<article aria-labelledby="article-title">
+					<h1 id="article-title">Once upon a time</h1>
+					Lorem ipsum...
+				</article>
+			</div>
 			
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;article aria-labelledby="article-title">
@@ -73,6 +81,5 @@
 	Lorem ipsum...
 &lt;/article></code></pre>
 		</div>
-
 	</body>
 </html>

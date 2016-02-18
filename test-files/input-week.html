@@ -1,48 +1,56 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<title>test file: input type week element</title>
+		<link rel="stylesheet" href="../style/styles.css" />
 	</head>
 	<body>
-		<h1><code>input type=week</code> element</h1>
+		<h1><code>input type=week</code> element test</h1>
+		<div class="meta">
+			<div class="criteria">
+				<h2>Pass Criteria</h2>
+				<ul>
+					<li>#1: Element is supported</li>
+					<li>#2: Element has correct HTML and Core Accessibility API mappings</li>
+					<li>#3: Control is keyboard accessible:
+						<ul>
+							<li>#3.1: Control MUST be focusable</li>
+							<li>#3.2: MUST be able to open date control and select a date</li>
+						</ul>			
+					</li>
+				</ul>
+			</div>
 
-		<div class="criteria">
-			<h2>Pass Criteria</h2>
-			<ul>
-				<li>#1: Element is supported</li>
-				<li>#2: Element has correct HTML and Core Accessibility API mappings</li>
-				<li>#3: Control is keyboard accessible</li>
-			</ul>
+			<div class="reference">
+				<h2>Reference</h2>
+				<ul>
+					<li><a href="http://www.w3.org/TR/html51/semantics.html#week-state-(type=week)">HTML5 input type=week element</a></li>
+					<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-input-week">HTML Accessibility API Mappings for input type=week element</a></li>
+				</ul>
+			</div>
 		</div>
 
-		<div class="reference">
-			<h2>Reference</h2>
-			<ul>
-				<li><a href="http://www.w3.org/TR/html51/semantics.html#week-state-(type=week)">HTML5 input type=week element</a></li>
-				<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-input-week">HTML Accessibility API Mappings for input type=week element</a></li>
-			</ul>
+		<div class="test">
+			<h2 class="test-title" id="wi-001">Test wi-001: Unlabelled input type="week"</h2>
+
+			<div class="test-case">
+				<input id="input1" type="week" />
+			</div>
+
+			<h3 class="code-title">Code</h3>			
+			<pre><code>&lt;input id="input1" type="week" /></code></pre>
 		</div>
 
-		<form>
-			<p><input type="week"></p>
+		<div class="test">
+			<h2 class="test-title" id="wi-002">Test wi-002: Input type="week" with label</h2>
 
-			<h2>with label </h2>
-			<p><label>week of birth <input type="week"></label></p>
+			<div class="test-case">
+				<label>Week of birth <input id="input2" type="week" /></label>
+			</div>
 
-			<h2>with label + required</h2>
-			<p><label>week of birth <input type="week"  required></label></p>
-
-			<h2>with label +  readonly</h2>
-			<p><label>week of birth <input type="week" readonly></label></p>
-
-			<h2>with label  + disabled</h2>
-			<p><label>week of birth <input type="week"  disabled></label></p>
-
-			<input type="submit">
-		</form>
-
-		<h2>Code</h2>
-		<pre><code>&lt;label>week of birth &lt;input type="week">&lt;/label></code></pre>
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;label>Week of birth &lt;input id="input2" type="week" />&lt;/label></code></pre>
+		</div>
 	</body>
 </html>

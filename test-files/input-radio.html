@@ -7,7 +7,7 @@
 	<body>
 		<h1><code>input type=radio</code> element</h1>
 		<form>
-			<p>
+			<p id="input1">
 				<input type="radio" name="sex" value="male"><br>
 				<input type="radio" name="sex" value="female">
 			</p>
@@ -15,20 +15,21 @@
 
 		<h2>with label first button checked</h2>
 		<form>
-			<p>
+			<p id="input2">
 				<label><input type="radio" name="sex" value="male" checked> Male</label><br>
 				<label><input type="radio" name="sex" value="female"> Female</label></p>
 		</form>
 
 		<h2> with label + disabled</h2>
 		<form>
-			<p><label><input type="radio" name="sex" value="male" checked disabled> Male</label><br>
-			<label> <input type="radio" name="sex" value="female" disabled> Female</label></p>
+			<p id="input3">
+				<label><input type="radio" name="sex" value="male" checked disabled> Male</label><br>
+				<label> <input type="radio" name="sex" value="female" disabled> Female</label></p>
 		</form>
 
 		<h2> with label + fieldset + legend</h2>
 		<form>
-			<fieldset>
+			<fieldset id="input4">
 				<legend>gender</legend>
 				<label><input type="radio" name="sex" value="male" checked> Male</label><br>
 				<label><input type="radio" name="sex" value="female"> Female</label>
@@ -37,7 +38,7 @@
 
 		<h2>Code</h2>
 		<pre><code>&lt;form>
-	&lt;fieldset>
+	&lt;fieldset id="input4">
 		&lt;legend>gender&lt;/legend>
 		&lt;label>&lt;input type="radio" name="sex" value="male" checked> Male&lt;/label>
 		&lt;label> &lt;input type="radio" name="sex" value="female"> Female&lt;/label>

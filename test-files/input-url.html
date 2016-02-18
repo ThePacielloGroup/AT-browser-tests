@@ -1,55 +1,61 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<title>test file: input type=url element</title>
+		<link rel="stylesheet" href="../style/styles.css" />
 	</head>
 	<body>
-		<h1><code>input type=url</code> element</h1>
+		<h1><code>input type=url</code> element test</h1>
+		<div class="meta">
+			<div class="criteria">
+				<h2>Pass Criteria</h2>
+				<ul>
+					<li>#1: Element is supported</li>
+					<li>#2: Element has correct HTML and Core Accessibility API mappings</li>
+					<li>#3: Control is keyboard accessible:
+						<ul>
+							<li>#3.1: Control MUST be focusable</li>
+							<li>#3.2: MUST be able to type and select text</li>
+							<li>#3.3: MUST be able to submit a value</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
 
-		<div class="criteria">
-			<h2>Pass Criteria</h2>
-			<ul>
-				<li>#1: Element is supported</li>
-				<li>#2: Element has correct HTML and Core Accessibility API mappings</li>
-				<li>#3: Control is keyboard accessible</li>
-			</ul>
+			<div class="reference">
+				<h2>Reference</h2>
+				<ul>
+					<li><a href="http://www.w3.org/TR/html/forms.html#url-state-(type=url)">HTML5 input type=url element</a></li>
+					<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-input-url">HTML Accessibility API Mappings for input type=url element without list attribute</a></li>
+					<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-textbox">Core Accessibility API Mappings for textbox role</a></li>
+					<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-input-textetc-autocomplete">HTML Accessibility API Mappings for input type=url element with list attribute</a></li>
+					<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-combobox">Core Accessibility API Mappings for combobox role</a></li>
+					<li><a href="https://www.w3.org/TR/core-aam-1.1/#ariaOwns">Core Accessibility API Mappings for aria-owns property</a></li>
+				</ul>
+			</div>
 		</div>
 
-		<div class="reference">
-			<h2>Reference</h2>
-			<ul>
-				<li><a href="http://www.w3.org/TR/html/forms.html#url-state-(type=url)">HTML5 input type=url element</a></li>
-				<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-input-url">HTML Accessibility API Mappings for input type=url element without list attribute</a></li>
-				<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-textbox">Core Accessibility API Mappings for textbox role</a></li>
-				<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-input-textetc-autocomplete">HTML Accessibility API Mappings for input type=url element with list attribute</a></li>
-				<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-combobox">Core Accessibility API Mappings for combobox role</a></li>
-				<li><a href="https://www.w3.org/TR/core-aam-1.1/#ariaOwns">Core Accessibility API Mappings for aria-owns property</a></li>
-			</ul>
+		<div class="test">
+			<h2 class="test-title" id="ui-001">Test ui-001: Unlabelled input type="url"</h2>
+
+			<div class="test-case">
+				<input id="input1" type="url" />
+			</div>
+		
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;input id="input1" type="url" /></code></pre>
 		</div>
 
-		<form>
-			<p><input type="url"></p>
+		<div class="test">
+			<h2 class="test-title" id="ui-002">Test ui-002: Input type="url" with label</h2>
 
-			<h2>with label </h2>
-			<p><label>your web site <input type="url"></label></p>
+			<div class="test-case">
+				<label>Your web site <input id="input2" type="url" /></label>
+			</div>
 
-			<h2>with label + placeholder</h2>
-			<p><label>your web site <input type="url" placeholder="http://"></label></p>
-
-			<h2>with label + placeholder + required</h2>
-			<p><label>your web site <input type="url" placeholder="http://" required></label></p>
-
-			<h2>with label + placeholder + readonly</h2>
-			<p><label>your web site <input type="url" placeholder="http://" readonly></label></p>
-
-			<h2>with label + placeholder + disabled</h2>
-			<p><label>your web site <input type="url" placeholder="http://" disabled></label></p>
-
-			<input type="submit">
-		</form>
-
-		<h2>Code</h2>
-		<pre><code>&lt;label>your web site &lt;input type="url">&lt;/label></code></pre>
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;label>Your web site &lt;input id="input2" type="url" />&lt;/label></code></pre>
+		</div>
 	</body>
 </html>

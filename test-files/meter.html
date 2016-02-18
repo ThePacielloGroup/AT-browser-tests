@@ -1,31 +1,40 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<title>test file: meter element</title>
+		<link rel="stylesheet" href="../style/styles.css" />
 	</head>
 	<body>
-		<h1><code>meter</code> element</h1>
+		<h1><code>meter</code> element test</h1>
+		<div class="meta">
+			<div class="criteria">
+				<h2>Pass Criteria</h2>
+				<ul>
+					<li>#1: Element is supported</li>
+					<li>#2: Element has correct HTML and Core Accessibility API mappings</li>
+				</ul>
+			</div>
 
-		<div class="criteria">
-			<h2>Pass Criteria</h2>
-			<ul>
-				<li>#1: Element is supported</li>
-				<li>#2: Element has correct HTML and Core Accessibility API mappings</li>
-			</ul>
+			<div class="reference">
+				<h2>Reference</h2>
+				<ul>
+					<li><a href="http://www.w3.org/TR/html5/forms.html#the-meter-element">HTML5 meter element</a></li>
+					<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-meter">HTML Accessibility API Mappings for meter element</a></li>
+				</ul>
+			</div>
 		</div>
 
-		<div class="reference">
-			<h2>Reference</h2>
-			<ul>
-				<li><a href="http://www.w3.org/TR/html5/forms.html#the-meter-element">HTML5 meter element</a></li>
-				<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-meter">HTML Accessibility API Mappings for meter element</a></li>
-			</ul>
+		<div class="test">
+			<h2 class="test-title" id="mr-001">Test mr-001: Meter element</h2>
+
+			<div class="test-case">
+				<meter id="meter1" min="0" max="100" value="83.5">fallback content</meter>
+			</div>
+			
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;meter id="meter1" min="0" max="100" value="83.5">fallback content&lt;/meter></code></pre>
 		</div>
 
-		<p><meter min="0" max="100" value="83.5">fallback content</meter></p>
-
-		<h2>Code</h2>
-		<pre><code>&lt;p>&lt;meter min="0" max="100" value="83.5">fallback content&lt;/meter>&lt;/p></code></pre>
 	</body>
 </html>

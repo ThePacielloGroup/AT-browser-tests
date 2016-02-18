@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>test file: menuitem element</title>
+		<link rel="stylesheet" href="../style/styles.css" />
+	</head>
+	<body>
+		<h1><code>menuitem</code> element test</h1>
+		<div class="meta">
+			<div class="criteria">
+				<h2>Pass Criteria</h2>
+				<ul>
+					<li>#1: Element is supported</li>
+					<li>#2: Element has correct HTML and Core Accessibility API mappings</li>
+					<li>#3: Control is keyboard accessible:
+						<ul>
+							<li>#3.1: MUST be able to activate context menu</li>
+							<li>#3.2: MUST be able to select and activate a menu item</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+
+			<div class="reference">
+				<h2>Reference</h2>
+				<ul>
+					<li><a href="http://www.w3.org/TR/html51/semantics.html#the-menuitem-element">HTML5.1 menuitem element</a></li>
+					<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-menuitem-command">HTML Accessibility API Mappings for menuitem element in the command state</a></li>
+					<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-menuitem">Core Accessibility API Mappings for menuitem role</a></li>
+					<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-menuitem-checkbox">HTML Accessibility API Mappings for menuitem element in the checkbox state</a></li>
+					<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-menuitemcheckbox">Core Accessibility API Mappings for menuitemcheckbox role</a></li>
+					<li><a href="https://www.w3.org/TR/core-aam-1.1/#ariaCheckedTrue">Core Accessibility API Mappings for aria-checked="true" state</a></li>				
+					<li><a href="https://www.w3.org/TR/core-aam-1.1/#ariaCheckedFalse">Core Accessibility API Mappings for aria-checked="false" state</a></li>				
+					<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-menuitem-radio">HTML Accessibility API Mappings for menuitem element in the radio state</a></li>
+					<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-menuitemradio">Core Accessibility API Mappings for menuitemradio role</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="test">
+			<h2 class="test-title" id="mi-001">Test mi-001: Menuitem element with type="command"</h2>
+
+			<div class="test-case">
+				<button id="menu1" menu="command-menu">I have a number of command menuitems in my context menu. Right click (or equivalent) to test</button>
+				<menu type="context" id="command-menu">
+					<menuitem type="command" label="I’m a command menuitem" />
+					<menuitem type="command" label="I’m another command menuitem" />
+				</menu>
+			</div>
+			
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;button id="menu1" menu="command-menu">I have a number of command menuitems in my context menu. Right click (or equivalent) to test&lt;/button>
+&lt;menu type="context" id="command-menu">
+	&lt;menuitem type="command" label="I’m a command menuitem" />
+	&lt;menuitem type="command" label="I’m another command menuitem" />
+&lt;/menu></code></pre>
+		</div>
+
+		<div class="test">
+			<h2 class="test-title" id="mi-002">Test mi-002: Menuitem element with type="checkbox"</h2>
+
+			<button id="menu2" menu="checkbox-menu">I have a number of checkbox menuitems in my context menu. Right click (or equivalent) to test</button>
+			<menu type="context" id="checkbox-menu">
+				<menuitem type="checkbox" label="I’m a checkbox menuitem" checked />
+				<menuitem type="checkbox" label="I’m another checkbox menuitem" />
+			</menu>
+			
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;button id="menu2" menu="checkbox-menu">I have a number of checkbox menuitems in my context menu. Right click (or equivalent) to test&lt;/button>
+&lt;menu type="context" id="checkbox-menu">
+	&lt;menuitem type="checkbox" label="I’m a checkbox menuitem" checked />
+	&lt;menuitem type="checkbox" label="I’m another checkbox menuitem" />
+&lt;/menu></code></pre>
+		</div>
+
+		<div class="test">
+			<h2 class="test-title" id="mi-003">Test mi-003: Menuitem element with type="radio"</h2>
+
+			<button id="menu3" menu="radio-menu">I have a number of radio menuitems in my context menu. Right click (or equivalent) to test</button>
+			<menu type="context" id="radio-menu">
+				<menuitem type="radio" radiogroup="radios" label="I’m a radio menuitem" checked />
+				<menuitem type="radio" radiogroup="radios" label="I’m another radio menuitem" />
+			</menu>
+			
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;button id="menu3" menu="radio-menu">I have a number of radio menuitems in my context menu. Right click (or equivalent) to test&lt;/button>
+&lt;menu type="context" id="radio-menu">
+	&lt;menuitem type="radio" radiogroup="radios" label="I’m a radio menuitem" checked />
+	&lt;menuitem type="radio" radiogroup="radios" label="I’m another radio menuitem" />
+&lt;/menu></code></pre>
+		</div>
+	</body>
+</html>

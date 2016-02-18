@@ -1,40 +1,53 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<title>test file: details element with summary element</title>
+		<link rel="stylesheet" href="../style/styles.css" />
 	</head>
 	<body>
 		<h1><code>details</code> element with <code>summary</code> element</h1>
+		<div class="meta">
+			<div class="criteria">
+				<h2>Pass Criteria</h2>
+				<ul>
+					<li>#1: Elements are supported</li>
+					<li>#2: Elements have correct HTML and Core Accessibility API mappings</li>
+					<li>#3: Control is keyboard accessible:
+						<ul>
+							<li>#3.1: Control MUST be focusable</li>
+							<li>#3.2: MUST be able to expand and collapse control</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
 
-		<div class="criteria">
-			<h2>Pass Criteria</h2>
-			<ul>
-				<li>#1: Elements are supported</li>
-				<li>#2: Elements have correct HTML and Core Accessibility API mappings</li>
-				<li>#3: Control is keyboard accessible</li>
-			</ul>
+			<div class="reference">
+				<h2>Reference</h2>
+				<ul>
+					<li><a href="http://www.w3.org/TR/html51/semantics.html#the-details-element">HTML5.1 details element</a></li>
+					<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-details">HTML Accessibility API Mappings for details element</a></li>
+					<li><a href="http://www.w3.org/TR/html51/semantics.html#the-summary-element">HTML5.1 summary element</a></li>
+					<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-summary">HTML Accessibility API Mappings for summary element</a></li>
+				</ul>
+			</div>
 		</div>
 
-		<div class="reference">
-			<h2>Reference</h2>
-			<ul>
-				<li><a href="http://www.w3.org/TR/html51/semantics.html#the-details-element">HTML5.1 details element</a></li>
-				<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-details">HTML Accessibility API Mappings for details element</a></li>
-				<li><a href="http://www.w3.org/TR/html51/semantics.html#the-summary-element">HTML5.1 summary element</a></li>
-				<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-summary">HTML Accessibility API Mappings for summary element</a></li>
-			</ul>
-		</div>
+		<div class="test">
+			<h2 class="test-title" id="ds-001">Test ds-001: Details and Summary elements</h2>
 
-		<details>
-			<summary>Why use HTML5?</summary>
-			<p>You should use HTML5 because...</p>
-		</details>
-
-		<h2>Code</h2>
-		<pre><code>&lt;details>
+			<div class="test-case">
+				<details id="details1">
+					<summary>Why use HTML5?</summary>
+					<p>You should use HTML5 because...</p>
+				</details>
+			</div>
+			
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;details id="details1">
 	&lt;summary>Why use HTML5?&lt;/summary>
 	&lt;p>You should use HTML5 because...&lt;/p>
 &lt;/details></code></pre>
+		</div>
 	</body>
 </html>

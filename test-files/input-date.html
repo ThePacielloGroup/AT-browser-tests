@@ -1,44 +1,56 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<title>test file: input type date element</title>
+		<link rel="stylesheet" href="../style/styles.css" />
 	</head>
 	<body>
-		<h1><code>input type=date</code> element</h1>
+		<h1><code>input type=date</code> element test</h1>
+		<div class="meta">
+			<div class="criteria">
+				<h2>Pass Criteria</h2>
+				<ul>
+					<li>#1: Element is supported</li>
+					<li>#2: Element has correct HTML and Core Accessibility API mappings</li>
+					<li>#3: Control is keyboard accessible:
+						<ul>
+							<li>#3.1: Control MUST be focusable</li>
+							<li>#3.2: MUST be able to open date control and select a date</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
 
-		<div class="criteria">
-			<h2>Pass Criteria</h2>
-			<ul>
-				<li>#1: Element is supported</li>
-				<li>#2: Element has correct HTML and Core Accessibility API mappings</li>
-				<li>#3: Control is keyboard accessible</li>
-			</ul>
+			<div class="reference">	
+				<h2>Reference</h2>
+				<ul>
+					<li><a href="http://www.w3.org/TR/html5/forms.html#date-state-(type=date)">HTML5 input type=date element</a></li>
+					<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-input-date">HTML Accessibility API Mappings for input type=date element</a></li>
+				</ul>
+			</div>
 		</div>
 
-		<div class="reference">	
-			<h2>Reference</h2>
-			<ul>
-				<li><a href="http://www.w3.org/TR/html5/forms.html#date-state-(type=date)">HTML5 input type=date element</a></li>
-				<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-input-date">HTML Accessibility API Mappings for input type=date element</a></li>
-			</ul>
-		</div>
+		<div class="test">
+			<h2 class="test-title" id="di-001">Test di-001: Unlabelled input type="date"</h2>
+
+			<div class="test-case">			
+				<input type="date" />
+			</div>
 			
-		<p><input type="date"></p>
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;input id="input1" type="date" /></code></pre>
+		</div>
 
-		<h2>with label </h2>
-		<p><label>date of birth <input type="date"></label></p>
+		<div class="test">
+			<h2 class="test-title" id="di-002">Test di-002: Input type="date" with label</h2>
 
-		<h2>with label + required</h2>
-		<p><label>date of birth <input type="date" required></label></p>
-
-		<h2>with label +  readonly</h2>
-		<p><label>date of birth <input type="date" readonly></label></p>
-
-		<h2>with label  + disabled</h2>
-		<p><label>date of birth <input type="date" disabled></label></p>
-
-		<h2>Code</h2>
-		<p>&lt;label>date of birth &lt;input type="date">&lt;/label></p>
+			<div class="test-case">
+				<label>Date of birth <input id="input2" type="date" /></label>
+			</div>
+			
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;label>Date of birth &lt;input id="input2" type="date" />&lt;/label></code></pre>
+		</div>
 	</body>
 </html>

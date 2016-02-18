@@ -1,63 +1,59 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<title>test file: input type=number element</title>
+		<link rel="stylesheet" href="../style/styles.css" />
 	</head>
 	<body>
 		<h1><code>input type=number</code> element</h1>
+		<div class="meta">
+			<div class="criteria">
+				<h2>Pass Criteria</h2>
+				<ul>
+					<li>#1: Element is supported</li>
+					<li>#2: Element has correct HTML and Core Accessibility API mappings</li>
+					<li>#3: Control is keyboard accessible:
+						<ul>
+							<li>#3.1: Control MUST be focusable, including any child controls</li>
+							<li>#3.2: MUST be able to type and select text</li>
+							<li>#3.3: MUST be able to submit a value</li>
+							<li>#3.4: Any child controls, such as number spinners, MUST be able to be activated</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
 
-		<div class="criteria">
-			<h2>Pass Criteria</h2>
-			<ul>
-				<li>#1: Element is supported</li>
-				<li>#2: Element has correct HTML and Core Accessibility API mappings</li>
-				<li>#3: Control is keyboard accessible</li>
-			</ul>
+			<div class="reference">	
+				<h2>Reference</h2>
+				<ul>
+					<li><a href="http://www.w3.org/TR/html/forms.html#number-state-(type=number)">HTML5 input type=number element</a></li>
+					<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-input-number">HTML Accessibility API Mappings for input type=number element</a></li>
+					<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-spinbutton">Core Accessibility API Mappings for spinbutton role</a></li>
+				</ul>
+			</div>
 		</div>
 
-		<div class="reference">	
-			<h2>Reference</h2>
-			<ul>
-				<li><a href="http://www.w3.org/TR/html/forms.html#number-state-(type=number)">HTML5 input type=number element</a></li>
-				<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-input-number">HTML Accessibility API Mappings for input type=number element</a></li>
-				<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-spinbutton">Core Accessibility API Mappings for spinbutton role</a></li>
-			</ul>
+		<div class="test">
+			<h2 class="test-title" id="ni-001">Test ni-001: Unlabelled input type="number"</h2>
+
+			<div class="test-case">
+				<input id="input1" type="number" />
+			</div>
+		
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;input id="input1" type="number" /></code></pre>
 		</div>
 
-		<p><input type="number"></p>
+		<div class="test">
+			<h2 class="test-title" id="ni-002">Test ni-002: input type="number" with label</h2>
 
-		<h2>with label </h2>
-		<p>
-			<label>amount
-			<input type="number"></label>
-		</p>
-
-		<h2>with label + placeholder</h2>
-		<p>
-			<label>amount
-			<input type="number" placeholder="pick a number"></label>
-		</p>
-
-		<h2>with label +  required</h2>
-		<p>
-			<label>amount
-			<input type="number" required></label>
-		</p>
-
-		<h2>with label +  readonly</h2>
-		<p>
-			<label>amount
-			<input type="number" readonly></label>
-		</p>
-
-		<h2>with label + disabled</h2>
-		<p>
-			<label>amount
-			<input type="number" disabled></label>
-		</p>
-
-		<h2>Code</h2>
-		<p>&lt;label>amount &lt;input type="number">&lt;/label></p>
+			<div class="test-case">
+				<label>Amount <input id="input2" type="number" /></label>
+			</div>
+		
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;label>Amount &lt;input id="input2" type="number" />&lt;/label></code></pre>
+		</div>
 	</body>
 </html>

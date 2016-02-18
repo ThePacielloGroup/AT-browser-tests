@@ -1,44 +1,52 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<title>test file: main element</title>
+		<link rel="stylesheet" href="../style/styles.css" />
 	</head>
 	<body>
-		<h1><code>main</code> element</h1>
-		<div class="criteria">
-			<h2>Pass Criteria</h2>
-			<ul>
-				<li>#1: Element is supported</li>
-				<li>#2: Element has correct HTML and Core Accessibility API mappings</li>
-			</ul>
+		<h1><code>main</code> element test</h1>
+		<div class="meta">
+			<div class="criteria">
+				<h2>Pass Criteria</h2>
+				<ul>
+					<li>#1: Element is supported</li>
+					<li>#2: Element has correct HTML and Core Accessibility API mappings</li>
+				</ul>
+			</div>
+
+			<div class="reference">
+				<h2>Reference</h2>
+				<ul>
+					<li><a href="http://www.w3.org/TR/html5/grouping-content.html#the-main-element">HTML5 main element</a></li>
+					<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-main">HTML Accessibility API Mappings for main element</a></li>
+					<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-main">Core Accessibility API Mappings for main role</a></li>
+				</ul>
+			</div>
 		</div>
 
-		<div class="reference">
-			<h2>Reference</h2>
-			<ul>
-				<li><a href="http://www.w3.org/TR/html5/grouping-content.html#the-main-element">HTML5 main element</a></li>
-				<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-main">HTML Accessibility API Mappings for main element</a></li>
-				<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-main">Core Accessibility API Mappings for main role</a></li>
-			</ul>
-		</div>
+		<div class="test">
+			<h2 class="test-title" id="ma-001">Test ma-001: Main element</h2>
 
-		<main>
-			<h2>Skateboards</h2>
-			<p>The skateboard is the way cool kids get around</p>
+			<div class="test-case">
+				<main>
+					<h2>Skateboards</h2>
+					<p>The skateboard is the way cool kids get around</p>
 
-			<h3>Longboards</h3>
-			<p>Longboards are a type of skateboard with a longer
-			wheelbase and larger, softer wheels.</p>
+					<h3>Longboards</h3>
+					<p>Longboards are a type of skateboard with a longer
+					wheelbase and larger, softer wheels.</p>
 
-			<h3>Electric Skateboards</h3>
-			<p>These no longer require the propelling of the skateboard
-			by means of the feet; rather an electric motor propels the board,
-			fed by an electric battery.</p>
-		</main>
-
-		<h2>Code</h2>
-		<pre><code>&lt;main>
+					<h3>Electric Skateboards</h3>
+					<p>These no longer require the propelling of the skateboard
+					by means of the feet; rather an electric motor propels the board,
+					fed by an electric battery.</p>
+				</main>
+			</div>
+			
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;main>
 	&lt;h2>Skateboards&lt;/h2>
 	&lt;p>The skateboard is the way cool kids get around&lt;/p>
 
@@ -51,5 +59,7 @@
 	by means of the feet; rather an electric motor propels the board,
 	fed by an electric battery.&lt;/p>
 &lt;/main></code></pre>
+		</div>
+
 	</body>
 </html>

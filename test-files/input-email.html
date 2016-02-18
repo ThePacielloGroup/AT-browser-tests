@@ -1,51 +1,61 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<title>test file: input type=email element</title>
+		<link rel="stylesheet" href="../style/styles.css" />
 	</head>
 	<body>
-		<h1><code>input type=email</code> element</h1>
+		<h1><code>input type=email</code> element test</h1>
+		<div class="meta">
+			<div class="criteria">
+				<h2>Pass Criteria</h2>
+				<ul>
+					<li>#1: Element is supported</li>
+					<li>#2: Element has correct HTML and Core Accessibility API mappings</li>
+					<li>#3: Control is keyboard accessible:
+						<ul>
+							<li>#3.1: Control MUST be focusable</li>
+							<li>#3.2: MUST be able to submit a value</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
 
-		<div class="criteria">
-			<h2>Pass Criteria</h2>
-			<ul>
-				<li>#1: Element is supported</li>
-				<li>#2: Element has correct HTML and Core Accessibility API mappings</li>
-				<li>#3: Control is keyboard accessible</li>
-			</ul>
+			<div class="reference">	
+				<h2>Reference</h2>
+				<ul>
+					<li><a href="http://www.w3.org/TR/html/forms.html#e-mail-state-(type=email)">HTML5 input type=email element</a></li>
+					<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-input-email">HTML Accessibility API Mappings for input type=email element without list attribute</a></li>
+					<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-textbox">Core Accessibility API Mappings for textbox role</a></li>
+					<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-input-textetc-autocomplete">HTML Accessibility API Mappings for input type=email element with list attribute</a></li>
+					<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-combobox">Core Accessibility API Mappings for combobox role</a></li>
+					<li><a href="https://www.w3.org/TR/core-aam-1.1/#ariaOwns">Core Accessibility API Mappings for aria-owns property</a></li>
+				</ul>
+			</div>
 		</div>
 
-		<div class="reference">	
-			<h2>Reference</h2>
-			<ul>
-				<li><a href="http://www.w3.org/TR/html/forms.html#e-mail-state-(type=email)">HTML5 input type=email element</a></li>
-				<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-input-email">HTML Accessibility API Mappings for input type=email element without list attribute</a></li>
-				<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-textbox">Core Accessibility API Mappings for textbox role</a></li>
-				<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-input-textetc-autocomplete">HTML Accessibility API Mappings for input type=email element with list attribute</a></li>
-				<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-combobox">Core Accessibility API Mappings for combobox role</a></li>
-				<li><a href="https://www.w3.org/TR/core-aam-1.1/#ariaOwns">Core Accessibility API Mappings for aria-owns property</a></li>
-			</ul>
+		<div class="test">
+			<h2 class="test-title" id="ei-001">Test ei-001: Unlabelled input type="email"</h2>
+
+			<div class="test-case">
+				<input type="email" />
+			</div>
+			
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;input id="input1" type="email" /></code></pre>
 		</div>
 
-		<p><input type="email"></p>
+		<div class="test">
+			<h2 class="test-title" id="ei-002">Test ei-002: Input type="email" with label</h2>
 
-		<h2>with label </h2>
-		<p><label>sign up <input type="email"></label></p>
+			<div class="test-case">
+				<label>Sign up <input id="input2" type="email" /></label>
+			</div>
+			
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;label>Sign up &lt;input id="input2" type="email" />&lt;/label></code></pre>
+		</div>
 
-		<h2>with label + placeholder</h2>
-		<p><label>sign up <input type="email" placeholder="you@email.com"></label></p>
-
-		<h2>with label + placeholder + required</h2>
-		<p><label>sign up <input type="email" placeholder="you@email.com" required></label></p>
-
-		<h2>with label + placeholder + readonly</h2>
-		<p><label>sign up <input type="email" placeholder="you@email.com" readonly></label></p>
-
-		<h2>with label + placeholder + disabled</h2>
-		<p><label>sign up <input type="email" placeholder="you@email.com" disabled></label></p>
-
-		<h2>Code</h2>
-		<p>&lt;label>sign up &lt;input type="email">&lt;/label></p>
 	</body>
 </html>

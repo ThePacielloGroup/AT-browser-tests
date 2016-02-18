@@ -1,31 +1,39 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<title>test file: mark element</title>
+		<link rel="stylesheet" href="../style/styles.css" />
 	</head>
 	<body>
-		<h1><code>mark</code> element</h1>
+		<h1><code>mark</code> element test</h1>
+		<div class="meta">
+			<div class="criteria">
+				<h2>Pass Criteria</h2>
+				<ul>
+					<li>#1: Element is supported</li>
+					<li>#2: Element has correct HTML and Core Accessibility API mappings</li>
+				</ul>
+			</div>
 
-		<div class="criteria">
-			<h2>Pass Criteria</h2>
-			<ul>
-				<li>#1: Element is supported</li>
-				<li>#2: Element has correct HTML and Core Accessibility API mappings</li>
-			</ul>
+			<div class="reference">
+				<h2>Reference</h2>
+				<ul>
+					<li><a href="http://www.w3.org/TR/html5/text-level-semantics.html#the-mark-element">HTML5 mark element</a></li>
+					<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-mark">HTML Accessibility API Mappings for mark element</a></li>
+				</ul>
+			</div>
 		</div>
 
-		<div class="reference">
-			<h2>Reference</h2>
-			<ul>
-				<li><a href="http://www.w3.org/TR/html5/text-level-semantics.html#the-mark-element">HTML5 mark element</a></li>
-				<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-mark">HTML Accessibility API Mappings for mark element</a></li>
-			</ul>
-		</div>
-			
-		<p><mark>This text</mark> is marked as highlighted</p>
+		<div class="test">
+			<h2 class="test-title" id="mk-001">Test mk-001: Mark element</h2>
 
-		<h2>Code</h2>
-		<pre><code>&lt;p>&lt;mark>This text&lt;/mark> is marked as highlighted&lt;/p></code></pre>
+			<div class="test-case">		
+				<p><mark>This text</mark> is marked as highlighted</p>
+			</div>
+
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;p>&lt;mark>This text&lt;/mark> is marked as highlighted&lt;/p></code></pre>
+		</div>
 	</body>
 </html>

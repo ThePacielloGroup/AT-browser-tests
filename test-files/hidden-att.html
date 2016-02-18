@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>test file: hidden attribute</title>
+		<link rel="stylesheet" href="../style/styles.css" />
+	</head>
+	<body>
+		<h1><code>hidden</code> attribute test</h1>
+		<div class="meta">
+			<div class="criteria">
+				<h2>Pass Criteria</h2>
+				<ul>
+					<li>#1: Attribute is supported</li>
+					<li>#2: Attribute has correct HTML and Core Accessibility API mappings</li>
+				</ul>
+			</div>
+
+			<div class="reference">
+				<h2>Reference</h2>
+				<ul>
+					<li><a href="https://www.w3.org/TR/html51/editing.html#the-hidden-attribute">HTML5 hidden attribute</a>
+					<li><a href="https://www.w3.org/TR/html-aam-1.0/#html-attribute-state-and-property-mappings#att-hidden">HTML Accessibility API Mappings for hidden attribute</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="test">
+			<h2 class="test-title" id="hn-001">Test hn-001: Hidden attribute</h2>
+
+			<div class="test-case">
+				<p hidden>This element should be hidden both visually and to assistive technology.</p>
+			</div>
+			
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;p hidden>This element should be hidden both visually and to assistive technology.&lt;/p></code></pre>
+		</div>
+		
+	</body>
+</html>

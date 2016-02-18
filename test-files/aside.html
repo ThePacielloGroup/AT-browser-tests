@@ -1,69 +1,86 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<title>test file: aside element</title>
+		<link rel="stylesheet" href="../style/styles.css" />
 	</head>
 	<body>
-		<h1><code>aside</code> element</h1>
+		<h1><code>aside</code> element test</h1>
+		<div class="meta">
+			<div class="criteria">
+				<h2>Pass Criteria</h2>
+				<ul>
+					<li>#1: Element is supported</li>
+					<li>#2: Element has correct HTML and Core Accessibility API mappings</li>
+				</ul>
+			</div>
 
-		<div class="criteria">
-			<h2>Pass Criteria</h2>
-			<ul>
-				<li>#1: Element is supported</li>
-				<li>#2: Element has correct HTML and Core Accessibility API mappings</li>
-			</ul>
+			<div class="reference">
+				<h2>Reference</h2>
+				<ul>
+					<li><a href="http://www.w3.org/TR/html/grouping-content.html#the-aside-element">HTML5 aside element</a></li>
+					<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-aside">HTML Accessibility API Mappings for aside element</a></li>
+					<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-complementary">Core Accessibility API Mappings for complementary role</a></li>
+				</ul>
+			</div>
 		</div>
 
-		<div class="reference">
-			<h2>Reference</h2>
-			<ul>
-				<li><a href="http://www.w3.org/TR/html/grouping-content.html#the-aside-element">HTML5 aside element</a></li>
-				<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-aside">HTML Accessibility API Mappings for aside element</a></li>
-				<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-complementary">Core Accessibility API Mappings for complementary role</a></li>
-			</ul>
+		<div class="test">
+			<h2 class="test-title" id="as-001">Test as-001: Plain aside</h2>
+
+			<div class="test-case">					
+				<aside>Lorem ipsum...</aside>
+			</div>
+
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;aside>Lorem ipsum...&lt;/aside></code></pre>
 		</div>
 
-		<ul>
-			<li>Plain</li>
-			<li>With <code>&lt;h1></code></li>
-			<li>With <code>aria-label</code>
-			<li>With <code>&lt;h1></code> referenced by <code>aria-labelledby</code></li>
-		</ul>
+		<div class="test">
+			<h2 class="test-title" id="as-002">Test as-002: Aside with <code>&lt;h1></code></h2>
 
-		<aside>Lorem ipsum...</aside>
-		<hr>
-
-		<aside>
-			<h1>Once upon a time</h1>
-			Lorem ipsum...
-		</aside>
-		<hr>
-
-		<aside aria-label="Once upon a time">Lorem ipsum...</aside>
-		<hr>
-
-		<aside aria-labelledby="aside-title">
-			<h1 id="aside-title">Once upon a time</h1>
-			Lorem ipsum...
-		</aside>
-
-		<h2>Code</h2>
-		<pre><code>&lt;aside>Lorem ipsum...&lt;/aside></code></pre>
-		<hr>
-
-		<pre><code>&lt;aside>
+			<div class="test-case">				
+				<aside>
+					<h1>Once upon a time</h1>
+					Lorem ipsum...
+				</aside>
+			</div>
+			
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;aside>
 	&lt;h1>Once upon a time&lt;/h1>
 	Lorem ipsum...
 &lt;/aside></code></pre>
-		<hr>
+		</div>
 
-		<pre><code>&lt;aside aria-label="Once upon a time">Lorem ipsum...&lt;/aside></code></pre>
-		<hr>
+		<div class="test">
+			<h2 class="test-title" id="as-003">Test as-003: Aside with <code>aria-label</code></h2>
 
-		<pre><code>&lt;aside aria-labelledby="aside-title">
+			<div class="test-case">					
+				<aside aria-label="Once upon a time">Lorem ipsum...</aside>
+			</div>
+
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;aside aria-label="Once upon a time">Lorem ipsum...&lt;/aside></code></pre>
+		</div>
+
+		<div class="test">
+			<h2 class="test-title" id="as-004">Test as-004: Aside with <code>&lt;h1></code> referenced by <code>aria-labelledby</code></h2>
+
+			<div class="test-case">					
+				<aside aria-labelledby="aside-title">
+					<h1 id="aside-title">Once upon a time</h1>
+					Lorem ipsum...
+				</aside>
+			</div>
+
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;aside aria-labelledby="aside-title">
 	&lt;h1 id="aside-title">Once upon a time&lt;/h1>
 	Lorem ipsum...
 &lt;/aside></code></pre>
+		</div>
+
 	</body>
 </html>

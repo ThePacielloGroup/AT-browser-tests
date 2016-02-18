@@ -1,44 +1,56 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<title> Test file: video + track element</title>
+		<link rel="stylesheet" href="../style/styles.css" />
 	</head>
 	<body>
-		<h1><code>video</code> + <code>track</code> element</h1>
+		<h1><code>video</code> + <code>track</code> element test</h1>
+		<div class="meta">
+			<div class="criteria">
+				<h2>Pass Criteria</h2>
+				<ul>
+					<li>#1: Elements are supported</li>
+					<li>#2: Elementa have correct HTML and Core Accessibility API mappings</li>
+					<li>#3: At least one subtitle format is supported (WebVTT or TTML)</li>
+					<li>#4: Controls are keyboard accessible:
+						<ul>
+							<li>#4.1: Controls MUST be focusable</li>
+							<li>#4.2: MUST be able to activate controls, including any child menu/controls</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
 
-		<div class="criteria">
-			<h2>Pass Criteria</h2>
-			<ul>
-				<li>#1: Elements are supported</li>
-				<li>#2: Elementa have correct HTML and Core Accessibility API mappings</li>
-				<li>#3: Controls are keyboard accessible</li>
-			</ul>
+			<div class="reference">
+				<h2>Reference</h2>
+				<ul>
+					<li><a href="http://www.w3.org/TR/html5/embedded-content-0.html#the-video-element">HTML5 video element</a></li>
+					<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-video">HTML Accessibility API Mappings for video element</a></li>
+					<li><a href="http://www.w3.org/TR/html5/embedded-content-0.html#the-track-element">HTML5 track element</a></li>
+					<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-track">HTML Accessibility API Mappings for track element</a></li>
+				</ul>
+			</div>
 		</div>
 
-		<div class="reference">
-			<h2>Reference</h2>
-			<ul>
-				<li><a href="http://www.w3.org/TR/html5/embedded-content-0.html#the-video-element">HTML5 video element</a></li>
-				<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-video">HTML Accessibility API Mappings for video element</a></li>
-				<li><a href="http://www.w3.org/TR/html5/embedded-content-0.html#the-track-element">HTML5 track element</a></li>
-				<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-track">HTML Accessibility API Mappings for track element</a></li>
-			</ul>
-		</div>
+		<div class="test">
+			<h2 class="test-title" id="vd-001">Test vd-001: Video and track elements</h2>
 
-		<p>
-			<video controls width="300" height="300">
-  				<source src="../images/elo.mp4" type="video/mp4">
-				<source src="../images/elo.ogg" type="video/ogg">
-				<track kind="captions" srclang="en" src="../images/elo.vtt" label="English" default>
-			</video>
-		</p>
-
-		<h2>Code</h2>
-		<pre><code>&lt;video controls width="300" height="300">
+			<div class="test-case">
+				<video id="video1" controls width="300" height="300">
+					<source src="../images/elo.mp4" type="video/mp4">
+					<source src="../images/elo.ogg" type="video/ogg">
+					<track kind="captions" srclang="en" src="../images/elo.vtt" label="English" default>
+				</video>
+			</div>
+			
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;video id="video1" controls width="300" height="300">
 	&lt;source src="../images/elo.mp4" type="video/mp4">
 	&lt;source src="../images/elo.ogg" type="video/ogg">
 	&lt;track kind="captions" srclang="en" src="../images/elo.vtt" label="English">
 &lt;/video></code></pre>
+		</div>
 	</body>
 </html>

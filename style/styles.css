@@ -36,7 +36,7 @@ body {
 	margin: 1.5em auto;
 	width: 90%;
 	max-width: 54em;
-	font: 400 105%/1 "Work Sans", sans-serif;
+	font: 400 105%/1.4 "Work Sans", sans-serif;
 	background: #f7f7f5;
 	color: #333;
 }
@@ -56,10 +56,6 @@ a:hover {
 a:active {
 	background: #333;
 	color: #fff;
-}
-
-p, ul, ol {
-	line-height: 1.4;
 }
 
 li + li {

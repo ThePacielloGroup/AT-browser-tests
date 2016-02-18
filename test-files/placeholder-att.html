@@ -1,35 +1,42 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<title>test file: placeholder attribute</title>
+		<link rel="stylesheet" href="../style/styles.css" />
 	</head>
 	<body>
-		<h1><code>placeholder</code> attribute</h1>
+		<h1><code>placeholder</code> attribute test</h1>
+		<div class="meta">
+			<div class="criteria">
+				<h2>Pass Criteria</h2>
+				<ul>
+					<li>#1: Attribute is supported</li>
+					<li>#2: Attribute has correct HTML and Core Accessibility API mappings</li>
+				</ul>
+			</div>
 
-		<div class="criteria">
-			<h2>Pass Criteria</h2>
-			<ul>
-				<li>#1: Attribute is supported</li>
-				<li>#2: Attribute has correct HTML and Core Accessibility API mappings</li>
-			</ul>
+			<div class="reference">
+				<h2>Reference</h2>
+				<ul>
+					<li><a href="https://www.w3.org/TR/html51/semantics.html#the-placeholder-attribute">HTML5 placeholder attribute</a>
+					<li><a href="https://www.w3.org/TR/html-aam-1.0/#html-attribute-state-and-property-mappings#att-placeholder">HTML Accessibility API Mappings for placeholder attribute</a></li>
+				</ul>
+			</div>
 		</div>
 
-		<div class="reference">
-			<h2>Reference</h2>
-			<ul>
-				<li><a href="https://www.w3.org/TR/html51/semantics.html#the-placeholder-attribute">HTML5 placeholder attribute</a>
-				<li><a href="https://www.w3.org/TR/html-aam-1.0/#html-attribute-state-and-property-mappings#att-placeholder">HTML Accessibility API Mappings for placeholder attribute</a></li>
-			</ul>
+		<div class="test">
+			<h2 class="test-title" id="ph-001">Test ph-001: Placeholder attribute</h2>
+
+			<p>
+				<label for="input1">Field that has a placeholder:</label>
+				<input id="input1" type="text" placeholder="placeholder text" />
+			</p>
+			
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;label for="input1">Field that has a placeholder:&lt;/label>
+&lt;input id="input1" type="text" placeholder="placeholder text" /></code></pre>
 		</div>
 
-		 <p>
-			 <label for="input1">Field that has a placeholder:</label>
-			 <input id="input1" type="text" placeholder="placeholder attribute" />
-		<p>
-
-		<h2>Code</h2>
-		<pre><code>&lt;label for="input1">Field that has a placeholder:&lt;/label>
-	&lt;input id="input1" type="text" placeholder="placeholder attribute" /></code></pre>
 	</body>
 </html>

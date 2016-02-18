@@ -1,61 +1,52 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<title>test file: input type time element</title>
+		<link rel="stylesheet" href="../style/styles.css" />
 	</head>
 	<body>
 		<h1><code>input type=time</code> element</h1>
-
-		<div class="criteria">
-			<h2>Pass Criteria</h2>
-			<ul>
-				<li>#1: Element is supported</li>
-				<li>#2: Element has correct HTML and Core Accessibility API mappings</li>
-				<li>#3: Control is keyboard accessible:
-					<ul>
-						<li>#3.1: Control MUST be focusable</li>
-						<li>#3.2: MUST be able to open time control and select a time:
-							<ul>
-								<li>#3.1: Control MUST be focusable</li>
-								<li>#3.2: MUST be able to open time control and select a time</li>
-							</ul>
-						</li>
-					</ul>
-				</li>
-			</ul>
+		<div class="meta">
+			<div class="criteria">
+				<h2>Pass Criteria</h2>
+				<ul>
+					<li>#1: Element is supported</li>
+					<li>#2: Element has correct HTML and Core Accessibility API mappings</li>
+					<li>#3: Control is keyboard accessible:
+						<ul>
+							<li>#3.1: Control MUST be focusable</li>
+							<li>#3.2: MUST be able to open time control and select a time</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			
+			<div class="reference">	
+				<h2>Reference</h2>
+				<ul>
+					<li><a href="http://www.w3.org/TR/html5/forms.html#time-state-(type=time)">HTML5 input type=time element</a></li>
+					<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-input-time">HTML Accessibility API Mappings for input type=time element</a></li>
+				</ul>
+			</div>
 		</div>
 
-		<div class="reference">	
-			<h2>Reference</h2>
-			<ul>
-				<li><a href="http://www.w3.org/TR/html5/forms.html#time-state-(type=time)">HTML5 input type=time element</a></li>
-				<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-input-time">HTML Accessibility API Mappings for input type=time element</a></li>
-			</ul>
+		<div class="test">
+			<h2 class="test-title" id="ti-001">Test ti-001: Unlabelled input type="time"</h2>
+
+			<p><input id="input1" type="time" /></p>
+			
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;input id="input2" type="time" /></code></pre>
 		</div>
 
-		<form>
-			<p><input id="input1" type="time"></p>
-
-			<h2>with label </h2>
-			<p><label>time of birth <input id="input2" type="time"></label></p>
-
-			<h2>with label + placeholder</h2>
-			<p><label>time of birth <input id="input3" type="time" placeholder="first name"></label></p>
-
-			<h2>with label + placeholder + required</h2>
-			<p><label>time of birth <input id="input4" type="time" placeholder="first name" required></label></p>
-
-			<h2>with label + placeholder + readonly</h2>
-			<p><label>time of birth <input id="input5" type="time" placeholder="first name" readonly></label></p>
-
-			<h2>with label + placeholder + disabled</h2>
-			<p><label>time of birth <input id="input6" type="time" placeholder="first name" disabled></label></p>
-
-			<input type="submit">
-		</form>
-
-		<h2>Code</h2>
-		<pre><code>&lt;label>time of birth &lt;input id="input2" type="time">&lt;/label></code></pre>
+		<div class="test">
+			<h2 class="test-title" id="ti-002">Test ti-002: Input type="time" with label</h2>
+			
+			<label>Time of birth <input id="input2" type="time" /></label>
+			
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;label>Time of birth &lt;input id="input2" type="time" />&lt;/label></code></pre>
+		</div>
 	</body>
 </html>

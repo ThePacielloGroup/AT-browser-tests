@@ -1,49 +1,55 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<title>test file: input element + datalist element</title>
+		<link rel="stylesheet" href="../style/styles.css" />
 	</head>
 	<body>
 		<h1><code>input</code> element + <code>datalist</code> elmement</h1>
+		<div class="meta">
+			<div class="criteria">
+				<h2>Pass Criteria</h2>
+				<ul>
+					<li>#1: Element is supported</li>
+					<li>#2: Element has correct HTML and Core Accessibility API mappings</li>
+					<li>#3: Control is keyboard accessible:
+						<ul>
+							<li>#3.1: Control MUST be focusable</li>
+							<li>#3.2: MUST be able to select item from list</li>
+							<li>#3.3: MUST be enter or edit text</li>
+							<li>#3.4: MUST be able to submit selected value</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
 
-		<div class="criteria">
-			<h2>Pass Criteria</h2>
-			<ul>
-				<li>#1: Element is supported</li>
-				<li>#2: Element has correct HTML and Core Accessibility API mappings</li>
-				<li>#3: Control is keyboard accessible:
-					<ul>
-						<li>#3.1: Control MUST be focusable</li>
-						<li>#3.2: MUST be able to select item from list</li>
-						<li>#3.3: MUST be enter or edit text</li>
-						<li>#3.4: MUST be able to submit selected value</li>
-					</ul>
-				</li>
-			</ul>
+			<div class="reference">
+				<h2>Reference</h2>
+				<ul>
+					<li><a href="http://www.w3.org/TR/html/forms.html#the-datalist-element">HTML5 datalist element</a></li>
+					<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-datalist">HTML Accessibility API Mappings for datalist element</a></li>
+					<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-listbox">Core Accessibility API Mappings for listbox role</a></li>
+					<li><a href="https://www.w3.org/TR/core-aam-1.1/#ariaMultiselectableFalse">Core Accessibility API Mappings for aria-multiselectable="false"</a></li>
+				</ul>
+			</div>
 		</div>
 
-		<div class="reference">
-			<h2>Reference</h2>
-			<ul>
-				<li><a href="http://www.w3.org/TR/html/forms.html#the-datalist-element">HTML5 datalist element</a></li>
-				<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-datalist">HTML Accessibility API Mappings for datalist element</a></li>
-				<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-listbox">Core Accessibility API Mappings for listbox role</a></li>
-				<li><a href="https://www.w3.org/TR/core-aam-1.1/#ariaMultiselectableFalse">Core Accessibility API Mappings for aria-multiselectable="false"</a></li>
-			</ul>
-		</div>
-
-		<label>sites <input list="datalist1" placeholder="text+list" type="text"></label>
-		<datalist id="datalist1">
-			<option value="http://www.google.com/" label="Google">Google</option>
-			<option value="http://www.reddit.com/" label="Reddit">Reddit</option>
-		</datalist>
-
-		<h2>Code</h2>
-		<pre><code>&lt;label>sites &lt;input list="hpurls" placeholder="text+list" type="text">&lt;/label>
+		<div class="test">
+			<h2 class="test-title" id="di-001">Test di-001: DataList with input</h2>
+		
+			<label>Sites <input list="datalist1" placeholder="text+list" type="text"></label>
+			<datalist id="datalist1">
+				<option value="http://www.google.com/" label="Google">Google</option>
+				<option value="http://www.reddit.com/" label="Reddit">Reddit</option>
+			</datalist>
+			
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;label>Sites &lt;input list="datalist1" placeholder="text+list" type="text">&lt;/label>
 &lt;datalist id="datalist1">
-	&lt;option value="http://www.google.com/" label="Google">&lt;/option><br>
-	&lt;option value="http://www.reddit.com/" label="Reddit">&lt;/option><br>
+	&lt;option value="http://www.google.com/" label="Google">&lt;/option>
+	&lt;option value="http://www.reddit.com/" label="Reddit">&lt;/option>
 &lt;/datalist></code></pre>
+		</div>
 	</body>
 </html>

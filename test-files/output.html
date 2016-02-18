@@ -1,40 +1,46 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<title>test file: output element</title>
+		<link rel="stylesheet" href="../style/styles.css" />
 	</head>
 	<body>
-		<h1><code>output</code> element</h1>
+		<h1><code>output</code> element test</h1>
+		<div class="meta">
+			<div class="criteria">
+				<h2>Pass Criteria</h2>
+				<ul>
+					<li>#1: Element is supported</li>
+					<li>#2: Element has correct HTML and Core Accessibility API mappings</li>
+				</ul>
+			</div>
 
-		<div class="criteria">
-			<h2>Pass Criteria</h2>
-			<ul>
-				<li>#1: Element is supported</li>
-				<li>#2: Element has correct HTML and Core Accessibility API mappings</li>
-			</ul>
+			<div class="reference">
+				<h2>Reference</h2>
+				<ul>
+					<li><a href="http://www.w3.org/TR/html5/forms.html#the-output-element">HTML5 output element</a></li>
+					<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-output">HTML Accessibility API Mappings for output element</a></li>
+					<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-status">Core Accessibility API Mappings for status role</a></li>
+				</ul>
+			</div>
 		</div>
 
-		<div class="reference">
-			<h2>Reference</h2>
-			<ul>
-				<li><a href="http://www.w3.org/TR/html5/forms.html#the-output-element">HTML5 output element</a></li>
-				<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-output">HTML Accessibility API Mappings for output element</a></li>
-				<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-status">Core Accessibility API Mappings for status role</a></li>
-			</ul>
-		</div>
+		<div class="test">
+			<h2 class="test-title" id="op-001">Test op-001: Output calculated from two inputs</h2>
 
-		<p><form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
-			<input type="range" name="b" value="50" /> +
-			<input type="number" name="a" value="10" /> =
-			<output name="result"></output>
-		</form></p>
-
-		<h2>Code</h2>
-		<pre></code>&lt;form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+			<form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+				<input type="range" name="b" value="50" /> +
+				<input type="number" name="a" value="10" /> =
+				<output name="result"></output>
+			</form>
+			
+			<h3 class="code-title">Code</h3>
+			<pre></code>&lt;form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
 	&lt;input type="range" name="b" id="b" value="50" /> +<br>
 	&lt;input type="number" name="a" id="a" value="10" /> =<br>
 	&lt;output name="result" for="b a">&lt;/output><br>
 &lt;/form></code></pre>
+		</div>
 	</body>
 </html>

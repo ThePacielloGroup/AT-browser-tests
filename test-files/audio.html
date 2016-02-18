@@ -1,47 +1,51 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<title> Test file: audio element</title>
+		<link rel="stylesheet" href="../style/styles.css" />
 	</head>
 	<body>
-		<h1><code>audio</code> element</h1>
+		<h1><code>audio</code> element test</h1>
+		<div class="meta">
+			<div class="criteria">
+				<h2>Pass Criteria</h2>
+				<ul>
+					<li>#1: Element is supported</li>
+					<li>#2: Element has correct HTML and Core Accessibility API mappings</li>
+					<li>#3: Controls are keyboard accessible:
+						<ul>
+							<li>#3.1: Controls MUST be focusable</li>
+							<li>#3.2: MUST be able to activate controls, including any child menu/controls</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
 
-		<div class="criteria">
-			<h2>Pass Criteria</h2>
-			<ul>
-				<li>#1: Element is supported</li>
-				<li>#2: Element has correct HTML and Core Accessibility API mappings</li>
-				<li>#3: Controls are keyboard accessible:
-					<ul>
-						<li>#3.1: Controls MUST be focusable</li>
-						<li>#3.2: MUST be able to activate controls, including any child menu/controls</li>
-					</ul>
-				</li>
-			</ul>
+			<div class="reference">
+				<h2>Reference</h2>
+				<ul>
+					<li><a href="http://www.w3.org/TR/html5/embedded-content-0.html#the-audio-element">HTML5 audio element</a></li>
+					<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-audio">HTML Accessibility API Mappings for audio element</a></li>
+				</ul>
+			</div>
 		</div>
 
-		<div class="reference">
-			<h2>Reference</h2>
-			<ul>
-				<li><a href="http://www.w3.org/TR/html5/embedded-content-0.html#the-audio-element">HTML5 audio element</a></li>
-				<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-audio">HTML Accessibility API Mappings for audio element</a></li>
-			</ul>
-		</div>
+		<div class="test">
+			<h2 class="test-title" id="au-001">Test au-001: Audio Element</h2>
 
-		<p>
 			<audio id="audio1" controls>
-				<source src="../audio/jeffbob.mp3" type="audio/mpeg">
-				<source src="../audio/jeffbob.ogg" type="audio/ogg">
+				<source src="../audio/jeffbob.mp3" type="audio/mpeg" />
+				<source src="../audio/jeffbob.ogg" type="audio/ogg" />
 			</audio>
-		</p>
-
-		<h2>Code</h2>
-		<pre>&lt;audio id="audio1" controls>
-	&lt;source src="audio/jeffbob.mp3" type="audio/mpeg">
-	&lt;source src="audio/jeffbob.ogg" type="audio/ogg">
+			
+			<h3 class="code-title">Code</h3>
+			<pre>&lt;audio id="audio1" controls>
+	&lt;source src="audio/jeffbob.mp3" type="audio/mpeg" />
+	&lt;source src="audio/jeffbob.ogg" type="audio/ogg" />
 &lt;/audio></pre>
+		</div>
 
-		<p>Audio file: <a href="https://archive.org/details/Jeffbob">Spam call: Bob hangs up 7 mins into his survey</a> by Bruce Lawson</p>
+		<small>Audio file: <a href="https://archive.org/details/Jeffbob">Spam call: Bob hangs up 7 mins into his survey</a> by Bruce Lawson</small>
 	</body>
 </html>

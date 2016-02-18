@@ -1,61 +1,57 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<title>test file: input type=search element</title>
+		<link rel="stylesheet" href="../style/styles.css" />
 	</head>
 	<body>
-		<h1><code>input type=search</code> element</h1>
+		<h1><code>input type=search</code> element test</h1>
+		<div class="meta">
+			<div class="criteria">
+				<h2>Pass Criteria</h2>
+				<ul>
+					<li>#1: Element is supported</li>
+					<li>#2: Element has correct HTML and Core Accessibility API mappings</li>
+					<li>#3: Control is keyboard accessible:
+						<ul>
+							<li>#3.1: Control MUST be focusable</li>
+							<li>#3.2: MUST be able to type and select text</li>
+							<li>#3.3: MUST be able to submit a value</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
 
-		<div class="criteria">
-			<h2>Pass Criteria</h2>
-			<ul>
-				<li>#1: Element is supported</li>
-				<li>#2: Element has correct HTML and Core Accessibility API mappings</li>
-				<li>#3: Control is keyboard accessible:
-					<ul>
-						<li>#3.1: Control MUST be focusable</li>
-						<li>#3.2: MUST be able to type and select text</li>
-						<li>#3.3: MUST be able to submit a value</li>
-					</ul>
-				</li>
-			</ul>
+			<div class="reference">	
+				<h2>Reference</h2>
+				<ul>
+					<li><a href="http://www.w3.org/TR/html/forms.html#text-%28type=text%29-state-and-search-state-%28type=search%29">HTML5 input type=search element</a></li>
+					<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-input-search">HTML Accessibility API Mappings for input type=search element</a></li>
+					<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-textbox">Core Accessibility API Mappings for textbox role</a></li>
+					<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-input-textetc-autocomplete">HTML Accessibility API Mappings for input type=search element with list attribute</a></li>
+					<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-combobox">Core Accessibility API Mappings for combobox role</a></li>
+					<li><a href="https://www.w3.org/TR/core-aam-1.1/#ariaOwns">Core Accessibility API Mappings for aria-owns property</a></li>
+				</ul>
+			</div>
 		</div>
 
-		<div class="reference">	
-			<h2>Reference</h2>
-			<ul>
-				<li><a href="http://www.w3.org/TR/html/forms.html#text-%28type=text%29-state-and-search-state-%28type=search%29">HTML5 input type=search element</a></li>
-				<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-input-search">HTML Accessibility API Mappings for input type=search element</a></li>
-				<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-textbox">Core Accessibility API Mappings for textbox role</a></li>
-				<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-input-textetc-autocomplete">HTML Accessibility API Mappings for input type=search element with list attribute</a></li>
-				<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-combobox">Core Accessibility API Mappings for combobox role</a></li>
-				<li><a href="https://www.w3.org/TR/core-aam-1.1/#ariaOwns">Core Accessibility API Mappings for aria-owns property</a></li>
-			</ul>
+		<div class="test">
+			<h2 class="test-title" id="si-001">Test si-001: Unlabelled input type="search"</h2>
+
+			<input id="input1" type="search" />
+			
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;input id="input2" type="search" /></code></pre>
 		</div>
 
-		<form>
-			<p><input id="input1" type="search"></p>
+		<div class="test">
+			<h2 class="test-title" id="si-001">Test si-001: Input type="search" with label</h2>
 
-			<h2>with label </h2>
-			<p><label>site search <input id="input2" type="search"></label></p>
+			<label>Site search <input id="input2" type="search" /></label>
 
-			<h2>with label + placeholder</h2>
-			<p><label>site search <input id="input3" type="search" placeholder="keyword or term"></label></p>
-
-			<h2>with label + placeholder + required</h2>
-			<p><label>site search <input id="input4" type="search" placeholder="keyword or term" required></label></p>
-
-			<h2>with label + placeholder + readonly</h2>
-			<p><label>site search <input id="input5" type="search" placeholder="keyword or term" readonly></label></p>
-
-			<h2>with label + placeholder + disabled</h2>
-			<p><label>site search <input id="input6" type="search" placeholder="keyword or term" disabled></label></p>
-
-			<p><input type="submit"></p>
-		</form>
-
-		<h2>Code</h2>
-		<pre><code>&lt;label>site search &lt;input id="input1" type="search">&lt;/label></code></pre>
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;label>Site search &lt;input id="input2" type="search" />&lt;/label></code></pre>
+		</div>
 	</body>
 </html>

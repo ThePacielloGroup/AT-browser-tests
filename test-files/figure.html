@@ -1,43 +1,42 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<title>test file: figure element</title>
+		<link rel="stylesheet" href="../style/styles.css" />
 	</head>
 	<body>
-		<h1><code>figure</code> element</h1>
+		<h1><code>figure</code> element test</h1>
+		<div class="meta">
+			<div class="criteria">
+				<h2>Pass Criteria</h2>
+				<ul>
+					<li>#1: Element is supported</li>
+					<li>#2: Element has correct HTML and Core Accessibility API mappings</li>
+				</ul>
+			</div>
 
-		<div class="criteria">
-			<h2>Pass Criteria</h2>
-			<ul>
-				<li>#1: Element is supported</li>
-				<li>#2: Element has correct HTML and Core Accessibility API mappings</li>
-			</ul>
+			<div class="reference">
+				<h2>Reference</h2>
+				<ul>
+					<li><a href="http://www.w3.org/TR/html/grouping-content.html#the-figure-element">HTML5 figure element</a></li>
+					<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-figure">HTML Accessibility API Mappings for figure element</a></li>
+				</ul>
+			</div>
 		</div>
 
-		<div class="reference">
-			<h2>Reference</h2>
-			<ul>
-				<li><a href="http://www.w3.org/TR/html/grouping-content.html#the-figure-element">HTML5 figure element</a></li>
-				<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-figure">HTML Accessibility API Mappings for figure element</a></li>
-			</ul>
-		</div>
+		<div class="test">
+			<h2 class="test-title" id="fg-001">Test fg-001: Figure element</h2>
 					
-		<p>
 			<figure>
-				<img src="../images/HTML5_Logo.png" alt="HTML5 logo" width="128" height="128">
+				<img src="../images/HTML5_Logo.png" alt="HTML5 logo" width="128" height="128" />
 			</figure>
-		</p>
-
-		<h2>Code</h2>
-		<pre><code>&lt;figure>
-	&lt;img src="../images/HTML5_Logo.png" alt="HTML5 logo" width="128" height="128">
+			
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;figure>
+	&lt;img src="../images/HTML5_Logo.png" alt="HTML5 logo" width="128" height="128" />
 &lt;/figure></code></pre>
+		</div>
 
-		<h2>Reference</h2>
-		<ul>
-			<li><a href="http://www.w3.org/TR/html/grouping-content.html#the-figure-element">HTML5 figure element</a></li>
-			<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-figure">HTML Accessibility API Mappings for figure element</a></li>
-		</ul>
 	</body>
 </html>

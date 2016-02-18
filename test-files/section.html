@@ -1,77 +1,85 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<title>test file: section element</title>
+		<link rel="stylesheet" href="../style/styles.css" />
 	</head>
 	<body>
-		<h1><code>section</code> element</h1>
+		<h1><code>section</code> element test</h1>
+		<div class="meta">
+			<div class="criteria">
+				<h2>Pass Criteria</h2>
+				<ul>
+					<li>#1: Element is supported</li>
+					<li>#2: Element has correct HTML and Core Accessibility API mappings</li>
+				</ul>
+			</div>
 
-		<div class="criteria">
-			<h2>Pass Criteria</h2>
-			<ul>
-				<li>#1: Element is supported</li>
-				<li>#2: Element has correct HTML and Core Accessibility API mappings</li>
-			</ul>
+			<div class="reference">
+				<h2>Reference</h2>
+				<ul>
+					<li><a href="http://www.w3.org/TR/html5/sections.html#the-section-element">HTML5 section element</a></li>
+					<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-section">HTML Accessibility API Mappings for section element</a></li>
+					<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-region">Core Accessibility API Mappings for region role</a></li>
+				</ul>
+			</div>
 		</div>
 
-		<div class="reference">
-			<h2>Reference</h2>
-			<ul>
-				<li><a href="http://www.w3.org/TR/html5/sections.html#the-section-element">HTML5 section element</a></li>
-				<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-section">HTML Accessibility API Mappings for section element</a></li>
-				<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-region">Core Accessibility API Mappings for region role</a></li>
-			</ul>
-		</div>
+		<div class="test">
+			<h2 class="test-title" id="sc-001">Test sc-001: Plain Section</h2>
 
-		<ul>
-			<li>Plain</li>
-			<li>With <code>&lt;h1></code></li>
-			<li>With <code>aria-label</code>
-			<li>With <code>&lt;h1></code> referenced by <code>aria-labelledby</code></li>
-		</ul>
-
-		<section>
-			Lorem ipsum...
-		</section>
-		<hr>
-
-		<section>
-			<h1>Once upon a time</h1>
-			Lorem ipsum...
-		</section>
-		<hr>
-
-		<section aria-label="Once upon a time">
-			Lorem ipsum...
-		</section>
-		<hr>
-
-		<section aria-labelledby="section-title">
-			<h1 id="section-title">Once upon a time</h1>
-			Lorem ipsum...
-		</section>
-
-		<h2>Code</h2>
-		<pre><code>&lt;section>
+			<section>
+				Lorem ipsum...
+			</section>
+			
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;section>
 	Lorem ipsum...
 &lt;/section></code></pre>
-		<hr>
+		</div>
 
-		<pre><code>&lt;section>
+		<div class="test">
+			<h2 class="test-title" id="sc-002">Test sc-002: Section with <code>&lt;h1></code></h2>
+
+			<section>
+				<h1>Once upon a time</h1>
+				Lorem ipsum...
+			</section>
+			
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;section>
 	&lt;h1>Once upon a time&lt;/h1>
 	Lorem ipsum...
 &lt;/section></code></pre>
-		<hr>
+		</div>
 
-		<pre><code>&lt;section aria-label="Once upon a time">
+		<div class="test">
+			<h2 class="test-title" id="sc-003">Test sc-003: Section with <code>aria-label</code></h2>
+
+			<section aria-label="Once upon a time">
+				Lorem ipsum...
+			</section>
+			
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;section aria-label="Once upon a time">
 	Lorem ipsum...
 &lt;/section></code></pre>
-		<hr>
+		</div>
 
-		<pre><code>&lt;section aria-labelledby="section-title">
+		<div class="test">
+			<h2 class="test-title" id="sc-004">Test sc-004: Section with <code>&lt;h1></code> referenced by <code>aria-labelledby</code></h2>
+
+			<section aria-labelledby="section-title">
+				<h1 id="section-title">Once upon a time</h1>
+				Lorem ipsum...
+			</section>
+			
+			<h3 class="code-title">Code</h3>
+					<pre><code>&lt;section aria-labelledby="section-title">
 	&lt;h1 id="section-title">Once upon a time&lt;/h1>
 	Lorem ipsum...
 &lt;/section></code></pre>
+		</div>
 	</body>
 </html>

@@ -29,6 +29,7 @@
 					<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-details">HTML Accessibility API Mappings for details element</a></li>
 					<li><a href="http://www.w3.org/TR/html51/semantics.html#the-summary-element">HTML5.1 summary element</a></li>
 					<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-summary">HTML Accessibility API Mappings for summary element</a></li>
+					<li><a href="https://www.w3.org/TR/html-aam-1.0/#att-open-details">HTML Accessibility API Mappings for open attribute</a> [Test: ds-002]</li>
 				</ul>
 			</div>
 		</div>
@@ -47,6 +48,23 @@
 			<pre><code>&lt;details id="details1">
 	&lt;summary>Why use HTML5?&lt;/summary>
 	&lt;p>You should use HTML5 because...&lt;/p>
+&lt;/details></code></pre>
+		</div>
+		
+		<div class="test">
+			<h2 class="test-title" id="ds-002">Test ds-002: Details element with open attribute</h2>
+
+			<div class="test-case">
+				<details id="details2" open>
+					<summary>Am I open?</summary>
+					<p>This should be expanded by default</p>
+				</details>
+			</div>
+			
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;details id="details2" open>
+	&lt;summary>Am I open?&lt;/summary>
+	&lt;p>This should be expanded by default&lt;/p>
 &lt;/details></code></pre>
 		</div>
 	</body>

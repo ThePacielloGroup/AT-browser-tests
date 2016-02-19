@@ -36,17 +36,25 @@
 			<h2 class="test-title" id="mc-001">Test mc-001: Menu element with type="context"</h2>
 
 			<div class="test-case">
-				<button id="menu1" menu="menu">I have a context menu. Right click (or equivalent) to test</button>
-				<menu type="context" id="menu">
+				<button id="menu-button1" menu="menu1">I have a context menu. Right click (or equivalent) to test</button>
+				<menu type="context" id="menu1">
 					<menuitem label="I’m a menuitem" />
 				</menu>
 			</div>
 			
 			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;button id="menu1" menu="menu">I have a context menu. Right click (or equivalent) to test&lt;/button>
-&lt;menu type="context" id="menu">
+			<pre><code>&lt;button id="menu-button1" menu="menu1">I have a context menu. Right click (or equivalent) to test&lt;/button>
+&lt;menu type="context" id="menu1">
 	&lt;menuitem label="I’m a menuitem" />
 &lt;/menu></code></pre>
 		</div>
+		
+		<script>
+			var el = document.getElementById('menu1'),
+			    isSupported = (typeof HTMLMenuElement != 'undefined' && el instanceof HTMLMenuElement 
+				               && 'type' in el && el.type === 'context');
+			
+			console.log("Menu type=context: " + isSupported);
+		</script>
 	</body>
 </html>

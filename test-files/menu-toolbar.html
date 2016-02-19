@@ -42,5 +42,13 @@
 	&lt;li>Toolbar item two&lt;/li>
 &lt;/menu></code></pre>
 		</div>
+		
+		<script>
+			var el = document.getElementById('menu1'),
+			    isSupported = (typeof HTMLMenuElement != 'undefined' && el instanceof HTMLMenuElement 
+				               && 'type' in el && el.type === 'toolbar');
+			
+			console.log("Menu type=toolbar: " + isSupported);
+		</script>
 	</body>
 </html>

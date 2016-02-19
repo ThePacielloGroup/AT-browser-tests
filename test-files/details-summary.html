@@ -67,5 +67,14 @@
 	&lt;p>This should be expanded by default&lt;/p>
 &lt;/details></code></pre>
 		</div>
+		
+		<script>
+			var el = document.getElementById('details1'),
+			    isSupported = (typeof HTMLDetailsElement != 'undefined' 
+				               && el instanceof HTMLDetailsElement && 'open' in el);
+			
+			//assume that summary is supported if details is
+			console.log("Details/Summary: " + isSupported);
+		</script>
 	</body>
 </html>

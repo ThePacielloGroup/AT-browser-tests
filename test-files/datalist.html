@@ -58,8 +58,9 @@
 		</div>
 		
 		<script>
-			var dl = document.getElementById('datalist1'),
-			    isSupported = (typeof HTMLDataListElement != 'undefined' && dl instanceof HTMLDataListElement && 'options' in dl);
+			var el = document.getElementById('datalist1'),
+			    isSupported = (typeof HTMLDataListElement != 'undefined' 
+				               && el instanceof HTMLDataListElement && 'options' in el);
 			
 			console.log("Datalist: " + isSupported);
 		</script>

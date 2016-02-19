@@ -33,16 +33,24 @@
 				<form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
 					<input type="range" name="b" value="50" /> +
 					<input type="number" name="a" value="10" /> =
-					<output name="result"></output>
+					<output id="output1" name="result"></output>
 				</form>
 			</div>
 			
 			<h3 class="code-title">Code</h3>
 			<pre></code>&lt;form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
-	&lt;input type="range" name="b" id="b" value="50" /> +<br>
-	&lt;input type="number" name="a" id="a" value="10" /> =<br>
-	&lt;output name="result" for="b a">&lt;/output><br>
+	&lt;input type="range" name="b" id="b" value="50" /> +
+	&lt;input type="number" name="a" id="a" value="10" /> =
+	&lt;output name="result" for="b a">&lt;/output>
 &lt;/form></code></pre>
 		</div>
+		
+		<script>
+			var el = document.getElementById('output1'),
+			    isSupported = (typeof HTMLOutputElement != 'undefined' 
+				               && el instanceof HTMLOutputElement && 'value' in el);
+			
+			console.log("Output: " + isSupported);
+		</script>
 	</body>
 </html>

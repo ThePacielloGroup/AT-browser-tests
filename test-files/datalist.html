@@ -56,5 +56,12 @@
 	&lt;option value="http://www.reddit.com/" label="Reddit">&lt;/option>
 &lt;/datalist></code></pre>
 		</div>
+		
+		<script>
+			var dl = document.getElementById('datalist1'),
+			    isSupported = (typeof HTMLDataListElement != 'undefined' && dl instanceof HTMLDataListElement && 'options' in dl);
+			
+			console.log("Datalist: " + isSupported);
+		</script>
 	</body>
 </html>

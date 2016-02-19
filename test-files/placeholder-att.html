@@ -38,5 +38,12 @@
 &lt;input id="input1" type="text" placeholder="placeholder text" /></code></pre>
 		</div>
 
+		<script>
+			var el = document.getElementById('input1'),
+			    isSupported = (typeof HTMLInputElement != 'undefined' 
+				               && el instanceof HTMLInputElement && 'placeholder' in el);
+			
+			console.log("Placeholder attribute: " + isSupported);
+		</script>
 	</body>
 </html>

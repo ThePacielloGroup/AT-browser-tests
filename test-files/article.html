@@ -30,7 +30,7 @@
 			<h2 class="test-title" id="ar-001">Test ar-001: Plain Article</h2>
 
 			<div class="test-case">
-				<article>Lorem ipsum...</article>
+				<article id="article1">Lorem ipsum...</article>
 			</div>
 			
 			<h3 class="code-title">Code</h3>
@@ -81,5 +81,12 @@
 	Lorem ipsum...
 &lt;/article></code></pre>
 		</div>
+		
+		<script>
+			var el = document.getElementById('article1'),
+			    isSupported = (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
+			
+			console.log("Article: " + isSupported);
+		</script>
 	</body>
 </html>

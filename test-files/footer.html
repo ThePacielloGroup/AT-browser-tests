@@ -30,7 +30,7 @@
 			<h2 class="test-title" id="ft-001">Test ft-001: Footer element,  sectioning content/root is body</h2>
 
 			<div class="test-case">			
-				<footer>Lorem ipsum...</footer>
+				<footer id="footer1">Lorem ipsum...</footer>
 			</div>
 
 			<h3 class="code-title">Code</h3>
@@ -52,5 +52,11 @@
 &lt;/article></code></pre>
 		</div>
 
+		<script>
+			var el = document.getElementById('footer1'),
+			    isSupported = (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
+			
+			console.log("Footer: " + isSupported);
+		</script>
 	</body>
 </html>

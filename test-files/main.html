@@ -30,7 +30,7 @@
 			<h2 class="test-title" id="ma-001">Test ma-001: Main element</h2>
 
 			<div class="test-case">
-				<main>
+				<main id="main1">
 					<h2>Skateboards</h2>
 					<p>The skateboard is the way cool kids get around</p>
 
@@ -61,5 +61,11 @@
 &lt;/main></code></pre>
 		</div>
 
+		<script>
+			var el = document.getElementById('main1'),
+			    isSupported = (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
+			
+			console.log("Main: " + isSupported);
+		</script>
 	</body>
 </html>

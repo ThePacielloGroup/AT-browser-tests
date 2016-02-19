@@ -30,7 +30,7 @@
 			<h2 class="test-title" id="nv-001">Test nv-001: Nav element</h2>
 
 			<div class="test-case">
-				<nav>
+				<nav id="nav1">
 					<h2>You are here:</h2>
 					<ul id="navlist">
 						<li><a href="/">Main</a> →</li>
@@ -52,5 +52,12 @@
 	&lt;/ul>
 &lt;/nav></code></pre>
 		</div>
+		
+		<script>
+			var el = document.getElementById('nav1'),
+			    isSupported = (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
+			
+			console.log("Nav: " + isSupported);
+		</script>
 	</body>
 </html>

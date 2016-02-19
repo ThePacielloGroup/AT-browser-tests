@@ -30,7 +30,7 @@
 			<h2 class="test-title" id="sc-001">Test sc-001: Plain Section</h2>
 
 			<div class="test-case">
-				<section>
+				<section id="section1">
 					Lorem ipsum...
 				</section>
 			</div>
@@ -89,5 +89,12 @@
 	Lorem ipsum...
 &lt;/section></code></pre>
 		</div>
+		
+		<script>
+			var el = document.getElementById('section1'),
+			    isSupported = (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
+			
+			console.log("Section: " + isSupported);
+		</script>
 	</body>
 </html>

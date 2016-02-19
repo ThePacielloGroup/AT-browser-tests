@@ -29,11 +29,18 @@
 			<h2 class="test-title" id="mk-001">Test mk-001: Mark element</h2>
 
 			<div class="test-case">		
-				<p><mark>This text</mark> is marked as highlighted</p>
+				<p><mark id="mark1">This text</mark> is marked as highlighted</p>
 			</div>
 
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;p>&lt;mark>This text&lt;/mark> is marked as highlighted&lt;/p></code></pre>
 		</div>
+		
+		<script>
+			var el = document.getElementById('mark1'),
+			    isSupported = (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
+			
+			console.log("Mark: " + isSupported);
+		</script>
 	</body>
 </html>

@@ -32,7 +32,7 @@
 			<h2 class="test-title" id="hd-001">Test hd-001: Header element, sectioning content/root is body</h2>
 
 			<div class="test-case">
-				<header>
+				<header id="header1">
 					<h1>header element</h1>
 				</header>
 			</div>
@@ -64,5 +64,11 @@
 &lt;/article></code></pre>
 		</div>
 
+		<script>
+			var el = document.getElementById('header1'),
+			    isSupported = (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
+			
+			console.log("Header: " + isSupported);
+		</script>
 	</body>
 </html>

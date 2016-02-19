@@ -30,7 +30,7 @@
 			<h2 class="test-title" id="as-001">Test as-001: Plain aside</h2>
 
 			<div class="test-case">					
-				<aside>Lorem ipsum...</aside>
+				<aside id="aside1">Lorem ipsum...</aside>
 			</div>
 
 			<h3 class="code-title">Code</h3>
@@ -82,5 +82,11 @@
 &lt;/aside></code></pre>
 		</div>
 
+		<script>
+			var el = document.getElementById('aside1'),
+			    isSupported = (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
+			
+			console.log("Aside: " + isSupported);
+		</script>
 	</body>
 </html>

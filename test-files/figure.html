@@ -29,7 +29,7 @@
 			<h2 class="test-title" id="fg-001">Test fg-001: Figure element</h2>
 
 			<div class="test-case">					
-				<figure>
+				<figure id="figure1">
 					<img src="../images/HTML5_Logo.png" alt="HTML5 logo" width="128" height="128" />
 				</figure>
 			</div>
@@ -40,5 +40,11 @@
 &lt;/figure></code></pre>
 		</div>
 
+		<script>
+			var el = document.getElementById('figure1'),
+			    isSupported = (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
+			
+			console.log("Figure: " + isSupported);
+		</script>
 	</body>
 </html>

@@ -52,5 +52,12 @@
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;label>Month of birth &lt;input id="input2" type="month" />&lt;/label></code></pre>
 		</div>
+		
+		<script>
+			var el = document.getElementById('input1'),
+			    isSupported = (el.type === 'month');
+			
+			console.log("Input month: " + isSupported);
+		</script>
 	</body>
 </html>

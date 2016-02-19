@@ -57,5 +57,12 @@
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;label>Site search &lt;input id="input2" type="search" />&lt;/label></code></pre>
 		</div>
+		
+		<script>
+			var el = document.getElementById('input1'),
+			    isSupported = (el.type === 'search');
+			
+			console.log("Input search: " + isSupported);
+		</script>
 	</body>
 </html>

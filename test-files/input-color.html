@@ -54,5 +54,12 @@
 			<pre><code>&lt;label for="input2">Choose a shade&lt;/label>
 &lt;input id="input2" type="color" /></code></pre>
 		</div>
+		
+		<script>
+			var el = document.getElementById('input1'),
+			    isSupported = (el.type === 'color');
+			
+			console.log("Input color: " + isSupported);
+		</script>
 	</body>
 </html>

@@ -57,5 +57,12 @@
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;label>Home phone &lt;input id="input2" type="tel" />&lt;/label></code></pre>
 		</div>
+		
+		<script>
+			var el = document.getElementById('input1'),
+			    isSupported = (el.type === 'tel');
+			
+			console.log("Input tel: " + isSupported);
+		</script>
 	</body>
 </html>

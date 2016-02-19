@@ -57,5 +57,11 @@
 			<pre><code>&lt;label>Sign up &lt;input id="input2" type="email" />&lt;/label></code></pre>
 		</div>
 
+		<script>
+			var el = document.getElementById('input1'),
+			    isSupported = (el.type === 'email');
+			
+			console.log("Input email: " + isSupported);
+		</script>
 	</body>
 </html>

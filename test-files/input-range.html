@@ -54,5 +54,12 @@
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;label>Temperature &lt;input id="input2" type="range" min="-100" max="100" value="10" step="10" />&lt;/label></code></pre>
 		</div>
+		
+		<script>
+			var el = document.getElementById('input1'),
+			    isSupported = (el.type === 'range');
+			
+			console.log("Input range: " + isSupported);
+		</script>
 	</body>
 </html>

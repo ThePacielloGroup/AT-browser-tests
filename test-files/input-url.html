@@ -57,5 +57,12 @@
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;label>Your web site &lt;input id="input2" type="url" />&lt;/label></code></pre>
 		</div>
+		
+		<script>
+			var el = document.getElementById('input1'),
+			    isSupported = (el.type === 'url');
+			
+			console.log("Input url: " + isSupported);
+		</script>
 	</body>
 </html>

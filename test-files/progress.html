@@ -40,5 +40,13 @@
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;p>Downloading progress: &lt;progress id="progress1" value="22" max="100">&lt;/progress>&lt;/p></code></pre>
 		</div>
+		
+		<script>
+			var el = document.getElementById('progress1'),
+			    isSupported = (typeof HTMLProgressElement != 'undefined' 
+				               && el instanceof HTMLProgressElement && 'value' in el);
+			
+			console.log("Progress: " + isSupported);
+		</script>
 	</body>
 </html>

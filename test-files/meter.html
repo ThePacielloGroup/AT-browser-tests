@@ -36,5 +36,12 @@
 			<pre><code>&lt;meter id="meter1" min="0" max="100" value="83.5">fallback content&lt;/meter></code></pre>
 		</div>
 
+		<script>
+			var el = document.getElementById('meter1'),
+			    isSupported = (typeof HTMLMeterElement != 'undefined' 
+				               && el instanceof HTMLMeterElement && 'value' in el);
+			
+			console.log("Meter: " + isSupported);
+		</script>
 	</body>
 </html>

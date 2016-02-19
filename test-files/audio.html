@@ -49,5 +49,13 @@
 		</div>
 
 		<small>Audio file: <a href="https://archive.org/details/Jeffbob">Spam call: Bob hangs up 7 mins into his survey</a> by Bruce Lawson</small>
+		
+		<script>
+			var el = document.getElementById('audio1'),
+			    isSupported = (typeof HTMLAudioElement != 'undefined' 
+				               && el instanceof HTMLAudioElement && !!el.canPlayType);
+			
+			console.log("Audio: " + isSupported);
+		</script>
 	</body>
 </html>

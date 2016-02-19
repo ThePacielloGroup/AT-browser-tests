@@ -41,7 +41,7 @@
 				<video id="video1" controls width="300" height="300">
 					<source src="../images/elo.mp4" type="video/mp4">
 					<source src="../images/elo.ogg" type="video/ogg">
-					<track kind="captions" srclang="en" src="../images/elo.vtt" label="English" default>
+					<track id="track1" kind="captions" srclang="en" src="../images/elo.vtt" label="English" default>
 				</video>
 			</div>
 			
@@ -52,5 +52,19 @@
 	&lt;track kind="captions" srclang="en" src="../images/elo.vtt" label="English">
 &lt;/video></code></pre>
 		</div>
+		
+		<script>
+			var el = document.getElementById('video1'),
+			    isSupported = (typeof HTMLVideoElement != 'undefined' 
+				               && el instanceof HTMLVideoElement && !!el.canPlayType);
+			
+			console.log("Video: " + isSupported);
+			
+			el = document.getElementById('track1'),
+			isSupported = (typeof HTMLTrackElement != 'undefined' 
+				           && el instanceof HTMLTrackElement && 'src' in el);
+			
+			console.log("Track: " + isSupported);
+		</script>
 	</body>
 </html>

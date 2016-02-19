@@ -97,5 +97,17 @@ context2.fill();
 button.focus();
 context2.drawFocusIfNeeded(button);</code></pre>
 		</div>
+		<script>
+			var canvas = document.getElementById('myCanvas'),
+			    isSupported = !!(canvas.getContext && canvas.getContext('2d'));
+			
+			console.log("Canvas: " + isSupported);
+			
+			if (isSupported) {
+				isSupported = !!(canvas.getContext('2d').drawFocusIfNeeded);
+			} 
+				
+			console.log("drawFocusIfNeeded: " + isSupported);
+		</script>
 	</body>
 </html>

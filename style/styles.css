@@ -66,6 +66,7 @@ code {
 	white-space: pre-wrap;
 	text-transform: none;
 	font-family: Consolas, monaco, monospace;
+	tab-size: 4;
 }
 
 /* Direct descendents = scoped to avoid test markup */

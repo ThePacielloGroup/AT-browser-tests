@@ -29,9 +29,9 @@
 					<li><a href="http://www.w3.org/TR/html/forms.html#url-state-(type=url)">HTML5 input type=url element</a></li>
 					<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-input-url">HTML Accessibility API Mappings for input type=url element without list attribute</a></li>
 					<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-textbox">Core Accessibility API Mappings for textbox role</a></li>
-					<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-input-textetc-autocomplete">HTML Accessibility API Mappings for input type=url element with list attribute</a></li>
-					<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-combobox">Core Accessibility API Mappings for combobox role</a></li>
-					<li><a href="https://www.w3.org/TR/core-aam-1.1/#ariaOwns">Core Accessibility API Mappings for aria-owns property</a></li>
+					<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-input-textetc-autocomplete">HTML Accessibility API Mappings for input type=url element with list attribute</a> <a href="datalist.html#di-001">[Test: DI-001]</a></li>
+					<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-combobox">Core Accessibility API Mappings for combobox role</a> <a href="datalist.html#di-001">[Test: DI-001]</a></li>
+					<li><a href="https://www.w3.org/TR/core-aam-1.1/#ariaOwns">Core Accessibility API Mappings for aria-owns property</a> <a href="datalist.html#di-001">[Test: DI-001]</a></li>
 				</ul>
 			</div>
 		</div>
@@ -40,7 +40,9 @@
 			<h2 class="test-title" id="ui-001">Test ui-001: Unlabelled input type="url"</h2>
 
 			<div class="test-case">
-				<input id="input1" type="url" />
+				<form>
+					<input id="input1" type="url" />
+				</form>
 			</div>
 		
 			<h3 class="code-title">Code</h3>
@@ -51,7 +53,9 @@
 			<h2 class="test-title" id="ui-002">Test ui-002: Input type="url" with label</h2>
 
 			<div class="test-case">
-				<label>Your web site <input id="input2" type="url" /></label>
+				<form>
+					<label>Your web site <input id="input2" type="url" /></label>
+				</form>
 			</div>
 
 			<h3 class="code-title">Code</h3>

@@ -66,6 +66,7 @@ code {
 	white-space: pre-wrap;
 	text-transform: none;
 	font-family: Consolas, monaco, monospace;
+	-moz-tab-size: 4;
 	tab-size: 4;
 }
 

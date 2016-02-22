@@ -13,6 +13,7 @@
 				<ul>
 					<li>#1: Attribute is supported</li>
 					<li>#2: Attribute has correct HTML and Core Accessibility API mappings</li>
+					<li>#3: Error message has correct mapping [TODO: where is this defined?]</li>
 				</ul>
 			</div>
 
@@ -29,13 +30,19 @@
 			<h2 class="test-title" id="rq-001">Test rq-001: Required attribute</h2>
 
 			<div class="test-case">
-				<label for="input1">Form field that must be filled in:</label>
-				<input id="input1" type="text" required />
+				<form>
+					<label for="input1">Submit without entering value to trigger required attribute:</label>
+					<input id="input1" type="text" required />
+					<button>Submit</button>
+				</form>
 			</div>
 			
 			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;label for="input1">Form field that must be filled in:&lt;/label>
-&lt;input id="input1" type="text" required /></code></pre>
+			<pre><code>&lt;form>
+	&lt;label for="input1">Submit without entering value to trigger required attribute:&lt;/label>
+	&lt;input id="input1" type="text" required />
+	&lt;button>Submit&lt;/button>
+&lt;/form></code></pre>
 		</div>
 	</body>
 </html>

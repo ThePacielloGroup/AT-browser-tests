@@ -22,6 +22,8 @@
 					<li><a href="http://www.w3.org/TR/html/grouping-content.html#the-aside-element">HTML5 aside element</a></li>
 					<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-aside">HTML Accessibility API Mappings for aside element</a></li>
 					<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-complementary">Core Accessibility API Mappings for complementary role</a></li>
+					<li><a href="https://www.w3.org/TR/html-aam-1.0/#https://www.w3.org/TR/html-aam-1.0/#section-and-grouping-element-accessible-name-calculation">Accessible Name Calculation</a></li>
+					<li><a href="https://www.w3.org/TR/html-aam-1.0/#https://www.w3.org/TR/html-aam-1.0/#section-and-grouping-element-accessible-description-calculation">Accessible Description Calculation</a></li>
 				</ul>
 			</div>
 		</div>
@@ -80,6 +82,17 @@
 	&lt;h1 id="aside-title">Once upon a time&lt;/h1>
 	Lorem ipsum...
 &lt;/aside></code></pre>
+		</div>
+		
+		<div class="test">
+			<h2 class="test-title" id="as-005">Test as-005: Aside with <code>title</code> attribute</h2>
+
+			<div class="test-case">					
+				<aside title="title attribute">Title should be used as accessible name.</aside>
+			</div>
+
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;aside title="title attribute">Title should be used as accessible name.&lt;/aside></code></pre>
 		</div>
 
 	</body>

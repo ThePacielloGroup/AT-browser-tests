@@ -22,6 +22,8 @@
 					<li><a href="http://www.w3.org/TR/html5/sections.html#the-nav-element">HTML5 nav element</a></li>
 					<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-nav">HTML Accessibility API Mappings for nav element</a></li>
 					<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-navigation">Core Accessibility API Mappings for navigation role</a></li>
+					<li><a href="https://www.w3.org/TR/html-aam-1.0/#https://www.w3.org/TR/html-aam-1.0/#section-and-grouping-element-accessible-name-calculation">Accessible Name Calculation</a></li>
+					<li><a href="https://www.w3.org/TR/html-aam-1.0/#https://www.w3.org/TR/html-aam-1.0/#section-and-grouping-element-accessible-description-calculation">Accessible Description Calculation</a></li>
 				</ul>
 			</div>
 		</div>
@@ -52,5 +54,21 @@
 	&lt;/ul>
 &lt;/nav></code></pre>
 		</div>
+		
+		<div class="test">
+			<h2 class="test-title" id="nv-002">Test nv-002: Nav element with <code>title</code> attribute</h2>
+
+			<div class="test-case">
+				<nav title="title attribute">
+					<p>Title should be used as accessible name.</p>
+				</nav>
+			</div>
+			
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;nav title="title attribute">
+	&lt;p>Title should be used as accessible name.&lt;/p>
+&lt;/nav></code></pre>
+		</div>
+
 	</body>
 </html>

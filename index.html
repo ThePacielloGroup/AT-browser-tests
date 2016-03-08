@@ -2,18 +2,18 @@
 <html lang="en">
 	<head>
 			<title>Aural UI of HTML elements</title>
-			<meta charset="utf-8"> 
-	<script src="scripts/html5shiv.js"></script> 
+			<meta charset="utf-8">
+	<script src="scripts/html5shiv.js"></script>
 	<style>
 		.note {
 			padding: 0.5em 2em;
 			background: none repeat scroll 0 0 #e9fbe9;
 			border-left: 0.25em solid #52e052; }
-		
+
 		table {
 		    border-collapse: collapse;
 		    border: 1px solid #630;
-		    font: 0.8em Arial, Verdana, Helvetica, sans-serif; }  
+		    font: 0.8em Arial, Verdana, Helvetica, sans-serif; }
 
 		th, td {
 			text-align: left;
@@ -21,10 +21,10 @@
 		    padding: 0.3em;
 		    border: 1px solid #630; }
 
-		th[scope='row'] { text-align:left; } 
+		th[scope='row'] { text-align:left; }
 
 		tbody tr:hover { outline:solid 2px #666666; }
-	
+
         .navlist li {
 		    display: inline;
 		    list-style-type: none;
@@ -63,7 +63,7 @@
 
 		<a href="https://github.com/ThePacielloGroup/AT-browser-tests"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
 	</header>
-    
+
 	<h2>How HTML elements are supported by screen readers</h2>
 	<p>Typical support patterns of HTML elements by screen readers:</p>
 	<ul>
@@ -157,7 +157,7 @@
 							<li>JAWS 15+ no special commands</li>
 						</ul>
 					</td>
-					<td> 
+					<td>
 						<audio preload="none" controls>
 							<source src="audio/a.mp3" type="audio/mpeg">
 							<source src="audio/a.ogg" type="audio/ogg">
@@ -1049,7 +1049,7 @@
 					<th scope="row"><a href="test-files/input-password.html"><code>input [password]</code></a></th>
 					<td>text control for inputting a password</td>
 					<td>
-						<em>label content</em> "password edit" 
+						<em>label content</em> "password edit"
 					</td>
 					<td><ul>
 					<li>List Edit Boxes 	<kbd>CTRL+INSERT+E</kbd></li>
@@ -2059,12 +2059,12 @@
 					<td><strong>No UI</strong></td>
 				</tr>
 			</tbody>
-		</table> 
+		</table>
 
-                
-    <h2>VoiceOver tests:</h2> 
+
+    <h2 id="voiceover">VoiceOver tests:</h2>
     <p class="note">In progress</p>
-    
+
     <table class="alt">
       <caption>VoiceOver and Safari 9 on OS X 10.10.5</caption>
       <thead>
@@ -2168,18 +2168,40 @@
           <th scope="row"><a href="test-files/article.html"><code>article</code></a></th>
           <td>Self-contained syndicatable or reusable composition</td>
           <td>&nbsp;</td>
+          <td>
+          	<ul>
+          		<li>No special commands</li>
+							<li>Listed in Web Rotor</li>
+          	</ul>
+					</td>
           <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
+          <td>
+						<ul>
+          		<li>Listed in Web Rotor</li>
+							<li>Label only listed in Web Rotor if explicitely labelled.</li>
+							<li>accessibilityLabel in <abbr title="Accessibility Inspector">AI</abbr> is empty unless explicitely labelled.</li>
+          	</ul>
+          </td>
         </tr>
 
         <tr id="toc-aside-vo">
           <th scope="row"><a href="test-files/aside.html"><code>aside</code></a></th>
           <td>Sidebar for tangentially related content</td>
           <td>&nbsp;</td>
+          <td>
+          	<ul>
+          		<li>No special commands</li>
+							<li>Listed in Web Rotor</li>
+          	</ul>
+					</td>
           <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
+          <td>
+          	<ul>
+          		<li>Listed in Web Rotor</li>
+							<li>Label only listed in Web Rotor if explicitely labelled.</li>
+							<li>accessibilityLabel in <abbr title="Accessibility Inspector">AI</abbr> is empty unless explicitely labelled.</li>
+          	</ul>
+          </td>
         </tr>
 
         <tr>
@@ -2195,9 +2217,14 @@
           <th scope="row"><a href="test-files/b.html"><code>b</code></a></th>
           <td>Keywords</td>
           <td><em>element content</em></td>
+          <td>No special commands</td>
           <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
+          <td>
+						<ul>
+							<li>Semantics not conveyed.</li>
+							<li>AXStaticText in AI.</li>
+						</ul>
+					</td>
         </tr>
 
         <tr>
@@ -2206,35 +2233,35 @@
           <td><em><strong>none expected</strong></em></td>
           <td>&nbsp;</td>
           <td>&nbsp;</td>
-          <td>&nbsp;</td>
+          <td>No UI</td>
         </tr>
 
         <tr>
           <th scope="row"><a href="test-files/bdi.html"><code>bdi</code></a></th>
           <td>Text directionality isolation</td>
           <td><em>element content</em></td>
+          <td>No special commands</td>
           <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
+          <td>No difference in <abbr title="Accessibility Inspector">AI</abbr>.</td>
         </tr>
 
-             <tr>
-               <th scope="row"><a href="test-files/bdo.html"><code>bdo</code></a></th>
-               <td>Text directionality formatting</td>
-               <td><em>element content</em></td>
-               <td>&nbsp;</td>
-               <td>&nbsp;</td>
-               <td>&nbsp;</td>
-             </tr>
+				<tr>
+					<th scope="row"><a href="test-files/bdo.html"><code>bdo</code></a></th>
+					<td>Text directionality formatting</td>
+					<td><em>element content</em></td>
+					<td>No special commands</td>
+					<td>&nbsp;</td>
+					<td>No difference in <abbr title="Accessibility Inspector">AI</abbr>.</td>
+				</tr>
 
-             <tr>
-               <th scope="row"><a href="test-files/blockquote-cite.html"><code>blockquote</code></a></th>
-               <td>A section quoted from another source</td>
-               <td>&nbsp;</td>
-               <td>&nbsp;</td>
-               <td>&nbsp;</td>
-               <td>&nbsp;</td>
-             </tr>
+				<tr>
+					<th scope="row"><a href="test-files/blockquote-cite.html"><code>blockquote</code></a></th>
+					<td>A section quoted from another source</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+				</tr>
 
              <tr>
                <th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#the-body-element"><code>body</code></a></th>
@@ -3404,10 +3431,10 @@
              </tr>
            </tbody>
     </table>
-    
-    
-    
-     <h2>NVDA tests:</h2> 
+
+
+
+     <h2>NVDA tests:</h2>
 	<p class="note">todo</p>
 <table class="alt">
        <caption>
@@ -4823,7 +4850,7 @@
 </table>
      <h2>Window Eyes tests (in progress):</h2>
      <H3>Basic Navigation</H3>
-<p>The basic movement commands for navigating a web page are much like the basic  movement commands of a word processor:  
+<p>The basic movement commands for navigating a web page are much like the basic  movement commands of a word processor:
      <UL>
        <LI><kbd>Left arrow</kbd> and <kbd>Right arrow</kbd> keys move character by character.
        <LI><kbd>Control-Left</kbd> and <kbd>Control-Right arrow</kbd> keys move word by word.
@@ -6367,14 +6394,14 @@
 		</tbody>
 	</table>
 
-	<h2>ORCA tests:</h2> 
+	<h2>ORCA tests:</h2>
 	<p class="note">todo</p>
-	<h2>Chromevox tests:</h2> 
+	<h2>Chromevox tests:</h2>
 	<p class="note">todo</p>
 	</main>
 	<footer>
 		<h2>Acknowledgements</h2>
-		<p>L&eacute;onie Watson, Matthew Atkins</p>  
+		<p>L&eacute;onie Watson, Matthew Atkins</p>
 	</footer>
 </body>
 </html>

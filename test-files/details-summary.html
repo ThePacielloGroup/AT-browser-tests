@@ -12,11 +12,12 @@
 				<h2>Pass Criteria</h2>
 				<ul>
 					<li>#1: Elements are supported</li>
-					<li>#2: Elements have correct HTML and Core Accessibility API mappings</li>
-					<li>#3: Control is keyboard accessible:
+					<li>#2: Correct HTML and Core Accessibility API mappings</li>
+					<li>#3: Correct Accessible Name &amp; Description Calculation</li>
+					<li>#4: Control is keyboard accessible:
 						<ul>
-							<li>#3.1: Control MUST be focusable</li>
-							<li>#3.2: MUST be able to expand and collapse control</li>
+							<li>#4.1: Control MUST be focusable</li>
+							<li>#4.2: MUST be able to expand and collapse control</li>
 						</ul>
 					</li>
 				</ul>
@@ -29,6 +30,8 @@
 					<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-details">HTML Accessibility API Mappings for details element</a></li>
 					<li><a href="http://www.w3.org/TR/html51/semantics.html#the-summary-element">HTML5.1 summary element</a></li>
 					<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-summary">HTML Accessibility API Mappings for summary element</a></li>
+					<li><a href="https://www.w3.org/TR/html-aam-1.0/#https://www.w3.org/TR/html-aam-1.0/#summary-element-accessible-name-calculation">Accessible Name Calculation for summary element</a></li>
+					<li><a href="https://www.w3.org/TR/html-aam-1.0/#https://www.w3.org/TR/html-aam-1.0/#summary-element-accessible-description-calculation">Accessible Description Calculation for summary element</a></li>
 					<li><a href="https://www.w3.org/TR/html-aam-1.0/#att-open-details">HTML Accessibility API Mappings for open attribute</a> [Test: DS-002]</li>
 				</ul>
 			</div>
@@ -40,17 +43,17 @@
 			<div class="test-case">
 				<details id="details1">
 					<summary>Why use HTML5?</summary>
-					<p>You should use HTML5 because...</p>
+					<p>You should use HTML5 because…</p>
 				</details>
 			</div>
-			
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;details id="details1">
 	&lt;summary>Why use HTML5?&lt;/summary>
-	&lt;p>You should use HTML5 because...&lt;/p>
+	&lt;p>You should use HTML5 because…&lt;/p>
 &lt;/details></code></pre>
 		</div>
-		
+
 		<div class="test">
 			<h2 class="test-title" id="ds-002">Test ds-002: Details element with open attribute</h2>
 
@@ -60,21 +63,73 @@
 					<p>This should be expanded by default</p>
 				</details>
 			</div>
-			
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;details id="details2" open>
 	&lt;summary>Am I open?&lt;/summary>
 	&lt;p>This should be expanded by default&lt;/p>
 &lt;/details></code></pre>
 		</div>
-		
+
+		<div class="test">
+			<h2 class="test-title" id="ds-003">Test ds-003: Summary element with title attribute</h2>
+
+			<div class="test-case">
+				<details id="details3">
+					<summary title="title text">Summary text</summary>
+					<p>Some contents…</p>
+				</details>
+			</div>
+
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;details id="details3">
+	&lt;summary title="title text">Summary text&lt;/summary>
+	&lt;p>Some contents…&lt;/p>
+&lt;/details></code></pre>
+		</div>
+
+		<div class="test">
+			<h2 class="test-title" id="ds-004">Test ds-004: Empty Summary element with title attribute</h2>
+
+			<div class="test-case">
+				<details id="details4">
+					<summary title="title text"></summary>
+					<p>Some contents…</p>
+				</details>
+			</div>
+
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;details id="details4">
+	&lt;summary title="title text">&lt;/summary>
+	&lt;p>Some contents…&lt;/p>
+&lt;/details></code></pre>
+		</div>
+
+		<div class="test">
+			<h2 class="test-title" id="ds-005">Test ds-005: Empty Summary element without title attribute</h2>
+
+			<div class="test-case">
+				<details id="details5">
+					<summary></summary>
+					<p>Some contents…</p>
+				</details>
+			</div>
+
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;details id="details4">
+	&lt;summary>&lt;/summary>
+	&lt;p>Some contents…&lt;/p>
+&lt;/details></code></pre>
+		</div>
+
 		<script>
 			var el = document.getElementById('details1'),
-			    isSupported = (typeof HTMLDetailsElement != 'undefined' 
-				               && el instanceof HTMLDetailsElement && 'open' in el);
-			
+				isSupported = (typeof HTMLDetailsElement != 'undefined'
+								&& el instanceof HTMLDetailsElement && 'open' in el);
+
 			//assume that summary is supported if details is
 			console.log("Details/Summary: " + isSupported);
 		</script>
+
 	</body>
 </html>

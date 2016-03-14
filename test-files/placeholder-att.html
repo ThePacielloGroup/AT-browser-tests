@@ -12,7 +12,8 @@
 				<h2>Pass Criteria</h2>
 				<ul>
 					<li>#1: Attribute is supported</li>
-					<li>#2: Attribute has correct HTML and Core Accessibility API mappings</li>
+					<li>#2: Correct HTML and Core Accessibility API mappings</li>
+					<li>#3: Used in Accessible Name and Description Calculation</li>
 				</ul>
 			</div>
 
@@ -21,22 +22,88 @@
 				<ul>
 					<li><a href="https://www.w3.org/TR/html51/semantics.html#the-placeholder-attribute">HTML5 placeholder attribute</a>
 					<li><a href="https://www.w3.org/TR/html-aam-1.0/#html-attribute-state-and-property-mappings#att-placeholder">HTML Accessibility API Mappings for placeholder attribute</a></li>
+					<li><a href="https://www.w3.org/TR/html-aam-1.0/#https://www.w3.org/TR/html-aam-1.0/#input-type-text-input-type-password-input-type-search-input-type-tel-input-type-email-input-type-url-and-textarea-element-accessible-name-calculation">Accessible Name Calculation</a></li>
+					<li><a href="https://www.w3.org/TR/html-aam-1.0/#https://www.w3.org/TR/html-aam-1.0/#input-type-text-input-type-password-input-type-search-input-type-tel-input-type-email-input-type-url-and-textarea-element-accessible-description-calculation">Accessible Description Calculation</a></li>
 				</ul>
 			</div>
 		</div>
-
+		
 		<div class="test">
-			<h2 class="test-title" id="ph-001">Test ph-001: Placeholder attribute</h2>
+			<h2 class="test-title" id="ph-001">Test ph-001: Placeholder without label</h2>
 
 			<div class="test-case">
-				<label for="input1">Field that has a placeholder:</label>
 				<input id="input1" type="text" placeholder="placeholder text" />
 			</div>
 			
 			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;label for="input1">Field that has a placeholder:&lt;/label>
-&lt;input id="input1" type="text" placeholder="placeholder text" /></code></pre>
+			<pre><code>&lt;input id="input1" type="text" placeholder="placeholder text" /></code></pre>
 		</div>
+
+		<div class="test">
+			<h2 class="test-title" id="ph-002">Test ph-002: Placeholder with label associated via for/id attributes</h2>
+
+			<div class="test-case">
+				<label for="input2">Label text:</label>
+				<input id="input2" type="text" placeholder="placeholder text" />
+			</div>
+			
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;label for="input2">Label text:&lt;/label>
+&lt;input id="input2" type="text" placeholder="placeholder text" /></code></pre>
+		</div>
+		
+		<div class="test">
+			<h2 class="test-title" id="ph-003">Test ph-003: Placeholder with label wrapping input</h2>
+
+			<div class="test-case">
+				<label>Label text:
+					<input id="input3" type="text" placeholder="placeholder text" />
+				</label>
+			</div>
+			
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;label>Label text:
+	&lt;input id="input3" type="text" placeholder="placeholder text" />
+&lt;/label></code></pre>
+		</div>
+		
+		<div class="test">
+			<h2 class="test-title" id="ph-004">Test ph-004: Placeholder and title attributes</h2>
+
+			<div class="test-case">
+				<input id="input4" type="text" placeholder="placeholder text" title="title text" />
+			</div>
+			
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;input id="input4" type="text" placeholder="placeholder text" title="title text" /></code></pre>
+		</div>
+		
+		<div class="test">
+			<h2 class="test-title" id="ph-005">Test ph-005: Placeholder with aria-placeholder</h2>
+
+			<div class="test-case">
+				<input id="input5" type="text" placeholder="placeholder text" 
+				                               aria-placeholder="aria-placeholder text" />
+			</div>
+			
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;input id="input5" type="text" placeholder="placeholder text" 
+				               aria-placeholder="aria-placeholder text" /></code></pre>
+		</div>
+
+		<div class="test">
+			<h2 class="test-title" id="ph-006">Test ph-006: Empty placeholder with aria-placeholder</h2>
+
+			<div class="test-case">
+				<input id="input6" type="text" placeholder="" 
+				                               aria-placeholder="aria-placeholder text" />
+			</div>
+			
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;input id="input6" type="text" placeholder="" 
+				               aria-placeholder="aria-placeholder text" /></code></pre>
+		</div>
+
 
 		<script>
 			var el = document.getElementById('input1'),

@@ -12,15 +12,17 @@
 				<h2>Pass Criteria</h2>
 				<ul>
 					<li>#1: Element is supported</li>
-					<li>#2: Element has correct HTML and Core Accessibility API mappings</li>
-					<li>#3: Control is keyboard accessible:
+					<li>#2: Correct HTML and Core Accessibility API mappings</li>
+					<li>#3: Correct Accessible Name &amp; Description Calculation</li>
+					<li>#4: Control is keyboard accessible:
 						<ul>
-							<li>#3.1: Control MUST be focusable, including any child controls</li>
-							<li>#3.2: MUST be able to type and select text</li>
-							<li>#3.3: MUST be able to submit a value</li>
-							<li>#3.4: Any child controls, such as number spinners, MUST be able to be activated</li>
+							<li>#4.1: Control MUST be focusable, including any child controls</li>
+							<li>#4.2: MUST be able to type and select text</li>
+							<li>#4.3: MUST be able to submit a value</li>
+							<li>#4.4: Any child controls, such as number spinners, MUST be able to be activated</li>
 						</ul>
 					</li>
+					<li>#5: Error message has correct mapping [TODO: where is this defined?]</li>
 				</ul>
 			</div>
 
@@ -30,6 +32,8 @@
 					<li><a href="http://www.w3.org/TR/html/forms.html#number-state-(type=number)">HTML5 input type=number element</a></li>
 					<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-input-number">HTML Accessibility API Mappings for input type=number element</a></li>
 					<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-spinbutton">Core Accessibility API Mappings for spinbutton role</a></li>
+					<li><a href="https://www.w3.org/TR/html-aam-1.0/#other-form-elements-accessible-name-calculation">Accessible Name Calculation</a></li>
+					<li><a href="https://www.w3.org/TR/html-aam-1.0/#other-form-elements-accessible-description-calculation">Accessible Description Calculation</a></li>
 				</ul>
 			</div>
 		</div>
@@ -38,7 +42,9 @@
 			<h2 class="test-title" id="ni-001">Test ni-001: Unlabelled input type="number"</h2>
 
 			<div class="test-case">
-				<input id="input1" type="number" />
+				<form>
+					<input id="input1" type="number" />
+				</form>
 			</div>
 		
 			<h3 class="code-title">Code</h3>
@@ -49,7 +55,9 @@
 			<h2 class="test-title" id="ni-002">Test ni-002: input type="number" with label</h2>
 
 			<div class="test-case">
-				<label>Amount <input id="input2" type="number" /></label>
+				<form>
+					<label>Amount <input id="input2" type="number" /></label>
+				</form>
 			</div>
 		
 			<h3 class="code-title">Code</h3>

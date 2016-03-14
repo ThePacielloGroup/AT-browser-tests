@@ -12,7 +12,8 @@
 				<h2>Pass Criteria</h2>
 				<ul>
 					<li>#1: Element is supported</li>
-					<li>#2: Element has correct HTML and Core Accessibility API mappings</li>
+					<li>#2: Correct HTML and Core Accessibility API mappings</li>
+					<li>#3: Correct Accessible Name &amp; Description Calculation</li>
 				</ul>
 			</div>
 
@@ -22,6 +23,8 @@
 					<li><a href="http://www.w3.org/TR/html5/grouping-content.html#the-main-element">HTML5 main element</a></li>
 					<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-main">HTML Accessibility API Mappings for main element</a></li>
 					<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-main">Core Accessibility API Mappings for main role</a></li>
+					<li><a href="https://www.w3.org/TR/html-aam-1.0/#section-and-grouping-element-accessible-name-calculation">Accessible Name Calculation</a></li>
+					<li><a href="https://www.w3.org/TR/html-aam-1.0/#section-and-grouping-element-accessible-description-calculation">Accessible Description Calculation</a></li>
 				</ul>
 			</div>
 		</div>
@@ -30,7 +33,8 @@
 			<h2 class="test-title" id="ma-001">Test ma-001: Main element</h2>
 
 			<div class="test-case">
-				<main id="main1">
+				<main title="title attribute">
+					<p>Title should be used as accessible name.</p>
 					<h2>Skateboards</h2>
 					<p>The skateboard is the way cool kids get around</p>
 
@@ -44,9 +48,11 @@
 					fed by an electric battery.</p>
 				</main>
 			</div>
-			
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;main>
+	&lt;p>Title should be used as accessible name.&lt;/p>
+
 	&lt;h2>Skateboards&lt;/h2>
 	&lt;p>The skateboard is the way cool kids get around&lt;/p>
 
@@ -64,7 +70,7 @@
 		<script>
 			var el = document.getElementById('main1'),
 			    isSupported = (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
-			
+
 			console.log("Main: " + isSupported);
 		</script>
 	</body>

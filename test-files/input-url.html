@@ -12,14 +12,16 @@
 				<h2>Pass Criteria</h2>
 				<ul>
 					<li>#1: Element is supported</li>
-					<li>#2: Element has correct HTML and Core Accessibility API mappings</li>
-					<li>#3: Control is keyboard accessible:
+					<li>#2: Correct HTML and Core Accessibility API mappings</li>
+					<li>#3: Correct Accessible Name &amp; Description Calculation</li>
+					<li>#4: Control is keyboard accessible:
 						<ul>
-							<li>#3.1: Control MUST be focusable</li>
-							<li>#3.2: MUST be able to type and select text</li>
-							<li>#3.3: MUST be able to submit a value</li>
+							<li>#4.1: Control MUST be focusable</li>
+							<li>#4.2: MUST be able to type and select text</li>
+							<li>#4.3: MUST be able to submit a value</li>
 						</ul>
 					</li>
+					<li>#5: Error message has correct mapping [TODO: where is this defined?]</li>
 				</ul>
 			</div>
 
@@ -32,6 +34,8 @@
 					<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-input-textetc-autocomplete">HTML Accessibility API Mappings for input type=url element with list attribute</a> <a href="datalist.html#di-001">[Test: DI-001]</a></li>
 					<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-combobox">Core Accessibility API Mappings for combobox role</a> <a href="datalist.html#di-001">[Test: DI-001]</a></li>
 					<li><a href="https://www.w3.org/TR/core-aam-1.1/#ariaOwns">Core Accessibility API Mappings for aria-owns property</a> <a href="datalist.html#di-001">[Test: DI-001]</a></li>
+					<li><a href="https://www.w3.org/TR/html-aam-1.0/#input-type-text-input-type-password-input-type-search-input-type-tel-input-type-email-input-type-url-and-textarea-element-accessible-name-calculation">Accessible Name Calculation</a></li>
+					<li><a href="https://www.w3.org/TR/html-aam-1.0/#input-type-text-input-type-password-input-type-search-input-type-tel-input-type-email-input-type-url-and-textarea-element-accessible-description-calculation">Accessible Description Calculation</a></li>
 				</ul>
 			</div>
 		</div>
@@ -40,7 +44,9 @@
 			<h2 class="test-title" id="ui-001">Test ui-001: Unlabelled input type="url"</h2>
 
 			<div class="test-case">
-				<input id="input1" type="url" />
+				<form>
+					<input id="input1" type="url" />
+				</form>
 			</div>
 		
 			<h3 class="code-title">Code</h3>
@@ -51,7 +57,9 @@
 			<h2 class="test-title" id="ui-002">Test ui-002: Input type="url" with label</h2>
 
 			<div class="test-case">
-				<label>Your web site <input id="input2" type="url" /></label>
+				<form>
+					<label>Your web site <input id="input2" type="url" /></label>
+				</form>
 			</div>
 
 			<h3 class="code-title">Code</h3>

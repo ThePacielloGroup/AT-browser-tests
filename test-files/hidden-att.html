@@ -29,17 +29,45 @@
 			<h2 class="test-title" id="hn-001">Test hn-001: Hidden attribute</h2>
 
 			<div class="test-case">
-				<p id="hidden1" hidden>This element should be hidden both visually and to assistive technology.</p>
+				<p hidden>These elements should be hidden both visually and to assistive technology.</p>
+				<input id="input1" type="button" hidden />
 			</div>
-			
+
 			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;p hidden>This element should be hidden both visually and to assistive technology.&lt;/p></code></pre>
+			<pre><code>&lt;p hidden>These elements should be hidden both visually and to assistive technology.&lt;/p>
+&lt;input id=&quot;input1&quot; type=&quot;button&quot; hidden /></code></pre>
 		</div>
-		
+
+		<div class="test">
+			<h2 class="test-title" id="hn-002">Test hn-002: Hidden with aria-hidden=true</h2>
+
+			<div class="test-case">
+				<p hidden aria-hidden="true">These elements should be hidden both visually and to assistive technology.</p>
+				<input id="input2" type="button" hidden aria-hidden="true" />
+			</div>
+
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;p hidden aria-hidden="true">These elements should be hidden both visually and to assistive technology.&lt;/p>
+&lt;input id=&quot;input2&quot; type=&quot;button&quot; hidden aria-hidden="true" /></code></pre>
+		</div>
+
+		<div class="test">
+			<h2 class="test-title" id="hn-003">Test hn-003: Hidden with aria-hidden=false</h2>
+
+			<div class="test-case">
+				<p hidden aria-hidden="false">These elements should be visually hidden but visable to assistive technology.</p>
+				<input id="input3" type="button" hidden aria-hidden="false" />
+			</div>
+
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;p hidden aria-hidden="false">These elements should be visually hidden but visable to assistive technology.&lt;/p>
+&lt;input id=&quot;input3&quot; type=&quot;button&quot; hidden aria-hidden="false" /></code></pre>
+		</div>
+
 				<script>
 			var el = document.getElementById('hidden1'),
 			    isSupported = ('hidden' in el);
-			
+
 			console.log("Hidden attribute: " + isSupported);
 		</script>
 	</body>

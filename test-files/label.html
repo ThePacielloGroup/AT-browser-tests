@@ -19,13 +19,44 @@
 
 		<h2>with label + placeholder</h2>
 		<p><label>name <input type="text" placeholder="first name"></label></p>
-
-		<h2>Code</h2>
+        
+    <h2>labelable elements (other than input type=text, textarea, select)</h2>
+        
+        <h3>button with label</h3>
+        <p>
+          <button id="button1">text</button> 
+          <label for="button1"> name for button via label</label>
+    </p>
+         
+         <h3>meter with label</h3>
+        <p>
+          <meter id="meter1" min="0" max="100" value="83.5">fallback content</meter> 
+          <label for="meter1">name for meter via label</label>
+    </p>
+         
+           
+         <h3>output with label</h3>
+        <p>
+          <output id="output1" style="border:1px solid blue;">52</output> 
+           <label for="output1">name for output via label</label>
+    </p>
+         
+         <h3>progress with label</h3>
+        <p>
+          <progress id="progress1" value="22" max="100">fallback content</progress> 
+          <label for="progress1">name for progress via label</label>
+    </p>
+       
+        <h2>Code</h2>
 		<p>&lt;label for="tst">name &lt;input type="text" id="tst">&lt;/label></p>
 
 		<h2>Reference</h2>
 		<ul>
-			<li><a href="http://www.w3.org/TR/html5/forms.html#the-label-element">HTML5 label element</a></li>
+			<li><a href="http://www.w3.org/TR/html5/forms.html#the-label-element">HTML5 label element</a>
+			  <ul>
+			    <li><a href="https://www.w3.org/TR/html5/forms.html#category-label">labelable elements</a></li>
+		      </ul>
+			</li>
 			<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-label">HTML Accessibility API Mappings for label element</a></li>
 		</ul>
 	</body>

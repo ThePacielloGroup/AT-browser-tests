@@ -12,7 +12,8 @@
 				<h2>Pass Criteria</h2>
 				<ul>
 					<li>#1: Element is supported</li>
-					<li>#2: Element has correct HTML and Core Accessibility API mappings</li>
+					<li>#2: Correct HTML and Core Accessibility API mappings</li>
+					<li>#3: Correct Accessible Name &amp; Description Calculation</li>
 				</ul>
 			</div>
 
@@ -22,21 +23,23 @@
 					<li><a href="http://www.w3.org/TR/html5/sections.html#the-article-element">HTML5 article element</a></li>
 					<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-article">HTML Accessibility API Mappings for article element</a></li>
 					<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-article">Core Accessibility API Mappings for article role</a></li>
+					<li><a href="https://www.w3.org/TR/html-aam-1.0/#section-and-grouping-element-accessible-name-calculation">Accessible Name Calculation</a></li>
+					<li><a href="https://www.w3.org/TR/html-aam-1.0/#section-and-grouping-element-accessible-description-calculation">Accessible Description Calculation</a></li>
 				</ul>
 			</div>
 		</div>
-		
+
 		<div class="test">
 			<h2 class="test-title" id="ar-001">Test ar-001: Plain Article</h2>
 
 			<div class="test-case">
 				<article id="article1">Lorem ipsum...</article>
 			</div>
-			
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;article>Lorem ipsum...&lt;/article></code></pre>
 		</div>
-		
+
 		<div class="test">
 			<h2 class="test-title" id="ar-002">Test ar-002: Article with <code>&lt;h1></code></h2>
 
@@ -46,25 +49,25 @@
 					Lorem ipsum...
 				</article>
 			</div>
-			
+
 			<h3 class="code-title">Code</h3>
 					<pre><code>&lt;article>
 	&lt;h1>Once upon a time&lt;/h1>
 	Lorem ipsum...
 &lt;/article></code></pre>
 		</div>
-		
+
 		<div class="test">
 			<h2 class="test-title" id="ar-003">Test ar-003: Article with <code>aria-label</code></h2>
 
 			<div class="test-case">
 				<article aria-label="Once upon a time">Lorem ipsum...</article>
 			</div>
-			
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;article aria-label="Once upon a time">Lorem ipsum...&lt;/article></code></pre>
 		</div>
-		
+
 		<div class="test">
 			<h2 class="test-title" id="ar-004">Test ar-004: Article with <code>&lt;h1></code> referenced by <code>aria-labelledby</code></h2>
 
@@ -74,19 +77,31 @@
 					Lorem ipsum...
 				</article>
 			</div>
-			
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;article aria-labelledby="article-title">
 	&lt;h1 id="article-title">Once upon a time&lt;/h1>
 	Lorem ipsum...
 &lt;/article></code></pre>
 		</div>
-		
+
+		<div class="test">
+			<h2 class="test-title" id="ar-005">Test ar-005: Article with <code>title</code> attribute</h2>
+
+			<div class="test-case">
+				<article title="title attribute">Title should be used as accessible name.</article>
+			</div>
+
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;article title="title attribute">Title should be used as accessible name.&lt;/article></code></pre>
+		</div>
+
 		<script>
 			var el = document.getElementById('article1'),
 			    isSupported = (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
-			
+
 			console.log("Article: " + isSupported);
 		</script>
+
 	</body>
 </html>

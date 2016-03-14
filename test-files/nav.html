@@ -12,7 +12,8 @@
 				<h2>Pass Criteria</h2>
 				<ul>
 					<li>#1: Element is supported</li>
-					<li>#2: Element has correct HTML and Core Accessibility API mappings</li>
+					<li>#2: Correct HTML and Core Accessibility API mappings</li>
+					<li>#3: Correct Accessible Name &amp; Description Calculation</li>
 				</ul>
 			</div>
 
@@ -22,6 +23,8 @@
 					<li><a href="http://www.w3.org/TR/html5/sections.html#the-nav-element">HTML5 nav element</a></li>
 					<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-nav">HTML Accessibility API Mappings for nav element</a></li>
 					<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-navigation">Core Accessibility API Mappings for navigation role</a></li>
+					<li><a href="https://www.w3.org/TR/html-aam-1.0/#section-and-grouping-element-accessible-name-calculation">Accessible Name Calculation</a></li>
+					<li><a href="https://www.w3.org/TR/html-aam-1.0/#section-and-grouping-element-accessible-description-calculation">Accessible Description Calculation</a></li>
 				</ul>
 			</div>
 		</div>
@@ -40,7 +43,7 @@
 					</ul>
 				</nav>
 			</div>
-			
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;nav>
 	&lt;h2>You are here:&lt;/h2>
@@ -52,12 +55,28 @@
 	&lt;/ul>
 &lt;/nav></code></pre>
 		</div>
-		
+
+		<div class="test">
+			<h2 class="test-title" id="nv-002">Test nv-002: Nav element with <code>title</code> attribute</h2>
+
+			<div class="test-case">
+				<nav title="title attribute">
+					<p>Title should be used as accessible name.</p>
+				</nav>
+			</div>
+
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;nav title="title attribute">
+	&lt;p>Title should be used as accessible name.&lt;/p>
+&lt;/nav></code></pre>
+		</div>
+
 		<script>
 			var el = document.getElementById('nav1'),
-			    isSupported = (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
-			
+				isSupported = (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
+
 			console.log("Nav: " + isSupported);
 		</script>
+
 	</body>
 </html>

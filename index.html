@@ -55,7 +55,7 @@
 		<img src="images/HTML5_Logo.png" width="128" height="128" alt="HTML5 logo" id="logo">
 		<h1>Aural UI of the Elements of <abbr title="Hypertext Markup Language">HTML</abbr></h1>
 
-		<p>A Work <em>in progress</em>: Last updated 28 January 2016</p>
+		<p>A Work <em>in progress</em>: Last updated 28 February 2016</p>
 		<p><strong>Editors:</strong> Steve Faulkner and L&eacute;onie Watson</p>
 		<p><strong>Github Repo:</strong> <a href="https://github.com/ThePacielloGroup/AT-browser-tests">ThePacielloGroup/AT-browser-tests</a></p>
 
@@ -80,9 +80,36 @@
     <p><strong>Note:</strong> The combination of patterns supported varies from element to element and support for a particular element varies between screen reader software.</p>
 
 	<p class="note">JAWS testing - In progress</p>
-
+    <h2>JAWS  </h2>
+    <h3>JAWS - General Navigation notes</h3>
+    <h4><strong>Step Out of Element: </strong></h4>
+    <p>JAWS lets you step out of an element, such as a table or list, so you can   move around more quickly. Press <strong><kbd>&gt;</kbd></strong> to step past the current table,   list, or other element. Press <strong><kbd>&lt;</kbd> </strong>to step before the current table,   list, or other element. </p>
+    <h4>Move by Element</h4>
+    <p>At times you may wish to skip over an entire part of a web page. JAWS   provides commands to move to the next or prior HTML element. Move either to the   next or prior instance of the same type element, or to the next or prior   instance of a different element. For example, use the Next Different Element   command, <strong>D</strong>, to move past a list.</p>
+    
+      
+        
+          <ul>
+            <li>Next Same Element 
+              <kbd>S</kbd></li>
+            <li>Prior Same Element 
+              <kbd>SHIFT+S</kbd></li>
+            <li>Next Different Element 
+              <kbd>D</kbd></li>
+            <li>Prior Different Element <kbd>SHIFT+S</kbd></li>
+          </ul>
+    <h4>Display Element Information</h4>
+    <ul>
+      <li>Press <kbd>INSERT+SHIFT+F1</kbd> to view basic HTML element information. This   includes the assigned attributes and their values for the current element and   the element directly above it in the HTML page hierarchy.</li>
+      <li>Press <kbd>CTRL+INSERT+SHIFT+F1</kbd> to receive advanced HTML element information.   This includes the assigned attributes and their values for the current element   and the elements directly above it in the HTML page hierarchy.</li>
+    </ul>
+    <H4>Font Information</H4>
+    <p>JAWS now reports font information within web pages when you use the <kbd>INSERT+F</kbd> command. Press <kbd>INSERT+F</kbd> twice quickly   to open this information in the JAWS Virtual Viewer.</p>
+    <p>&nbsp;</p>
 <table class="alt">
-		    <caption>JAWS and Firefox on Windows 8.1</caption>
+		    <caption>
+		    JAWS and Firefox on Windows 10
+		    </caption>
 			<thead>
 				<tr>
 					<th scope="col">Element [test file linked]</th>
@@ -344,7 +371,7 @@
 						</audio>
 					</td>
 					<td><img src="images/tick.png" width="16" height="16" alt="yes"></td>
-					<td>&nbsp;</td>
+					<td>Semantics conveyed via navigation and element name announcement</td>
 				</tr>
 				<tr>
 					<th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#the-body-element"><code>body</code></a></th>
@@ -357,7 +384,7 @@
 					<p>Is included in focus order in most browsers.</p></td>
 				</tr>
 				<tr>
-					<th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-br-element"><code>br</code></a></th>
+					<th scope="row"><a href="test-files/br.html"><code>br</code></a></th>
 					<td>Line break, e.g. in poem or postal address</td>
 					<td>&nbsp;</td>
 					<td>No special commands</td>
@@ -383,7 +410,7 @@
 						</audio>
 					</td>
 					<td><img src="images/tick.png" width="16" height="16" alt="yes"></td>
-					<td>&nbsp;</td>
+					<td>Semantics conveyed via navigation and element name announcement</td>
 				</tr>
 				<tr id="toc-c">
 					<th scope="row"><a href="test-files/canvas.html"><code>canvas</code></a></th>
@@ -438,8 +465,8 @@
 					<td><em>none expected</em></td>
 					<td>No special commands</td>
 					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
+					<td><img src="images/cross.png" width="16" height="16" alt="no"></td>
+					<td>No semantics conveyed</td>
 				</tr>
 				<tr>
 					<th scope="row"><a href="test-files/tables-complex.html"><code>colgroup</code></a></th>

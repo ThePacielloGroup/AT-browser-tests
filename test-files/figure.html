@@ -21,6 +21,8 @@
 				<ul>
 					<li><a href="http://www.w3.org/TR/html/grouping-content.html#the-figure-element">HTML5 figure element</a></li>
 					<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-figure">HTML Accessibility API Mappings for figure element</a></li>
+					<li><a href="https://www.w3.org/TR/html-aam-1.0/#https://www.w3.org/TR/html-aam-1.0/#figure-element-accessible-name-calculation">Accessible Name Calculation</a></li>
+					<li><a href="https://www.w3.org/TR/html-aam-1.0/#https://www.w3.org/TR/html-aam-1.0/#figure-element-accessible-description-calculation">Accessible Description Calculation</a></li>
 				</ul>
 			</div>
 		</div>
@@ -37,6 +39,55 @@
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;figure>
 	&lt;img src="../images/HTML5_Logo.png" alt="HTML5 logo" width="128" height="128" />
+&lt;/figure></code></pre>
+		</div>
+		
+		<div class="test">
+			<h2 class="test-title" id="fg-002">Test fg-002: Figure with title attribute</h2>
+
+			<div class="test-case">					
+				<figure title="title text">
+					<img src="../images/HTML5_Logo.png" alt="HTML5 logo" width="128" height="128" />
+				</figure>
+			</div>
+			
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;figure title="title text">
+	&lt;img src="../images/HTML5_Logo.png" alt="HTML5 logo" width="128" height="128" />
+&lt;/figure></code></pre>
+		</div>
+		
+		<div class="test">
+			<h2 class="test-title" id="fg-003">Test fg-003: Figure with figcaption element</h2>
+
+			<div class="test-case">					
+				<figure>
+					<img src="../images/HTML5_Logo.png" alt="HTML5 logo" width="128" height="128" />
+					<figcaption>Figcaption text</figcaption>
+				</figure>
+			</div>
+			
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;figure>
+	&lt;img src="../images/HTML5_Logo.png" alt="HTML5 logo" width="128" height="128" />
+	&lt;figcaption>Figcaption text&lt;/figcaption>
+&lt;/figure></code></pre>
+		</div>
+		
+		<div class="test">
+			<h2 class="test-title" id="fg-004">Test fg-004: Figure with figcaption element and title attribute</h2>
+
+			<div class="test-case">					
+				<figure title="title text">
+					<img src="../images/HTML5_Logo.png" alt="HTML5 logo" width="128" height="128" />
+					<figcaption>Figcaption text</figcaption>
+				</figure>
+			</div>
+			
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;figure title="title text">
+	&lt;img src="../images/HTML5_Logo.png" alt="HTML5 logo" width="128" height="128" />
+	&lt;figcaption>Figcaption text&lt;/figcaption>
 &lt;/figure></code></pre>
 		</div>
 

@@ -21,6 +21,8 @@ var displaySupportResults = function() {
 
 				// Browser support criteria check
 				if (criteriaItems[i].id === 'criteria-support') {
+					criteriaItems[i].className += ' has-badge';
+
 					if (isSupported === true) {
 						var badge = successBadge;
 					} else {

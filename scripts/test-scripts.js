@@ -5,45 +5,58 @@
  * script file.
  */
 
-// This ID must be on the criteria list
-var criteriaList = document.getElementById('criteria-list');
-
-// This ID must be set on the criteria list item requiring basic browser support
-var criteriaSupport = document.getElementById('criteria-support');
-
-var addSuccessBadge = function(criteriaElement) {
-	var successBadge = document.createElement('span');
-	successBadge.className = 'badge-success';
-	successBadge.textContent = 'Support detected!';
-	criteriaElement.textContent = criteriaSupport.textContent + ' ';
-	criteriaElement.appendChild(successBadge);
+var addSuccessBadge = function(criteriaItem) {
+	var badge = document.createElement('span');
+	badge.className = 'badge-success';
+	badge.textContent = 'Supported';
+	criteriaItem.appendChild(badge);
 };
 
-var addFailureBadge = function(criteriaElement) {
-	var failureBadge = document.createElement('span');
-	failureBadge.className = 'badge-failure';
-	failureBadge.textContent = 'No support detected';
-	criteriaElement.textContent = criteriaSupport.textContent + ' ';
-	criteriaElement.appendChild(failureBadge);
+var addFailureBadge = function(criteriaItem) {
+	var badge = document.createElement('span');
+	badge.className = 'badge-failure';
+	badge.textContent = 'Not supported';
+	criteriaItem.appendChild(badge);
 };
 
-var addManualSupportMsgs = function() {
-	var criteriaItems = criteriaList.childNodes;
-	for (var i = 0; i < criteriaItems.length; i++) {
-		if (criteriaItems[i].nodeName === 'LI' && criteriaItems[i] !== criteriaSupport) {
-			criteriaItems[i].textContent = criteriaItems[i].textContent + ' (Manually test)';
-			criteriaElement.appendChild(manualTestBadge);
-		}
-	}
+var addManualTestBadge = function(criteriaItem) {
+	var badge = document.createElement('span');
+	badge.className = 'badge-manual';
+	badge.textContent = '(Manually test)';
+	criteriaItem.appendChild(badge);
 };
 
 var displaySupportResults = function() {
-	if (isSupported === true) {
-		addSuccessBadge(criteriaSupport);
-		addManualSupportMsgs();
-	} else {
-		addFailureBadge(criteriaSupport);
+
+	// This ID must be on the criteria list
+	var criteriaList = document.getElementById('criteria-list');
+
+	// Look through criteria list items
+	if (criteriaList && criteriaList.hasChildNodes) {
+		var criteriaItems = criteriaList.childNodes;
+		for (var i = 0; i < criteriaItems.length; i++) {
+			if (criteriaItems[i].nodeName === 'LI') {
+
+				// Need an extra space
+				criteriaItems[i].textContent = criteriaItems[i].textContent + ' ';
+
+				// Browser support criteria check
+				if (criteriaItems[i].id === 'criteria-support') {
+					if (isSupported === true) {
+						addSuccessBadge(criteriaItems[i]);
+					} else {
+						addFailureBadge(criteriaItems[i]);
+					}
+
+				// Manually tested items
+				} else {
+					addManualTestBadge(criteriaItems[i]);
+				}
+
+			}
+		}
 	}
+
 };
 
 displaySupportResults();

@@ -4,54 +4,36 @@
  * on the test page preceding the inclusion of this
  * script file.
  */
-
-var addSuccessBadge = function(criteriaItem) {
-	var badge = document.createElement('span');
-	badge.className = 'badge-success';
-	badge.textContent = 'Supported';
-	criteriaItem.appendChild(badge);
-};
-
-var addFailureBadge = function(criteriaItem) {
-	var badge = document.createElement('span');
-	badge.className = 'badge-failure';
-	badge.textContent = 'Not supported';
-	criteriaItem.appendChild(badge);
-};
-
-var addManualTestBadge = function(criteriaItem) {
-	var badge = document.createElement('span');
-	badge.className = 'badge-manual';
-	badge.textContent = '(Manually test)';
-	criteriaItem.appendChild(badge);
-};
-
 var displaySupportResults = function() {
 
 	// This ID must be on the criteria list
 	var criteriaList = document.getElementById('criteria-list');
+	var badge;
+	var successBadge = '<span class="badge-success">Supported</span>';
+	var failureBadge = '<span class="badge-failure">Not supported</span>';
+	var manualBadge = '<span class="badge-manual">(Manually test)</span>';
 
-	// Look through criteria list items
+	// Look through criteria list items to get appropriate badges
 	if (criteriaList && criteriaList.hasChildNodes) {
 		var criteriaItems = criteriaList.childNodes;
 		for (var i = 0; i < criteriaItems.length; i++) {
 			if (criteriaItems[i].nodeName === 'LI') {
 
-				// Need an extra space
-				criteriaItems[i].textContent = criteriaItems[i].textContent + ' ';
-
 				// Browser support criteria check
 				if (criteriaItems[i].id === 'criteria-support') {
 					if (isSupported === true) {
-						addSuccessBadge(criteriaItems[i]);
+						var badge = successBadge;
 					} else {
-						addFailureBadge(criteriaItems[i]);
+						var badge = failureBadge;
 					}
 
 				// Manually tested items
 				} else {
-					addManualTestBadge(criteriaItems[i]);
+					var badge = manualBadge;
 				}
+
+				// Add the appropriate badge to the list item
+				criteriaItems[i].innerHTML = '<span>' + criteriaItems[i].innerHTML + '</span> ' + badge;
 
 			}
 		}

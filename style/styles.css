@@ -79,7 +79,9 @@ body > h1 {
 .meta h2,
 .reference,
 .test-title,
-.code-title {
+.code-title,
+.badge-success,
+.badge-failure {
 	font-family: "League Spartan", sans-serif;
 	font-weight: 700;
 	text-transform: uppercase;
@@ -169,6 +171,28 @@ body > h1 {
 	font: 400 1.636em "Work Sans", sans-serif;
 	text-transform: none;
 	letter-spacing: 0;
+}
+
+/* Success/failure badges */
+.badge-success,
+.badge-failure {
+	display: inline-block;
+	border: 3px solid #fff;
+	border-radius: 3px;
+	padding: .65em .5em .25em;
+	font-size: .666em;
+	line-height: 1;
+	letter-spacing: .1em;
+	color: #000;
+	box-shadow: 0 0 .3em rgba(0,0,0,.3);
+}
+
+.badge-success {
+	background: #b2c158;
+}
+
+.badge-failure {
+	background: #dc9080;
 }
 
 /*	TESTS

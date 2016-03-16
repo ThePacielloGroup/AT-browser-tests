@@ -42,16 +42,93 @@
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;input id="input1" type="search" /></code></pre>
 		</div>
-
+		
 		<div class="test">
-			<h2 class="test-title" id="si-002">Test si-002: Input type="search" with label</h2>
+			<h2 class="test-title" id="si-002">Test si-002: Input type="search" with <code>aria-label</code></h2>
 
 			<div class="test-case">
-				<label>Site search <input id="input2" type="search" /></label>
+				<input id="input2" type="search" aria-lable="aria-label attribute" />
+				
+				<p>Aria-label should be used as accessible name</p>
+			</div>	
+	
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;input id="input2" type="search" aria-lable="aria-label attribute" /></code></pre>
+		</div>
+
+		<div class="test">
+			<h2 class="test-title" id="si-003">Test si-003: Input type="search" with <code>aria-labelledby</code></h2>
+
+			<div class="test-case">
+				<p id="si-003-labelledby">p referenced by aria-labelledby</p>
+				<input id="input3" type="search" aria-labelledby="si-003-labelledby" />
+				
+				<p>Aria-labelledby should be used as accessible name</p>
+			</div>	
+	
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;p id="si-003-labelledby">p referenced by aria-labelledby&lt;/p>
+&lt;input id="input3" type="search" aria-labelledby="si-003-labelledby" /></code></pre>
+		</div>
+
+		<div class="test">
+			<h2 class="test-title" id="si-004">Test si-004: Input type="search" with label</h2>
+
+			<div class="test-case">
+				<label>label wrapping input <input id="input4" type="search" /></label>
+				
+				<p>Label should be used as accessible name</p>
 			</div>
 
 			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;label>Site search &lt;input id="input2" type="search" />&lt;/label></code></pre>
+			<pre><code>&lt;label>label wrapping input &lt;input id="input4" type="search" />&lt;/label></code></pre>
 		</div>
+		
+		<div class="test">
+			<h2 class="test-title" id="si-005">Test si-005: Input type="search" with <code>title</code> attribute</h2>
+
+			<div class="test-case">
+				<input id="input5" type="search" title="title attribute" />
+				
+				<p>Title should be used as accessible name</p>
+			</div>	
+	
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;input id="input5" type="search" title="title attribute" /></code></pre>
+		</div>
+		
+		<div class="test">
+			<h2 class="test-title" id="si-006">Test si-006: Input type="search" with <code>aria-describedby</code></h2>
+
+			<div class="test-case">
+				<input id="input6" type="search" aria-describedby="si-006-describedby" />
+				<p id="si-006-describedby">p referenced by aria-describedby</p>
+				
+				<p>Aria-describedby should be used as accessible description</p>
+			</div>	
+	
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;input id="input6" type="search" aria-describedby="si-006-describedby" />
+&lt;p id="si-006-describedby">p referenced by aria-describedby&lt;/p></code></pre>
+		</div>
+		
+		<div class="test">
+			<h2 class="test-title" id="si-007">Test si-007: Input type="search" with <code>label</code> element &amp; <code>title</code> attribute</h2>
+
+			<div class="test-case">
+				<label for="input7">label referenced by for/id attributes</label>
+				<input id="input7" type="search" title="title attribute" />
+				
+				<p>Label should be used as accessible name</p>
+				<p>Title should be used as accessible description</p>
+			</div>	
+	
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;label for="input7">label referenced by for/id attributes&lt;/label>
+&lt;input id="input7" type="search" title="title attribute" /></code></pre>
+		</div>
+		
+		<p><strong>Note:</strong> placeholder and aria-placeholder are tested as part of the <a href="placeholder-att.html">placeholder attribute</a> test.</p>
+
 	</body>
 </html>

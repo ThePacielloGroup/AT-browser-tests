@@ -13,7 +13,7 @@
 				<ul>
 					<li>#1: Element is supported</li>
 					<li>#2: Correct HTML and Core Accessibility API mappings</li>
-					<li>#3: Correct Accessible Name &amp; Description Calculation</li>>
+					<li>#3: Correct Accessible Name &amp; Description Calculation</li>
 					<li>#4: Control is keyboard accessible:
 						<ul>
 							<li>#4.1: Control MUST be focusable</li>
@@ -38,22 +38,97 @@
 			<h2 class="test-title" id="dli-001">Test dli-001: Unlabelled input type="datetime-local"</h2>
 
 			<div class="test-case">
-				<input type="datetime-local" />
+				<input id="input1" type="datetime-local" />
 			</div>
-		
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;input id="input1" type="datetime-local" /></code></pre>
 		</div>
-
+		
 		<div class="test">
-			<h2 class="test-title" id="dli-002">Test dli-002: Input type="datetime-local" with label</h2>
+			<h2 class="test-title" id="dli-002">Test dli-002: Input type="datetime-local" with <code>aria-label</code></h2>
 
 			<div class="test-case">
-				<label>Date and time of birth <input id="input2" type="datetime-local" /></label>
-			</div>
-			
+				<input id="input2" type="datetime-local" aria-lable="aria-label attribute" />
+				
+				<p>Aria-label should be used as accessible name</p>
+			</div>	
+	
 			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;label>Date and time of birth &lt;input id="input2" type="datetime-local" />&lt;/label></code></pre>
+			<pre><code>&lt;input id="input2" type="datetime-local" aria-lable="aria-label attribute" /></code></pre>
 		</div>
+
+		<div class="test">
+			<h2 class="test-title" id="dli-003">Test dli-003: Input type="datetime-local" with <code>aria-labelledby</code></h2>
+
+			<div class="test-case">
+				<p id="dli-003-labelledby">p referenced by aria-labelledby</p>
+				<input id="input3" type="datetime-local" aria-labelledby="dli-003-labelledby" />
+				
+				<p>Aria-labelledby should be used as accessible name</p>
+			</div>	
+	
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;p id="dli-003-labelledby">p referenced by aria-labelledby&lt;/p>
+&lt;input id="input3" type="datetime-local" aria-labelledby="dli-003-labelledby" /></code></pre>
+		</div>
+
+		<div class="test">
+			<h2 class="test-title" id="dli-004">Test dli-004: Input type="datetime-local" with label</h2>
+
+			<div class="test-case">
+				<label>label wrapping input <input id="input4" type="datetime-local" /></label>
+				
+				<p>Label should be used as accessible name</p>
+			</div>
+
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;label>label wrapping input &lt;input id="input4" type="datetime-local" />&lt;/label></code></pre>
+		</div>
+		
+		<div class="test">
+			<h2 class="test-title" id="dli-005">Test dli-005: Input type="datetime-local" with <code>title</code> attribute</h2>
+
+			<div class="test-case">
+				<input id="input5" type="datetime-local" title="title attribute" />
+				
+				<p>Title should be used as accessible name</p>
+			</div>	
+	
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;input id="input5" type="datetime-local" title="title attribute" /></code></pre>
+		</div>
+		
+		<div class="test">
+			<h2 class="test-title" id="dli-006">Test dli-006: Input type="datetime-local" with <code>aria-describedby</code></h2>
+
+			<div class="test-case">
+				<input id="input6" type="datetime-local" aria-describedby="dli-006-describedby" />
+				<p id="dli-006-describedby">p referenced by aria-describedby</p>
+				
+				<p>Aria-describedby should be used as accessible description</p>
+			</div>	
+	
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;input id="input6" type="datetime-local" aria-describedby="dli-006-describedby" />
+&lt;p id="dli-006-describedby">p referenced by aria-describedby&lt;/p></code></pre>
+		</div>
+		
+		<div class="test">
+			<h2 class="test-title" id="dli-007">Test dli-007: Input type="datetime-local" with <code>label</code> element &amp; <code>title</code> attribute</h2>
+
+			<div class="test-case">
+				<label for="input7">label referenced by for/id attributes</label>
+				<input id="input7" type="datetime-local" title="title attribute" />
+				
+				<p>Label should be used as accessible name</p>
+				<p>Title should be used as accessible description</p>
+			</div>	
+	
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;label for="input7">label referenced by for/id attributes&lt;/label>
+&lt;input id="input7" type="datetime-local" title="title attribute" /></code></pre>
+		</div>
+		
 	</body>
 </html>

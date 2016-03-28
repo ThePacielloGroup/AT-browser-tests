@@ -10,8 +10,8 @@
 		<div class="meta">
 			<div class="criteria">
 				<h2>Pass Criteria</h2>
-				<ul>
-					<li>#1: Attribute is supported</li>
+				<ul id="criteria-list">
+					<li id="criteria-support">#1: Attribute is supported</li>
 					<li>#2: Correct HTML and Core Accessibility API mappings</li>
 					<li>#3: Used in Accessible Name and Description Calculation</li>
 				</ul>
@@ -109,8 +109,7 @@
 			var el = document.getElementById('input1'),
 			    isSupported = (typeof HTMLInputElement != 'undefined' 
 				               && el instanceof HTMLInputElement && 'placeholder' in el);
-			
-			console.log("Placeholder attribute: " + isSupported);
 		</script>
+		<script src="../scripts/test-scripts.js"></script>
 	</body>
 </html>

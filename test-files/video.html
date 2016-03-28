@@ -10,8 +10,8 @@
 		<div class="meta">
 			<div class="criteria">
 				<h2>Pass Criteria</h2>
-				<ul>
-					<li>#1: Elements are supported</li>
+				<ul id="criteria-list">
+					<li id="criteria-support">#1: Elements are supported</li>
 					<li>#2: Elements have correct HTML and Core Accessibility API mappings</li>
 					<li>#3: At least one subtitle format is supported (WebVTT or TTML)</li>
 					<li>#4: Controls are keyboard accessible:
@@ -58,13 +58,10 @@
 			    isSupported = (typeof HTMLVideoElement != 'undefined' 
 				               && el instanceof HTMLVideoElement && !!el.canPlayType);
 			
-			console.log("Video: " + isSupported);
-			
 			el = document.getElementById('track1'),
-			isSupported = (typeof HTMLTrackElement != 'undefined' 
+			isSupported = isSupported && (typeof HTMLTrackElement != 'undefined' 
 				           && el instanceof HTMLTrackElement && 'src' in el);
-			
-			console.log("Track: " + isSupported);
 		</script>
+		<script src="../scripts/test-scripts.js"></script>
 	</body>
 </html>

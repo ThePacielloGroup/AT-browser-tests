@@ -10,8 +10,8 @@
 		<div class="meta">
 			<div class="criteria">
 				<h2>Pass Criteria</h2>
-				<ul>
-					<li>#1: Element is supported</li>
+				<ul id="criteria-list">
+					<li id="criteria-support">#1: Element is supported</li>
 					<li>#2: Correct HTML and Core Accessibility API mappings</li>
 					<li>#3: Correct Accessible Name &amp; Description Calculation</li>
 				</ul>
@@ -33,7 +33,7 @@
 			<h2 class="test-title" id="ma-001">Test ma-001: Main element</h2>
 
 			<div class="test-case">
-				<main title="title attribute">
+				<main title="title attribute" id="main1">
 					<p>Title should be used as accessible name.</p>
 					<h2>Skateboards</h2>
 					<p>The skateboard is the way cool kids get around</p>
@@ -70,8 +70,7 @@
 		<script>
 			var el = document.getElementById('main1'),
 			    isSupported = (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
-
-			console.log("Main: " + isSupported);
 		</script>
+		<script src="../scripts/test-scripts.js"></script>
 	</body>
 </html>

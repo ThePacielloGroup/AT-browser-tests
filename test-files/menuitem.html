@@ -10,8 +10,8 @@
 		<div class="meta">
 			<div class="criteria">
 				<h2>Pass Criteria</h2>
-				<ul>
-					<li>#1: Element is supported</li>
+				<ul id="criteria-list">
+					<li id="criteria-support">#1: Element is supported</li>
 					<li>#2: Element has correct HTML and Core Accessibility API mappings</li>
 					<li>#3: Control is keyboard accessible:
 						<ul>
@@ -96,9 +96,8 @@
 		<script>
 			var el = document.getElementById('menuitem1'),
 			    isSupported = (typeof HTMLMenuItemElement != 'undefined' 
-				               && el instanceof HTMLMenuItemElement && 'type' in el);
-			
-			console.log("Menuitem: " + isSupported);
+				               && el instanceof HTMLMenuItemElement && 'type' in el);		
 		</script>
+		<script src="../scripts/test-scripts.js"></script>
 	</body>
 </html>

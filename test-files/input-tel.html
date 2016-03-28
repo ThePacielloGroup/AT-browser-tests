@@ -10,8 +10,8 @@
 		<div class="meta">
 			<div class="criteria">
 				<h2>Pass Criteria</h2>
-				<ul>
-					<li>#1: Element is supported</li>
+				<ul id="criteria-list">
+					<li id="criteria-support">#1: Element is supported</li>
 					<li>#2: Correct HTML and Core Accessibility API mappings</li>
 					<li>#3: Correct Accessible Name &amp; Description Calculation</li>
 					<li>#4: Control is keyboard accessible:
@@ -64,8 +64,7 @@
 		<script>
 			var el = document.getElementById('input1'),
 			    isSupported = (el.type === 'tel');
-			
-			console.log("Input tel: " + isSupported);
 		</script>
+		<script src="../scripts/test-scripts.js"></script>
 	</body>
 </html>

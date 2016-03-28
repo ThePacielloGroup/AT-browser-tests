@@ -41,6 +41,91 @@
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;meter id="meter1" min="0" max="100" value="83.5">fallback content&lt;/meter></code></pre>
 		</div>
+		
+		<div class="test">
+			<h2 class="test-title" id="mr-002">Test mr-002: Meter with <code>aria-label</code></h2>
+
+			<div class="test-case">
+				<meter id="meter2" aria-lable="aria-label attribute" min="0" max="100" value="83.5"></meter>
+				
+				<p>Aria-label should be used as accessible name</p>
+			</div>	
+	
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;meter id="meter2" aria-lable="aria-label attribute" min="0" max="100" value="83.5">&lt;/meter></code></pre>
+		</div>
+
+		<div class="test">
+			<h2 class="test-title" id="mr-003">Test mr-003: Meter with <code>aria-labelledby</code></h2>
+
+			<div class="test-case">
+				<p id="mr-003-labelledby">p referenced by aria-labelledby</p>
+				<meter id="meter3" aria-labelledby="mr-003-labelledby" min="0" max="100" value="83.5"></meter>
+				
+				<p>Aria-labelledby should be used as accessible name</p>
+			</div>	
+	
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;p id="mr-003-labelledby">p referenced by aria-labelledby&lt;/p>
+&lt;meter id="input3" aria-labelledby="mr-003-labelledby" min="0" max="100" value="83.5">&lt;/meter></code></pre>
+		</div>
+
+		<div class="test">
+			<h2 class="test-title" id="mr-004">Test mr-004: Meter with label</h2>
+
+			<div class="test-case">
+				<label>label wrapping meter <meter id="meter4" min="0" max="100" value="83.5"></meter></label>
+				
+				<p>Label should be used as accessible name</p>
+			</div>
+
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;label>label wrapping meter &lt;meter id="meter4" min="0" max="100" value="83.5">&lt;/meter>&lt;/label></code></pre>
+		</div>
+		
+		<div class="test">
+			<h2 class="test-title" id="mr-005">Test mr-005: Meter with <code>title</code> attribute</h2>
+
+			<div class="test-case">
+				<meter id="meter5" title="title attribute" min="0" max="100" value="83.5"></meter>
+				
+				<p>Title should be used as accessible name</p>
+			</div>	
+	
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;meter id="input5" title="title attribute" min="0" max="100" value="83.5">&lt;/meter></code></pre>
+		</div>
+		
+		<div class="test">
+			<h2 class="test-title" id="mr-006">Test mr-006: Meter with <code>aria-describedby</code></h2>
+
+			<div class="test-case">
+				<meter id="meter6" aria-describedby="mr-006-describedby" min="0" max="100" value="83.5"></meter>
+				<p id="mr-006-describedby">p referenced by aria-describedby</p>
+				
+				<p>Aria-describedby should be used as accessible description</p>
+			</div>	
+	
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;meter id="meter6" aria-describedby="mr-006-describedby" min="0" max="100" value="83.5">&lt;/meter>
+&lt;p id="mr-006-describedby">p referenced by aria-describedby&lt;/p></code></pre>
+		</div>
+		
+		<div class="test">
+			<h2 class="test-title" id="mr-007">Test mr-007: Meter with <code>label</code> element &amp; <code>title</code> attribute</h2>
+
+			<div class="test-case">
+				<label for="meter7">label referenced by for/id attributes</label>
+				<meter id="meter7" title="title attribute" min="0" max="100" value="83.5"></meter>
+				
+				<p>Label should be used as accessible name</p>
+				<p>Title should be used as accessible description</p>
+			</div>	
+	
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;label for="meter7">label referenced by for/id attributes&lt;/label>
+&lt;meter id="meter7" title="title attribute" min="0" max="100" value="83.5">&lt;/meter></code></pre>
+		</div>
 
 	</body>
 </html>

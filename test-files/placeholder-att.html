@@ -21,10 +21,9 @@
 				<h2>Reference</h2>
 				<ul>
 					<li><a href="https://www.w3.org/TR/html51/semantics.html#the-placeholder-attribute">HTML5 placeholder attribute</a>
-					<li><a href="https://www.w3.org/TR/html-aam-1.0/#html-attribute-state-and-property-mappings#att-placeholder">HTML Accessibility API Mappings for placeholder attribute</a></li>
-					<li><a href="https://www.w3.org/TR/html-aam-1.0/#https://www.w3.org/TR/html-aam-1.0/#input-type-text-input-type-password-input-type-search-input-type-tel-input-type-email-input-type-url-and-textarea-element-accessible-name-calculation">Accessible Name Calculation</a></li>
-					<li><a href="https://www.w3.org/TR/html-aam-1.0/#https://www.w3.org/TR/html-aam-1.0/#input-type-text-input-type-password-input-type-search-input-type-tel-input-type-email-input-type-url-and-textarea-element-accessible-description-calculation">Accessible Description Calculation</a></li>
-				</ul>
+					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#html-attribute-state-and-property-mappings#att-placeholder">HTML Accessibility API Mappings for placeholder attribute</a></li>
+					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#input-type-text-input-type-password-input-type-search-input-type-tel-input-type-email-input-type-url-and-textarea-element-accessible-name-calculation">Accessible Name Calculation</a></li>
+					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#input-type-text-input-type-password-input-type-search-input-type-tel-input-type-email-input-type-url-and-textarea-element-accessible-description-calculation">Accessible Description Calculation</a></li>				</ul>
 			</div>
 		</div>
 		
@@ -33,6 +32,7 @@
 
 			<div class="test-case">
 				<input id="input1" type="text" placeholder="placeholder text" />
+				<p>Placeholder should be used as accessible name</p>
 			</div>
 			
 			<h3 class="code-title">Code</h3>
@@ -45,6 +45,7 @@
 			<div class="test-case">
 				<label for="input2">Label text:</label>
 				<input id="input2" type="text" placeholder="placeholder text" />
+				<p>Placeholder should be used as accessible description</p>
 			</div>
 			
 			<h3 class="code-title">Code</h3>
@@ -59,6 +60,7 @@
 				<label>Label text:
 					<input id="input3" type="text" placeholder="placeholder text" />
 				</label>
+				<p>Placeholder should be used as accessible description</p>
 			</div>
 			
 			<h3 class="code-title">Code</h3>
@@ -72,6 +74,7 @@
 
 			<div class="test-case">
 				<input id="input4" type="text" placeholder="placeholder text" title="title text" />
+				<p>Placeholder should be used as accessible name</p>
 			</div>
 			
 			<h3 class="code-title">Code</h3>
@@ -84,6 +87,7 @@
 			<div class="test-case">
 				<input id="input5" type="text" placeholder="placeholder text" 
 				                               aria-placeholder="aria-placeholder text" />
+				<p>Placeholder should be used as accessible name</p>
 			</div>
 			
 			<h3 class="code-title">Code</h3>
@@ -97,13 +101,14 @@
 			<div class="test-case">
 				<input id="input6" type="text" placeholder="" 
 				                               aria-placeholder="aria-placeholder text" />
+				<p>Aria-placeholder should be used as accessible name</p>
 			</div>
-			
+
 			<h3 class="code-title">Code</h3>
+
 			<pre><code>&lt;input id="input6" type="text" placeholder="" 
 				               aria-placeholder="aria-placeholder text" /></code></pre>
 		</div>
-
 
 		<script src="../scripts/test-scripts.js"></script>
 		<script>

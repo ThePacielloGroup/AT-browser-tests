@@ -14,13 +14,7 @@
 					<li id="basic-criteria">#1: Element is supported</li>
 					<li>#2: Correct HTML and Core Accessibility API mappings</li>
 					<li>#3: Correct Accessible Name &amp; Description Calculation</li>
-					<li>#4: Control is keyboard accessible:
-						<ul>
-							<li>#4.1: Control MUST be focusable</li>
-							<li>#4.2: MUST be able to submit a value</li>
-						</ul>
-					</li>
-					<li>#5: Error message has correct mapping [TODO: where is this defined?]</li>
+					<li>#4: Error message exposed to the user</li>
 				</ul>
 			</div>
 
@@ -28,13 +22,13 @@
 				<h2>Reference</h2>
 				<ul>
 					<li><a href="http://www.w3.org/TR/html/forms.html#e-mail-state-(type=email)">HTML5 input type=email element</a></li>
-					<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-input-email">HTML Accessibility API Mappings for input type=email element without list attribute</a></li>
-					<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-textbox">Core Accessibility API Mappings for textbox role</a></li>
-					<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-input-textetc-autocomplete">HTML Accessibility API Mappings for input type=email element with list attribute</a> <a href="datalist.html#di-001">[Test: DI-001]</a></li>
-					<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-combobox">Core Accessibility API Mappings for combobox role</a> <a href="datalist.html#di-001">[Test: DI-001]</a></li>
-					<li><a href="https://www.w3.org/TR/core-aam-1.1/#ariaOwns">Core Accessibility API Mappings for aria-owns property</a> <a href="datalist.html#di-001">[Test: DI-001]</a></li>
-					<li><a href="https://www.w3.org/TR/html-aam-1.0/#other-form-elements-accessible-name-calculation">Accessible Name Calculation</a></li>
-					<li><a href="https://www.w3.org/TR/html-aam-1.0/#other-form-elements-accessible-description-calculation">Accessible Description Calculation</a></li>
+					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#el-input-email">HTML Accessibility API Mappings for input type=email element without list attribute</a></li>
+					<li><a href="https://w3c.github.io/aria/core-aam/core-aam.html#role-map-textbox">Core Accessibility API Mappings for textbox role</a></li>
+					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#el-input-textetc-autocomplete">HTML Accessibility API Mappings for input type=email element with list attribute</a> <a href="datalist.html#di-001">[Test: DI-001]</a></li>
+					<li><a href="https://w3c.github.io/aria/core-aam/core-aam.html#role-map-combobox">Core Accessibility API Mappings for combobox role</a> <a href="datalist.html#di-001">[Test: DI-001]</a></li>
+					<li><a href="https://w3c.github.io/aria/core-aam/core-aam.html#ariaOwns">Core Accessibility API Mappings for aria-owns property</a> <a href="datalist.html#di-001">[Test: DI-001]</a></li>
+					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#input-type-text-input-type-password-input-type-search-input-type-tel-input-type-email-input-type-url-and-textarea-element-accessible-name-calculation">Accessible Name Calculation</a></li>
+					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#input-type-text-input-type-password-input-type-search-input-type-tel-input-type-email-input-type-url-and-textarea-element-accessible-description-calculation">Accessible Description Calculation</a></li>
 				</ul>
 			</div>
 		</div>
@@ -47,23 +41,109 @@
 					<input id="input1" type="email" />
 				</form>
 			</div>
-			
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;input id="input1" type="email" /></code></pre>
 		</div>
-
+		
 		<div class="test">
-			<h2 class="test-title" id="ei-002">Test ei-002: Input type="email" with label</h2>
+			<h2 class="test-title" id="ei-002">Test ei-002: Input type="email" with <code>aria-label</code></h2>
 
 			<div class="test-case">
 				<form>
-					<label>Sign up <input id="input2" type="email" /></label>
+					<input id="input2" type="email" aria-label="aria-label attribute" />
 				</form>
-			</div>
-			
+				
+				<p>Aria-label should be used as accessible name</p>
+			</div>	
+	
 			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;label>Sign up &lt;input id="input2" type="email" />&lt;/label></code></pre>
+			<pre><code>&lt;input id="input2" type="email" aria-label="aria-label attribute" /></code></pre>
 		</div>
+
+		<div class="test">
+			<h2 class="test-title" id="ei-003">Test ei-003: Input type="email" with <code>aria-labelledby</code></h2>
+
+			<div class="test-case">
+				<form>
+					<p id="ei-003-labelledby">p referenced by aria-labelledby</p>
+					<input id="input3" type="email" aria-labelledby="ei-003-labelledby" />
+				</form>
+				
+				<p>Aria-labelledby should be used as accessible name</p>
+			</div>	
+	
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;p id="ei-003-labelledby">p referenced by aria-labelledby&lt;/p>
+&lt;input id="input3" type="email" aria-labelledby="ei-003-labelledby" /></code></pre>
+		</div>
+
+		<div class="test">
+			<h2 class="test-title" id="ei-004">Test ei-004: Input type="email" with label</h2>
+
+			<div class="test-case">
+				<form>
+					<label>label wrapping input <input id="input4" type="email" /></label>
+				</form>
+				
+				<p>Label should be used as accessible name</p>
+			</div>
+
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;label>label wrapping input &lt;input id="input4" type="email" />&lt;/label></code></pre>
+		</div>
+		
+		<div class="test">
+			<h2 class="test-title" id="ei-005">Test ei-005: Input type="email" with <code>title</code> attribute</h2>
+
+			<div class="test-case">
+				<form>
+					<input id="input5" type="email" title="title attribute" />
+				</form>
+				
+				<p>Title should be used as accessible name</p>
+			</div>	
+	
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;input id="input5" type="email" title="title attribute" /></code></pre>
+		</div>
+		
+		<div class="test">
+			<h2 class="test-title" id="ei-006">Test ei-006: Input type="email" with <code>aria-describedby</code></h2>
+
+			<div class="test-case">
+				<form>
+					<input id="input6" type="email" aria-describedby="ei-006-describedby" />
+					<p id="ei-006-describedby">p referenced by aria-describedby</p>
+				</form>
+				
+				<p>Aria-describedby should be used as accessible description</p>
+			</div>	
+	
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;input id="input6" type="email" aria-describedby="ei-006-describedby" />
+&lt;p id="ei-006-describedby">p referenced by aria-describedby&lt;/p></code></pre>
+		</div>
+		
+		<div class="test">
+			<h2 class="test-title" id="ei-007">Test ei-007: Input type="email" with <code>label</code> element &amp; <code>title</code> attribute</h2>
+
+			<div class="test-case">
+				<form>
+					<label for="input7">label referenced by for/id attributes</label>
+					<input id="input7" type="email" title="title attribute" />
+				</form>
+				
+				<p>Label should be used as accessible name</p>
+				<p>Title should be used as accessible description</p>
+			</div>	
+	
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;label for="input7">label referenced by for/id attributes&lt;/label>
+&lt;input id="input7" type="email" title="title attribute" /></code></pre>
+		</div>
+		
+		<p><strong>Note:</strong> placeholder and aria-placeholder are tested as part of the <a href="placeholder-att.html">placeholder attribute</a> test.</p>
 
 		<script src="../scripts/test-scripts.js"></script>
 		<script>

@@ -21,10 +21,10 @@
 				<h2>Reference</h2>
 				<ul>
 					<li><a href="http://www.w3.org/TR/html5/grouping-content.html#the-main-element">HTML5 main element</a></li>
-					<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-main">HTML Accessibility API Mappings for main element</a></li>
-					<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-main">Core Accessibility API Mappings for main role</a></li>
-					<li><a href="https://www.w3.org/TR/html-aam-1.0/#section-and-grouping-element-accessible-name-calculation">Accessible Name Calculation</a></li>
-					<li><a href="https://www.w3.org/TR/html-aam-1.0/#section-and-grouping-element-accessible-description-calculation">Accessible Description Calculation</a></li>
+					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#el-main">HTML Accessibility API Mappings for main element</a></li>
+					<li><a href="https://w3c.github.io/aria/core-aam/core-aam.html#role-map-main">Core Accessibility API Mappings for main role</a></li>
+					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#section-and-grouping-element-accessible-name-calculation">Accessible Name Calculation</a></li>
+					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#section-and-grouping-element-accessible-description-calculation">Accessible Description Calculation</a></li>
 				</ul>
 			</div>
 		</div>
@@ -64,6 +64,87 @@
 	&lt;p>These no longer require the propelling of the skateboard
 	by means of the feet; rather an electric motor propels the board,
 	fed by an electric battery.&lt;/p>
+&lt;/main></code></pre>
+		</div>
+		
+		<div class="test">
+			<h2 class="test-title" id="ma-002">Test ma-002: Main with <code>aria-label</code></h2>
+
+			<div class="test-case">
+				<main aria-label="aria-label attribute">
+					<p>Aria-label should be used as accessible name.</p>
+				</main>
+			</div>
+			
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;main aria-label="aria-label attribute">
+	&lt;p>Aria-label should be used as accessible name.&lt;/p>
+&lt;/main></code></pre>
+		</div>
+		
+		<div class="test">
+			<h2 class="test-title" id="ma-003">Test ma-003: Main with <code>aria-labelledby</code></h2>
+
+			<div class="test-case">
+				<main aria-labelledby="ma-003-labelledby">
+					<h1 id="ma-003-labelledby">h1 referenced by aria-labelledby</h1>
+					<p>Aria-labelledby should be used as accessible name.</p>
+				</main>
+			</div>
+			
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;main <strong>aria-labelledby="ma-003-labelledby"</strong>>
+	&lt;h1 <strong>id="ma-003-labelledby"</strong>>h1 referenced by aria-labelledby&lt;/h1>
+	&lt;p>Aria-labelledby should be used as accessible name.&lt;/p>
+&lt;/main></code></pre>
+		</div>
+		
+		<div class="test">
+			<h2 class="test-title" id="ma-004">Test ma-004: Main with <code>title</code> attribute</h2>
+
+			<div class="test-case">
+				<main title="title attribute">
+					<p>Title should be used as accessible name.</p>
+				</main>
+			</div>
+			
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;main <strong>title="title attribute"</strong>>
+	&lt;p>Title should be used as accessible name.&lt;/p>
+&lt;/main></code></pre>
+		</div>
+		
+		<div class="test">
+			<h2 class="test-title" id="ma-005">Test ma-005: Main with <code>aria-describedby</code></h2>
+
+			<div class="test-case">
+				<main aria-describedby="ma-005-describedby">
+					<h1 id="ma-005-describedby">h1 referenced by aria-describedby</h1>
+					<p>Aria-describedby should be used as accessible description.</p>
+				</main>
+			</div>
+			
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;main <strong>aria-labelledby="ma-005-describedby"</strong>>
+	&lt;h1 <strong>id="ma-005-describedby"</strong>>h1 referenced by aria-describedby&lt;/h1>
+	&lt;p>Aria-describedby should be used as accessible description.&lt;/p>
+&lt;/main></code></pre>
+		</div>
+		
+		<div class="test">
+			<h2 class="test-title" id="ma-006">Test ma-006: Main with <code>aria-label</code> &amp; <code>title</code> attributes</h2>
+
+			<div class="test-case">
+				<main aria-label="aria-label attribute" title="title attribute">
+					<p>Aria-label should be used as accessible name.</p>
+					<p>Title should be used as accessible description.</p>
+				</main>
+			</div>
+			
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;main <strong>aria-label="aria-label attribute" title="title attribute"</strong>>
+	&lt;p>Aria-label should be used as accessible name.&lt;/p>
+	&lt;p>Title should be used as accessible description.&lt;/p>
 &lt;/main></code></pre>
 		</div>
 

@@ -10,17 +10,11 @@
 		<div class="meta">
 			<div class="criteria">
 				<h2>Pass Criteria</h2>
+
 				<ul id="criteria-list">
 					<li id="basic-criteria">#1: Element is supported</li>
 					<li>#2: Correct HTML and Core Accessibility API mappings</li>
 					<li>#3: Correct Accessible Name &amp; Description Calculation</li>
-					<li>#4: Control is keyboard accessible:
-						<ul>
-							<li>#4.1: Control MUST be focusable</li>
-							<li>#4.2: MUST be able to type and select text</li>
-							<li>#4.3: MUST be able to submit a value</li>
-						</ul>
-					</li>
 				</ul>
 			</div>
 
@@ -28,13 +22,13 @@
 				<h2>Reference</h2>
 				<ul>
 					<li><a href="http://www.w3.org/TR/html/forms.html#telephone-state-(type=tel)">HTML5 input type=tel element</a></li>
-					<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-input-tel">HTML Accessibility API Mappings for input type=tel element without list attribute</a></li>
-					<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-textbox">Core Accessibility API Mappings for textbox role</a></li>
-					<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-input-textetc-autocomplete">HTML Accessibility API Mappings for input type=tel element with list attribute</a> <a href="datalist.html#di-001">[Test: DI-001]</a></li>
-					<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-combobox">Core Accessibility API Mappings for combobox role</a> <a href="datalist.html#di-001">[Test: DI-001]</a></li>
-					<li><a href="https://www.w3.org/TR/core-aam-1.1/#ariaOwns">Core Accessibility API Mappings for aria-owns property</a> <a href="datalist.html#di-001">[Test: DI-001]</a></li>
-					<li><a href="https://www.w3.org/TR/html-aam-1.0/#input-type-text-input-type-password-input-type-search-input-type-tel-input-type-email-input-type-url-and-textarea-element-accessible-name-calculation">Accessible Name Calculation</a></li>
-					<li><a href="https://www.w3.org/TR/html-aam-1.0/#input-type-text-input-type-password-input-type-search-input-type-tel-input-type-email-input-type-url-and-textarea-element-accessible-description-calculation">Accessible Description Calculation</a></li>
+					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#el-input-tel">HTML Accessibility API Mappings for input type=tel element without list attribute</a></li>
+					<li><a href="https://w3c.github.io/aria/core-aam/core-aam.html#role-map-textbox">Core Accessibility API Mappings for textbox role</a></li>
+					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#el-input-textetc-autocomplete">HTML Accessibility API Mappings for input type=tel element with list attribute</a> <a href="datalist.html#di-001">[Test: DI-001]</a></li>
+					<li><a href="https://w3c.github.io/aria/core-aam/core-aam.html#role-map-combobox">Core Accessibility API Mappings for combobox role</a> <a href="datalist.html#di-001">[Test: DI-001]</a></li>
+					<li><a href="https://w3c.github.io/aria/core-aam/core-aam.html#ariaOwns">Core Accessibility API Mappings for aria-owns property</a> <a href="datalist.html#di-001">[Test: DI-001]</a></li>
+					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#input-type-text-input-type-password-input-type-search-input-type-tel-input-type-email-input-type-url-and-textarea-element-accessible-name-calculation">Accessible Name Calculation</a></li>
+					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#input-type-text-input-type-password-input-type-search-input-type-tel-input-type-email-input-type-url-and-textarea-element-accessible-description-calculation">Accessible Description Calculation</a></li>
 				</ul>
 			</div>
 		</div>
@@ -49,17 +43,93 @@
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;input id="input1" type="tel" /></code></pre>
 		</div>
-
+		
 		<div class="test">
-			<h2 class="test-title" id="tl-002">Test tl-002: Input type="tel" with label</h2>
+			<h2 class="test-title" id="tl-002">Test tl-002: Input type="tel" with <code>aria-label</code></h2>
 
 			<div class="test-case">
-				<label>Home phone <input id="input2" type="tel" /></label>
+				<input id="input2" type="tel" aria-label="aria-label attribute" />
+				
+				<p>Aria-label should be used as accessible name</p>
+			</div>	
+	
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;input id="input2" type="tel" aria-label="aria-label attribute" /></code></pre>
+		</div>
+
+		<div class="test">
+			<h2 class="test-title" id="tl-003">Test tl-003: Input type="tel" with <code>aria-labelledby</code></h2>
+
+			<div class="test-case">
+				<p id="tl-003-labelledby">p referenced by aria-labelledby</p>
+				<input id="input3" type="tel" aria-labelledby="tl-003-labelledby" />
+				
+				<p>Aria-labelledby should be used as accessible name</p>
+			</div>	
+	
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;p id="tl-003-labelledby">p referenced by aria-labelledby&lt;/p>
+&lt;input id="input3" type="tel" aria-labelledby="tl-003-labelledby" /></code></pre>
+		</div>
+
+		<div class="test">
+			<h2 class="test-title" id="tl-004">Test tl-004: Input type="tel" with label</h2>
+
+			<div class="test-case">
+				<label>label wrapping input <input id="input4" type="tel" /></label>
+				
+				<p>Label should be used as accessible name</p>
 			</div>
 
 			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;label>Home phone &lt;input id="input2" type="tel" />&lt;/label></code></pre>
+			<pre><code>&lt;label>label wrapping input &lt;input id="input4" type="tel" />&lt;/label></code></pre>
 		</div>
+		
+		<div class="test">
+			<h2 class="test-title" id="tl-005">Test tl-005: Input type="tel" with <code>title</code> attribute</h2>
+
+			<div class="test-case">
+				<input id="input5" type="tel" title="title attribute" />
+				
+				<p>Title should be used as accessible name</p>
+			</div>	
+	
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;input id="input5" type="tel" title="title attribute" /></code></pre>
+		</div>
+		
+		<div class="test">
+			<h2 class="test-title" id="tl-006">Test tl-006: Input type="tel" with <code>aria-describedby</code></h2>
+
+			<div class="test-case">
+				<input id="input6" type="tel" aria-describedby="tl-006-describedby" />
+				<p id="tl-006-describedby">p referenced by aria-describedby</p>
+				
+				<p>Aria-describedby should be used as accessible description</p>
+			</div>	
+	
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;input id="input6" type="tel" aria-describedby="tl-006-describedby" />
+&lt;p id="tl-006-describedby">p referenced by aria-describedby&lt;/p></code></pre>
+		</div>
+		
+		<div class="test">
+			<h2 class="test-title" id="tl-007">Test tl-007: Input type="tel" with <code>label</code> element &amp; <code>title</code> attribute</h2>
+
+			<div class="test-case">
+				<label for="input7">label referenced by for/id attributes</label>
+				<input id="input7" type="tel" title="title attribute" />
+				
+				<p>Label should be used as accessible name</p>
+				<p>Title should be used as accessible description</p>
+			</div>	
+	
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;label for="input7">label referenced by for/id attributes&lt;/label>
+&lt;input id="input7" type="tel" title="title attribute" /></code></pre>
+		</div>
+		
+		<p><strong>Note:</strong> placeholder and aria-placeholder are tested as part of the <a href="placeholder-att.html">placeholder attribute</a> test.</p>
 
 		<script src="../scripts/test-scripts.js"></script>		
 		<script>

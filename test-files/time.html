@@ -21,10 +21,10 @@
 				<h2>Reference</h2>
 				<ul>
 					<li><a href="http://www.w3.org/TR/html/text-level-semantics.html#the-time-element">HTML5 time element</a></li>
-					<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-time">HTML Accessibility API Mappings for time element</a></li>
-					<li><a href="https://www.w3.org/TR/html-aam-1.0/#att-datetime-time">HTML Accessibility API Mappings for datetime attribute</a></li>
-					<li><a href="https://www.w3.org/TR/html-aam-1.0/#text-level-element-accessible-name-calculation">Accessible Name Calculation</a></li>
-					<li><a href="https://www.w3.org/TR/html-aam-1.0/#text-level-element-accessible-description-calculation">Accessible Description Calculation</a></li>
+					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#el-time">HTML Accessibility API Mappings for time element</a></li>
+					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#att-datetime-time">HTML Accessibility API Mappings for datetime attribute</a></li>
+					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#text-level-element-accessible-name-calculation">Accessible Name Calculation</a></li>
+					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#text-level-element-accessible-description-calculation">Accessible Description Calculation</a></li>
 				</ul>
 			</div>
 		</div>
@@ -38,8 +38,76 @@
 			</div>
 
 			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;p>HTML5, published on &lt;time datetime="2015-10-28">October 28 2015&lt;/time>,
+			<pre><code>&lt;p>HTML5, published on <strong>&lt;time datetime="2015-10-28">October 28 2015&lt;/time></strong>,
  has really good accessibility.&lt;/p></code></pre>
+		</div>
+		
+		<div class="test">
+			<h2 class="test-title" id="tm-002">Test tm-002: Time element with <code>aria-label</code></h2>
+
+			<div class="test-case">
+				<p>HTML5, published on <time aria-label="aria-label attribute" datetime="2015-10-28">October 28 2015</time>,
+				has really good accessibility.</p>
+			</div>
+			
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;p>HTML5, published on &lt;time <strong>aria-label="aria-label attribute"</strong> datetime="2015-10-28">October 28 2015&lt;/time>, has really good accessibility.&lt;/p></code></pre>
+		</div>
+		
+		<div class="test">
+			<h2 class="test-title" id="tm-003">Test tm-003: Time element with <code>aria-labelledby</code></h2>
+
+			<div class="test-case">
+				<p>HTML5, published on <time aria-labelledby="tm-003-labelledby" datetime="2015-10-28">October 28 2015</time>,
+				has really good accessibility.</p>
+				<span id="tm-003-labelledby">Element referenced by aria-labelledby attribute</span>
+			</div>
+			
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;p>HTML5, published on &lt;time <strong>aria-labelledby="tm-003-labelledby"</strong> datetime="2015-10-28">October 28 2015&lt;/time>, has really good accessibility.&lt;/p>
+
+&lt;span <strong>id="tm-003-labelledby"</strong>>Element referenced by aria-labelledby attribute&lt;/span></code></pre>
+</code></pre>
+		</div>
+		
+		<div class="test">
+			<h2 class="test-title" id="tm-004">Test tm-004: Time element with <code>title</code> attribute</h2>
+
+			<div class="test-case">
+				<p>HTML5, published on <time title="title attribute" datetime="2015-10-28">October 28 2015</time>,
+				has really good accessibility.</p>
+			</div>
+			
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;p>HTML5, published on &lt;time <strong>title="title attribute"</strong> datetime="2015-10-28">October 28 2015&lt;/time>, has really good accessibility.&lt;/p></code></pre>
+		</div>
+		
+		<div class="test">
+			<h2 class="test-title" id="tm-005">Test tm-005: Time element with <code>aria-describedby</code></h2>
+
+			<div class="test-case">
+				<p>HTML5, published on <time aria-describedby="tm-005-describedby" datetime="2015-10-28">October 28 2015</time>,
+				has really good accessibility.</p>
+				<span id="tm-005-describedby">Element referenced by aria-describedby attribute</span>
+			</div>
+			
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;p>HTML5, published on &lt;time <strong>aria-describedby="tm-005-describedby"</strong> datetime="2015-10-28">October 28 2015&lt;/time>, has really good accessibility.&lt;/p>
+
+&lt;span <strong>id="tm-005-describedby"</strong>>Element referenced by aria-labelledby attribute&lt;/span></code></pre>
+</code></pre>
+		</div>
+		
+		<div class="test">
+			<h2 class="test-title" id="tm-006">Test tm-006: Time element with <code>aria-label</code> &amp; <code>title</code> attributes</h2>
+
+			<div class="test-case">
+				<p>HTML5, published on <time aria-label="aria-label attribute" title="title attribute" datetime="2015-10-28">October 28 2015</time>,
+				has really good accessibility.</p>
+			</div>
+			
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;p>HTML5, published on &lt;time <strong>aria-label="aria-label attribute" title="title attribute"</strong> datetime="2015-10-28">October 28 2015&lt;/time>, has really good accessibility.&lt;/p></code></pre>
 		</div>
 
 		<script src="../scripts/test-scripts.js"></script>
@@ -52,5 +120,6 @@
 			test.push({id: "basic-criteria", pass: isSupported});
 			displaySupportResults(test);
 		</script>
+
 	</body>
 </html>

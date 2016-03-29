@@ -150,6 +150,104 @@
 			
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;article>
+	&lt;footer>footer element inside article&lt;/footer>
+&lt;/article></code></pre>
+		</div>
+		
+		<div class="test">
+			<h2 class="test-title" id="ft-003">Test ft-003: footer with <code>aria-label</code></h2>
+
+			<div class="test-case">
+				<article>
+					<footer aria-label="aria-label attribute">
+						Aria-label should be used as accessible name.
+					</footer>
+				</article>
+			</div>
+			
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;article>
+	&lt;footer <strong>aria-label="aria-label attribute"</strong>>
+		Aria-label should be used as accessible name.
+	&lt;/footer>
+&lt;/article></code></pre>
+		</div>
+		
+		<div class="test">
+			<h2 class="test-title" id="ft-004">Test ft-004: footer with <code>aria-labelledby</code></h2>
+
+			<div class="test-case">
+				<article>
+					<footer aria-labelledby="ft-004-labelledby">
+						<small id="ft-004-labelledby">small referenced by aria-labelledby</small>
+						Aria-labelledby should be used as accessible name.
+					</footer>
+				</article>
+			</div>
+			
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;article>
+	&lt;footer <strong>aria-labelledby="ft-004-labelledby"</strong>>
+		&lt;small <strong>id="ft-004-labelledby"</strong>>small referenced by aria-labelledby&lt;/small>
+		Aria-labelledby should be used as accessible name.
+	&lt;/footer>
+&lt;/article></code></pre>
+		</div>
+		
+		<div class="test">
+			<h2 class="test-title" id="ft-005">Test ft-005: footer with <code>title</code> attribute.</h2>
+
+			<div class="test-case">
+				<article>
+					<footer title="title attribute">
+						Title should be used as accessible name.
+					</footer>
+				</article>
+			</div>
+			
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;article>
+	&lt;footer title="title attribute">
+		Title should be used as accessible name.
+	&lt;/footer>
+&lt;/article></code></pre>
+		</div>
+		
+		<div class="test">
+			<h2 class="test-title" id="ft-006">Test ft-006: footer with <code>aria-describedby</code></h2>
+
+			<div class="test-case">
+				<article>				
+					<footer aria-describedby="ft-006-describedby">
+						<small id="ft-006-describedby">small referenced by aria-describedby</small>
+						Aria-describedby should be used as accessible description.
+					</footer>
+				</article>
+			</div>
+			
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;article>
+	&lt;footer <strong>aria-labelledby="ft-006-describedby"</strong>>
+		&lt;small <strong>id="ft-006-describedby"</strong>>h1 referenced by aria-describedby&lt;/small>
+		Aria-describedby should be used as accessible description.
+	&lt;/footer>
+&lt;/article></code></pre>
+		</div>
+		
+		<div class="test">
+			<h2 class="test-title" id="ft-007">Test ft-007: footer with <code>aria-label</code> &amp; <code>title</code> attributes</h2>
+
+			<div class="test-case">
+				<article>
+					<footer aria-label="aria-label attribute" title="title attribute">
+						<p>Aria-label should be used as accessible name.</p>
+						<p>Title should be used as accessible description.</p>
+					</footer>
+				</article>
+			</div>
+			
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;article>
 	&lt;footer <strong>aria-label="aria-label attribute" title="title attribute"</strong>>
 		&lt;p>Aria-label should be used as accessible name.&lt;/p>
 		&lt;p>Title should be used as accessible description.&lt;/p>

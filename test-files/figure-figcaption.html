@@ -10,8 +10,8 @@
 		<div class="meta">
 			<div class="criteria">
 				<h2>Pass Criteria</h2>
-				<ul>
-					<li>#1: Element is supported</li>
+				<ul id="criteria-list">
+					<li id="basic-criteria">#1: Element is supported</li>
 					<li>#2: Correct HTML and Core Accessibility API mappings</li>
 				</ul>
 			</div>
@@ -29,9 +29,9 @@
 			<h2 class="test-title" id="fc-001">Test fc-001: Figure with figcaption element</h2>
 
 			<div class="test-case">
-				<figure>
+				<figure id="figure1">
 					<img src="../images/HTML5_Logo.png" alt="HTML5 logo" width="128" height="128">
-					<figcaption>HTML5 logo</figcaption>
+					<figcaption id="figcaption1">HTML5 logo</figcaption>
 				</figure>
 			</div>
 			
@@ -41,5 +41,18 @@
 	&lt;figcaption>HTML5 logo&lt;/figcaption>
 &lt;/figure></code></pre>
 		</div>
+
+		<script src="../scripts/test-scripts.js"></script>		
+		<script>
+			var test = [],
+				el = document.getElementById('figure1'),
+			    isSupported = (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
+						
+			el = document.getElementById('figcaption1');
+		    isSupported = isSupported && (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
+			
+			test.push({id: "basic-criteria", pass: isSupported});
+			displaySupportResults(test);	
+		</script>
 	</body>
 </html>

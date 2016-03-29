@@ -10,8 +10,8 @@
 		<div class="meta">
 			<div class="criteria">
 				<h2>Pass Criteria</h2>
-				<ul>
-					<li>#1: Attribute is supported</li>
+				<ul id="criteria-list">
+					<li id="basic-criteria">#1: Attribute is supported</li>
 					<li>#2: Correct HTML and Core Accessibility API mappings</li>
 					<li>#3: Used in Accessible Name and Description Calculation</li>
 				</ul>
@@ -104,11 +104,22 @@
 				                               aria-placeholder="aria-placeholder text" />
 				<p>Aria-placeholder should be used as accessible name</p>
 			</div>
-			
+
 			<h3 class="code-title">Code</h3>
+
 			<pre><code>&lt;input id="input6" type="text" placeholder="" 
 				               aria-placeholder="aria-placeholder text" /></code></pre>
 		</div>
 
+		<script src="../scripts/test-scripts.js"></script>
+		<script>
+			var test = [],
+				el = document.getElementById('input1'),
+			    isSupported = (typeof HTMLInputElement != 'undefined' 
+				               && el instanceof HTMLInputElement && 'placeholder' in el);
+			
+			test.push({id: "basic-criteria", pass: isSupported});
+			displaySupportResults(test);
+		</script>
 	</body>
 </html>

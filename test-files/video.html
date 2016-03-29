@@ -10,8 +10,8 @@
 		<div class="meta">
 			<div class="criteria">
 				<h2>Pass Criteria</h2>
-				<ul>
-					<li>#1: Elements are supported</li>
+				<ul id="criteria-list">
+					<li id="basic-criteria">#1: Elements are supported</li>
 					<li>#2: Elements have correct HTML and Core Accessibility API mappings</li>
 					<li>#3: At least one subtitle format is supported (WebVTT or TTML)</li>
 					<li>#4: Controls are keyboard accessible:
@@ -41,7 +41,7 @@
 				<video id="video1" controls width="300" height="300">
 					<source src="../images/elo.mp4" type="video/mp4">
 					<source src="../images/elo.ogg" type="video/ogg">
-					<track kind="captions" srclang="en" src="../images/elo.vtt" label="English" default>
+					<track id="track1" kind="captions" srclang="en" src="../images/elo.vtt" label="English" default>
 				</video>
 			</div>
 			
@@ -52,5 +52,20 @@
 	&lt;track kind="captions" srclang="en" src="../images/elo.vtt" label="English">
 &lt;/video></code></pre>
 		</div>
+
+		<script src="../scripts/test-scripts.js"></script>	
+		<script>
+			var test = [],
+				el = document.getElementById('video1'),
+			    isSupported = (typeof HTMLVideoElement != 'undefined' 
+				               && el instanceof HTMLVideoElement && !!el.canPlayType);
+			
+			el = document.getElementById('track1'),
+			isSupported = isSupported && (typeof HTMLTrackElement != 'undefined' 
+				           && el instanceof HTMLTrackElement && 'src' in el);
+			
+			test.push({id: "basic-criteria", pass: isSupported});
+			displaySupportResults(test);
+		</script>
 	</body>
 </html>

@@ -10,8 +10,8 @@
 		<div class="meta">
 			<div class="criteria">
 				<h2>Pass Criteria</h2>
-				<ul>
-					<li>#1: Element is supported</li>
+				<ul id="criteria-list">
+					<li id="basic-criteria">#1: Element is supported</li>
 					<li>#2: Correct HTML and Core Accessibility API mappings</li>
 					<li>#3: Correct Accessible Name &amp; Description Calculation</li>
 				</ul>
@@ -33,11 +33,11 @@
 			<h2 class="test-title" id="sc-001">Test sc-001: Plain Section</h2>
 
 			<div class="test-case">
-				<section>
+				<section id="section1">
 					Lorem ipsum...
 				</section>
 			</div>
-			
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;section>
 	Lorem ipsum...
@@ -53,7 +53,7 @@
 					Lorem ipsum...
 				</section>
 			</div>
-			
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;section>
 	&lt;h1>Once upon a time&lt;/h1>
@@ -69,7 +69,7 @@
 					Aria-label should be used as accessible name.
 				</section>
 			</div>
-			
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;section <strong>aria-label="aria-label attribute"</strong>>
 	Aria-label should be used as accessible name.
@@ -85,8 +85,9 @@
 					Aria-labelledby should be used as accessible name.
 				</section>
 			</div>
-			
+
 			<h3 class="code-title">Code</h3>
+		
 			<pre><code>&lt;section <strong>aria-labelledby="sc-004-labelledby"</strong>>
 	&lt;h1 <strong>id="sc-004-labelledby"</strong>>h1 referenced by aria-labelledby&lt;/h1>
 	Aria-labelledby should be used as accessible name.
@@ -142,5 +143,14 @@
 &lt;/section></code></pre>
 		</div>		
 
+		<script src="../scripts/test-scripts.js"></script>
+		<script>
+			var test = [],
+				el = document.getElementById('section1'),
+				isSupported = (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
+			
+			test.push({id: "basic-criteria", pass: isSupported});
+			displaySupportResults(test);
+		</script>
 	</body>
 </html>

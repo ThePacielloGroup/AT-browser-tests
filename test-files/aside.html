@@ -10,8 +10,8 @@
 		<div class="meta">
 			<div class="criteria">
 				<h2>Pass Criteria</h2>
-				<ul>
-					<li>#1: Element is supported</li>
+				<ul id="criteria-list">
+					<li id="basic-criteria">#1: Element is supported</li>
 					<li>#2: Correct HTML and Core Accessibility API mappings</li>
 					<li>#3: Correct Accessible Name &amp; Description Calculation</li>
 				</ul>
@@ -32,8 +32,8 @@
 		<div class="test">
 			<h2 class="test-title" id="as-001">Test as-001: Plain aside</h2>
 
-			<div class="test-case">
-				<aside>Lorem ipsum...</aside>
+			<div class="test-case">					
+				<aside id="aside1">Lorem ipsum...</aside>
 			</div>
 			
 			<h3 class="code-title">Code</h3>
@@ -49,7 +49,7 @@
 					Lorem ipsum...
 				</aside>
 			</div>
-			
+
 			<h3 class="code-title">Code</h3>
 					<pre><code>&lt;aside>
 	&lt;h1>Once upon a time&lt;/h1>
@@ -67,7 +67,7 @@
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;aside <strong>aria-label="aria-label attribute"</strong>>Aria-label should be used as accessible name.&lt;/aside></code></pre>
 		</div>
-		
+
 		<div class="test">
 			<h2 class="test-title" id="as-004">Test as-004: Aside with <code>aria-labelledby</code></h2>
 
@@ -77,7 +77,7 @@
 					Aria-labelledby should be used as accessible name.
 				</aside>
 			</div>
-			
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;aside <strong>aria-labelledby="as-004-labelledby"</strong>>
 	&lt;h1 <strong>id="as-004-labelledby"</strong>>h1 referenced by aria-labelledby&lt;/h1>
@@ -97,9 +97,21 @@
 		</div>
 		
 		<div class="test">
+			<h2 class="test-title" id="as-005">Test as-005: Aside with <code>title</code> attribute</h2>
+
+			<div class="test-case">
+				<aside title="title attribute">Title should be used as accessible name.</aside>
+			</div>
+	
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;aside <strong>title="title attribute"</strong>>Title should be used as accessible name.&lt;/aside></code></pre>
+		</div>
+	
+		<div class="test">
 			<h2 class="test-title" id="as-006">Test as-006: Aside with <code>aria-describedby</code></h2>
 
 			<div class="test-case">
+
 				<aside aria-describedby="as-006-describedby">
 					<h1 id="as-006-describedby">h1 referenced by aria-describedby</h1>
 					Aria-describedby should be used as accessible description.
@@ -124,11 +136,38 @@
 			</div>
 			
 			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;aside <strong>aria-labelledby="as-006-describedby"</strong>>
+	&lt;h1 <strong>id="as-006-describedby"</strong>>h1 referenced by aria-describedby&lt;/h1>
+	Aria-describedby should be used as accessible description.
+&lt;/aside></code></pre>
+		</div>
+
+		<div class="test">
+			<h2 class="test-title" id="as-007">Test as-007: Aside with <code>aria-label</code> &amp; <code>title</code> attributes</h2>
+
+			<div class="test-case">
+				<aside aria-label="aria-label attribute" title="title attribute">
+					<p>Aria-label should be used as accessible name.</p>
+					<p>Title should be used as accessible description.</p>
+				</aside>
+			</div>
+
+			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;aside <strong>aria-label="aria-label attribute" title="title attribute"</strong>>
 	&lt;p>Aria-label should be used as accessible name.&lt;/p>
 	&lt;p>Title should be used as accessible description.&lt;/p>
 &lt;/aside></code></pre>
 		</div>
+
+		<script src="../scripts/test-scripts.js"></script>
+		<script>
+			var test = [],
+				el = document.getElementById('aside1'),
+			    isSupported = (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
+			
+			test.push({id: "basic-criteria", pass: isSupported});
+			displaySupportResults(test);
+		</script>
 
 	</body>
 </html>

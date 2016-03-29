@@ -10,8 +10,8 @@
 		<div class="meta">
 			<div class="criteria">
 				<h2>Pass Criteria</h2>
-				<ul>
-					<li>#1: Element is supported</li>
+				<ul id="criteria-list">
+					<li id="basic-criteria">#1: Element is supported</li>
 					<li>#2: Element has correct HTML and Core Accessibility API mappings</li>
 					<li>#3: Control is keyboard accessible:
 						<ul>
@@ -46,7 +46,7 @@
 			<div class="test-case">
 				<button id="menu1" menu="command-menu">I have a number of command menuitems in my context menu. Right click (or equivalent) to test</button>
 				<menu type="context" id="command-menu">
-					<menuitem type="command" label="I’m a command menuitem" />
+					<menuitem type="command" label="I’m a command menuitem" id="menuitem1" />
 					<menuitem type="command" label="I’m another command menuitem" />
 				</menu>
 			</div>
@@ -92,5 +92,16 @@
 	&lt;menuitem type="radio" radiogroup="radios" label="I’m another radio menuitem" />
 &lt;/menu></code></pre>
 		</div>
+
+		<script src="../scripts/test-scripts.js"></script>		
+		<script>
+			var test = [],
+				el = document.getElementById('menuitem1'),
+			    isSupported = (typeof HTMLMenuItemElement != 'undefined' 
+				               && el instanceof HTMLMenuItemElement && 'type' in el);
+			
+			test.push({id: "basic-criteria", pass: isSupported});
+			displaySupportResults(test);	
+		</script>
 	</body>
 </html>

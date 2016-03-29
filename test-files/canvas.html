@@ -10,9 +10,9 @@
 		<div class="meta">
 			<div class="criteria">
 				<h2>Pass Criteria</h2>
-				<ul>
-					<li>#1: Element is supported</li>
-					<li>#2: <code>drawFocusIfNeeded()</code> is supported</li>
+				<ul id="criteria-list">
+					<li id="basic-criteria">#1: Element is supported</li>
+					<li id="drawFocusIfNeeded-criteria">#2: <code>drawFocusIfNeeded()</code> is supported</li>
 					<li>#3: Element has correct HTML and Core Accessibility API mappings</li>
 					<li>#4: Canvas sub-DOM is exposed</li>
 				</ul>
@@ -97,5 +97,17 @@ context2.fill();
 button.focus();
 context2.drawFocusIfNeeded(button);</code></pre>
 		</div>
+		<script src="../scripts/test-scripts.js"></script>
+		<script>
+			var test = [],
+				canvas = document.getElementById('myCanvas'),
+			    isSupported = !!(canvas.getContext && canvas.getContext('2d'));
+				
+			test.push({id: "basic-criteria", pass: isSupported});
+			isSupported = isSupported && !!(canvas.getContext('2d').drawFocusIfNeeded);
+			test.push({id: "drawFocusIfNeeded-criteria", pass: isSupported});
+				
+			displaySupportResults(test);	
+		</script>
 	</body>
 </html>

@@ -10,8 +10,8 @@
 		<div class="meta">
 			<div class="criteria">
 				<h2>Pass Criteria</h2>
-				<ul>
-					<li>#1: Element is supported</li>
+				<ul id="criteria-list">
+					<li id="basic-criteria">#1: Element is supported</li>
 					<li>#2: Element has correct HTML and Core Accessibility API mappings</li>
 					<li>#3: Controls are keyboard accessible:
 						<ul>
@@ -49,5 +49,16 @@
 		</div>
 
 		<small>Audio file: <a href="https://archive.org/details/Jeffbob">Spam call: Bob hangs up 7 mins into his survey</a> by Bruce Lawson</small>
+
+		<script src="../scripts/test-scripts.js"></script>		
+		<script>
+			var test = [],
+				el = document.getElementById('audio1'),
+			    isSupported = (typeof HTMLAudioElement != 'undefined' 
+				               && el instanceof HTMLAudioElement && !!el.canPlayType);
+			
+			test.push({id: "basic-criteria", pass: isSupported});
+			displaySupportResults(test);		
+		</script>
 	</body>
 </html>

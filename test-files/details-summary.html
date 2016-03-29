@@ -10,8 +10,13 @@
 		<div class="meta">
 			<div class="criteria">
 				<h2>Pass Criteria</h2>
+<<<<<<< HEAD
+				<ul id="criteria-list">
+					<li id="basic-criteria">#1: Elements are supported</li>
+=======
 				<ul>
 					<li>#1: Elements are supported</li>
+>>>>>>> gh-pages
 					<li>#2: Correct HTML and Core Accessibility API mappings</li>
 					<li>#3: <code>summary</code> has correct Accessible Name &amp; Description Calculation</li>
 					<li>#4: Control is keyboard accessible:
@@ -46,14 +51,14 @@
 					<p>Summary subtree should be used as accessible name</p>
 				</details>
 			</div>
-			
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;details id="details1">
 	&lt;summary>Summary text&lt;/summary>
 	&lt;p>Summary subtree should be used as accessible name&lt;/p>
 &lt;/details></code></pre>
 		</div>
-		
+
 		<div class="test">
 			<h2 class="test-title" id="ds-002">Test ds-002: Details element with open attribute</h2>
 
@@ -63,7 +68,7 @@
 					<p>This should be expanded by default</p>
 				</details>
 			</div>
-			
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;details id="details2" open>
 	&lt;summary>Am I open?&lt;/summary>
@@ -109,7 +114,7 @@
 &lt;/details></code></pre>
 		</div>
 
-		<div class="test">
+		<div class="test">	
 			<h2 class="test-title" id="ds-005">Test ds-005: Summary element with title attribute</h2>
 
 			<div class="test-case">
@@ -181,5 +186,14 @@
 &lt;/details></code></pre>
 		</div>
 		
+		<script src="../scripts/test-scripts.js"></script>
+		<script>
+			var test = [],
+				el = document.getElementById('details1'),
+				isSupported = (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
+			
+			test.push({id: "basic-criteria", pass: isSupported});
+			displaySupportResults(test);
+		</script>
 	</body>
 </html>

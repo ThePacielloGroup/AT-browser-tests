@@ -10,8 +10,8 @@
 		<div class="meta">
 			<div class="criteria">
 				<h2>Pass Criteria</h2>
-				<ul>
-					<li>#1: Element is supported</li>
+				<ul id="criteria-list">
+					<li id="basic-criteria">#1: Element is supported</li>
 					<li>#2: Correct HTML and Core Accessibility API mappings</li>
 					<li>#3: Correct Accessible Name &amp; Description Calculation</li>
 				</ul>
@@ -26,7 +26,7 @@
 					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#att-min">HTML Accessibility API Mappings for min attribute</a></li>
 					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#att-value-meter">HTML Accessibility API Mappings for value attribute</a></li>
 					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#other-form-elements-accessible-name-calculation">Accessible Name Calculation</a></li>
-					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#other-form-elements-accessible-description-calculation">Accessible Description Calculation</a></li
+					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#other-form-elements-accessible-description-calculation">Accessible Description Calculation</a></li>
 				</ul>
 			</div>
 		</div>
@@ -127,5 +127,15 @@
 &lt;meter id="meter7" title="title attribute" min="0" max="100" value="83.5">&lt;/meter></code></pre>
 		</div>
 
+		<script src="../scripts/test-scripts.js"></script>
+		<script>
+			var test = [],
+				el = document.getElementById('meter1'),
+			    isSupported = (typeof HTMLMeterElement != 'undefined' 
+				               && el instanceof HTMLMeterElement && 'value' in el);
+			
+			test.push({id: "basic-criteria", pass: isSupported});
+			displaySupportResults(test);	
+		</script>
 	</body>
 </html>

@@ -10,8 +10,8 @@
 		<div class="meta">
 			<div class="criteria">
 				<h2>Pass Criteria</h2>
-				<ul>
-					<li>#1: Element is supported</li>
+				<ul id="criteria-list">
+					<li id="basic-criteria">#1: Element is supported</li>
 					<li>#2: Correct HTML and Core Accessibility API mappings</li>
 					<li>#3: Correct Accessible Name &amp; Description Calculation</li>
 				</ul>
@@ -28,46 +28,46 @@
 				</ul>
 			</div>
 		</div>
-		
+
 		<div class="test">
 			<h2 class="test-title" id="ar-001">Test ar-001: Plain Article</h2>
 
 			<div class="test-case">
-				<article>Lorem ipsum...</article>
+				<article id="article1">Lorem ipsum...</article>
 			</div>
-			
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;article>Lorem ipsum...&lt;/article></code></pre>
 		</div>
-		
+
 		<div class="test">
 			<h2 class="test-title" id="ar-002">Test ar-002: Article with <code>&lt;h1></code></h2>
 
 			<div class="test-case">
 				<article>
 					<h1>Once upon a time</h1>
-					Lorem ipsum...
+					Lorem ipsum…
 				</article>
 			</div>
-			
+
 			<h3 class="code-title">Code</h3>
 					<pre><code>&lt;article>
 	&lt;h1>Once upon a time&lt;/h1>
-	Lorem ipsum...
+	Lorem ipsum…
 &lt;/article></code></pre>
 		</div>
-		
+
 		<div class="test">
 			<h2 class="test-title" id="ar-003">Test ar-003: Article with <code>aria-label</code></h2>
 
 			<div class="test-case">
 				<article aria-label="aria-label attribute">Aria-label should be used as accessible name.</article>
 			</div>
-			
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;article <strong>aria-label="aria-label attribute"</strong>>Aria-label should be used as accessible name.&lt;/article></code></pre>
 		</div>
-		
+
 		<div class="test">
 			<h2 class="test-title" id="ar-004">Test ar-004: Article with <code>aria-labelledby</code></h2>
 
@@ -77,25 +77,25 @@
 					Aria-labelledby should be used as accessible name.
 				</article>
 			</div>
-			
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;article <strong>aria-labelledby="ar-004-labelledby"</strong>>
 	&lt;h1 <strong>id="ar-004-labelledby"</strong>>h1 referenced by aria-labelledby&lt;/h1>
 	Aria-labelledby should be used as accessible name.
 &lt;/article></code></pre>
 		</div>
-		
+
 		<div class="test">
 			<h2 class="test-title" id="ar-005">Test ar-005: Article with <code>title</code> attribute</h2>
 
 			<div class="test-case">
 				<article title="title attribute">Title should be used as accessible name.</article>
 			</div>
-			
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;article <strong>title="title attribute"</strong>>Title should be used as accessible name.&lt;/article></code></pre>
 		</div>
-		
+
 		<div class="test">
 			<h2 class="test-title" id="ar-006">Test ar-006: Article with <code>aria-describedby</code></h2>
 
@@ -105,14 +105,14 @@
 					Aria-describedby should be used as accessible description.
 				</article>
 			</div>
-			
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;article <strong>aria-labelledby="ar-006-describedby"</strong>>
 	&lt;h1 <strong>id="ar-006-describedby"</strong>>h1 referenced by aria-describedby&lt;/h1>
 	Aria-describedby should be used as accessible description.
 &lt;/article></code></pre>
 		</div>
-		
+
 		<div class="test">
 			<h2 class="test-title" id="ar-007">Test ar-007: Article with <code>aria-label</code> &amp; <code>title</code> attributes</h2>
 
@@ -122,13 +122,23 @@
 					<p>Title should be used as accessible description.</p>
 				</article>
 			</div>
-			
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;article <strong>aria-label="aria-label attribute" title="title attribute"</strong>>
 	&lt;p>Aria-label should be used as accessible name.&lt;/p>
 	&lt;p>Title should be used as accessible description.&lt;/p>
 &lt;/article></code></pre>
 		</div>
+
+		<script src="../scripts/test-scripts.js"></script>
+		<script>
+			var test = [],
+				el = document.getElementById('article1'),
+			    isSupported = (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
+			
+			test.push({id: "basic-criteria", pass: isSupported});
+			displaySupportResults(test);
+		</script>
 
 	</body>
 </html>

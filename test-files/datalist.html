@@ -48,7 +48,7 @@
 					<option value="http://www.reddit.com/" label="Reddit">Reddit</option>
 				</datalist>
 			</div>
-			
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;label>Sites &lt;input id="input1" type="text" list="datalist1" />&lt;/label>
 &lt;datalist id="datalist1">
@@ -63,9 +63,10 @@
 				el = document.getElementById('datalist1'),
 			    isSupported = (typeof HTMLDataListElement != 'undefined' 
 				               && el instanceof HTMLDataListElement && 'options' in el);
-							   
+			   
 			test.push({id: "basic-criteria", pass: isSupported});
 			displaySupportResults(test);
 		</script>
+
 	</body>
 </html>

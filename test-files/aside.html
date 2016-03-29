@@ -39,7 +39,7 @@
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;aside>Lorem ipsum...&lt;/aside></code></pre>
 		</div>
-		
+
 		<div class="test">
 			<h2 class="test-title" id="as-002">Test as-002: aside with <code>&lt;h1></code></h2>
 
@@ -49,14 +49,14 @@
 					Lorem ipsum...
 				</aside>
 			</div>
-			
+
 			<h3 class="code-title">Code</h3>
 					<pre><code>&lt;aside>
 	&lt;h1>Once upon a time&lt;/h1>
 	Lorem ipsum...
 &lt;/aside></code></pre>
 		</div>
-		
+
 		<div class="test">
 			<h2 class="test-title" id="as-003">Test as-003: Aside with <code>aria-label</code></h2>
 
@@ -67,7 +67,7 @@
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;aside <strong>aria-label="aria-label attribute"</strong>>Aria-label should be used as accessible name.&lt;/aside></code></pre>
 		</div>
-		
+
 		<div class="test">
 			<h2 class="test-title" id="as-004">Test as-004: Aside with <code>aria-labelledby</code></h2>
 
@@ -77,25 +77,25 @@
 					Aria-labelledby should be used as accessible name.
 				</aside>
 			</div>
-			
+	
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;aside <strong>aria-labelledby="as-004-labelledby"</strong>>
 	&lt;h1 <strong>id="as-004-labelledby"</strong>>h1 referenced by aria-labelledby&lt;/h1>
 	Aria-labelledby should be used as accessible name.
 &lt;/aside></code></pre>
 		</div>
-		
+
 		<div class="test">
 			<h2 class="test-title" id="as-005">Test as-005: Aside with <code>title</code> attribute</h2>
 
 			<div class="test-case">
 				<aside title="title attribute">Title should be used as accessible name.</aside>
 			</div>
-			
+	
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;aside <strong>title="title attribute"</strong>>Title should be used as accessible name.&lt;/aside></code></pre>
 		</div>
-		
+	
 		<div class="test">
 			<h2 class="test-title" id="as-006">Test as-006: Aside with <code>aria-describedby</code></h2>
 
@@ -105,14 +105,14 @@
 					Aria-describedby should be used as accessible description.
 				</aside>
 			</div>
-			
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;aside <strong>aria-labelledby="as-006-describedby"</strong>>
 	&lt;h1 <strong>id="as-006-describedby"</strong>>h1 referenced by aria-describedby&lt;/h1>
 	Aria-describedby should be used as accessible description.
 &lt;/aside></code></pre>
 		</div>
-		
+
 		<div class="test">
 			<h2 class="test-title" id="as-007">Test as-007: Aside with <code>aria-label</code> &amp; <code>title</code> attributes</h2>
 
@@ -122,7 +122,7 @@
 					<p>Title should be used as accessible description.</p>
 				</aside>
 			</div>
-			
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;aside <strong>aria-label="aria-label attribute" title="title attribute"</strong>>
 	&lt;p>Aria-label should be used as accessible name.&lt;/p>
@@ -139,5 +139,6 @@
 			test.push({id: "basic-criteria", pass: isSupported});
 			displaySupportResults(test);
 		</script>
+
 	</body>
 </html>

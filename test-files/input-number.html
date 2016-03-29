@@ -10,18 +10,19 @@
 		<div class="meta">
 			<div class="criteria">
 				<h2>Pass Criteria</h2>
-				<ul>
-					<li>#1: Element is supported</li>
-					<li>#2: Element has correct HTML and Core Accessibility API mappings</li>
-					<li>#3: Control is keyboard accessible:
+				<ul id="criteria-list">
+					<li id="basic-criteria">#1: Element is supported</li>
+					<li>#2: Correct HTML and Core Accessibility API mappings</li>
+					<li>#3: Correct Accessible Name &amp; Description Calculation</li>
+					<li>#4: Control is keyboard accessible:
 						<ul>
-							<li>#3.1: Control MUST be focusable, including any child controls</li>
-							<li>#3.2: MUST be able to type and select text</li>
-							<li>#3.3: MUST be able to submit a value</li>
-							<li>#3.4: Any child controls, such as number spinners, MUST be able to be activated</li>
+							<li>#4.1: Control MUST be focusable, including any child controls</li>
+							<li>#4.2: MUST be able to type and select text</li>
+							<li>#4.3: MUST be able to submit a value</li>
+							<li>#4.4: Any child controls, such as number spinners, MUST be able to be activated</li>
 						</ul>
 					</li>
-					<li>#4: Error message has correct mapping [TODO: where is this defined?]</li>
+					<li>#5: Validation error message is presented to the user</li>
 				</ul>
 			</div>
 
@@ -29,8 +30,10 @@
 				<h2>Reference</h2>
 				<ul>
 					<li><a href="http://www.w3.org/TR/html/forms.html#number-state-(type=number)">HTML5 input type=number element</a></li>
-					<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-input-number">HTML Accessibility API Mappings for input type=number element</a></li>
-					<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-spinbutton">Core Accessibility API Mappings for spinbutton role</a></li>
+					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#el-input-number">HTML Accessibility API Mappings for input type=number element</a></li>
+					<li><a href="https://w3c.github.io/aria/core-aam/core-aam.html#role-map-spinbutton">Core Accessibility API Mappings for spinbutton role</a></li>
+					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#other-form-elements-accessible-name-calculation">Accessible Name Calculation</a></li>
+					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#other-form-elements-accessible-description-calculation">Accessible Description Calculation</a></li>
 				</ul>
 			</div>
 		</div>
@@ -43,22 +46,116 @@
 					<input id="input1" type="number" />
 				</form>
 			</div>
-		
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;input id="input1" type="number" /></code></pre>
 		</div>
-
+		
 		<div class="test">
-			<h2 class="test-title" id="ni-002">Test ni-002: input type="number" with label</h2>
+			<h2 class="test-title" id="ni-002">Test ni-002: Input type="number" with <code>aria-label</code></h2>
 
 			<div class="test-case">
 				<form>
-					<label>Amount <input id="input2" type="number" /></label>
+					<input id="input2" type="number" aria-label="aria-label attribute" />
 				</form>
-			</div>
-		
+
+				<p>Aria-label should be used as accessible name</p>
+			</div>	
+	
 			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;label>Amount &lt;input id="input2" type="number" />&lt;/label></code></pre>
+			<pre><code>&lt;input id="input2" type="number" aria-label="aria-label attribute" /></code></pre>
 		</div>
+
+		<div class="test">
+			<h2 class="test-title" id="ni-003">Test ni-003: Input type="number" with <code>aria-labelledby</code></h2>
+
+			<div class="test-case">
+				<form>
+					<p id="ni-003-labelledby">p referenced by aria-labelledby</p>
+					<input id="input3" type="number" aria-labelledby="ni-003-labelledby" />
+				</form>
+				
+				<p>Aria-labelledby should be used as accessible name</p>
+			</div>	
+	
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;p id="ni-003-labelledby">p referenced by aria-labelledby&lt;/p>
+&lt;input id="input3" type="number" aria-labelledby="ni-003-labelledby" /></code></pre>
+		</div>
+
+		<div class="test">
+			<h2 class="test-title" id="ni-004">Test ni-004: Input type="number" with label</h2>
+
+			<div class="test-case">
+				<form>
+					<label>label wrapping input <input id="input4" type="number" /></label>
+				</form>
+
+				<p>Label should be used as accessible name</p>
+			</div>
+
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;label>label wrapping input &lt;input id="input4" type="number" />&lt;/label></code></pre>
+		</div>
+		
+		<div class="test">
+			<h2 class="test-title" id="ni-005">Test ni-005: Input type="number" with <code>title</code> attribute</h2>
+
+			<div class="test-case">
+				<form>
+					<input id="input5" type="number" title="title attribute" />
+				</form>
+				
+				<p>Title should be used as accessible name</p>
+			</div>	
+	
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;input id="input5" type="number" title="title attribute" /></code></pre>
+		</div>
+		
+		<div class="test">
+			<h2 class="test-title" id="ni-006">Test ni-006: Input type="number" with <code>aria-describedby</code></h2>
+
+			<div class="test-case">
+				<form>
+					<input id="input6" type="number" aria-describedby="ni-006-describedby" />
+					<p id="ni-006-describedby">p referenced by aria-describedby</p>
+				</form>
+
+				<p>Aria-describedby should be used as accessible description</p>
+			</div>	
+	
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;input id="input6" type="number" aria-describedby="ni-006-describedby" />
+&lt;p id="ni-006-describedby">p referenced by aria-describedby&lt;/p></code></pre>
+		</div>
+		
+		<div class="test">
+			<h2 class="test-title" id="ni-007">Test ni-007: Input type="number" with <code>label</code> element &amp; <code>title</code> attribute</h2>
+
+			<div class="test-case">
+				<form>
+					<label for="input7">label referenced by for/id attributes</label>
+					<input id="input7" type="number" title="title attribute" />
+				</form>
+				
+				<p>Label should be used as accessible name</p>
+				<p>Title should be used as accessible description</p>
+			</div>	
+	
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;label for="input7">label referenced by for/id attributes&lt;/label>
+&lt;input id="input7" type="number" title="title attribute" /></code></pre>
+		</div>
+		
+		<script src="../scripts/test-scripts.js"></script>
+		<script>
+			var test = [],
+				el = document.getElementById('input1'),
+			    isSupported = (el.type === 'number');
+			
+			test.push({id: "basic-criteria", pass: isSupported});
+			displaySupportResults(test);
+		</script>
 	</body>
 </html>

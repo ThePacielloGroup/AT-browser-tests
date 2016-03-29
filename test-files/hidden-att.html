@@ -10,8 +10,8 @@
 		<div class="meta">
 			<div class="criteria">
 				<h2>Pass Criteria</h2>
-				<ul>
-					<li>#1: Attribute is supported</li>
+				<ul id="criteria-list">
+					<li id="basic-criteria">#1: Attribute is supported</li>
 					<li>#2: Attribute has correct HTML and Core Accessibility API mappings</li>
 				</ul>
 			</div>
@@ -20,7 +20,7 @@
 				<h2>Reference</h2>
 				<ul>
 					<li><a href="https://www.w3.org/TR/html51/editing.html#the-hidden-attribute">HTML5 hidden attribute</a>
-					<li><a href="https://www.w3.org/TR/html-aam-1.0/#html-attribute-state-and-property-mappings#att-hidden">HTML Accessibility API Mappings for hidden attribute</a></li>
+					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#html-attribute-state-and-property-mappings#att-hidden">HTML Accessibility API Mappings for hidden attribute</a></li>
 				</ul>
 			</div>
 		</div>
@@ -32,7 +32,7 @@
 				<p hidden>These elements should be hidden both visually and to assistive technology.</p>
 				<input id="input1" type="button" hidden />
 			</div>
-			
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;p hidden>These elements should be hidden both visually and to assistive technology.&lt;/p>
 &lt;input id=&quot;input1&quot; type=&quot;button&quot; hidden /></code></pre>
@@ -63,6 +63,15 @@
 			<pre><code>&lt;p hidden aria-hidden="false">These elements should be visually hidden but visable to assistive technology.&lt;/p>
 &lt;input id=&quot;input3&quot; type=&quot;button&quot; hidden aria-hidden="false" /></code></pre>
 		</div>
-		
+
+		<script src="../scripts/test-scripts.js"></script>
+		<script>
+			var test = [],
+				el = document.getElementById('hidden1'),
+			    isSupported = ('hidden' in el);
+			
+			test.push({id: "basic-criteria", pass: isSupported});
+			displaySupportResults(test);
+		</script>
 	</body>
 </html>

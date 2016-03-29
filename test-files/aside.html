@@ -10,9 +10,10 @@
 		<div class="meta">
 			<div class="criteria">
 				<h2>Pass Criteria</h2>
-				<ul>
-					<li>#1: Element is supported</li>
-					<li>#2: Element has correct HTML and Core Accessibility API mappings</li>
+				<ul id="criteria-list">
+					<li id="basic-criteria">#1: Element is supported</li>
+					<li>#2: Correct HTML and Core Accessibility API mappings</li>
+					<li>#3: Correct Accessible Name &amp; Description Calculation</li>
 				</ul>
 			</div>
 
@@ -20,10 +21,10 @@
 				<h2>Reference</h2>
 				<ul>
 					<li><a href="http://www.w3.org/TR/html/grouping-content.html#the-aside-element">HTML5 aside element</a></li>
-					<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-aside">HTML Accessibility API Mappings for aside element</a></li>
-					<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-complementary">Core Accessibility API Mappings for complementary role</a></li>
-					<li><a href="https://www.w3.org/TR/html-aam-1.0/#https://www.w3.org/TR/html-aam-1.0/#section-and-grouping-element-accessible-name-calculation">Accessible Name Calculation</a></li>
-					<li><a href="https://www.w3.org/TR/html-aam-1.0/#https://www.w3.org/TR/html-aam-1.0/#section-and-grouping-element-accessible-description-calculation">Accessible Description Calculation</a></li>
+					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#el-aside">HTML Accessibility API Mappings for aside element</a></li>
+					<li><a href="https://w3c.github.io/aria/core-aam/core-aam.html#role-map-complementary">Core Accessibility API Mappings for complementary role</a></li>
+					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#section-and-grouping-element-accessible-name-calculation">Accessible Name Calculation</a></li>
+					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#section-and-grouping-element-accessible-description-calculation">Accessible Description Calculation</a></li>
 				</ul>
 			</div>
 		</div>
@@ -32,68 +33,120 @@
 			<h2 class="test-title" id="as-001">Test as-001: Plain aside</h2>
 
 			<div class="test-case">					
-				<aside>Lorem ipsum...</aside>
+				<aside id="aside1">Lorem ipsum...</aside>
 			</div>
-
+			
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;aside>Lorem ipsum...&lt;/aside></code></pre>
 		</div>
-
+		
 		<div class="test">
-			<h2 class="test-title" id="as-002">Test as-002: Aside with <code>&lt;h1></code></h2>
+			<h2 class="test-title" id="as-002">Test as-002: aside with <code>&lt;h1></code></h2>
 
-			<div class="test-case">				
+			<div class="test-case">
 				<aside>
 					<h1>Once upon a time</h1>
 					Lorem ipsum...
 				</aside>
 			</div>
-			
+
 			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;aside>
+					<pre><code>&lt;aside>
 	&lt;h1>Once upon a time&lt;/h1>
 	Lorem ipsum...
 &lt;/aside></code></pre>
 		</div>
-
+		
 		<div class="test">
 			<h2 class="test-title" id="as-003">Test as-003: Aside with <code>aria-label</code></h2>
 
-			<div class="test-case">					
-				<aside aria-label="Once upon a time">Lorem ipsum...</aside>
+			<div class="test-case">
+				<aside aria-label="aria-label attribute">
+					<p>Aria-label should be used as accessible name.</p>
+				</aside>
 			</div>
-
+			
 			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;aside aria-label="Once upon a time">Lorem ipsum...&lt;/aside></code></pre>
+			<pre><code>&lt;aside <strong>aria-label="aria-label attribute"</strong>>Aria-label should be used as accessible name.&lt;/aside></code></pre>
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="as-004">Test as-004: Aside with <code>&lt;h1></code> referenced by <code>aria-labelledby</code></h2>
+			<h2 class="test-title" id="as-004">Test as-004: Aside with <code>aria-labelledby</code></h2>
 
-			<div class="test-case">					
-				<aside aria-labelledby="aside-title">
-					<h1 id="aside-title">Once upon a time</h1>
-					Lorem ipsum...
+			<div class="test-case">
+				<aside aria-labelledby="as-004-labelledby">
+					<h1 id="as-004-labelledby">h1 referenced by aria-labelledby</h1>
+					<p>Aria-labelledby should be used as accessible name.</p>
 				</aside>
 			</div>
 
 			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;aside aria-labelledby="aside-title">
-	&lt;h1 id="aside-title">Once upon a time&lt;/h1>
-	Lorem ipsum...
+			<pre><code>&lt;aside <strong>aria-labelledby="as-004-labelledby"</strong>>
+	&lt;h1 <strong>id="as-004-labelledby"</strong>>h1 referenced by aria-labelledby&lt;/h1>
+	&lt;p>Aria-labelledby should be used as accessible name.&lt;/p>
 &lt;/aside></code></pre>
 		</div>
 		
 		<div class="test">
 			<h2 class="test-title" id="as-005">Test as-005: Aside with <code>title</code> attribute</h2>
 
-			<div class="test-case">					
-				<aside title="title attribute">Title should be used as accessible name.</aside>
+			<div class="test-case">
+				<aside title="title attribute">
+					<p>Title should be used as accessible name.</p>
+				</aside>
 			</div>
-
+			
 			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;aside title="title attribute">Title should be used as accessible name.&lt;/aside></code></pre>
+			<pre><code>&lt;aside <strong>title="title attribute"</strong>>
+	&lt;p>Title should be used as accessible name.&lt;/p>
+&lt;/aside></code></pre>
 		</div>
+	
+	
+		<div class="test">
+			<h2 class="test-title" id="as-006">Test as-006: Aside with <code>aria-describedby</code></h2>
+
+			<div class="test-case">
+
+				<aside aria-describedby="as-006-describedby">
+					<h1 id="as-006-describedby">h1 referenced by aria-describedby</h1>
+					<p>Aria-describedby should be used as accessible description.</p>
+				</aside>
+			</div>
+			
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;aside <strong>aria-labelledby="as-006-describedby"</strong>>
+	&lt;h1 <strong>id="as-006-describedby"</strong>>h1 referenced by aria-describedby&lt;/h1>
+	&lt;p>Aria-describedby should be used as accessible description.&lt;/p>
+&lt;/aside></code></pre>
+		</div>
+		
+		<div class="test">
+			<h2 class="test-title" id="as-007">Test as-007: Aside with <code>aria-label</code> &amp; <code>title</code> attributes</h2>
+
+			<div class="test-case">
+				<aside aria-label="aria-label attribute" title="title attribute">
+					<p>Aria-label should be used as accessible name.</p>
+					<p>Title should be used as accessible description.</p>
+				</aside>
+			</div>
+			
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;aside <strong>aria-labelledby="as-006-describedby"</strong>>
+	&lt;h1 <strong>id="as-006-describedby"</strong>>h1 referenced by aria-describedby&lt;/h1>
+	&lt;p>Aria-describedby should be used as accessible description.&lt;/p>
+&lt;/aside></code></pre>
+		</div>
+
+		<script src="../scripts/test-scripts.js"></script>
+		<script>
+			var test = [],
+				el = document.getElementById('aside1'),
+			    isSupported = (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
+			
+			test.push({id: "basic-criteria", pass: isSupported});
+			displaySupportResults(test);
+		</script>
 
 	</body>
 </html>

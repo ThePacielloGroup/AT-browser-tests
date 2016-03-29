@@ -12,7 +12,8 @@
 				<h2>Pass Criteria</h2>
 				<ul>
 					<li>#1: Element is supported</li>
-					<li>#2: Element has correct HTML and Core Accessibility API mappings</li>
+					<li>#2: Correct HTML and Core Accessibility API mappings</li>
+					<li>#3: Correct Accessible Name &amp; Description Calculation</li>
 				</ul>
 			</div>
 
@@ -20,10 +21,10 @@
 				<h2>Reference</h2>
 				<ul>
 					<li><a href="http://www.w3.org/TR/html5/sections.html#the-article-element">HTML5 article element</a></li>
-					<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-article">HTML Accessibility API Mappings for article element</a></li>
-					<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-article">Core Accessibility API Mappings for article role</a></li>
-					<li><a href="https://www.w3.org/TR/html-aam-1.0/#https://www.w3.org/TR/html-aam-1.0/#section-and-grouping-element-accessible-name-calculation">Accessible Name Calculation</a></li>
-					<li><a href="https://www.w3.org/TR/html-aam-1.0/#https://www.w3.org/TR/html-aam-1.0/#section-and-grouping-element-accessible-description-calculation">Accessible Description Calculation</a></li>
+					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#el-article">HTML Accessibility API Mappings for article element</a></li>
+					<li><a href="https://w3c.github.io/aria/core-aam/core-aam.html#role-map-article">Core Accessibility API Mappings for article role</a></li>
+					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#section-and-grouping-element-accessible-name-calculation">Accessible Name Calculation</a></li>
+					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#section-and-grouping-element-accessible-description-calculation">Accessible Description Calculation</a></li>
 				</ul>
 			</div>
 		</div>
@@ -60,27 +61,27 @@
 			<h2 class="test-title" id="ar-003">Test ar-003: Article with <code>aria-label</code></h2>
 
 			<div class="test-case">
-				<article aria-label="Once upon a time">Lorem ipsum...</article>
+				<article aria-label="aria-label attribute">Aria-label should be used as accessible name.</article>
 			</div>
 			
 			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;article aria-label="Once upon a time">Lorem ipsum...&lt;/article></code></pre>
+			<pre><code>&lt;article <strong>aria-label="aria-label attribute"</strong>>Aria-label should be used as accessible name.&lt;/article></code></pre>
 		</div>
 		
 		<div class="test">
-			<h2 class="test-title" id="ar-004">Test ar-004: Article with <code>&lt;h1></code> referenced by <code>aria-labelledby</code></h2>
+			<h2 class="test-title" id="ar-004">Test ar-004: Article with <code>aria-labelledby</code></h2>
 
 			<div class="test-case">
-				<article aria-labelledby="article-title">
-					<h1 id="article-title">Once upon a time</h1>
-					Lorem ipsum...
+				<article aria-labelledby="ar-004-labelledby">
+					<h1 id="ar-004-labelledby">h1 referenced by aria-labelledby</h1>
+					Aria-labelledby should be used as accessible name.
 				</article>
 			</div>
 			
 			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;article aria-labelledby="article-title">
-	&lt;h1 id="article-title">Once upon a time&lt;/h1>
-	Lorem ipsum...
+			<pre><code>&lt;article <strong>aria-labelledby="ar-004-labelledby"</strong>>
+	&lt;h1 <strong>id="ar-004-labelledby"</strong>>h1 referenced by aria-labelledby&lt;/h1>
+	Aria-labelledby should be used as accessible name.
 &lt;/article></code></pre>
 		</div>
 		
@@ -92,7 +93,41 @@
 			</div>
 			
 			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;article title="title attribute">Title should be used as accessible name.&lt;/article></code></pre>
+			<pre><code>&lt;article <strong>title="title attribute"</strong>>Title should be used as accessible name.&lt;/article></code></pre>
+		</div>
+		
+		<div class="test">
+			<h2 class="test-title" id="ar-006">Test ar-006: Article with <code>aria-describedby</code></h2>
+
+			<div class="test-case">
+				<article aria-describedby="ar-006-describedby">
+					<h1 id="ar-006-describedby">h1 referenced by aria-describedby</h1>
+					Aria-describedby should be used as accessible description.
+				</article>
+			</div>
+			
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;article <strong>aria-labelledby="ar-006-describedby"</strong>>
+	&lt;h1 <strong>id="ar-006-describedby"</strong>>h1 referenced by aria-describedby&lt;/h1>
+	Aria-describedby should be used as accessible description.
+&lt;/article></code></pre>
+		</div>
+		
+		<div class="test">
+			<h2 class="test-title" id="ar-007">Test ar-007: Article with <code>aria-label</code> &amp; <code>title</code> attributes</h2>
+
+			<div class="test-case">
+				<article aria-label="aria-label attribute" title="title attribute">
+					<p>Aria-label should be used as accessible name.</p>
+					<p>Title should be used as accessible description.</p>
+				</article>
+			</div>
+			
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;article <strong>aria-label="aria-label attribute" title="title attribute"</strong>>
+	&lt;p>Aria-label should be used as accessible name.&lt;/p>
+	&lt;p>Title should be used as accessible description.&lt;/p>
+&lt;/article></code></pre>
 		</div>
 
 	</body>

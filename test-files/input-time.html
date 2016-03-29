@@ -12,11 +12,12 @@
 				<h2>Pass Criteria</h2>
 				<ul>
 					<li>#1: Element is supported</li>
-					<li>#2: Element has correct HTML and Core Accessibility API mappings</li>
-					<li>#3: Control is keyboard accessible:
+					<li>#2: Correct HTML and Core Accessibility API mappings</li>
+					<li>#3: Correct Accessible Name &amp; Description Calculation</li>
+					<li>#4: Control is keyboard accessible:
 						<ul>
-							<li>#3.1: Control MUST be focusable</li>
-							<li>#3.2: MUST be able to open time control and select a time</li>
+							<li>#4.1: Control MUST be focusable</li>
+							<li>#4.2: MUST be able to open time control and select a time</li>
 						</ul>
 					</li>
 				</ul>
@@ -26,7 +27,9 @@
 				<h2>Reference</h2>
 				<ul>
 					<li><a href="http://www.w3.org/TR/html5/forms.html#time-state-(type=time)">HTML5 input type=time element</a></li>
-					<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-input-time">HTML Accessibility API Mappings for input type=time element</a></li>
+					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#el-input-time">HTML Accessibility API Mappings for input type=time element</a></li>
+					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#other-form-elements-accessible-name-calculation">Accessible Name Calculation</a></li>
+					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#other-form-elements-accessible-description-calculation">Accessible Description Calculation</a></li>
 				</ul>
 			</div>
 		</div>
@@ -37,20 +40,95 @@
 			<div class="test-case">
 				<input id="input1" type="time" />
 			</div>
-			
+
 			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;input id="input2" type="time" /></code></pre>
+			<pre><code>&lt;input id="input1" type="time" /></code></pre>
+		</div>
+		
+		<div class="test">
+			<h2 class="test-title" id="ti-002">Test ti-002: Input type="time" with <code>aria-label</code></h2>
+
+			<div class="test-case">
+				<input id="input2" type="time" aria-label="aria-label attribute" />
+				
+				<p>Aria-label should be used as accessible name</p>
+			</div>	
+	
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;input id="input2" type="time" aria-label="aria-label attribute" /></code></pre>
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="ti-002">Test ti-002: Input type="time" with label</h2>
+			<h2 class="test-title" id="ti-003">Test ti-003: Input type="time" with <code>aria-labelledby</code></h2>
 
-			<div class="test-case">			
-				<label>Time of birth <input id="input2" type="time" /></label>
-			</div>
-			
+			<div class="test-case">
+				<p id="ti-003-labelledby">p referenced by aria-labelledby</p>
+				<input id="input3" type="time" aria-labelledby="ti-003-labelledby" />
+				
+				<p>Aria-labelledby should be used as accessible name</p>
+			</div>	
+	
 			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;label>Time of birth &lt;input id="input2" type="time" />&lt;/label></code></pre>
+			<pre><code>&lt;p id="ti-003-labelledby">p referenced by aria-labelledby&lt;/p>
+&lt;input id="input3" type="time" aria-labelledby="ti-003-labelledby" /></code></pre>
 		</div>
+
+		<div class="test">
+			<h2 class="test-title" id="ti-004">Test ti-004: Input type="time" with label</h2>
+
+			<div class="test-case">
+				<label>label wrapping input <input id="input4" type="time" /></label>
+				
+				<p>Label should be used as accessible name</p>
+			</div>
+
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;label>label wrapping input &lt;input id="input4" type="time" />&lt;/label></code></pre>
+		</div>
+		
+		<div class="test">
+			<h2 class="test-title" id="ti-005">Test ti-005: Input type="time" with <code>title</code> attribute</h2>
+
+			<div class="test-case">
+				<input id="input5" type="time" title="title attribute" />
+				
+				<p>Title should be used as accessible name</p>
+			</div>	
+	
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;input id="input5" type="time" title="title attribute" /></code></pre>
+		</div>
+		
+		<div class="test">
+			<h2 class="test-title" id="ti-006">Test ti-006: Input type="time" with <code>aria-describedby</code></h2>
+
+			<div class="test-case">
+				<input id="input6" type="time" aria-describedby="ti-006-describedby" />
+				<p id="ti-006-describedby">p referenced by aria-describedby</p>
+				
+				<p>Aria-describedby should be used as accessible description</p>
+			</div>	
+	
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;input id="input6" type="time" aria-describedby="ti-006-describedby" />
+&lt;p id="ti-006-describedby">p referenced by aria-describedby&lt;/p></code></pre>
+		</div>
+		
+		<div class="test">
+			<h2 class="test-title" id="ti-007">Test ti-007: Input type="time" with <code>label</code> element &amp; <code>title</code> attribute</h2>
+
+			<div class="test-case">
+				<label for="input7">label referenced by for/id attributes</label>
+				<input id="input7" type="time" title="title attribute" />
+				
+				<p>Label should be used as accessible name</p>
+				<p>Title should be used as accessible description</p>
+			</div>	
+	
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;label for="input7">label referenced by for/id attributes&lt;/label>
+&lt;input id="input7" type="time" title="title attribute" /></code></pre>
+		</div>
+
 	</body>
 </html>

@@ -12,15 +12,9 @@
 				<h2>Pass Criteria</h2>
 				<ul>
 					<li>#1: Element is supported</li>
-					<li>#2: Element has correct HTML and Core Accessibility API mappings</li>
-					<li>#3: Control is keyboard accessible:
-						<ul>
-							<li>#3.1: Control MUST be focusable</li>
-							<li>#3.2: MUST be able to type and select text</li>
-							<li>#3.3: MUST be able to submit a value</li>
-						</ul>
-					</li>
-					<li>#4: Error message has correct mapping [TODO: where is this defined?]</li>
+					<li>#2: Correct HTML and Core Accessibility API mappings</li>
+					<li>#3: Correct Accessible Name &amp; Description Calculation</li>
+					<li>#4: Error message exposed to the user</li>
 				</ul>
 			</div>
 
@@ -28,11 +22,13 @@
 				<h2>Reference</h2>
 				<ul>
 					<li><a href="http://www.w3.org/TR/html/forms.html#url-state-(type=url)">HTML5 input type=url element</a></li>
-					<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-input-url">HTML Accessibility API Mappings for input type=url element without list attribute</a></li>
-					<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-textbox">Core Accessibility API Mappings for textbox role</a></li>
-					<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-input-textetc-autocomplete">HTML Accessibility API Mappings for input type=url element with list attribute</a> <a href="datalist.html#di-001">[Test: DI-001]</a></li>
-					<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-combobox">Core Accessibility API Mappings for combobox role</a> <a href="datalist.html#di-001">[Test: DI-001]</a></li>
-					<li><a href="https://www.w3.org/TR/core-aam-1.1/#ariaOwns">Core Accessibility API Mappings for aria-owns property</a> <a href="datalist.html#di-001">[Test: DI-001]</a></li>
+					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#el-input-url">HTML Accessibility API Mappings for input type=url element without list attribute</a></li>
+					<li><a href="https://w3c.github.io/aria/core-aam/core-aam.html#role-map-textbox">Core Accessibility API Mappings for textbox role</a></li>
+					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#el-input-textetc-autocomplete">HTML Accessibility API Mappings for input type=url element with list attribute</a> <a href="datalist.html#di-001">[Test: DI-001]</a></li>
+					<li><a href="https://w3c.github.io/aria/core-aam/core-aam.html#role-map-combobox">Core Accessibility API Mappings for combobox role</a> <a href="datalist.html#di-001">[Test: DI-001]</a></li>
+					<li><a href="https://w3c.github.io/aria/core-aam/core-aam.html#ariaOwns">Core Accessibility API Mappings for aria-owns property</a> <a href="datalist.html#di-001">[Test: DI-001]</a></li>
+					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#input-type-text-input-type-password-input-type-search-input-type-tel-input-type-email-input-type-url-and-textarea-element-accessible-name-calculation">Accessible Name Calculation</a></li>
+					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#input-type-text-input-type-password-input-type-search-input-type-tel-input-type-email-input-type-url-and-textarea-element-accessible-description-calculation">Accessible Description Calculation</a></li>
 				</ul>
 			</div>
 		</div>
@@ -45,22 +41,109 @@
 					<input id="input1" type="url" />
 				</form>
 			</div>
-		
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;input id="input1" type="url" /></code></pre>
 		</div>
-
+		
 		<div class="test">
-			<h2 class="test-title" id="ui-002">Test ui-002: Input type="url" with label</h2>
+			<h2 class="test-title" id="ui-002">Test ui-002: Input type="url" with <code>aria-label</code></h2>
 
 			<div class="test-case">
 				<form>
-					<label>Your web site <input id="input2" type="url" /></label>
+					<input id="input2" type="url" aria-label="aria-label attribute" />
 				</form>
+				
+				<p>Aria-label should be used as accessible name</p>
+			</div>	
+	
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;input id="input2" type="url" aria-label="aria-label attribute" /></code></pre>
+		</div>
+
+		<div class="test">
+			<h2 class="test-title" id="ui-003">Test ui-003: Input type="url" with <code>aria-labelledby</code></h2>
+
+			<div class="test-case">
+				<form>
+					<p id="ui-003-labelledby">p referenced by aria-labelledby</p>
+					<input id="input3" type="url" aria-labelledby="ui-003-labelledby" />
+				</form>
+				
+				<p>Aria-labelledby should be used as accessible name</p>
+			</div>	
+	
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;p id="ui-003-labelledby">p referenced by aria-labelledby&lt;/p>
+&lt;input id="input3" type="url" aria-labelledby="ui-003-labelledby" /></code></pre>
+		</div>
+
+		<div class="test">
+			<h2 class="test-title" id="ui-004">Test ui-004: Input type="url" with label</h2>
+
+			<div class="test-case">
+				<form>
+					<label>label wrapping input <input id="input4" type="url" /></label>
+				</form>
+				
+				<p>Label should be used as accessible name</p>
 			</div>
 
 			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;label>Your web site &lt;input id="input2" type="url" />&lt;/label></code></pre>
+			<pre><code>&lt;label>label wrapping input &lt;input id="input4" type="url" />&lt;/label></code></pre>
 		</div>
+		
+		<div class="test">
+			<h2 class="test-title" id="ui-005">Test ui-005: Input type="url" with <code>title</code> attribute</h2>
+
+			<div class="test-case">
+				<form>
+					<input id="input5" type="url" title="title attribute" />
+				</form>
+				
+				<p>Title should be used as accessible name</p>
+			</div>	
+	
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;input id="input5" type="url" title="title attribute" /></code></pre>
+		</div>
+		
+		<div class="test">
+			<h2 class="test-title" id="ui-006">Test ui-006: Input type="url" with <code>aria-describedby</code></h2>
+
+			<div class="test-case">
+				<form>
+					<input id="input6" type="url" aria-describedby="ui-006-describedby" />
+					<p id="ui-006-describedby">p referenced by aria-describedby</p>
+				</form>
+				
+				<p>Aria-describedby should be used as accessible description</p>
+			</div>	
+	
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;input id="input6" type="url" aria-describedby="ui-006-describedby" />
+&lt;p id="ui-006-describedby">p referenced by aria-describedby&lt;/p></code></pre>
+		</div>
+		
+		<div class="test">
+			<h2 class="test-title" id="ui-007">Test ui-007: Input type="url" with <code>label</code> element &amp; <code>title</code> attribute</h2>
+
+			<div class="test-case">
+				<form>
+					<label for="input7">label referenced by for/id attributes</label>
+					<input id="input7" type="url" title="title attribute" />
+				</form>
+				
+				<p>Label should be used as accessible name</p>
+				<p>Title should be used as accessible description</p>
+			</div>	
+	
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;label for="input7">label referenced by for/id attributes&lt;/label>
+&lt;input id="input7" type="url" title="title attribute" /></code></pre>
+		</div>
+		
+		<p><strong>Note:</strong> placeholder and aria-placeholder are tested as part of the <a href="placeholder-att.html">placeholder attribute</a> test.</p>
+
 	</body>
 </html>

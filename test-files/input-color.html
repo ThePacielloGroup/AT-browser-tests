@@ -12,11 +12,12 @@
 				<h2>Pass Criteria</h2>
 				<ul>
 					<li>#1: Element is supported</li>
-					<li>#2: Element has correct HTML and Core Accessibility API mappings</li>
-					<li>#3: Control is keyboard accessible:
+					<li>#2: Correct HTML and Core Accessibility API mappings</li>
+					<li>#3: Correct Accessible Name &amp; Description Calculation</li>
+					<li>#4: Control is keyboard accessible:
 						<ul>
-							<li>#3.1: Control MUST be focusable, including any child controls</li>
-							<li>#3.2: MUST be able to open color control and select a color</li>
+							<li>#4.1: Control MUST be focusable, including any child controls</li>
+							<li>#4.2: MUST be able to open color control and select a color</li>
 						</ul>
 					</li>
 				</ul>
@@ -26,7 +27,9 @@
 				<h2>Reference</h2>
 				<ul>
 					<li><a href="http://www.w3.org/TR/html5/forms.html#color-state-(type=color)">HTML5 input type=color element</a></li>
-					<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-input-color">HTML Accessibility API Mappings for input type=color element</a></li>
+					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#el-input-color">HTML Accessibility API Mappings for input type=color element</a></li>
+					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#other-form-elements-accessible-name-calculation">Accessible Name Calculation</a></li>
+					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#other-form-elements-accessible-description-calculation">Accessible Description Calculation</a></li>
 				</ul>
 			</div>
 		</div>
@@ -37,22 +40,95 @@
 			<div class="test-case">
 				<input id="input1" type="color" />
 			</div>
-			
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;input id="input1" type="color" /></code></pre>
 		</div>
-
+		
 		<div class="test">
-			<h2 class="test-title" id="ci-002">Test ci-002: Input type="color" with label</h2>
+			<h2 class="test-title" id="ci-002">Test ci-002: Input type="color" with <code>aria-label</code></h2>
 
 			<div class="test-case">
-				<label for="input2">Choose a shade</label>
-				<input id="input2" type="color" />
-			</div>
-			
+				<input id="input2" type="color" aria-label="aria-label attribute" />
+				
+				<p>Aria-label should be used as accessible name</p>
+			</div>	
+	
 			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;label for="input2">Choose a shade&lt;/label>
-&lt;input id="input2" type="color" /></code></pre>
+			<pre><code>&lt;input id="input2" type="color" aria-label="aria-label attribute" /></code></pre>
 		</div>
+
+		<div class="test">
+			<h2 class="test-title" id="ci-003">Test ci-003: Input type="color" with <code>aria-labelledby</code></h2>
+
+			<div class="test-case">
+				<p id="ci-003-labelledby">p referenced by aria-labelledby</p>
+				<input id="input3" type="color" aria-labelledby="ci-003-labelledby" />
+				
+				<p>Aria-labelledby should be used as accessible name</p>
+			</div>	
+	
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;p id="ci-003-labelledby">p referenced by aria-labelledby&lt;/p>
+&lt;input id="input3" type="color" aria-labelledby="ci-003-labelledby" /></code></pre>
+		</div>
+
+		<div class="test">
+			<h2 class="test-title" id="ci-004">Test ci-004: Input type="color" with label</h2>
+
+			<div class="test-case">
+				<label>label wrapping input <input id="input4" type="color" /></label>
+				
+				<p>Label should be used as accessible name</p>
+			</div>
+
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;label>label wrapping input &lt;input id="input4" type="color" />&lt;/label></code></pre>
+		</div>
+		
+		<div class="test">
+			<h2 class="test-title" id="ci-005">Test ci-005: Input type="color" with <code>title</code> attribute</h2>
+
+			<div class="test-case">
+				<input id="input5" type="color" title="title attribute" />
+				
+				<p>Title should be used as accessible name</p>
+			</div>	
+	
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;input id="input5" type="color" title="title attribute" /></code></pre>
+		</div>
+		
+		<div class="test">
+			<h2 class="test-title" id="ci-006">Test ci-006: Input type="color" with <code>aria-describedby</code></h2>
+
+			<div class="test-case">
+				<input id="input6" type="color" aria-describedby="ci-006-describedby" />
+				<p id="ci-006-describedby">p referenced by aria-describedby</p>
+				
+				<p>Aria-describedby should be used as accessible description</p>
+			</div>	
+	
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;input id="input6" type="color" aria-describedby="ci-006-describedby" />
+&lt;p id="ci-006-describedby">p referenced by aria-describedby&lt;/p></code></pre>
+		</div>
+		
+		<div class="test">
+			<h2 class="test-title" id="ci-007">Test ci-007: Input type="color" with <code>label</code> element &amp; <code>title</code> attribute</h2>
+
+			<div class="test-case">
+				<label for="input7">label referenced by for/id attributes</label>
+				<input id="input7" type="color" title="title attribute" />
+				
+				<p>Label should be used as accessible name</p>
+				<p>Title should be used as accessible description</p>
+			</div>	
+	
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;label for="input7">label referenced by for/id attributes&lt;/label>
+&lt;input id="input7" type="color" title="title attribute" /></code></pre>
+		</div>
+
 	</body>
 </html>

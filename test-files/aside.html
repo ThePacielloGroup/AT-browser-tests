@@ -61,7 +61,9 @@
 			<h2 class="test-title" id="as-003">Test as-003: Aside with <code>aria-label</code></h2>
 
 			<div class="test-case">
-				<aside aria-label="aria-label attribute">Aria-label should be used as accessible name.</aside>
+				<aside aria-label="aria-label attribute">
+					<p>Aria-label should be used as accessible name.</p>
+				</aside>
 			</div>
 			
 			<h3 class="code-title">Code</h3>
@@ -89,11 +91,15 @@
 			<h2 class="test-title" id="as-005">Test as-005: Aside with <code>title</code> attribute</h2>
 
 			<div class="test-case">
-				<aside title="title attribute">Title should be used as accessible name.</aside>
+				<aside title="title attribute">
+					<p>Title should be used as accessible name.</p>
+				</aside>
 			</div>
 			
 			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;aside <strong>title="title attribute"</strong>>Title should be used as accessible name.&lt;/aside></code></pre>
+			<pre><code>&lt;aside <strong>title="title attribute"</strong>>
+	&lt;p>Title should be used as accessible name.&lt;/p>
+&lt;/aside></code></pre>
 		</div>
 	
 	
@@ -104,14 +110,14 @@
 
 				<aside aria-describedby="as-006-describedby">
 					<h1 id="as-006-describedby">h1 referenced by aria-describedby</h1>
-					Aria-describedby should be used as accessible description.
+					<p>Aria-describedby should be used as accessible description.</p>
 				</aside>
 			</div>
 			
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;aside <strong>aria-labelledby="as-006-describedby"</strong>>
 	&lt;h1 <strong>id="as-006-describedby"</strong>>h1 referenced by aria-describedby&lt;/h1>
-	Aria-describedby should be used as accessible description.
+	&lt;p>Aria-describedby should be used as accessible description.&lt;/p>
 &lt;/aside></code></pre>
 		</div>
 		
@@ -128,7 +134,7 @@
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;aside <strong>aria-labelledby="as-006-describedby"</strong>>
 	&lt;h1 <strong>id="as-006-describedby"</strong>>h1 referenced by aria-describedby&lt;/h1>
-	Aria-describedby should be used as accessible description.
+	&lt;p>Aria-describedby should be used as accessible description.&lt;/p>
 &lt;/aside></code></pre>
 		</div>
 

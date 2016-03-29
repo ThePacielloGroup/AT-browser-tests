@@ -49,8 +49,8 @@ a:link, a:visited {
 }
 
 a:hover {
-	border-bottom-color: currentColor;
-	color: #333;
+	border-bottom: 2px solid;
+	color: #1e565c;
 }
 
 a:active {

@@ -11,7 +11,7 @@
 			<div class="criteria">
 				<h2>Pass Criteria</h2>
 				<ul id="criteria-list">
-					<li id="criteria-support">#1: Attribute is supported</li>
+					<li id="basic-criteria">#1: Attribute is supported</li>
 					<li>#2: Attribute has correct HTML and Core Accessibility API mappings</li>
 				</ul>
 			</div>
@@ -64,10 +64,14 @@
 &lt;input id=&quot;input3&quot; type=&quot;button&quot; hidden aria-hidden="false" /></code></pre>
 		</div>
 
-				<script>
-			var el = document.getElementById('hidden1'),
-			    isSupported = ('hidden' in el);
-		</script>
 		<script src="../scripts/test-scripts.js"></script>
+		<script>
+			var test = [],
+				el = document.getElementById('hidden1'),
+			    isSupported = ('hidden' in el);
+			
+			test.push({id: "basic-criteria", pass: isSupported});
+			displaySupportResults(test);
+		</script>
 	</body>
 </html>

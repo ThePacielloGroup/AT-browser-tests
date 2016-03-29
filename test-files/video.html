@@ -11,7 +11,7 @@
 			<div class="criteria">
 				<h2>Pass Criteria</h2>
 				<ul id="criteria-list">
-					<li id="criteria-support">#1: Elements are supported</li>
+					<li id="basic-criteria">#1: Elements are supported</li>
 					<li>#2: Elements have correct HTML and Core Accessibility API mappings</li>
 					<li>#3: At least one subtitle format is supported (WebVTT or TTML)</li>
 					<li>#4: Controls are keyboard accessible:
@@ -52,16 +52,20 @@
 	&lt;track kind="captions" srclang="en" src="../images/elo.vtt" label="English">
 &lt;/video></code></pre>
 		</div>
-		
+
+		<script src="../scripts/test-scripts.js"></script>	
 		<script>
-			var el = document.getElementById('video1'),
+			var test = [],
+				el = document.getElementById('video1'),
 			    isSupported = (typeof HTMLVideoElement != 'undefined' 
 				               && el instanceof HTMLVideoElement && !!el.canPlayType);
 			
 			el = document.getElementById('track1'),
 			isSupported = isSupported && (typeof HTMLTrackElement != 'undefined' 
 				           && el instanceof HTMLTrackElement && 'src' in el);
+			
+			test.push({id: "basic-criteria", pass: isSupported});
+			displaySupportResults(test);
 		</script>
-		<script src="../scripts/test-scripts.js"></script>
 	</body>
 </html>

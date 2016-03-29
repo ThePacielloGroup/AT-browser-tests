@@ -11,7 +11,7 @@
 			<div class="criteria">
 				<h2>Pass Criteria</h2>
 				<ul id="criteria-list">
-					<li id="criteria-support">#1: Element is supported</li>
+					<li id="basic-criteria">#1: Element is supported</li>
 					<li>#2: Correct HTML and Core Accessibility API mappings</li>
 				</ul>
 			</div>
@@ -41,16 +41,18 @@
 	&lt;figcaption>HTML5 logo&lt;/figcaption>
 &lt;/figure></code></pre>
 		</div>
-		
+
+		<script src="../scripts/test-scripts.js"></script>		
 		<script>
-			var el = document.getElementById('figure1'),
+			var test = [],
+				el = document.getElementById('figure1'),
 			    isSupported = (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
-			
-			console.log("Figure: " + isSupported);
-			
+						
 			el = document.getElementById('figcaption1');
-		    isSupported = (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));	
+		    isSupported = isSupported && (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
+			
+			test.push({id: "basic-criteria", pass: isSupported});
+			displaySupportResults(test);	
 		</script>
-		<script src="../scripts/test-scripts.js"></script>
 	</body>
 </html>

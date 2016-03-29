@@ -11,7 +11,7 @@
 			<div class="criteria">
 				<h2>Pass Criteria</h2>
 				<ul id="criteria-list">
-					<li id="criteria-support">#1: Element is supported</li>
+					<li id="basic-criteria">#1: Element is supported</li>
 					<li>#2: Element has correct HTML and Core Accessibility API mappings</li>
 					<li>#3: Control is keyboard accessible:
 						<ul>
@@ -55,12 +55,14 @@
 			<pre><code>&lt;label>Date of birth &lt;input id="input2" type="date" />&lt;/label></code></pre>
 		</div>
 		
-		<script>
-			var el = document.getElementById('input1'),
-			    isSupported = (el.type === 'date');
-			
-			console.log("Input date: " + isSupported);
-		</script>
 		<script src="../scripts/test-scripts.js"></script>
+		<script>
+			var test = [],
+				el = document.getElementById('input1'),
+			    isSupported = (el.type === 'date');
+
+			test.push({id: "basic-criteria", pass: isSupported});
+			displaySupportResults(test);			
+		</script>
 	</body>
 </html>

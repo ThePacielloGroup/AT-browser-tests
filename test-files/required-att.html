@@ -11,7 +11,7 @@
 			<div class="criteria">
 				<h2>Pass Criteria</h2>
 				<ul id="criteria-list">
-					<li id="criteria-support">#1: Attribute is supported</li>
+					<li id="basic-criteria">#1: Attribute is supported</li>
 					<li>#2: Attribute has correct HTML and Core Accessibility API mappings</li>
 					<li>#3: Error message has correct mapping [TODO: where is this defined?]</li>
 				</ul>
@@ -45,11 +45,15 @@
 &lt;/form></code></pre>
 		</div>
 		
+		<script src="../scripts/test-scripts.js"></script>
 		<script>
-			var el = document.getElementById('input1'),
+			var test = [],
+				el = document.getElementById('input1'),
 			    isSupported = (typeof HTMLInputElement != 'undefined' 
 				               && el instanceof HTMLInputElement && 'required' in el);
+			
+			test.push({id: "basic-criteria", pass: isSupported});
+			displaySupportResults(test);
 		</script>
-		<script src="../scripts/test-scripts.js"></script>
 	</body>
 </html>

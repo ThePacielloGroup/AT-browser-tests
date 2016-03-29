@@ -11,7 +11,7 @@
 			<div class="criteria">
 				<h2>Pass Criteria</h2>
 				<ul id="criteria-list">
-					<li id="criteria-support">#1: Element is supported</li>
+					<li id="basic-criteria">#1: Element is supported</li>
 					<li>#2: Element has correct HTML and Core Accessibility API mappings</li>
 					<li>#3: Control is keyboard accessible:
 						<ul>
@@ -92,12 +92,16 @@
 	&lt;menuitem type="radio" radiogroup="radios" label="I’m another radio menuitem" />
 &lt;/menu></code></pre>
 		</div>
-		
+
+		<script src="../scripts/test-scripts.js"></script>		
 		<script>
-			var el = document.getElementById('menuitem1'),
+			var test = [],
+				el = document.getElementById('menuitem1'),
 			    isSupported = (typeof HTMLMenuItemElement != 'undefined' 
-				               && el instanceof HTMLMenuItemElement && 'type' in el);		
+				               && el instanceof HTMLMenuItemElement && 'type' in el);
+			
+			test.push({id: "basic-criteria", pass: isSupported});
+			displaySupportResults(test);	
 		</script>
-		<script src="../scripts/test-scripts.js"></script>
 	</body>
 </html>

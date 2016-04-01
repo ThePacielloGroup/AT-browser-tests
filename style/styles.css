@@ -301,6 +301,10 @@ body > h1 {
 	margin-top: 0;
 }
 
+video {
+	max-width: 100%;
+}
+
 /*	SMALL BREAKPOINT
  *	--------------------------------------------- */
 

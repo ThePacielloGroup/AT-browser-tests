@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tt xmlns="http://www.w3.org/ns/ttml" xml:lang="en" >
+  <body>
+    <div>
+      <p begin="2.170s" end="4.136s">Emo, close your eyes</p>
+      <p begin="4.136s" end="5.597s">Why?<br />NOW!</p>
+      <p begin="5.597s" end="7.405s">Ok</p>
+      <p begin="7.405s" end="8.803s">Good</p>
+      <p begin="8.803s" end="11.541s">What do you see at your left side Emo?</p>
+      <p begin="11.541s" end="13.287s">Well?</p>
+      <p begin="13.287s" end="16.110s">Er nothing?<br />Really?</p>
+      <p begin="16.110s" end="18.514s">No, nothing at all!</p>
+      <p begin="18.514s" end="22.669s">Really? and at your right? What do you see at your right side Emo?</p>
+      <p begin="22.669s" end="26.111s">Umm, the same Proog</p>
+      <p begin="26.111s" end="28.646s">Exactly the same! Nothing!</p>
+      <p begin="28.646s" end="30.794s">Great</p>
+    </div>
+  </body>
+</tt>

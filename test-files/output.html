@@ -33,18 +33,18 @@
 			<h2 class="test-title" id="op-001">Test op-001: Output calculated from two inputs</h2>
 
 			<div class="test-case">
-				<form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
-					<input type="range" name="b" value="50" /> +
-					<input type="number" name="a" value="10" /> =
-					<output id="output1" name="result"></output>
+				<form oninput="output1.value=parseInt(a.value)+parseInt(b.value)">
+					<input type="range" id="b" value="50" /> +
+					<input type="number" id="a" value="10" /> =
+					<output id="output1" for="b a"></output>
 				</form>
 			</div>
 			
 			<h3 class="code-title">Code</h3>
 			<pre></code>&lt;form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
-	&lt;input type="range" name="b" id="b" value="50" /> +
-	&lt;input type="number" name="a" id="a" value="10" /> =
-	&lt;output name="result" for="b a">&lt;/output>
+	&lt;input type="range" id="b" value="50" /> +
+	&lt;input type="number" id="a" value="10" /> =
+	&lt;output id="output1" for="b a">&lt;/output>
 &lt;/form></code></pre>
 		</div>
 		

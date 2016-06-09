@@ -36,14 +36,14 @@
 			<h2 class="test-title" id="mc-001">Test mc-001: Menu element with type="context"</h2>
 
 			<div class="test-case">
-				<button id="menu-button1" menu="menu1">I have a context menu. Right click (or equivalent) to test</button>
+				<div id="menu-button1" contextmenu="menu1">I have a context menu. Right click (or equivalent) to test</div>
 				<menu type="context" id="menu1">
 					<menuitem label="I’m a menuitem" />
 				</menu>
 			</div>
 			
 			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;button id="menu-button1" menu="menu1">I have a context menu. Right click (or equivalent) to test&lt;/button>
+			<pre><code>&lt;div id="menu-button1" contextmenu="menu1">I have a context menu. Right click (or equivalent) to test&lt;/div>
 &lt;menu type="context" id="menu1">
 	&lt;menuitem label="I’m a menuitem" />
 &lt;/menu></code></pre>

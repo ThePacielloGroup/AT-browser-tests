@@ -30,11 +30,14 @@
 			<h2 class="test-title" id="mt-001">Test mt-001: Menu element with type="toolbar"</h2>
 
 			<div class="test-case">
-				<menu id="menu1" type="toolbar">
-					<li>Toolbar item one</li>
-					<li>Toolbar item two</li>
-				</menu>
-			</div>
+				  <button type="menu" value="File" menu="filemenu">popup menu</button>
+  <menu id="filemenu" type="context">
+    <menuitem onclick="fnew()" label="New...">
+    <menuitem onclick="fopen()" label="Open...">
+    <menuitem onclick="fsave()" label="Save">
+    <menuitem onclick="fsaveas()" label="Save as...">
+  </menu>
+</div>
 			
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;menu id="menu1" type="toolbar">

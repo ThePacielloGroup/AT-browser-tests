@@ -49,8 +49,8 @@ a:link, a:visited {
 }
 
 a:hover {
-	border-bottom-color: currentColor;
-	color: #333;
+	border-bottom: 2px solid;
+	color: #1e565c;
 }
 
 a:active {
@@ -79,7 +79,9 @@ body > h1 {
 .meta h2,
 .reference,
 .test-title,
-.code-title {
+.code-title,
+.badge-success,
+.badge-failure {
 	font-family: "League Spartan", sans-serif;
 	font-weight: 700;
 	text-transform: uppercase;
@@ -171,6 +173,73 @@ body > h1 {
 	letter-spacing: 0;
 }
 
+/* Success/failure badges */
+.criteria ul span {
+	display: inline;
+	vertical-align: middle;
+	margin-right: .25em;
+}
+
+.criteria ul .badge-success,
+.criteria ul .badge-failure,
+.criteria ul .badge-manual {
+	display: inline-block;
+}
+
+.criteria .has-badge:before {
+	margin-top: 10px;
+}
+
+.badge-success,
+.badge-failure {
+	position: relative;
+	margin: .25em 0;
+	border: 3px solid #fff;
+	border-radius: 3px;
+	padding: 10px 7px 7px 28px;
+	font-size: .666em;
+	line-height: 1;
+	letter-spacing: .1em;
+	color: #000;
+	box-shadow: 0 0 .5em rgba(0,0,0,.3);
+}
+
+.badge-success:before,
+.badge-failure:before {
+	display: block;
+	position: absolute;
+	top: 50%;
+	margin-top: -7px;
+	left: 7px;
+	height: 13px;
+	content: '';
+}
+
+.badge-success {
+	background: #b2c158;
+}
+
+.badge-success:before {
+	width: 16px;
+	background: url('../images/badge-check.svg') no-repeat;
+	background-size: 16px 13px;
+}
+
+.badge-failure {
+	background: #dc9080;
+}
+
+.badge-failure:before {
+	width: 13px;
+	background: url('../images/badge-x.svg') no-repeat;
+	background-size: 13px 13px;
+}
+
+.badge-manual {
+	display: inline-block;
+	font: 700 .75em/1 "League Spartan", sans-serif;
+}
+
 /*	TESTS
  *	20px measurements in here are to ensure white space around
  *  test content and code snippets.
@@ -230,6 +299,10 @@ body > h1 {
 
 .test pre {
 	margin-top: 0;
+}
+
+video {
+	max-width: 100%;
 }
 
 /*	SMALL BREAKPOINT

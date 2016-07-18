@@ -10,13 +10,14 @@
 		<div class="meta">
 			<div class="criteria">
 				<h2>Pass Criteria</h2>
-				<ul>
-					<li>#1: Element is supported</li>
-					<li>#2: Element has correct HTML and Core Accessibility API mappings</li>
-					<li>#3: Control is keyboard accessible:
+				<ul id="criteria-list">
+					<li id="basic-criteria">#1: Element is supported</li>
+					<li>#2: Correct HTML and Core Accessibility API mappings</li>
+					<li>#3: Correct Accessible Name &amp; Description Calculation</li>
+					<li>#4: Control is keyboard accessible:
 						<ul>
-							<li>#3.1: Control MUST be focusable</li>
-							<li>#3.2: MUST be able to open date control and select a date</li>
+							<li>#4.1: Control MUST be focusable</li>
+							<li>#4.2: MUST be able to open date control and select a date</li>
 						</ul>			
 					</li>
 				</ul>
@@ -26,7 +27,9 @@
 				<h2>Reference</h2>
 				<ul>
 					<li><a href="http://www.w3.org/TR/html51/semantics.html#week-state-(type=week)">HTML5 input type=week element</a></li>
-					<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-input-week">HTML Accessibility API Mappings for input type=week element</a></li>
+					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#el-input-week">HTML Accessibility API Mappings for input type=week element</a></li>
+					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#other-form-elements-accessible-name-calculation">Accessible Name Calculation</a></li>
+					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#other-form-elements-accessible-description-calculation">Accessible Description Calculation</a></li>
 				</ul>
 			</div>
 		</div>
@@ -38,19 +41,108 @@
 				<input id="input1" type="week" />
 			</div>
 
-			<h3 class="code-title">Code</h3>			
+			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;input id="input1" type="week" /></code></pre>
+		</div>
+		
+		<div class="test">
+			<h2 class="test-title" id="wi-002">Test wi-002: Input type="week" with <code>aria-label</code></h2>
+
+			<div class="test-case">
+				<input id="input2" type="week" aria-label="aria-label attribute" />
+				
+				<p>Aria-label should be used as accessible name</p>
+				<p>No accessible description.</p>
+			</div>	
+	
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;input id="input2" type="week" aria-label="aria-label attribute" /></code></pre>
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="wi-002">Test wi-002: Input type="week" with label</h2>
+			<h2 class="test-title" id="wi-003">Test wi-003: Input type="week" with <code>aria-labelledby</code></h2>
 
 			<div class="test-case">
-				<label>Week of birth <input id="input2" type="week" /></label>
+				<p id="wi-003-labelledby">p referenced by aria-labelledby</p>
+				<input id="input3" type="week" aria-labelledby="wi-003-labelledby" />
+				
+				<p>Aria-labelledby should be used as accessible name</p>
+				<p>No accessible description.</p>
+			</div>	
+	
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;p id="wi-003-labelledby">p referenced by aria-labelledby&lt;/p>
+&lt;input id="input3" type="week" aria-labelledby="wi-003-labelledby" /></code></pre>
+		</div>
+
+		<div class="test">
+			<h2 class="test-title" id="wi-004">Test wi-004: Input type="week" with label</h2>
+
+			<div class="test-case">
+				<label>label wrapping input <input id="input4" type="week" /></label>
+				
+				<p>Label should be used as accessible name</p>
+				<p>No accessible description.</p>
 			</div>
 
 			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;label>Week of birth &lt;input id="input2" type="week" />&lt;/label></code></pre>
+			<pre><code>&lt;label>label wrapping input &lt;input id="input4" type="week" />&lt;/label></code></pre>
 		</div>
+		
+		<div class="test">
+			<h2 class="test-title" id="wi-005">Test wi-005: Input type="week" with <code>title</code> attribute</h2>
+
+			<div class="test-case">
+				<input id="input5" type="week" title="title attribute" />
+				
+				<p>Title should be used as accessible name</p>
+				<p>No accessible description.</p>
+			</div>	
+	
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;input id="input5" type="week" title="title attribute" /></code></pre>
+		</div>
+		
+		<div class="test">
+			<h2 class="test-title" id="wi-006">Test wi-006: Input type="week" with <code>aria-describedby</code></h2>
+
+			<div class="test-case">
+				<input id="input6" type="week" aria-describedby="wi-006-describedby" />
+				<p id="wi-006-describedby">p referenced by aria-describedby</p>
+				
+				<p>Aria-describedby should be used as accessible description</p>
+				<p>No accessible name.</p>
+			</div>	
+	
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;input id="input6" type="week" aria-describedby="wi-006-describedby" />
+&lt;p id="wi-006-describedby">p referenced by aria-describedby&lt;/p></code></pre>
+		</div>
+		
+		<div class="test">
+			<h2 class="test-title" id="wi-007">Test wi-007: Input type="week" with <code>label</code> element &amp; <code>title</code> attribute</h2>
+
+			<div class="test-case">
+				<label for="input7">label referenced by for/id attributes</label>
+				<input id="input7" type="week" title="title attribute" />
+				
+				<p>Label should be used as accessible name</p>
+				<p>Title should be used as accessible description</p>
+			</div>	
+	
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;label for="input7">label referenced by for/id attributes&lt;/label>
+&lt;input id="input7" type="week" title="title attribute" /></code></pre>
+		</div>
+
+		<script src="../scripts/test-scripts.js"></script>
+		<script>
+			var test = [],
+				el = document.getElementById('input1'),
+			    isSupported = (el.type === 'week');
+			
+			test.push({id: "basic-criteria", pass: isSupported});
+			displaySupportResults(test);
+		</script>
 	</body>
 </html>

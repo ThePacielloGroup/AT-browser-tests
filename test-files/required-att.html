@@ -10,10 +10,10 @@
 		<div class="meta">
 			<div class="criteria">
 				<h2>Pass Criteria</h2>
-				<ul>
-					<li>#1: Attribute is supported</li>
+				<ul id="criteria-list">
+					<li id="basic-criteria">#1: Attribute is supported</li>
 					<li>#2: Attribute has correct HTML and Core Accessibility API mappings</li>
-					<li>#3: Error message has correct mapping [TODO: where is this defined?]</li>
+					<li>#3: Validation error message is presented to the user</li>
 				</ul>
 			</div>
 
@@ -21,7 +21,7 @@
 				<h2>Reference</h2>
 				<ul>
 					<li><a href="https://www.w3.org/TR/html51/semantics.html#the-required-attribute">HTML5 required attribute</a>
-					<li><a href="https://www.w3.org/TR/html-aam-1.0/#html-attribute-state-and-property-mappings#att-required">HTML Accessibility API Mappings for required attribute</a></li>
+					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#att-required">HTML Accessibility API Mappings for required attribute</a></li>
 				</ul>
 			</div>
 		</div>
@@ -44,5 +44,16 @@
 	&lt;button>Submit&lt;/button>
 &lt;/form></code></pre>
 		</div>
+		
+		<script src="../scripts/test-scripts.js"></script>
+		<script>
+			var test = [],
+				el = document.getElementById('input1'),
+			    isSupported = (typeof HTMLInputElement != 'undefined' 
+				               && el instanceof HTMLInputElement && 'required' in el);
+			
+			test.push({id: "basic-criteria", pass: isSupported});
+			displaySupportResults(test);
+		</script>
 	</body>
 </html>

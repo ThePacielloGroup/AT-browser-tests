@@ -4,7 +4,7 @@ Collaboration with CA on mapping of HTML features Aural UI and how these feature
  * Firefox and Internet Explorer on Windows.
  * Safari and Chrome on OSX
  
-Results page: http://thepaciellogroup.github.io/AT-browser-tests/ 
+Results page: https://thepaciellogroup.github.io/AT-browser-tests/ 
 
 Test Files: https://github.com/ThePacielloGroup/AT-browser-tests/tree/gh-pages/test-files
 

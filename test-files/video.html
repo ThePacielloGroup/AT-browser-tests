@@ -10,8 +10,8 @@
 		<div class="meta">
 			<div class="criteria">
 				<h2>Pass Criteria</h2>
-				<ul>
-					<li>#1: Elements are supported</li>
+				<ul id="criteria-list">
+					<li id="basic-criteria">#1: Elements are supported</li>
 					<li>#2: Elements have correct HTML and Core Accessibility API mappings</li>
 					<li>#3: At least one subtitle format is supported (WebVTT or TTML)</li>
 					<li>#4: Controls are keyboard accessible:
@@ -27,30 +27,64 @@
 				<h2>Reference</h2>
 				<ul>
 					<li><a href="http://www.w3.org/TR/html5/embedded-content-0.html#the-video-element">HTML5 video element</a></li>
-					<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-video">HTML Accessibility API Mappings for video element</a></li>
+					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#el-video">HTML Accessibility API Mappings for video element</a></li>
 					<li><a href="http://www.w3.org/TR/html5/embedded-content-0.html#the-track-element">HTML5 track element</a></li>
-					<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-track">HTML Accessibility API Mappings for track element</a></li>
+					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#el-track">HTML Accessibility API Mappings for track element</a></li>
 				</ul>
 			</div>
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="vd-001">Test vd-001: Video and track elements</h2>
+			<h2 class="test-title" id="vd-001">Test vd-001: Video &amp; track elements with WebVTT subtitles</h2>
 
 			<div class="test-case">
-				<video id="video1" controls width="300" height="300">
-					<source src="../images/elo.mp4" type="video/mp4">
-					<source src="../images/elo.ogg" type="video/ogg">
-					<track kind="captions" srclang="en" src="../images/elo.vtt" label="English" default>
+				<video id="video1" controls width="800">
+					<source src="../video/ElephantsDream.mp4" type="video/mp4">
+					<source src="../video/ElephantsDream.webm" type="video/webm">
+					<track id="track1" kind="captions" srclang="en" src="../video/subtitles-en.vtt" label="English" default>
 				</video>
 			</div>
 			
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;video id="video1" controls width="300" height="300">
-	&lt;source src="../images/elo.mp4" type="video/mp4">
-	&lt;source src="../images/elo.ogg" type="video/ogg">
-	&lt;track kind="captions" srclang="en" src="../images/elo.vtt" label="English">
+	&lt;source src="../video/ElephantsDream.mp4" type="video/mp4">
+	&lt;source src="../video/ElephantsDream.webm" type="video/webm">
+	&lt;track kind="captions" srclang="en" src="../video/subtitles-en.vtt" label="English">
 &lt;/video></code></pre>
 		</div>
+		
+		<div class="test">
+			<h2 class="test-title" id="vd-002">Test vd-002: Video &amp; track elements with TTML subtitles</h2>
+
+			<div class="test-case">
+				<video id="video1" controls width="800">
+					<source src="../video/ElephantsDream.mp4" type="video/mp4">
+					<source src="../video/ElephantsDream.webm" type="video/webm">
+					<track id="track1" kind="captions" srclang="en" src="../video/subtitles-en.ttml" label="English" default>
+				</video>
+			</div>
+			
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;video id="video1" controls width="800">
+	&lt;source src="../video/ElephantsDream.mp4" type="video/mp4">
+	&lt;source src="../video/ElephantsDream.webm" type="video/webm">
+	&lt;track kind="captions" srclang="en" src="../video/subtitles-en.ttml" label="English">
+&lt;/video></code></pre>
+		</div>
+
+		<script src="../scripts/test-scripts.js"></script>	
+		<script>
+			var test = [],
+				el = document.getElementById('video1'),
+			    isSupported = (typeof HTMLVideoElement != 'undefined' 
+				               && el instanceof HTMLVideoElement && !!el.canPlayType);
+			
+			el = document.getElementById('track1'),
+			isSupported = isSupported && (typeof HTMLTrackElement != 'undefined' 
+				           && el instanceof HTMLTrackElement && 'src' in el);
+			
+			test.push({id: "basic-criteria", pass: isSupported});
+			displaySupportResults(test);
+		</script>
 	</body>
 </html>

@@ -6,19 +6,16 @@
 		<link rel="stylesheet" href="../style/styles.css" />
 	</head>
 	<body>
-		<h1><code>input</code> element + <code>datalist</code> elmement</h1>
+		<h1><code>input</code> element + <code>datalist</code> element</h1>
 		<div class="meta">
 			<div class="criteria">
 				<h2>Pass Criteria</h2>
-				<ul>
-					<li>#1: Element is supported</li>
-					<li>#2: Element has correct HTML and Core Accessibility API mappings</li>
+				<ul id="criteria-list">
+					<li id="basic-criteria">#1: Element is supported</li>
+					<li>#2: Correct HTML and Core Accessibility API mappings</li>
 					<li>#3: Control is keyboard accessible:
 						<ul>
-							<li>#3.1: Control MUST be focusable</li>
-							<li>#3.2: MUST be able to select item from list</li>
-							<li>#3.3: MUST be enter and edit text</li>
-							<li>#3.4: MUST be able to submit value</li>
+							<li>#4.1: MUST be able to select item from list</li>
 						</ul>
 					</li>
 				</ul>
@@ -28,12 +25,12 @@
 				<h2>Reference</h2>
 				<ul>
 					<li><a href="http://www.w3.org/TR/html/forms.html#the-datalist-element">HTML5 datalist element</a></li>
-					<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-datalist">HTML Accessibility API Mappings for datalist element</a></li>
-					<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-listbox">Core Accessibility API Mappings for listbox role</a></li>
-					<li><a href="https://www.w3.org/TR/core-aam-1.1/#ariaMultiselectableFalse">Core Accessibility API Mappings for aria-multiselectable="false"</a></li>
-					<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-input-textetc-autocomplete">HTML Accessibility API Mappings for input type=text, search, tel, url or email element with list attribute</a></li>
-					<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-combobox">Core Accessibility API Mappings for combobox role</a></li>
-					<li><a href="https://www.w3.org/TR/core-aam-1.1/#ariaOwns">Core Accessibility API Mappings for aria-owns property</a></li>
+					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#el-datalist">HTML Accessibility API Mappings for datalist element</a></li>
+					<li><a href="https://w3c.github.io/aria/core-aam/core-aam.html#role-map-listbox">Core Accessibility API Mappings for listbox role</a></li>
+					<li><a href="https://w3c.github.io/aria/core-aam/core-aam.html#ariaMultiselectableFalse">Core Accessibility API Mappings for aria-multiselectable="false"</a></li>
+					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#el-input-textetc-autocomplete">HTML Accessibility API Mappings for input type=text, search, tel, url or email element with list attribute</a></li>
+					<li><a href="https://w3c.github.io/aria/core-aam/core-aam.html#role-map-combobox">Core Accessibility API Mappings for combobox role</a></li>
+					<li><a href="https://w3c.github.io/aria/core-aam/core-aam.html#ariaOwns">Core Accessibility API Mappings for aria-owns property</a></li>
 				</ul>
 			</div>
 		</div>
@@ -48,7 +45,7 @@
 					<option value="http://www.reddit.com/" label="Reddit">Reddit</option>
 				</datalist>
 			</div>
-			
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;label>Sites &lt;input id="input1" type="text" list="datalist1" />&lt;/label>
 &lt;datalist id="datalist1">
@@ -56,5 +53,17 @@
 	&lt;option value="http://www.reddit.com/" label="Reddit">&lt;/option>
 &lt;/datalist></code></pre>
 		</div>
+
+		<script src="../scripts/test-scripts.js"></script>
+		<script>
+			var test = [],
+				el = document.getElementById('datalist1'),
+			    isSupported = (typeof HTMLDataListElement != 'undefined' 
+				               && el instanceof HTMLDataListElement && 'options' in el);
+			   
+			test.push({id: "basic-criteria", pass: isSupported});
+			displaySupportResults(test);
+		</script>
+
 	</body>
 </html>

@@ -10,9 +10,10 @@
 		<div class="meta">
 			<div class="criteria">
 				<h2>Pass Criteria</h2>
-				<ul>
-					<li>#1: Element is supported</li>
-					<li>#2: Element has correct HTML and Core Accessibility API mappings</li>
+				<ul id="criteria-list">
+					<li id="basic-criteria">#1: Element is supported</li>
+					<li>#2: Correct HTML and Core Accessibility API mappings</li>
+					<li>#3: Correct Accessible Name &amp; Description Calculation</li>
 				</ul>
 			</div>
 
@@ -20,13 +21,15 @@
 				<h2>Reference</h2>
 				<ul>
 					<li><a href="http://www.w3.org/TR/html5/forms.html#the-progress-element">HTML5 progress element</a></li>
-					<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-progress">HTML Accessibility API Mappings for progress element</a></li>
-					<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-progressbar">Core Accessibility API Mappings for progressbar role</a></li>
-					<li><a href="https://www.w3.org/TR/html-aam-1.0/#att-max">HTML Accessibility API Mappings for max attribute</a></li>
-					<li><a href="https://www.w3.org/TR/core-aam-1.1/#ariaValueMax">Core Accessibility API Mappings for aria-valuemax property</a></li>
-					<li><a href="https://www.w3.org/TR/core-aam-1.1/#ariaValueMin">Core Accessibility API Mappings for aria-valuemin property</a></li>
-					<li><a href="https://www.w3.org/TR/html-aam-1.0/#att-value-meter">HTML Accessibility API Mappings for value attribute</a></li>
-					<li><a href="https://www.w3.org/TR/core-aam-1.1/#ariaValueNow">Core Accessibility API Mappings for aria-valuenow property</a></li>
+					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#el-progress">HTML Accessibility API Mappings for progress element</a></li>
+					<li><a href="https://w3c.github.io/aria/core-aam/core-aam.html#role-map-progressbar">Core Accessibility API Mappings for progressbar role</a></li>
+					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#att-max">HTML Accessibility API Mappings for max attribute</a></li>
+					<li><a href="https://w3c.github.io/aria/core-aam/core-aam.html#ariaValueMax">Core Accessibility API Mappings for aria-valuemax property</a></li>
+					<li><a href="https://w3c.github.io/aria/core-aam/core-aam.html#ariaValueMin">Core Accessibility API Mappings for aria-valuemin property</a></li>
+					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#att-value-meter">HTML Accessibility API Mappings for value attribute</a></li>
+					<li><a href="https://w3c.github.io/aria/core-aam/core-aam.html#ariaValueNow">Core Accessibility API Mappings for aria-valuenow property</a></li>
+					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#other-form-elements-accessible-name-calculation">Accessible Name Calculation</a></li>
+					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#other-form-elements-accessible-description-calculation">Accessible Description Calculation</a></li>
 				</ul>
 			</div>
 		</div>
@@ -42,5 +45,106 @@
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;p>Downloading progress: &lt;progress id="progress1" value="22" max="100">&lt;/progress>&lt;/p></code></pre>
 		</div>
+		
+		<div class="test">
+			<h2 class="test-title" id="pg-002">Test pg-002: Progress with <code>aria-label</code></h2>
+
+			<div class="test-case">
+				<progress id="progress2" aria-label="aria-label attribute" value="22" max="100"></progress>
+				
+				<p>Aria-label should be used as accessible name</p>
+				<p>No accessible description.</p>
+			</div>	
+	
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;progress id="progress2" aria-label="aria-label attribute" value="22" max="100">&lt;/progress></code></pre>
+		</div>
+
+		<div class="test">
+			<h2 class="test-title" id="pg-003">Test pg-003: Progress with <code>aria-labelledby</code></h2>
+
+			<div class="test-case">
+				<p id="pg-003-labelledby">p referenced by aria-labelledby</p>
+				<progress id="progress3" aria-labelledby="pg-003-labelledby" value="22" max="100"></progress>
+				
+				<p>Aria-labelledby should be used as accessible name</p>
+				<p>No accessible description.</p>
+			</div>	
+	
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;p id="pg-003-labelledby">p referenced by aria-labelledby&lt;/p>
+&lt;progress id="input3" aria-labelledby="pg-003-labelledby" value="22" max="100">&lt;/progress></code></pre>
+		</div>
+
+		<div class="test">
+			<h2 class="test-title" id="pg-004">Test pg-004: Progress with label</h2>
+
+			<div class="test-case">
+				<label>label wrapping output <progress id="progress4" value="22" max="100"></progress></label>
+				
+				<p>Label should be used as accessible name</p>
+				<p>No accessible description.</p>
+			</div>
+
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;label>label wrapping output &lt;progress id="progress4" value="22" max="100">&lt;/progress>&lt;/label></code></pre>
+		</div>
+		
+		<div class="test">
+			<h2 class="test-title" id="pg-005">Test pg-005: Progress with <code>title</code> attribute</h2>
+
+			<div class="test-case">
+				<progress id="progress5" title="title attribute" value="22" max="100"></progress>
+				
+				<p>Title should be used as accessible name</p>
+				<p>No accessible description.</p>
+			</div>	
+	
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;progress id="input5" title="title attribute" value="22" max="100">&lt;/progress></code></pre>
+		</div>
+		
+		<div class="test">
+			<h2 class="test-title" id="pg-006">Test pg-006: Progress with <code>aria-describedby</code></h2>
+
+			<div class="test-case">
+				<progress id="progress6" aria-describedby="pg-006-describedby" value="22" max="100"></progress>
+				<p id="pg-006-describedby">p referenced by aria-describedby</p>
+				
+				<p>Aria-describedby should be used as accessible description</p>
+				<p>No accessible name.</p>
+			</div>	
+	
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;progress id="progress6" aria-describedby="pg-006-describedby" value="22" max="100">&lt;/progress>
+&lt;p id="pg-006-describedby">p referenced by aria-describedby&lt;/p></code></pre>
+		</div>
+		
+		<div class="test">
+			<h2 class="test-title" id="pg-007">Test pg-007: Progress with <code>label</code> element &amp; <code>title</code> attribute</h2>
+
+			<div class="test-case">
+				<label for="progress7">label referenced by for/id attributes</label>
+				<progress id="progress7" title="title attribute" value="22" max="100"></progress>
+				
+				<p>Label should be used as accessible name</p>
+				<p>Title should be used as accessible description</p>
+			</div>	
+	
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;label for="progress7">label referenced by for/id attributes&lt;/label>
+&lt;progress id="progress7" title="title attribute" value="22" max="100">&lt;/progress></code></pre>
+		</div>
+
+		<script src="../scripts/test-scripts.js"></script>
+		<script>
+			var test = [],
+				el = document.getElementById('progress1'),
+			    isSupported = (typeof HTMLProgressElement != 'undefined' 
+				               && el instanceof HTMLProgressElement && 'value' in el);
+			
+			test.push({id: "basic-criteria", pass: isSupported});
+			displaySupportResults(test);
+		</script>
 	</body>
 </html>

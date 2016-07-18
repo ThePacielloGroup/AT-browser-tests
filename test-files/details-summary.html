@@ -10,13 +10,14 @@
 		<div class="meta">
 			<div class="criteria">
 				<h2>Pass Criteria</h2>
-				<ul>
-					<li>#1: Elements are supported</li>
-					<li>#2: Elements have correct HTML and Core Accessibility API mappings</li>
-					<li>#3: Control is keyboard accessible:
+				<ul id="criteria-list">
+					<li id="basic-criteria">#1: Elements are supported</li>
+					<li>#2: Correct HTML and Core Accessibility API mappings</li>
+					<li>#3: <code>summary</code> has correct Accessible Name &amp; Description Calculation</li>
+					<li>#4: Control is keyboard accessible:
 						<ul>
-							<li>#3.1: Control MUST be focusable</li>
-							<li>#3.2: MUST be able to expand and collapse control</li>
+							<li>#4.1: <code>summary</code> MUST be focusable</li>
+							<li>#4.2: MUST be able to expand and collapse control</li>
 						</ul>
 					</li>
 				</ul>
@@ -26,12 +27,12 @@
 				<h2>Reference</h2>
 				<ul>
 					<li><a href="http://www.w3.org/TR/html51/semantics.html#the-details-element">HTML5.1 details element</a></li>
-					<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-details">HTML Accessibility API Mappings for details element</a></li>
+					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#el-details">HTML Accessibility API Mappings for details element</a></li>
 					<li><a href="http://www.w3.org/TR/html51/semantics.html#the-summary-element">HTML5.1 summary element</a></li>
-					<li><a href="https://www.w3.org/TR/html-aam-1.0/#el-summary">HTML Accessibility API Mappings for summary element</a></li>
-					<li><a href="https://www.w3.org/TR/html-aam-1.0/#https://www.w3.org/TR/html-aam-1.0/#summary-element-accessible-name-calculation">Accessible Name Calculation for summary element</a></li>
-					<li><a href="https://www.w3.org/TR/html-aam-1.0/#https://www.w3.org/TR/html-aam-1.0/#summary-element-accessible-description-calculation">Accessible Description Calculation  for summary element</a></li>
-					<li><a href="https://www.w3.org/TR/html-aam-1.0/#att-open-details">HTML Accessibility API Mappings for open attribute</a> [Test: DS-002]</li>
+					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#el-summary">HTML Accessibility API Mappings for summary element</a></li>
+					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#summary-element-accessible-name-calculation">Accessible Name Calculation for summary element</a></li>
+					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#summary-element-accessible-description-calculation">Accessible Description Calculation for summary element</a></li>
+					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#att-open-details">HTML Accessibility API Mappings for open attribute</a> [Test: DS-002]</li>
 				</ul>
 			</div>
 		</div>
@@ -41,18 +42,19 @@
 
 			<div class="test-case">
 				<details id="details1">
-					<summary>Why use HTML5?</summary>
-					<p>You should use HTML5 because…</p>
+					<summary>Summary text</summary>
+					<p>Summary subtree should be used as accessible name</p>
+					<p>No accessible description.</p>
 				</details>
 			</div>
-			
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;details id="details1">
-	&lt;summary>Why use HTML5?&lt;/summary>
-	&lt;p>You should use HTML5 because…&lt;/p>
+	&lt;summary>Summary text&lt;/summary>
+	&lt;p>Summary subtree should be used as accessible name&lt;/p>
 &lt;/details></code></pre>
 		</div>
-		
+
 		<div class="test">
 			<h2 class="test-title" id="ds-002">Test ds-002: Details element with open attribute</h2>
 
@@ -62,63 +64,136 @@
 					<p>This should be expanded by default</p>
 				</details>
 			</div>
-			
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;details id="details2" open>
 	&lt;summary>Am I open?&lt;/summary>
 	&lt;p>This should be expanded by default&lt;/p>
 &lt;/details></code></pre>
 		</div>
-
+		
 		<div class="test">
-			<h2 class="test-title" id="ds-003">Test ds-003: Summary element with title attribute</h2>
+			<h2 class="test-title" id="ds-003">Test ds-003: Summary element with aria-label attribute</h2>
 
 			<div class="test-case">
 				<details id="details3">
-					<summary title="title text">Summary text</summary>
-					<p>Some contents…</p>
+					<summary aria-label="aria-label attribute">Summary text</summary>
+					<p>Aria-label should be used as accessible name</p>
+					<p>Summary subtree should be used as accessible description</p>
 				</details>
 			</div>
 			
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;details id="details3">
-	&lt;summary title="title text">Summary text&lt;/summary>
-	&lt;p>Some contents…&lt;/p>
-&lt;/details></code></pre>
-		</div>
-
-		<div class="test">
-			<h2 class="test-title" id="ds-004">Test ds-004: Empty Summary element with title attribute</h2>
-
-			<div class="test-case">
-				<details id="details4">
-					<summary title="title text"></summary>
-					<p>Some contents…</p>
-				</details>
-			</div>
-			
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;details id="details4">
-	&lt;summary title="title text">&lt;/summary>
-	&lt;p>Some contents…&lt;/p>
+	&lt;summary aria-label="aria-label attribute">Summary text&lt;/summary>
+	&lt;p>Aria-label should be used as accessible name&lt;/p>
+	&lt;p>Summary subtree should be used as accessible description&lt;/p>
 &lt;/details></code></pre>
 		</div>
 		
 		<div class="test">
-			<h2 class="test-title" id="ds-005">Test ds-005: Empty Summary element without title attribute</h2>
+			<h2 class="test-title" id="ds-004">Test ds-004: Summary element with aria-labelledby attribute</h2>
 
 			<div class="test-case">
-				<details id="details5">
-					<summary></summary>
-					<p>Some contents…</p>
+				<details id="details4">
+					<summary aria-labelledby="ds-004-labelledby">Summary text</summary>
+					<p id="ds-004-labelledby">p referenced by aria-labelledby</p>
+					<p>Aria-labelledby should be used as accessible name</p>
+					<p>Summary subtree should be used as accessible description</p>
 				</details>
 			</div>
 			
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;details id="details4">
-	&lt;summary>&lt;/summary>
-	&lt;p>Some contents…&lt;/p>
+	&lt;summary aria-labelledby="ds-004-labelledby">Summary text&lt;/summary>
+	&lt;p>id="ds-004-labelledby">p referenced by aria-labelledby&lt;/p>
+	&lt;p>Aria-labelledby should be used as accessible name&lt;/p>
 &lt;/details></code></pre>
 		</div>
+
+		<div class="test">	
+			<h2 class="test-title" id="ds-005">Test ds-005: Summary element with title attribute</h2>
+
+			<div class="test-case">
+				<details id="details5">
+					<summary title="title text">Summary text</summary>
+					<p>Summary subtree should be used as accessible name</p>
+					<p>Title attribute should be used as accessible description</p>
+				</details>
+			</div>
+			
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;details id="details4">
+	&lt;summary title="title text">Summary text&lt;/summary>
+	&lt;p>Summary subtree should be used as accessible name&lt;/p>
+	&lt;p>Title attribute should be used as accessible description&lt;/p>
+&lt;/details></code></pre>
+		</div>
+
+		<div class="test">
+			<h2 class="test-title" id="ds-006">Test ds-006: Empty Summary element with title attribute</h2>
+
+			<div class="test-case">
+				<details id="details6">
+					<summary title="title text"></summary>
+					<p>Title attribute should be used as accessible name</p>
+					<p>No accessible description.</p>
+				</details>
+			</div>
+			
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;details id="details6">
+	&lt;summary title="title text">&lt;/summary>
+	&lt;p>Title attribute should be used as accessible name&lt;/p>
+&lt;/details></code></pre>
+		</div>
+		
+		<div class="test">
+			<h2 class="test-title" id="ds-007">Test ds-007: Empty Summary element without title attribute</h2>
+
+			<div class="test-case">
+				<details id="details7">
+					<summary></summary>
+					<p>User-Agent should provide own text string as accessible name</p>
+					<p>No accessible description.</p>
+				</details>
+			</div>
+			
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;details id="details7">
+	&lt;summary>&lt;/summary>
+	&lt;p>User-Agent should provide own text string as accessible name&lt;/p>
+&lt;/details></code></pre>
+		</div>
+		
+		<div class="test">
+			<h2 class="test-title" id="ds-008">Test ds-008: Summary element with aria-describedby attribute</h2>
+
+			<div class="test-case">
+				<details id="details8">
+					<summary aria-describedby="ds-008-describedby">Summary text</summary>
+					<p id="ds-008-describedby">p referenced by aria-describedby</p>
+					<p>Aria-describedby should be used as accessible description</p>
+					<p>Summary subtree should be used as accessible name</p>
+				</details>
+			</div>
+			
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;details id="details8">
+	&lt;summary aria-describedby="ds-008-describedby">Summary text&lt;/summary>
+	&lt;p>id="ds-008-describedby">p referenced by aria-describedby&lt;/p>
+	&lt;p>Aria-describedby should be used as accessible description&lt;/p>
+&lt;/details></code></pre>
+		</div>
+		
+		<script src="../scripts/test-scripts.js"></script>
+		<script>
+			var test = [],
+				el = document.getElementById('details1'),
+				isSupported = (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
+			
+			test.push({id: "basic-criteria", pass: isSupported});
+			displaySupportResults(test);
+		</script>
 	</body>
 </html>

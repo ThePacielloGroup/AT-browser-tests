@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<title>test file: progress element</title>
@@ -37,7 +37,7 @@
 		<div class="test">
 			<h2 class="test-title" id="pg-001">Test pg-001: Progress element</h2>
 
-			<div class="test-case">	
+			<div class="test-case">
 				<p>Downloading progress:
 				<progress id="progress1" value="22" max="100"></progress></p>
 			</div>
@@ -45,17 +45,17 @@
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;p>Downloading progress: &lt;progress id="progress1" value="22" max="100">&lt;/progress>&lt;/p></code></pre>
 		</div>
-		
+
 		<div class="test">
 			<h2 class="test-title" id="pg-002">Test pg-002: Progress with <code>aria-label</code></h2>
 
 			<div class="test-case">
 				<progress id="progress2" aria-label="aria-label attribute" value="22" max="100"></progress>
-				
+
 				<p>Aria-label should be used as accessible name</p>
 				<p>No accessible description.</p>
-			</div>	
-	
+			</div>
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;progress id="progress2" aria-label="aria-label attribute" value="22" max="100">&lt;/progress></code></pre>
 		</div>
@@ -66,11 +66,11 @@
 			<div class="test-case">
 				<p id="pg-003-labelledby">p referenced by aria-labelledby</p>
 				<progress id="progress3" aria-labelledby="pg-003-labelledby" value="22" max="100"></progress>
-				
+
 				<p>Aria-labelledby should be used as accessible name</p>
 				<p>No accessible description.</p>
-			</div>	
-	
+			</div>
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;p id="pg-003-labelledby">p referenced by aria-labelledby&lt;/p>
 &lt;progress id="input3" aria-labelledby="pg-003-labelledby" value="22" max="100">&lt;/progress></code></pre>
@@ -81,7 +81,7 @@
 
 			<div class="test-case">
 				<label>label wrapping output <progress id="progress4" value="22" max="100"></progress></label>
-				
+
 				<p>Label should be used as accessible name</p>
 				<p>No accessible description.</p>
 			</div>
@@ -89,48 +89,48 @@
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;label>label wrapping output &lt;progress id="progress4" value="22" max="100">&lt;/progress>&lt;/label></code></pre>
 		</div>
-		
+
 		<div class="test">
 			<h2 class="test-title" id="pg-005">Test pg-005: Progress with <code>title</code> attribute</h2>
 
 			<div class="test-case">
 				<progress id="progress5" title="title attribute" value="22" max="100"></progress>
-				
+
 				<p>Title should be used as accessible name</p>
 				<p>No accessible description.</p>
-			</div>	
-	
+			</div>
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;progress id="input5" title="title attribute" value="22" max="100">&lt;/progress></code></pre>
 		</div>
-		
+
 		<div class="test">
 			<h2 class="test-title" id="pg-006">Test pg-006: Progress with <code>aria-describedby</code></h2>
 
 			<div class="test-case">
 				<progress id="progress6" aria-describedby="pg-006-describedby" value="22" max="100"></progress>
 				<p id="pg-006-describedby">p referenced by aria-describedby</p>
-				
+
 				<p>Aria-describedby should be used as accessible description</p>
 				<p>No accessible name.</p>
-			</div>	
-	
+			</div>
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;progress id="progress6" aria-describedby="pg-006-describedby" value="22" max="100">&lt;/progress>
 &lt;p id="pg-006-describedby">p referenced by aria-describedby&lt;/p></code></pre>
 		</div>
-		
+
 		<div class="test">
 			<h2 class="test-title" id="pg-007">Test pg-007: Progress with <code>label</code> element &amp; <code>title</code> attribute</h2>
 
 			<div class="test-case">
 				<label for="progress7">label referenced by for/id attributes</label>
 				<progress id="progress7" title="title attribute" value="22" max="100"></progress>
-				
+
 				<p>Label should be used as accessible name</p>
 				<p>Title should be used as accessible description</p>
-			</div>	
-	
+			</div>
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;label for="progress7">label referenced by for/id attributes&lt;/label>
 &lt;progress id="progress7" title="title attribute" value="22" max="100">&lt;/progress></code></pre>
@@ -140,9 +140,9 @@
 		<script>
 			var test = [],
 				el = document.getElementById('progress1'),
-			    isSupported = (typeof HTMLProgressElement != 'undefined' 
+			    isSupported = (typeof HTMLProgressElement != 'undefined'
 				               && el instanceof HTMLProgressElement && 'value' in el);
-			
+
 			test.push({id: "basic-criteria", pass: isSupported});
 			displaySupportResults(test);
 		</script>

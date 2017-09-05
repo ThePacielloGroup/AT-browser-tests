@@ -3,32 +3,78 @@
 	<head>
 		<meta charset="utf-8">
 		<title>test file: ul/li elements</title>
+		<link rel="stylesheet" href="../style/styles.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	</head>
 	<body>
 		<h1><code>ul/li</code> elements</h1>
-		<ul>
-			<li>Main</li>
-			<li>Products</li>
-			<li>Dishwashers</li>
-			<li>Second hand</li>
-		</ul>
 
-		<h2>Code</h2>
-		<pre><code>&lt;ul>
-	&lt;li>Main&lt;/li>
+		<div class="meta">
+			<div class="criteria">
+				<h2>Pass Criteria</h2>
+				<ul id="criteria-list">
+					<li id="basic-criteria">#1: Element is supported</li>
+					<li>#2: Correct HTML and Core Accessibility API mappings</li>
+					<li>#3: Correct Accessible Name &amp; Description Calculation</li>
+				</ul>
+			</div>
+
+			<div class="reference">
+				<h2>Reference</h2>
+				<ul>
+					<li>
+						<a href="http://www.w3.org/TR/html5/grouping-content.html#the-ul-element">HTML5 <code>ul</code> element</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/html-aam/#el-ul">HTML Accessibility API Mappings for <code>ul</code> element</a>
+					</li>
+					<li>
+						<a href="https://www.w3.org/TR/core-aam-1.1/#role-map-list">Core Accessibility API Mappings for <code>list</code> role</a>
+					</li>
+					<li>
+						<a href="http://www.w3.org/TR/html5/grouping-content.html#the-li-element">HTML5 <code>li</code> element</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/html-aam/#el-li">HTML Accessibility API Mappings for <code>li</code> element</a>
+					</li>
+					<li>
+						<a href="https://www.w3.org/TR/core-aam-1.1/#role-map-listitem">Core Accessibility API Mappings for <code>listitem</code> role</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+
+		<div class="test">
+			<h2 class="test-title" id="ul-001">Test ul-001: <code>ul/li</code> elements</h2>
+
+			<div class="test-case">
+				<ul id="ul-01">
+					<li>Main</li>
+					<li>Products</li>
+					<li>Dishwashers</li>
+					<li>Second hand</li>
+				</ul>
+			</div>
+
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;ul id="ul-01">
+	&lt;li>Main</li>
 	&lt;li>Products&lt;/li>
 	&lt;li>Dishwashers&lt;/li>
 	&lt;li>Second hand&lt;/li>
 &lt;/ul></code></pre>
+		</div>
 
-		<h2>Reference</h2>
-		<ul>
-			<li><a href="http://www.w3.org/TR/html5/grouping-content.html#the-ul-element">HTML5 ul element</a></li>
-			<li><a href="https://w3c.github.io/html-aam/#el-ul">HTML Accessibility API Mappings for ul element</a></li>
-			<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-list">Core Accessibility API Mappings for list role</a></li>
-			<li><a href="http://www.w3.org/TR/html5/grouping-content.html#the-li-element">HTML5 li element</a></li>
-			<li><a href="https://w3c.github.io/html-aam/#el-li">HTML Accessibility API Mappings for li element</a></li>
-			<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-listitem">Core Accessibility API Mappings for listitem role</a></li>
-		</ul>
+
+		<script src="../scripts/test-scripts.js"></script>
+		<script>
+			var test = [];
+			var el = document.getElementById('ul-01');
+			var isSupported = (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
+
+			test.push({id: "basic-criteria", pass: isSupported});
+			displaySupportResults(test);
+		</script>
 	</body>
 </html>

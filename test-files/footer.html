@@ -3,7 +3,8 @@
 	<head>
 		<meta charset="utf-8">
 		<title>test file: footer element</title>
-		<link rel="stylesheet" href="../style/styles.css" />
+		<link rel="stylesheet" href="../style/styles.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	</head>
 	<body>
 		<h1><code>footer</code> element test</h1>
@@ -32,7 +33,7 @@
 		<div class="test">
 			<h2 class="test-title" id="ft-001">Test ft-001: Footer element, sectioning content/root is body</h2>
 
-			<div class="test-case">			
+			<div class="test-case">
 				<footer id="footer1">footer element</footer>
 			</div>
 
@@ -54,7 +55,7 @@
 	&lt;footer>footer element inside article&lt;/footer>
 &lt;/article></code></pre>
 		</div>
-		
+
 		<div class="test">
 			<h2 class="test-title" id="ft-003">Test ft-003: footer with <code>aria-label</code></h2>
 
@@ -66,7 +67,7 @@
 					</footer>
 				</article>
 			</div>
-			
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;article>
 	&lt;footer <strong>aria-label="aria-label attribute"</strong>>
@@ -74,7 +75,7 @@
 	&lt;/footer>
 &lt;/article></code></pre>
 		</div>
-		
+
 		<div class="test">
 			<h2 class="test-title" id="ft-004">Test ft-004: footer with <code>aria-labelledby</code></h2>
 
@@ -87,7 +88,7 @@
 					</footer>
 				</article>
 			</div>
-			
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;article>
 	&lt;footer <strong>aria-labelledby="ft-004-labelledby"</strong>>
@@ -96,7 +97,7 @@
 	&lt;/footer>
 &lt;/article></code></pre>
 		</div>
-		
+
 		<div class="test">
 			<h2 class="test-title" id="ft-005">Test ft-005: footer with <code>title</code> attribute.</h2>
 
@@ -108,7 +109,7 @@
 					</footer>
 				</article>
 			</div>
-			
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;article>
 	&lt;footer title="title attribute">
@@ -116,13 +117,13 @@
 	&lt;/footer>
 &lt;/article></code></pre>
 		</div>
-		
-		
+
+
 		<div class="test">
 			<h2 class="test-title" id="ft-006">Test ft-006: footer with <code>aria-describedby</code></h2>
 
 			<div class="test-case">
-				<article>				
+				<article>
 					<footer aria-describedby="ft-006-describedby">
 						<small id="ft-006-describedby">small referenced by aria-describedby</small>
 						<p>Aria-describedby should be used as accessible description.</p>
@@ -130,7 +131,7 @@
 					</footer>
 				</article>
 			</div>
-			
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;article>
 	&lt;footer <strong>aria-describedby="ft-006-describedby"</strong>>
@@ -139,7 +140,7 @@
 	&lt;/footer>
 &lt;/article></code></pre>
 		</div>
-		
+
 		<div class="test">
 			<h2 class="test-title" id="ft-007">Test ft-007: footer with <code>aria-label</code> &amp; <code>title</code> attributes</h2>
 
@@ -151,7 +152,7 @@
 					</footer>
 				</article>
 			</div>
-			
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;article>
 	&lt;footer <strong>aria-label="aria-label attribute" title="title attribute"</strong>>
@@ -166,9 +167,9 @@
 			var test = [],
 				el = document.getElementById('footer1'),
 			    isSupported = (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
-			
+
 			test.push({id: "basic-criteria", pass: isSupported});
-			displaySupportResults(test);	
+			displaySupportResults(test);
 		</script>
 	</body>
 </html>

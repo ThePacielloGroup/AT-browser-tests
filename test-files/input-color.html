@@ -3,7 +3,8 @@
 	<head>
 		<meta charset="utf-8">
 		<title>test file: input type=color</title>
-		<link rel="stylesheet" href="../style/styles.css" />
+		<link rel="stylesheet" href="../style/styles.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	</head>
 	<body>
 		<h1><code>input type=color</code> element test</h1>
@@ -23,7 +24,7 @@
 				</ul>
 			</div>
 
-			<div class="reference">	
+			<div class="reference">
 				<h2>Reference</h2>
 				<ul>
 					<li><a href="http://www.w3.org/TR/html5/forms.html#color-state-(type=color)">HTML5 input type=color element</a></li>
@@ -44,17 +45,17 @@
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;input id="input1" type="color" /></code></pre>
 		</div>
-		
+
 		<div class="test">
 			<h2 class="test-title" id="ci-002">Test ci-002: Input type="color" with <code>aria-label</code></h2>
 
 			<div class="test-case">
 				<input id="input2" type="color" aria-label="aria-label attribute" />
-				
+
 				<p>Aria-label should be used as accessible name</p>
 				<p>No accessible description.</p>
-			</div>	
-	
+			</div>
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;input id="input2" type="color" aria-label="aria-label attribute" /></code></pre>
 		</div>
@@ -65,11 +66,11 @@
 			<div class="test-case">
 				<p id="ci-003-labelledby">p referenced by aria-labelledby</p>
 				<input id="input3" type="color" aria-labelledby="ci-003-labelledby" />
-				
+
 				<p>Aria-labelledby should be used as accessible name</p>
 				<p>No accessible description.</p>
-			</div>	
-	
+			</div>
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;p id="ci-003-labelledby">p referenced by aria-labelledby&lt;/p>
 &lt;input id="input3" type="color" aria-labelledby="ci-003-labelledby" /></code></pre>
@@ -80,7 +81,7 @@
 
 			<div class="test-case">
 				<label>label wrapping input <input id="input4" type="color" /></label>
-				
+
 				<p>Label should be used as accessible name</p>
 				<p>No accessible description.</p>
 			</div>
@@ -88,61 +89,61 @@
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;label>label wrapping input &lt;input id="input4" type="color" />&lt;/label></code></pre>
 		</div>
-		
+
 		<div class="test">
 			<h2 class="test-title" id="ci-005">Test ci-005: Input type="color" with <code>title</code> attribute</h2>
 
 			<div class="test-case">
 				<input id="input5" type="color" title="title attribute" />
-				
+
 				<p>Title should be used as accessible name</p>
 				<p>No accessible description.</p>
-			</div>	
-	
+			</div>
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;input id="input5" type="color" title="title attribute" /></code></pre>
 		</div>
-		
+
 		<div class="test">
 			<h2 class="test-title" id="ci-006">Test ci-006: Input type="color" with <code>aria-describedby</code></h2>
 
 			<div class="test-case">
 				<input id="input6" type="color" aria-describedby="ci-006-describedby" />
 				<p id="ci-006-describedby">p referenced by aria-describedby</p>
-				
+
 				<p>Aria-describedby should be used as accessible description</p>
 				<p>No accessible name.</p>
-			</div>	
-	
+			</div>
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;input id="input6" type="color" aria-describedby="ci-006-describedby" />
 &lt;p id="ci-006-describedby">p referenced by aria-describedby&lt;/p></code></pre>
 		</div>
-		
+
 		<div class="test">
 			<h2 class="test-title" id="ci-007">Test ci-007: Input type="color" with <code>label</code> element &amp; <code>title</code> attribute</h2>
 
 			<div class="test-case">
 				<label for="input7">label referenced by for/id attributes</label>
 				<input id="input7" type="color" title="title attribute" />
-				
+
 				<p>Label should be used as accessible name</p>
 				<p>Title should be used as accessible description</p>
-			</div>	
-	
+			</div>
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;label for="input7">label referenced by for/id attributes&lt;/label>
 &lt;input id="input7" type="color" title="title attribute" /></code></pre>
 		</div>
 
-		<script src="../scripts/test-scripts.js"></script>		
+		<script src="../scripts/test-scripts.js"></script>
 		<script>
 			var test = [],
 				el = document.getElementById('input1'),
 			    isSupported = (el.type === 'color');
-			
+
 			test.push({id: "basic-criteria", pass: isSupported});
-			displaySupportResults(test);	
+			displaySupportResults(test);
 		</script>
 	</body>
 </html>

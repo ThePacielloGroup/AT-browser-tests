@@ -3,7 +3,8 @@
 	<head>
 		<meta charset="utf-8">
 		<title>test file: menu element with type=toolbar</title>
-		<link rel="stylesheet" href="../style/styles.css" />
+		<link rel="stylesheet" href="../style/styles.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	</head>
 	<body>
 		<h1><code>menu type="toolbar"</code> element</h1>
@@ -38,7 +39,7 @@
     <menuitem onclick="fsaveas()" label="Save as...">
   </menu>
 </div>
-			
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;menu id="menu1" type="toolbar">
 	&lt;li>Toolbar item one&lt;/li>
@@ -46,13 +47,13 @@
 &lt;/menu></code></pre>
 		</div>
 
-		<script src="../scripts/test-scripts.js"></script>		
+		<script src="../scripts/test-scripts.js"></script>
 		<script>
 			var test = [],
 				el = document.getElementById('menu1'),
-			    isSupported = (typeof HTMLMenuElement != 'undefined' && el instanceof HTMLMenuElement 
+			    isSupported = (typeof HTMLMenuElement != 'undefined' && el instanceof HTMLMenuElement
 				               && 'type' in el && el.type === 'toolbar');
-			
+
 			test.push({id: "basic-criteria", pass: isSupported});
 			displaySupportResults(test);
 		</script>

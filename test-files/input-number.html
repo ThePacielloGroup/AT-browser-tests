@@ -3,7 +3,8 @@
 	<head>
 		<meta charset="utf-8">
 		<title>test file: input type=number element</title>
-		<link rel="stylesheet" href="../style/styles.css" />
+		<link rel="stylesheet" href="../style/styles.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	</head>
 	<body>
 		<h1><code>input type=number</code> element</h1>
@@ -25,7 +26,7 @@
 				</ul>
 			</div>
 
-			<div class="reference">	
+			<div class="reference">
 				<h2>Reference</h2>
 				<ul>
 					<li><a href="http://www.w3.org/TR/html/forms.html#number-state-(type=number)">HTML5 input type=number element</a></li>
@@ -49,7 +50,7 @@
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;input id="input1" type="number" /></code></pre>
 		</div>
-		
+
 		<div class="test">
 			<h2 class="test-title" id="ni-002">Test ni-002: Input type="number" with <code>aria-label</code></h2>
 
@@ -60,8 +61,8 @@
 
 				<p>Aria-label should be used as accessible name</p>
 				<p>No accessible description.</p>
-			</div>	
-	
+			</div>
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;input id="input2" type="number" aria-label="aria-label attribute" /></code></pre>
 		</div>
@@ -74,11 +75,11 @@
 					<p id="ni-003-labelledby">p referenced by aria-labelledby</p>
 					<input id="input3" type="number" aria-labelledby="ni-003-labelledby" />
 				</form>
-				
+
 				<p>Aria-labelledby should be used as accessible name</p>
 				<p>No accessible description.</p>
-			</div>	
-	
+			</div>
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;p id="ni-003-labelledby">p referenced by aria-labelledby&lt;/p>
 &lt;input id="input3" type="number" aria-labelledby="ni-003-labelledby" /></code></pre>
@@ -99,7 +100,7 @@
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;label>label wrapping input &lt;input id="input4" type="number" />&lt;/label></code></pre>
 		</div>
-		
+
 		<div class="test">
 			<h2 class="test-title" id="ni-005">Test ni-005: Input type="number" with <code>title</code> attribute</h2>
 
@@ -107,15 +108,15 @@
 				<form>
 					<input id="input5" type="number" title="title attribute" />
 				</form>
-				
+
 				<p>Title should be used as accessible name</p>
 				<p>No accessible description.</p>
-			</div>	
-	
+			</div>
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;input id="input5" type="number" title="title attribute" /></code></pre>
 		</div>
-		
+
 		<div class="test">
 			<h2 class="test-title" id="ni-006">Test ni-006: Input type="number" with <code>aria-describedby</code></h2>
 
@@ -127,13 +128,13 @@
 
 				<p>Aria-describedby should be used as accessible description</p>
 				<p>No accessible name.</p>
-			</div>	
-	
+			</div>
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;input id="input6" type="number" aria-describedby="ni-006-describedby" />
 &lt;p id="ni-006-describedby">p referenced by aria-describedby&lt;/p></code></pre>
 		</div>
-		
+
 		<div class="test">
 			<h2 class="test-title" id="ni-007">Test ni-007: Input type="number" with <code>label</code> element &amp; <code>title</code> attribute</h2>
 
@@ -142,22 +143,22 @@
 					<label for="input7">label referenced by for/id attributes</label>
 					<input id="input7" type="number" title="title attribute" />
 				</form>
-				
+
 				<p>Label should be used as accessible name</p>
 				<p>Title should be used as accessible description</p>
-			</div>	
-	
+			</div>
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;label for="input7">label referenced by for/id attributes&lt;/label>
 &lt;input id="input7" type="number" title="title attribute" /></code></pre>
 		</div>
-		
+
 		<script src="../scripts/test-scripts.js"></script>
 		<script>
 			var test = [],
 				el = document.getElementById('input1'),
 			    isSupported = (el.type === 'number');
-			
+
 			test.push({id: "basic-criteria", pass: isSupported});
 			displaySupportResults(test);
 		</script>

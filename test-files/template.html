@@ -52,9 +52,9 @@
 		<!-- automated tests for elements. -->
 		<script src="../scripts/test-scripts.js"></script>
 		<script>
-			var test = [],
-				el = document.getElementById('xxx'),
-				isSupported = (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
+			var test = [];
+			var el = document.getElementById('xxx');
+			var isSupported = (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
 
 			test.push({id: "basic-criteria", pass: isSupported});
 			displaySupportResults(test);

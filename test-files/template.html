@@ -3,20 +3,61 @@
 	<head>
 		<meta charset="utf-8">
 		<title>test file x: xxx element optional with xxx attribute</title>
+		<link rel="stylesheet" href="../style/styles.css" />
 	</head>
 	<body>
 		<!-- h1 includes element and attribute(s) in test -->
 		<h1><code>xxx</code> element with <code>xxx</code> attribute</h1>
 
-		<!-- element and attribute(s) working example -->
-		<p><a href="xxx">HTML5 xxx element</a></p>
+		<div class="meta">
+			<div class="criteria">
+				<h2>Pass Criteria</h2>
+				<ul id="criteria-list">
+					<li id="basic-criteria">#1: Element is supported</li>
+					<li>#2: Correct HTML and Core Accessibility API mappings</li>
+					<li>#3: Correct Accessible Name &amp; Description Calculation</li>
+				</ul>
+			</div>
 
-		<!-- element and attribute(s) code -->
-		<h2>Code</h2>
-		<pre><code>&lt;xxx href="xxx"&gt;HTML5&lt;/xxx&gt;</code></pre>
+			<!-- link(s) to element and attribute(s) in test -->
+			<div class="reference">
+				<h2>Reference</h2>
+				<ul>
+					<li>
+						<a href="http://www.w3.org/TR/html5/text-level-semantics.html#the-xxx-element">HTML5 xxx element</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/html-aam/#">HTML Accessibility API Mappings for xxx element</a>
+					</li>
+				</ul>
+			</div>
+		</div>
 
-		<!-- link(s) toelement and attribute(s) in test -->
-		<h2>Reference</h2>
-		<p><a href="xxx">HTML5 xxx element</a></p>
+
+		<!-- element and attribute(s) working example(s) -->
+		<div class="test">
+			<h2 class="test-title" id="ar-001">Test xx-001: xxx</h2>
+
+			<div class="test-case">
+				<!-- example -->
+				<p id="xxx">xxx element...</p>
+			</div>
+
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;p id="xxx">xxx element...&lt;/p></code></pre>
+		</div>
+
+
+		<!-- automated tests for elements. -->
+		<script src="../scripts/test-scripts.js"></script>
+		<script>
+			var test = [],
+				el = document.getElementById('xxx'),
+				isSupported = (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
+
+			test.push({id: "basic-criteria", pass: isSupported});
+			displaySupportResults(test);
+		</script>
+
 	</body>
 </html>

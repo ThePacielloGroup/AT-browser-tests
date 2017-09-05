@@ -256,6 +256,12 @@ body > h1 {
 	border: 2px solid hsla(0, 0%, 0%, .1);
 }
 
+.test-case > pre {
+	padding: 0;
+	border: none;
+	background: transparent;
+}
+
 .test-title {
 	position: relative;
 	margin: 0;

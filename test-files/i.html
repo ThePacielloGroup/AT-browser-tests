@@ -1,20 +1,75 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<title>test file: i element</title>
-	</head>
-	<body>
-		<h1><code>i</code> element</h1>
-		<p>HTML is a <i>markup language</i> used to create content structure.</p>
+  <head>
+    <meta charset="utf-8">
+    <title>test file: i element</title>
+    <link rel="stylesheet" href="../style/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  </head>
+  <body>
+    <h1>
+      <code>i</code> element
+    </h1>
 
-		<h2>Code</h2>
-		<pre><code>&lt;p>HTML is a &lt;i>markup language&lt;/i> used to create content structure.&lt;/p></code></pre>
+    <div class="meta">
+      <div class="criteria">
+        <h2>
+          Pass Criteria
+        </h2>
+        <ul id="criteria-list">
+          <li id="basic-criteria">#1: Element is supported</li>
+          <li>#2: Correct HTML and Core Accessibility API mappings</li>
+          <li>#3: Correct Accessible Name &amp; Description Calculation</li>
+        </ul>
+      </div>
 
-		<h2>Reference</h2>
-		<ul>
-			<li><a href="http://www.w3.org/TR/html/text-level-semantics.html#the-i-element">HTML5 i element</a></li>
-			<li><a href="https://w3c.github.io/html-aam/#el-i">HTML Accessibility API Mappings for i element</a></li>
-		</ul>
-	</body>
+      <div class="reference">
+        <h2>
+          Reference
+        </h2>
+        <ul>
+          <li>
+            <a href="http://www.w3.org/TR/html5/text-level-semantics.html#the-i-element">HTML5 <code>i</code> element</a>
+          </li>
+          <li>
+            <a href="https://w3c.github.io/html-aam/#el-i">HTML Accessibility API Mappings for <code>i</code> element</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="test">
+      <h2 class="test-title" id="i-001">Test i-001: <code>i</code> element</h2>
+
+      <div class="test-case">
+        <p>HTML is a <i id="i-01">markup language</i> used to create content structure.</p>
+      </div>
+
+      <h3 class="code-title">Code</h3>
+      <pre><code>&lt;p HTML is a &lt;i id="i-01">markup language&lt;/i> used to create content structure.&lt;/p></code></pre>
+    </div>
+
+
+    <div class="test">
+      <h2 class="test-title" id="i-002">Test i-002: <code>i</code> element with <code>style="font-style: normal;"</code></h2>
+
+      <div class="test-case">
+        <p>HTML is a <i style="font-style: normal;">markup language</i> used to create content structure.</p>
+      </div>
+
+      <h3 class="code-title">Code</h3>
+      <pre><code>&lt;p HTML is a &lt;i style="font-style: normal;">markup language&lt;/i> used to create content structure.&lt;/p></code></pre>
+    </div>
+
+    <script src="../scripts/test-scripts.js"></script>
+    <script>
+      var test = [];
+      var el = document.getElementById('i-01');
+      var isSupported = (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
+
+      test.push({id: "basic-criteria", pass: isSupported});
+      displaySupportResults(test);
+    </script>
+  </body>
 </html>

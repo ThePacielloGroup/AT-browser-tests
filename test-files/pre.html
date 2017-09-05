@@ -3,10 +3,47 @@
 	<head>
 		<meta charset="utf-8">
 		<title>test file: pre element</title>
+		<link rel="stylesheet" href="../style/styles.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	</head>
 	<body>
-		<h1><code>pre</code> element</h1>
-		<pre>
+		<h1>
+			<code>pre</code> element
+		</h1>
+
+		<div class="meta">
+			<div class="criteria">
+				<h2>
+					Pass Criteria
+				</h2>
+				<ul id="criteria-list">
+					<li id="basic-criteria">#1: Element is supported</li>
+					<li>#2: Correct HTML and Core Accessibility API mappings</li>
+					<li>#3: Correct Accessible Name &amp; Description Calculation</li>
+				</ul>
+			</div>
+
+			<div class="reference">
+				<h2>
+					Reference
+				</h2>
+				<ul>
+					<li>
+						<a href="http://www.w3.org/TR/html5/text-level-semantics.html#the-pre-element">HTML5 <code>pre</code> element</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/html-aam/#el-pre">HTML Accessibility API Mappings for <code>pre</code> element</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+
+		<div class="test">
+			<h2 class="test-title" id="pre-001">Test pre-001: <code>pre</code> element</h2>
+
+			<div class="test-case">
+				<pre id="pre-01">
 Each
 word
 is
@@ -14,21 +51,27 @@ on
 a
 new
 line</pre>
+			</div>
 
-<h2>Code</h2>
-<pre><code>&lt;pre>
-Each
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;pre>Each
 word
 is
 on
 a
 new
 line&lt;/pre></code></pre>
+		</div>
 
-		<h2>Reference</h2>
-		<ul>
-			<li><a href="http://www.w3.org/TR/html5/grouping-content.html#the-pre-element">HTML5 pre element</a></li>
-			<li><a href="https://w3c.github.io/html-aam/#el-pre">HTML Accessibility API Mappings for pre element</a></li>
-		</ul>
+
+		<script src="../scripts/test-scripts.js"></script>
+		<script>
+			var test = [];
+			var el = document.getElementById('pre-01');
+			var isSupported = (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
+
+			test.push({id: "basic-criteria", pass: isSupported});
+			displaySupportResults(test);
+		</script>
 	</body>
 </html>

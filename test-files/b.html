@@ -3,18 +3,73 @@
 	<head>
 		<meta charset="utf-8">
 		<title>test file: b element</title>
+		<link rel="stylesheet" href="../style/styles.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	</head>
 	<body>
-		<h1><code>b</code> element</h1>
-		<p>One may wish to differently style things such as <b>product names</b> and the like.</p>
+		<h1>
+			<code>b</code> element
+		</h1>
 
-		<h2>Code</h2>
-		<pre><code>&lt;p>One may wish to differently style things such as &lt;b>product names&lt;/b> and the like.&lt;/p></code></pre>
+		<div class="meta">
+			<div class="criteria">
+				<h2>
+					Pass Criteria
+				</h2>
+				<ul id="criteria-list">
+					<li id="basic-criteria">#1: Element is supported</li>
+					<li>#2: Correct HTML and Core Accessibility API mappings</li>
+					<li>#3: Correct Accessible Name &amp; Description Calculation</li>
+				</ul>
+			</div>
 
-		<h2>Reference</h2>
-		<ul>
-			<li><a href="http://www.w3.org/TR/html/text-level-semantics.html#the-b-element">HTML5 b element</a></li>
-			<li><a href="https://w3c.github.io/html-aam/#el-b">HTML Accessibility API Mappings for b element</a></li>
-		</ul>
+			<div class="reference">
+				<h2>
+					Reference
+				</h2>
+				<ul>
+					<li>
+						<a href="http://www.w3.org/TR/html5/text-level-semantics.html#the-b-element">HTML5 <code>b</code> element</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/html-aam/#el-b">HTML Accessibility API Mappings for <code>b</code> element</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+
+		<div class="test">
+			<h2 class="test-title" id="b-001">Test b-001: <code>b</code> element</h2>
+
+			<div class="test-case">
+				<p>One may wish to differently style things such as <b id="b-01">product names</b> and the like.</p>
+			</div>
+
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;p>One may wish to differently style things such as &lt;b id="b-01">product names&lt;/b> and the like.&lt;/p></code></pre>
+		</div>
+
+		<div class="test">
+			<h2 class="test-title" id="b-002">Test b-002: <code>b</code> with <code>font-weight: normal;</code></h2>
+
+			<div class="test-case">
+				<p>One may wish to differently style things such as <b style="font-weight: normal;">product names</b> and the like.</p>
+			</div>
+
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;p>One may wish to differently style things such as &lt;b style="font-weight: normal;">product names&lt;/b> and the like.&lt;/p></code></pre>
+		</div>
+
+
+		<script src="../scripts/test-scripts.js"></script>
+		<script>
+			var test = [];
+			var el = document.getElementById('b-01');
+			var isSupported = (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
+
+			test.push({id: "basic-criteria", pass: isSupported});
+			displaySupportResults(test);
+		</script>
 	</body>
 </html>

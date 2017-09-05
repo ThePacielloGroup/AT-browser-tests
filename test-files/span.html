@@ -3,26 +3,86 @@
 	<head>
 		<meta charset="utf-8">
 		<title>test file: span element</title>
+		<link rel="stylesheet" href="../style/styles.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	</head>
 	<body>
-		<h1><code>span</code> element</h1>
+		<h1>
+			<code>span</code> element
+		</h1>
 
-		<h2>span</h2>
-		<p>HTML5 has <span>really good</span> accessibility.</p>
+		<div class="meta">
+			<div class="criteria">
+				<h2>
+					Pass Criteria
+				</h2>
+				<ul id="criteria-list">
+					<li id="basic-criteria">#1: Element is supported</li>
+					<li>#2: Correct HTML and Core Accessibility API mappings</li>
+					<li>#3: Correct Accessible Name &amp; Description Calculation</li>
+				</ul>
+			</div>
 
-		<h2>span+title="not really good"</h2>
-		<p>HTML5 has <span title="not really good">really good</span> accessibility.</p>
+			<div class="reference">
+				<h2>
+					Reference
+				</h2>
+				<ul>
+					<li>
+						<a href="http://www.w3.org/TR/html5/text-level-semantics.html#the-span-element">HTML5 <code>span</code> element</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/html-aam/#el-span">HTML Accessibility API Mappings for <code>span</code> element</a>
+					</li>
+				</ul>
+			</div>
+		</div>
 
-		<h2>span + style="font-weight:bold"</h2>
-		<p>HTML5 has <span style="font-weight:bold">really good</span> accessibility.</p>
 
-		<h2>Code</h2>
-		<pre><code>&lt;p>HTML5 has &lt;span title="not really good">really good&lt;/span> accessibility.&lt;/p></code></pre>
+		<div class="test">
+			<h2 class="test-title" id="span-001">Test span-001: <code>span</code> element</h2>
 
-		<h2>Reference</h2>
-		<ul>
-			<li><a href="http://www.w3.org/TR/html/text-level-semantics.html#the-span-element">HTML5 span element</a></li>
-			<li><a href="https://w3c.github.io/html-aam/#el-span">HTML Accessibility API Mappings for span element</a></li>
-		</ul>
+			<div class="test-case">
+				<p>HTML5 has <span id="span-01">really good</span> accessibility.</p>
+			</div>
+
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;p>HTML5 has &lt;span id="span-01">really good&lt;/span> accessibility.&lt;/p></code></pre>
+		</div>
+
+
+		<div class="test">
+			<h2 class="test-title" id="span-002">Test span-002: <code>span</code> &amp; <code>title="not really good"</code></h2>
+
+			<div class="test-case">
+				<p>HTML5 has <span title="not really good">really good</span> accessibility.</p>
+			</div>
+
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;p>HTML5 has &lt;span title="not really good">really good&lt;/span> accessibility.&lt;/p></code></pre>
+		</div>
+
+
+		<div class="test">
+			<h2 class="test-title" id="span-003">Test span-003: <code>span</code> &amp; <code>style="font-weight: bold;"</code></h2>
+
+			<div class="test-case">
+				<p>HTML5 has <span style="font-weight: bold">really good</span> accessibility.</p>
+			</div>
+
+			<h3 class="code-title">Code</h3>
+			<pre><code>&lt;p>HTML5 has &lt;span style="font-weight:bold">really good&lt;/span> accessibility.&lt;/p></code></pre>
+		</div>
+
+
+		<script src="../scripts/test-scripts.js"></script>
+		<script>
+			var test = [];
+			var el = document.getElementById('span-01');
+			var isSupported = (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
+
+			test.push({id: "basic-criteria", pass: isSupported});
+			displaySupportResults(test);
+		</script>
 	</body>
 </html>

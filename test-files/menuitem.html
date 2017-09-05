@@ -3,7 +3,8 @@
 	<head>
 		<meta charset="utf-8">
 		<title>test file: menuitem element</title>
-		<link rel="stylesheet" href="../style/styles.css" />
+		<link rel="stylesheet" href="../style/styles.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	</head>
 	<body>
 		<h1><code>menuitem</code> element test</h1>
@@ -30,10 +31,10 @@
 					<li><a href="https://w3c.github.io/aria/core-aam/core-aam.html#role-map-menuitem">Core Accessibility API Mappings for menuitem role</a></li>
 					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#el-menuitem-checkbox">HTML Accessibility API Mappings for menuitem element in the checkbox state</a></li>
 					<li><a href="https://w3c.github.io/aria/core-aam/core-aam.html#role-map-menuitemcheckbox">Core Accessibility API Mappings for menuitemcheckbox role</a></li>
-					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#att-checked">HTML Accessibility API Mappings for checked attribute</a></li>	
+					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#att-checked">HTML Accessibility API Mappings for checked attribute</a></li>
 					<li><a href="https://w3c.github.io/aria/core-aam/core-aam.html#ariaCheckedTrue">Core Accessibility API Mappings for aria-checked="true" state</a></li>
-					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#att-checked-absent">HTML Accessibility API Mappings for absent checked attribute</a></li>						
-					<li><a href="https://w3c.github.io/aria/core-aam/core-aam.html#ariaCheckedFalse">Core Accessibility API Mappings for aria-checked="false" state</a></li>				
+					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#att-checked-absent">HTML Accessibility API Mappings for absent checked attribute</a></li>
+					<li><a href="https://w3c.github.io/aria/core-aam/core-aam.html#ariaCheckedFalse">Core Accessibility API Mappings for aria-checked="false" state</a></li>
 					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#el-menuitem-radio">HTML Accessibility API Mappings for menuitem element in the radio state</a></li>
 					<li><a href="https://w3c.github.io/aria/core-aam/core-aam.html#role-map-menuitemradio">Core Accessibility API Mappings for menuitemradio role</a></li>
 				</ul>
@@ -50,7 +51,7 @@
 					<menuitem type="command" label="I’m another command menuitem"></menuitem>
 				</menu>
 			</div>
-			
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;div id="menu1" contextmenu="command-menu">I have a number of command menuitems in my context menu. Right click (or equivalent) to test&lt;/div>
 &lt;menu type="context" id="command-menu">
@@ -69,7 +70,7 @@
 					<menuitem type="checkbox" label="I’m another checkbox menuitem"></menuitem>
 				</menu>
 			</div>
-			
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;div id="menu2" contextmenu="checkbox-menu">I have a number of checkbox menuitems in my context menu. Right click (or equivalent) to test&lt;/div>
 &lt;menu type="context" id="checkbox-menu">
@@ -88,7 +89,7 @@
 					<menuitem type="radio" radiogroup="radios" label="I’m another radio menuitem"></menuitem>
 				</menu>
 			</div>
-			
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;div id="menu3" contextmenu="radio-menu">I have a number of radio menuitems in my context menu. Right click (or equivalent) to test&lt;/div>
 &lt;menu type="context" id="radio-menu">
@@ -97,15 +98,15 @@
 &lt;/menu></code></pre>
 		</div>
 
-		<script src="../scripts/test-scripts.js"></script>		
+		<script src="../scripts/test-scripts.js"></script>
 		<script>
 			var test = [],
 				el = document.getElementById('menuitem1'),
-			    isSupported = (typeof HTMLMenuItemElement != 'undefined' 
+			    isSupported = (typeof HTMLMenuItemElement != 'undefined'
 				               && el instanceof HTMLMenuItemElement && 'type' in el);
-			
+
 			test.push({id: "basic-criteria", pass: isSupported});
-			displaySupportResults(test);	
+			displaySupportResults(test);
 		</script>
 	</body>
 </html>

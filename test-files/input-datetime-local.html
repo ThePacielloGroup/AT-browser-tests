@@ -3,7 +3,8 @@
 	<head>
 		<meta charset="utf-8">
 		<title>test file: input typedate-local element</title>
-		<link rel="stylesheet" href="../style/styles.css" />
+		<link rel="stylesheet" href="../style/styles.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	</head>
 	<body>
 		<h1><code>input type=datetime-local</code> element test</h1>
@@ -44,17 +45,17 @@
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;input id="input1" type="datetime-local" /></code></pre>
 		</div>
-		
+
 		<div class="test">
 			<h2 class="test-title" id="dli-002">Test dli-002: Input type="datetime-local" with <code>aria-label</code></h2>
 
 			<div class="test-case">
 				<input id="input2" type="datetime-local" aria-label="aria-label attribute" />
-				
+
 				<p>Aria-label should be used as accessible name</p>
 				<p>No accessible description.</p>
-			</div>	
-	
+			</div>
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;input id="input2" type="datetime-local" aria-label="aria-label attribute" /></code></pre>
 		</div>
@@ -65,11 +66,11 @@
 			<div class="test-case">
 				<p id="dli-003-labelledby">p referenced by aria-labelledby</p>
 				<input id="input3" type="datetime-local" aria-labelledby="dli-003-labelledby" />
-				
+
 				<p>Aria-labelledby should be used as accessible name</p>
 				<p>No accessible description.</p>
-			</div>	
-	
+			</div>
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;p id="dli-003-labelledby">p referenced by aria-labelledby&lt;/p>
 &lt;input id="input3" type="datetime-local" aria-labelledby="dli-003-labelledby" /></code></pre>
@@ -80,7 +81,7 @@
 
 			<div class="test-case">
 				<label>label wrapping input <input id="input4" type="datetime-local" /></label>
-				
+
 				<p>Label should be used as accessible name</p>
 				<p>No accessible description.</p>
 			</div>
@@ -88,48 +89,48 @@
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;label>label wrapping input &lt;input id="input4" type="datetime-local" />&lt;/label></code></pre>
 		</div>
-		
+
 		<div class="test">
 			<h2 class="test-title" id="dli-005">Test dli-005: Input type="datetime-local" with <code>title</code> attribute</h2>
 
 			<div class="test-case">
 				<input id="input5" type="datetime-local" title="title attribute" />
-				
+
 				<p>Title should be used as accessible name</p>
 				<p>No accessible description.</p>
-			</div>	
-	
+			</div>
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;input id="input5" type="datetime-local" title="title attribute" /></code></pre>
 		</div>
-		
+
 		<div class="test">
 			<h2 class="test-title" id="dli-006">Test dli-006: Input type="datetime-local" with <code>aria-describedby</code></h2>
 
 			<div class="test-case">
 				<input id="input6" type="datetime-local" aria-describedby="dli-006-describedby" />
 				<p id="dli-006-describedby">p referenced by aria-describedby</p>
-				
+
 				<p>Aria-describedby should be used as accessible description</p>
 				<p>No accessible name.</p>
-			</div>	
-	
+			</div>
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;input id="input6" type="datetime-local" aria-describedby="dli-006-describedby" />
 &lt;p id="dli-006-describedby">p referenced by aria-describedby&lt;/p></code></pre>
 		</div>
-		
+
 		<div class="test">
 			<h2 class="test-title" id="dli-007">Test dli-007: Input type="datetime-local" with <code>label</code> element &amp; <code>title</code> attribute</h2>
 
 			<div class="test-case">
 				<label for="input7">label referenced by for/id attributes</label>
 				<input id="input7" type="datetime-local" title="title attribute" />
-				
+
 				<p>Label should be used as accessible name</p>
 				<p>Title should be used as accessible description</p>
-			</div>	
-	
+			</div>
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;label for="input7">label referenced by for/id attributes&lt;/label>
 &lt;input id="input7" type="datetime-local" title="title attribute" /></code></pre>
@@ -140,7 +141,7 @@
 			var test = [],
 				el = document.getElementById('input1'),
 			    isSupported = (el.type === 'datetime-local');
-			
+
 			test.push({id: "basic-criteria", pass: isSupported});
 			displaySupportResults(test);
 		</script>

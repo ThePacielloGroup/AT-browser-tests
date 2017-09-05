@@ -3,7 +3,8 @@
 	<head>
 		<meta charset="utf-8">
 		<title> Test file: audio element</title>
-		<link rel="stylesheet" href="../style/styles.css" />
+		<link rel="stylesheet" href="../style/styles.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	</head>
 	<body>
 		<h1><code>audio</code> element test</h1>
@@ -34,13 +35,13 @@
 		<div class="test">
 			<h2 class="test-title" id="au-001">Test au-001: Audio Element</h2>
 
-			<div class="test-case">				
+			<div class="test-case">
 				<audio id="audio1" controls>
 					<source src="../audio/jeffbob.mp3" type="audio/mpeg" />
 					<source src="../audio/jeffbob.ogg" type="audio/ogg" />
 				</audio>
 			</div>
-			
+
 			<h3 class="code-title">Code</h3>
 			<pre>&lt;audio id="audio1" controls>
 	&lt;source src="audio/jeffbob.mp3" type="audio/mpeg" />
@@ -50,15 +51,15 @@
 
 		<small>Audio file: <a href="https://archive.org/details/Jeffbob">Spam call: Bob hangs up 7 mins into his survey</a> by Bruce Lawson</small>
 
-		<script src="../scripts/test-scripts.js"></script>		
+		<script src="../scripts/test-scripts.js"></script>
 		<script>
 			var test = [],
 				el = document.getElementById('audio1'),
-			    isSupported = (typeof HTMLAudioElement != 'undefined' 
+			    isSupported = (typeof HTMLAudioElement != 'undefined'
 				               && el instanceof HTMLAudioElement && !!el.canPlayType);
-			
+
 			test.push({id: "basic-criteria", pass: isSupported});
-			displaySupportResults(test);		
+			displaySupportResults(test);
 		</script>
 	</body>
 </html>

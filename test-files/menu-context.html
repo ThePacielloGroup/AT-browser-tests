@@ -3,7 +3,8 @@
 	<head>
 		<meta charset="utf-8">
 		<title>test file: menu element with type=context</title>
-		<link rel="stylesheet" href="../style/styles.css" />
+		<link rel="stylesheet" href="../style/styles.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	</head>
 	<body>
 		<h1><code>menu type="context"</code> element test</h1>
@@ -41,7 +42,7 @@
 					<menuitem label="I’m a menuitem"></menuitem>
 				</menu>
 			</div>
-			
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;div id="menu-button1" contextmenu="menu1">I have a context menu. Right click (or equivalent) to test&lt;/div>
 &lt;menu type="context" id="menu1">
@@ -49,15 +50,15 @@
 &lt;/menu></code></pre>
 		</div>
 
-		<script src="../scripts/test-scripts.js"></script>		
+		<script src="../scripts/test-scripts.js"></script>
 		<script>
 			var test = [],
 				el = document.getElementById('menu1'),
-			    isSupported = (typeof HTMLMenuElement != 'undefined' && el instanceof HTMLMenuElement 
+			    isSupported = (typeof HTMLMenuElement != 'undefined' && el instanceof HTMLMenuElement
 				               && 'type' in el && el.type === 'context');
-			
+
 			test.push({id: "basic-criteria", pass: isSupported});
-			displaySupportResults(test);	
+			displaySupportResults(test);
 		</script>
 	</body>
 </html>

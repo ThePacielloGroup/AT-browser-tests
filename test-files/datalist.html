@@ -3,7 +3,8 @@
 	<head>
 		<meta charset="utf-8">
 		<title>test file: input element + datalist element</title>
-		<link rel="stylesheet" href="../style/styles.css" />
+		<link rel="stylesheet" href="../style/styles.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	</head>
 	<body>
 		<h1><code>input</code> element + <code>datalist</code> element</h1>
@@ -38,7 +39,7 @@
 		<div class="test">
 			<h2 class="test-title" id="di-001">Test di-001: DataList with input</h2>
 
-			<div class="test-case">		
+			<div class="test-case">
 				<label>Sites <input id="input1" type="text" list="datalist1" /></label>
 				<datalist id="datalist1">
 					<option value="http://www.google.com/" label="Google">Google</option>
@@ -58,9 +59,9 @@
 		<script>
 			var test = [],
 				el = document.getElementById('datalist1'),
-			    isSupported = (typeof HTMLDataListElement != 'undefined' 
+			    isSupported = (typeof HTMLDataListElement != 'undefined'
 				               && el instanceof HTMLDataListElement && 'options' in el);
-			   
+
 			test.push({id: "basic-criteria", pass: isSupported});
 			displaySupportResults(test);
 		</script>

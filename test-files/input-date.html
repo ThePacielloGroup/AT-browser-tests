@@ -3,7 +3,8 @@
 	<head>
 		<meta charset="utf-8">
 		<title>test file: input type date element</title>
-		<link rel="stylesheet" href="../style/styles.css" />
+		<link rel="stylesheet" href="../style/styles.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	</head>
 	<body>
 		<h1><code>input type=date</code> element test</h1>
@@ -23,7 +24,7 @@
 				</ul>
 			</div>
 
-			<div class="reference">	
+			<div class="reference">
 				<h2>Reference</h2>
 				<ul>
 					<li><a href="http://www.w3.org/TR/html5/forms.html#date-state-(type=date)">HTML5 input type=date element</a></li>
@@ -44,17 +45,17 @@
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;input id="input1" type="date" /></code></pre>
 		</div>
-		
+
 		<div class="test">
 			<h2 class="test-title" id="di-002">Test di-002: Input type="date" with <code>aria-label</code></h2>
 
 			<div class="test-case">
 				<input id="input2" type="date" aria-label="aria-label attribute" />
-				
+
 				<p>Aria-label should be used as accessible name</p>
 				<p>No accessible description.</p>
-			</div>	
-	
+			</div>
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;input id="input2" type="date" aria-label="aria-label attribute" /></code></pre>
 		</div>
@@ -65,11 +66,11 @@
 			<div class="test-case">
 				<p id="di-003-labelledby">p referenced by aria-labelledby</p>
 				<input id="input3" type="date" aria-labelledby="di-003-labelledby" />
-				
+
 				<p>Aria-labelledby should be used as accessible name</p>
 				<p>No accessible description.</p>
-			</div>	
-	
+			</div>
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;p id="di-003-labelledby">p referenced by aria-labelledby&lt;/p>
 &lt;input id="input3" type="date" aria-labelledby="di-003-labelledby" /></code></pre>
@@ -80,7 +81,7 @@
 
 			<div class="test-case">
 				<label>label wrapping input <input id="input4" type="date" /></label>
-				
+
 				<p>Label should be used as accessible name</p>
 				<p>No accessible description.</p>
 			</div>
@@ -88,53 +89,53 @@
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;label>label wrapping input &lt;input id="input4" type="date" />&lt;/label></code></pre>
 		</div>
-		
+
 		<div class="test">
 			<h2 class="test-title" id="di-005">Test di-005: Input type="date" with <code>title</code> attribute</h2>
 
 			<div class="test-case">
 				<input id="input5" type="date" title="title attribute" />
-				
+
 				<p>Title should be used as accessible name</p>
 				<p>No accessible description.</p>
-			</div>	
-	
+			</div>
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;input id="input5" type="date" title="title attribute" /></code></pre>
 		</div>
-		
+
 		<div class="test">
 			<h2 class="test-title" id="di-006">Test di-006: Input type="date" with <code>aria-describedby</code></h2>
 
 			<div class="test-case">
 				<input id="input6" type="date" aria-describedby="di-006-describedby" />
 				<p id="di-006-describedby">p referenced by aria-describedby</p>
-				
+
 				<p>Aria-describedby should be used as accessible description</p>
 				<p>No accessible name.</p>
-			</div>	
-	
+			</div>
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;input id="input6" type="date" aria-describedby="di-006-describedby" />
 &lt;p id="di-006-describedby">p referenced by aria-describedby&lt;/p></code></pre>
 		</div>
-		
+
 		<div class="test">
 			<h2 class="test-title" id="di-007">Test di-007: Input type="date" with <code>label</code> element &amp; <code>title</code> attribute</h2>
 
 			<div class="test-case">
 				<label for="input7">label referenced by for/id attributes</label>
 				<input id="input7" type="date" title="title attribute" />
-				
+
 				<p>Label should be used as accessible name</p>
 				<p>Title should be used as accessible description</p>
-			</div>	
-	
+			</div>
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;label for="input7">label referenced by for/id attributes&lt;/label>
 &lt;input id="input7" type="date" title="title attribute" /></code></pre>
 		</div>
-		
+
 		<script src="../scripts/test-scripts.js"></script>
 		<script>
 			var test = [],
@@ -142,7 +143,7 @@
 			    isSupported = (el.type === 'date');
 
 			test.push({id: "basic-criteria", pass: isSupported});
-			displaySupportResults(test);			
+			displaySupportResults(test);
 		</script>
 
 	</body>

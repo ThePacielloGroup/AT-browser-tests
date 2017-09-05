@@ -3,7 +3,8 @@
 	<head>
 		<meta charset="utf-8">
 		<title>test file: article element</title>
-		<link rel="stylesheet" href="../style/styles.css" />
+		<link rel="stylesheet" href="../style/styles.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	</head>
 	<body>
 		<h1><code>article</code> element test</h1>
@@ -147,7 +148,7 @@
 			var test = [],
 				el = document.getElementById('article1'),
 			    isSupported = (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
-			
+
 			test.push({id: "basic-criteria", pass: isSupported});
 			displaySupportResults(test);
 		</script>

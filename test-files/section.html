@@ -3,7 +3,8 @@
 	<head>
 		<meta charset="utf-8">
 		<title>test file: section element</title>
-		<link rel="stylesheet" href="../style/styles.css" />
+		<link rel="stylesheet" href="../style/styles.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	</head>
 	<body>
 		<h1><code>section</code> element test</h1>
@@ -89,13 +90,13 @@
 			</div>
 
 			<h3 class="code-title">Code</h3>
-		
+
 			<pre><code>&lt;section <strong>aria-labelledby="sc-004-labelledby"</strong>>
 	&lt;h1 <strong>id="sc-004-labelledby"</strong>>h1 referenced by aria-labelledby&lt;/h1>
 	&lt;p>Aria-labelledby should be used as accessible name.&lt;/p>
 &lt;/section></code></pre>
 		</div>
-		
+
 		<div class="test">
 			<h2 class="test-title" id="sc-005">Test sc-005: Section with <code>title</code> attribute</h2>
 
@@ -105,7 +106,7 @@
 					<p>No accessible description.</p>
 				</section>
 			</div>
-			
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;section <strong>title="title attribute"</strong>>
 	&lt;p>Title should be used as accessible name.&lt;/p>
@@ -122,14 +123,14 @@
 					<p>No accessible name.</p>
 				</section>
 			</div>
-			
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;section <strong>aria-describedby="sc-006-describedby"</strong>>
 	&lt;h1 <strong>id="sc-006-describedby"</strong>>h1 referenced by aria-describedby&lt;/h1>
 	&lt;p>Aria-describedby should be used as accessible description.&lt;/p>
 &lt;/section></code></pre>
 		</div>
-		
+
 		<div class="test">
 			<h2 class="test-title" id="sc-007">Test sc-007: section with <code>aria-label</code> &amp; <code>title</code> attributes</h2>
 
@@ -139,20 +140,20 @@
 					<p>Title should be used as accessible description.</p>
 				</section>
 			</div>
-			
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;section <strong>aria-label="aria-label attribute" title="title attribute"</strong>>
 	&lt;p>Aria-label should be used as accessible name.&lt;/p>
 	&lt;p>Title should be used as accessible description.&lt;/p>
 &lt;/section></code></pre>
-		</div>		
+		</div>
 
 		<script src="../scripts/test-scripts.js"></script>
 		<script>
 			var test = [],
 				el = document.getElementById('section1'),
 				isSupported = (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
-			
+
 			test.push({id: "basic-criteria", pass: isSupported});
 			displaySupportResults(test);
 		</script>

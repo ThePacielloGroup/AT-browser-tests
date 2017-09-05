@@ -3,7 +3,8 @@
 	<head>
 		<meta charset="utf-8">
 		<title>test file: required attribute</title>
-		<link rel="stylesheet" href="../style/styles.css" />
+		<link rel="stylesheet" href="../style/styles.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	</head>
 	<body>
 		<h1><code>required</code> attribute test</h1>
@@ -36,7 +37,7 @@
 					<button>Submit</button>
 				</form>
 			</div>
-			
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;form>
 	&lt;label for="input1">Submit without entering value to trigger required attribute:&lt;/label>
@@ -44,14 +45,14 @@
 	&lt;button>Submit&lt;/button>
 &lt;/form></code></pre>
 		</div>
-		
+
 		<script src="../scripts/test-scripts.js"></script>
 		<script>
 			var test = [],
 				el = document.getElementById('input1'),
-			    isSupported = (typeof HTMLInputElement != 'undefined' 
+			    isSupported = (typeof HTMLInputElement != 'undefined'
 				               && el instanceof HTMLInputElement && 'required' in el);
-			
+
 			test.push({id: "basic-criteria", pass: isSupported});
 			displaySupportResults(test);
 		</script>

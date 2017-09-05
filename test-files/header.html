@@ -3,7 +3,8 @@
 	<head>
 		<meta charset="utf-8">
 		<title>test file: header element</title>
-		<link rel="stylesheet" href="../style/styles.css" />
+		<link rel="stylesheet" href="../style/styles.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	</head>
 	<body>
 		<h1><code>header</code> element test</h1>
@@ -18,7 +19,7 @@
 				</ul>
 			</div>
 
-			<div class="reference">		
+			<div class="reference">
 				<h2>Reference</h2>
 				<ul>
 					<li><a href="http://www.w3.org/TR/html/sections.html#the-header-element">HTML5 header element</a></li>
@@ -39,7 +40,7 @@
 					<h1>header element</h1>
 				</header>
 			</div>
-	
+
 			<h3 class="code-title">Code</h3>
 	<pre><code>&lt;header>
 	&lt;h1>header element&lt;/h1>
@@ -56,7 +57,7 @@
 					</header>
 				</article>
 			</div>
-			
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;article>
 	&lt;header>
@@ -64,7 +65,7 @@
 	&lt;/header>
 &lt;/article></code></pre>
 		</div>
-		
+
 		<div class="test">
 			<h2 class="test-title" id="hd-003">Test hd-003: Header with <code>aria-label</code></h2>
 
@@ -76,7 +77,7 @@
 					</header>
 				</article>
 			</div>
-			
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;article>
 	&lt;header <strong>aria-label="aria-label attribute"</strong>>
@@ -84,7 +85,7 @@
 	&lt;/header>
 &lt;/article></code></pre>
 		</div>
-		
+
 		<div class="test">
 			<h2 class="test-title" id="hd-004">Test hd-004: Header with <code>aria-labelledby</code></h2>
 
@@ -97,7 +98,7 @@
 					</header>
 				</article>
 			</div>
-			
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;article>
 	&lt;header <strong>aria-labelledby="hd-004-labelledby"</strong>>
@@ -106,7 +107,7 @@
 	&lt;/header>
 &lt;/article></code></pre>
 		</div>
-		
+
 		<div class="test">
 			<h2 class="test-title" id="hd-005">Test hd-005: Header with <code>title</code> attribute.</h2>
 
@@ -118,7 +119,7 @@
 					</header>
 				</article>
 			</div>
-			
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;article>
 	&lt;header title="title attribute">
@@ -126,12 +127,12 @@
 	&lt;/header>
 &lt;/article></code></pre>
 		</div>
-		
+
 		<div class="test">
 			<h2 class="test-title" id="hd-006">Test hd-006: header with <code>aria-describedby</code></h2>
 
 			<div class="test-case">
-				<article>				
+				<article>
 					<header aria-describedby="hd-006-describedby">
 						<h1 id="hd-006-describedby">h1 referenced by aria-describedby</h1>
 						<p>Aria-describedby should be used as accessible description.</p>
@@ -139,7 +140,7 @@
 					</header>
 				</article>
 			</div>
-			
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;article>
 	&lt;header <strong>aria-describedby="hd-006-describedby"</strong>>
@@ -148,7 +149,7 @@
 	&lt;/header>
 &lt;/article></code></pre>
 		</div>
-		
+
 		<div class="test">
 			<h2 class="test-title" id="hd-007">Test hd-007: header with <code>aria-label</code> &amp; <code>title</code> attributes</h2>
 
@@ -160,7 +161,7 @@
 					</header>
 				</article>
 			</div>
-			
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;article>
 	&lt;header <strong>aria-label="aria-label attribute" title="title attribute"</strong>>
@@ -175,9 +176,9 @@
 			var test = [],
 				el = document.getElementById('header1'),
 			    isSupported = (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
-			
+
 			test.push({id: "basic-criteria", pass: isSupported});
-			displaySupportResults(test);	
+			displaySupportResults(test);
 		</script>
 	</body>
 </html>

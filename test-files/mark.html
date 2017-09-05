@@ -3,7 +3,8 @@
 	<head>
 		<meta charset="utf-8">
 		<title>test file: mark element</title>
-		<link rel="stylesheet" href="../style/styles.css" />
+		<link rel="stylesheet" href="../style/styles.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	</head>
 	<body>
 		<h1><code>mark</code> element test</h1>
@@ -31,29 +32,29 @@
 		<div class="test">
 			<h2 class="test-title" id="mk-001">Test mk-001: Mark element</h2>
 
-			<div class="test-case">		
+			<div class="test-case">
 				<p><mark id="mark1">This text</mark> is marked as highlighted</p>
 			</div>
 
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;p>&lt;mark>This text&lt;/mark> is marked as highlighted&lt;/p></code></pre>
 		</div>
-		
+
 		<div class="test">
 			<h2 class="test-title" id="mk-002">Test mk-002: Mark element with <code>aria-label</code></h2>
 
-			<div class="test-case">		
+			<div class="test-case">
 				<p><mark aria-label="aria-label attribute">This text</mark> is marked as highlighted</p>
 			</div>
 
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;p>&lt;mark aria-label="aria-label attribute">This text&lt;/mark> is marked as highlighted&lt;/p></code></pre>
 		</div>
-		
+
 		<div class="test">
 			<h2 class="test-title" id="mk-003">Test mk-003: Mark element with <code>aria-labelledby</code></h2>
 
-			<div class="test-case">		
+			<div class="test-case">
 				<p><mark aria-labelledby="mk-003-labelledby">This text</mark> is marked as highlighted</p>
 				<span id="mk-003-labelledby">Element referenced by aria-labelledby attribute</span>
 			</div>
@@ -62,22 +63,22 @@
 			<pre><code>&lt;p>&lt;mark aria-labelledby="mk-003-labelledby">This text&lt;/mark> is marked as highlighted&lt;/p>
 &lt;span id="mk-003-labelledby">Element referenced by aria-labelledby attribute&lt;/span></code></pre>
 		</div>
-		
+
 		<div class="test">
 			<h2 class="test-title" id="mk-004">Test mk-004: Mark element with <code>title</code> attribute</h2>
 
-			<div class="test-case">		
+			<div class="test-case">
 				<p><mark title="title attribute">This text</mark> is marked as highlighted</p>
 			</div>
 
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;p>&lt;mark title="title attribute">This text&lt;/mark> is marked as highlighted&lt;/p></code></pre>
 		</div>
-		
+
 		<div class="test">
 			<h2 class="test-title" id="mk-005">Test mk-005: Mark element with <code>aria-describedby</code></h2>
 
-			<div class="test-case">		
+			<div class="test-case">
 				<p><mark aria-describedby="mk-005-describedby">This text</mark> is marked as highlighted</p>
 				<span id="mk-005-describedby">Element referenced by aria-describedby attribute</span>
 			</div>
@@ -86,11 +87,11 @@
 			<pre><code>&lt;p>&lt;mark aria-describedby="mk-005-describedby">This text&lt;/mark> is marked as highlighted&lt;/p>
 &lt;span id="mk-005-describedby">Element referenced by aria-describedby attribute&lt;/span></code></pre>
 		</div>
-		
+
 		<div class="test">
 			<h2 class="test-title" id="mk-006">Test mk-006: Mark element with <code>aria-label</code> &amp; <code>title</code> attributes</h2>
 
-			<div class="test-case">		
+			<div class="test-case">
 				<p><mark aria-label="aria-label attribute" title="title attribute">This text</mark> is marked as highlighted</p>
 			</div>
 
@@ -98,14 +99,14 @@
 			<pre><code>&lt;p>&lt;mark aria-label="aria-label attribute" title="title attribute">This text&lt;/mark> is marked as highlighted&lt;/p></code></pre>
 		</div>
 
-		<script src="../scripts/test-scripts.js"></script>		
+		<script src="../scripts/test-scripts.js"></script>
 		<script>
 			var test = [],
 				el = document.getElementById('mark1'),
 			    isSupported = (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
-			
+
 			test.push({id: "basic-criteria", pass: isSupported});
-			displaySupportResults(test);	
+			displaySupportResults(test);
 		</script>
 	</body>
 </html>

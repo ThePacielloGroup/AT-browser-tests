@@ -3,13 +3,18 @@
 	<head>
 		<meta charset="utf-8">
 		<title> Test file: video + track element</title>
-		<link rel="stylesheet" href="../style/styles.css" />
+		<link rel="stylesheet" href="../style/styles.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	</head>
 	<body>
-		<h1><code>video</code> + <code>track</code> element test</h1>
+		<h1>
+			<code>video</code> + <code>track</code> element test
+		</h1>
 		<div class="meta">
 			<div class="criteria">
-				<h2>Pass Criteria</h2>
+				<h2>
+					Pass Criteria
+				</h2>
 				<ul id="criteria-list">
 					<li id="basic-criteria">#1: Elements are supported</li>
 					<li>#2: Elements have correct HTML and Core Accessibility API mappings</li>
@@ -24,7 +29,9 @@
 			</div>
 
 			<div class="reference">
-				<h2>Reference</h2>
+				<h2>
+					Reference
+				</h2>
 				<ul>
 					<li><a href="http://www.w3.org/TR/html5/embedded-content-0.html#the-video-element">HTML5 video element</a></li>
 					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#el-video">HTML Accessibility API Mappings for video element</a></li>
@@ -44,7 +51,7 @@
 					<track id="track1" kind="captions" srclang="en" src="../video/subtitles-en.vtt" label="English" default>
 				</video>
 			</div>
-			
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;video id="video1" controls width="300" height="300">
 	&lt;source src="../video/ElephantsDream.mp4" type="video/mp4">
@@ -52,7 +59,7 @@
 	&lt;track kind="captions" srclang="en" src="../video/subtitles-en.vtt" label="English">
 &lt;/video></code></pre>
 		</div>
-		
+
 		<div class="test">
 			<h2 class="test-title" id="vd-002">Test vd-002: Video &amp; track elements with TTML subtitles</h2>
 
@@ -63,7 +70,7 @@
 					<track id="track1" kind="captions" srclang="en" src="../video/subtitles-en.ttml" label="English" default>
 				</video>
 			</div>
-			
+
 			<h3 class="code-title">Code</h3>
 			<pre><code>&lt;video id="video1" controls width="800">
 	&lt;source src="../video/ElephantsDream.mp4" type="video/mp4">
@@ -72,17 +79,17 @@
 &lt;/video></code></pre>
 		</div>
 
-		<script src="../scripts/test-scripts.js"></script>	
+		<script src="../scripts/test-scripts.js"></script>
 		<script>
 			var test = [],
 				el = document.getElementById('video1'),
-			    isSupported = (typeof HTMLVideoElement != 'undefined' 
+				isSupported = (typeof HTMLVideoElement != 'undefined'
 				               && el instanceof HTMLVideoElement && !!el.canPlayType);
-			
+
 			el = document.getElementById('track1'),
-			isSupported = isSupported && (typeof HTMLTrackElement != 'undefined' 
+			isSupported = isSupported && (typeof HTMLTrackElement != 'undefined'
 				           && el instanceof HTMLTrackElement && 'src' in el);
-			
+
 			test.push({id: "basic-criteria", pass: isSupported});
 			displaySupportResults(test);
 		</script>

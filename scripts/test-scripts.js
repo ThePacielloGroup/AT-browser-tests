@@ -18,9 +18,9 @@ var displaySupportResults = function(test) {
 		var criteriaItems = criteriaList.childNodes;
 		for (var i = 0; i < criteriaItems.length; i++) {
 			if (criteriaItems[i].nodeName === "LI") {
-						
+
 				for (var j = 0; j < test.length; j++) {
-					
+
 					// Browser support criteria check
 					if (criteriaItems[i].id === test[j].id) {
 						criteriaItems[i].className += " has-badge";
@@ -38,9 +38,7 @@ var displaySupportResults = function(test) {
 
 				// Add the appropriate badge to the list item
 				criteriaItems[i].innerHTML = "<span>" + criteriaItems[i].innerHTML + "</span> " + badge;
-
 			}
 		}
 	}
-
 };

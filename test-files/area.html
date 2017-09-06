@@ -3,58 +3,89 @@
 	<head>
 		<meta charset="utf-8">
 		<title>test file: area element with map attribute</title>
+		<link rel="stylesheet" href="../style/styles.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	</head>
 	<body>
-		<h1><code>area</code> element with <code>map</code> attribute</h1>
-		<p>
-			<img src="../images/seven_wonders.jpg" usemap="#imagemap"
-			     alt="Seven Wonders of the World"/>
-		</p>
+		<h1>
+			<code>area</code> element with <code>map</code> attribute
+		</h1>
 
-		<map name="imagemap">
-			<area href="Chichen_Itza.html" shape="rect" coords="0,0,93,65"
-			      alt="chichen Itza"/>
-			<area href="Christ_on_Corcovado_mountain.html" shape="rect" coords="93,1,186,65"
-			      alt="Christ on Corcovado Mountain"/>
-			<area href="great_wall_china.html" shape="rect" coords="0,66,94,132"
-			      alt="great wall of china"/>
-			<area href="Machu_Picchu.html" shape="rect" coords="92,64,186,132"
-			      alt="machu picchu"/>
-			<area href="Al_Kanzneh.html" shape="rect" coords="0,133,94,201"
-			      alt="al kanzneh"/>
-			<area href="Taj_Mahal.html" shape="rect" coords="92,134,186,203"
-			      alt="taj mahal"/>
-			<area href="Colosseum_Rome.html" shape="rect" coords="0,202,186,260"
-			      alt="colosseum Rome"/>
-		</map>
+		<div class="meta">
+			<div class="criteria">
+				<h2>
+					Pass Criteria
+				</h2>
+				<ul id="criteria-list">
+					<li id="basic-criteria">#1: Element is supported</li>
+					<li>#2: Correct HTML and Core Accessibility API mappings</li>
+					<li>#3: Correct Accessible Name &amp; Description Calculation</li>
+				</ul>
+			</div>
 
-		<h2>Code</h2>
-		<pre><code>&lt;img src="../images/seven_wonders.jpg" usemap="#imagemap"
-     alt="Seven Wonders of the World">
+			<div class="reference">
+				<h2>
+					Reference
+				</h2>
+				<ul>
+					<li><a href="https://www.w3.org/TR/html51/semantics.html#the-area-element">HTML5 <code>area</code> element</a>
+				</li>
+					<li>
+						<a href="https://w3c.github.io/html-aam/#el-area">HTML Accessibility API Mappings for <code>area</code> element</a>
+					</li>
+					<li>
+						<a href="https://www.w3.org/TR/core-aam-1.1/#role-map-link">Core Accessibility API Mappings for <code>link</code> role</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/html-aam/#el-area-nohref">HTML Accessibility API Mappings for  <code>area</code> element without <code>href</code></a>
+					</li>
+				</ul>
+			</div>
+		</div>
 
-&lt;map name="imagemap">
-	&lt;area href="Chichen_Itza.html" shape="rect" coords="0,0,93,65"
-	      alt="chichen Itza">
-	&lt;area href="Christ_on_Corcovado_mountain.html" shape="rect" coords="93,1,186,65"
-	      alt="Christ on Corcovado Mountain">
-	&lt;area href="great_wall_china.html" shape="rect" coords="0,66,94,132"
-	      alt="great wall of china">
-	&lt;area href="Machu_Picchu.html" shape="rect" coords="92,64,186,132"
-	      alt="machu picchu">
-	&lt;area href="Al_Kanzneh.html" shape="rect" coords="0,133,94,201"
-	      alt="al kanzneh">
-	&lt;area href="Taj_Mahal.html" shape="rect" coords="92,134,186,203"
-	      alt="taj mahal">
-	&lt;area href="Colosseum_Rome.html" shape="rect" coords="0,202,186,260"
-	      alt="colosseum Rome"> <br>
-&lt;/map></code></pre>
 
-		<h2>Reference</h2>
-		<ul>
-			<li><a href="https://www.w3.org/TR/html51/semantics.html#the-area-element">HTML5 area element</a></li>
-			<li><a href="https://w3c.github.io/html-aam/#el-area">HTML Accessibility API Mappings for area element</a></li>
-			<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-link">Core Accessibility API Mappings for link role</a></li>
-			<li><a href="https://w3c.github.io/html-aam/#el-area-nohref">HTML Accessibility API Mappings for area element without href</a></li>
-		</ul>
+		<div class="test">
+			<h2 class="test-title" id="ar-001">
+				Test ar-001: <code>area</code> element
+			</h2>
+
+			<div class="test-case">
+<p>
+	<img src="../images/seven_wonders.jpg" usemap="#imagemap"
+			 alt="Seven Wonders of the World"/>
+</p>
+
+<map name="imagemap">
+	<area id="ar-01"
+				href="Chichen_Itza.html" shape="rect" coords="0,0,93,65"
+				alt="chichen Itza"/>
+	<area href="Christ_on_Corcovado_mountain.html" shape="rect" coords="93,1,186,65"
+				alt="Christ on Corcovado Mountain"/>
+	<area href="great_wall_china.html" shape="rect" coords="0,66,94,132"
+				alt="great wall of china"/>
+	<area href="Machu_Picchu.html" shape="rect" coords="92,64,186,132"
+				alt="machu picchu"/>
+	<area href="Al_Kanzneh.html" shape="rect" coords="0,133,94,201"
+				alt="al kanzneh"/>
+	<area href="Taj_Mahal.html" shape="rect" coords="92,134,186,203"
+				alt="taj mahal"/>
+	<area href="Colosseum_Rome.html" shape="rect" coords="0,202,186,260"
+				alt="colosseum Rome"/>
+</map>
+			</div>
+		</div>
+
+
+		<script src="../scripts/test-scripts.js"></script>
+		<script>
+			var test = [];
+			var el = document.getElementById('ar-01');
+			var isSupported = (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
+			test.push({
+				id: "basic-criteria",
+				pass: isSupported
+			});
+			displaySupportResults(test);
+		</script>
 	</body>
 </html>

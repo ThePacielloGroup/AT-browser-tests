@@ -7,11 +7,11 @@
 var displaySupportResults = function(test) {
 
 	// This ID must be on the criteria list
-	var criteriaList = document.getElementById("criteria-list"),
-		badge = null,
-		successBadge = '<span class="badge-success">Supported</span>',
-		failureBadge = '<span class="badge-failure">Not supported</span>',
-		manualBadge = '<span class="badge-manual">(Manually test)</span>';
+	var criteriaList = document.getElementById("criteria-list");
+	var badge = null;
+	var successBadge = '<span class="badge-success">Supported</span>';
+	var failureBadge = '<span class="badge-failure">Not supported</span>';
+	var manualBadge = '<span class="badge-manual">(Manually test)</span>';
 
 	// Look through criteria list items to get appropriate badges
 	if (criteriaList && criteriaList.hasChildNodes) {
@@ -42,3 +42,54 @@ var displaySupportResults = function(test) {
 		}
 	}
 };
+
+/**
+ * Function to get characters from a string
+ * and replace them with escaped characters
+ * for fancy code printing
+ */
+function escapeHtml ( text ) {
+
+	var map = {
+		'&': '&amp;',
+		'<': '&lt;',
+		'>': '&gt;',
+		'"': '&quot;',
+		"'": '&#039;'
+	};
+
+	return text.replace(/[&<>"']/g, function ( m ) {
+		return map[m];
+	});
+}
+
+
+/**
+ * Parse test code to copy and reprint inside of
+ * generated pre/code blocks
+ */
+var copyTest = function ( doc ) {
+
+	// get each test-case and copy the markup to be
+	// printed as a code block
+	var tests = doc.querySelectorAll('.test');
+
+	for ( var i = 0; i < tests.length; i++ ) {
+		var codeHeading = doc.createElement('h3');
+		var codePre = doc.createElement('pre');
+		codePre.innerHTML = '<code class="code-block"></code>';
+		codeHeading.classList.add('code-title');
+		codeHeading.innerHTML = "Code";
+		tests[i].append(codeHeading);
+		tests[i].append(codePre);
+
+		// after creating the code block, get the test-case
+		// code and re-print inside of it.
+		var codeBlock = tests[i].querySelector('.code-block');
+		var getCode = tests[i].querySelector('.test-case').innerHTML;
+
+		codeBlock.innerHTML = escapeHtml(getCode).trim();
+	}
+}
+// run!
+copyTest( document );

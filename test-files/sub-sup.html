@@ -3,27 +3,80 @@
 	<head>
 		<meta charset="utf-8">
 		<title>test file: sub+sup elements</title>
+		<link rel="stylesheet" href="../style/styles.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	</head>
 	<body>
-		<h1><code>sub+sup</code> elements</h1>
+		<h1>
+			<code>sub+sup</code> element
+		</h1>
 
-		<h2>sub</h2>
-		<p>H<sub>2</sub>0 - Water
-		<p>O<sub>2</sub> - Oxygen
-		<p>CO<sub>2</sub> - Carbon Dioxide
+		<div class="meta">
+			<div class="criteria">
+				<h2>
+					Pass Criteria
+				</h2>
+				<ul id="criteria-list">
+					<li id="basic-criteria">#1: Elements are supported</li>
+					<li>#2: Correct HTML and Core Accessibility API mappings</li>
+					<li>#3: Correct Accessible Name &amp; Description Calculation</li>
+				</ul>
+			</div>
 
-		<h2>sup</h2>
-		<p>HTML5 was published as a Recommendation on the 28<sup>th</sup> of October 2014. </p>
+			<div class="reference">
+				<h2>
+					Reference
+				</h2>
+				<ul>
+					<li>
+						<a href="https://www.w3.org/TR/html51/semantics.html#the-sub-and-sup-elements">HTML5 <code>sub</code> and <code>sup</code> elements</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/html-aam/#el-sub">HTML Accessibility API Mappings for <code>sub</code> element</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/html-aam/#el-sup">HTML Accessibility API Mappings for <code>sup</code> element</a>
+					</li>
+				</ul>
+			</div>
+		</div>
 
-		<h2>Code</h2>
-		<pre><code>&lt;p>H&lt;sub>2&lt;/sub>0 - Water&lt;/p></code></pre>
-		<pre><code>&lt;p>HTML5 was published as a Recommendation on the 28&lt;sup>th&lt;/sup> of October 2014. &lt;/p></code></pre>
 
-		<h2>Reference</h2>
-		<ul>
-			<li><a href="https://www.w3.org/TR/html51/semantics.html#the-sub-and-sup-elements">HTML5 sub and sup elements</a></li>
-			<li><a href="https://w3c.github.io/html-aam/#el-sub">HTML Accessibility API Mappings for sub element</a></li>
-			<li><a href="https://w3c.github.io/html-aam/#el-sup">HTML Accessibility API Mappings for sup element</a></li>
-		</ul>
+		<div class="test">
+			<h2 class="test-title" id="ss-001">
+				Test ss-001: <code>sub</code> element
+			</h2>
+
+			<div class="test-case">
+<p>H<sub id="ss-01">2</sub>0 - Water
+<p>O<sub>2</sub> - Oxygen
+<p>CO<sub>2</sub> - Carbon Dioxide
+			</div>
+		</div>
+
+		<div class="test">
+			<h2 class="test-title">
+				Test ss-002: <code>sup</code> element
+			</h2>
+
+			<div class="test-case">
+<p>
+	HTML5 was published as a Recommendation on the 28<sup id="ss-02">th</sup> of October 2014.
+</p>
+			</div>
+		</div>
+
+
+		<script src="../scripts/test-scripts.js"></script>
+		<script>
+			var test = [];
+			var el = document.getElementById('ss-01');
+			var isSupported = (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
+			test.push({
+				id: "basic-criteria",
+				pass: isSupported
+			});
+			displaySupportResults(test);
+		</script>
 	</body>
 </html>

@@ -7,7 +7,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	</head>
 	<body>
-		<h1><code>section</code> element test</h1>
+		<h1>
+			<code>section</code> element test
+		</h1>
 		<div class="meta">
 			<div class="criteria">
 				<h2>Pass Criteria</h2>
@@ -34,118 +36,92 @@
 			<h2 class="test-title" id="sc-001">Test sc-001: Plain Section</h2>
 
 			<div class="test-case">
-				<section id="section1">
-					Lorem ipsum...
-				</section>
-			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;section>
+<section id="section1">
 	Lorem ipsum...
-&lt;/section></code></pre>
+</section>
+			</div>
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="sc-002">Test sc-002: Section with <code>&lt;h1></code></h2>
+			<h2 class="test-title" id="sc-002">
+				Test sc-002: <code>section</code> with <code>&lt;h2></code>
+			</h2>
 
 			<div class="test-case">
-				<section>
-					<h1>Once upon a time</h1>
-					Lorem ipsum...
-				</section>
-			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;section>
-	&lt;h1>Once upon a time&lt;/h1>
+<section>
+	<h2>Once upon a time</h2>
 	Lorem ipsum...
-&lt;/section></code></pre>
+</section>
+			</div>
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="sc-003">Test sc-003: Section with <code>aria-label</code></h2>
+			<h2 class="test-title" id="sc-003">
+				Test sc-003: <code>section</code> with <code>aria-label</code>
+			</h2>
 
 			<div class="test-case">
-				<section aria-label="aria-label attribute">
-					<p>Aria-label should be used as accessible name.</p>
-					<p>No accessible description.</p>
-				</section>
+<section aria-label="aria-label attribute">
+	<p><code>aria-label</code> should be used as accessible name.</p>
+	<p>No accessible description.</p>
+</section>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;section <strong>aria-label="aria-label attribute"</strong>>
-	&lt;p>Aria-label should be used as accessible name.&lt;/p>
-&lt;/section></code></pre>
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="sc-004">Test sc-004: Section with <code>aria-labelledby</code></h2>
+			<h2 class="test-title" id="sc-004">
+				Test sc-004: <code>section</code> with <code>aria-labelledby</code>
+			</h2>
 
 			<div class="test-case">
-				<section aria-labelledby="sc-004-labelledby">
-					<h1 id="sc-004-labelledby">h1 referenced by aria-labelledby</h1>
-					<p>Aria-labelledby should be used as accessible name.</p>
-					<p>No accessible description.</p>
-				</section>
+<section aria-labelledby="sc-004-labelledby">
+	<h2 id="sc-004-labelledby">h2 referenced by <code>aria-labelledby</code></h2>
+	<p><code>aria-labelledby</code> should be used as accessible name.</p>
+	<p>No accessible description.</p>
+</section>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-
-			<pre><code>&lt;section <strong>aria-labelledby="sc-004-labelledby"</strong>>
-	&lt;h1 <strong>id="sc-004-labelledby"</strong>>h1 referenced by aria-labelledby&lt;/h1>
-	&lt;p>Aria-labelledby should be used as accessible name.&lt;/p>
-&lt;/section></code></pre>
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="sc-005">Test sc-005: Section with <code>title</code> attribute</h2>
+			<h2 class="test-title" id="sc-005">
+				Test sc-005: <code>section</code> with <code>title</code> attribute
+			</h2>
 
 			<div class="test-case">
-				<section title="title attribute">
-					<p>Title should be used as accessible name.</p>
-					<p>No accessible description.</p>
-				</section>
+<section title="title attribute">
+	<p>Title should be used as accessible name.</p>
+	<p>No accessible description.</p>
+</section>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;section <strong>title="title attribute"</strong>>
-	&lt;p>Title should be used as accessible name.&lt;/p>
-&lt;/section></code></pre>
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="sc-006">Test sc-006: Section with <code>aria-describedby</code></h2>
+			<h2 class="test-title" id="sc-006">
+				Test sc-006: <code>section</code> with <code>aria-describedby</code>
+			</h2>
 
 			<div class="test-case">
-				<section aria-describedby="sc-006-describedby">
-					<h1 id="sc-006-describedby">h1 referenced by aria-describedby</h1>
-					<p>Aria-describedby should be used as accessible description.</p>
-					<p>No accessible name.</p>
-				</section>
+<section aria-describedby="sc-006-describedby">
+	<h2 id="sc-006-describedby">h2 referenced by <code>aria-describedby</code></h2>
+	<p><code>aria-describedby</code> should be used as accessible description.</p>
+	<p>No accessible name.</p>
+</section>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;section <strong>aria-describedby="sc-006-describedby"</strong>>
-	&lt;h1 <strong>id="sc-006-describedby"</strong>>h1 referenced by aria-describedby&lt;/h1>
-	&lt;p>Aria-describedby should be used as accessible description.&lt;/p>
-&lt;/section></code></pre>
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="sc-007">Test sc-007: section with <code>aria-label</code> &amp; <code>title</code> attributes</h2>
+			<h2 class="test-title" id="sc-007">
+				Test sc-007: <code>section</code>
+				with <code>aria-label</code>
+				&amp; <code>title</code> attributes
+			</h2>
 
 			<div class="test-case">
-				<section aria-label="aria-label attribute" title="title attribute">
-					<p>Aria-label should be used as accessible name.</p>
-					<p>Title should be used as accessible description.</p>
-				</section>
+<section aria-label="aria-label attribute" title="title attribute">
+	<p>Aria-label should be used as accessible name.</p>
+	<p>Title should be used as accessible description.</p>
+</section>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;section <strong>aria-label="aria-label attribute" title="title attribute"</strong>>
-	&lt;p>Aria-label should be used as accessible name.&lt;/p>
-	&lt;p>Title should be used as accessible description.&lt;/p>
-&lt;/section></code></pre>
 		</div>
 
 		<script src="../scripts/test-scripts.js"></script>

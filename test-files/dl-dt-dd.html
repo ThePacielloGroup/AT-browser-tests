@@ -2,34 +2,82 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>test file: dl element, dt element and dd element</title>
+		<title>test file: dl, dt and dd elements</title>
+		<link rel="stylesheet" href="../style/styles.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	</head>
 	<body>
-		<h1><code>dl</code> element, <code>dt</code> element and <code>dd</code> element</h1>
-		<dl>
-			<dt>HTML</dt>
-			<dd>HTML is the markup language used to give content structure.</dd>
-			<dt>CSS</dt>
-			<dd>CSS is the language used to add a creative layer on top of HTML.</dd>
-		</dl>
+		<h1>
+			<code>dl</code>, <code>dt</code> and <code>dd</code> elements
+		</h1>
 
-		<h2>Code</h2>
-		<pre><code>&lt;dl>
-	&lt;dt>HTML&lt;/dt>
-	&lt;dd>HTML is the markup language used to give content structure.&lt;/dd>
-	&lt;dt>CSS&lt;/dt>
-	&lt;dd>CSS is the language used to add a creative layer on top of HTML.&lt;/dd>
-&lt;/dl></code></pre>
+		<div class="meta">
+			<div class="criteria">
+				<h2>
+					Pass Criteria
+				</h2>
+				<ul id="criteria-list">
+					<li id="basic-criteria">#1: Element is supported</li>
+					<li>#2: Correct HTML and Core Accessibility API mappings</li>
+					<li>#3: Correct Accessible Name &amp; Description Calculation</li>
+				</ul>
+			</div>
 
-		<h2>Reference</h2>
-		<ul>
-			<li><a href="http://www.w3.org/TR/html/grouping-content.html#the-dl-element">HTML5 dl element</a></li>
-			<li><a href="https://w3c.github.io/html-aam/#el-dl">HTML Accessibility API Mappings for dl element</a></li>
-			<li><a href="http://www.w3.org/TR/html/grouping-content.html#the-dt-element">HTML5 dt element</a></li>
-			<li><a href="https://w3c.github.io/html-aam/#el-dt">HTML Accessibility API Mappings for dt element</a></li>
-			<li><a href="http://www.w3.org/TR/html/grouping-content.html#the-dd-element">HTML5 dd element</a></li>
-			<li><a href="https://w3c.github.io/html-aam/#el-dd">HTML Accessibility API Mappings for dd element</a></li>
-			<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-definition">Core Accessibility API Mappings for definition role</a></li>
-		</ul>
+			<div class="reference">
+				<h2>
+					Reference
+				</h2>
+				<ul>
+					<li>
+						<a href="http://www.w3.org/TR/html/grouping-content.html#the-dl-element">HTML5 <code>dl</code> element</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/html-aam/#el-dl">HTML Accessibility API Mappings for <code>dl</code> element</a>
+					</li>
+					<li>
+						<a href="http://www.w3.org/TR/html/grouping-content.html#the-dt-element">HTML5 <code>dt</code> element</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/html-aam/#el-dt">HTML Accessibility API Mappings for <code>dt</code> element</a>
+					</li>
+					<li>
+						<a href="http://www.w3.org/TR/html/grouping-content.html#the-dd-element">HTML5 <code>dd</code> element</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/html-aam/#el-dd">HTML Accessibility API Mappings for <code>dd</code> element</a>
+					</li>
+					<li>
+						<a href="https://www.w3.org/TR/core-aam-1.1/#role-map-definition">Core Accessibility API Mappings for <code>definition</code> role</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+
+		<div class="test">
+			<h2 class="test-title" id="dl-001">
+				Test dl-001: <code>dl</code>, <code>dd</code>, and <code>dt</code> elements
+			</h2>
+
+			<div class="test-case">
+<dl id="dl-01">
+	<dt id="dt-01">HTML</dt>
+	<dd id="dd-01">HTML is the markup language used to give content structure.</dd>
+	<dt>CSS</dt>
+	<dd>CSS is the language used to add a creative layer on top of HTML.</dd>
+</dl>
+			</div>
+		</div>
+
+
+		<script src="../scripts/test-scripts.js"></script>
+		<script>
+			var test = [];
+			var el = document.getElementById('dl-01');
+			var isSupported = (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
+
+			test.push({id: "basic-criteria", pass: isSupported});
+			displaySupportResults(test);
+		</script>
 	</body>
 </html>

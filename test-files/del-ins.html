@@ -2,23 +2,83 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>test file: del element and ins element</title>
+		<title>test file: del and ins elements</title>
+		<link rel="stylesheet" href="../style/styles.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	</head>
 	<body>
-		<h1><code>del</code> element and <code>ins</code> element</h1>
-		<p><del>This text is deleted.</del></p>
-		<p><ins>This text is inserted.</ins></p>
+		<h1>
+			<code>del</code> &amp; <code>ins</code> elements
+		</h1>
 
-		<h2>Code</h2>
-		<pre><code>&lt;p>&lt;del>This text is deleted.&lt;/del>&lt;/p>
-&lt;p>&lt;ins>This text is inserted.&lt;/ins>&lt;/p></code></pre>
+		<div class="meta">
+			<div class="criteria">
+				<h2>
+					Pass Criteria
+				</h2>
+				<ul id="criteria-list">
+					<li id="basic-criteria">#1: Element is supported</li>
+					<li>#2: Correct HTML and Core Accessibility API mappings</li>
+					<li>#3: Correct Accessible Name &amp; Description Calculation</li>
+				</ul>
+			</div>
 
-		<h2>Reference</h2>
-		<ul>
-			<li><a href="http://www.w3.org/TR/html/edits.html#the-del-element">HTML5 del element</a></li>
-			<li><a href="https://w3c.github.io/html-aam/#el-del">HTML Accessibility API Mappings for del element</a></li>
-			<li><a href="http://www.w3.org/TR/html/edits.html#the-ins-element">HTML5 ins element</a></li>
-			<li><a href="https://w3c.github.io/html-aam/#el-ins">HTML Accessibility API Mappings for ins element</a></li>
-		</ul>
+			<div class="reference">
+				<h2>
+					Reference
+				</h2>
+				<ul>
+					<li>
+						<a href="http://www.w3.org/TR/html/edits.html#the-del-element">HTML5 <code>del</code> element</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/html-aam/#el-del">HTML Accessibility API Mappings for <code>del</code> element</a>
+					</li>
+					<li>
+						<a href="http://www.w3.org/TR/html/edits.html#the-ins-element">HTML5 <code>ins</code> element</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/html-aam/#el-ins">HTML Accessibility API Mappings for <code>ins</code> element</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+
+		<div class="test">
+			<h2 class="test-title" id="del-001">
+				Test del-001: <code>div</code> element
+			</h2>
+
+			<div class="test-case">
+<p>
+	<del id="del-01">This text is deleted.</del>
+</p>
+			</div>
+		</div>
+
+
+		<div class="test">
+			<h2 class="test-title" id="ins-001">
+				Test ins-001: <code>div</code> element
+			</h2>
+
+			<div class="test-case">
+<p>
+	<ins id="ins-01">This text is inserted.</ins>
+</p>
+			</div>
+		</div>
+
+
+		<script src="../scripts/test-scripts.js"></script>
+		<script>
+			var test = [];
+			var el = document.getElementById('del-01');
+			var isSupported = (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
+
+			test.push({id: "basic-criteria", pass: isSupported});
+			displaySupportResults(test);
+		</script>
 	</body>
 </html>

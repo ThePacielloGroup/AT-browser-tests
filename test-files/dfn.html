@@ -2,19 +2,66 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>test file: header element</title>
+		<title>test file: dfn element</title>
+		<link rel="stylesheet" href="../style/styles.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	</head>
 	<body>
-		<h1><code>dfn</code> element</h1>
-		<p><dfn id="def-internet">The Internet</dfn> is a global system of interconnected networks that use the Internet Protocol Suite (TCP/IP) to serve billions of users worldwide.</p>
+		<h1>
+			<code>dfn</code> element
+		</h1>
 
-		<h2>Code</h2>
-		<pre data-number=""><code>&lt;p>&lt;dfn id="def-internet">The Internet&lt;/dfn> is a global system of interconnected networks that use the Internet Protocol Suite (TCP/IP) to serve billions of users worldwide.&lt;/p></code></pre>
+		<div class="meta">
+			<div class="criteria">
+				<h2>
+					Pass Criteria
+				</h2>
+				<ul id="criteria-list">
+					<li id="basic-criteria">#1: Element is supported</li>
+					<li>#2: Correct HTML and Core Accessibility API mappings</li>
+					<li>#3: Correct Accessible Name &amp; Description Calculation</li>
+				</ul>
+			</div>
 
-		<h2>Reference</h2>
-		<ul>
-			<li><a href="http://www.w3.org/TR/html/text-level-semantics.html#the-dfn-element">HTML5 dfn element</a></li>
-			<li><a href="https://w3c.github.io/html-aam/#el-dfn">HTML Accessibility API Mappings for dfn element</a></li>
-		</ul>
+			<div class="reference">
+				<h2>
+					Reference
+				</h2>
+				<ul>
+					<li>
+						<a href="http://www.w3.org/TR/html5/text-level-semantics.html#the-dfn-element">HTML5 <code>dfn</code> element</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/html-aam/#el-dfn">HTML Accessibility API Mappings for <code>dfn</code> element</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+
+		<div class="test">
+			<h2 class="test-title" id="dfn-001">
+				Test dfn-001: <code>dfn</code> element
+			</h2>
+
+			<div class="test-case">
+<p>
+	<dfn id="def-internet">The Internet</dfn>
+	is a global system of interconnected networks that use the
+	Internet Protocol Suite (TCP/IP) to serve billions of users worldwide.
+</p>
+			</div>
+		</div>
+
+
+		<script src="../scripts/test-scripts.js"></script>
+		<script>
+			var test = [];
+			var el = document.getElementById('def-internet');
+			var isSupported = (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
+
+			test.push({id: "basic-criteria", pass: isSupported});
+			displaySupportResults(test);
+		</script>
 	</body>
 </html>

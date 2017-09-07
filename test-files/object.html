@@ -2,22 +2,74 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title> 3: object element</title>
+		<title>test file: e element</title>
+		<link rel="stylesheet" href="../style/styles.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	</head>
 	<body>
-		<h1><code>object</code> element</h1>
-		<p><object data="../images/circle.svg" type="image/svg+xml">fallback text</object></p>
+		<h1>
+			<code>object</code> element
+		</h1>
 
-		<h2>broken data source </h2>
-		<p><object data="circle.svg" type="image/svg+xml">fallback text</object></p>
+		<div class="meta">
+			<div class="criteria">
+				<h2>
+					Pass Criteria
+				</h2>
+				<ul id="criteria-list">
+					<li id="basic-criteria">#1: Element is supported</li>
+					<li>#2: Correct HTML and Core Accessibility API mappings</li>
+					<li>#3: Correct Accessible Name &amp; Description Calculation</li>
+				</ul>
+			</div>
 
-		<h2>Code</h2>
-		<pre><code>&lt;object data="test.svg" type="image/svg+xml">fallback text&lt;/object></code></pre>
+			<div class="reference">
+				<h2>
+					Reference
+				</h2>
+				<ul>
+					<li>
+						<a href="http://www.w3.org/TR/html5/text-level-semantics.html#the-object-element">HTML5 <code>object</code> element</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/html-aam/#el-object">HTML Accessibility API Mappings for <code>object</code> element</a>
+					</li>
+				</ul>
+			</div>
+		</div>
 
-		<h2>Reference</h2>
-		<ul>
-			<li><a href="http://www.w3.org/TR/html5/embedded-content-0.html#the-object-element">HTML5 object element</a></li>
-			<li><a href="https://w3c.github.io/html-aam/#el-object">HTML Accessibility API Mappings for object element</a></li>
-		</ul>
+
+		<div class="test">
+			<h2 class="test-title" id="obj-001">
+				Test obj-001: <code>object</code> element
+			</h2>
+
+			<div class="test-case">
+<object id="obj-01" data="../images/circle.svg" type="image/svg+xml">fallback text</object>
+			</div>
+		</div>
+
+
+		<div class="test">
+			<h2 class="test-title" id="obj-002">
+				Test obj-002: <code>object</code> element
+				with broken data source
+			</h2>
+
+			<div class="test-case">
+<object data="circle.svg" type="image/svg+xml">fallback text</object>
+			</div>
+		</div>
+
+
+		<script src="../scripts/test-scripts.js"></script>
+		<script>
+			var test = [];
+			var el = document.getElementById('obj-01');
+			var isSupported = (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
+
+			test.push({id: "basic-criteria", pass: isSupported});
+			displaySupportResults(test);
+		</script>
 	</body>
 </html>

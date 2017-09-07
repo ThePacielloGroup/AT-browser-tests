@@ -3,22 +3,76 @@
 	<head>
 		<meta charset="utf-8">
 		<title>test file: img element with alt attribute</title>
+		<link rel="stylesheet" href="../style/styles.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	</head>
 	<body>
-		<h1><code>img</code> element with <code>alt</code> attribute</h1>
-		<p><img src="../images/HTML5_Logo.png" alt="HTML5 logo" width="128" height="128"></p>
+		<h1>
+			<code>img</code> element with <code>alt</code> attribute
+		</h1>
 
-		<h2>Code</h2>
-		<pre><code>&lt;img src="HTML5_Logo.png" alt="HTML5 logo" width="128" height="128"></code></pre>
+		<div class="meta">
+			<div class="criteria">
+				<h2>
+					Pass Criteria
+				</h2>
+				<ul id="criteria-list">
+					<li id="basic-criteria">#1: Element is supported</li>
+					<li>#2: Correct HTML and Core Accessibility API mappings</li>
+					<li>#3: Correct Accessible Name &amp; Description Calculation</li>
+				</ul>
+			</div>
 
-		<h2>Reference</h2>
-		<ul>
-			<li><a href="http://www.w3.org/TR/html/embedded-content-0.html#the-img-element">HTML5 img element</a>
-			<li><a href="https://w3c.github.io/html-aam/#el-img-emptyalt">HTML Accessibility API Mappings for img element without alt attribute</a></li>
-			<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-presentation">Core Accessibility API Mappings for presentation role</a></li>
-			<li><a href="http://www.w3.org/TR/html/embedded-content-0.html#attr-img-alt">HTML5 alt attribute</a></li>
-			<li><a href="https://w3c.github.io/html-aam/#el-img">HTML Accessibility API Mappings for img element with alt attribute</a></li>
-			<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-img">Core Accessibility API Mappings for img role</a></li>
-		</ul>
+			<div class="reference">
+				<h2>
+					Reference
+				</h2>
+				<ul>
+					<li>
+						<a href="http://www.w3.org/TR/html/embedded-content-0.html#the-img-element">HTML5 <code>img</code> element</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/html-aam/#el-img-emptyalt">HTML Accessibility API Mappings for <code>img</code> element without alt attribute</a>
+					</li>
+					<li>
+						<a href="https://www.w3.org/TR/core-aam-1.1/#role-map-presentation">Core Accessibility API Mappings for presentation role</a>
+					</li>
+					<li>
+						<a href="http://www.w3.org/TR/html/embedded-content-0.html#attr-img-alt">HTML5 alt attribute</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/html-aam/#el-img">HTML Accessibility API Mappings for <code>img</code> element with <code>alt</code> attribute</a>
+					</li>
+					<li>
+						<a href="https://www.w3.org/TR/core-aam-1.1/#role-map-img">Core Accessibility API Mappings for <code>img</code> role</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+
+		<div class="test">
+			<h2 class="test-title" id="img-001">
+				Test img-001: <code>img</code> element with <code>alt</code> attribute
+			</h2>
+
+			<div class="test-case">
+<img src="../images/HTML5_Logo.png"
+	id="img-01"
+	alt="HTML5 logo"
+	style="width: 128px; height: 128px;">
+			</div>
+		</div>
+
+
+		<script src="../scripts/test-scripts.js"></script>
+		<script>
+			var test = [];
+			var el = document.getElementById('img-01');
+			var isSupported = (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
+
+			test.push({id: "basic-criteria", pass: isSupported});
+			displaySupportResults(test);
+		</script>
 	</body>
 </html>

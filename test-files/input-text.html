@@ -2,42 +2,213 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>test file: input type text element</title>
+		<title>test file: input type=text element</title>
+		<link rel="stylesheet" href="../style/styles.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	</head>
 	<body>
-		<h1><code>input type=text</code> element</h1>
+		<h1>
+			<code>input type=text</code> element
+		</h1>
+
+		<div class="meta">
+			<div class="criteria">
+				<h2>
+					Pass Criteria
+				</h2>
+				<ul id="criteria-list">
+					<li id="basic-criteria">#1: Element is supported</li>
+					<li>#2: Correct HTML and Core Accessibility API mappings</li>
+					<li>#3: Correct Accessible Name &amp; Description Calculation</li>
+				</ul>
+			</div>
+
+			<div class="reference">
+				<h2>
+					Reference
+				</h2>
+				<ul>
+					<li>
+						<a href="http://www.w3.org/TR/html/forms.html#text-%28type=text%29-state-and-search-state-%28type=search%29">HTML5 <code>input type=text</code> element</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/html-aam/#el-input-text">HTML Accessibility API Mappings for <code>input type=text</code> element without list attribute</a>
+					</li>
+					<li>
+						<a href="https://www.w3.org/TR/core-aam-1.1/#role-map-textbox">Core Accessibility API Mappings for <code>textbox</code> role</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/html-aam/#el-input-textetc-autocomplete">HTML Accessibility API Mappings for <code>input type=text</code> element with list attribute</a>
+					</li>
+					<li>
+						<a href="https://www.w3.org/TR/core-aam-1.1/#role-map-combobox">Core Accessibility API Mappings for <code>combobox</code> role</a>
+					</li>
+					<li>
+						<a href="https://www.w3.org/TR/core-aam-1.1/#ariaOwns">Core Accessibility API Mappings for <code>aria-owns</code> property</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
 		<form>
-			<p><input id="input1" type="text"></p>
+			<div class="test">
+				<h2 class="test-title" id="itext-001">
+					Test itext-001: <code>input type=text</code> element
+				</h2>
 
-			<h2>with label </h2>
-			<p><label>name <input id="input2" type="text"></label></p>
+				<div class="test-case">
+<input id="itext-01" type="text">
+				</div>
+			</div>
 
-			<h2>with label + placeholder</h2>
-			<p><label>name <input id="input3" type="text" placeholder="first name"></label></p>
 
-			<h2>with label + placeholder + required</h2>
-			<p><label>name <input id="input4" type="text" placeholder="first name" required></label></p>
+			<div class="test">
+				<h2 class="test-title" id="itext-002">
+					Test itext-002: <code>input</code> element without
+					a set <code>type</code> attribute
+				</h2>
 
-			<h2>with label + placeholder + readonly</h2>
-			<p><label>name <input id="input5" type="text" placeholder="first name" readonly></label></p>
+				<div class="test-case">
+<input id="itext-02">
+				</div>
+			</div>
 
-			<h2>with label + placeholder + disabled</h2>
-			<p><label>name <input id="input6" type="text" placeholder="first name" disabled></label></p>
 
-			<input type="submit">
+			<div class="test">
+				<h2 class="test-title" id="itext-003">
+					Test itext-003: <code>input</code> element
+					with implicit <code>label</code>
+				</h2>
+
+				<div class="test-case">
+<label>
+	Name
+	<input id="itext-03" type="text">
+</label>
+				</div>
+			</div>
+
+
+			<div class="test">
+				<h2 class="test-title" id="itext-004">
+					Test itext-004: <code>input</code> element
+					with explicit <code>label</code>
+				</h2>
+
+				<div class="test-case">
+<label for="itext-04">
+	Name
+</label>
+<input id="itext-04" type="text">
+				</div>
+			</div>
+
+
+			<div class="test">
+				<h2 class="test-title" id="itext-005">
+					Test itext-005: <code>input</code> element
+					with explicit <code>label</code>
+					&amp; <code>placeholder</code>
+				</h2>
+
+				<div class="test-case">
+<label for="itext-05">
+	Name
+</label>
+<input id="itext-05" type="text" placeholder="e.g. Jane Smith">
+				</div>
+			</div>
+
+
+			<div class="test">
+				<h2 class="test-title" id="itext-007">
+					Test itext-006: <code>input</code> element
+					with explicit <code>label</code>,
+					<code>placeholder</code>,
+					&amp; <code>required</code> attribute
+				</h2>
+
+				<div class="test-case">
+<label for="itext-06">
+	Name
+</label>
+<input id="itext-06" type="text" placeholder="e.g. Jon Smith" required>
+				</div>
+			</div>
+
+
+			<div class="test">
+				<h2 class="test-title" id="itext-007">
+					Test itext-007: <code>input</code> element
+					with explicit <code>label</code>,
+					<code>placeholder</code>,
+					&amp; <code>readonly</code> attribute
+				</h2>
+
+				<div class="test-case">
+<label for="itext-07">
+	Name
+</label>
+<input id="itext-07" type="text" placeholder="e.g. John Smith" readonly>
+				</div>
+			</div>
+
+
+			<div class="test">
+				<h2 class="test-title" id="itext-008">
+					Test itext-008: <code>input</code> element
+					with explicit <code>label</code>,
+					<code>placeholder</code>,
+					&amp; <code>disabled</code> attribute
+				</h2>
+
+				<div class="test-case">
+<label for="itext-08">
+	Name
+</label>
+<input id="itext-08" type="text" placeholder="e.g. Jane Snow" disabled>
+				</div>
+			</div>
+
+
+			<div class="test">
+				<h2 class="test-title" id="itext-009">
+					Test itext-009: <code>input</code> element
+					with <code>aria-label</code>
+				</h2>
+
+				<div class="test-case">
+<input id="itext-09" type="text" aria-label="Name">
+				</div>
+			</div>
+
+
+			<div class="test">
+				<h2 class="test-title" id="itext-010">
+					Test itext-010: <code>input</code> element
+					with <code>aria-labelledby</code>
+				</h2>
+
+				<div class="test-case">
+				<span id="itext-010-label">
+					Name
+				</span>
+<input id="itext-10" type="text" aria-labelledby="itext-010-label">
+				</div>
+			</div>
+
+			<input type="submit" value="Test Form Submission">
 		</form>
 
-		<h2>Code</h2>
-		<pre><code>&lt;label>name &lt;input id="input1" type="text">&lt;/label></code></pre>
 
-		<h2>Reference</h2>
-		<ul>
-			<li><a href="http://www.w3.org/TR/html/forms.html#text-%28type=text%29-state-and-search-state-%28type=search%29">HTML5 input type=text element</a></li>
-			<li><a href="https://w3c.github.io/html-aam/#el-input-text">HTML Accessibility API Mappings for input type=text element without list attribute</a></li>
-			<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-textbox">Core Accessibility API Mappings for textbox role</a></li>
-			<li><a href="https://w3c.github.io/html-aam/#el-input-textetc-autocomplete">HTML Accessibility API Mappings for input type=text element with list attribute</a></li>
-			<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-combobox">Core Accessibility API Mappings for combobox role</a></li>
-			<li><a href="https://www.w3.org/TR/core-aam-1.1/#ariaOwns">Core Accessibility API Mappings for aria-owns property</a></li>
-		</ul>
+		<script src="../scripts/test-scripts.js"></script>
+		<script>
+			var test = [];
+			var el = document.getElementById('itext-01');
+			var isSupported = (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
+
+			test.push({id: "basic-criteria", pass: isSupported});
+			displaySupportResults(test);
+		</script>
 	</body>
 </html>

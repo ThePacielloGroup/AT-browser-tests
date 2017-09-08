@@ -2,13 +2,13 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>test file: input type=date element</title>
+		<title>test file: input type=datetime element</title>
 		<link rel="stylesheet" href="../style/styles.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	</head>
 	<body>
 		<h1>
-			<code>input type=date</code> element
+			<code>input type=datetime</code> element
 		</h1>
 
 		<div class="meta">
@@ -40,49 +40,49 @@
 
 
 		<div class="test">
-			<h2 class="test-title" id="idate-001">
-				Test idate-001: <code>input type="date"</code> element
+			<h2 class="test-title" id="idatet-001">
+				Test idatet-001: <code>input type="datetime"</code> element
 			</h2>
 
 			<div class="test-case">
-<input id="idate-01" type="date">
+<input id="idatet-01" type="datetime">
 			</div>
 		</div>
 
 
 		<div class="test">
-			<h2 class="test-title" id="idate-002">
-				Test idate-002: <code>input type="date"</code> element
+			<h2 class="test-title" id="idatet-002">
+				Test idatet-002: <code>input type="datetime"</code> element
 				with <code>label</code>
 			</h2>
 
 			<div class="test-case">
 <label>
 	Date of Birth
-	<input type="date">
+	<input type="datetime">
 </label>
 			</div>
 		</div>
 
 
 		<div class="test">
-			<h2 class="test-title" id="idate-003">
-				Test idate-003: <code>input type="date"</code> element
+			<h2 class="test-title" id="idatet-003">
+				Test idatet-003: <code>input type="datetime"</code> element
 				with <code>label</code> &amp; <code>placeholder</code> attribute
 			</h2>
 
 			<div class="test-case">
 <label>
 	Date of Birth
-	<input type="date" placeholder="e.g. April 01 1991">
+	<input type="datetime" placeholder="e.g. April 01 1991">
 </label>
 			</div>
 		</div>
 
 
 		<div class="test">
-			<h2 class="test-title" id="idate-004">
-				Test idate-004: <code>input type="date"</code> element
+			<h2 class="test-title" id="idatet-004">
+				Test idatet-004: <code>input type="datetime"</code> element
 				with <code>label</code>,
 				<code>placeholder</code> &amp;
 				<code>required</code> attributes
@@ -91,15 +91,15 @@
 			<div class="test-case">
 <label>
 	Date of Birth
-	<input type="date" required placeholder="e.g. April 01 1991">
+	<input type="datetime" required placeholder="e.g. April 01 1991">
 </label>
 			</div>
 		</div>
 
 
 		<div class="test">
-			<h2 class="test-title" id="idate-005">
-				Test idate-005: <code>input type="date"</code> element
+			<h2 class="test-title" id="idatet-005">
+				Test idatet-005: <code>input type="datetime"</code> element
 				with <code>label</code>,
 				<code>value</code> &amp;
 				<code>readonly</code> attributes
@@ -108,15 +108,15 @@
 			<div class="test-case">
 <label>
 	Date of Birth
-	<input type="date" readonly value="April 01 1991">
+	<input type="datetime" readonly value="April 01 1991">
 </label>
 			</div>
 		</div>
 
 
 		<div class="test">
-			<h2 class="test-title" id="idate-006">
-				Test idate-006: <code>input type="date"</code> element
+			<h2 class="test-title" id="idatet-006">
+				Test idatet-006: <code>input type="datetime"</code> element
 				with <code>label</code>,
 				<code>placeholder</code> &amp;
 				<code>readonly</code> attributes
@@ -125,15 +125,15 @@
 			<div class="test-case">
 <label>
 	Date of Birth
-	<input type="date" readonly placeholder="e.g. April 01 1991">
+	<input type="datetime" readonly placeholder="e.g. April 01 1991">
 </label>
 			</div>
 		</div>
 
 
 		<div class="test">
-			<h2 class="test-title" id="idate-007">
-				Test idate-007: <code>input type="date"</code> element
+			<h2 class="test-title" id="idatet-007">
+				Test idatet-007: <code>input type="datetime"</code> element
 				with <code>label</code>,
 				<code>placeholder</code> &amp;
 				<code>disabled</code> attributes
@@ -142,7 +142,7 @@
 			<div class="test-case">
 <label>
 	Date of Birth
-	<input type="date" disabled placeholder="e.g. April 01 1991">
+	<input type="datetime" disabled placeholder="e.g. April 01 1991">
 </label>
 			</div>
 		</div>
@@ -151,7 +151,7 @@
 		<script src="../scripts/test-scripts.js"></script>
 		<script>
 			var test = [];
-			var el = document.getElementById('idate-01');
+			var el = document.getElementById('idatet-01');
 			var isSupported = (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
 
 			test.push({id: "basic-criteria", pass: isSupported});

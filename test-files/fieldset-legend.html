@@ -3,38 +3,78 @@
 	<head>
 		<meta charset="utf-8">
 		<title>test file: fieldset element with legend element</title>
+		<link rel="stylesheet" href="../style/styles.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	</head>
 	<body>
-		<h1><code>fieldset</code> element with <code>legend</code> element</h1>
-		<form>
-			<fieldset>
-				<legend>Which version of HTML do you use?</legend>
-				<input type="radio" name="html" id="html4" value="html4">
-				<label for="html4">HTML4</label>
-				<br>
-				<input type="radio" name="html" id="html5" value="html5">
-				<label for="html5">HTML5</label>
-			</fieldset>
-		</form>
+		<h1>
+			<code>fieldset</code> element with <code>legend</code> element
+		</h1>
 
-		<h2>Code</h2>
-		<pre><code>&lt;form>
-	&lt;fieldset>
-		&lt;legend>Which version of HTML do you use?&lt;/legend>
-		&lt;input type="radio" name="html" id="html4" value="html4">
-		&lt;label for="html4">HTML4&lt;/label>
-		&lt;br>
-		&lt;input type="radio" name="html" id="html5" value="html5">
-		&lt;label for="html5">HTML5&lt;/label>
-	&lt;/fieldset>
-&lt;/form></code></pre>
+		<div class="meta">
+			<div class="criteria">
+				<h2>
+					Pass Criteria
+				</h2>
+				<ul id="criteria-list">
+					<li id="basic-criteria">#1: Element is supported</li>
+					<li>#2: Correct HTML and Core Accessibility API mappings</li>
+					<li>#3: Correct Accessible Name &amp; Description Calculation</li>
+				</ul>
+			</div>
 
-		<h2>Reference</h2>
-		<ul>
-			<li><a href="http://www.w3.org/TR/html/forms.html#the-fieldset-element">HTML5 fieldset element</a></li>
-			<li><a href="https://w3c.github.io/html-aam/#el-fieldset">HTML Accessibility API Mappings for fieldset element</a></li>
-			<li><a href="http://www.w3.org/TR/html/forms.html#the-legend-element">HTML5 legend element</a></li>
-			<li><a href="https://w3c.github.io/html-aam/#el-legend">HTML Accessibility API Mappings for legend element</a></li>
-		</ul>
+			<div class="reference">
+				<h2>
+					Reference
+				</h2>
+				<ul>
+					<li>
+						<a href="http://www.w3.org/TR/html/forms.html#the-fieldset-element">HTML5 <code>fieldset</code> element</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/html-aam/#el-fieldset">HTML Accessibility API Mappings for <code>fieldset</code> element</a>
+					</li>
+					<li>
+						<a href="http://www.w3.org/TR/html/forms.html#the-legend-element">HTML5 <code>legend</code> element</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/html-aam/#el-legend">HTML Accessibility API Mappings for <code>legend</code> element</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+
+		<div class="test">
+			<h2 class="test-title" id="flgnd-001">
+				Test flgnd-001: <code>fieldset</code> element with
+				<code>legend</code> element
+			</h2>
+
+			<div class="test-case">
+<form>
+	<fieldset id="fieldset-01">
+		<legend id="legend-01">
+			Which version of HTML do you use?
+		</legend>
+		<input type="radio" name="html" id="html4" value="html4">
+		<label for="html4">HTML4</label>
+		<br>
+		<input type="radio" name="html" id="html5" value="html5">
+		<label for="html5">HTML5</label>
+	</fieldset>
+</form>
+			</div>
+		</div>
+
+		<script src="../scripts/test-scripts.js"></script>
+		<script>
+			var test = [];
+			var el = document.getElementById('fieldset-01');
+			var isSupported = (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
+
+			test.push({id: "basic-criteria", pass: isSupported});
+			displaySupportResults(test);
+		</script>
 	</body>
 </html>

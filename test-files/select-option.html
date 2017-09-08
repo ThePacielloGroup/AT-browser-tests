@@ -2,113 +2,336 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>test file: select + option + optgroup element</title>
+		<title>test file: select + option + optgroup elements</title>
+		<link rel="stylesheet" href="../style/styles.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<style>
+			select {
+				min-width: 300px;
+			}
+		</style>
 	</head>
 	<body>
-		<h1><code>select + option + optgroup</code> element</h1>
-		<p>
-		<select id="select1">
-			<option value="1">a</option>
-			<option value="2">b</option>
-		</select></p>
+		<h1>
+			<code>select + option + optgroup</code> elements
+		</h1>
 
-		<h2>with label </h2>
-		<p>
-			<label> choose
-				<select id="select2">
-					<option value="1">a</option>
-					<option value="2">b</option>
-				</select>
-			</label>
-		</p>
+		<div class="meta">
+			<div class="criteria">
+				<h2>
+					Pass Criteria
+				</h2>
+				<ul id="criteria-list">
+					<li id="basic-criteria">#1: Element is supported</li>
+					<li>#2: Correct HTML and Core Accessibility API mappings</li>
+					<li>#3: Correct Accessible Name &amp; Description Calculation</li>
+				</ul>
+			</div>
 
-		<h2>with label + selected on option a</h2>
-		<p>
-			<label> choose
-				<select id="select3">
-					<option value="1" selected>a</option>
-					<option value="2">b</option>
-				</select>
-			</label>
-		</p>
+			<div class="reference">
+				<h2>
+					Reference
+				</h2>
+				<ul>
+					<li>
+						<a href="http://www.w3.org/TR/html5/forms.html#the-select-element">HTML5 <code>select</code> element</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/html-aam/#el-select-listbox">HTML Accessibility API Mappings for <code>select</code> element with <code>multiple</code> attribute or <code>size</code> attribute > 1</a>
+					</li>
+					<li>
+						<a href="https://www.w3.org/TR/core-aam-1.1/#role-map-listbox">Core Accessibility API Mappings for <code>listbox</code> role</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/html-aam/#el-select-combobox">HTML Accessibility API Mappings for <code>select</code> element without <code>multiple</code> attribute and no <code>size</code> attribute > 1</a>
+					</li>
+					<li>
+						<a href="https://www.w3.org/TR/core-aam-1.1/#role-map-combobox">Core Accessibility API Mappings for <code>combobox</code> role</a>
+					</li>
+					<li>
+						<a href="http://www.w3.org/TR/html5/forms.html#the-option-element">HTML5 <code>option</code> element</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/html-aam/#el-option">HTML Accessibility API Mappings for <code>option</code> element</a>
+					</li>
+					<li>
+						<a href="https://www.w3.org/TR/core-aam-1.1/#role-map-option">Core Accessibility API Mappings for <code>option</code> role</a>
+					</li>
+					<li>
+						<a href="https://www.w3.org/TR/core-aam-1.1/#ariaSelectedTrue">Core Accessibility API Mappings for <code>aria-selected="true"</code></a>
+					</li>
+					<li>
+						<a href="https://www.w3.org/TR/core-aam-1.1/#ariaSelectedFalse">Core Accessibility API Mappings for <code>aria-selected="false"</code></a>
+					</li>
+					<li>
+						<a href="http://www.w3.org/TR/html5/forms.html#the-optgroup-element">HTML5 <code>optgroup</code> element</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/html-aam/#el-optgroup">HTML Accessibility API Mappings for <code>optgroup</code> element</a>
+					</li>
+					<li>
+						<a href="https://www.w3.org/TR/core-aam-1.1/#role-map-group">Core Accessibility API Mappings for <code>group</code> role</a>
+					</li>
+				</ul>
+			</div>
+		</div>
 
-		<h2>with label + required </h2>
-		<p>
-			<label> choose
-				<select id="select4" required>
-					<option value="1">a</option>
-					<option value="2">b</option>
-				</select>
-			</label>
-		</p>
 
-		<h2>with label + disabled </h2>
-		<p>
-			<label> choose
-				<select id="select5" disabled>
-					<option value="1">a</option>
-					<option value="2">b</option>
-				</select>
-			</label>
-		</p>
+		<div class="test">
+			<h2 class="test-title" id="sl-001">
+				Test sl-001: <code>select + option</code> elements
+			</h2>
 
-		<h2>with size attribute</h2>
-		<select id="select6" name="" size="3">
-			<option value="a">a</option>
-			<option value="b">b</option>
-		</select>
+			<div class="test-case">
+<select id="sl-01">
+	<option value="1">a</option>
+	<option value="2">b</option>
+</select>
+			</div>
+		</div>
 
-		<h2>with size + multiple attribute</h2>
-		<select id="select7" multiple size="3">
-			<option value="a">a</option>
-			<option value="b">b</option>
-		</select>
 
-		<h2>with label and optgroup</h2>
-		<p>
-			<label> choose
-				<select id="select8">
-					<optgroup label="part 1">
-						<option value="1">a</option>
-						<option value="2">b</option>
-					</optgroup>
-					<optgroup label="part 2">
-						<option value="1">a</option>
-						<option value="2">b</option>
-					</optgroup>
-				</select>
-			</label>
-		</p>
+		<div class="test">
+			<h2 class="test-title" id="sl-002">
+				Test sl-002: <code>select + option</code> elements
+				with implicit label
+			</h2>
 
-		<h2>Code</h2>
-		<pre><code>&lt;label> choose
-	&lt;select>
-		&lt;optgroup label="part 1">
-			&lt;option value="1">a&lt;/option>
-			&lt;option value="2">b&lt;/option>
-		&lt;/optgroup>
-		&lt;optgroup label="part 2">
-			&lt;option value="1">a&lt;/option>
-			&lt;option value="2">b&lt;/option>
-		&lt;/optgroup>
-	 &lt;/select>
-&lt;/label></code></pre>
+			<div class="test-case">
+<label>
+	Choose <br>
+	<select id="sl-02">
+		<option value="1">a</option>
+		<option value="2">b</option>
+	</select>
+</label>
+			</div>
+		</div>
 
-		<h2>Reference</h2>
-		<ul>
-			<li><a href="http://www.w3.org/TR/html5/forms.html#the-select-element">HTML5 select element</a></li>
-			<li><a href="https://w3c.github.io/html-aam/#el-select-listbox">HTML Accessibility API Mappings for select element with multiple attribute or size attribute > 1</a></li>
-			<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-listbox">Core Accessibility API Mappings for listbox role</a></li>
-			<li><a href="https://w3c.github.io/html-aam/#el-select-combobox">HTML Accessibility API Mappings for select element without multiple attribute and no size attribute > 1</a></li>
-			<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-combobox">Core Accessibility API Mappings for combobox role</a></li>
-			<li><a href="http://www.w3.org/TR/html5/forms.html#the-option-element">HTML5 option element</a></li>
-			<li><a href="https://w3c.github.io/html-aam/#el-option">HTML Accessibility API Mappings for option element</a></li>
-			<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-option">Core Accessibility API Mappings for option role</a></li>
-			<li><a href="https://www.w3.org/TR/core-aam-1.1/#ariaSelectedTrue">Core Accessibility API Mappings for aria-selected="true"</a></li>
-			<li><a href="https://www.w3.org/TR/core-aam-1.1/#ariaSelectedFalse">Core Accessibility API Mappings for aria-selected="false"</a></li>
-			<li><a href="http://www.w3.org/TR/html5/forms.html#the-optgroup-element">HTML5 optgroup element</a></li>
-			<li><a href="https://w3c.github.io/html-aam/#el-optgroup">HTML Accessibility API Mappings for optgroup element</a></li>
-			<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-group">Core Accessibility API Mappings for group role</a></li>
-		</ul>
+
+		<div class="test">
+			<h2 class="test-title" id="sl-003">
+				Test sl-003: <code>select + option</code> elements
+				with explicit label
+			</h2>
+
+			<div class="test-case">
+<label for="sl-03">
+	Choose
+</label>
+<br>
+<select id="sl-03">
+	<option value="1">a</option>
+	<option value="2">b</option>
+</select>
+			</div>
+		</div>
+
+
+		<div class="test">
+			<h2 class="test-title" id="sl-004">
+				Test sl-004: <code>select + option</code> elements
+				with explicit label
+				&amp; <code>selected</code> on <code>option b</code>
+			</h2>
+
+			<div class="test-case">
+<label for="sl-04">
+	Choose
+</label>
+<br>
+<select id="sl-04">
+	<option value="1">a</option>
+	<option value="2" selected>b</option>
+</select>
+			</div>
+		</div>
+
+
+		<div class="test">
+			<h2 class="test-title" id="sl-005">
+				Test sl-005: <code>select + option</code> elements
+				with explicit label
+				&amp; <code>required</code> attribute
+			</h2>
+
+			<div class="test-case">
+<label for="sl-05">
+	Choose
+</label>
+<br>
+<select id="sl-05" required>
+	<option value="">Select</option>
+	<option value="1">a</option>
+	<option value="2">b</option>
+</select>
+			</div>
+		</div>
+
+
+		<div class="test">
+			<h2 class="test-title" id="sl-006">
+				Test sl-006: <code>select + option</code> elements
+				with explicit label
+				&amp; <code>disabled</code> attribute
+			</h2>
+
+			<div class="test-case">
+<label for="sl-06">
+	Choose
+</label>
+<br>
+<select id="sl-06" disabled>
+	<option value="1">a</option>
+	<option value="2">b</option>
+</select>
+			</div>
+		</div>
+
+
+		<div class="test">
+			<h2 class="test-title" id="sl-007">
+				Test sl-007: <code>select + option</code> elements
+				with explicit label
+				&amp; <code>size > 1</code> attribute
+			</h2>
+
+			<div class="test-case">
+<label for="sl-07">
+	Choose
+</label>
+<br>
+<select id="sl-07" size="3">
+	<option value="1">a</option>
+	<option value="2">b</option>
+</select>
+			</div>
+		</div>
+
+
+		<div class="test">
+			<h2 class="test-title" id="sl-008">
+				Test sl-008: <code>select + option</code> elements
+				with explicit label,
+				&amp; <code>multiple</code> attribute
+			</h2>
+
+			<div class="test-case">
+<label for="sl-08">
+	Choose
+</label>
+<br>
+<select id="sl-08" multiple>
+	<option value="1">a</option>
+	<option value="2">b</option>
+</select>
+			</div>
+		</div>
+
+
+		<div class="test">
+			<h2 class="test-title" id="sl-009">
+				Test sl-009: <code>select + option</code> elements
+				with explicit label,
+				<code>multiple</code>
+				&amp; <code>size</code> attributes
+			</h2>
+
+			<div class="test-case">
+<label for="sl-09">
+	Choose
+</label>
+<br>
+<select id="sl-09" multiple size="3">
+	<option value="1">a</option>
+	<option value="2">b</option>
+</select>
+			</div>
+		</div>
+
+
+		<div class="test">
+			<h2 class="test-title" id="sl-010">
+				Test sl-010: <code>select + option</code> elements
+				with explicit label,
+				<code>multiple</code> attribute
+				&amp; <code>size="1"</code> attribute
+			</h2>
+
+			<div class="test-case">
+<label for="sl-10">
+	Choose
+</label>
+<br>
+<select id="sl-10" multiple size="1">
+	<option value="1">a</option>
+	<option value="2">b</option>
+</select>
+			</div>
+		</div>
+
+
+		<div class="test">
+			<h2 class="test-title" id="sl-011">
+				Test sl-011: <code>select + option</code> elements
+				with explicit label
+				&amp; <code>optgroup</code>
+			</h2>
+
+			<div class="test-case">
+<label for="sl-11">
+	Choose
+</label>
+<br>
+<select id="sl-11">
+<optgroup label="part 1">
+		<option value="1">a</option>
+		<option value="2">b</option>
+	</optgroup>
+	<optgroup label="part 2">
+		<option value="3">c</option>
+		<option value="4">d</option>
+	</optgroup>
+</select>
+			</div>
+		</div>
+
+
+		<div class="test">
+			<h2 class="test-title" id="sl-012">
+				Test sl-012: <code>select + option</code> elements
+				with explicit label,
+				<code>optgroup</code>
+				&amp; <code>multiple</code> attribute
+			</h2>
+
+			<div class="test-case">
+<label for="sl-12">
+	Choose
+</label>
+<br>
+<select id="sl-12" multiple>
+<optgroup label="part 1">
+		<option value="1">a</option>
+		<option value="2">b</option>
+	</optgroup>
+	<optgroup label="part 2">
+		<option value="3">c</option>
+		<option value="4">d</option>
+	</optgroup>
+</select>
+			</div>
+		</div>
+
+
+		<script src="../scripts/test-scripts.js"></script>
+		<script>
+			var test = [];
+			var el = document.getElementById('sl-01');
+			var isSupported = (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
+
+			test.push({id: "basic-criteria", pass: isSupported});
+			displaySupportResults(test);
+		</script>
 	</body>
 </html>

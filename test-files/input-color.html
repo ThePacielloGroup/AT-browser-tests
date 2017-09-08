@@ -41,9 +41,6 @@
 			<div class="test-case">
 				<input id="input1" type="color" />
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;input id="input1" type="color" /></code></pre>
 		</div>
 
 		<div class="test">
@@ -51,29 +48,24 @@
 
 			<div class="test-case">
 				<input id="input2" type="color" aria-label="aria-label attribute" />
-
+</div>
+			<div class="test-notes">
 				<p>Aria-label should be used as accessible name</p>
 				<p>No accessible description.</p>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;input id="input2" type="color" aria-label="aria-label attribute" /></code></pre>
 		</div>
 
 		<div class="test">
 			<h2 class="test-title" id="ci-003">Test ci-003: Input type="color" with <code>aria-labelledby</code></h2>
 
 			<div class="test-case">
-				<p id="ci-003-labelledby">p referenced by aria-labelledby</p>
-				<input id="input3" type="color" aria-labelledby="ci-003-labelledby" />
-
+<p id="ci-003-labelledby">p referenced by aria-labelledby</p>
+<input id="input3" type="color" aria-labelledby="ci-003-labelledby" />
+</div>
+			<div class="test-notes">
 				<p>Aria-labelledby should be used as accessible name</p>
 				<p>No accessible description.</p>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;p id="ci-003-labelledby">p referenced by aria-labelledby&lt;/p>
-&lt;input id="input3" type="color" aria-labelledby="ci-003-labelledby" /></code></pre>
 		</div>
 
 		<div class="test">
@@ -81,13 +73,11 @@
 
 			<div class="test-case">
 				<label>label wrapping input <input id="input4" type="color" /></label>
-
+</div>
+			<div class="test-notes">
 				<p>Label should be used as accessible name</p>
 				<p>No accessible description.</p>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;label>label wrapping input &lt;input id="input4" type="color" />&lt;/label></code></pre>
 		</div>
 
 		<div class="test">
@@ -95,45 +85,37 @@
 
 			<div class="test-case">
 				<input id="input5" type="color" title="title attribute" />
-
+</div>
+			<div class="test-notes">
 				<p>Title should be used as accessible name</p>
 				<p>No accessible description.</p>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;input id="input5" type="color" title="title attribute" /></code></pre>
 		</div>
 
 		<div class="test">
 			<h2 class="test-title" id="ci-006">Test ci-006: Input type="color" with <code>aria-describedby</code></h2>
 
 			<div class="test-case">
-				<input id="input6" type="color" aria-describedby="ci-006-describedby" />
-				<p id="ci-006-describedby">p referenced by aria-describedby</p>
-
+<input id="input6" type="color" aria-describedby="ci-006-describedby" />
+<p id="ci-006-describedby">p referenced by aria-describedby</p>
+</div>
+			<div class="test-notes">
 				<p>Aria-describedby should be used as accessible description</p>
 				<p>No accessible name.</p>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;input id="input6" type="color" aria-describedby="ci-006-describedby" />
-&lt;p id="ci-006-describedby">p referenced by aria-describedby&lt;/p></code></pre>
 		</div>
 
 		<div class="test">
 			<h2 class="test-title" id="ci-007">Test ci-007: Input type="color" with <code>label</code> element &amp; <code>title</code> attribute</h2>
 
 			<div class="test-case">
-				<label for="input7">label referenced by for/id attributes</label>
-				<input id="input7" type="color" title="title attribute" />
-
+<label for="input7">label referenced by for/id attributes</label>
+<input id="input7" type="color" title="title attribute" />
+</div>
+			<div class="test-notes">
 				<p>Label should be used as accessible name</p>
 				<p>Title should be used as accessible description</p>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;label for="input7">label referenced by for/id attributes&lt;/label>
-&lt;input id="input7" type="color" title="title attribute" /></code></pre>
 		</div>
 
 		<script src="../scripts/test-scripts.js"></script>

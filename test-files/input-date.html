@@ -56,7 +56,8 @@
 
 			<div class="test-case">
 <input id="input2" type="date" aria-label="aria-label attribute" />
-
+</div>
+			<div class="test-notes">
 <p>Aria-label should be used as accessible name</p>
 <p>No accessible description.</p>
 			</div>
@@ -68,7 +69,8 @@
 			<div class="test-case">
 <p id="di-003-labelledby">p referenced by aria-labelledby</p>
 <input id="input3" type="date" aria-labelledby="di-003-labelledby" />
-
+</div>
+			<div class="test-notes">
 <p>Aria-labelledby should be used as accessible name</p>
 <p>No accessible description.</p>
 			</div>
@@ -79,13 +81,11 @@
 
 			<div class="test-case">
 				<label>label wrapping input <input id="input4" type="date" /></label>
-
+</div>
+			<div class="test-notes">
 				<p>Label should be used as accessible name</p>
 				<p>No accessible description.</p>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;label>label wrapping input &lt;input id="input4" type="date" />&lt;/label></code></pre>
 		</div>
 
 		<div class="test">
@@ -93,7 +93,8 @@
 
 			<div class="test-case">
 <input id="input5" type="date" title="title attribute" />
-
+</div>
+			<div class="test-notes">
 <p>Title should be used as accessible name</p>
 <p>No accessible description.</p>
 			</div>
@@ -105,7 +106,8 @@
 			<div class="test-case">
 <input id="input6" type="date" aria-describedby="di-006-describedby" />
 <p id="di-006-describedby">p referenced by aria-describedby</p>
-
+</div>
+			<div class="test-notes">
 <p>Aria-describedby should be used as accessible description</p>
 <p>No accessible name.</p>
 			</div>
@@ -117,7 +119,8 @@
 			<div class="test-case">
 <label for="input7">label referenced by for/id attributes</label>
 <input id="input7" type="date" title="title attribute" />
-
+</div>
+			<div class="test-notes">
 <p>Label should be used as accessible name</p>
 <p>Title should be used as accessible description</p>
 			</div>

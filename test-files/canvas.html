@@ -33,32 +33,24 @@
 			<h2 class="test-title" id="cv-001">Test cv-001: Canvas element</h2>
 
 			<div class="test-case">
-				<canvas id="myCanvas" width="338" height="258">
-					<p tabindex="0">The woman in the painting is wearing a flowing white dress. A large piece of intricately
-					patterned fabric is draped over the side. In her right hand she holds the chain mooring the boat. Her expression
-					is mournful. She stares at a crucifix lying in front of her. Beside it are three candles. Two have blown out.
-					</p>
-				</canvas>
+<canvas id="myCanvas" width="338" height="258">
+	<p tabindex="0">The woman in the painting is wearing a flowing white dress. A large piece of intricately
+	patterned fabric is draped over the side. In her right hand she holds the chain mooring the boat. Her expression
+	is mournful. She stares at a crucifix lying in front of her. Beside it are three candles. Two have blown out.
+	</p>
+</canvas>
 
-				<script>
-					var canvas = document.getElementById('myCanvas');
-					var context = canvas.getContext('2d');
-					var imageObj = new Image();
+<script>
+	var canvas = document.getElementById('myCanvas');
+	var context = canvas.getContext('2d');
+	var imageObj = new Image();
 
-					imageObj.onload = function() {
-						context.drawImage(imageObj, 0, 0);
-					};
-					imageObj.src = '../images/shalott.jpg';
-				</script>
+	imageObj.onload = function() {
+		context.drawImage(imageObj, 0, 0);
+	};
+	imageObj.src = '../images/shalott.jpg';
+</script>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;canvas id="myCanvas" width="338" height="258">
-	&lt;p>The woman in the painting is wearing a flowing white dress. A large piece of
-	   intricately patterned fabric is draped over the side. In her right hand she holds
-	   the chain mooring the boat. Her expression is mournful. She stares at a crucifix
-	   lying in front of her. Beside it are three candles. Two have blown out.&lt;/p>
-&lt;/canvas></code></pre>
 		</div>
 
 		<div class="test">
@@ -66,37 +58,24 @@
 			<p>The circle below must have a focus ring.</p>
 
 			<div class="test-case">
-				<canvas id="drawFocusCanvas" width="200" height="200">
-					<button id="drawFocusButton">Focus me</button>
-				</canvas>
+<canvas id="drawFocusCanvas" width="200" height="200">
+	<button id="drawFocusButton">Focus me</button>
+</canvas>
 
-				<script>
-					var canvas2 = document.getElementById('drawFocusCanvas'),
-					    button = document.getElementById('drawFocusButton'),
-					    context2 = canvas2.getContext('2d');
+<script>
+	var canvas2 = document.getElementById('drawFocusCanvas'),
+	    button = document.getElementById('drawFocusButton'),
+	    context2 = canvas2.getContext('2d');
 
-					context2.beginPath();
-					context2.arc(100, 100, 75, 0, 2 * Math.PI);
-					context2.fillStyle = '#ddd';
-					context2.fill();
+	context2.beginPath();
+	context2.arc(100, 100, 75, 0, 2 * Math.PI);
+	context2.fillStyle = '#ddd';
+	context2.fill();
 
-					button.focus();
-					context2.drawFocusIfNeeded(button);
-				</script>
+	button.focus();
+	context2.drawFocusIfNeeded(button);
+</script>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>var canvas2 = document.getElementById('drawFocusCanvas'),
-    button = document.getElementById('drawFocusButton'),
-    context2 = canvas2.getContext('2d');
-
-context2.beginPath();
-context2.arc(100, 100, 75, 0, 2 * Math.PI);
-context2.fillStyle = '#ddd';
-context2.fill();
-
-button.focus();
-context2.drawFocusIfNeeded(button);</code></pre>
 		</div>
 		<script src="../scripts/test-scripts.js"></script>
 		<script>

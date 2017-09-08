@@ -3,101 +3,182 @@
 	<head>
 		<meta charset="utf-8">
 		<title>test file: table element with caption, thead, tbody, tfoot, tr, th and td</title>
+		<link rel="stylesheet" href="../style/styles.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<style>
-			table, tr, td, th {border:thin solid #666; border-collapse:collapse;padding: 5px;}
+			table,
+			tr,
+			td,
+			th {
+				border: thin solid #666;
+				border-collapse: collapse;
+				padding: 6px;
+			}
+			table {
+				width: 100%;
+			}
 		</style>
 	</head>
 	<body>
-		<h1>test file: <code>table</code> element with <code>caption</code>, <code>thead</code>, <code>tbody</code>, <code>tfoot</code>, <code>tr</code>, <code>th</code> and <code>td</code></h1>
-		<table summary="lemons and pears table with one level of row and column headers" border="1">
-			<caption>Prices for lemons and pears in London</caption>
-			<thead>
-				<tr>
-					<td></td>
-					<th>Lemons</th>
-					<th>Pears</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<th>Wholesale</th>
-					<td>&pound;1.00</td>
-					<td>&pound;1.50</td>
-				</tr>
-				<tr>
-					<th>Retail</th>
-					<td>&pound;2.00</td>
-					<td>&pound;2.50</td>
-				</tr>
-			</tbody>
-			<tfoot>
-			<tr>
-					<th>Increase: wholesale versus retail</th>
-					<td>&pound;1.00</td>
-					<td>&pound;1.00</td>
-				</tr>
-				</tfoot>
-		</table>
+		<h1>
+			<code>table</code> element with
+			<code>caption</code>,
+			<code>thead</code>,
+			<code>tbody</code>,
+			<code>tfoot</code>,
+			<code>tr</code>,
+			<code>th</code>
+			and <code>td</code>
+		</h1>
 
-		<h2>Code</h2>
-		<pre><code>&lt;table border="1">
-	&lt;caption>Prices for lemons and pears in London&lt;/caption>
-	&lt;thead>
-		&lt;tr>
-			&lt;td>&lt;/td>
-			&lt;th>Lemons&lt;/th>
-			&lt;th>Pears&lt;/th>
-		&lt;/tr>
-	&lt;/thead>
-	&lt;tbody>
-		&lt;tr>
-			&lt;th>Wholesale&lt;/th>
-			&lt;td>$1.00&lt;/td>
-			&lt;td>$1.50&lt;/td>
-		&lt;/tr>
-		&lt;tr>
-			&lt;th>Retail&lt;/th>
-			&lt;td>$2.00&lt;/td>
-			&lt;td>$2.50&lt;/td>
-		&lt;/tr>
-	&lt;/tbody>
-	&lt;tfoot>
-		&lt;tr>
-			&lt;th>Increase: wholesale versus retail&lt;/th>
-			&lt;td>$1.00&lt;/td>
-			&lt;td>$1.00&lt;/td>
-		&lt;/tr>
-	&lt;/tfoot>
-&lt;/table></code></pre>
+		<div class="meta">
+			<div class="criteria">
+				<h2>
+					Pass Criteria
+				</h2>
+				<ul id="criteria-list">
+					<li id="basic-criteria">#1: Element is supported</li>
+					<li>#2: Correct HTML and Core Accessibility API mappings</li>
+					<li>#3: Correct Accessible Name &amp; Description Calculation</li>
+				</ul>
+			</div>
 
-		<h2>Reference</h2>
-		<ul>
-			<li><a href="http://www.w3.org/TR/html5/tabular-data.html#the-table-element">HTML5 table element</a></li>
-			<li><a href="https://w3c.github.io/html-aam/#el-table">HTML Accessibility API Mappings for table element</a></li>
-			<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-table">Core Accessibility API Mappings for table role</a></li>
-			<li><a href="http://www.w3.org/TR/html5/tabular-data.html#the-caption-element">HTML5 caption element</a></li>
-			<li><a href="https://w3c.github.io/html-aam/#el-caption">HTML Accessibility API Mappings for caption element</a></li>
-			<li><a href="http://www.w3.org/TR/html5/tabular-data.html#the-thead-element">HTML5 thead element</a></li>
-			<li><a href="https://w3c.github.io/html-aam/#el-thead">HTML Accessibility API Mappings for thead element</a></li>
-			<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-rowgroup">Core Accessibility API Mappings for rowgroup role</a></li>
-			<li><a href="http://www.w3.org/TR/html5/tabular-data.html#the-tbody-element">HTML5 tbody element</a></li>
-			<li><a href="https://w3c.github.io/html-aam/#el-tbody">HTML Accessibility API Mappings for tbody element</a></li>
-			<li><a href="http://www.w3.org/TR/html5/tabular-data.html#the-tfoot-element">HTML5 tfoot element</a></li>
-			<li><a href="https://w3c.github.io/html-aam/#el-tfoot">HTML Accessibility API Mappings for tfoot element</a></li>
-			<li><a href="http://www.w3.org/TR/html5/tabular-data.html#the-tr-element">HTML5 tr element</a></li>
-			<li><a href="https://w3c.github.io/html-aam/#el-tr">HTML Accessibility API Mappings for tr element</a></li>
-			<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-row">Core Accessibility API Mappings for row role</a></li>
-			<li><a href="http://www.w3.org/TR/html5/tabular-data.html#the-th-element">HTML5 th element</a></li>
-			<li><a href="https://w3c.github.io/html-aam/#el-th">HTML Accessibility API Mappings for th element (neither row or column header)</a></li>
-			<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-cell">Core Accessibility API Mappings for cell role</a></li>
-			<li><a href="https://w3c.github.io/html-aam/#el-th-columnheader">HTML Accessibility API Mappings for th element (column header)</a></li>
-			<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-columnheader">Core Accessibility API Mappings for columnheader role</a></li>
-			<li><a href="https://w3c.github.io/html-aam/#el-th-rowheader">HTML Accessibility API Mappings for th element (row header)</a></li>
-			<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-rowheader">Core Accessibility API Mappings for rowheader role</a></li>
-			<li><a href="http://www.w3.org/TR/html5/tabular-data.html#the-td-element">HTML5 td element</a></li>
-			<li><a href="https://w3c.github.io/html-aam/#el-td">HTML Accessibility API Mappings for td element</a></li>
-		</ul>
+			<div class="reference">
+				<h2>
+					Reference
+				</h2>
+			<ul>
+				<li>
+					<a href="http://www.w3.org/TR/html5/tabular-data.html#the-table-element">HTML5 table element</a>
+				</li>
+				<li>
+					<a href="https://w3c.github.io/html-aam/#el-table">HTML Accessibility API Mappings for <code>table</code> element</a>
+				</li>
+				<li>
+					<a href="https://www.w3.org/TR/core-aam-1.1/#role-map-table">Core Accessibility API Mappings for <code>table</code> role</a>
+				</li>
+				<li>
+					<a href="http://www.w3.org/TR/html5/tabular-data.html#the-caption-element">HTML5  <code>caption</code> element</a>
+				</li>
+				<li>
+					<a href="https://w3c.github.io/html-aam/#el-caption">HTML Accessibility API Mappings for  <code>caption</code> element</a>
+				</li>
+				<li>
+					<a href="http://www.w3.org/TR/html5/tabular-data.html#the-thead-element">HTML5  <code>thead</code> element</a>
+				</li>
+				<li>
+					<a href="https://w3c.github.io/html-aam/#el-thead">HTML Accessibility API Mappings for  <code>thead</code> element</a>
+				</li>
+				<li>
+					<a href="https://www.w3.org/TR/core-aam-1.1/#role-map-rowgroup">Core Accessibility API Mappings for  <code>rowgroup</code> role</a>
+				</li>
+				<li>
+					<a href="http://www.w3.org/TR/html5/tabular-data.html#the-tbody-element">HTML5  <code>tbody</code> element</a>
+				</li>
+				<li>
+					<a href="https://w3c.github.io/html-aam/#el-tbody">HTML Accessibility API Mappings for  <code>tbody</code> element</a>
+				</li>
+				<li>
+					<a href="http://www.w3.org/TR/html5/tabular-data.html#the-tfoot-element">HTML5 <code>tfoot</code> element</a>
+				</li>
+				<li>
+					<a href="https://w3c.github.io/html-aam/#el-tfoot">HTML Accessibility API Mappings for <code>tfoot</code> element</a>
+				</li>
+				<li>
+					<a href="http://www.w3.org/TR/html5/tabular-data.html#the-tr-element">HTML5 <code>tr</code> element</a>
+				</li>
+				<li>
+					<a href="https://w3c.github.io/html-aam/#el-tr">HTML Accessibility API Mappings for <code>tr</code> element</a>
+				</li>
+				<li>
+					<a href="https://www.w3.org/TR/core-aam-1.1/#role-map-row">Core Accessibility API Mappings for <code>row</code> role</a>
+				</li>
+				<li>
+					<a href="http://www.w3.org/TR/html5/tabular-data.html#the-th-element">HTML5 <code>th</code> element</a>
+				</li>
+				<li>
+					<a href="https://w3c.github.io/html-aam/#el-th">HTML Accessibility API Mappings for <code>th</code> element (neither row or column header)</a>
+				</li>
+				<li>
+					<a href="https://www.w3.org/TR/core-aam-1.1/#role-map-cell">Core Accessibility API Mappings for <code>cell</code> role</a>
+				</li>
+				<li>
+					<a href="https://w3c.github.io/html-aam/#el-th-columnheader">HTML Accessibility API Mappings for <code>th</code> element (column header)</a>
+				</li>
+				<li>
+					<a href="https://www.w3.org/TR/core-aam-1.1/#role-map-columnheader">Core Accessibility API Mappings for <code>columnheader</code> role</a>
+				</li>
+				<li>
+					<a href="https://w3c.github.io/html-aam/#el-th-rowheader">HTML Accessibility API Mappings for <code>th</code> element (row header)</a>
+				</li>
+				<li>
+					<a href="https://www.w3.org/TR/core-aam-1.1/#role-map-rowheader">Core Accessibility API Mappings for <code>rowheader</code> role</a>
+				</li>
+				<li>
+					<a href="http://www.w3.org/TR/html5/tabular-data.html#the-td-element">HTML5 <code>td</code> element</a>
+				</li>
+				<li>
+					<a href="https://w3c.github.io/html-aam/#el-td">HTML Accessibility API Mappings for <code>td</code> element</a>
+				</li>
+			</ul>
+			</div>
+		</div>
 
-		<p>Data table example from <a href="http://usability.com.au/2005/06/accessible-data-tables-2005/">http://usability.com.au/2005/06/accessible-data-tables-2005/</a></p>
+
+		<div class="test">
+			<h2 class="test-title" id="tbl-001">
+				Test tbl-001: <code>table</code> element with <code>caption</code>, <code>thead</code>, <code>tbody</code>, <code>tfoot</code>, <code>tr</code>, <code>th</code> and <code>td</code>
+			</h2>
+
+			<div class="test-case">
+<table>
+	<caption>Prices for lemons and pears in London</caption>
+	<thead>
+		<tr>
+			<td></td>
+			<th>Lemons</th>
+			<th>Pears</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th>Wholesale</th>
+			<td>&pound;1.00</td>
+			<td>&pound;1.50</td>
+		</tr>
+		<tr>
+			<th>Retail</th>
+			<td>&pound;2.00</td>
+			<td>&pound;2.50</td>
+		</tr>
+	</tbody>
+	<tfoot>
+		<tr>
+			<th>Increase: wholesale versus retail</th>
+			<td>&pound;1.00</td>
+			<td>&pound;1.00</td>
+		</tr>
+	</tfoot>
+</table>
+			</div>
+		</div>
+
+
+		<footer>
+			<p>
+				Data table example from
+				<a href="http://usability.com.au/2005/06/accessible-data-tables-2005/">http://usability.com.au/2005/06/accessible-data-tables-2005/</a>
+			</p>
+		</footer>
+
+		<script src="../scripts/test-scripts.js"></script>
+		<script>
+			var test = [];
+			var el = document.getElementById('tbl-01');
+			var isSupported = (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
+
+			test.push({id: "basic-criteria", pass: isSupported});
+			displaySupportResults(test);
+		</script>
 	</body>
 </html>

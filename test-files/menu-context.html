@@ -26,9 +26,15 @@
 			<div class="reference">
 				<h2>Reference</h2>
 				<ul>
-					<li><a href="https://www.w3.org/TR/html51/interactive-elements.html#the-menu-element">HTML5.1 menu element</a></li>
-					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#el-menu">HTML Accessibility API Mappings for menu element with popup menu state</a></li>
-					<li><a href="https://w3c.github.io/aria/core-aam/core-aam.html#role-map-menu">Core Accessibility API Mappings for menu role</a></li>
+					<li>
+						<a href="https://www.w3.org/TR/html51/interactive-elements.html#the-menu-element">HTML5.1 menu element</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/aria/html-aam/html-aam.html#el-menu">HTML Accessibility API Mappings for menu element with popup menu state</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/aria/core-aam/core-aam.html#role-map-menu">Core Accessibility API Mappings for menu role</a>
+					</li>
 				</ul>
 			</div>
 		</div>
@@ -37,23 +43,17 @@
 			<h2 class="test-title" id="mc-001">Test mc-001: Menu element with type="context"</h2>
 
 			<div class="test-case">
-				<div id="menu-button1" contextmenu="menu1">I have a context menu. Right click (or equivalent) to test</div>
-				<menu type="context" id="menu1">
-					<menuitem label="I’m a menuitem"></menuitem>
-				</menu>
+<div id="menu-button1" contextmenu="menu1">I have a context menu. Right click (or equivalent) to test</div>
+<menu type="context" id="menu1">
+	<menuitem label="I’m a menuitem"></menuitem>
+</menu>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;div id="menu-button1" contextmenu="menu1">I have a context menu. Right click (or equivalent) to test&lt;/div>
-&lt;menu type="context" id="menu1">
-	&lt;menuitem label="I’m a menuitem">&lt;menuitem>
-&lt;/menu></code></pre>
 		</div>
 
 		<script src="../scripts/test-scripts.js"></script>
 		<script>
-			var test = [],
-				el = document.getElementById('menu1'),
+			var test = [];
+			var el = document.getElementById('menu1'),
 			    isSupported = (typeof HTMLMenuElement != 'undefined' && el instanceof HTMLMenuElement
 				               && 'type' in el && el.type === 'context');
 

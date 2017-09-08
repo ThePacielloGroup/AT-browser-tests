@@ -31,20 +31,16 @@
 			<h2 class="test-title" id="mt-001">Test mt-001: Menu element with type="toolbar"</h2>
 
 			<div class="test-case">
-				  <button type="menu" value="File" menu="filemenu">popup menu</button>
-  <menu id="filemenu" type="context">
-    <menuitem onclick="fnew()" label="New...">
-    <menuitem onclick="fopen()" label="Open...">
-    <menuitem onclick="fsave()" label="Save">
-    <menuitem onclick="fsaveas()" label="Save as...">
-  </menu>
-</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;menu id="menu1" type="toolbar">
-	&lt;li>Toolbar item one&lt;/li>
-	&lt;li>Toolbar item two&lt;/li>
-&lt;/menu></code></pre>
+<button type="menu" value="File" menu="filemenu">
+	popup menu
+</button>
+<menu id="filemenu" type="context">
+  <menuitem onclick="fnew()" label="New..."></menuitem>
+  <menuitem onclick="fopen()" label="Open..."></menuitem>
+  <menuitem onclick="fsave()" label="Save"></menuitem>
+  <menuitem onclick="fsaveas()" label="Save as..."></menuitem>
+</menu>
+			</div>
 		</div>
 
 		<script src="../scripts/test-scripts.js"></script>

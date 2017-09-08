@@ -2,37 +2,160 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>test file: input type date element</title>
+		<title>test file: input type=date element</title>
+		<link rel="stylesheet" href="../style/styles.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	</head>
 	<body>
-		<h1><code>input type=date</code> element</h1>
-		<p><input type="date"></p>
+		<h1>
+			<code>input type=date</code> element
+		</h1>
 
-		<h2>with label </h2>
-		<p>
-			<label>date of birth
-			<input type="date"></label>
-		</p>
+		<div class="meta">
+			<div class="criteria">
+				<h2>
+					Pass Criteria
+				</h2>
+				<ul id="criteria-list">
+					<li id="basic-criteria">#1: Element is supported</li>
+					<li>#2: Correct HTML and Core Accessibility API mappings</li>
+					<li>#3: Correct Accessible Name &amp; Description Calculation</li>
+				</ul>
+			</div>
 
-		<h2>with label + placeholder</h2>
-		<p><label>date of birth <input type="date" placeholder="first name"></label></p>
+			<div class="reference">
+				<h2>
+					Reference
+				</h2>
+				<ul>
+					<li>
+						<a href="http://www.w3.org/TR/html5/forms.html#date-state-(type=datetime)">HTML5 <code>input type=datetime</code> element</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/aria/html-aam/html-aam.html#el-input-dateandtime">HTML Accessibility API Mappings for <code>input type=datetime</code> element</a>
+					</li>
+				</ul>
+			</div>
+		</div>
 
-		<h2>with label + placeholder + required</h2>
-		<p><label>date of birth <input type="date" placeholder="first name" required></label></p>
 
-		<h2>with label + placeholder + readonly</h2>
-		<p><label>date of birth <input type="date" placeholder="first name" readonly></label></p>
+		<div class="test">
+			<h2 class="test-title" id="idate-001">
+				Test idate-001: <code>input type="date"</code> element
+			</h2>
 
-		<h2>with label + placeholder + disabled</h2>
-		<p><label>date of birth <input type="date" placeholder="first name" disabled></label></p>
+			<div class="test-case">
+<input id="idate-01" type="date">
+			</div>
+		</div>
 
-		<h2>Code</h2>
-		<pre><code>&lt;label>date of birth &lt;input type="date">&lt;/label></code></pre>
 
-		<h2>Reference</h2>
-		<ul>
-			<li><a href="http://www.w3.org/TR/html5/forms.html#date-state-(type=datetime)">HTML5 input type=datetime element</a></li>
-			<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#el-input-dateandtime">HTML Accessibility API Mappings for input type=datetime element</a></li>
-		</ul>
+		<div class="test">
+			<h2 class="test-title" id="idate-002">
+				Test idate-002: <code>input type="date"</code> element
+				with <code>label</code>
+			</h2>
+
+			<div class="test-case">
+<label>
+	Date of Birth
+	<input type="date">
+</label>
+			</div>
+		</div>
+
+
+		<div class="test">
+			<h2 class="test-title" id="idate-003">
+				Test idate-003: <code>input type="date"</code> element
+				with <code>label</code> &amp; <code>placeholder</code> attribute
+			</h2>
+
+			<div class="test-case">
+<label>
+	Date of Birth
+	<input type="date" placeholder="e.g. April 01 1991">
+</label>
+			</div>
+		</div>
+
+
+		<div class="test">
+			<h2 class="test-title" id="idate-004">
+				Test idate-004: <code>input type="date"</code> element
+				with <code>label</code>,
+				<code>placeholder</code> &amp;
+				<code>required</code> attributes
+			</h2>
+
+			<div class="test-case">
+<label>
+	Date of Birth
+	<input type="date" required placeholder="e.g. April 01 1991">
+</label>
+			</div>
+		</div>
+
+
+		<div class="test">
+			<h2 class="test-title" id="idate-005">
+				Test idate-005: <code>input type="date"</code> element
+				with <code>label</code>,
+				<code>value</code> &amp;
+				<code>readonly</code> attributes
+			</h2>
+
+			<div class="test-case">
+<label>
+	Date of Birth
+	<input type="date" readonly value="April 01 1991">
+</label>
+			</div>
+		</div>
+
+
+		<div class="test">
+			<h2 class="test-title" id="idate-006">
+				Test idate-006: <code>input type="date"</code> element
+				with <code>label</code>,
+				<code>placeholder</code> &amp;
+				<code>readonly</code> attributes
+			</h2>
+
+			<div class="test-case">
+<label>
+	Date of Birth
+	<input type="date" readonly placeholder="e.g. April 01 1991">
+</label>
+			</div>
+		</div>
+
+
+		<div class="test">
+			<h2 class="test-title" id="idate-007">
+				Test idate-007: <code>input type="date"</code> element
+				with <code>label</code>,
+				<code>placeholder</code> &amp;
+				<code>disabled</code> attributes
+			</h2>
+
+			<div class="test-case">
+<label>
+	Date of Birth
+	<input type="date" disabled placeholder="e.g. April 01 1991">
+</label>
+			</div>
+		</div>
+
+
+		<script src="../scripts/test-scripts.js"></script>
+		<script>
+			var test = [];
+			var el = document.getElementById('idate-01');
+			var isSupported = (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
+
+			test.push({id: "basic-criteria", pass: isSupported});
+			displaySupportResults(test);
+		</script>
 	</body>
 </html>

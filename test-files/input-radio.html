@@ -2,56 +2,144 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>test file: input type=radio</title>
+		<title>test file: input type=radio element</title>
+		<link rel="stylesheet" href="../style/styles.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	</head>
 	<body>
-		<h1><code>input type=radio</code> element</h1>
-		<form>
-			<p id="input1">
-				<input type="radio" name="sex" value="male"><br>
-				<input type="radio" name="sex" value="female">
-			</p>
-		</form>
+		<h1>
+			<code>input type=radio</code> element
+		</h1>
 
-		<h2>with label first button checked</h2>
-		<form>
-			<p id="input2">
-				<label><input type="radio" name="sex" value="male" checked> Male</label><br>
-				<label><input type="radio" name="sex" value="female"> Female</label></p>
-		</form>
+		<div class="meta">
+			<div class="criteria">
+				<h2>
+					Pass Criteria
+				</h2>
+				<ul id="criteria-list">
+					<li id="basic-criteria">#1: Element is supported</li>
+					<li>#2: Correct HTML and Core Accessibility API mappings</li>
+					<li>#3: Correct Accessible Name &amp; Description Calculation</li>
+				</ul>
+			</div>
 
-		<h2> with label + disabled</h2>
-		<form>
-			<p id="input3">
-				<label><input type="radio" name="sex" value="male" checked disabled> Male</label><br>
-				<label> <input type="radio" name="sex" value="female" disabled> Female</label></p>
-		</form>
+			<div class="reference">
+				<h2>
+					Reference
+				</h2>
+				<ul>
+					<li>
+						<a href="https://www.w3.org/TR/html51/semantics.html#radio-button-state-(type=radio)">HTML5 <code>input type=radio</code> element</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/html-aam/#el-input-radio">HTML Accessibility API Mappings for <code>input type=radio</code> element</a>
+					</li>
+					<li>
+						<a href="https://www.w3.org/TR/core-aam-1.1/#role-map-radio">Core Accessibility API Mappings for <code>radio</code> role</a>
+					</li>
+					<li>
+						<a href="https://www.w3.org/TR/core-aam-1.1/#ariaCheckedTrue">Core Accessibility API Mappings for <code>aria-checked="true"</code></a>
+					</li>
+					<li>
+						<a href="https://www.w3.org/TR/core-aam-1.1/#ariaCheckedFalse">Core Accessibility API Mappings for <code>aria-checked="false"</code></a>
+					</li>
+				</ul>
+			</div>
+		</div>
 
-		<h2> with label + fieldset + legend</h2>
-		<form>
-			<fieldset id="input4">
-				<legend>gender</legend>
-				<label><input type="radio" name="sex" value="male" checked> Male</label><br>
-				<label><input type="radio" name="sex" value="female"> Female</label>
-			</fieldset>
-		</form>
 
-		<h2>Code</h2>
-		<pre><code>&lt;form>
-	&lt;fieldset id="input4">
-		&lt;legend>gender&lt;/legend>
-		&lt;label>&lt;input type="radio" name="sex" value="male" checked> Male&lt;/label>
-		&lt;label> &lt;input type="radio" name="sex" value="female"> Female&lt;/label>
-	&lt;/fieldset>
-&lt;/form></code></pre>
+		<div class="test">
+			<h2 class="test-title" id="irdo-001">
+				Test irdo-001: <code>input type=radio</code> elements
+			</h2>
 
-		<h2>Reference</h2>
-		<ul>
-			<li><a href="https://www.w3.org/TR/html51/semantics.html#radio-button-state-(type=radio)">HTML5 input type=radio element</a></li>
-			<li><a href="https://w3c.github.io/html-aam/#el-input-radio">HTML Accessibility API Mappings for input type=radio element</a></li>
-			<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-radio">Core Accessibility API Mappings for radio role</a></li>
-			<li><a href="https://www.w3.org/TR/core-aam-1.1/#ariaCheckedTrue">Core Accessibility API Mappings for aria-checked="true"</a></li>
-			<li><a href="https://www.w3.org/TR/core-aam-1.1/#ariaCheckedFalse">Core Accessibility API Mappings for aria-checked="false"</a></li>
-		</ul>
+			<div class="test-case">
+<form>
+	<input id="irdo-01" type="radio" name="statements" value="true"><br>
+	<input id="irdo-01b" type="radio" name="statements" value="false">
+</form>
+			</div>
+		</div>
+
+
+		<div class="test">
+			<h2 class="test-title" id="irdo-002">
+				Test irdo-002: <code>input type=radio</code> elements
+				with <code>label</code>s &amp; first button checked
+			</h2>
+
+			<div class="test-case">
+<form>
+	<label>
+		<input id="irdo-02" type="radio" name="facts" value="true" checked>
+		True
+	</label>
+	<br>
+	<label>
+		<input id="irdo-02b" type="radio" name="facts" value="false">
+		False
+	</label>
+</form>
+			</div>
+		</div>
+
+
+		<div class="test">
+			<h2 class="test-title" id="irdo-003">
+				Test irdo-003: <code>input type=radio</code> elements
+				with <code>label</code>s &amp; <code>disabled</code> attributes
+			</h2>
+
+			<div class="test-case">
+<form>
+	<label>
+		<input id="irdo-03" type="radio" name="test" value="true" disabled>
+		True
+	</label>
+	<br>
+	<label>
+		<input id="irdo-03b" type="radio" name="test" value="false" disabled>
+		False
+	</label>
+</form>
+			</div>
+		</div>
+
+
+		<div class="test">
+			<h2 class="test-title" id="irdo-004">
+				Test irdo-004: <code>input type=radio</code> elements
+				with <code>label</code>s, first button <code>checked</code>,
+				<code>fieldset</code> &amp; <code>legend</code>
+			</h2>
+
+			<div class="test-case">
+<form>
+	<fieldset id="fldset">
+		<legend id="lgnd">Favorite Pizza</legend>
+		<label>
+			<input type="radio" name="pizza" value="Pepperoni" checked>
+			Pepperoni
+		</label>
+			<br>
+		<label>
+			<input type="radio" name="pizza" value="Mushroom">
+			Mushroom
+		</label>
+	</fieldset>
+</form>
+			</div>
+		</div>
+
+
+		<script src="../scripts/test-scripts.js"></script>
+		<script>
+			var test = [];
+			var el = document.getElementById('irdo-01');
+			var isSupported = (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
+
+			test.push({id: "basic-criteria", pass: isSupported});
+			displaySupportResults(test);
+		</script>
 	</body>
 </html>

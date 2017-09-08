@@ -3,61 +3,202 @@
 	<head>
 		<meta charset="utf-8">
 		<title>test file: label element</title>
+		<link rel="stylesheet" href="../style/styles.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	</head>
 	<body>
-		<h1><code>label</code> element</h1>
-		<p><label>name</label></p>
+		<h1>
+			<code>label</code> element
+		</h1>
 
-		<h2>next to input</h2>
-		<p><label>name</label> <input type="text"></p>
+		<div class="meta">
+			<div class="criteria">
+				<h2>
+					Pass Criteria
+				</h2>
+				<ul id="criteria-list">
+					<li id="basic-criteria">#1: Element is supported</li>
+					<li>#2: Correct HTML and Core Accessibility API mappings</li>
+					<li>#3: Correct Accessible Name &amp; Description Calculation</li>
+				</ul>
+			</div>
 
-		<h2>wrapped around input</h2>
-		<p><label>name <input type="text"></label></p>
+			<div class="reference">
+				<h2>
+					Reference
+				</h2>
+				<ul>
+					<li>
+						<a href="http://www.w3.org/TR/html5/forms.html#the-label-element">HTML5 <code>label</code> element</a>
+					</li>
+					<li>
+						<a href="https://www.w3.org/TR/html5/forms.html#category-label">labelable elements</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/html-aam/#el-label">HTML Accessibility API Mappings for <code>label</code> element</a>
+					</li>
+				</ul>
+			</div>
+		</div>
 
-		<h2>associated using for/id</h2>
-		<p><label for="tst">name <input type="text" id="tst"></label></p>
 
-		<h2>with label + placeholder</h2>
-		<p><label>name <input type="text" placeholder="first name"></label></p>
-        
-    <h2>labelable elements (other than input type=text, textarea, select)</h2>
-        
-        <h3>button with label</h3>
-        <p>
-          <button id="button1">text</button> 
-          <label for="button1"> name for button via label</label>
-    </p>
-         
-         <h3>meter with label</h3>
-        <p>
-          <meter id="meter1" min="0" max="100" value="83.5">fallback content</meter> 
-          <label for="meter1">name for meter via label</label>
-    </p>
-         
-           
-         <h3>output with label</h3>
-        <p>
-          <output id="output1" style="border:1px solid blue;">52</output> 
-           <label for="output1">name for output via label</label>
-    </p>
-         
-         <h3>progress with label</h3>
-        <p>
-          <progress id="progress1" value="22" max="100">fallback content</progress> 
-          <label for="progress1">name for progress via label</label>
-    </p>
-       
-        <h2>Code</h2>
-		<p>&lt;label for="tst">name &lt;input type="text" id="tst">&lt;/label></p>
+		<div class="test">
+			<h2 class="test-title" id="lab-001">
+				Test lab-001: <code>label</code> element
+			</h2>
 
-		<h2>Reference</h2>
-		<ul>
-			<li><a href="http://www.w3.org/TR/html5/forms.html#the-label-element">HTML5 label element</a>
-			  <ul>
-			    <li><a href="https://www.w3.org/TR/html5/forms.html#category-label">labelable elements</a></li>
-		      </ul>
-			</li>
-			<li><a href="https://w3c.github.io/html-aam/#el-label">HTML Accessibility API Mappings for label element</a></li>
-		</ul>
+			<div class="test-case">
+<label id="lab-01">Name</label>
+			</div>
+		</div>
+
+
+		<div class="test">
+			<h2 class="test-title" id="lab-002">
+				Test lab-002: <code>label</code> element
+				preceding <code>input</code> in DOM
+			</h2>
+
+			<div class="test-case">
+<label>Name</label>
+<input type="text">
+			</div>
+		</div>
+
+
+		<div class="test">
+			<h2 class="test-title" id="lab-003">
+				Test lab-003: <code>label</code> element
+				wrapping <code>input</code>
+			</h2>
+
+			<div class="test-case">
+<label>
+	Name
+	<input type="text">
+</label>
+			</div>
+		</div>
+
+
+		<div class="test">
+			<h2 class="test-title" id="lab-004">
+				Test lab-004: <code>label</code> element
+				associated with <code>input</code> using
+				<code>for</code> and <code>id</code> attributes
+			</h2>
+
+			<div class="test-case">
+<label for="lab-04">
+	Name
+</label>
+<input id="lab-04" type="text">
+			</div>
+		</div>
+
+
+		<div class="test">
+			<h2 class="test-title" id="lab-005">
+				Test lab-005: <code>label</code> element
+				wrapping <code>input</code> and
+				associated with <code>input</code> using
+				<code>for</code> and <code>id</code> attributes
+			</h2>
+
+			<div class="test-case">
+<label for="lab-05">
+	Name
+	<input id="lab-05" type="text">
+</label>
+			</div>
+		</div>
+
+
+		<div class="test">
+			<h2 class="test-title" id="lab-006">
+				Test lab-006: <code>label</code> element
+				wrapping <code>input</code> with <code>placeholder</code> attribute
+			</h2>
+
+			<div class="test-case">
+<label>
+	Name
+	<input type="text" placeholder="e.g. Emmet Brown">
+</label>
+			</div>
+		</div>
+
+
+		<div class="test">
+			<h2 class="test-title" id="lab-008">
+				Test lab-007: <code>label</code> associated
+				with <code>button</code>
+			</h2>
+
+			<div class="test-case">
+<label for="labbtn">
+	Name for button via label
+</label>
+<button type="button" id="labbtn">
+	Test Label
+</button>
+			</div>
+		</div>
+
+
+		<div class="test">
+			<h2 class="test-title" id="lab-008">
+				Test lab-008: <code>label</code> associated
+				with <code>meter</code>
+			</h2>
+
+			<div class="test-case">
+<meter id="meter1" min="0" max="100" value="83.5">Fallback content</meter>
+<label for="meter1">
+	Name for meter via label
+</label>
+			</div>
+		</div>
+
+
+		<div class="test">
+			<h2 class="test-title" id="lab-009">
+				Test lab-009: <code>label</code> associated
+				with <code>output</code>
+			</h2>
+
+			<div class="test-case">
+<output id="output1" style="border:1px solid blue;">52</output>
+<label for="output1">
+	Name for output via label
+</label>
+			</div>
+		</div>
+
+
+		<div class="test">
+			<h2 class="test-title" id="lab-009">
+				Test lab-009: <code>label</code> associated
+				with <code>output</code>
+			</h2>
+
+			<div class="test-case">
+<progress id="progress1" value="22" max="100">fallback content</progress>
+<label for="progress1">
+	Name for progress via label
+</label>
+			</div>
+		</div>
+
+
+		<script src="../scripts/test-scripts.js"></script>
+		<script>
+			var test = [];
+			var el = document.getElementById('lab-01');
+			var isSupported = (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
+
+			test.push({id: "basic-criteria", pass: isSupported});
+			displaySupportResults(test);
+		</script>
 	</body>
 </html>

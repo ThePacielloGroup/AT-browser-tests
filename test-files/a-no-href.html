@@ -32,7 +32,9 @@
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="a-001">Test a-001: Anchor with no <code>href</code></h2>
+			<h2 class="test-title" id="a-001">
+				Test a-001: Anchor with no <code>href</code>
+			</h2>
 
 			<div class="test-case">
 <p>
@@ -43,9 +45,9 @@
 
 		<script src="../scripts/test-scripts.js"></script>
 		<script>
-			var test = [],
-				el = document.getElementById('a1'),
-				isSupported = (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
+			var test = [];
+			var el = document.getElementById('a1');
+			var isSupported = (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
 
 			test.push({id: "basic-criteria", pass: isSupported});
 			displaySupportResults(test);

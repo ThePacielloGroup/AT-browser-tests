@@ -21,17 +21,29 @@
 			<div class="reference">
 				<h2>Reference</h2>
 				<ul>
-					<li><a href="https://w3c.github.io/html/sections.html#the-article-element">HTML5 article element</a></li>
-					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#el-article">HTML Accessibility API Mappings for article element</a></li>
-					<li><a href="https://w3c.github.io/aria/core-aam/core-aam.html#role-map-article">Core Accessibility API Mappings for article role</a></li>
-					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#section-and-grouping-element-accessible-name-calculation">Accessible Name Calculation</a></li>
-					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#section-and-grouping-element-accessible-description-calculation">Accessible Description Calculation</a></li>
+					<li>
+						<a href="https://w3c.github.io/html/sections.html#the-article-element">HTML5 <code>article</code> element</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/aria/html-aam/html-aam.html#el-article">HTML Accessibility API Mappings for <code>article</code> element</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/aria/core-aam/core-aam.html#role-map-article">Core Accessibility API Mappings for <code>article</code> role</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/aria/html-aam/html-aam.html#section-and-grouping-element-accessible-name-calculation">Accessible Name Calculation</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/aria/html-aam/html-aam.html#section-and-grouping-element-accessible-description-calculation">Accessible Description Calculation</a>
+					</li>
 				</ul>
 			</div>
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="ar-001">Test ar-001: Plain Article</h2>
+			<h2 class="test-title" id="ar-001">
+				Test ar-001: Plain <code>article</code>
+			</h2>
 
 			<div class="test-case">
 <article id="article1">Lorem ipsum...</article>
@@ -40,7 +52,10 @@
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="ar-002">Test ar-002: Article with <code>&lt;h1></code></h2>
+			<h2 class="test-title" id="ar-002">
+				Test ar-002: <code>article</code>
+				with <code>&lt;h1></code>
+			</h2>
 
 			<div class="test-case">
 <article>
@@ -51,67 +66,94 @@
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="ar-003">Test ar-003: Article with <code>aria-label</code></h2>
+			<h2 class="test-title" id="ar-003">
+				Test ar-003: <code>article</code>
+				with <code>aria-label</code>
+			</h2>
 
 			<div class="test-case">
 <article aria-label="aria-label attribute">
-	<p>Aria-label should be used as accessible name.</p>
+	<p>
+		<code>aria-label</code> should be used as accessible name.
+	</p>
 	<p>No accessible description.</p>
 </article>
 			</div>
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="ar-004">Test ar-004: Article with <code>aria-labelledby</code></h2>
+			<h2 class="test-title" id="ar-004">
+				Test ar-004: <code>article</code>
+				with <code>aria-labelledby</code>
+			</h2>
 
 			<div class="test-case">
 <article aria-labelledby="ar-004-labelledby">
-	<h1 id="ar-004-labelledby">h1 referenced by aria-labelledby</h1>
-	<p>Aria-labelledby should be used as accessible name.</p>
+	<h1 id="ar-004-labelledby">
+		<code>h1</code> referenced by <code>aria-labelledby</code>
+	</h1>
+	<p>
+		<code>aria-labelledby</code> should be used as accessible name.
+	</p>
 	<p>No accessible description.</p>
 </article>
 			</div>
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="ar-005">Test ar-005: Article with <code>title</code> attribute</h2>
+			<h2 class="test-title" id="ar-005">
+				Test ar-005: <code>article</code>
+				with <code>title</code> attribute
+			</h2>
 
 			<div class="test-case">
 <article title="title attribute">
-	<p>Title should be used as accessible name.</p>
+	<p>
+		<code>title</code> should be used as accessible name.
+	</p>
 	<p>No accessible description.</p>
 </article>
 			</div>
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="ar-006">Test ar-006: Article with <code>aria-describedby</code></h2>
+			<h2 class="test-title" id="ar-006">
+				Test ar-006: <code>article</code>
+				with <code>aria-describedby</code>
+			</h2>
 
 			<div class="test-case">
 <article aria-describedby="ar-006-describedby">
-	<h1 id="ar-006-describedby">h1 referenced by aria-describedby</h1>
-	<p>Aria-describedby should be used as accessible description.</p>
+	<h1 id="ar-006-describedby">
+		<code>h1</code> referenced by <code>aria-describedby</code>
+	</h1>
+	<p>
+		<code>aria-describedby</code> should be used as accessible description.
+	</p>
 	<p>No accessible name.</p>
 </article>
 			</div>
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="ar-007">Test ar-007: Article with <code>aria-label</code> &amp; <code>title</code> attributes</h2>
+			<h2 class="test-title" id="ar-007">
+				Test ar-007: <code>article</code>
+				with <code>aria-label</code> &amp; <code>title</code> attributes
+			</h2>
 
 			<div class="test-case">
 <article aria-label="aria-label attribute" title="title attribute">
-	<p>Aria-label should be used as accessible name.</p>
-	<p>Title should be used as accessible description.</p>
+	<p><code>aria-label</code> should be used as accessible name.</p>
+	<p><code>title</code> should be used as accessible description.</p>
 </article>
 			</div>
 		</div>
 
 		<script src="../scripts/test-scripts.js"></script>
 		<script>
-			var test = [],
-				el = document.getElementById('article1'),
-			    isSupported = (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
+			var test = [];
+			var el = document.getElementById('article1');
+			var isSupported = (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
 
 			test.push({id: "basic-criteria", pass: isSupported});
 			displaySupportResults(test);

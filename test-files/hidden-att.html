@@ -20,35 +20,50 @@
 			<div class="reference">
 				<h2>Reference</h2>
 				<ul>
-					<li><a href="https://www.w3.org/TR/html51/editing.html#the-hidden-attribute">HTML5 hidden attribute</a>
-					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#att-hidden">HTML Accessibility API Mappings for hidden attribute</a></li>
+					<li>
+						<a href="https://www.w3.org/TR/html51/editing.html#the-hidden-attribute">HTML5 <code>hidden</code> attribute</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/aria/html-aam/html-aam.html#att-hidden">HTML Accessibility API Mappings for <code>hidden</code> attribute</a>
+					</li>
 				</ul>
 			</div>
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="hn-001">Test hn-001: Hidden attribute</h2>
+			<h2 class="test-title" id="hn-001">
+				Test hn-001: <code>hidden</code> attribute
+			</h2>
 
 			<div class="test-case">
-<p hidden>These elements should be hidden both visually and to assistive technology.</p>
+<p hidden>
+	These elements should be hidden both visually
+	and to assistive technology.
+</p>
 <input id="input1" type="button" hidden />
 			</div>
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="hn-002">Test hn-002: Hidden with aria-hidden=true</h2>
+			<h2 class="test-title" id="hn-002">
+				Test hn-002: <code>hidden</code> attribute
+				with <code>aria-hidden=true</code>
+			</h2>
 
 			<div class="test-case">
-<p hidden aria-hidden="true">These elements should be hidden both visually and to assistive technology.</p>
+<p hidden aria-hidden="true">
+	These elements should be hidden both visually
+	and to assistive technology.
+</p>
 <input id="input2" type="button" hidden aria-hidden="true" />
 			</div>
 		</div>
 
 		<script src="../scripts/test-scripts.js"></script>
 		<script>
-			var test = [],
-				el = document.getElementById('hidden1'),
-			    isSupported = ('hidden' in el);
+			var test = [];
+			var el = document.getElementById('hidden1');
+			var isSupported = ('hidden' in el);
 
 			test.push({id: "basic-criteria", pass: isSupported});
 			displaySupportResults(test);

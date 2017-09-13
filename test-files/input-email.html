@@ -22,20 +22,38 @@
 			<div class="reference">
 				<h2>Reference</h2>
 				<ul>
-					<li><a href="http://www.w3.org/TR/html/forms.html#e-mail-state-(type=email)">HTML5 input type=email element</a></li>
-					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#el-input-email">HTML Accessibility API Mappings for input type=email element without list attribute</a></li>
-					<li><a href="https://w3c.github.io/aria/core-aam/core-aam.html#role-map-textbox">Core Accessibility API Mappings for textbox role</a></li>
-					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#el-input-textetc-autocomplete">HTML Accessibility API Mappings for input type=email element with list attribute</a> <a href="datalist.html#di-001">[Test: DI-001]</a></li>
-					<li><a href="https://w3c.github.io/aria/core-aam/core-aam.html#role-map-combobox">Core Accessibility API Mappings for combobox role</a> <a href="datalist.html#di-001">[Test: DI-001]</a></li>
-					<li><a href="https://w3c.github.io/aria/core-aam/core-aam.html#ariaOwns">Core Accessibility API Mappings for aria-owns property</a> <a href="datalist.html#di-001">[Test: DI-001]</a></li>
-					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#input-type-text-input-type-password-input-type-search-input-type-tel-input-type-email-input-type-url-and-textarea-element-accessible-name-calculation">Accessible Name Calculation</a></li>
-					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#input-type-text-input-type-password-input-type-search-input-type-tel-input-type-email-input-type-url-and-textarea-element-accessible-description-calculation">Accessible Description Calculation</a></li>
+					<li>
+						<a href="https://w3c.github.io/html/sec-forms.html#email-state-typeemail">HTML5 <code>input type=email</code> element</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/aria/html-aam/html-aam.html#el-input-email">HTML Accessibility API Mappings for <code>input type=email</code> element without list attribute</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/aria/core-aam/core-aam.html#role-map-textbox">Core Accessibility API Mappings for <code>textbox</code> role</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/aria/html-aam/html-aam.html#el-input-textetc-autocomplete">HTML Accessibility API Mappings for <code>input type=email</code> element with <code>list</code> attribute</a> <a href="datalist.html#di-001">[Test: DI-001]</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/aria/core-aam/core-aam.html#role-map-combobox">Core Accessibility API Mappings for <code>combobox</code> role</a> <a href="datalist.html#di-001">[Test: DI-001]</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/aria/core-aam/core-aam.html#ariaOwns">Core Accessibility API Mappings for <code>aria-owns</code> property</a> <a href="datalist.html#di-001">[Test: DI-001]</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/aria/html-aam/html-aam.html#input-type-text-input-type-password-input-type-search-input-type-tel-input-type-email-input-type-url-and-textarea-element-accessible-name-calculation">Accessible Name Calculation</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/aria/html-aam/html-aam.html#input-type-text-input-type-password-input-type-search-input-type-tel-input-type-email-input-type-url-and-textarea-element-accessible-description-calculation">Accessible Description Calculation</a>
+					</li>
 				</ul>
 			</div>
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="ei-001">Test ei-001: Unlabelled input type="email"</h2>
+			<h2 class="test-title" id="ei-001">
+				Test ei-001: Unlabelled <code>input type=email</code>
+			</h2>
 
 			<div class="test-case">
 <form>
@@ -45,50 +63,69 @@
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="ei-002">Test ei-002: Input type="email" with <code>aria-label</code></h2>
+			<h2 class="test-title" id="ei-002">
+				Test ei-002: <code>input type=email</code>
+				with <code>aria-label</code>
+			</h2>
 
 			<div class="test-case">
 <form>
 	<input id="input2" type="email" aria-label="aria-label attribute" />
 </form>
-</div>
+			</div>
 			<div class="test-notes">
-				<p>Aria-label should be used as accessible name</p>
+				<p><code>aria-label</code> should be used as accessible name</p>
 				<p>No accessible description.</p>
 			</div>
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="ei-003">Test ei-003: Input type="email" with <code>aria-labelledby</code></h2>
+			<h2 class="test-title" id="ei-003">
+				Test ei-003: <code>input type=email</code>
+				with <code>aria-labelledby</code>
+			</h2>
 
 			<div class="test-case">
 <form>
-	<p id="ei-003-labelledby">p referenced by aria-labelledby</p>
-	<input id="input3" type="email" aria-labelledby="ei-003-labelledby" />
+	<p id="ei-003-labelledby">
+		<code>p</code> referenced by <code>aria-labelledby</code>
+	</p>
+	<input id="input3" type="email" aria-labelledby="ei-003-labelledby">
 </form>
 </div>
 			<div class="test-notes">
-				<p>Aria-labelledby should be used as accessible name</p>
+				<p>
+					<code>aria-labelledby</code> should be used as accessible name
+				</p>
 				<p>No accessible description.</p>
 			</div>
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="ei-004">Test ei-004: Input type="email" with label</h2>
+			<h2 class="test-title" id="ei-004">
+				Test ei-004: <code>input type=email</code>
+				with <code>label</code>
+			</h2>
 
 			<div class="test-case">
 <form>
-	<label>label wrapping input <input id="input4" type="email" /></label>
+	<label>
+		label wrapping input
+		<input id="input4" type="email">
+	</label>
 </form>
 </div>
 			<div class="test-notes">
-				<p>Label should be used as accessible name</p>
+				<p><code>label</code> should be used as accessible name</p>
 				<p>No accessible description.</p>
 			</div>
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="ei-005">Test ei-005: Input type="email" with <code>title</code> attribute</h2>
+			<h2 class="test-title" id="ei-005">
+				Test ei-005: <code>input type=email</code>
+				with <code>title</code> attribute
+			</h2>
 
 			<div class="test-case">
 <form>
@@ -96,48 +133,63 @@
 </form>
 </div>
 			<div class="test-notes">
-				<p>Title should be used as accessible name</p>
+				<p><code>title</code> should be used as accessible name</p>
 				<p>No accessible description.</p>
 			</div>
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="ei-006">Test ei-006: Input type="email" with <code>aria-describedby</code></h2>
+			<h2 class="test-title" id="ei-006">
+				Test ei-006: <code>input type=email</code>
+				with <code>aria-describedby</code>
+			</h2>
 
 			<div class="test-case">
 <form>
 	<input id="input6" type="email" aria-describedby="ei-006-describedby" />
-	<p id="ei-006-describedby">p referenced by aria-describedby</p>
+	<p id="ei-006-describedby">
+		<code>p</code> referenced by <code>aria-describedby</code>
+	</p>
 </form>
 </div>
 			<div class="test-notes">
-				<p>Aria-describedby should be used as accessible description</p>
+				<p>
+					<code>aria-describedby</code> should be used as accessible description
+				</p>
 				<p>No accessible name.</p>
 			</div>
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="ei-007">Test ei-007: Input type="email" with <code>label</code> element &amp; <code>title</code> attribute</h2>
+			<h2 class="test-title" id="ei-007">
+				Test ei-007: <code>input type=email</code>
+				with <code>label</code> element
+				&amp; <code>title</code> attribute
+			</h2>
 
 			<div class="test-case">
 <form>
-	<label for="input7">label referenced by for/id attributes</label>
+	<label for="input7">
+		label referenced by for/id attributes
+	</label>
 	<input id="input7" type="email" title="title attribute" />
 </form>
 </div>
 			<div class="test-notes">
-				<p>Label should be used as accessible name</p>
-				<p>Title should be used as accessible description</p>
+				<p><code>label</code> should be used as accessible name</p>
+				<p><code>title</code> should be used as accessible description</p>
 			</div>
 		</div>
 
-		<p><strong>Note:</strong> placeholder and aria-placeholder are tested as part of the <a href="placeholder-att.html">placeholder attribute</a> test.</p>
+		<p>
+			<strong>Note:</strong> placeholder and aria-placeholder are tested as part of the <a href="placeholder-att.html">placeholder attribute</a> test.
+		</p>
 
 		<script src="../scripts/test-scripts.js"></script>
 		<script>
-			var test = [],
-				el = document.getElementById('input1'),
-			    isSupported = (el.type === 'email');
+			var test = [];
+			var el = document.getElementById('input1');
+			var isSupported = (el.type === 'email');
 
 			test.push({id: "basic-criteria", pass: isSupported});
 			displaySupportResults(test);

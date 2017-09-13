@@ -28,8 +28,9 @@
 					Reference
 				</h2>
 				<ul>
-					<li><a href="https://w3c.github.io/html/semantics-embedded-content.html#the-area-element">HTML5 <code>area</code> element</a>
-				</li>
+					<li>
+						<a href="https://w3c.github.io/html/semantics-embedded-content.html#the-area-element">HTML5 <code>area</code> element</a>
+					</li>
 					<li>
 						<a href="https://w3c.github.io/html-aam/#el-area">HTML Accessibility API Mappings for <code>area</code> element</a>
 					</li>
@@ -45,8 +46,8 @@
 
 
 		<div class="test">
-			<h2 class="test-title" id="ar-001">
-				Test ar-001: <code>area</code> element
+			<h2 class="test-title" id="area-001">
+				Test area-001: <code>area</code> element
 			</h2>
 
 			<div class="test-case">
@@ -56,7 +57,7 @@
 </p>
 
 <map name="imagemap">
-	<area id="ar-01"
+	<area id="area-01"
 				href="Chichen_Itza.html" shape="rect" coords="0,0,93,65"
 				alt="chichen Itza"/>
 	<area href="Christ_on_Corcovado_mountain.html" shape="rect" coords="93,1,186,65"
@@ -79,7 +80,7 @@
 		<script src="../scripts/test-scripts.js"></script>
 		<script>
 			var test = [];
-			var el = document.getElementById('ar-01');
+			var el = document.getElementById('area-01');
 			var isSupported = (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
 			test.push({
 				id: "basic-criteria",

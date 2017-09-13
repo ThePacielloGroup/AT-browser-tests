@@ -7,7 +7,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	</head>
 	<body>
-		<h1><code>input type=time</code> element</h1>
+		<h1>
+			<code>input type=time</code> element
+		</h1>
 		<div class="meta">
 			<div class="criteria">
 				<h2>Pass Criteria</h2>
@@ -27,102 +29,141 @@
 			<div class="reference">
 				<h2>Reference</h2>
 				<ul>
-					<li><a href="http://www.w3.org/TR/html5/forms.html#time-state-(type=time)">HTML5 input type=time element</a></li>
-					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#el-input-time">HTML Accessibility API Mappings for input type=time element</a></li>
-					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#other-form-elements-accessible-name-calculation">Accessible Name Calculation</a></li>
-					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#other-form-elements-accessible-description-calculation">Accessible Description Calculation</a></li>
+					<li>
+						<a href="https://w3c.github.io/html/sec-forms.html#time-state-typetime">HTML5 <code>input type=time</code> element</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/aria/html-aam/html-aam.html#el-input-time">HTML Accessibility API Mappings for <code>input type=time</code> element</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/aria/html-aam/html-aam.html#other-form-elements-accessible-name-calculation">Accessible Name Calculation</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/aria/html-aam/html-aam.html#other-form-elements-accessible-description-calculation">Accessible Description Calculation</a>
+					</li>
 				</ul>
 			</div>
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="ti-001">Test ti-001: Unlabelled input type="time"</h2>
+			<h2 class="test-title" id="ti-001">
+				Test ti-001: Unlabelled <code>input type=time</code>
+			</h2>
 
 			<div class="test-case">
-				<input id="itime-01" type="time" />
+				<input id="itime-01" type="time">
 			</div>
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="ti-002">Test ti-002: Input type="time" with <code>aria-label</code></h2>
+			<h2 class="test-title" id="ti-002">
+				Test ti-002: <code>input type=time</code>
+				with <code>aria-label</code>
+			</h2>
 
 			<div class="test-case">
-<input id="input2" type="time" aria-label="aria-label attribute" />
-</div>
+<input id="input2" type="time" aria-label="aria-label attribute">
+			</div>
 			<div class="test-notes">
-<p>Aria-label should be used as accessible name</p>
+<p><code>aria-label</code> should be used as accessible name.</p>
 <p>No accessible description.</p>
 			</div>
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="ti-003">Test ti-003: Input type="time" with <code>aria-labelledby</code></h2>
+			<h2 class="test-title" id="ti-003">
+				Test ti-003: <code>input type=time</code>
+				with <code>aria-labelledby</code>
+			</h2>
 
 			<div class="test-case">
-<p id="ti-003-labelledby">p referenced by aria-labelledby</p>
-<input id="input3" type="time" aria-labelledby="ti-003-labelledby" />
+<p id="ti-003-labelledby">
+	<code>p</code> referenced by <code>aria-labelledby</code>.
+</p>
+<input id="input3" type="time" aria-labelledby="ti-003-labelledby">
 </div>
 			<div class="test-notes">
-<p>Aria-labelledby should be used as accessible name</p>
+<p>
+	<code>aria-labelledby</code> should be used as accessible name.
+</p>
 <p>No accessible description.</p>
 			</div>
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="ti-004">Test ti-004: Input type="time" with label</h2>
+			<h2 class="test-title" id="ti-004">
+				Test ti-004: <code>input type=time</code>
+				with <code>label</code>
+			</h2>
 
 			<div class="test-case">
-<label>label wrapping input <input id="input4" type="time" /></label>
+<label>
+	Label wrapping input
+	<input id="input4" type="time">
+</label>
 </div>
 			<div class="test-notes">
-<p>Label should be used as accessible name</p>
+<p><code>label</code> should be used as accessible name.</p>
 <p>No accessible description.</p>
 			</div>
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="ti-005">Test ti-005: Input type="time" with <code>title</code> attribute</h2>
+			<h2 class="test-title" id="ti-005">
+				Test ti-005: <code>input type=time</code>
+				with <code>title</code> attribute
+			</h2>
 
 			<div class="test-case">
-<input id="input5" type="time" title="title attribute" />
+<input id="input5" type="time" title="title attribute">
 </div>
 			<div class="test-notes">
-<p>Title should be used as accessible name</p>
+<p><code>title</code> should be used as accessible name.</p>
 <p>No accessible description.</p>
 			</div>
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="ti-006">Test ti-006: Input type="time" with <code>aria-describedby</code></h2>
+			<h2 class="test-title" id="ti-006">
+				Test ti-006: <code>input type=time</code>
+				with <code>aria-describedby</code>
+			</h2>
 
 			<div class="test-case">
-<input id="input6" type="time" aria-describedby="ti-006-describedby" />
-<p id="ti-006-describedby">p referenced by aria-describedby</p>
+<input id="input6" type="time" aria-describedby="ti-006-describedby">
+<p id="ti-006-describedby">
+	<code>p</code> referenced by <code>aria-describedby</code>.
+</p>
 </div>
 			<div class="test-notes">
-<p>Aria-describedby should be used as accessible description</p>
+<p><code>aria-describedby</code> should be used as accessible description.</p>
 <p>No accessible name.</p>
 			</div>
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="ti-007">Test ti-007: Input type="time" with <code>label</code> element &amp; <code>title</code> attribute</h2>
+			<h2 class="test-title" id="ti-007">
+				Test ti-007: <code>input type=time</code>
+				with <code>label</code> element &amp; <code>title</code> attribute
+			</h2>
 
 			<div class="test-case">
-<label for="input7">label referenced by for/id attributes</label>
-<input id="input7" type="time" title="title attribute" />
+<label for="input7">
+	Label referenced by for/id attributes
+</label>
+<input id="input7" type="time" title="title attribute">
 </div>
 			<div class="test-notes">
-<p>Label should be used as accessible name</p>
-<p>Title should be used as accessible description</p>
+<p><code>label</code> should be used as accessible name.</p>
+<p><code>title</code> should be used as accessible description.</p>
 			</div>
 		</div>
 
 		<script src="../scripts/test-scripts.js"></script>
 		<script>
-			var test = [],
-				el = document.getElementById('itime-01'),
-			    isSupported = (el.type === 'time');
+			var test = [];
+			var el = document.getElementById('itime-01');
+			var isSupported = (el.type === 'time');
 
 			test.push({id: "basic-criteria", pass: isSupported});
 			displaySupportResults(test);

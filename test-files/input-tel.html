@@ -7,7 +7,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	</head>
 	<body>
-		<h1><code>input type=tel</code> element test</h1>
+		<h1>
+			<code>input type=tel</code> element test
+		</h1>
 		<div class="meta">
 			<div class="criteria">
 				<h2>Pass Criteria</h2>
@@ -21,101 +23,147 @@
 			<div class="reference">
 				<h2>Reference</h2>
 				<ul>
-					<li><a href="http://www.w3.org/TR/html/forms.html#telephone-state-(type=tel)">HTML5 input type=tel element</a></li>
-					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#el-input-tel">HTML Accessibility API Mappings for input type=tel element without list attribute</a></li>
-					<li><a href="https://w3c.github.io/aria/core-aam/core-aam.html#role-map-textbox">Core Accessibility API Mappings for textbox role</a></li>
-					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#el-input-textetc-autocomplete">HTML Accessibility API Mappings for input type=tel element with list attribute</a> <a href="datalist.html#di-001">[Test: DI-001]</a></li>
-					<li><a href="https://w3c.github.io/aria/core-aam/core-aam.html#role-map-combobox">Core Accessibility API Mappings for combobox role</a> <a href="datalist.html#di-001">[Test: DI-001]</a></li>
-					<li><a href="https://w3c.github.io/aria/core-aam/core-aam.html#ariaOwns">Core Accessibility API Mappings for aria-owns property</a> <a href="datalist.html#di-001">[Test: DI-001]</a></li>
-					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#input-type-text-input-type-password-input-type-search-input-type-tel-input-type-email-input-type-url-and-textarea-element-accessible-name-calculation">Accessible Name Calculation</a></li>
-					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#input-type-text-input-type-password-input-type-search-input-type-tel-input-type-email-input-type-url-and-textarea-element-accessible-description-calculation">Accessible Description Calculation</a></li>
+					<li>
+						<a href="https://w3c.github.io/html/sec-forms.html#telephone-state-typetel">HTML5 <code>input type=tel element</code></a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/aria/html-aam/html-aam.html#el-input-tel">HTML Accessibility API Mappings for input <code>type=tel element</code> without list attribute</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/aria/core-aam/core-aam.html#role-map-textbox">Core Accessibility API Mappings for <code>textbox</code> role</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/aria/html-aam/html-aam.html#el-input-textetc-autocomplete">HTML Accessibility API Mappings for input <code>type=tel element</code> with <code>list</code> attribute</a> <a href="datalist.html#di-001">[Test: DI-001]</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/aria/core-aam/core-aam.html#role-map-combobox">Core Accessibility API Mappings for <code>combobox</code> role</a> <a href="datalist.html#di-001">[Test: DI-001]</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/aria/core-aam/core-aam.html#ariaOwns">Core Accessibility API Mappings for <code>aria-owns</code> property</a> <a href="datalist.html#di-001">[Test: DI-001]</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/aria/html-aam/html-aam.html#input-type-text-input-type-password-input-type-search-input-type-tel-input-type-email-input-type-url-and-textarea-element-accessible-name-calculation">Accessible Name Calculation</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/aria/html-aam/html-aam.html#input-type-text-input-type-password-input-type-search-input-type-tel-input-type-email-input-type-url-and-textarea-element-accessible-description-calculation">Accessible Description Calculation</a>
+					</li>
 				</ul>
 			</div>
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="tl-001">Test tl-001: Unlabelled input type="tel"</h2>
+			<h2 class="test-title" id="tl-001">
+				Test tl-001: Unlabelled <code>input type=tel</code>
+			</h2>
 
 			<div class="test-case">
-				<input id="input1" type="tel" />
+				<input id="input1" type="tel" >
 			</div>
 
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="tl-002">Test tl-002: Input type="tel" with <code>aria-label</code></h2>
+			<h2 class="test-title" id="tl-002">
+				Test tl-002: <code>input type=tel</code>
+				with <code>aria-label</code>
+			</h2>
 
 			<div class="test-case">
-<input id="input2" type="tel" aria-label="aria-label attribute" />
+<input id="input2" type="tel" aria-label="aria-label attribute">
 </div>
 			<div class="test-notes">
-<p>Aria-label should be used as accessible name</p>
-<p>No accessible description.</p>
-			</div>
-
-		</div>
-
-		<div class="test">
-			<h2 class="test-title" id="tl-003">Test tl-003: Input type="tel" with <code>aria-labelledby</code></h2>
-
-			<div class="test-case">
-<p id="tl-003-labelledby">p referenced by aria-labelledby</p>
-<input id="input3" type="tel" aria-labelledby="tl-003-labelledby" />
-</div>
-			<div class="test-notes">
-<p>Aria-labelledby should be used as accessible name</p>
+<p><code>aria-label</code> should be used as accessible name.</p>
 <p>No accessible description.</p>
 			</div>
 
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="tl-004">Test tl-004: Input type="tel" with label</h2>
+			<h2 class="test-title" id="tl-003">
+				Test tl-003: <code>input type=tel</code>
+				with <code>aria-labelledby</code>
+			</h2>
 
 			<div class="test-case">
-<label>label wrapping input <input id="input4" type="tel" /></label>
+<p id="tl-003-labelledby">
+	<code>p</code> referenced by aria-labelledby</p>
+<input id="input3" type="tel" aria-labelledby="tl-003-labelledby">
 </div>
 			<div class="test-notes">
-<p>Label should be used as accessible name</p>
+<p><code>aria-labelledby</code> should be used as accessible name.</p>
+<p>No accessible description.</p>
+			</div>
+
+		</div>
+
+		<div class="test">
+			<h2 class="test-title" id="tl-004">
+				Test tl-004: <code>input type=tel</code>
+				with label
+			</h2>
+
+			<div class="test-case">
+<label>
+	Label wrapping input
+	<input id="input4" type="tel">
+</label>
+</div>
+			<div class="test-notes">
+<p><code>label</code> should be used as accessible name.</p>
 <p>No accessible description.</p>
 			</div>
 </div>
 
 		<div class="test">
-			<h2 class="test-title" id="tl-005">Test tl-005: Input type="tel" with <code>title</code> attribute</h2>
+			<h2 class="test-title" id="tl-005">
+				Test tl-005: <code>input type=tel</code>
+				with <code>title</code> attribute
+			</h2>
 
 			<div class="test-case">
-<input id="input5" type="tel" title="title attribute" />
+<input id="input5" type="tel" title="title attribute">
 </div>
 			<div class="test-notes">
-<p>Title should be used as accessible name</p>
+<p><code>title</code> should be used as accessible name.</p>
 <p>No accessible description.</p>
 			</div>
 </div>
 
 		<div class="test">
-			<h2 class="test-title" id="tl-006">Test tl-006: Input type="tel" with <code>aria-describedby</code></h2>
+			<h2 class="test-title" id="tl-006">
+				Test tl-006: <code>input type=tel</code>
+				with <code>aria-describedby</code>
+			</h2>
 
 			<div class="test-case">
 <input id="input6" type="tel" aria-describedby="tl-006-describedby" />
-<p id="tl-006-describedby">p referenced by aria-describedby</p>
+<p id="tl-006-describedby">
+	<code>p</code> referenced by <code>aria-describedby</code>
+</p>
 </div>
 			<div class="test-notes">
-<p>Aria-describedby should be used as accessible description</p>
+<p>
+	<code>aria-describedby</code> should be used as accessible description.
+</p>
 <p>No accessible name.</p>
 			</div>
 </div>
 
 		<div class="test">
-			<h2 class="test-title" id="tl-007">Test tl-007: Input type="tel" with <code>label</code> element &amp; <code>title</code> attribute</h2>
+			<h2 class="test-title" id="tl-007">
+				Test tl-007: <code>input type=tel</code>
+				with <code>label</code> element &amp; <code>title</code> attribute
+			</h2>
 
 			<div class="test-case">
-<label for="input7">label referenced by for/id attributes</label>
-<input id="input7" type="tel" title="title attribute" />
+<label for="input7">
+	Label referenced by for/id attributes
+</label>
+<input id="input7" type="tel" title="title attribute">
 </div>
 			<div class="test-notes">
-<p>Label should be used as accessible name</p>
-<p>Title should be used as accessible description</p>
+<p><code>label</code> should be used as accessible name.</p>
+<p><code>title</code> should be used as accessible description.</p>
 			</div>
 </div>
 
@@ -123,9 +171,9 @@
 
 		<script src="../scripts/test-scripts.js"></script>
 		<script>
-			var test = [],
-				el = document.getElementById('input1'),
-			    isSupported = (el.type === 'tel');
+			var test = [];
+			var el = document.getElementById('input1');
+			var isSupported = (el.type === 'tel');
 
 			test.push({id: "basic-criteria", pass: isSupported});
 			displaySupportResults(test);

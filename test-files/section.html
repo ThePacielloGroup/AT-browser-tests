@@ -8,7 +8,7 @@
 	</head>
 	<body>
 		<h1>
-			<code>section</code> element test
+			<code>section</code> element
 		</h1>
 		<div class="meta">
 			<div class="criteria">
@@ -23,17 +23,29 @@
 			<div class="reference">
 				<h2>Reference</h2>
 				<ul>
-					<li><a href="http://www.w3.org/TR/html5/sections.html#the-section-element">HTML5 section element</a></li>
-					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#el-section">HTML Accessibility API Mappings for section element</a></li>
-					<li><a href="https://w3c.github.io/aria/core-aam/core-aam.html#role-map-region">Core Accessibility API Mappings for region role</a></li>
-					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#section-and-grouping-element-accessible-name-calculation">Accessible Name Calculation</a></li>
-					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#section-and-grouping-element-accessible-description-calculation">Accessible Description Calculation</a></li>
+					<li>
+						<a href="https://w3c.github.io/html/sections.html#the-section-element">HTML5 <code>section</code> element</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/aria/html-aam/html-aam.html#el-section">HTML Accessibility API Mappings for <code>section</code> element</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/aria/core-aam/core-aam.html#role-map-region">Core Accessibility API Mappings for <code>region</code> role</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/aria/html-aam/html-aam.html#section-and-grouping-element-accessible-name-calculation">Accessible Name Calculation</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/aria/html-aam/html-aam.html#section-and-grouping-element-accessible-description-calculation">Accessible Description Calculation</a>
+					</li>
 				</ul>
 			</div>
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="sc-001">Test sc-001: Plain Section</h2>
+			<h2 class="test-title" id="sc-001">
+				Test sc-001: Plain <code>section</code>
+			</h2>
 
 			<div class="test-case">
 <section id="section1">
@@ -44,7 +56,8 @@
 
 		<div class="test">
 			<h2 class="test-title" id="sc-002">
-				Test sc-002: <code>section</code> with <code>&lt;h2></code>
+				Test sc-002: <code>section</code>
+				with <code>&lt;h2></code>
 			</h2>
 
 			<div class="test-case">
@@ -57,7 +70,8 @@
 
 		<div class="test">
 			<h2 class="test-title" id="sc-003">
-				Test sc-003: <code>section</code> with <code>aria-label</code>
+				Test sc-003: <code>section</code>
+				with <code>aria-label</code>
 			</h2>
 
 			<div class="test-case">
@@ -75,7 +89,9 @@
 
 			<div class="test-case">
 <section aria-labelledby="sc-004-labelledby">
-	<h2 id="sc-004-labelledby">h2 referenced by <code>aria-labelledby</code></h2>
+	<h2 id="sc-004-labelledby">
+		<code>h2</code> referenced by <code>aria-labelledby</code>
+	</h2>
 	<p><code>aria-labelledby</code> should be used as accessible name.</p>
 	<p>No accessible description.</p>
 </section>
@@ -84,12 +100,13 @@
 
 		<div class="test">
 			<h2 class="test-title" id="sc-005">
-				Test sc-005: <code>section</code> with <code>title</code> attribute
+				Test sc-005: <code>section</code>
+				with <code>title</code> attribute
 			</h2>
 
 			<div class="test-case">
 <section title="title attribute">
-	<p>Title should be used as accessible name.</p>
+	<p><code>title</code> should be used as accessible name.</p>
 	<p>No accessible description.</p>
 </section>
 			</div>
@@ -97,12 +114,15 @@
 
 		<div class="test">
 			<h2 class="test-title" id="sc-006">
-				Test sc-006: <code>section</code> with <code>aria-describedby</code>
+				Test sc-006: <code>section</code>
+				with <code>aria-describedby</code>
 			</h2>
 
 			<div class="test-case">
 <section aria-describedby="sc-006-describedby">
-	<h2 id="sc-006-describedby">h2 referenced by <code>aria-describedby</code></h2>
+	<h2 id="sc-006-describedby">
+		<code>h2</code> referenced by <code>aria-describedby</code>
+	</h2>
 	<p><code>aria-describedby</code> should be used as accessible description.</p>
 	<p>No accessible name.</p>
 </section>
@@ -118,17 +138,17 @@
 
 			<div class="test-case">
 <section aria-label="aria-label attribute" title="title attribute">
-	<p>Aria-label should be used as accessible name.</p>
-	<p>Title should be used as accessible description.</p>
+	<p><code>aria-label</code> should be used as accessible name.</p>
+	<p><code>title</code> should be used as accessible description.</p>
 </section>
 			</div>
 		</div>
 
 		<script src="../scripts/test-scripts.js"></script>
 		<script>
-			var test = [],
-				el = document.getElementById('section1'),
-				isSupported = (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
+			var test = [];
+			var el = document.getElementById('section1');
+			var isSupported = (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
 
 			test.push({id: "basic-criteria", pass: isSupported});
 			displaySupportResults(test);

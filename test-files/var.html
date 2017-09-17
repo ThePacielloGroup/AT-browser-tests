@@ -28,34 +28,39 @@
 					Reference
 				</h2>
 				<ul>
-					<li><a href="http://www.w3.org/TR/html5/text-level-semantics.html#the-var-element">HTML5 var element</a></li>
-					<li><a href="https://w3c.github.io/html-aam/#el-var">HTML Accessibility API Mappings for var element</a></li>
+					<li>
+						<a href="https://w3c.github.io/html/textlevel-semantics.html#the-var-element">HTML5 <code>var</code> element</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/html-aam/#el-var">HTML Accessibility API Mappings for <code>var</code> element</a>
+					</li>
 				</ul>
 			</div>
 		</div>
 
 
 		<div class="test">
-			<h2 class="test-title" id="var-001">Test v-001: <code>var</code> element</h2>
+			<h2 class="test-title" id="var-001">
+				Test v-001: <code>var</code> element
+			</h2>
 
 			<div class="test-case">
-				<p>Then he turned to the blackboard and picked up the chalk. After a few moment's
-					thought, he wrote <var id="var-01">E</var> = <var>m</var> <var>c</var><sup>2</sup>. The teacher
-					looked pleased.</p>
+<p>
+	Then he turned to the blackboard and picked up the chalk. After a
+	few moment's thought, he wrote
+	<var id="var-01">E</var> = <var>m</var> <var>c</var><sup>2</sup>.
+	The teacher looked pleased.
+</p>
 			</div>
 
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;p>Then he turned to the blackboard and picked up the chalk. After a few moment's
-thought, he wrote &lt;var id="var-01">E&lt;/var> = &lt;var>m&lt;/var> &lt;var>c&lt;/var>&lt;sup>2&lt;/sup>. The teacher
-looked pleased.&lt;/p></code></pre>
 		</div>
 
 
 		<script src="../scripts/test-scripts.js"></script>
 		<script>
-			var test = [],
-				el = document.getElementById('var-01'),
-				isSupported = (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
+			var test = [];
+			var el = document.getElementById('var-01');
+			var isSupported = (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
 
 			test.push({id: "basic-criteria", pass: isSupported});
 			displaySupportResults(test);

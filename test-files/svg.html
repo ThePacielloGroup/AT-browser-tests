@@ -3,46 +3,135 @@
 	<head>
 		<meta charset="utf-8">
 		<title>test file: svg element</title>
+		<link rel="stylesheet" href="../style/styles.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	</head>
 	<body>
-		<h1><code>svg</code> element</h1>
-				<div style="width: 200px; height: 200px;">
-			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-				<title>HTML5 Logo</title>
-				<desc>Shaped like a shield with the text 'HTML' above and the numeral '5' prominent on the face of the shield.</desc>
-				<polygon fill="#e44d26" points="107.644,470.877 74.633,100.62 437.367,100.62 404.321,470.819 255.778,512" />
-				<polygon fill="#f16529" points="256,480.523 376.03,447.246 404.27,130.894 256,130.894" />
-				<polygon fill="#ebebeb" points="256,268.217 195.91,268.217 191.76,221.716 256,221.716 256,176.305 255.843,176.305 142.132,176.305 143.219,188.488 154.38,313.627 256,313.627" />
-				<polygon fill="#ebebeb" points="256,386.153 255.801,386.206 205.227,372.55 201.994,336.333 177.419,336.333 156.409,336.333 162.771,407.634 255.791,433.457 256,433.399" />
-				<path d="M 108.382 0 h 23.077 v 22.8 h 21.11 V 0 h 23.078 v 69.044 H 152.57 v -23.12 h -21.11 v 23.12 h -23.077 V 0 Z" />
-				<path d="M 205.994 22.896 h -20.316 V 0 h 63.72 v 22.896 h -20.325 v 46.148 h -23.078 V 22.896 Z" />
-				<path d="M 259.511 0 h 24.063 l 14.802 24.26 L 313.163 0 h 24.072 v 69.044 h -22.982 V 34.822 l -15.877 24.549 h -0.397 l -15.888 -24.549 v 34.222 h -22.58 V 0 Z" />
-				<path d="M 348.72 0 h 23.084 v 46.222 h 32.453 v 22.822 H 348.72 V 0 Z" />
-				<polygon fill="#ffffff" points="255.843,268.217 255.843,313.627 311.761,313.627 306.49,372.521 255.843,386.191 255.843,433.435 348.937,407.634 349.62,399.962 360.291,280.411 361.399,268.217 349.162,268.217" />
-				<polygon fill="#ffffff" points="255.843,176.305 255.843,204.509 255.843,221.605 255.843,221.716 365.385,221.716 365.385,221.716 365.531,221.716 366.442,211.509 368.511,188.488 369.597,176.305" />
-			</svg>
+		<h1>
+			<code>svg</code> element
+		</h1>
+
+		<div class="meta">
+			<div class="criteria">
+				<h2>
+					Pass Criteria
+				</h2>
+				<ul id="criteria-list">
+					<li id="basic-criteria">#1: Element is supported</li>
+					<li>#2: Correct HTML and Core Accessibility API mappings</li>
+					<li>#3: Correct Accessible Name &amp; Description Calculation</li>
+				</ul>
+			</div>
+
+			<div class="reference">
+				<h2>
+					Reference
+				</h2>
+				<ul>
+					<li>
+						<a href="hhttps://w3c.github.io/html/semantics-embedded-content.html#svg">HTML5 <code>svg</code> element</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/html-aam/#el-svg">HTML Accessibility API Mappings for <code>svg</code> element</a>
+					</li>
+				</ul>
+			</div>
 		</div>
 
-		<h2>Code</h2>
-		<pre><code>&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-	&lt;title>HTML5 Logo&lt;/title>
-	&lt;desc>Shaped like a shield with the text 'HTML' above and the numeral '5' prominent on the face of the shield.&lt;/desc>
-	&lt;polygon fill="#e44d26" points="107.644,470.877 74.633,100.62 437.367,100.62 404.321,470.819 255.778,512" />
-	&lt;polygon fill="#f16529" points="256,480.523 376.03,447.246 404.27,130.894 256,130.894" />
-	&lt;polygon fill="#ebebeb" points="256,268.217 195.91,268.217 191.76,221.716 256,221.716 256,176.305 <br>255.843,176.305 142.132,176.305 143.219,188.488 154.38,313.627 256,313.627" />
-	&lt;polygon fill="#ebebeb" points="256,386.153 255.801,386.206 205.227,372.55 201.994,336.333 <br>177.419,336.333 156.409,336.333 162.771,407.634 255.791,433.457 256,433.399" />
-	&lt;path d="M 108.382 0 h 23.077 v 22.8 h 21.11 V 0 h 23.078 v 69.044 H 152.57 v -23.12 h -21.11 v 23.12 h -23.077 V 0 Z" />
-	&lt;path d="M 205.994 22.896 h -20.316 V 0 h 63.72 v 22.896 h -20.325 v 46.148 h -23.078 V 22.896 Z" />
-	&lt;path d="M 259.511 0 h 24.063 l 14.802 24.26 L 313.163 0 h 24.072 v 69.044 h -22.982 V 34.822 l -15.877 24.549 <br>h -0.397 l -15.888 -24.549 v 34.222 h -22.58 V 0 Z" />
-	&lt;path d="M 348.72 0 h 23.084 v 46.222 h 32.453 v 22.822 H 348.72 V 0 Z" />
-	&lt;polygon fill="#ffffff" points="255.843,268.217 255.843,313.627 311.761,313.627 306.49,372.521 <br>255.843,386.191 255.843,433.435 348.937,407.634 349.62,399.962 360.291,280.411 361.399,268.217 349.162,268.217" />
-	&lt;polygon fill="#ffffff" points="255.843,176.305 255.843,204.509 255.843,221.605 255.843,221.716 <br>365.385,221.716 365.385,221.716 365.531,221.716 366.442,211.509 368.511,188.488 369.597,176.305" />
-&lt;/svg></code></pre>
 
-		<h2>Reference</h2>
-		<ul>
-			<li><a href="http://www.w3.org/TR/html5/embedded-content-0.html#svg">HTML5 svg element</a></li>
-			<li><a href="https://w3c.github.io/html-aam/#el-svg">HTML Accessibility API Mappings for svg element</a></li>
-		</ul>
+		<div class="test">
+			<h2 class="test-title" id="svg-001">
+				Test svg-001: <code>svg</code> element
+			</h2>
+
+			<div class="test-case">
+<svg id="svg-01"
+	xmlns="http://www.w3.org/2000/svg"
+	viewBox="0 0 512 512"
+	style="width: 200px; height: 200px;">
+	<title>HTML5 Logo</title>
+	<desc>Shaped like a shield with the text 'HTML' above and the numeral '5' prominent on the face of the shield.</desc>
+	<polygon fill="#e44d26" points="107.644,470.877 74.633,100.62 437.367,100.62 404.321,470.819 255.778,512" />
+	<polygon fill="#f16529" points="256,480.523 376.03,447.246 404.27,130.894 256,130.894" />
+	<polygon fill="#ebebeb" points="256,268.217 195.91,268.217 191.76,221.716 256,221.716 256,176.305 255.843,176.305 142.132,176.305 143.219,188.488 154.38,313.627 256,313.627" />
+	<polygon fill="#ebebeb" points="256,386.153 255.801,386.206 205.227,372.55 201.994,336.333 177.419,336.333 156.409,336.333 162.771,407.634 255.791,433.457 256,433.399" />
+	<path d="M 108.382 0 h 23.077 v 22.8 h 21.11 V 0 h 23.078 v 69.044 H 152.57 v -23.12 h -21.11 v 23.12 h -23.077 V 0 Z" />
+	<path d="M 205.994 22.896 h -20.316 V 0 h 63.72 v 22.896 h -20.325 v 46.148 h -23.078 V 22.896 Z" />
+	<path d="M 259.511 0 h 24.063 l 14.802 24.26 L 313.163 0 h 24.072 v 69.044 h -22.982 V 34.822 l -15.877 24.549 h -0.397 l -15.888 -24.549 v 34.222 h -22.58 V 0 Z" />
+	<path d="M 348.72 0 h 23.084 v 46.222 h 32.453 v 22.822 H 348.72 V 0 Z" />
+	<polygon fill="#fff" points="255.843,268.217 255.843,313.627 311.761,313.627 306.49,372.521 255.843,386.191 255.843,433.435 348.937,407.634 349.62,399.962 360.291,280.411 361.399,268.217 349.162,268.217" />
+	<polygon fill="#fff" points="255.843,176.305 255.843,204.509 255.843,221.605 255.843,221.716 365.385,221.716 365.385,221.716 365.531,221.716 366.442,211.509 368.511,188.488 369.597,176.305" />
+</svg>
+			</div>
+		</div>
+
+		<div class="test">
+			<h2 class="test-title" id="svg-002">
+				Test svg-002: <code>svg</code> element
+				with <code>aria-labelledby</code> pointing to
+				<code>svg</code>'s <code>title</code> element
+			</h2>
+
+			<div class="test-case">
+<svg id="svg-02"
+	xmlns="http://www.w3.org/2000/svg"
+	viewBox="0 0 512 512"
+	style="width: 200px; height: 200px;"
+	aria-labelledby="svg-title">
+	<title id="svg-title">HTML5 Logo</title>
+	<desc>Shaped like a shield with the text 'HTML' above and the numeral '5' prominent on the face of the shield.</desc>
+	<polygon fill="#e44d26" points="107.644,470.877 74.633,100.62 437.367,100.62 404.321,470.819 255.778,512" />
+	<polygon fill="#f16529" points="256,480.523 376.03,447.246 404.27,130.894 256,130.894" />
+	<polygon fill="#ebebeb" points="256,268.217 195.91,268.217 191.76,221.716 256,221.716 256,176.305 255.843,176.305 142.132,176.305 143.219,188.488 154.38,313.627 256,313.627" />
+	<polygon fill="#ebebeb" points="256,386.153 255.801,386.206 205.227,372.55 201.994,336.333 177.419,336.333 156.409,336.333 162.771,407.634 255.791,433.457 256,433.399" />
+	<path d="M 108.382 0 h 23.077 v 22.8 h 21.11 V 0 h 23.078 v 69.044 H 152.57 v -23.12 h -21.11 v 23.12 h -23.077 V 0 Z" />
+	<path d="M 205.994 22.896 h -20.316 V 0 h 63.72 v 22.896 h -20.325 v 46.148 h -23.078 V 22.896 Z" />
+	<path d="M 259.511 0 h 24.063 l 14.802 24.26 L 313.163 0 h 24.072 v 69.044 h -22.982 V 34.822 l -15.877 24.549 h -0.397 l -15.888 -24.549 v 34.222 h -22.58 V 0 Z" />
+	<path d="M 348.72 0 h 23.084 v 46.222 h 32.453 v 22.822 H 348.72 V 0 Z" />
+	<polygon fill="#fff" points="255.843,268.217 255.843,313.627 311.761,313.627 306.49,372.521 255.843,386.191 255.843,433.435 348.937,407.634 349.62,399.962 360.291,280.411 361.399,268.217 349.162,268.217" />
+	<polygon fill="#fff" points="255.843,176.305 255.843,204.509 255.843,221.605 255.843,221.716 365.385,221.716 365.385,221.716 365.531,221.716 366.442,211.509 368.511,188.488 369.597,176.305" />
+</svg>
+			</div>
+		</div>
+
+
+		<div class="test">
+			<h2 class="test-title" id="svg-003">
+				Test svg-003: <code>svg</code> element
+				with <code>aria-describedby</code> pointing to
+				<code>svg</code>'s <code>desc</code> element
+			</h2>
+
+			<div class="test-case">
+<svg id="svg-03"
+	xmlns="http://www.w3.org/2000/svg"
+	viewBox="0 0 512 512"
+	style="width: 200px; height: 200px;"
+	aria-describedby="svg-desc">
+	<title>HTML5 Logo</title>
+	<desc id="svg-desc">Shaped like a shield with the text 'HTML' above and the numeral '5' prominent on the face of the shield.</desc>
+	<polygon fill="#e44d26" points="107.644,470.877 74.633,100.62 437.367,100.62 404.321,470.819 255.778,512" />
+	<polygon fill="#f16529" points="256,480.523 376.03,447.246 404.27,130.894 256,130.894" />
+	<polygon fill="#ebebeb" points="256,268.217 195.91,268.217 191.76,221.716 256,221.716 256,176.305 255.843,176.305 142.132,176.305 143.219,188.488 154.38,313.627 256,313.627" />
+	<polygon fill="#ebebeb" points="256,386.153 255.801,386.206 205.227,372.55 201.994,336.333 177.419,336.333 156.409,336.333 162.771,407.634 255.791,433.457 256,433.399" />
+	<path d="M 108.382 0 h 23.077 v 22.8 h 21.11 V 0 h 23.078 v 69.044 H 152.57 v -23.12 h -21.11 v 23.12 h -23.077 V 0 Z" />
+	<path d="M 205.994 22.896 h -20.316 V 0 h 63.72 v 22.896 h -20.325 v 46.148 h -23.078 V 22.896 Z" />
+	<path d="M 259.511 0 h 24.063 l 14.802 24.26 L 313.163 0 h 24.072 v 69.044 h -22.982 V 34.822 l -15.877 24.549 h -0.397 l -15.888 -24.549 v 34.222 h -22.58 V 0 Z" />
+	<path d="M 348.72 0 h 23.084 v 46.222 h 32.453 v 22.822 H 348.72 V 0 Z" />
+	<polygon fill="#fff" points="255.843,268.217 255.843,313.627 311.761,313.627 306.49,372.521 255.843,386.191 255.843,433.435 348.937,407.634 349.62,399.962 360.291,280.411 361.399,268.217 349.162,268.217" />
+	<polygon fill="#fff" points="255.843,176.305 255.843,204.509 255.843,221.605 255.843,221.716 365.385,221.716 365.385,221.716 365.531,221.716 366.442,211.509 368.511,188.488 369.597,176.305" />
+</svg>
+			</div>
+		</div>
+
+		<script src="../scripts/test-scripts.js"></script>
+		<script>
+			var test = [];
+			var el = document.getElementById('svg-01');
+			var isSupported = (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
+
+			test.push({id: "basic-criteria", pass: isSupported});
+			displaySupportResults(test);
+		</script>
 	</body>
 </html>

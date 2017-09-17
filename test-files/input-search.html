@@ -7,7 +7,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	</head>
 	<body>
-		<h1><code>input type=search</code> element test</h1>
+		<h1>
+			<code>input type=search</code> element test
+		</h1>
 		<div class="meta">
 			<div class="criteria">
 				<h2>Pass Criteria</h2>
@@ -21,126 +23,162 @@
 			<div class="reference">
 				<h2>Reference</h2>
 				<ul>
-					<li><a href="http://www.w3.org/TR/html/forms.html#text-%28type=text%29-state-and-search-state-%28type=search%29">HTML5 input type=search element</a></li>
-					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#el-input-search">HTML Accessibility API Mappings for input type=search element</a></li>
-					<li><a href="https://w3c.github.io/aria/core-aam/core-aam.html#role-map-textbox">Core Accessibility API Mappings for textbox role</a></li>
-					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#el-input-textetc-autocomplete">HTML Accessibility API Mappings for input type=search element with list attribute</a> <a href="datalist.html#di-001">[Test: DI-001]</a></li>
-					<li><a href="https://w3c.github.io/aria/core-aam/core-aam.html#role-map-combobox">Core Accessibility API Mappings for combobox role</a> <a href="datalist.html#di-001">[Test: DI-001]</a></li>
-					<li><a href="https://w3c.github.io/aria/core-aam/core-aam.html#ariaOwns">Core Accessibility API Mappings for aria-owns property</a> <a href="datalist.html#di-001">[Test: DI-001]</a></li>
-					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#input-type-text-input-type-password-input-type-search-input-type-tel-input-type-email-input-type-url-and-textarea-element-accessible-name-calculation">Accessible Name Calculation</a></li>
-					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#input-type-text-input-type-password-input-type-search-input-type-tel-input-type-email-input-type-url-and-textarea-element-accessible-description-calculation">Accessible Description Calculation</a></li>
+					<li>
+						<a href="https://w3c.github.io/html/sec-forms.html#text-typetext-state-and-search-state-typesearch">HTML5 <code>input type=search</code> element</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/aria/html-aam/html-aam.html#el-input-search">HTML Accessibility API Mappings for <code>input type=search</code> element</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/aria/core-aam/core-aam.html#role-map-textbox">Core Accessibility API Mappings for <code>textbox</code> role</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/aria/html-aam/html-aam.html#el-input-textetc-autocomplete">HTML Accessibility API Mappings for <code>input type=search</code> element with <code>list</code> attribute</a> <a href="datalist.html#di-001">[Test: DI-001]</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/aria/core-aam/core-aam.html#role-map-combobox">Core Accessibility API Mappings for <code>combobox</code> role</a> <a href="datalist.html#di-001">[Test: DI-001]</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/aria/core-aam/core-aam.html#ariaOwns">Core Accessibility API Mappings for <code>aria-owns</code> property</a> <a href="datalist.html#di-001">[Test: DI-001]</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/aria/html-aam/html-aam.html#input-type-text-input-type-password-input-type-search-input-type-tel-input-type-email-input-type-url-and-textarea-element-accessible-name-calculation">Accessible Name Calculation</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/aria/html-aam/html-aam.html#input-type-text-input-type-password-input-type-search-input-type-tel-input-type-email-input-type-url-and-textarea-element-accessible-description-calculation">Accessible Description Calculation</a>
+					</li>
 				</ul>
 			</div>
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="si-001">Test si-001: Unlabelled input type="search"</h2>
+			<h2 class="test-title" id="si-001">
+				Test si-001: Unlabelled <code>input type=search</code>
+			</h2>
 
 			<div class="test-case">
-				<input id="input1" type="search" />
+				<input id="input1" type="search">
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;input id="input1" type="search" /></code></pre>
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="si-002">Test si-002: Input type="search" with <code>aria-label</code></h2>
+			<h2 class="test-title" id="si-002">
+				Test si-002: <code>input type=search</code>
+				with <code>aria-label</code>
+			</h2>
 
 			<div class="test-case">
-				<input id="input2" type="search" aria-label="aria-label attribute" />
+<input id="input2" type="search" aria-label="aria-label attribute">
+			</div>
+			<div class="test-notes">
+				<p>
+					<code>aria-label</code> should be used as accessible name.
+				</p>
+				<p>No accessible description.</p>
+			</div>
+		</div>
 
-				<p>Aria-label should be used as accessible name</p>
+		<div class="test">
+			<h2 class="test-title" id="si-003">
+				Test si-003: <code>input type=search</code>
+				with <code>aria-labelledby</code>
+			</h2>
+
+			<div class="test-case">
+<p id="si-003-labelledby">
+	<code>p</code> referenced by <code>aria-labelledby</code>
+</p>
+<input id="input3" type="search" aria-labelledby="si-003-labelledby" />
+			</div>
+			<div class="test-notes">
+				<p>
+					<code>aria-labelledby</code> should be used as accessible name.
+				</p>
 				<p>No accessible description.</p>
 			</div>
 
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;input id="input2" type="search" aria-label="aria-label attribute" /></code></pre>
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="si-003">Test si-003: Input type="search" with <code>aria-labelledby</code></h2>
+			<h2 class="test-title" id="si-004">
+				Test si-004: <code>input type=search</code>
+				with <code>label</code>
+			</h2>
 
 			<div class="test-case">
-				<p id="si-003-labelledby">p referenced by aria-labelledby</p>
-				<input id="input3" type="search" aria-labelledby="si-003-labelledby" />
-
-				<p>Aria-labelledby should be used as accessible name</p>
+<label>
+	Label wrapping input
+	<input id="input4" type="search">
+</label>
+			</div>
+			<div class="test-notes">
+				<p><code>label</code> should be used as accessible name.</p>
 				<p>No accessible description.</p>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;p id="si-003-labelledby">p referenced by aria-labelledby&lt;/p>
-&lt;input id="input3" type="search" aria-labelledby="si-003-labelledby" /></code></pre>
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="si-004">Test si-004: Input type="search" with label</h2>
+			<h2 class="test-title" id="si-005">
+				Test si-005: <code>input type=search</code>
+				with <code>title</code> attribute</h2>
 
 			<div class="test-case">
-				<label>label wrapping input <input id="input4" type="search" /></label>
-
-				<p>Label should be used as accessible name</p>
+<input id="input5" type="search" title="title attribute" />
+			</div>
+			<div class="test-notes">
+				<p><code>title</code> should be used as accessible name.</p>
 				<p>No accessible description.</p>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;label>label wrapping input &lt;input id="input4" type="search" />&lt;/label></code></pre>
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="si-005">Test si-005: Input type="search" with <code>title</code> attribute</h2>
+			<h2 class="test-title" id="si-006">
+				Test si-006: <code>input type=search</code>
+				with <code>aria-describedby</code>
+			</h2>
 
 			<div class="test-case">
-				<input id="input5" type="search" title="title attribute" />
-
-				<p>Title should be used as accessible name</p>
-				<p>No accessible description.</p>
+<input id="input6" type="search" aria-describedby="si-006-describedby" />
+<p id="si-006-describedby">
+	<code>p</code> referenced by <code>aria-describedby</code>
+</p>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;input id="input5" type="search" title="title attribute" /></code></pre>
-		</div>
-
-		<div class="test">
-			<h2 class="test-title" id="si-006">Test si-006: Input type="search" with <code>aria-describedby</code></h2>
-
-			<div class="test-case">
-				<input id="input6" type="search" aria-describedby="si-006-describedby" />
-				<p id="si-006-describedby">p referenced by aria-describedby</p>
-
-				<p>Aria-describedby should be used as accessible description</p>
+			<div class="test-notes">
+				<p>
+					<code>aria-describedby</code> should be used as accessible description.
+				</p>
 				<p>No accessible name.</p>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;input id="input6" type="search" aria-describedby="si-006-describedby" />
-&lt;p id="si-006-describedby">p referenced by aria-describedby&lt;/p></code></pre>
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="si-007">Test si-007: Input type="search" with <code>label</code> element &amp; <code>title</code> attribute</h2>
+			<h2 class="test-title" id="si-007">
+				Test si-007: <code>input type=search</code>
+				with <code>label</code> element
+				&amp; <code>title</code> attribute
+			</h2>
 
 			<div class="test-case">
-				<label for="input7">label referenced by for/id attributes</label>
-				<input id="input7" type="search" title="title attribute" />
-
-				<p>Label should be used as accessible name</p>
-				<p>Title should be used as accessible description</p>
+<label for="input7">
+	Label referenced by for/id attributes
+</label>
+<input id="input7" type="search" title="title attribute">
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;label for="input7">label referenced by for/id attributes&lt;/label>
-&lt;input id="input7" type="search" title="title attribute" /></code></pre>
+			<div class="test-notes">
+				<p><code>label</code> should be used as accessible name</p>
+				<p><code>title</code> should be used as accessible description</p>
+			</div>
 		</div>
 
-		<p><strong>Note:</strong> placeholder and aria-placeholder are tested as part of the <a href="placeholder-att.html">placeholder attribute</a> test.</p>
+		<p>
+			<strong>Note:</strong> placeholder and aria-placeholder are tested as part of the <a href="placeholder-att.html">placeholder attribute</a> test.
+		</p>
 
 		<script src="../scripts/test-scripts.js"></script>
 		<script>
-			var test = [],
-				el = document.getElementById('input1'),
-			    isSupported = (el.type === 'search');
+			var test = [];
+			var el = document.getElementById('input1');
+			var isSupported = (el.type === 'search');
 
 			test.push({id: "basic-criteria", pass: isSupported});
 			displaySupportResults(test);

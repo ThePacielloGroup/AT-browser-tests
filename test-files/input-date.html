@@ -27,10 +27,18 @@
 			<div class="reference">
 				<h2>Reference</h2>
 				<ul>
-					<li><a href="http://www.w3.org/TR/html5/forms.html#date-state-(type=date)">HTML5 input type=date element</a></li>
-					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#el-input-date">HTML Accessibility API Mappings for input type=date element</a></li>
-					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#other-form-elements-accessible-name-calculation">Accessible Name Calculation</a></li>
-					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#other-form-elements-accessible-description-calculation">Accessible Description Calculation</a></li>
+					<li>
+						<a href="https://w3c.github.io/html/sec-forms.html#date-state-typedate">HTML5 <code>input type=date</code> element</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/aria/html-aam/html-aam.html#el-input-date">HTML Accessibility API Mappings for <code>input type=date</code> element</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/aria/html-aam/html-aam.html#other-form-elements-accessible-name-calculation">Accessible Name Calculation</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/aria/html-aam/html-aam.html#other-form-elements-accessible-description-calculation">Accessible Description Calculation</a>
+					</li>
 				</ul>
 			</div>
 		</div>
@@ -39,41 +47,33 @@
 			<h2 class="test-title" id="di-001">Test di-001: Unlabelled input type="date"</h2>
 
 			<div class="test-case">
-				<input id="input1" type="date" />
+<input id="input1" type="date">
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;input id="input1" type="date" /></code></pre>
 		</div>
 
 		<div class="test">
 			<h2 class="test-title" id="di-002">Test di-002: Input type="date" with <code>aria-label</code></h2>
 
 			<div class="test-case">
-				<input id="input2" type="date" aria-label="aria-label attribute" />
-
-				<p>Aria-label should be used as accessible name</p>
-				<p>No accessible description.</p>
+<input id="input2" type="date" aria-label="aria-label attribute" />
+</div>
+			<div class="test-notes">
+<p>Aria-label should be used as accessible name</p>
+<p>No accessible description.</p>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;input id="input2" type="date" aria-label="aria-label attribute" /></code></pre>
 		</div>
 
 		<div class="test">
 			<h2 class="test-title" id="di-003">Test di-003: Input type="date" with <code>aria-labelledby</code></h2>
 
 			<div class="test-case">
-				<p id="di-003-labelledby">p referenced by aria-labelledby</p>
-				<input id="input3" type="date" aria-labelledby="di-003-labelledby" />
-
-				<p>Aria-labelledby should be used as accessible name</p>
-				<p>No accessible description.</p>
+<p id="di-003-labelledby">p referenced by aria-labelledby</p>
+<input id="input3" type="date" aria-labelledby="di-003-labelledby" />
+</div>
+			<div class="test-notes">
+<p>Aria-labelledby should be used as accessible name</p>
+<p>No accessible description.</p>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;p id="di-003-labelledby">p referenced by aria-labelledby&lt;/p>
-&lt;input id="input3" type="date" aria-labelledby="di-003-labelledby" /></code></pre>
 		</div>
 
 		<div class="test">
@@ -81,66 +81,56 @@
 
 			<div class="test-case">
 				<label>label wrapping input <input id="input4" type="date" /></label>
-
+</div>
+			<div class="test-notes">
 				<p>Label should be used as accessible name</p>
 				<p>No accessible description.</p>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;label>label wrapping input &lt;input id="input4" type="date" />&lt;/label></code></pre>
 		</div>
 
 		<div class="test">
 			<h2 class="test-title" id="di-005">Test di-005: Input type="date" with <code>title</code> attribute</h2>
 
 			<div class="test-case">
-				<input id="input5" type="date" title="title attribute" />
-
-				<p>Title should be used as accessible name</p>
-				<p>No accessible description.</p>
+<input id="input5" type="date" title="title attribute" />
+</div>
+			<div class="test-notes">
+<p>Title should be used as accessible name</p>
+<p>No accessible description.</p>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;input id="input5" type="date" title="title attribute" /></code></pre>
 		</div>
 
 		<div class="test">
 			<h2 class="test-title" id="di-006">Test di-006: Input type="date" with <code>aria-describedby</code></h2>
 
 			<div class="test-case">
-				<input id="input6" type="date" aria-describedby="di-006-describedby" />
-				<p id="di-006-describedby">p referenced by aria-describedby</p>
-
-				<p>Aria-describedby should be used as accessible description</p>
-				<p>No accessible name.</p>
+<input id="input6" type="date" aria-describedby="di-006-describedby" />
+<p id="di-006-describedby">p referenced by aria-describedby</p>
+</div>
+			<div class="test-notes">
+<p>Aria-describedby should be used as accessible description</p>
+<p>No accessible name.</p>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;input id="input6" type="date" aria-describedby="di-006-describedby" />
-&lt;p id="di-006-describedby">p referenced by aria-describedby&lt;/p></code></pre>
 		</div>
 
 		<div class="test">
 			<h2 class="test-title" id="di-007">Test di-007: Input type="date" with <code>label</code> element &amp; <code>title</code> attribute</h2>
 
 			<div class="test-case">
-				<label for="input7">label referenced by for/id attributes</label>
-				<input id="input7" type="date" title="title attribute" />
-
-				<p>Label should be used as accessible name</p>
-				<p>Title should be used as accessible description</p>
+<label for="input7">label referenced by for/id attributes</label>
+<input id="input7" type="date" title="title attribute" />
+</div>
+			<div class="test-notes">
+<p>Label should be used as accessible name</p>
+<p>Title should be used as accessible description</p>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;label for="input7">label referenced by for/id attributes&lt;/label>
-&lt;input id="input7" type="date" title="title attribute" /></code></pre>
 		</div>
 
 		<script src="../scripts/test-scripts.js"></script>
 		<script>
-			var test = [],
-				el = document.getElementById('input1'),
-			    isSupported = (el.type === 'date');
+			var test = [];
+			var el = document.getElementById('input1');
+			var isSupported = (el.type === 'date');
 
 			test.push({id: "basic-criteria", pass: isSupported});
 			displaySupportResults(test);

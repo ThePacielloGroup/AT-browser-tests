@@ -2,23 +2,69 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>test file: 2 label elements</title>
+		<title>test file: Two label elements</title>
+		<link rel="stylesheet" href="../style/styles.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	</head>
 	<body>
-		<h1><code>2 label</code> elements </h1>
+		<h1>
+			Two <code>label</code> elements
+		</h1>
 
-		<h2>associated using for/id</h2>
-		<p><label for="tst">name</label> <input type="text" id="tst"></p>
-		<p><label for="tst">First name only</label></p>
+		<div class="meta">
+			<div class="criteria">
+				<h2>
+					Pass Criteria
+				</h2>
+				<ul id="criteria-list">
+					<li id="basic-criteria">#1: Element is supported</li>
+					<li>#2: Correct HTML and Core Accessibility API mappings</li>
+					<li>#3: Correct Accessible Name &amp; Description Calculation</li>
+				</ul>
+			</div>
 
-		<h2>Code</h2>
-		<pre><code>&lt;p>&lt;label for="tst">name&lt;/label> &lt;input type="text" id="tst">&lt;/p>
-&lt;p>&lt;label for="tst">First name only&lt;/label>&lt;/p></code></pre>
+			<div class="reference">
+				<h2>
+					Reference
+				</h2>
+				<ul>
+					<li>
+						<a href="https://w3c.github.io/html/sec-forms.html#the-label-element">HTML5 <code>label</code> element</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/html-aam/#el-label">HTML Accessibility API Mappings for <code>label</code> element</a>
+					</li>
+				</ul>
+			</div>
+		</div>
 
-		<h2>Reference</h2>
-		<ul>
-			<li><a href="http://www.w3.org/TR/html5/forms.html#the-label-element">HTML5 label element</a></li>
-			<li><a href="https://w3c.github.io/html-aam/#el-label">HTML Accessibility API Mappings for label element</a></li>
-		</ul>
+
+		<div class="test">
+			<h2 class="test-title" id="lbl-001">
+				Test lbl-001: Two <code>label</code> elements with
+				<code>for</code> attributes matching <code>input id</code>
+			</h2>
+
+			<div class="test-case">
+<p>
+	<label for="lbl-01">Name</label>
+	<input type="text" id="lbl-01">
+</p>
+<p>
+	<label for="lbl-01">First name only</label>
+</p>
+			</div>
+		</div>
+
+
+		<script src="../scripts/test-scripts.js"></script>
+		<script>
+			var test = [];
+			var el = document.getElementById('lbl-01');
+			var isSupported = (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
+
+			test.push({id: "basic-criteria", pass: isSupported});
+			displaySupportResults(test);
+		</script>
 	</body>
 </html>

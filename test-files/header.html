@@ -22,160 +22,143 @@
 			<div class="reference">
 				<h2>Reference</h2>
 				<ul>
-					<li><a href="http://www.w3.org/TR/html/sections.html#the-header-element">HTML5 header element</a></li>
-					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#el-header-ancestorbody">HTML Accessibility API Mappings for header element (nearest sectioning content/root is body)</a> [Test: HD-001]</li>
-					<li><a href="https://w3c.github.io/aria/core-aam/core-aam.html#role-map-banner">Core Accessibility API Mappings for banner role</a> [Test: HD-001]</li>
-					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#el-header">HTML Accessibility API Mappings for header element (nearest sectioning content/root is not body)</a> [Test: HD-002]</li>
-					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#section-and-grouping-element-accessible-name-calculation">Accessible Name Calculation</a></li>
-					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#section-and-grouping-element-accessible-description-calculation">Accessible Description Calculation</a></li>
+					<li>
+						<a href="https://w3c.github.io/html/sections.html#the-header-element">HTML5 <code>header</code> element</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/aria/html-aam/html-aam.html#el-header-ancestorbody">HTML Accessibility API Mappings for <code>header</code> element (nearest sectioning content/root is <code>body</code>)</a> [Test: HD-001>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/aria/core-aam/core-aam.html#role-map-banner">Core Accessibility API Mappings for banner role</a> [Test: HD-001>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/aria/html-aam/html-aam.html#el-header">HTML Accessibility API Mappings for <code>header</code> element (nearest sectioning content/root is not <code>body</code>)</a> [Test: HD-002>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/aria/html-aam/html-aam.html#section-and-grouping-element-accessible-name-calculation">Accessible Name Calculation</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/aria/html-aam/html-aam.html#section-and-grouping-element-accessible-description-calculation">Accessible Description Calculation</a>
+					</li>
 				</ul>
 			</div>
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="hd-001">Test hd-001: Header element, sectioning content/root is body</h2>
+			<h2 class="test-title" id="hd-001">
+				Test hd-001: <code>header</code> element,
+				sectioning content/root is <code>body</code>
+			</h2>
 
 			<div class="test-case">
-				<header id="header1">
-					<h1>header element</h1>
-				</header>
+<header id="header1">
+	<h1>header element</h1>
+</header>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-	<pre><code>&lt;header>
-	&lt;h1>header element&lt;/h1>
-&lt;/header></code></pre>
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="hd-002">Test hd-002: Header element, sectioning content/root is <em>not</em> body</h2>
+			<h2 class="test-title" id="hd-002">
+				Test hd-002: <code>header</code> element, sectioning content/root is <em>not</em> <code>body</code>
+			</h2>
 
 			<div class="test-case">
-				<article>
-					<header>
-						<p>Header element inside article</p>
-					</header>
-				</article>
+<article>
+	<header>
+		<p>Header element inside article</p>
+	</header>
+</article>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;article>
-	&lt;header>
-		&lt;p>Header element inside article&lt;/p>
-	&lt;/header>
-&lt;/article></code></pre>
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="hd-003">Test hd-003: Header with <code>aria-label</code></h2>
+			<h2 class="test-title" id="hd-003">
+				Test hd-003: <code>header</code>
+				with <code>aria-label</code>
+			</h2>
 
 			<div class="test-case">
-				<article>
-					<header aria-label="aria-label attribute">
-						<p>Aria-label should be used as accessible name.</p>
-						<p>No accessible description.</p>
-					</header>
-				</article>
+<article>
+	<header aria-label="aria-label attribute">
+		<p><code>aria-label</code> should be used as accessible name.</p>
+		<p>No accessible description.</p>
+	</header>
+</article>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;article>
-	&lt;header <strong>aria-label="aria-label attribute"</strong>>
-		&lt;p>Aria-label should be used as accessible name.&lt;/p>
-	&lt;/header>
-&lt;/article></code></pre>
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="hd-004">Test hd-004: Header with <code>aria-labelledby</code></h2>
+			<h2 class="test-title" id="hd-004">
+				Test hd-004: <code>header</code>
+				with <code>aria-labelledby</code>
+			</h2>
 
 			<div class="test-case">
-				<article>
-					<header aria-labelledby="hd-004-labelledby">
-						<h1 id="hd-004-labelledby">h1 referenced by aria-labelledby</h1>
-						<p>Aria-labelledby should be used as accessible name.</p>
-						<p>No accessible description.</p>
-					</header>
-				</article>
+<article>
+	<header aria-labelledby="hd-004-labelledby">
+		<h1 id="hd-004-labelledby">h1 referenced by aria-labelledby</h1>
+		<p><code>aria-label</code>ledby should be used as accessible name.</p>
+		<p>No accessible description.</p>
+	</header>
+</article>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;article>
-	&lt;header <strong>aria-labelledby="hd-004-labelledby"</strong>>
-		&lt;h1 <strong>id="hd-004-labelledby"</strong>>h1 referenced by aria-labelledby&lt;/h1>
-		&lt;p>Aria-labelledby should be used as accessible name.&lt;/p>
-	&lt;/header>
-&lt;/article></code></pre>
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="hd-005">Test hd-005: Header with <code>title</code> attribute.</h2>
+			<h2 class="test-title" id="hd-005">
+				Test hd-005: <code>header</code>
+				with <code>title</code> attribute.
+			</h2>
 
 			<div class="test-case">
-				<article>
-					<header title="title attribute">
-						<p>Title should be used as accessible name.</p>
-						<p>No accessible description.</p>
-					</header>
-				</article>
+<article>
+	<header title="title attribute">
+		<p><code>title</code> should be used as accessible name.</p>
+		<p>No accessible description.</p>
+	</header>
+</article>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;article>
-	&lt;header title="title attribute">
-		&lt;p>Title should be used as accessible name.&lt;/p>
-	&lt;/header>
-&lt;/article></code></pre>
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="hd-006">Test hd-006: header with <code>aria-describedby</code></h2>
+			<h2 class="test-title" id="hd-006">
+				Test hd-006: <code>header</code>
+				with <code>aria-describedby</code>
+			</h2>
 
 			<div class="test-case">
-				<article>
-					<header aria-describedby="hd-006-describedby">
-						<h1 id="hd-006-describedby">h1 referenced by aria-describedby</h1>
-						<p>Aria-describedby should be used as accessible description.</p>
-						<p>No accessible name.</p>
-					</header>
-				</article>
+<article>
+	<header aria-describedby="hd-006-describedby">
+		<h1 id="hd-006-describedby">h1 referenced by aria-describedby</h1>
+		<p>Aria-describedby should be used as accessible description.</p>
+		<p>No accessible name.</p>
+	</header>
+</article>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;article>
-	&lt;header <strong>aria-describedby="hd-006-describedby"</strong>>
-		&lt;h1 <strong>id="hd-006-describedby"</strong>>h1 referenced by aria-describedby&lt;/h1>
-		&lt;p>Aria-describedby should be used as accessible description.&lt;/p>
-	&lt;/header>
-&lt;/article></code></pre>
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="hd-007">Test hd-007: header with <code>aria-label</code> &amp; <code>title</code> attributes</h2>
+			<h2 class="test-title" id="hd-007">
+				Test hd-007: <code>header</code>
+				with <code>aria-label</code>
+				&amp; <code>title</code> attributes
+			</h2>
 
 			<div class="test-case">
-				<article>
-					<header aria-label="aria-label attribute" title="title attribute">
-						<p>Aria-label should be used as accessible name.</p>
-						<p>Title should be used as accessible description.</p>
-					</header>
-				</article>
+<article>
+	<header aria-label="aria-label attribute" title="title attribute">
+		<p><code>aria-label</code> should be used as accessible name.</p>
+		<p><code>title</code> should be used as accessible description.</p>
+	</header>
+</article>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;article>
-	&lt;header <strong>aria-label="aria-label attribute" title="title attribute"</strong>>
-		&lt;p>Aria-label should be used as accessible name.&lt;/p>
-		&lt;p>Title should be used as accessible description.&lt;/p>
-	&lt;/header>
-&lt;/article></code></pre>
 		</div>
 
 		<script src="../scripts/test-scripts.js"></script>
 		<script>
-			var test = [],
-				el = document.getElementById('header1'),
-			    isSupported = (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
+			var test = [];
+			var el = document.getElementById('header1');
+			var isSupported = (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
 
 			test.push({id: "basic-criteria", pass: isSupported});
 			displaySupportResults(test);

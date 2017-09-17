@@ -7,7 +7,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	</head>
 	<body>
-		<h1><code>input</code> element + <code>datalist</code> element</h1>
+		<h1>
+			<code>input</code> element + <code>datalist</code> element
+		</h1>
 		<div class="meta">
 			<div class="criteria">
 				<h2>Pass Criteria</h2>
@@ -25,42 +27,51 @@
 			<div class="reference">
 				<h2>Reference</h2>
 				<ul>
-					<li><a href="http://www.w3.org/TR/html/forms.html#the-datalist-element">HTML5 datalist element</a></li>
-					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#el-datalist">HTML Accessibility API Mappings for datalist element</a></li>
-					<li><a href="https://w3c.github.io/aria/core-aam/core-aam.html#role-map-listbox">Core Accessibility API Mappings for listbox role</a></li>
-					<li><a href="https://w3c.github.io/aria/core-aam/core-aam.html#ariaMultiselectableFalse">Core Accessibility API Mappings for aria-multiselectable="false"</a></li>
-					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#el-input-textetc-autocomplete">HTML Accessibility API Mappings for input type=text, search, tel, url or email element with list attribute</a></li>
-					<li><a href="https://w3c.github.io/aria/core-aam/core-aam.html#role-map-combobox">Core Accessibility API Mappings for combobox role</a></li>
-					<li><a href="https://w3c.github.io/aria/core-aam/core-aam.html#ariaOwns">Core Accessibility API Mappings for aria-owns property</a></li>
+					<li>
+						<a href="https://w3c.github.io/html/sec-forms.html#the-datalist-element">HTML5 <code>datalist</code> element</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/aria/html-aam/html-aam.html#el-datalist">HTML Accessibility API Mappings for <code>datalist</code> element</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/aria/core-aam/core-aam.html#role-map-listbox">Core Accessibility API Mappings for <code>listbox</code> role</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/aria/core-aam/core-aam.html#ariaMultiselectableFalse">Core Accessibility API Mappings for <code>aria-multiselectable="false"</code></a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/aria/html-aam/html-aam.html#el-input-textetc-autocomplete">HTML Accessibility API Mappings for <code>input type=text, search, tel, url or email</code> element with <code>list</code> attribute</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/aria/core-aam/core-aam.html#role-map-combobox">Core Accessibility API Mappings for <code>combobox</code> role</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/aria/core-aam/core-aam.html#ariaOwns">Core Accessibility API Mappings for <code>aria-owns</code> property</a></li>
 				</ul>
 			</div>
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="di-001">Test di-001: DataList with input</h2>
+			<h2 class="test-title" id="di-001">
+				Test di-001: <code>dataList</code> with <code>input</code>
+			</h2>
 
 			<div class="test-case">
-				<label>Sites <input id="input1" type="text" list="datalist1" /></label>
-				<datalist id="datalist1">
-					<option value="http://www.google.com/" label="Google">Google</option>
-					<option value="http://www.reddit.com/" label="Reddit">Reddit</option>
-				</datalist>
+<label>
+	Sites <input id="input1" type="text" list="datalist1" /></label>
+<datalist id="datalist1">
+	<option value="https://www.google.com/" label="Google">Google</option>
+	<option value="https://www.reddit.com/" label="Reddit">Reddit</option>
+</datalist>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;label>Sites &lt;input id="input1" type="text" list="datalist1" />&lt;/label>
-&lt;datalist id="datalist1">
-	&lt;option value="http://www.google.com/" label="Google">&lt;/option>
-	&lt;option value="http://www.reddit.com/" label="Reddit">&lt;/option>
-&lt;/datalist></code></pre>
 		</div>
 
 		<script src="../scripts/test-scripts.js"></script>
 		<script>
-			var test = [],
-				el = document.getElementById('datalist1'),
-			    isSupported = (typeof HTMLDataListElement != 'undefined'
-				               && el instanceof HTMLDataListElement && 'options' in el);
+			var test = [];
+			var el = document.getElementById('datalist1');
+			var isSupported = (typeof HTMLDataListElement != 'undefined'
+                         && el instanceof HTMLDataListElement && 'options' in el);
 
 			test.push({id: "basic-criteria", pass: isSupported});
 			displaySupportResults(test);

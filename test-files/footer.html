@@ -20,153 +20,145 @@
 			<div class="reference">
 				<h2>Reference</h2>
 				<ul>
-					<li><a href="http://www.w3.org/TR/html/sections.html#the-footer-element">HTML5 footer element</a></li>
-					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#el-footer-ancestorbody">HTML Accessibility API Mappings for footer element (nearest sectioning content/root is body)</a> [Test: FT-001]</li>
-					<li><a href="https://w3c.github.io/aria/core-aam/core-aam.html#role-map-contentinfo">Core Accessibility API Mappings for contentinfo role</a> [Test: FT-001]</li>
-					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#el-footer">HTML Accessibility API Mappings for footer element (nearest sectioning content/root is not body)</a> [Test: FT-002]</li>
-					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#section-and-grouping-element-accessible-name-calculation">Accessible Name Calculation</a></li>
-					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#section-and-grouping-element-accessible-description-calculation">Accessible Description Calculation</a></li>
+					<li>
+						<a href="https://w3c.github.io/html/sections.html#the-footer-element">HTML5 <code>footer</code> element</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/aria/html-aam/html-aam.html#el-footer-ancestorbody">HTML Accessibility API Mappings for <code>footer</code> element (nearest sectioning content/root is <code>body</code>)</a> [Test: FT-001]
+					</li>
+					<li>
+						<a href="https://w3c.github.io/aria/core-aam/core-aam.html#role-map-contentinfo">Core Accessibility API Mappings for <code>contentinfo</code> role</a> [Test: FT-001]
+					</li>
+					<li>
+						<a href="https://w3c.github.io/aria/html-aam/html-aam.html#el-footer">HTML Accessibility API Mappings for <code>footer</code> element (nearest sectioning content/root is not <code>body</code>)</a> [Test: FT-002]
+					</li>
+					<li>
+						<a href="https://w3c.github.io/aria/html-aam/html-aam.html#section-and-grouping-element-accessible-name-calculation">Accessible Name Calculation</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/aria/html-aam/html-aam.html#section-and-grouping-element-accessible-description-calculation">Accessible Description Calculation</a>
+					</li>
 				</ul>
 			</div>
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="ft-001">Test ft-001: Footer element, sectioning content/root is body</h2>
+			<h2 class="test-title" id="ft-001">
+				Test ft-001: <code>footer</code> element,
+				sectioning content/root is <code>body</code>
+			</h2>
 
 			<div class="test-case">
-				<footer id="footer1">footer element</footer>
+<footer id="footer1"><code>footer</code> element</footer>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;footer>footer element&lt;/footer></code></pre>
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="ft-002">Test ft-002: Footer element, sectioning content/root is <em>not</em> body</h2>
+			<h2 class="test-title" id="ft-002">
+				Test ft-002: <code>footer</code> element,
+				sectioning content/root is <em>not</em> <code>body</code>
+			</h2>
 
 			<div class="test-case">
-				<article>
-					<footer>footer element inside article</footer>
-				</article>
+<article>
+	<footer>
+		<code>footer</code> element inside <code>article</code>
+	</footer>
+</article>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;article>
-	&lt;footer>footer element inside article&lt;/footer>
-&lt;/article></code></pre>
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="ft-003">Test ft-003: footer with <code>aria-label</code></h2>
+			<h2 class="test-title" id="ft-003">
+				Test ft-003: <code>footer</code>
+				with <code>aria-label</code>
+			</h2>
 
 			<div class="test-case">
-				<article>
-					<footer aria-label="aria-label attribute">
-						<p>Aria-label should be used as accessible name.</p>
-						<p>No accessible description.</p>
-					</footer>
-				</article>
+<article>
+	<footer aria-label="aria-label attribute">
+		<p><code>aria-label</code> should be used as accessible name.</p>
+		<p>No accessible description.</p>
+	</footer>
+</article>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;article>
-	&lt;footer <strong>aria-label="aria-label attribute"</strong>>
-		&lt;p>Aria-label should be used as accessible name.&lt;/p>
-	&lt;/footer>
-&lt;/article></code></pre>
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="ft-004">Test ft-004: footer with <code>aria-labelledby</code></h2>
+			<h2 class="test-title" id="ft-004">
+				Test ft-004: <code>footer</code>
+				with <code>aria-labelledby</code>
+			</h2>
 
 			<div class="test-case">
-				<article>
-					<footer aria-labelledby="ft-004-labelledby">
-						<small id="ft-004-labelledby">small referenced by aria-labelledby</small>
-						<p>Aria-labelledby should be used as accessible name.</p>
-						<p>No accessible description.</p>
-					</footer>
-				</article>
+<article>
+	<footer aria-labelledby="ft-004-labelledby">
+		<small id="ft-004-labelledby">small referenced by aria-labelledby</small>
+		<p><code>aria-labelledby</code> should be used as accessible name.</p>
+		<p>No accessible description.</p>
+	</footer>
+</article>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;article>
-	&lt;footer <strong>aria-labelledby="ft-004-labelledby"</strong>>
-		&lt;small <strong>id="ft-004-labelledby"</strong>>small referenced by aria-labelledby&lt;/small>
-		&lt;p>Aria-labelledby should be used as accessible name.&lt;/p>
-	&lt;/footer>
-&lt;/article></code></pre>
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="ft-005">Test ft-005: footer with <code>title</code> attribute.</h2>
+			<h2 class="test-title" id="ft-005">
+				Test ft-005: <code>footer</code>
+				with <code>title</code> attribute.
+			</h2>
 
 			<div class="test-case">
-				<article>
-					<footer title="title attribute">
-						<p>Title should be used as accessible name.</p>
-						<p>No accessible description.</p>
-					</footer>
-				</article>
+<article>
+	<footer title="title attribute">
+		<p><code>title</code> should be used as accessible name.</p>
+		<p>No accessible description.</p>
+	</footer>
+</article>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;article>
-	&lt;footer title="title attribute">
-		&ltp>Title should be used as accessible name.&lt;/p>
-	&lt;/footer>
-&lt;/article></code></pre>
 		</div>
 
 
 		<div class="test">
-			<h2 class="test-title" id="ft-006">Test ft-006: footer with <code>aria-describedby</code></h2>
+			<h2 class="test-title" id="ft-006">
+				Test ft-006: <code>footer</code>
+				with <code>aria-describedby</code>
+			</h2>
 
 			<div class="test-case">
-				<article>
-					<footer aria-describedby="ft-006-describedby">
-						<small id="ft-006-describedby">small referenced by aria-describedby</small>
-						<p>Aria-describedby should be used as accessible description.</p>
-						<p>No accessible name.</p>
-					</footer>
-				</article>
+<article>
+	<footer aria-describedby="ft-006-describedby">
+		<small id="ft-006-describedby">
+			<code>small</code> referenced by <code>aria-describedby</code>
+		</small>
+		<p>
+			<code>aria-describedby</code> should be used as accessible description.
+		</p>
+		<p>No accessible name.</p>
+	</footer>
+</article>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;article>
-	&lt;footer <strong>aria-describedby="ft-006-describedby"</strong>>
-		&lt;small <strong>id="ft-006-describedby"</strong>>h1 referenced by aria-describedby&lt;/small>
-		&lt;p>Aria-describedby should be used as accessible description.&lt;/p>
-	&lt;/footer>
-&lt;/article></code></pre>
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="ft-007">Test ft-007: footer with <code>aria-label</code> &amp; <code>title</code> attributes</h2>
+			<h2 class="test-title" id="ft-007">
+				Test ft-007: <code>footer</code> with <code>aria-label</code> &amp; <code>title</code> attributes
+			</h2>
 
 			<div class="test-case">
-				<article>
-					<footer aria-label="aria-label attribute" title="title attribute">
-						<p>Aria-label should be used as accessible name.</p>
-						<p>Title should be used as accessible description.</p>
-					</footer>
-				</article>
+<article>
+	<footer aria-label="aria-label attribute" title="title attribute">
+		<p><code>aria-label</code> should be used as accessible name.</p>
+		<p><code>title</code> should be used as accessible description.</p>
+	</footer>
+</article>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;article>
-	&lt;footer <strong>aria-label="aria-label attribute" title="title attribute"</strong>>
-		&lt;p>Aria-label should be used as accessible name.&lt;/p>
-		&lt;p>Title should be used as accessible description.&lt;/p>
-	&lt;/footer>
-&lt;/article></code></pre>
 		</div>
 
 		<script src="../scripts/test-scripts.js"></script>
 		<script>
-			var test = [],
-				el = document.getElementById('footer1'),
-			    isSupported = (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
+			var test = [];
+			var el = document.getElementById('footer1');
+			var isSupported = (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
 
 			test.push({id: "basic-criteria", pass: isSupported});
 			displaySupportResults(test);

@@ -33,57 +33,57 @@
 					Reference
 				</h2>
 				<ul>
-					<li><a href="http://www.w3.org/TR/html5/embedded-content-0.html#the-video-element">HTML5 video element</a></li>
-					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#el-video">HTML Accessibility API Mappings for video element</a></li>
-					<li><a href="http://www.w3.org/TR/html5/embedded-content-0.html#the-track-element">HTML5 track element</a></li>
-					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#el-track">HTML Accessibility API Mappings for track element</a></li>
+					<li>
+						<a href="https://w3c.github.io/html/semantics-embedded-content.html#the-video-element">HTML5 <code>video</code> element</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/aria/html-aam/html-aam.html#el-video">HTML Accessibility API Mappings for <code>video</code> element</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/html/semantics-embedded-content.html#the-track-element">HTML5 <code>track</code> element</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/aria/html-aam/html-aam.html#el-track">HTML Accessibility API Mappings for <code>track</code> element</a>
+					</li>
 				</ul>
 			</div>
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="vd-001">Test vd-001: Video &amp; track elements with WebVTT subtitles</h2>
+			<h2 class="test-title" id="vd-001">
+				Test vd-001: <code>video</code> &amp; <code>track</code> elements with WebVTT subtitles
+			</h2>
 
 			<div class="test-case">
-				<video id="video1" controls width="800">
-					<source src="../video/ElephantsDream.mp4" type="video/mp4">
-					<source src="../video/ElephantsDream.webm" type="video/webm">
-					<track id="track1" kind="captions" srclang="en" src="../video/subtitles-en.vtt" label="English" default>
-				</video>
+<video id="video1" controls width="800">
+	<source src="../video/ElephantsDream.mp4" type="video/mp4">
+	<source src="../video/ElephantsDream.webm" type="video/webm">
+	<track id="track1" kind="captions" srclang="en" src="../video/subtitles-en.vtt" label="English" default>
+</video>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;video id="video1" controls width="300" height="300">
-	&lt;source src="../video/ElephantsDream.mp4" type="video/mp4">
-	&lt;source src="../video/ElephantsDream.webm" type="video/webm">
-	&lt;track id="track1" kind="captions" srclang="en" src="../video/subtitles-en.vtt" label="English">
-&lt;/video></code></pre>
 		</div>
 
+
 		<div class="test">
-			<h2 class="test-title" id="vd-002">Test vd-002: Video &amp; track elements with TTML subtitles</h2>
+			<h2 class="test-title" id="vd-002">
+				Test vd-002: <code>video</code> &amp; <code>track</code> elements with TTML subtitles
+			</h2>
 
 			<div class="test-case">
-				<video id="video2" controls width="800">
-					<source src="../video/ElephantsDream.mp4" type="video/mp4">
-					<source src="../video/ElephantsDream.webm" type="video/webm">
-					<track id="track2" kind="captions" srclang="en" src="../video/subtitles-en.ttml" label="English" default>
-				</video>
+<video id="video2" controls width="800">
+	<source src="../video/ElephantsDream.mp4" type="video/mp4">
+	<source src="../video/ElephantsDream.webm" type="video/webm">
+	<track id="track2" kind="captions" srclang="en" src="../video/subtitles-en.ttml" label="English" default>
+</video>
 			</div>
 
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;video id="video2" controls width="800">
-	&lt;source src="../video/ElephantsDream.mp4" type="video/mp4">
-	&lt;source src="../video/ElephantsDream.webm" type="video/webm">
-	&lt;track id="track2" kind="captions" srclang="en" src="../video/subtitles-en.ttml" label="English">
-&lt;/video></code></pre>
 		</div>
 
 		<script src="../scripts/test-scripts.js"></script>
 		<script>
-			var test = [],
-				el = document.getElementById('video1'),
-				isSupported = (typeof HTMLVideoElement != 'undefined'
+			var test = [];
+			var el = document.getElementById('video1');
+			var isSupported = (typeof HTMLVideoElement != 'undefined'
 				               && el instanceof HTMLVideoElement && !!el.canPlayType);
 
 			el = document.getElementById('track1'),

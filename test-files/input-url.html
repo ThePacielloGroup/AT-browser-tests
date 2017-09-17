@@ -22,7 +22,7 @@
 			<div class="reference">
 				<h2>Reference</h2>
 				<ul>
-					<li><a href="http://www.w3.org/TR/html/forms.html#url-state-(type=url)">HTML5 input type=url element</a></li>
+					<li><a href="https://w3c.github.io/html/sec-forms.html#url-state-typeurl">HTML5 input type=url element</a></li>
 					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#el-input-url">HTML Accessibility API Mappings for input type=url element without list attribute</a></li>
 					<li><a href="https://w3c.github.io/aria/core-aam/core-aam.html#role-map-textbox">Core Accessibility API Mappings for textbox role</a></li>
 					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#el-input-textetc-autocomplete">HTML Accessibility API Mappings for input type=url element with list attribute</a> <a href="datalist.html#di-001">[Test: DI-001]</a></li>
@@ -38,124 +38,106 @@
 			<h2 class="test-title" id="ui-001">Test ui-001: Unlabelled input type="url"</h2>
 
 			<div class="test-case">
-				<form>
-					<input id="input1" type="url" />
-				</form>
+<form>
+	<input id="iurl-01" type="url" />
+</form>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;input id="input1" type="url" /></code></pre>
 		</div>
 
 		<div class="test">
 			<h2 class="test-title" id="ui-002">Test ui-002: Input type="url" with <code>aria-label</code></h2>
 
 			<div class="test-case">
-				<form>
-					<input id="input2" type="url" aria-label="aria-label attribute" />
-				</form>
-
-				<p>Aria-label should be used as accessible name</p>
-				<p>No accessible description.</p>
+<form>
+	<input id="input2" type="url" aria-label="aria-label attribute" />
+</form>
+</div>
+			<div class="test-notes">
+<p>Aria-label should be used as accessible name</p>
+<p>No accessible description.</p>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;input id="input2" type="url" aria-label="aria-label attribute" /></code></pre>
 		</div>
 
 		<div class="test">
 			<h2 class="test-title" id="ui-003">Test ui-003: Input type="url" with <code>aria-labelledby</code></h2>
 
 			<div class="test-case">
-				<form>
-					<p id="ui-003-labelledby">p referenced by aria-labelledby</p>
-					<input id="input3" type="url" aria-labelledby="ui-003-labelledby" />
-				</form>
-
-				<p>Aria-labelledby should be used as accessible name</p>
-				<p>No accessible description.</p>
+<form>
+	<p id="ui-003-labelledby">p referenced by aria-labelledby</p>
+	<input id="input3" type="url" aria-labelledby="ui-003-labelledby" />
+</form>
+</div>
+			<div class="test-notes">
+<p>Aria-labelledby should be used as accessible name</p>
+<p>No accessible description.</p>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;p id="ui-003-labelledby">p referenced by aria-labelledby&lt;/p>
-&lt;input id="input3" type="url" aria-labelledby="ui-003-labelledby" /></code></pre>
 		</div>
 
 		<div class="test">
 			<h2 class="test-title" id="ui-004">Test ui-004: Input type="url" with label</h2>
 
 			<div class="test-case">
-				<form>
-					<label>label wrapping input <input id="input4" type="url" /></label>
-				</form>
-
-				<p>Label should be used as accessible name</p>
-				<p>No accessible description.</p>
+<form>
+	<label>label wrapping input <input id="input4" type="url" /></label>
+</form>
+</div>
+			<div class="test-notes">
+<p>Label should be used as accessible name</p>
+<p>No accessible description.</p>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;label>label wrapping input &lt;input id="input4" type="url" />&lt;/label></code></pre>
 		</div>
 
 		<div class="test">
 			<h2 class="test-title" id="ui-005">Test ui-005: Input type="url" with <code>title</code> attribute</h2>
 
 			<div class="test-case">
-				<form>
-					<input id="input5" type="url" title="title attribute" />
-				</form>
-
-				<p>Title should be used as accessible name</p>
-				<p>No accessible description.</p>
+<form>
+	<input id="input5" type="url" title="title attribute" />
+</form>
+</div>
+			<div class="test-notes">
+<p>Title should be used as accessible name</p>
+<p>No accessible description.</p>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;input id="input5" type="url" title="title attribute" /></code></pre>
 		</div>
 
 		<div class="test">
 			<h2 class="test-title" id="ui-006">Test ui-006: Input type="url" with <code>aria-describedby</code></h2>
 
 			<div class="test-case">
-				<form>
-					<input id="input6" type="url" aria-describedby="ui-006-describedby" />
-					<p id="ui-006-describedby">p referenced by aria-describedby</p>
-				</form>
-
-				<p>Aria-describedby should be used as accessible description</p>
-				<p>No accessible name.</p>
+<form>
+	<input id="input6" type="url" aria-describedby="ui-006-describedby" />
+	<p id="ui-006-describedby">p referenced by aria-describedby</p>
+</form>
+</div>
+			<div class="test-notes">
+<p>Aria-describedby should be used as accessible description</p>
+<p>No accessible name.</p>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;input id="input6" type="url" aria-describedby="ui-006-describedby" />
-&lt;p id="ui-006-describedby">p referenced by aria-describedby&lt;/p></code></pre>
 		</div>
 
 		<div class="test">
 			<h2 class="test-title" id="ui-007">Test ui-007: Input type="url" with <code>label</code> element &amp; <code>title</code> attribute</h2>
 
 			<div class="test-case">
-				<form>
-					<label for="input7">label referenced by for/id attributes</label>
-					<input id="input7" type="url" title="title attribute" />
-				</form>
-
-				<p>Label should be used as accessible name</p>
-				<p>Title should be used as accessible description</p>
+<form>
+	<label for="input7">label referenced by for/id attributes</label>
+	<input id="input7" type="url" title="title attribute" />
+</form>
+</div>
+			<div class="test-notes">
+<p>Label should be used as accessible name</p>
+<p>Title should be used as accessible description</p>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;label for="input7">label referenced by for/id attributes&lt;/label>
-&lt;input id="input7" type="url" title="title attribute" /></code></pre>
 		</div>
 
 		<p><strong>Note:</strong> placeholder and aria-placeholder are tested as part of the <a href="placeholder-att.html">placeholder attribute</a> test.</p>
 
 		<script src="../scripts/test-scripts.js"></script>
 		<script>
-			var test = [],
-				el = document.getElementById('input1'),
-			    isSupported = (el.type === 'url');
+			var test = [];
+			var el = document.getElementById('iurl-01');
+			var isSupported = (el.type === 'url');
 
 			test.push({id: "basic-criteria", pass: isSupported});
 			displaySupportResults(test);

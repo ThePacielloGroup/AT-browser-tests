@@ -2,19 +2,62 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>test file: title element</title>
+		<title>test file: data element</title>
+		<link rel="stylesheet" href="../style/styles.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	</head>
 	<body>
-		<h1><code>data</code> element</h1>
-		<p><data value="0001">Product name</data></p>
+		<h1>
+			<code>data</code> element
+		</h1>
 
-		<h2>Code</h2>
-		<pre><code>&lt;data value="00001">Product name&lt;/data></code></pre>
+		<div class="meta">
+			<div class="criteria">
+				<h2>
+					Pass Criteria
+				</h2>
+				<ul id="criteria-list">
+					<li id="basic-criteria">#1: Element is supported</li>
+					<li>#2: Correct HTML and Core Accessibility API mappings</li>
+					<li>#3: Correct Accessible Name &amp; Description Calculation</li>
+				</ul>
+			</div>
 
-		<h2>Reference</h2>
-		<ul>
-			<li><a href="http://www.w3.org/TR/html/text-level-semantics.html#the-data-element">HTML5 data element</a></li>
-			<li><a href="https://w3c.github.io/html-aam/#el-data">HTML Accessibility API Mappings for data element</a></li>
-		</ul>
+			<div class="reference">
+				<h2>
+					Reference
+				</h2>
+				<ul>
+					<li>
+						<a href="https://w3c.github.io/html/textlevel-semantics.html#the-data-element">HTML5 <code>data</code> element</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/html-aam/#el-data">HTML Accessibility API Mappings for <code>data</code> element</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+
+		<div class="test">
+			<h2 class="test-title" id="da-001">
+				Test da-001: <code>data</code> element
+			</h2>
+
+			<div class="test-case">
+<data id="da-01" value="0001">Product name</data>
+			</div>
+		</div>
+
+
+		<script src="../scripts/test-scripts.js"></script>
+		<script>
+			var test = [];
+			var el = document.getElementById('da-01');
+			var isSupported = (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
+
+			test.push({id: "basic-criteria", pass: isSupported});
+			displaySupportResults(test);
+		</script>
 	</body>
 </html>

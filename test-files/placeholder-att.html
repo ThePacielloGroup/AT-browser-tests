@@ -21,102 +21,117 @@
 			<div class="reference">
 				<h2>Reference</h2>
 				<ul>
-					<li><a href="https://www.w3.org/TR/html51/semantics.html#the-placeholder-attribute">HTML5 placeholder attribute</a>
-					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#att-placeholder">HTML Accessibility API Mappings for placeholder attribute</a></li>
-					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#input-type-text-input-type-password-input-type-search-input-type-tel-input-type-email-input-type-url-and-textarea-element-accessible-name-calculation">Accessible Name Calculation</a></li>
-					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#input-type-text-input-type-password-input-type-search-input-type-tel-input-type-email-input-type-url-and-textarea-element-accessible-description-calculation">Accessible Description Calculation</a></li>
+					<li>
+						<a href="https://w3c.github.io/html/sec-forms.html#element-attrdef-input-placeholder">HTML5 placeholder attribute</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/aria/html-aam/html-aam.html#att-placeholder">HTML Accessibility API Mappings for placeholder attribute</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/aria/html-aam/html-aam.html#input-type-text-input-type-password-input-type-search-input-type-tel-input-type-email-input-type-url-and-textarea-element-accessible-name-calculation">Accessible Name Calculation</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/aria/html-aam/html-aam.html#input-type-text-input-type-password-input-type-search-input-type-tel-input-type-email-input-type-url-and-textarea-element-accessible-description-calculation">Accessible Description Calculation</a>
+					</li>
 				</ul>
 			</div>
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="ph-001">Test ph-001: Placeholder without label</h2>
+			<h2 class="test-title" id="ph-001">
+				Test ph-001: <code>placeholder</code>
+				without <code>label</code>
+			</h2>
 
 			<div class="test-case">
-				<input id="input1" type="text" placeholder="placeholder text" />
-				<p>Placeholder should be used as accessible name</p>
+<input id="input1" type="text" placeholder="placeholder text">
+<p>
+	Placeholder should be used as accessible name.
+</p>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;input id="input1" type="text" placeholder="placeholder text" /></code></pre>
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="ph-002">Test ph-002: Placeholder with label associated via for/id attributes</h2>
+			<h2 class="test-title" id="ph-002">
+				Test ph-002: <code>placeholder</code>
+				with <code>label</code> associated via <code>for/id</code> attributes
+			</h2>
 
 			<div class="test-case">
-				<label for="input2">Label text:</label>
-				<input id="input2" type="text" placeholder="placeholder text" />
-				<p>Placeholder should be used as accessible description</p>
+<label for="input2">
+	Label text:
+</label>
+<input id="input2" type="text" placeholder="placeholder text" />
+<p>
+	Placeholder should be used as accessible description.
+</p>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;label for="input2">Label text:&lt;/label>
-&lt;input id="input2" type="text" placeholder="placeholder text" /></code></pre>
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="ph-003">Test ph-003: Placeholder with label wrapping input</h2>
+			<h2 class="test-title" id="ph-003">
+				Test ph-003: <code>placeholder</code>
+				with <code>label</code> wrapping <code>input</code>
+			</h2>
 
 			<div class="test-case">
-				<label>Label text:
-					<input id="input3" type="text" placeholder="placeholder text" />
-				</label>
-				<p>Placeholder should be used as accessible description</p>
+<label>Label text:
+	<input id="input3" type="text" placeholder="placeholder text" />
+</label>
+<p>Placeholder should be used as accessible description</p>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;label>Label text:
-	&lt;input id="input3" type="text" placeholder="placeholder text" />
-&lt;/label></code></pre>
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="ph-004">Test ph-004: Placeholder and title attributes</h2>
+			<h2 class="test-title" id="ph-004">
+				Test ph-004: <code>placeholder</code>
+				and title attributes
+			</h2>
 
 			<div class="test-case">
-				<input id="input4" type="text" placeholder="placeholder text" title="title text" />
-				<p>Placeholder should be used as accessible name</p>
+<input id="input4" type="text" placeholder="placeholder text" title="title text" />
+<p>
+	Placeholder should be used as accessible name.
+</p>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;input id="input4" type="text" placeholder="placeholder text" title="title text" /></code></pre>
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="ph-005">Test ph-005: Placeholder with aria-placeholder</h2>
+			<h2 class="test-title" id="ph-005">
+				Test ph-005: <code>placeholder</code>
+				with aria-placeholder
+			</h2>
 
 			<div class="test-case">
-				<input id="input5" type="text" placeholder="placeholder text"
-				                               aria-placeholder="aria-placeholder text" />
-				<p>Placeholder should be used as accessible name</p>
+<input id="input5" type="text" placeholder="placeholder text"
+                               aria-placeholder="aria-placeholder text" />
+<p>
+	Placeholder should be used as accessible name.
+</p>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;input id="input5" type="text" placeholder="placeholder text"
-				               aria-placeholder="aria-placeholder text" /></code></pre>
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="ph-006">Test ph-006: Empty placeholder with aria-placeholder</h2>
+			<h2 class="test-title" id="ph-006">
+				Test ph-006: Empty <code>placeholder</code>
+				with <code>aria-placeholder</code>
+			</h2>
 
 			<div class="test-case">
-				<input id="input6" type="text" placeholder=""
-				                               aria-placeholder="aria-placeholder text" />
-				<p>Aria-placeholder should be used as accessible name</p>
+<input id="input6"
+	type="text" placeholder=""
+	aria-placeholder="aria-placeholder text" />
+<p>
+	<code>aria-placeholder</code> should be used as accessible name.
+</p>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-
-			<pre><code>&lt;input id="input6" type="text" placeholder=""
-				               aria-placeholder="aria-placeholder text" /></code></pre>
 		</div>
 
 		<script src="../scripts/test-scripts.js"></script>
 		<script>
-			var test = [],
-				el = document.getElementById('input1'),
-			    isSupported = (typeof HTMLInputElement != 'undefined'
+			var test = [];
+			var el = document.getElementById('input1');
+			var isSupported = (typeof HTMLInputElement != 'undefined'
 				               && el instanceof HTMLInputElement && 'placeholder' in el);
 
 			test.push({id: "basic-criteria", pass: isSupported});

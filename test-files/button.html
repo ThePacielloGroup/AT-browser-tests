@@ -3,28 +3,111 @@
 	<head>
 		<meta charset="utf-8">
 		<title>test file: button element</title>
+		<link rel="stylesheet" href="../style/styles.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	</head>
 	<body>
-		<h1><code>button</code> element</h1>
-		<p><button id="button1" type="button"></button></p>
+		<h1>
+			<code>button</code> element
+		</h1>
 
-		<h2>with text content test</h2>
-		<p><button id="button2" type="button">test</button></p>
+		<div class="meta">
+			<div class="criteria">
+				<h2>
+					Pass Criteria
+				</h2>
+				<ul id="criteria-list">
+					<li id="basic-criteria">#1: Element is supported</li>
+					<li>#2: Correct HTML and Core Accessibility API mappings</li>
+					<li>#3: Correct Accessible Name &amp; Description Calculation</li>
+				</ul>
+			</div>
 
-		<h2>disabled</h2>
-		<p><button id="button3" type="button" disabled>test</button></p>
+			<div class="reference">
+				<h2>
+					Reference
+				</h2>
+				<ul>
+					<li>
+						<a href="https://w3c.github.io/html/rendering.html#the-button-element-rendering">HTML5 <code>button</code> element</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/html-aam/#el-button">HTML Accessibility API Mappings for <code>button</code> element</a>
+					</li>
+					<li>
+						<a href="https://www.w3.org/TR/core-aam-1.1/#role-map-button">Core Accessibility API Mappings for <code>button</code> role</a>
+					</li>
+				</ul>
+			</div>
+		</div>
 
-		<h2>with accname from aria-label=test</h2>
-		<p><button id="button4" type="button" aria-label="test"></button></p>
 
-		<h2>Code</h2>
-		<pre><code>&lt;input id="buttom2" type="button" value="test"></code></pre>
+		<div class="test">
+			<h2 class="test-title" id="btn-001">
+				Test btn-001: <code>button</code> element, no text
+			</h2>
 
-		<h2>Reference</h2>
-		<ul>
-			<li><a href="http://www.w3.org/TR/html5/forms.html#the-button-element">HTML5 button element</a></li>
-			<li><a href="https://w3c.github.io/html-aam/#el-button">HTML Accessibility API Mappings for button element</a></li>
-			<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-button">Core Accessibility API Mappings for button role</a></li>
-		</ul>
+			<div class="test-case">
+<button id="btn-01" type="button"></button>
+			</div>
+		</div>
+
+
+		<div class="test">
+			<h2 class="test-title" id="btn-002">
+				Test btn-002: <code>button</code> element, with text
+			</h2>
+
+			<div class="test-case">
+<button id="btn-02" type="button">Test</button>
+			</div>
+		</div>
+
+
+		<div class="test">
+			<h2 class="test-title" id="btn-003">
+				Test btn-003: <code>button</code> element,
+				with <code>disabled</code> attribute
+			</h2>
+
+			<div class="test-case">
+<button id="btn-03" type="button" disabled>Test</button>
+			</div>
+		</div>
+
+
+		<div class="test">
+			<h2 class="test-title" id="btn-004">
+				Test btn-004: <code>button</code> element,
+				with accessible name from <code>aria-label</code> attribute
+			</h2>
+
+			<div class="test-case">
+<button id="btn-04" type="button" aria-label="Aria Label Test"></button>
+			</div>
+		</div>
+
+
+		<div class="test">
+			<h2 class="test-title" id="btn-005">
+				Test btn-005: <code>button</code> element,
+				with text and <code>aria-label</code> attribute
+			</h2>
+
+			<div class="test-case">
+<button id="btn-05" type="button" aria-label="Aria Label Text">Visible Text</button>
+			</div>
+		</div>
+
+
+		<script src="../scripts/test-scripts.js"></script>
+		<script>
+			var test = [];
+			var el = document.getElementById('btn-01');
+			var isSupported = (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
+
+			test.push({id: "basic-criteria", pass: isSupported});
+			displaySupportResults(test);
+		</script>
 	</body>
 </html>

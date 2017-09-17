@@ -17,8 +17,8 @@
 @font-face {
 	font-family: "Work Sans";
 	src: url("../fonts/worksans-light.woff2") format("woff2"),
-	     url("../fonts/worksans-light.woff") format("woff"),
-		 url("../fonts/worksans-light.ttf") format("truetype");
+			 url("../fonts/worksans-light.woff") format("woff"),
+			 url("../fonts/worksans-light.ttf") format("truetype");
 	font-weight: 300;
 }
 
@@ -33,24 +33,36 @@ html {
 }
 
 body {
-	margin: 1.5em auto;
-	width: 90%;
-	max-width: 54em;
-	font: 400 105%/1.4 "Work Sans", sans-serif;
 	background: #f7f7f5;
 	color: #333;
+	font: 400 105%/1.4 "Work Sans", sans-serif;
+	margin: 1.5em auto;
+	max-width: 54em;
+	width: 90%;
 }
 
 /* Nicer link underlines */
-a:link, a:visited {
+a:link,
+a:visited {
 	border-bottom: 1px solid rgba(42, 122, 130, .5);
-	text-decoration: none;
 	color: #2b7a82;
+	text-decoration: none;
 }
 
 a:hover {
 	border-bottom: 2px solid;
 	color: #1e565c;
+}
+
+button:focus,
+a:focus {
+	box-shadow: none;
+	outline-offset: 2px;
+	outline: 3px solid rgba(42, 122, 130, .75);
+}
+
+a:focus {
+	border-bottom: none;
 }
 
 a:active {
@@ -63,17 +75,17 @@ li + li {
 }
 
 code {
-	white-space: pre-wrap;
-	text-transform: none;
 	font-family: Consolas, monaco, monospace;
 	-moz-tab-size: 4;
 	tab-size: 4;
+	text-transform: none;
+	white-space: pre-wrap;
 }
 
-/* Direct descendents = scoped to avoid test markup */
+/* Direct descendants = scoped to avoid test markup */
 body > h1 {
-	margin: 0;
 	font: 300 1.75em/1 "Work Sans", sans-serif;
+	margin: 0;
 }
 
 .meta h2,
@@ -84,19 +96,19 @@ body > h1 {
 .badge-failure {
 	font-family: "League Spartan", sans-serif;
 	font-weight: 700;
-	text-transform: uppercase;
 	letter-spacing: .08em;
 	line-height: 1.25;
+	text-transform: uppercase;
 }
 
 .meta h2:before,
 .meta li:before,
 .test-title:before {
-	display: block;
-	position: absolute;
-	left: 0;
 	background: #333;
 	content: "";
+	display: block;
+	left: 0;
+	position: absolute;
 }
 
 /* Criteria, reference, and code titles */
@@ -230,9 +242,9 @@ body > h1 {
 }
 
 .badge-failure:before {
-	width: 13px;
-	background: url('../images/badge-x.svg') no-repeat;
 	background-size: 13px 13px;
+	background: url('../images/badge-x.svg') no-repeat;
+	width: 13px;
 }
 
 .badge-manual {
@@ -260,6 +272,7 @@ body > h1 {
 	padding: 0;
 	border: none;
 	background: transparent;
+	margin-bottom: 0;
 }
 
 .test-title {
@@ -309,6 +322,11 @@ body > h1 {
 
 video {
 	max-width: 100%;
+}
+
+.test button {
+	min-width: 3em;
+	min-height: 2em;
 }
 
 /*	SMALL BREAKPOINT

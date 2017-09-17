@@ -3,25 +3,66 @@
 	<head>
 		<meta charset="utf-8">
 		<title>test file: form element</title>
+		<link rel="stylesheet" href="../style/styles.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	</head>
 	<body>
-		<h1><code>form</code> element</h1>
-		<form>
-			<label for="name">Name</label>
-			<input type="text" id="name" size="25">
-		</form>
+		<h1>
+			<code>form</code> element
+		</h1>
 
-		<h2>Code</h2>
-		<pre><code>&lt;form>
-	&lt;label for="name">Name&lt;/label>
-	&lt;input type="text" id="name" size="25">
-&lt;/form></code></pre>
+		<div class="meta">
+			<div class="criteria">
+				<h2>
+					Pass Criteria
+				</h2>
+				<ul id="criteria-list">
+					<li id="basic-criteria">#1: Element is supported</li>
+					<li>#2: Correct HTML and Core Accessibility API mappings</li>
+					<li>#3: Correct Accessible Name &amp; Description Calculation</li>
+				</ul>
+			</div>
 
-		<h2>Reference</h2>
-		<ul>
-			<li><a href="http://www.w3.org/TR/html/forms.html#the-form-element">HTML5 form element</a></li>
-			<li><a href="https://w3c.github.io/html-aam/#el-form">HTML Accessibility API Mappings for form element</a></li>
-			<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-form">Core Accessibility API Mappings for form role</a></li>
-		</ul>
+			<div class="reference">
+				<h2>
+					Reference
+				</h2>
+				<ul>
+					<li>
+						<a href="https://w3c.github.io/html/sec-forms.html#the-form-element">HTML5 <code>form</code> element</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/html-aam/#el-form">HTML Accessibility API Mappings for <code>form</code> element</a>
+					</li>
+					<li>
+						<a href="https://www.w3.org/TR/core-aam-1.1/#role-map-form">Core Accessibility API Mappings for <code>form</code> role</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+
+		<div class="test">
+			<h2 class="test-title" id="form-001">
+				Test form-001: <code>form</code> element
+			</h2>
+
+			<div class="test-case">
+<form>
+	<label for="name">Name</label>
+	<input type="text" id="name" size="25">
+</form>
+			</div>
+		</div>
+
+		<script src="../scripts/test-scripts.js"></script>
+		<script>
+			var test = [];
+			var el = document.getElementById('form-01');
+			var isSupported = (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
+
+			test.push({id: "basic-criteria", pass: isSupported});
+			displaySupportResults(test);
+		</script>
 	</body>
 </html>

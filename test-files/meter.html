@@ -21,123 +21,150 @@
 			<div class="reference">
 				<h2>Reference</h2>
 				<ul>
-					<li><a href="http://www.w3.org/TR/html5/forms.html#the-meter-element">HTML5 meter element</a></li>
-					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#el-meter">HTML Accessibility API Mappings for meter element</a></li>
-					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#att-max">HTML Accessibility API Mappings for max attribute</a></li>
-					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#att-min">HTML Accessibility API Mappings for min attribute</a></li>
-					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#att-value-meter">HTML Accessibility API Mappings for value attribute</a></li>
-					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#other-form-elements-accessible-name-calculation">Accessible Name Calculation</a></li>
-					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#other-form-elements-accessible-description-calculation">Accessible Description Calculation</a></li>
+					<li>
+						<a href="https://w3c.github.io/html/sec-forms.html#the-meter-element">HTML5 <code>meter</code> element</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/aria/html-aam/html-aam.html#el-meter">HTML Accessibility API Mappings for <code>meter</code> element</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/aria/html-aam/html-aam.html#att-max">HTML Accessibility API Mappings for <code>max</code> attribute</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/aria/html-aam/html-aam.html#att-min">HTML Accessibility API Mappings for <code>min</code> attribute</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/aria/html-aam/html-aam.html#att-value-meter">HTML Accessibility API Mappings for <code>value</code> attribute</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/aria/html-aam/html-aam.html#other-form-elements-accessible-name-calculation">Accessible Name Calculation</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/aria/html-aam/html-aam.html#other-form-elements-accessible-description-calculation">Accessible Description Calculation</a>
+					</li>
 				</ul>
 			</div>
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="mr-001">Test mr-001: Meter element</h2>
+			<h2 class="test-title" id="mr-001">
+				Test mr-001: <code>meter</code> element
+			</h2>
 
 			<div class="test-case">
-				<meter id="meter1" min="0" max="100" value="83.5">fallback content</meter>
+<meter id="meter1" min="0" max="100" value="83.5">fallback content</meter>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;meter id="meter1" min="0" max="100" value="83.5">fallback content&lt;/meter></code></pre>
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="mr-002">Test mr-002: Meter with <code>aria-label</code></h2>
+			<h2 class="test-title" id="mr-002">
+				Test mr-002: <code>meter</code>
+				with <code>aria-label</code>
+			</h2>
 
 			<div class="test-case">
-				<meter id="meter2" aria-label="aria-label attribute" min="0" max="100" value="83.5"></meter>
-
-				<p>Aria-label should be used as accessible name</p>
+<meter id="meter2" aria-label="aria-label attribute" min="0" max="100" value="83.5"></meter>
+</div>
+			<div class="test-notes">
+				<p><code>aria-label</code> should be used as accessible name.</p>
 				<p>No accessible description.</p>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;meter id="meter2" aria-label="aria-label attribute" min="0" max="100" value="83.5">&lt;/meter></code></pre>
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="mr-003">Test mr-003: Meter with <code>aria-labelledby</code></h2>
+			<h2 class="test-title" id="mr-003">
+				Test mr-003: <code>meter</code>
+				with <code>aria-labelledby</code>
+			</h2>
 
 			<div class="test-case">
-				<p id="mr-003-labelledby">p referenced by aria-labelledby</p>
-				<meter id="meter3" aria-labelledby="mr-003-labelledby" min="0" max="100" value="83.5"></meter>
-
-				<p>Aria-labelledby should be used as accessible name</p>
+<p id="mr-003-labelledby">
+	<code>p</code> referenced by <code>aria-labelledby</code>
+</p>
+<meter id="meter3" aria-labelledby="mr-003-labelledby" min="0" max="100" value="83.5"></meter>
+			</div>
+			<div class="test-notes">
+				<p><code>aria-labelledby</code> should be used as accessible name.</p>
 				<p>No accessible description.</p>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;p id="mr-003-labelledby">p referenced by aria-labelledby&lt;/p>
-&lt;meter id="input3" aria-labelledby="mr-003-labelledby" min="0" max="100" value="83.5">&lt;/meter></code></pre>
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="mr-004">Test mr-004: Meter with label</h2>
+			<h2 class="test-title" id="mr-004">
+				Test mr-004: <code>meter</code>
+				with label
+			</h2>
 
 			<div class="test-case">
-				<label>label wrapping meter <meter id="meter4" min="0" max="100" value="83.5"></meter></label>
-
-				<p>Label should be used as accessible name</p>
+<label>
+	Label wrapping meter
+	<meter id="meter4" min="0" max="100" value="83.5"></meter>
+</label>
+			</div>
+			<div class="test-notes">
+				<p><code>label</code> should be used as accessible name.</p>
 				<p>No accessible description.</p>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;label>label wrapping meter &lt;meter id="meter4" min="0" max="100" value="83.5">&lt;/meter>&lt;/label></code></pre>
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="mr-005">Test mr-005: Meter with <code>title</code> attribute</h2>
+			<h2 class="test-title" id="mr-005">
+				Test mr-005: <code>meter</code>
+				with <code>title</code> attribute
+			</h2>
 
 			<div class="test-case">
-				<meter id="meter5" title="title attribute" min="0" max="100" value="83.5"></meter>
-
-				<p>Title should be used as accessible name</p>
+<meter id="meter5" title="title attribute" min="0" max="100" value="83.5"></meter>
+</div>
+			<div class="test-notes">
+				<p><code>title</code> should be used as accessible name.</p>
 				<p>No accessible description.</p>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;meter id="input5" title="title attribute" min="0" max="100" value="83.5">&lt;/meter></code></pre>
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="mr-006">Test mr-006: Meter with <code>aria-describedby</code></h2>
+			<h2 class="test-title" id="mr-006">
+				Test mr-006: <code>meter</code>
+				with <code>aria-describedby</code>
+			</h2>
 
 			<div class="test-case">
-				<meter id="meter6" aria-describedby="mr-006-describedby" min="0" max="100" value="83.5"></meter>
-				<p id="mr-006-describedby">p referenced by aria-describedby</p>
-
-				<p>Aria-describedby should be used as accessible description</p>
+<meter id="meter6" aria-describedby="mr-006-describedby" min="0" max="100" value="83.5"></meter>
+<p id="mr-006-describedby">
+	<code>p</code> referenced by <code>aria-describedby</code>
+</p>
+</div>
+			<div class="test-notes">
+				<p><code>aria-describedby</code> should be used as accessible description.</p>
 				<p>No accessible name.</p>
 			</div>
 
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;meter id="meter6" aria-describedby="mr-006-describedby" min="0" max="100" value="83.5">&lt;/meter>
-&lt;p id="mr-006-describedby">p referenced by aria-describedby&lt;/p></code></pre>
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="mr-007">Test mr-007: Meter with <code>label</code> element &amp; <code>title</code> attribute</h2>
+			<h2 class="test-title" id="mr-007">
+				Test mr-007: <code>meter</code>
+				with <code>label</code> element
+				&amp; <code>title</code> attribute
+			</h2>
 
 			<div class="test-case">
-				<label for="meter7">label referenced by for/id attributes</label>
-				<meter id="meter7" title="title attribute" min="0" max="100" value="83.5"></meter>
-
-				<p>Label should be used as accessible name</p>
-				<p>Title should be used as accessible description</p>
+<label for="meter7">
+	Label referenced by for/id attributes
+</label>
+<meter id="meter7" title="title attribute" min="0" max="100" value="83.5"></meter>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;label for="meter7">label referenced by for/id attributes&lt;/label>
-&lt;meter id="meter7" title="title attribute" min="0" max="100" value="83.5">&lt;/meter></code></pre>
+			<div class="test-notes">
+				<p><code>label</code> should be used as accessible name.</p>
+				<p><code>title</code> should be used as accessible description.</p>
+			</div>
 		</div>
 
 		<script src="../scripts/test-scripts.js"></script>
 		<script>
-			var test = [],
-				el = document.getElementById('meter1'),
-			    isSupported = (typeof HTMLMeterElement != 'undefined'
+			var test = [];
+			var el = document.getElementById('meter1');
+			var isSupported = (typeof HTMLMeterElement != 'undefined'
 				               && el instanceof HTMLMeterElement && 'value' in el);
 
 			test.push({id: "basic-criteria", pass: isSupported});

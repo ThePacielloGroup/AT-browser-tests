@@ -2,352 +2,392 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<!-- FIXME number -->
 		<title>test file: complex tables - table element with caption, thead, tbody, tfoot, tr, th and td</title>
+		<link rel="stylesheet" href="../style/styles.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<style>
-			table, tr, td, th {border:thin solid #666; border-collapse:collapse;padding: 5px;}
+			table,
+			tr,
+			td,
+			th {
+				border: thin solid #666;
+				border-collapse: collapse;
+				padding: 6px;
+			}
+			table {
+				width: 100%;
+			}
 		</style>
 	</head>
 	<body>
-		<h1>test file: <code>table</code> element with <code>caption</code>, <code>thead</code>, <code>tbody</code>, <code>tfoot</code>, <code>tr</code>, <code>th</code>,<code> colgroup</code> and <code>td</code></h1>
+		<h1>
+			test file:
+			<code>table</code> element with
+			<code>caption</code>,
+			<code>thead</code>,
+			<code>tbody</code>,
+			<code>tfoot</code>,
+			<code>tr</code>,
+			<code>th</code>,
+			<code> colgroup</code> and
+			<code>td</code>
+		</h1>
 
-		<h2>Table 1: Oranges and Apples – complex table using id and headers<br></h2>
-		<p> This table provides information about the wholesale and retail price	of both imported and domestic oranges and apples in Sydney and	Melbourne. There are two levels of row and column headers. </p>
-		<table summary="Wholesale and retail prices of imported and domestic oranges and apples in Sydney and Melbourne. There are two levels of column headings." border="1">
-			<caption>Imported and domestic orange and apple prices in Sydney and Melbourne</caption>
-			<thead>
-				<tr>
-					<td></td>
-					<th colspan="2" id="imported">Imported</th>
-					<th colspan="2" id="domestic">Domestic</th>
-				</tr>
-				<tr>
-					<td></td>
-					<th id="oranges-imp">Oranges</th>
-					<th id="apples-imp">Apples</th>
-					<th id="oranges-dom">Oranges</th>
-					<th id="apples-dom">Apples</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<th id="sydney" colspan="5">Sydney</th>
-				</tr>
-				<tr>
-					<th headers="sydney" id="wholesale-sydney">Wholesale</th>
-					<td headers="imported oranges-imp sydney wholesale-sydney">$1.00</td>
-					<td headers="imported apples-imp sydney wholesale-sydney">$1.25</td>
-					<td headers="domestic oranges-dom sydney wholesale-sydney">$1.20</td>
-					<td headers="domestic apples-dom sydney wholesale-sydney">$1.00</td>
-				</tr>
-				<tr>
-					<th headers="sydney" id="retail-sydney">Retail</th>
-					<td headers="imported oranges-imp sydney retail-sydney">$2.00</td>
-					<td headers="imported apples-imp sydney retail-sydney">$3.00</td>
-					<td headers="domestic oranges-dom sydney retail-sydney">$1.80</td>
-					<td headers="domestic apples-dom sydney retail-sydney">$1.60</td>
-				</tr>
-				<tr>
-					<th id="melbourne" colspan="5">Melbourne</th>
-				</tr>
-				<tr>
-					<th headers="melbourne" id="wholesale-melbourne">Wholesale</th>
-					<td headers="imported oranges-imp melbourne wholesale-melbourne">$1.20</td>
-					<td headers="imported apples-imp melbourne wholesale-melbourne">$1.30</td>
-					<td headers="domestic oranges-dom melbourne wholesale-melbourne">$1.00</td>
-					<td headers="domestic apples-dom melbourne wholesale-melbourne">$0.80</td>
-				</tr>
-				<tr>
-					<th headers="melbourne" id="retail-melbourne">Retail</th>
-					<td headers="imported oranges-imp melbourne retail-melbourne">$1.60</td>
-					<td headers="imported apples-imp melbourne retail-melbourne">$2.00</td>
-					<td headers="domestic oranges-dom melbourne retail-melbourne">$2.00</td>
-					<td headers="domestic apples-dom melbourne retail-melbourne">$1.50</td>
-				</tr>
-			</tbody>
-		</table>
+		<div class="meta">
+			<div class="criteria">
+				<h2>
+					Pass Criteria
+				</h2>
+				<ul id="criteria-list">
+					<li id="basic-criteria">#1: Element is supported</li>
+					<li>#2: Correct HTML and Core Accessibility API mappings</li>
+					<li>#3: Correct Accessible Name &amp; Description Calculation</li>
+				</ul>
+			</div>
 
-		<h2> Table 2: Nuts and Bolts – complex table using scope, colgroup and scope="rowgroup".</h2>
-		<p> This table provides information about the wholesale and retail prices	for two sizes of brass and steel nuts and bolts. There are two levels of	row and column headers. </p>
-		<table summary="Wholesale and retail prices for 10 and 20 centimetre brass and steel nuts and bolts. There are two levels of column headings." border="1">
-			<caption>
-				Prices of Brass and Steel nuts and bolts
-			</caption>
-			<colgroup>
-			</colgroup>
-			<colgroup span="2">
-			</colgroup>
-			<colgroup span="2">
-			</colgroup>
-			<thead>
-				<tr>
-					<td></td>
-					<th scope="colgroup" colspan="2">Brass</th>
-					<th scope="colgroup" colspan="2">Steel</th>
-				</tr>
-				<tr>
-					<td></td>
-					<th scope="col">Bolts</th>
-					<th scope="col">Nuts</th>
-					<th scope="col">Bolts</th>
-					<th scope="col">Nuts</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<th scope="rowgroup" colspan="5">10cm</th>
-				</tr>
-				<tr>
-					<th scope="row">Wholesale</th>
-					<td>$1.00</td>
-					<td>$1.25</td>
-					<td>$1.20</td>
-					<td>$1.00</td>
-				</tr>
-				<tr>
-					<th scope="row">Retail</th>
-					<td>$2.00</td>
-					<td>$3.00</td>
-					<td>$1.80</td>
-					<td>$1.60</td>
-				</tr>
-				<tr>
-					<th scope="rowgroup" colspan="5">20cm</th>
-				</tr>
-				<tr>
-					<th scope="row">Wholesale</th>
-					<td>$1.20</td>
-					<td>$1.30</td>
-					<td>$1.00</td>
-					<td>$0.80</td>
-				</tr>
-				<tr>
-					<th scope="row">Retail</th>
-					<td>$1.60</td>
-					<td>$2.00</td>
-					<td>$2.00</td>
-					<td>$1.50</td>
-				</tr>
-			</tbody>
-		</table>
+			<div class="reference">
+				<h2>
+					Reference
+				</h2>
+				<ul>
+					<li>
+						<a href="https://w3c.github.io/html/tabular-data.html#the-table-element">HTML5 <code>table</code> element</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/html-aam/#el-table">HTML Accessibility API Mappings for <code>table</code> element</a>
+					</li>
+					<li>
+						<a href="https://www.w3.org/TR/core-aam-1.1/#role-map-table">Core Accessibility API Mappings for <code>table</code> role</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/html/tabular-data.html#the-caption-element">HTML5 <code>caption</code> element</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/html-aam/#el-caption">HTML Accessibility API Mappings for <code>caption</code> element</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/html/tabular-data.html#the-thead-element">HTML5 <code>thead</code> element</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/html-aam/#el-thead">HTML Accessibility API Mappings for <code>thead</code> element</a>
+					</li>
+					<li>
+						<a href="https://www.w3.org/TR/core-aam-1.1/#role-map-rowgroup">Core Accessibility API Mappings for <code>rowgroup</code> role</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/html/tabular-data.html#the-tbody-element">HTML5 <code>tbody</code> element</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/html-aam/#el-tbody">HTML Accessibility API Mappings for <code>tbody</code> element</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/html/tabular-data.html#the-tfoot-element">HTML5 <code>tfoot</code> element</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/html-aam/#el-tfoot">HTML Accessibility API Mappings for <code>tfoot</code> element</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/html/tabular-data.html#the-tr-element">HTML5 <code>tr</code> element</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/html-aam/#el-tr">HTML Accessibility API Mappings for <code>tr</code> element</a>
+					</li>
+					<li>
+						<a href="https://www.w3.org/TR/core-aam-1.1/#role-map-row">Core Accessibility API Mappings for <code>row</code> role</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/html/tabular-data.html#the-th-element">HTML5 <code>th</code> element</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/html-aam/#el-th">HTML Accessibility API Mappings for <code>th</code> element (neither row or column header)</a>
+					</li>
+					<li>
+						<a href="https://www.w3.org/TR/core-aam-1.1/#role-map-cell">Core Accessibility API Mappings for <code>cell</code> role</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/html-aam/#el-th-columnheader">HTML Accessibility API Mappings for <code>th</code> element (column header)</a>
+					</li>
+					<li>
+						<a href="https://www.w3.org/TR/core-aam-1.1/#role-map-columnheader">Core Accessibility API Mappings for <code>columnheader</code> role</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/html-aam/#el-th-rowheader">HTML Accessibility API Mappings for <code>th</code> element (row header)</a>
+					</li>
+					<li>
+						<a href="https://www.w3.org/TR/core-aam-1.1/#role-map-rowheader">Core Accessibility API Mappings for <code>rowheader</code> role</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/html/tabular-data.html#the-td-element">HTML5 <code>td</code> element</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/html-aam/#el-td">HTML Accessibility API Mappings for <code>td</code> element</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/html/tabular-data.html#the-colgroup-element">HTML5 <code>colgroup</code> element</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/html-aam/#el-colgroup">HTML Accessibility API Mappings for <code>colgroup</code> element</a>
+					</li>
+				</ul>
+			</div>
+		</div>
 
-		<h2><p>Table 3: Cherries and apricots – very complex table using id and headers.<br></p></h2>
-		<p> This table provides information about the wholesale and retail price	of both imported and domestic cherries and apricots in Sydney and	Melbourne. The cherries are presented in two different grades. There are	three levels column headers and two levels of row headers. </p>
-		<table summary="Wholesale and retail prices of imported and domestic cherries and apricots in Sydney and Melbourne. There are three levels of column headings." border="1">
-			<caption>
-				Imported and domestic cherry and apricot prices in Perth and Adelaide
-			</caption>
-			<thead>
-				<tr>
-					<td></td>
-					<th id="imp" colspan="3">Imported</th>
-					<th id="dom" colspan="3">Domestic</th>
-				</tr>
-				<tr>
-					<td></td>
-					<th headers="imp" id="imp-apr">Apricots</th>
-					<th headers="imp" id="imp-che" colspan="2">Cherries</th>
-					<th headers="dom" id="dom-apr">Apricots</th>
-					<th headers="dom" id="dom-che" colspan="2">Cherries</th>
-				</tr>
-				<tr>
-					<td></td>
-					<td></td>
-					<th headers="imp imp-che" id="imp-che-agrade">A Grade</th>
-					<th headers="imp imp-che" id="imp-che-bgrade">B Grade</th>
-					<td></td>
-					<th headers="dom dom-che" id="dom-che-agrade">A Grade</th>
-					<th headers="dom dom-che" id="dom-che-bgrade">B Grade</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<th id="perth" colspan="7">Perth</th>
-				</tr>
-				<tr>
-					<th headers="perth" id="perth-wholesale">Wholesale</th>
-					<td headers="imp imp-apr perth perth-wholesale">$1.00</td>
-					<td headers="imp imp-che imp-che-agrade perth perth-wholesale">$9.00</td>
-					<td headers="imp imp-che imp-che-bgrade perth perth-wholesale">$6.00</td>
-					<td headers="dom dom-apr perth perth-wholesale">$1.20</td>
-					<td headers="dom dom-che dom-che-agrade perth perth-wholesale">$13.00</td>
-					<td headers="dom dom-che dom-che-bgrade perth perth-wholesale">$9.00</td>
-				</tr>
-				<tr>
-					<th headers="perth" id="perth-retail">Retail</th>
-					<td headers="imp imp-apr perth perth-retail">$2.00</td>
-					<td headers="imp imp-che imp-che-agrade perth perth-retail">$12.00</td>
-					<td headers="imp imp-che imp-che-bgrade perth perth-retail">$8.00</td>
-					<td headers="dom dom-apr perth perth-retail">$1.80</td>
-					<td headers="dom dom-che dom-che-agrade perth perth-retail">$16.00</td>
-					<td headers="dom dom-che dom-che-bgrade perth perth-retail">$12.50</td>
-				</tr>
-				<tr>
-					<th id="adelaide" colspan="7">Adelaide</th>
-				</tr>
-				<tr>
-					<th id="adelaide-wholesale">Wholesale</th>
-					<td headers="imp imp-apr adelaide adelaide-wholesale">$1.20</td>
-					<td headers="imp imp-che imp-che-agrade adelaide adelaide-wholesale">N/A</td>
-					<td headers="imp imp-che imp-che-bgrade adelaide adelaide-wholesale">$7.00</td>
-					<td headers="dom dom-apr adelaide adelaide-wholesale">$1.00</td>
-					<td headers="dom dom-che dom-che-agrade adelaide adelaide-wholesale">$11.00</td>
-					<td headers="dom dom-che dom-che-bgrade adelaide adelaide-wholesale">$6.00</td>
-				</tr>
-				<tr>
-					<th id="adelaide-retail">Retail</th>
-					<td headers="imp imp-apr adelaide adelaide-retail">$1.60</td>
-					<td headers="imp imp-che imp-che-agrade adelaide adelaide-retail">N/A</td>
-					<td headers="imp imp-che imp-che-bgrade adelaide adelaide-retail">$11.00</td>
-					<td headers="dom dom-apr adelaide adelaide-retail">$2.00</td>
-					<td headers="dom dom-che dom-che-agrade adelaide adelaide-retail">$13.00</td>
-					<td headers="dom dom-che dom-che-bgrade adelaide adelaide-retail">$10.00</td>
-				</tr>
-			</tbody>
-		</table>
 
-		<h2>Code (table 1)</h2>
-		<pre><code>&lt;table summary="Wholesale and retail prices of imported and domestic oranges and apples in Sydney and Melbourne. There are two levels of column headings." border="1">
-	&lt;caption>Imported and domestic orange and apple prices in Sydney and Melbourne&lt;/caption>
-	&lt;thead>
-		&lt;tr>
-			&lt;td>&lt;/td>
-			&lt;th colspan="2" id="imported">Imported&lt;/th>
-			&lt;th colspan="2" id="domestic">Domestic&lt;/th>
-		&lt;/tr>
-		&lt;tr>
-			&lt;td>&lt;/td>
-			&lt;th id="oranges-imp">Oranges&lt;/th>
-			&lt;th id="apples-imp">Apples&lt;/th>
-			&lt;th id="oranges-dom">Oranges&lt;/th>
-			&lt;th id="apples-dom">Apples&lt;/th>
-		&lt;/tr>
-	&lt;/thead>
-	&lt;tbody>
-		&lt;tr>
-			&lt;th id="sydney" colspan="5">Sydney&lt;/th>
-		&lt;/tr>
-		&lt;tr>
-			&lt;th headers="sydney" id="wholesale-sydney">Wholesale&lt;/th>
-			&lt;td headers="imported oranges-imp sydney wholesale-sydney">$1.00&lt;/td>
-			&lt;td headers="imported apples-imp sydney wholesale-sydney">$1.25&lt;/td>
-			&lt;td headers="domestic oranges-dom sydney wholesale-sydney">$1.20&lt;/td>
-			&lt;td headers="domestic apples-dom sydney wholesale-sydney">$1.00&lt;/td>
-		&lt;/tr>
-		&lt;tr>
-			&lt;th headers="sydney" id="retail-sydney">Retail&lt;/th>
-			&lt;td headers="imported oranges-imp sydney retail-sydney">$2.00&lt;/td>
-			&lt;td headers="imported apples-imp sydney retail-sydney">$3.00&lt;/td>
-			&lt;td headers="domestic oranges-dom sydney retail-sydney">$1.80&lt;/td>
-			&lt;td headers="domestic apples-dom sydney retail-sydney">$1.60&lt;/td>
-		&lt;/tr>
-		&lt;tr>
-			&lt;th id="melbourne" colspan="5">Melbourne&lt;/th>
-		&lt;/tr>
-		&lt;tr>
-			&lt;th headers="melbourne" id="wholesale-melbourne">Wholesale&lt;/th>
-			&lt;td headers="imported oranges-imp melbourne wholesale-melbourne">$1.20&lt;/td>
-			&lt;td headers="imported apples-imp melbourne wholesale-melbourne">$1.30&lt;/td>
-			&lt;td headers="domestic oranges-dom melbourne wholesale-melbourne">$1.00&lt;/td>
-			&lt;td headers="domestic apples-dom melbourne wholesale-melbourne">$0.80&lt;/td>
-		&lt;/tr>
-		&lt;tr>
-			&lt;th headers="melbourne" id="retail-melbourne">Retail&lt;/th>
-			&lt;td headers="imported oranges-imp melbourne retail-melbourne">$1.60&lt;/td>
-			&lt;td headers="imported apples-imp melbourne retail-melbourne">$2.00&lt;/td>
-			&lt;td headers="domestic oranges-dom melbourne retail-melbourne">$2.00&lt;/td>
-			&lt;td headers="domestic apples-dom melbourne retail-melbourne">$1.50&lt;/td>
-		&lt;/tr>
-	&lt;/tbody>
-&lt;/table></code></pre>
+		<div class="test">
+			<h2 class="test-title" id="ctbl-001">
+				Test ctbl-001: Oranges and Apples – complex table using id and headers
+			</h2>
 
-<h2>Code (table 2)</h2>
-<pre><code>&lt;table summary="Wholesale and retail prices for 10 and 20 centimetre brass and steel nuts and bolts. There are two levels of column headings." border="1">
-	&lt;caption>Prices of Brass and Steel nuts and bolts&lt;/caption>
-	&lt;colgroup>&lt;/colgroup>
-	&lt;colgroup span="2">&lt;/colgroup>
-	&lt;colgroup span="2">&lt;/colgroup>
-	&lt;thead>
-		&lt;tr>
-			&lt;td>&lt;/td>
-			&lt;th scope="colgroup" colspan="2">Brass&lt;/th>
-			&lt;th scope="colgroup" colspan="2">Steel&lt;/th>
-		&lt;/tr>
-		&lt;tr>
-			&lt;td>&lt;/td>
-			&lt;th scope="col">Bolts&lt;/th>
-			&lt;th scope="col">Nuts&lt;/th>
-			&lt;th scope="col">Bolts&lt;/th>
-			&lt;th scope="col">Nuts&lt;/th>
-		&lt;/tr>
-	&lt;/thead>
-	&lt;tbody>
-		&lt;tr>
-			&lt;th scope="rowgroup" colspan="5">10cm&lt;/th>
-		&lt;/tr>
-		&lt;tr>
-			&lt;th scope="row">Wholesale&lt;/th>
-			&lt;td>$1.00&lt;/td>
-			&lt;td>$1.25&lt;/td>
-			&lt;td>$1.20&lt;/td>
-			&lt;td>$1.00&lt;/td>
-		&lt;/tr>
-		&lt;tr>
-			&lt;th scope="row">Retail&lt;/th>
-			&lt;td>$2.00&lt;/td>
-			&lt;td>$3.00&lt;/td>
-			&lt;td>$1.80&lt;/td>
-			&lt;td>$1.60&lt;/td>
-		&lt;/tr>
-		&lt;tr>
-			&lt;th scope="rowgroup" colspan="5">20cm&lt;/th>
-		&lt;/tr>
-		&lt;tr>
-			&lt;th scope="row">Wholesale&lt;/th>
-			&lt;td>$1.20&lt;/td>
-			&lt;td>$1.30&lt;/td>
-			&lt;td>$1.00&lt;/td>
-			&lt;td>$0.80&lt;/td>
-		&lt;/tr>
-		&lt;tr>
-			&lt;th scope="row">Retail&lt;/th>
-			&lt;td>$1.60&lt;/td>
-			&lt;td>$2.00&lt;/td>
-			&lt;td>$2.00&lt;/td>
-			&lt;td>$1.50&lt;/td>
-		&lt;/tr>
-	&lt;/tbody>
-&lt;/table></code></pre>
+			<p>
+				This table provides information about the wholesale
+				and retail price of both imported and domestic oranges
+				and apples in Sydney and Melbourne. There are two levels
+				of row and column headers.
+			</p>
 
-		<h2>Reference</h2>
-		<ul>
-			<li><a href="http://www.w3.org/TR/html5/tabular-data.html#the-table-element">HTML5 table element</a></li>
-			<li><a href="https://w3c.github.io/html-aam/#el-table">HTML Accessibility API Mappings for table element</a></li>
-			<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-table">Core Accessibility API Mappings for table role</a></li>
-			<li><a href="http://www.w3.org/TR/html5/tabular-data.html#the-caption-element">HTML5 caption element</a></li>
-			<li><a href="https://w3c.github.io/html-aam/#el-caption">HTML Accessibility API Mappings for caption element</a></li>
-			<li><a href="http://www.w3.org/TR/html5/tabular-data.html#the-thead-element">HTML5 thead element</a></li>
-			<li><a href="https://w3c.github.io/html-aam/#el-thead">HTML Accessibility API Mappings for thead element</a></li>
-			<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-rowgroup">Core Accessibility API Mappings for rowgroup role</a></li>
-			<li><a href="http://www.w3.org/TR/html5/tabular-data.html#the-tbody-element">HTML5 tbody element</a></li>
-			<li><a href="https://w3c.github.io/html-aam/#el-tbody">HTML Accessibility API Mappings for tbody element</a></li>
-			<li><a href="http://www.w3.org/TR/html5/tabular-data.html#the-tfoot-element">HTML5 tfoot element</a></li>
-			<li><a href="https://w3c.github.io/html-aam/#el-tfoot">HTML Accessibility API Mappings for tfoot element</a></li>
-			<li><a href="http://www.w3.org/TR/html5/tabular-data.html#the-tr-element">HTML5 tr element</a></li>
-			<li><a href="https://w3c.github.io/html-aam/#el-tr">HTML Accessibility API Mappings for tr element</a></li>
-			<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-row">Core Accessibility API Mappings for row role</a></li>
-			<li><a href="http://www.w3.org/TR/html5/tabular-data.html#the-th-element">HTML5 th element</a></li>
-			<li><a href="https://w3c.github.io/html-aam/#el-th">HTML Accessibility API Mappings for th element (neither row or column header)</a></li>
-			<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-cell">Core Accessibility API Mappings for cell role</a></li>
-			<li><a href="https://w3c.github.io/html-aam/#el-th-columnheader">HTML Accessibility API Mappings for th element (column header)</a></li>
-			<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-columnheader">Core Accessibility API Mappings for columnheader role</a></li>
-			<li><a href="https://w3c.github.io/html-aam/#el-th-rowheader">HTML Accessibility API Mappings for th element (row header)</a></li>
-			<li><a href="https://www.w3.org/TR/core-aam-1.1/#role-map-rowheader">Core Accessibility API Mappings for rowheader role</a></li>
-			<li><a href="http://www.w3.org/TR/html5/tabular-data.html#the-td-element">HTML5 td element</a></li>
-			<li><a href="https://w3c.github.io/html-aam/#el-td">HTML Accessibility API Mappings for td element</a></li>
-			<li><a href="http://www.w3.org/TR/html5/tabular-data.html#the-colgroup-element">HTML5 colgroup element</a></li>
-			<li><a href="https://w3c.github.io/html-aam/#el-colgroup">HTML Accessibility API Mappings for colgroup element</a></li>
-		</ul>
-		<p>Data table example from <a href="http://usability.com.au/2005/06/accessible-data-tables-2005/">http://usability.com.au/2005/06/accessible-data-tables-2005/</a></p>
+			<div class="test-case">
+<table id="ctbl-01">
+	<caption>
+		Imported and domestic orange and apple prices
+		in Sydney and Melbourne
+	</caption>
+	<thead>
+		<tr>
+			<td></td>
+			<th colspan="2" id="imported">Imported</th>
+			<th colspan="2" id="domestic">Domestic</th>
+		</tr>
+		<tr>
+			<td></td>
+			<th id="oranges-imp">Oranges</th>
+			<th id="apples-imp">Apples</th>
+			<th id="oranges-dom">Oranges</th>
+			<th id="apples-dom">Apples</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th id="sydney" colspan="5">Sydney</th>
+		</tr>
+		<tr>
+			<th headers="sydney" id="wholesale-sydney">Wholesale</th>
+			<td headers="imported oranges-imp sydney wholesale-sydney">$1.00</td>
+			<td headers="imported apples-imp sydney wholesale-sydney">$1.25</td>
+			<td headers="domestic oranges-dom sydney wholesale-sydney">$1.20</td>
+			<td headers="domestic apples-dom sydney wholesale-sydney">$1.00</td>
+		</tr>
+		<tr>
+			<th headers="sydney" id="retail-sydney">Retail</th>
+			<td headers="imported oranges-imp sydney retail-sydney">$2.00</td>
+			<td headers="imported apples-imp sydney retail-sydney">$3.00</td>
+			<td headers="domestic oranges-dom sydney retail-sydney">$1.80</td>
+			<td headers="domestic apples-dom sydney retail-sydney">$1.60</td>
+		</tr>
+		<tr>
+			<th id="melbourne" colspan="5">Melbourne</th>
+		</tr>
+		<tr>
+			<th headers="melbourne" id="wholesale-melbourne">Wholesale</th>
+			<td headers="imported oranges-imp melbourne wholesale-melbourne">$1.20</td>
+			<td headers="imported apples-imp melbourne wholesale-melbourne">$1.30</td>
+			<td headers="domestic oranges-dom melbourne wholesale-melbourne">$1.00</td>
+			<td headers="domestic apples-dom melbourne wholesale-melbourne">$0.80</td>
+		</tr>
+		<tr>
+			<th headers="melbourne" id="retail-melbourne">Retail</th>
+			<td headers="imported oranges-imp melbourne retail-melbourne">$1.60</td>
+			<td headers="imported apples-imp melbourne retail-melbourne">$2.00</td>
+			<td headers="domestic oranges-dom melbourne retail-melbourne">$2.00</td>
+			<td headers="domestic apples-dom melbourne retail-melbourne">$1.50</td>
+		</tr>
+	</tbody>
+</table>
+			</div>
+		</div>
+
+
+		<div class="test">
+			<h2 class="test-title" id="ctbl-002">
+				Test ctbl-002: Nuts and Bolts – complex table using <code>scope</code>, <code>colgroup</code> and <code>scope="rowgroup"</code>.
+			</h2>
+
+			<p>
+				This table provides information about the wholesale and
+				retail prices	for two sizes of brass and steel nuts and
+				bolts. There are two levels of row and column headers.
+			</p>
+
+			<div class="test-case">
+<table>
+	<caption>
+		Prices of Brass and Steel nuts and bolts
+	</caption>
+	<colgroup>
+	</colgroup>
+	<colgroup span="2">
+	</colgroup>
+	<colgroup span="2">
+	</colgroup>
+	<thead>
+		<tr>
+			<td></td>
+			<th scope="colgroup" colspan="2">Brass</th>
+			<th scope="colgroup" colspan="2">Steel</th>
+		</tr>
+		<tr>
+			<td></td>
+			<th scope="col">Bolts</th>
+			<th scope="col">Nuts</th>
+			<th scope="col">Bolts</th>
+			<th scope="col">Nuts</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th scope="rowgroup" colspan="5">10cm</th>
+		</tr>
+		<tr>
+			<th scope="row">Wholesale</th>
+			<td>$1.00</td>
+			<td>$1.25</td>
+			<td>$1.20</td>
+			<td>$1.00</td>
+		</tr>
+		<tr>
+			<th scope="row">Retail</th>
+			<td>$2.00</td>
+			<td>$3.00</td>
+			<td>$1.80</td>
+			<td>$1.60</td>
+		</tr>
+		<tr>
+			<th scope="rowgroup" colspan="5">20cm</th>
+		</tr>
+		<tr>
+			<th scope="row">Wholesale</th>
+			<td>$1.20</td>
+			<td>$1.30</td>
+			<td>$1.00</td>
+			<td>$0.80</td>
+		</tr>
+		<tr>
+			<th scope="row">Retail</th>
+			<td>$1.60</td>
+			<td>$2.00</td>
+			<td>$2.00</td>
+			<td>$1.50</td>
+		</tr>
+	</tbody>
+</table>
+			</div>
+		</div>
+
+
+		<div class="test">
+			<h2 class="test-title" id="ctbl-003">
+				Test ctbl-003: Cherries and apricots – very complex table using <code>id</code> and <code>headers</code>.
+			</h2>
+
+			<p>
+				This table provides information about the wholesale and
+				retail price of both imported and domestic cherries and
+				apricots in Sydney and Melbourne. The cherries are presented
+				in two different grades. There are three levels column
+				headers and two levels of row headers.
+			</p>
+
+			<div class="test-case">
+<table>
+	<caption>
+		Imported and domestic cherry and apricot prices in Perth and Adelaide
+	</caption>
+	<thead>
+		<tr>
+			<td></td>
+			<th id="imp" colspan="3">Imported</th>
+			<th id="dom" colspan="3">Domestic</th>
+		</tr>
+		<tr>
+			<td></td>
+			<th headers="imp" id="imp-apr">Apricots</th>
+			<th headers="imp" id="imp-che" colspan="2">Cherries</th>
+			<th headers="dom" id="dom-apr">Apricots</th>
+			<th headers="dom" id="dom-che" colspan="2">Cherries</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<th headers="imp imp-che" id="imp-che-agrade">A Grade</th>
+			<th headers="imp imp-che" id="imp-che-bgrade">B Grade</th>
+			<td></td>
+			<th headers="dom dom-che" id="dom-che-agrade">A Grade</th>
+			<th headers="dom dom-che" id="dom-che-bgrade">B Grade</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th id="perth" colspan="7">Perth</th>
+		</tr>
+		<tr>
+			<th headers="perth" id="perth-wholesale">Wholesale</th>
+			<td headers="imp imp-apr perth perth-wholesale">$1.00</td>
+			<td headers="imp imp-che imp-che-agrade perth perth-wholesale">$9.00</td>
+			<td headers="imp imp-che imp-che-bgrade perth perth-wholesale">$6.00</td>
+			<td headers="dom dom-apr perth perth-wholesale">$1.20</td>
+			<td headers="dom dom-che dom-che-agrade perth perth-wholesale">$13.00</td>
+			<td headers="dom dom-che dom-che-bgrade perth perth-wholesale">$9.00</td>
+		</tr>
+		<tr>
+			<th headers="perth" id="perth-retail">Retail</th>
+			<td headers="imp imp-apr perth perth-retail">$2.00</td>
+			<td headers="imp imp-che imp-che-agrade perth perth-retail">$12.00</td>
+			<td headers="imp imp-che imp-che-bgrade perth perth-retail">$8.00</td>
+			<td headers="dom dom-apr perth perth-retail">$1.80</td>
+			<td headers="dom dom-che dom-che-agrade perth perth-retail">$16.00</td>
+			<td headers="dom dom-che dom-che-bgrade perth perth-retail">$12.50</td>
+		</tr>
+		<tr>
+			<th id="adelaide" colspan="7">Adelaide</th>
+		</tr>
+		<tr>
+			<th id="adelaide-wholesale">Wholesale</th>
+			<td headers="imp imp-apr adelaide adelaide-wholesale">$1.20</td>
+			<td headers="imp imp-che imp-che-agrade adelaide adelaide-wholesale">N/A</td>
+			<td headers="imp imp-che imp-che-bgrade adelaide adelaide-wholesale">$7.00</td>
+			<td headers="dom dom-apr adelaide adelaide-wholesale">$1.00</td>
+			<td headers="dom dom-che dom-che-agrade adelaide adelaide-wholesale">$11.00</td>
+			<td headers="dom dom-che dom-che-bgrade adelaide adelaide-wholesale">$6.00</td>
+		</tr>
+		<tr>
+			<th id="adelaide-retail">Retail</th>
+			<td headers="imp imp-apr adelaide adelaide-retail">$1.60</td>
+			<td headers="imp imp-che imp-che-agrade adelaide adelaide-retail">N/A</td>
+			<td headers="imp imp-che imp-che-bgrade adelaide adelaide-retail">$11.00</td>
+			<td headers="dom dom-apr adelaide adelaide-retail">$2.00</td>
+			<td headers="dom dom-che dom-che-agrade adelaide adelaide-retail">$13.00</td>
+			<td headers="dom dom-che dom-che-bgrade adelaide adelaide-retail">$10.00</td>
+		</tr>
+	</tbody>
+</table>
+			</div>
+		</div>
+
+
+		<footer>
+			<p>
+				Data table example from
+				<a href="http://usability.com.au/2005/06/accessible-data-tables-2005/">http://usability.com.au/2005/06/accessible-data-tables-2005/</a>
+			</p>
+		</footer>
+
+		<script src="../scripts/test-scripts.js"></script>
+		<script>
+			var test = [];
+			var el = document.getElementById('ctbl-01');
+			var isSupported = (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
+
+			test.push({id: "basic-criteria", pass: isSupported});
+			displaySupportResults(test);
+		</script>
 	</body>
 </html>

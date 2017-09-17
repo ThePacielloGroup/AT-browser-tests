@@ -27,7 +27,7 @@
 			<div class="reference">
 				<h2>Reference</h2>
 				<ul>
-					<li><a href="http://www.w3.org/TR/html/forms.html#range-state-%28type=range%29">HTML5 input type=range element</a></li>
+					<li><a href="https://w3c.github.io/html/sec-forms.html#range-state-typerange">HTML5 input type=range element</a></li>
 					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#el-input-range">HTML Accessibility API Mappings for input type=range element</a></li>
 					<li><a href="https://w3c.github.io/aria/core-aam/core-aam.html#role-map-slider">Core Accessibility API Mappings for slider role</a></li>
 					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#other-form-elements-accessible-name-calculation">Accessible Name Calculation</a></li>
@@ -42,9 +42,6 @@
 			<div class="test-case">
 				<input id="input1" type="range" min="-100" max="100" value="10" step="10" />
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;input id="input1" type="range" min="-100" max="100" value="10" step="10" /></code></pre>
 		</div>
 
 		<div class="test">
@@ -52,29 +49,24 @@
 
 			<div class="test-case">
 				<input id="input2" type="range" min="-100" max="100" value="10" step="10" aria-label="aria-label attribute" />
-
+</div>
+			<div class="test-notes">
 				<p>Aria-label should be used as accessible name</p>
 				<p>No accessible description.</p>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;input id="input2" type="range" min="-100" max="100" value="10" step="10" aria-label="aria-label attribute" /></code></pre>
 		</div>
 
 		<div class="test">
 			<h2 class="test-title" id="ri-003">Test ri-003: Input type="range" with <code>aria-labelledby</code></h2>
 
 			<div class="test-case">
-				<p id="ri-003-labelledby">p referenced by aria-labelledby</p>
-				<input id="input3" type="range" min="-100" max="100" value="10" step="10" aria-labelledby="ri-003-labelledby" />
-
+<p id="ri-003-labelledby">p referenced by aria-labelledby</p>
+<input id="input3" type="range" min="-100" max="100" value="10" step="10" aria-labelledby="ri-003-labelledby" />
+</div>
+			<div class="test-notes">
 				<p>Aria-labelledby should be used as accessible name</p>
 				<p>No accessible description.</p>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;p id="ri-003-labelledby">p referenced by aria-labelledby&lt;/p>
-&lt;input id="input3" type="range" min="-100" max="100" value="10" step="10" aria-labelledby="ri-003-labelledby" /></code></pre>
 		</div>
 
 		<div class="test">
@@ -82,13 +74,11 @@
 
 			<div class="test-case">
 				<label>label wrapping input <input id="input4" type="range" min="-100" max="100" value="10" step="10" /></label>
-
+</div>
+			<div class="test-notes">
 				<p>Label should be used as accessible name</p>
 				<p>No accessible description.</p>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;label>label wrapping input &lt;input id="input4" type="range" min="-100" max="100" value="10" step="10" />&lt;/label></code></pre>
 		</div>
 
 		<div class="test">
@@ -96,45 +86,37 @@
 
 			<div class="test-case">
 				<input id="input5" type="range" min="-100" max="100" value="10" step="10" title="title attribute" />
-
+</div>
+			<div class="test-notes">
 				<p>Title should be used as accessible name</p>
 				<p>No accessible description.</p>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;input id="input5" type="range" min="-100" max="100" value="10" step="10" title="title attribute" /></code></pre>
 		</div>
 
 		<div class="test">
 			<h2 class="test-title" id="ri-006">Test ri-006: Input type="range" with <code>aria-describedby</code></h2>
 
 			<div class="test-case">
-				<input id="input6" type="range" min="-100" max="100" value="10" step="10" aria-describedby="ri-006-describedby" />
-				<p id="ri-006-describedby">p referenced by aria-describedby</p>
-
+<input id="input6" type="range" min="-100" max="100" value="10" step="10" aria-describedby="ri-006-describedby" />
+<p id="ri-006-describedby">p referenced by aria-describedby</p>
+</div>
+			<div class="test-notes">
 				<p>Aria-describedby should be used as accessible description</p>
 				<p>No accessible name.</p>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;input id="input6" type="range" min="-100" max="100" value="10" step="10" aria-describedby="ri-006-describedby" />
-&lt;p id="ri-006-describedby">p referenced by aria-describedby&lt;/p></code></pre>
 		</div>
 
 		<div class="test">
 			<h2 class="test-title" id="ri-007">Test ri-007: Input type="range" with <code>label</code> element &amp; <code>title</code> attribute</h2>
 
 			<div class="test-case">
-				<label for="input7">label referenced by for/id attributes</label>
-				<input id="input7" type="range" min="-100" max="100" value="10" step="10" title="title attribute" />
-
+<label for="input7">label referenced by for/id attributes</label>
+<input id="input7" type="range" min="-100" max="100" value="10" step="10" title="title attribute" />
+</div>
+			<div class="test-notes">
 				<p>Label should be used as accessible name</p>
 				<p>Title should be used as accessible description</p>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;label for="input7">label referenced by for/id attributes&lt;/label>
-&lt;input id="input7" type="range" min="-100" max="100" value="10" step="10" title="title attribute" /></code></pre>
 		</div>
 
 		<script src="../scripts/test-scripts.js"></script>

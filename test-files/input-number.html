@@ -29,7 +29,7 @@
 			<div class="reference">
 				<h2>Reference</h2>
 				<ul>
-					<li><a href="http://www.w3.org/TR/html/forms.html#number-state-(type=number)">HTML5 input type=number element</a></li>
+					<li><a href="https://w3c.github.io/html/sec-forms.html#number-state-typenumber">HTML5 input type=number element</a></li>
 					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#el-input-number">HTML Accessibility API Mappings for input type=number element</a></li>
 					<li><a href="https://w3c.github.io/aria/core-aam/core-aam.html#role-map-spinbutton">Core Accessibility API Mappings for spinbutton role</a></li>
 					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#other-form-elements-accessible-name-calculation">Accessible Name Calculation</a></li>
@@ -42,121 +42,103 @@
 			<h2 class="test-title" id="ni-001">Test ni-001: Unlabelled input type="number"</h2>
 
 			<div class="test-case">
-				<form>
-					<input id="input1" type="number" />
-				</form>
+<form>
+	<input id="inum-01" type="number" />
+</form>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;input id="input1" type="number" /></code></pre>
 		</div>
 
 		<div class="test">
 			<h2 class="test-title" id="ni-002">Test ni-002: Input type="number" with <code>aria-label</code></h2>
 
 			<div class="test-case">
-				<form>
-					<input id="input2" type="number" aria-label="aria-label attribute" />
-				</form>
-
+<form>
+	<input id="input2" type="number" aria-label="aria-label attribute" />
+</form>
+</div>
+			<div class="test-notes">
 				<p>Aria-label should be used as accessible name</p>
 				<p>No accessible description.</p>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;input id="input2" type="number" aria-label="aria-label attribute" /></code></pre>
 		</div>
 
 		<div class="test">
 			<h2 class="test-title" id="ni-003">Test ni-003: Input type="number" with <code>aria-labelledby</code></h2>
 
 			<div class="test-case">
-				<form>
-					<p id="ni-003-labelledby">p referenced by aria-labelledby</p>
-					<input id="input3" type="number" aria-labelledby="ni-003-labelledby" />
-				</form>
-
+<form>
+	<p id="ni-003-labelledby">p referenced by aria-labelledby</p>
+	<input id="input3" type="number" aria-labelledby="ni-003-labelledby" />
+</form>
+</div>
+			<div class="test-notes">
 				<p>Aria-labelledby should be used as accessible name</p>
 				<p>No accessible description.</p>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;p id="ni-003-labelledby">p referenced by aria-labelledby&lt;/p>
-&lt;input id="input3" type="number" aria-labelledby="ni-003-labelledby" /></code></pre>
 		</div>
 
 		<div class="test">
 			<h2 class="test-title" id="ni-004">Test ni-004: Input type="number" with label</h2>
 
 			<div class="test-case">
-				<form>
-					<label>label wrapping input <input id="input4" type="number" /></label>
-				</form>
-
+<form>
+	<label>label wrapping input <input id="input4" type="number" /></label>
+</form>
+</div>
+			<div class="test-notes">
 				<p>Label should be used as accessible name</p>
 				<p>No accessible description.</p>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;label>label wrapping input &lt;input id="input4" type="number" />&lt;/label></code></pre>
 		</div>
 
 		<div class="test">
 			<h2 class="test-title" id="ni-005">Test ni-005: Input type="number" with <code>title</code> attribute</h2>
 
 			<div class="test-case">
-				<form>
-					<input id="input5" type="number" title="title attribute" />
-				</form>
-
+<form>
+	<input id="input5" type="number" title="title attribute" />
+</form>
+</div>
+			<div class="test-notes">
 				<p>Title should be used as accessible name</p>
 				<p>No accessible description.</p>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;input id="input5" type="number" title="title attribute" /></code></pre>
 		</div>
 
 		<div class="test">
 			<h2 class="test-title" id="ni-006">Test ni-006: Input type="number" with <code>aria-describedby</code></h2>
 
 			<div class="test-case">
-				<form>
-					<input id="input6" type="number" aria-describedby="ni-006-describedby" />
-					<p id="ni-006-describedby">p referenced by aria-describedby</p>
-				</form>
-
+<form>
+	<input id="input6" type="number" aria-describedby="ni-006-describedby" />
+	<p id="ni-006-describedby">p referenced by aria-describedby</p>
+</form>
+</div>
+			<div class="test-notes">
 				<p>Aria-describedby should be used as accessible description</p>
 				<p>No accessible name.</p>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;input id="input6" type="number" aria-describedby="ni-006-describedby" />
-&lt;p id="ni-006-describedby">p referenced by aria-describedby&lt;/p></code></pre>
 		</div>
 
 		<div class="test">
 			<h2 class="test-title" id="ni-007">Test ni-007: Input type="number" with <code>label</code> element &amp; <code>title</code> attribute</h2>
 
 			<div class="test-case">
-				<form>
-					<label for="input7">label referenced by for/id attributes</label>
-					<input id="input7" type="number" title="title attribute" />
-				</form>
-
+<form>
+	<label for="input7">label referenced by for/id attributes</label>
+	<input id="input7" type="number" title="title attribute" />
+</form>
+</div>
+			<div class="test-notes">
 				<p>Label should be used as accessible name</p>
 				<p>Title should be used as accessible description</p>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;label for="input7">label referenced by for/id attributes&lt;/label>
-&lt;input id="input7" type="number" title="title attribute" /></code></pre>
 		</div>
 
 		<script src="../scripts/test-scripts.js"></script>
 		<script>
 			var test = [],
-				el = document.getElementById('input1'),
+				el = document.getElementById('inum-01'),
 			    isSupported = (el.type === 'number');
 
 			test.push({id: "basic-criteria", pass: isSupported});

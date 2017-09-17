@@ -27,120 +27,140 @@
 			<div class="reference">
 				<h2>Reference</h2>
 				<ul>
-					<li><a href="http://www.w3.org/TR/html5/forms.html#color-state-(type=color)">HTML5 input type=color element</a></li>
-					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#el-input-color">HTML Accessibility API Mappings for input type=color element</a></li>
-					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#other-form-elements-accessible-name-calculation">Accessible Name Calculation</a></li>
-					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#other-form-elements-accessible-description-calculation">Accessible Description Calculation</a></li>
+					<li>
+						<a href="https://w3c.github.io/html/sec-forms.html#color-state-typecolor">HTML5 <code>input type=color</code> element</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/aria/html-aam/html-aam.html#el-input-color">HTML Accessibility API Mappings for <code>input type=color</code> element</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/aria/html-aam/html-aam.html#other-form-elements-accessible-name-calculation">Accessible Name Calculation</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/aria/html-aam/html-aam.html#other-form-elements-accessible-description-calculation">Accessible Description Calculation</a>
+					</li>
 				</ul>
 			</div>
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="ci-001">Test ci-001: Unlabelled input type="color"</h2>
+			<h2 class="test-title" id="ci-001">
+				Test ci-001: Unlabelled <code>input type=color</code>
+			</h2>
 
 			<div class="test-case">
 				<input id="input1" type="color" />
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;input id="input1" type="color" /></code></pre>
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="ci-002">Test ci-002: Input type="color" with <code>aria-label</code></h2>
+			<h2 class="test-title" id="ci-002">
+				Test ci-002: <code>input type=color</code>
+				with <code>aria-label</code>
+			</h2>
 
 			<div class="test-case">
 				<input id="input2" type="color" aria-label="aria-label attribute" />
-
-				<p>Aria-label should be used as accessible name</p>
+</div>
+			<div class="test-notes">
+				<p><code>aria-label</code> should be used as accessible name</p>
 				<p>No accessible description.</p>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;input id="input2" type="color" aria-label="aria-label attribute" /></code></pre>
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="ci-003">Test ci-003: Input type="color" with <code>aria-labelledby</code></h2>
+			<h2 class="test-title" id="ci-003">
+				Test ci-003: <code>input type=color</code>
+				with <code>aria-labelledby</code>
+			</h2>
 
 			<div class="test-case">
-				<p id="ci-003-labelledby">p referenced by aria-labelledby</p>
-				<input id="input3" type="color" aria-labelledby="ci-003-labelledby" />
-
-				<p>Aria-labelledby should be used as accessible name</p>
+<p id="ci-003-labelledby">
+	<code>p</code> referenced by <code>aria-labelledby</code>
+</p>
+<input id="input3" type="color" aria-labelledby="ci-003-labelledby" />
+</div>
+			<div class="test-notes">
+				<p><code>aria-labelledby</code> should be used as accessible name</p>
 				<p>No accessible description.</p>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;p id="ci-003-labelledby">p referenced by aria-labelledby&lt;/p>
-&lt;input id="input3" type="color" aria-labelledby="ci-003-labelledby" /></code></pre>
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="ci-004">Test ci-004: Input type="color" with label</h2>
+			<h2 class="test-title" id="ci-004">
+				Test ci-004: <code>input type=color</code>
+				with <code>label</code>
+			</h2>
 
 			<div class="test-case">
-				<label>label wrapping input <input id="input4" type="color" /></label>
-
-				<p>Label should be used as accessible name</p>
+<label>
+	label wrapping input
+	<input id="input4" type="color">
+</label>
+			</div>
+			<div class="test-notes">
+				<p><code>label</code> should be used as accessible name</p>
 				<p>No accessible description.</p>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;label>label wrapping input &lt;input id="input4" type="color" />&lt;/label></code></pre>
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="ci-005">Test ci-005: Input type="color" with <code>title</code> attribute</h2>
+			<h2 class="test-title" id="ci-005">
+				Test ci-005: <code>input type=color</code>
+				with <code>title</code> attribute
+			</h2>
 
 			<div class="test-case">
 				<input id="input5" type="color" title="title attribute" />
-
-				<p>Title should be used as accessible name</p>
+</div>
+			<div class="test-notes">
+				<p><code>title</code> should be used as accessible name</p>
 				<p>No accessible description.</p>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;input id="input5" type="color" title="title attribute" /></code></pre>
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="ci-006">Test ci-006: Input type="color" with <code>aria-describedby</code></h2>
+			<h2 class="test-title" id="ci-006">
+				Test ci-006: <code>input type=color</code>
+				with <code>aria-describedby</code>
+			</h2>
 
 			<div class="test-case">
-				<input id="input6" type="color" aria-describedby="ci-006-describedby" />
-				<p id="ci-006-describedby">p referenced by aria-describedby</p>
-
-				<p>Aria-describedby should be used as accessible description</p>
+<input id="input6" type="color" aria-describedby="ci-006-describedby" />
+<p id="ci-006-describedby">
+	<code>p</code> referenced by <code>aria-describedby</code>
+</p>
+</div>
+			<div class="test-notes">
+				<p><code>aria-describedby</code> should be used as accessible description</p>
 				<p>No accessible name.</p>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;input id="input6" type="color" aria-describedby="ci-006-describedby" />
-&lt;p id="ci-006-describedby">p referenced by aria-describedby&lt;/p></code></pre>
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="ci-007">Test ci-007: Input type="color" with <code>label</code> element &amp; <code>title</code> attribute</h2>
+			<h2 class="test-title" id="ci-007">
+				Test ci-007: <code>input type=color</code>
+				with <code>label</code> element
+				&amp; <code>title</code> attribute
+			</h2>
 
 			<div class="test-case">
-				<label for="input7">label referenced by for/id attributes</label>
-				<input id="input7" type="color" title="title attribute" />
-
-				<p>Label should be used as accessible name</p>
-				<p>Title should be used as accessible description</p>
+<label for="input7">
+	label referenced by for/id attributes
+</label>
+<input id="input7" type="color" title="title attribute" />
+</div>
+			<div class="test-notes">
+				<p><code>label</code> should be used as accessible name</p>
+				<p><code>title</code> should be used as accessible description</p>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;label for="input7">label referenced by for/id attributes&lt;/label>
-&lt;input id="input7" type="color" title="title attribute" /></code></pre>
 		</div>
 
 		<script src="../scripts/test-scripts.js"></script>
 		<script>
-			var test = [],
-				el = document.getElementById('input1'),
-			    isSupported = (el.type === 'color');
+			var test = [];
+			var el = document.getElementById('input1');
+			var isSupported = (el.type === 'color');
 
 			test.push({id: "basic-criteria", pass: isSupported});
 			displaySupportResults(test);

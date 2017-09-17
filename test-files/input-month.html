@@ -27,7 +27,7 @@
 			<div class="reference">
 				<h2>Reference</h2>
 				<ul>
-					<li><a href="http://www.w3.org/TR/html5/forms.html#date-state-(type=month)">HTML5 input type=month element</a></li>
+					<li><a href="https://w3c.github.io/html/sec-forms.html#month-state-typemonth">HTML5 input type=month element</a></li>
 					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#el-input-input-month">HTML Accessibility API Mappings for input type=month element</a></li>
 					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#other-form-elements-accessible-name-calculation">Accessible Name Calculation</a></li>
 					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#other-form-elements-accessible-description-calculation">Accessible Description Calculation</a></li>
@@ -41,39 +41,31 @@
 			<div class="test-case">
 				<input id="input1" type="month" />
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;input id="input1" type="month" /></code></pre>
 		</div>
 
 		<div class="test">
 			<h2 class="test-title" id="mi-002">Test mi-002: Input type="month" with <code>aria-label</code></h2>
 
 			<div class="test-case">
-				<input id="input2" type="month" aria-label="aria-label attribute" />
-
+<input id="input2" type="month" aria-label="aria-label attribute" />
+</div>
+			<div class="test-notes">
 				<p>Aria-label should be used as accessible name</p>
 				<p>No accessible description.</p>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;input id="input2" type="month" aria-label="aria-label attribute" /></code></pre>
 		</div>
 
 		<div class="test">
 			<h2 class="test-title" id="mi-003">Test mi-003: Input type="month" with <code>aria-labelledby</code></h2>
 
 			<div class="test-case">
-				<p id="mi-003-labelledby">p referenced by aria-labelledby</p>
-				<input id="input3" type="month" aria-labelledby="mi-003-labelledby" />
-
+<p id="mi-003-labelledby">p referenced by aria-labelledby</p>
+<input id="input3" type="month" aria-labelledby="mi-003-labelledby" />
+</div>
+			<div class="test-notes">
 				<p>Aria-labelledby should be used as accessible name</p>
 				<p>No accessible description.</p>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;p id="mi-003-labelledby">p referenced by aria-labelledby&lt;/p>
-&lt;input id="input3" type="month" aria-labelledby="mi-003-labelledby" /></code></pre>
 		</div>
 
 		<div class="test">
@@ -81,13 +73,11 @@
 
 			<div class="test-case">
 				<label>label wrapping input <input id="input4" type="month" /></label>
-
+</div>
+			<div class="test-notes">
 				<p>Label should be used as accessible name</p>
 				<p>No accessible description.</p>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;label>label wrapping input &lt;input id="input4" type="month" />&lt;/label></code></pre>
 		</div>
 
 		<div class="test">
@@ -95,45 +85,37 @@
 
 			<div class="test-case">
 				<input id="input5" type="month" title="title attribute" />
-
+</div>
+			<div class="test-notes">
 				<p>Title should be used as accessible name</p>
 				<p>No accessible description.</p>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;input id="input5" type="month" title="title attribute" /></code></pre>
 		</div>
 
 		<div class="test">
 			<h2 class="test-title" id="mi-006">Test mi-006: Input type="month" with <code>aria-describedby</code></h2>
 
 			<div class="test-case">
-				<input id="input6" type="month" aria-describedby="mi-006-describedby" />
-				<p id="mi-006-describedby">p referenced by aria-describedby</p>
-
+<input id="input6" type="month" aria-describedby="mi-006-describedby" />
+<p id="mi-006-describedby">p referenced by aria-describedby</p>
+</div>
+			<div class="test-notes">
 				<p>Aria-describedby should be used as accessible description</p>
 				<p>No accessible name.</p>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;input id="input6" type="month" aria-describedby="mi-006-describedby" />
-&lt;p id="mi-006-describedby">p referenced by aria-describedby&lt;/p></code></pre>
 		</div>
 
 		<div class="test">
 			<h2 class="test-title" id="mi-007">Test mi-007: Input type="month" with <code>label</code> element &amp; <code>title</code> attribute</h2>
 
 			<div class="test-case">
-				<label for="input7">label referenced by for/id attributes</label>
-				<input id="input7" type="month" title="title attribute" />
-
+<label for="input7">label referenced by for/id attributes</label>
+<input id="input7" type="month" title="title attribute" />
+</div>
+			<div class="test-notes">
 				<p>Label should be used as accessible name</p>
 				<p>Title should be used as accessible description</p>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;label for="input7">label referenced by for/id attributes&lt;/label>
-&lt;input id="input7" type="month" title="title attribute" /></code></pre>
 		</div>
 
 		<script src="../scripts/test-scripts.js"></script>

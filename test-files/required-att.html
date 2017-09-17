@@ -21,39 +21,41 @@
 			<div class="reference">
 				<h2>Reference</h2>
 				<ul>
-					<li><a href="https://www.w3.org/TR/html51/semantics.html#the-required-attribute">HTML5 required attribute</a>
-					<li><a href="https://w3c.github.io/aria/html-aam/html-aam.html#att-required">HTML Accessibility API Mappings for required attribute</a></li>
+					<li>
+						<a href="https://w3c.github.io/html/sec-forms.html#element-attrdef-textarea-required">HTML5 <code>required</code> attribute</a>
+					<li>
+						<a href="https://w3c.github.io/aria/html-aam/html-aam.html#att-required">HTML Accessibility API Mappings for <code>required</code> attribute</a>
+					</li>
 				</ul>
 			</div>
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="rq-001">Test rq-001: Required attribute</h2>
+			<h2 class="test-title" id="rq-001">
+				Test rq-001: <code>required</code> attribute
+			</h2>
 
 			<div class="test-case">
-				<form>
-					<label for="input1">Submit without entering value to trigger required attribute:</label>
-					<input id="input1" type="text" required />
-					<button>Submit</button>
-				</form>
+<form>
+	<label for="input1">
+		Submit without entering value to trigger required attribute:
+	</label>
+	<input id="input1" type="text" required>
+	<button>Submit</button>
+</form>
 			</div>
-
-			<h3 class="code-title">Code</h3>
-			<pre><code>&lt;form>
-	&lt;label for="input1">Submit without entering value to trigger required attribute:&lt;/label>
-	&lt;input id="input1" type="text" required />
-	&lt;button>Submit&lt;/button>
-&lt;/form></code></pre>
 		</div>
 
 		<script src="../scripts/test-scripts.js"></script>
 		<script>
-			var test = [],
-				el = document.getElementById('input1'),
-			    isSupported = (typeof HTMLInputElement != 'undefined'
-				               && el instanceof HTMLInputElement && 'required' in el);
+			var test = [];
+			var el = document.getElementById('input1');
+			var isSupported = (typeof HTMLInputElement != 'undefined'
+											&& el instanceof HTMLInputElement && 'required' in el);
 
-			test.push({id: "basic-criteria", pass: isSupported});
+			test.push({
+				id: "basic-criteria", pass: isSupported
+			});
 			displaySupportResults(test);
 		</script>
 	</body>

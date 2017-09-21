@@ -62,6 +62,45 @@
 		</div>
 
 
+		<div class="test">
+			<h2 class="test-title" id="ul-002">
+				Test ul-002: <code>ul/li</code> elements with
+				<code>aria-label</code> on <code>ul</code>
+			</h2>
+
+			<div class="test-case">
+<ul id="ul-02" aria-label="Fruits">
+	<li>Apples</li>
+	<li>Pears</li>
+	<li>Bananas</li>
+	<li>Grapes</li>
+</ul>
+			</div>
+
+		</div>
+
+
+		<div class="test">
+			<h2 class="test-title" id="ul-003">
+				Test ul-003: <code>ul/li</code> elements with
+				<code>aria-label</code> and <code>aria-describedby</code> on <code>ul</code>
+			</h2>
+
+			<div class="test-case">
+<ul id="ul-03" aria-label="Fruits" aria-describedby="ul_desc1">
+	<li>Apples</li>
+	<li>Pears</li>
+	<li>Bananas</li>
+	<li>Grapes</li>
+</ul>
+<p id="ul_desc1">
+	Don't forget to buy these fruits!
+</p>
+			</div>
+
+		</div>
+
+
 		<script src="../scripts/test-scripts.js"></script>
 		<script>
 			var test = [];

@@ -48,8 +48,29 @@
 </audio>
 			</div>
 		</div>
+<div class="test">
+			<h2 class="test-title" id="au-002">
+			Test au-002: <code>audio</code> element with <code>aria-label</code> </h2>
 
-		<small>Audio file: <a href="https://archive.org/details/Jeffbob">Spam call: Bob hangs up 7 mins into his survey</a> by Bruce Lawson</small>
+			<div class="test-case">
+<audio id="audio1" controls aria-label="label text">
+	<source src="../audio/jeffbob.mp3" type="audio/mpeg" />
+	<source src="../audio/jeffbob.ogg" type="audio/ogg" />
+</audio>
+			</div>
+	</div>
+    <div class="test">
+			<h2 class="test-title" id="au-003">
+			Test au-003: <code>audio</code> element with <code>aria-label</code> and <code>aria-describedby</code></h2>
+
+			<div class="test-case">
+<audio id="audio1" controls aria-label="label text" aria-describedby="description">
+	<source src="../audio/jeffbob.mp3" type="audio/mpeg" />
+	<source src="../audio/jeffbob.ogg" type="audio/ogg" />
+</audio>
+			</div>
+	</div>
+		<small id="description">Audio file: <a href="https://archive.org/details/Jeffbob">Spam call: Bob hangs up 7 mins into his survey</a> by Bruce Lawson</small>
 
 		<script src="../scripts/test-scripts.js"></script>
 		<script>

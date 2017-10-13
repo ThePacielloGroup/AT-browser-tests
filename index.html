@@ -6,65 +6,83 @@
 		<script src="scripts/html5shiv.js"></script>
 		<style>
 			.note {
-				padding: 0.5em 2em;
-				background: none repeat scroll 0 0 #e9fbe9;
-				border-left: 0.25em solid #52e052; }
+				background: #e9fbe9;
+				border-left: .25em solid #52e052;
+				padding: .5em 2em;
+			}
 
 			table {
-			    border-collapse: collapse;
-			    border: 1px solid #630;
-			    font: 0.8em Arial, Verdana, Helvetica, sans-serif; }
+				border-collapse: collapse;
+				border: 1px solid #630;
+				font: .8em Arial, Verdana, Helvetica, sans-serif; }
 
-			th, td {
+			th,
+			td {
+				border: 1px solid #630;
+				padding: 0.3em;
 				text-align: left;
-			    vertical-align: top;
-			    padding: 0.3em;
-			    border: 1px solid #630; }
+				vertical-align: top;
+			}
 
 			th[scope='row'] { text-align:left; }
 
 			tbody tr:hover { outline:solid 2px #666666; }
 
-	        .navlist li {
-			    display: inline;
-			    list-style-type: none;
-			    padding-right: 20px; }
+			.navlist li {
+				display: inline;
+				list-style-type: none;
+				padding-right: 20px;
+			}
 
 			#logo {float:left}
 
-			a:hover, a:focus { background-color:#99FF99; outline:solid thin #030; }
+			a:hover,
+			a:focus {
+				background-color:#99FF99;
+				outline:solid thin #030;
+			}
 
 			kbd {
 				background-color: #F1F1F1;
-				border: 1px solid #666;
 				border-radius: 5px;
+				border: 1px solid #666;
 				color: #333;
-				padding: 0px 2px;
-				margin: 1px;
-				font-weight: bold;
-				font-family: Arial,Helvetica,sans-serif;
-				min-width: 17px;
 				display: inline-block;
-				 }
+				font-family: Arial,Helvetica,sans-serif;
+				font-weight: bold;
+				margin: 1px;
+				min-width: 17px;
+				padding: 0 2px;
+			}
+
+			.status-icon {
+				height: 16px;
+				width: 16px;
+			}
 
 		</style>
 		<link href="https://www.w3.org/StyleSheets/TR/w3c-unofficial" rel="stylesheet">
 	<head>
 <body>
 	<header>
-		<img src="images/HTML5_Logo.png" width="128" height="128" alt="HTML5 logo" id="logo">
-		<h1>Aural UI of the Elements of <abbr title="Hypertext Markup Language">HTML</abbr></h1>
+		<img src="images/HTML5_Logo.png" style="width: 128px; height: 128px;" alt="HTML5 logo" id="logo">
+		<h1>
+			Aural UI of the Elements of
+			<abbr title="Hypertext Markup Language">HTML</abbr>
+		</h1>
 
 		<p>A Work <em>in progress</em>: Last updated 10 March 2017</p>
 		<p><strong>Editor:</strong> Steve Faulkner</p>
-		<p><strong>Github Repo:</strong> <a href="https://github.com/ThePacielloGroup/AT-browser-tests">ThePacielloGroup/AT-browser-tests</a></p>
+		<p><strong>GitHub Repo:</strong> <a href="https://github.com/ThePacielloGroup/AT-browser-tests">ThePacielloGroup/AT-browser-tests</a></p>
 
 		<p>Found a bug? Please <a href="https://github.com/ThePacielloGroup/AT-browser-tests/issues?state=open">report it</a>.</p>
 
 		<a href="https://github.com/ThePacielloGroup/AT-browser-tests"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
 	</header>
 
-	<h2>How HTML elements are supported by screen readers</h2>
+	<h2>
+		How HTML elements are supported by screen readers
+	</h2>
 	<p>Typical support patterns of HTML elements by screen readers:</p>
 	<ul>
 		<li>Identification of an element by role as the user moves through the content.</li>
@@ -73,19 +91,19 @@
 		<li>Change in voice as the content of an element is announced.</li>
 		<li>Announcement of an elements accessible name and/or description</li>
 		<li>Announcement of states and properties.</li>
-		<li>Emission of a beep or other sound when an element with a particulat state or property receives <a href="http://juicystudio.com/article/making-ajax-work-with-screen-readers.php#jawsvirtual" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://juicystudio.com/article/making-ajax-work-with-screen-readers.php#jawsvirtual', 'virtual focus');">virtual focus</a>.</li>
+		<li>Emission of a beep or other sound when an element with a particular state or property receives <a href="http://juicystudio.com/article/making-ajax-work-with-screen-readers.php#jawsvirtual" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://juicystudio.com/article/making-ajax-work-with-screen-readers.php#jawsvirtual', 'virtual focus');">virtual focus</a>.</li>
 		<li>Instructions on how to operate interactive elements such as form controls.</li>
 		<li>Navigation of elements by keyboard and &ldquo;quick access&rdquo; lists of a  particular elements, list items are linked to each instance of an  element on the page.</li>
-    </ul>
-    <p><strong>Note:</strong> The combination of patterns supported varies from element to element and support for a particular element varies between screen reader software.</p>
+	</ul>
+	<p><strong>Note:</strong> The combination of patterns supported varies from element to element and support for a particular element varies between screen reader software.</p>
 
 	<p class="note">JAWS testing - In progress</p>
-    <h2>JAWS</h2>
-    <h3>JAWS - General Navigation notes</h3>
-    <h4><strong>Step Out of Element: </strong></h4>
-    <p>JAWS lets you step out of an element, such as a table or list, so you can move around more quickly. Press <strong><kbd>&gt;</kbd></strong> to step past the current table, list, or other element. Press <strong><kbd>&lt;</kbd> </strong>to step before the current table, list, or other element. </p>
-    <h4>Move by Element</h4>
-    <p>At times you may wish to skip over an entire part of a web page. JAWS   provides commands to move to the next or prior HTML element. Move either to the next or prior instance of the same type element, or to the next or prior instance of a different element. For example, use the Next Different Element command, <strong>D</strong>, to move past a list.</p>
+	<h2>JAWS</h2>
+	<h3>JAWS - General Navigation notes</h3>
+	<h4><strong>Step Out of Element: </strong></h4>
+	<p>JAWS lets you step out of an element, such as a table or list, so you can move around more quickly. Press <strong><kbd>&gt;</kbd></strong> to step past the current table, list, or other element. Press <strong><kbd>&lt;</kbd> </strong>to step before the current table, list, or other element. </p>
+	<h4>Move by Element</h4>
+	<p>At times you may wish to skip over an entire part of a web page. JAWS   provides commands to move to the next or prior HTML element. Move either to the next or prior instance of the same type element, or to the next or prior instance of a different element. For example, use the Next Different Element command, <strong>D</strong>, to move past a list.</p>
 
     <ul>
       <li>Next Same Element
@@ -102,13 +120,13 @@
       <li>Press <kbd>INSERT+SHIFT+F1</kbd> to view basic HTML element information. This includes the assigned attributes and their values for the current element and the element directly above it in the HTML page hierarchy.</li>
       <li>Press <kbd>CTRL+INSERT+SHIFT+F1</kbd> to receive advanced HTML element information. This includes the assigned attributes and their values for the current element and the elements directly above it in the HTML page hierarchy.</li>
     </ul>
-    <H4>Font Information</H4>
-    <p>JAWS now reports font information within web pages when you use the <kbd>INSERT+F</kbd> command. Press <kbd>INSERT+F</kbd> twice quickly   to open this information in the JAWS Virtual Viewer.</p>
-    <p>&nbsp;</p>
-<table class="alt">
-		    <caption>
-		    JAWS and Firefox on Windows 10
-		    </caption>
+    <h4>Font Information</h4>
+    <p>JAWS now reports font information within web pages when you use the <kbd>INSERT+F</kbd> command. Press <kbd>INSERT+F</kbd> twice quickly to open this information in the JAWS Virtual Viewer.</p>
+
+		<table class="alt">
+			<caption>
+			JAWS and Firefox on Windows 10
+			</caption>
 			<thead>
 				<tr>
 					<th scope="col">Element [test file linked]</th>
@@ -116,7 +134,7 @@
 					<th scope="col">AURAL UI - JAWS</th>
 					<th scope="col">Interaction - JAWS</th>
 					<th scope="col">audio of JAWS announcing test file content</th>
-					<th width="83" scope="col">Element Semantics conveyed?</th>
+					<th style="width: 83px;" scope="col">Element Semantics conveyed?</th>
 					<th scope="col">notes - JAWS</th>
 				</tr>
 			</thead>
@@ -168,7 +186,7 @@
 							</audio>
 						</p>
 					</td>
-					<td><img src="images/tick.png" width="16" height="16" alt="yes"></td>
+					<td><img src="images/tick.png" class="status-icon" alt="yes"></td>
 					<td><code>link</code> role announced before link text when cursored to, after via tab.</td>
 				</tr>
 				<tr id="toc-a2">
@@ -196,8 +214,8 @@
 						</audio>
 					</td>
 					<td>
-						<p>JAWS &lt;15<img src="images/tick.png" width="16" height="16" alt="yes"></p>
-						<p>JAWS 15+ <img src="images/cross.png" width="16" height="16" alt="no"></p>
+						<p>JAWS &lt;15<img src="images/tick.png" class="status-icon" alt="yes"></p>
+						<p>JAWS 15+ <img src="images/cross.png" class="status-icon" alt="no"></p>
 					</td>
 					<td>
 						<p>Semantics conveyed via navigation (JAWS &lt;15)</p>
@@ -221,17 +239,17 @@
 						</audio>
 					</td>
 					<td>
-						<p>By default <img src="images/cross.png" width="16" height="16" alt="no"></p>
-						<p>via preference<img src="images/tick.png" width="16" height="16" alt="yes"></p>
+						<p>By default <img src="images/cross.png" class="status-icon" alt="no"></p>
+						<p>via preference<img src="images/tick.png" class="status-icon" alt="yes"></p>
 					</td>
 					<td>
 						<p>No semantics conveyed by default</p>
-						<p>Note that expansions are not announced by default and that expansions provided using the title attribute are not available to keyboard only users. Refer to <a href="http://www.paciellogroup.com/blog/2013/01/using-the-html-title-attribute-updated/">Using the HTML title attribute</a>.</p>
+						<p>Note that expansions are not announced by default and that expansions provided using the title attribute are not available to keyboard only users. Refer to <a href="https://www.paciellogroup.com/blog/2013/01/using-the-html-title-attribute-updated/">Using the HTML title attribute</a>.</p>
 					</td>
 				</tr>
 				<tr>
 					<th scope="row"><a href="test-files/address.html"><code>address</code></a></th>
-					<td>Contact information for a page or <a href="http://www.w3.org/TR/html5/sections.html#the-article-element">article</a> element</td>
+					<td>Contact information for a page or <a href="https://w3c.github.io/html/sections.html#the-article-element">article</a> element</td>
 					<td><em>element content</em></td>
 					<td>No special commands</td>
 					<td>
@@ -240,7 +258,7 @@
 							<source src="audio/address.ogg" type="audio/ogg">
 						</audio>
 					</td>
-					<td><img src="images/cross.png" width="16" height="16" alt="no"></td>
+					<td><img src="images/cross.png" class="status-icon" alt="no"></td>
 					<td>No semantics conveyed</td>
 				</tr>
 				<tr>
@@ -269,7 +287,7 @@
 							<source src="audio/article.ogg" type="audio/ogg">
 						</audio>
 					</td>
-					<td><img src="images/tick.png" width="16" height="16" alt="yes"></td>
+					<td><img src="images/tick.png" class="status-icon" alt="yes"></td>
 					<td>Included as a navigable region</td>
 				</tr>
 				<tr id="jaws-el-aside" tabindex="-1">
@@ -292,7 +310,7 @@
 							<source src="audio/aside.ogg" type="audio/ogg">
 						</audio>
 					</td>
-					<td><img src="images/tick.png" width="16" height="16" alt="yes"></td>
+					<td><img src="images/tick.png" class="status-icon" alt="yes"></td>
 					<td>Included as a navigable region</td>
 				</tr>
 				<tr>
@@ -304,7 +322,7 @@
 					<source src="audio/aside.mp3" type="audio/mpeg">
 					<source src="audio/aside.ogg" type="audio/ogg">
 					</audio>--> &nbsp;</td>
-					<td><img src="images/tick.png" width="16" height="16" alt="yes"></td>
+					<td><img src="images/tick.png" class="status-icon" alt="yes"></td>
 					<td>&nbsp;</td>
 				</tr>
 				<tr id="toc-b">
@@ -318,12 +336,12 @@
 							<source src="audio/b.ogg" type="audio/ogg">
 						</audio>
 					</td>
-					<td><img src="images/cross.png" width="16" height="16" alt="no"></td>
+					<td><img src="images/cross.png" class="status-icon" alt="no"></td>
 					<td>No semantics conveyed</td>
 				</tr>
 				<tr>
-					<th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/semantics.html#the-base-element"><code>base</code></a></th>
-					<td>Base URL and default target <a href="http://www.w3.org/TR/html5/browsers.html#browsing-context">browsing context</a> for <a data-anolis-xref="attr-hyperlink-target" href="http://www.w3.org/TR/html5/links.html#attr-hyperlink-target">hyperlinks</a> and <a data-anolis-xref="attr-fs-target" href="http://www.w3.org/TR/html5/forms.html#attr-fs-target">forms</a></td>
+					<th scope="row"><a href="https://w3c.github.io/html/document-metadata.html#the-base-element"><code>base</code></a></th>
+					<td>Base URL and default target <a href="https://w3c.github.io/html/browsers.html#browsing-context">browsing context</a> for <a data-anolis-xref="attr-hyperlink-target" href="https://w3c.github.io/html/links.html#hyperlink">hyperlinks</a> and <a data-anolis-xref="attr-fs-target" href="https://w3c.github.io/html/sec-forms.html#forms-form-submission">forms</a></td>
 					<td><em><strong>none expected</strong></em></td>
 					<td>No special commands</td>
 					<td>&nbsp;</td>
@@ -341,7 +359,7 @@
 							<source src="audio/bdi.ogg" type="audio/ogg">
 						</audio>
 					</td>
-					<td><img src="images/cross.png" width="16" height="16" alt="no"></td>
+					<td><img src="images/cross.png" class="status-icon" alt="no"></td>
 					<td>No semantics conveyed</td>
 				</tr>
 				<tr>
@@ -355,7 +373,7 @@
 							<source src="audio/bdo.ogg" type="audio/ogg">
 						</audio>
 					</td>
-					<td><img src="images/cross.png" width="16" height="16" alt="no"></td>
+					<td><img src="images/cross.png" class="status-icon" alt="no"></td>
 					<td>No semantics conveyed</td>
 				</tr>
 				<tr>
@@ -375,16 +393,16 @@
 							<source src="audio/blockquote-cite.ogg" type="audio/ogg">
 						</audio>
 					</td>
-					<td><img src="images/tick.png" width="16" height="16" alt="yes"></td>
+					<td><img src="images/tick.png" class="status-icon" alt="yes"></td>
 					<td>Semantics conveyed via navigation and element name announcement</td>
 				</tr>
 				<tr>
-					<th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/sections.html#the-body-element"><code>body</code></a></th>
+					<th scope="row"><a href="https://w3c.github.io/html/sections.html#the-body-element"><code>body</code></a></th>
 					<td>Document body</td>
 					<td><em>element content</em></td>
 					<td>No special commands</td>
 					<td>&nbsp;</td>
-					<td><img src="images/cross.png" width="16" height="16" alt="no"></td>
+					<td><img src="images/cross.png" class="status-icon" alt="no"></td>
 					<td><p>No semantics conveyed</p>
 					<p>Is included in focus order in most browsers.</p></td>
 				</tr>
@@ -414,7 +432,7 @@
 							<source src="audio/button.ogg" type="audio/ogg">
 						</audio>
 					</td>
-					<td><img src="images/tick.png" width="16" height="16" alt="yes"></td>
+					<td><img src="images/tick.png" class="status-icon" alt="yes"></td>
 					<td>Semantics conveyed via navigation and element name announcement</td>
 				</tr>
 				<tr id="toc-c">
@@ -428,8 +446,8 @@
 							<source src="audio/canvas.ogg" type="audio/ogg">
 						</audio>
 					</td>
-					<td><img src="images/tick.png" width="16" height="16" alt="yes"></td>
-					<td><p>The canvas is 'transparent' for screen reader users. HTML content included in the <a href="http://www.paciellogroup.com/blog/2015/02/html5-canvas-sub-dom/">HTML5 canvas sub DOM</a> is announced and navigable by screen reader users and is navigable by keyboard users.</p>
+					<td><img src="images/tick.png" class="status-icon" alt="yes"></td>
+					<td><p>The canvas is 'transparent' for screen reader users. HTML content included in the <a href="https://www.paciellogroup.com/blog/2015/02/html5-canvas-sub-dom/">HTML5 canvas sub DOM</a> is announced and navigable by screen reader users and is navigable by keyboard users.</p>
 					</td>
 				</tr>
 				<tr>
@@ -438,7 +456,7 @@
 					<td><em>element content</em></td>
 					<td>No special commands</td>
 					<td>&nbsp;</td>
-					<td><img src="images/tick.png" width="16" height="16" alt="yes"></td>
+					<td><img src="images/tick.png" class="status-icon" alt="yes"></td>
 					<td>Announced when a table is navigated to. Used as table title in the table list (List Tables 	<kbd>CTRL+INSERT+T</kbd>) dialog.</td>
 				</tr>
 				<tr>
@@ -447,7 +465,7 @@
 					<td><em>element content</em></td>
 					<td>No special commands</td>
 					<td>&nbsp;</td>
-					<td><img src="images/cross.png" width="16" height="16" alt="no"></td>
+					<td><img src="images/cross.png" class="status-icon" alt="no"></td>
 					<td>No semantics conveyed</td>
 				</tr>
 				<tr>
@@ -461,16 +479,16 @@
 							<source src="audio/code.ogg" type="audio/ogg">
 						</audio>
 					</td>
-					<td><img src="images/cross.png" width="16" height="16" alt="no"></td>
+					<td><img src="images/cross.png" class="status-icon" alt="no"></td>
 					<td>No semantics conveyed</td>
 				</tr>
 				<tr>
-					<th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/tabular-data.html#the-col-element"><code>col [no test]</code></a></th>
+					<th scope="row"><a href="https://w3c.github.io/html/tabular-data.html#the-col-element"><code>col [no test]</code></a></th>
 					<td>Table column</td>
 					<td><em>none expected</em></td>
 					<td>No special commands</td>
 					<td>&nbsp;</td>
-					<td><img src="images/cross.png" width="16" height="16" alt="no"></td>
+					<td><img src="images/cross.png" class="status-icon" alt="no"></td>
 					<td>No semantics conveyed</td>
 				</tr>
 				<tr>
@@ -479,7 +497,7 @@
 					<td><em>none expected</em></td>
 					<td>No special commands</td>
 					<td>&nbsp;</td>
-					<td><img src="images/cross.png" width="16" height="16" alt="no"></td>
+					<td><img src="images/cross.png" class="status-icon" alt="no"></td>
 					<td>&nbsp;</td>
 				</tr>
 				<tr id="toc-d">
@@ -493,12 +511,12 @@
 							<source src="audio/data.ogg" type="audio/ogg">
 						</audio>
 					</td>
-					<td><img src="images/cross.png" width="16" height="16" alt="no"></td>
+					<td><img src="images/cross.png" class="status-icon" alt="no"></td>
 					<td>No semantics conveyed</td>
 				</tr>
 				<tr>
 					<th scope="row"><a href="test-files/datalist.html"><code>datalist</code></a></th>
-					<td>Container for options for <a data-anolis-xref="attr-input-list" href="http://www.w3.org/TR/html5/forms.html#attr-input-list">combo box control</a></td>
+					<td>Container for options for <a data-anolis-xref="attr-input-list" href="https://w3c.github.io/html/sec-forms.html#the-list-attribute">combo box control</a></td>
 					<td>&nbsp;</td>
 					<td>&nbsp;</td>
 					<td>
@@ -512,7 +530,7 @@
 				</tr>
 				<tr>
 					<th scope="row"><a href="test-files/dl-dt-dd.html"><code>dd</code></a></th>
-					<td>Content for corresponding <a href="http://www.w3.org/TR/html5/grouping-content.html#the-dt-element">dt</a> element(s)</td>
+					<td>Content for corresponding <a href="https://w3c.github.io/html/grouping-content.html#the-dt-element">dt</a> element(s)</td>
 					<td><em>element content</em></td>
 					<td>&nbsp;</td>
 					<td>
@@ -521,7 +539,7 @@
 							<source src="audio/dl-dt-dd..ogg" type="audio/ogg">
 						</audio>
 					</td>
-					<td><img src="images/tick.png" width="16" height="16" alt="yes"></td>
+					<td><img src="images/tick.png" class="status-icon" alt="yes"></td>
 					<td>Included as part of <code>dt</code> list item, user must use <kbd>arrow down</kbd> for content to be announced. If user navigates via list item navigation (Next Item in a List <kbd>I</kbd>)  from <code>dt</code> then <code>dd</code> content will not be announced.</td>
 				</tr>
 				<tr>
@@ -535,33 +553,25 @@
 							<source src="audio/del-ins.ogg" type="audio/ogg">
 						</audio>
 					</td>
-					<td><img src="images/cross.png" width="16" height="16" alt="no"></td>
+					<td><img src="images/cross.png" class="status-icon" alt="no"></td>
 					<td>No semantics conveyed</td>
 				</tr>
-				<!--<tr>
-					<th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/interactive-elements.html#the-details-element"><code>details [no test]</code></a></th>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-				</tr>-->
 				<tr>
-				  <th scope="row"><code><a href="test-files/details-summary.html">details</a></code></th>
-				  <td>disclosure widget container</td>
-				  <td>&nbsp;</td>
-				  <td>&nbsp;</td>
-				  <td>&nbsp;</td>
-				  <td>&nbsp;</td>
-				  <td>&nbsp;</td>
-			  </tr>
+					<th scope="row"><code><a href="test-files/details-summary.html">details</a></code></th>
+					<td>disclosure widget container</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+				</tr>
 				<tr>
 					<th scope="row"><a href="test-files/dfn.html"><code>dfn</code></a></th>
 					<td>Defining instance of a term</td>
 					<td><em>element content</em></td>
 					<td>No special commands</td>
 					<td>&nbsp;</td>
-					<td><img src="images/cross.png" width="16" height="16" alt="no"></td>
+					<td><img src="images/cross.png" class="status-icon" alt="no"></td>
 					<td>No semantics conveyed</td>
 				</tr>
 				<!-- <tr>
@@ -572,20 +582,19 @@
 					<td>&nbsp;</td>
 					<td>&nbsp;</td>
 				</tr> -->
-
 				<tr>
 					<th scope="row"><a href="test-files/div.html"><code>div</code></a></th>
 					<td>Generic flow container</td>
 					<td><em>element content</em></td>
 					<td>
 						<ul>
-							<li>Move to Next Division 	<kbd>Z</kbd></li>
-							<li>Move to Prior Division 	<kbd>SHIFT+Z</kbd></li>
-							<li>List Divisions 	<kbd>CTRL+INSERT+Z</kbd></li>
+							<li>Move to Next Division <kbd>Z</kbd></li>
+							<li>Move to Prior Division <kbd>SHIFT+Z</kbd></li>
+							<li>List Divisions <kbd>CTRL+INSERT+Z</kbd></li>
 						</ul>
 					</td>
 					<td>&nbsp;</td>
-					<td><img src="images/tick.png" width="16" height="16" alt="yes"></td>
+					<td><img src="images/tick.png" class="status-icon" alt="yes"></td>
 					<td>No semantics conveyed</td>
 				</tr>
 				<tr>
@@ -607,17 +616,17 @@
 							<source src="audio/dl-dt-dd.ogg" type="audio/ogg">
 						</audio>
 					</td>
-					<td><img src="images/tick.png" width="16" height="16" alt="yes"></td>
+					<td><img src="images/tick.png" class="status-icon" alt="yes"></td>
 					<td>&nbsp;</td>
 				</tr>
 				<tr>
 					<th scope="row"><a href="test-files/dl-dt-dd.html"><code>dt</code></a></th>
-					<td>Legend for corresponding <a href="http://www.w3.org/TR/html5/grouping-content.html#the-dd-element">dd</a> element(s)</td>
+					<td>Legend for corresponding <a href="https://w3c.github.io/html/grouping-content.html#the-dd-element">dd</a> element(s)</td>
 					<td><em>element content</em></td>
 					<td>
 						<ul>
 							<li>Next Item in a List <kbd>I</kbd></li>
-							<li> Previous Item in a List <kbd>SHIFT+I</kbd></li>
+							<li>Previous Item in a List <kbd>SHIFT+I</kbd></li>
 						</ul>
 					</td>
 					<td>
@@ -626,7 +635,7 @@
 							<source src="audio/dl-dt-dd.ogg" type="audio/ogg">
 						</audio>
 					</td>
-					<td><img src="images/tick.png" width="16" height="16" alt="yes"></td>
+					<td><img src="images/tick.png" class="status-icon" alt="yes"></td>
 					<td>Identified as a list item</td>
 				</tr>
 				<tr id="toc-e">
@@ -640,12 +649,12 @@
 							<source src="audio/em.ogg" type="audio/ogg">
 						</audio>
 					</td>
-					<td><img src="images/cross.png" width="16" height="16" alt="no"></td>
+					<td><img src="images/cross.png" class="status-icon" alt="no"></td>
 					<td>No semantics conveyed</td>
 				</tr>
 				<tr>
 					<th scope="row"><a href="test-files/embed.html"><code>embed</code></a></th>
-					<td><a href="http://www.w3.org/TR/html5/infrastructure.html#plugin">Plugin</a></td>
+					<td><a href="https://w3c.github.io/html/infrastructure.html#plugins">Plugin</a></td>
 					<td>&nbsp;</td>
 					<td>&nbsp;</td>
 					<td>&nbsp;</td>
@@ -668,7 +677,7 @@
 				</tr>
 				<tr>
 					<th scope="row"><a href="test-files/figure-figcaption.html"><code>figcaption</code></a></th>
-					<td>Caption for <a href="http://www.w3.org/TR/html5/grouping-content.html#the-figure-element">figure</a></td>
+					<td>Caption for <a href="https://w3c.github.io/html/grouping-content.html#the-figure-element">figure</a></td>
 					<td><em>element content</em></td>
 					<td>No special commands</td>
 					<td>
@@ -677,13 +686,13 @@
 							<source src="audio/figure-figcaption.ogg" type="audio/ogg">
 						</audio>
 					</td>
-					<td><img src="images/tick.png" width="16" height="16" alt="yes"></td>
+					<td><img src="images/tick.png" class="status-icon" alt="yes"></td>
 					<td>&nbsp;</td>
 				</tr>
 				<tr>
 					<th scope="row"><a href="test-files/figure.html"><code>figure</code></a></th>
 					<td>Figure with optional caption</td>
-					<td>"group start"<em> figcaption content , element content, figcaption content  "group end"<em> </em></em></td>
+					<td>"group start"<em> figcaption content, element content, figcaption content "group end"<em> </em></em></td>
 					<td>No special commands</td>
 					<td>
 						<audio preload="none" controls>
@@ -691,7 +700,7 @@
 							<source src="audio/figure.ogg" type="audio/ogg">
 						</audio>
 					</td>
-					<td><img src="images/tick.png" width="16" height="16" alt="yes"></td>
+					<td><img src="images/tick.png" class="status-icon" alt="yes"></td>
 					<td>&nbsp;</td>
 				</tr>
 				<tr>
@@ -711,7 +720,7 @@
 							<source src="audio/footer.ogg" type="audio/ogg">
 						</audio>
 					</td>
-					<td><img src="images/tick.png" width="16" height="16" alt="yes"></td>
+					<td><img src="images/tick.png" class="status-icon" alt="yes"></td>
 					<td>&nbsp;</td>
 				</tr>
 				<tr>
@@ -727,7 +736,7 @@
 					<source src="audio/figure.mp3" type="audio/mpeg">
 					<source src="audio/figure.ogg" type="audio/ogg">
 					</audio>--></td>
-					<td><img src="images/cross.png" width="16" height="16" alt="no"></td>
+					<td><img src="images/cross.png" class="status-icon" alt="no"></td>
 					<td>No semantics conveyed</td>
 				</tr>
 				<tr id="toc-h">
@@ -753,11 +762,11 @@
 							<source src="audio/h1-h2-h3-h4-h5-h6.ogg" type="audio/ogg">
 						</audio>
 					</td>
-					<td><img src="images/tick.png" width="16" height="16" alt="yes"></td>
+					<td><img src="images/tick.png" class="status-icon" alt="yes"></td>
 					<td>&nbsp;</td>
 				</tr>
 				<tr>
-					<th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/semantics.html#the-head-element"><code>head [no test]</code></a></th>
+					<th scope="row"><a href="https://w3c.github.io/html/document-metadata.html#the-head-element"><code>head [no test]</code></a></th>
 					<td>Container for document metadata</td>
 					<td><em><strong>none expected</strong></em></td>
 					<td>No special commands</td>
@@ -782,7 +791,7 @@
 							<source src="audio/header.ogg" type="audio/ogg">
 						</audio>
 					</td>
-					<td><img src="images/tick.png" width="16" height="16" alt="yes"></td>
+					<td><img src="images/tick.png" class="status-icon" alt="yes"></td>
 					<td>&nbsp;</td>
 				</tr>
 				<tr>
@@ -801,11 +810,11 @@
 							<source src="audio/hr.ogg" type="audio/ogg">
 						</audio>
 					</td>
-					<td><img src="images/tick.png" width="16" height="16" alt="yes"></td>
+					<td><img src="images/tick.png" class="status-icon" alt="yes"></td>
 					<td>&nbsp;</td>
 				</tr>
 				<tr>
-					<th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/semantics.html#the-html-element"><code>html [no test]</code></a></th>
+					<th scope="row"><a href="https://w3c.github.io/html/semantics.html#the-html-element"><code>html [no test]</code></a></th>
 					<td>Root element</td>
 					<td><em><strong>none expected</strong></em></td>
 					<td>No special commands</td>
@@ -824,12 +833,12 @@
 							<source src="audio/i.ogg" type="audio/ogg">
 						</audio>
 					</td>
-					<td><img src="images/cross.png" width="16" height="16" alt="no"></td>
+					<td><img src="images/cross.png" class="status-icon" alt="no"></td>
 					<td>No semantics conveyed</td>
 				</tr>
 				<tr>
 					<th scope="row"><a href="test-files/iframe.html"><code>iframe</code></a></th>
-					<td><a href="http://www.w3.org/TR/html5/browsers.html#nested-browsing-context">Nested browsing context</a></td>
+					<td><a href="https://w3c.github.io/html/browsers.html#sec-nested-browsing-contexts">Nested browsing context</a></td>
 					<td>&nbsp;</td>
 					<td>
 						<ul>
@@ -844,18 +853,18 @@
 							<source src="audio/iframe.ogg" type="audio/ogg">
 						</audio>
 					</td>
-					<td><img src="images/tick.png" width="16" height="16" alt="yes"></td>
+					<td><img src="images/tick.png" class="status-icon" alt="yes"></td>
 					<td>&nbsp;</td>
 				</tr>
 				<tr>
 					<th scope="row"><a href="test-files/iframe-title.html"><code>iframe with title</code></a></th>
-					<td><a href="http://www.w3.org/TR/html5/browsers.html#nested-browsing-context">Nested browsing context</a></td>
+					<td><a href="https://w3c.github.io/html/browsers.html#sec-nested-browsing-contexts">Nested browsing context</a></td>
 					<td>&nbsp;</td>
 					<td>
 						<ul>
 							<li>List of Frames <kbd>INSERT+F9</kbd></li>
 							<li>Next Frame <kbd>M</kbd></li>
-							<li>Previous Frame <kbd>SHIFT+	M </kbd></li>
+							<li>Previous Frame <kbd>SHIFT+M </kbd></li>
 						</ul>
 					</td>
 					<td>
@@ -864,7 +873,7 @@
 							<source src="audio/iframe-title.ogg" type="audio/ogg">
 						</audio>
 					</td>
-					<td><img src="images/tick.png" width="16" height="16" alt="yes"></td>
+					<td><img src="images/tick.png" class="status-icon" alt="yes"></td>
 					<td>&nbsp;</td>
 				</tr>
 				<tr>
@@ -884,7 +893,7 @@
 							<source src="audio/imgalt.ogg" type="audio/ogg">
 						</audio>
 					</td>
-					<td><img src="images/tick.png" width="16" height="16" alt="yes"></td>
+					<td><img src="images/tick.png" class="status-icon" alt="yes"></td>
 					<td>&nbsp;</td>
 				</tr>
 				<tr>
@@ -904,7 +913,7 @@
 							<source src="audio/input-type-button.ogg" type="audio/ogg">
 						</audio>
 					</td>
-					<td><img src="images/tick.png" width="16" height="16" alt="yes"></td>
+					<td><img src="images/tick.png" class="status-icon" alt="yes"></td>
 					<td>&nbsp;</td>
 				</tr>
 				<tr>
@@ -924,7 +933,7 @@
 							<source src="audio/input-type-checkbox.ogg" type="audio/ogg">
 						</audio>
 					</td>
-					<td><img src="images/tick.png" width="16" height="16" alt="yes"></td>
+					<td><img src="images/tick.png" class="status-icon" alt="yes"></td>
 					<td>&nbsp;</td>
 				</tr>
 				<tr>
@@ -952,7 +961,7 @@
 							<source src="audio/input-type-date.ogg" type="audio/ogg">
 						</audio>
 					</td>
-					<td><img src="images/tick.png" width="16" height="16" alt="yes"></td>
+					<td><img src="images/tick.png" class="status-icon" alt="yes"></td>
 					<td>&nbsp;</td>
 				</tr>
 				<!--<tr>
@@ -1004,11 +1013,11 @@
 							<source src="audio/input-type-file.ogg" type="audio/ogg">
 						</audio>
 					</td>
-					<td><img src="images/tick.png" width="16" height="16" alt="yes"></td>
+					<td><img src="images/tick.png" class="status-icon" alt="yes"></td>
 					<td>As it's a composite control, it can be navigated to using either button or edit commands.</td>
 				</tr>
 				<tr>
-					<th scope="row"><code><a href="http://www.w3.org/html/wg/drafts/html/master/forms.html#hidden-state-(type=hidden)">input [hidden] - [no test]</a></code></th>
+					<th scope="row"><code><a href="https://w3c.github.io/html/sec-forms.html#hidden-state-typehidden">input [hidden] - [no test]</a></code></th>
 					<td>hidden form control</td>
 					<td><em><strong>none expected</strong></em></td>
 					<td>No special commands</td>
@@ -1033,7 +1042,7 @@
 							<source src="audio/input-type-image.ogg" type="audio/ogg">
 						</audio>
 					</td>
-					<td><img src="images/tick.png" width="16" height="16" alt="yes"></td>
+					<td><img src="images/tick.png" class="status-icon" alt="yes"></td>
 					<td>&nbsp;</td>
 				</tr>
 				<!--<tr>
@@ -1066,7 +1075,7 @@
 							<source src="audio/input-type-number.ogg" type="audio/ogg">
 						</audio>
 					</td>
-					<td><img src="images/tick.png" width="16" height="16" alt="yes"></td>
+					<td><img src="images/tick.png" class="status-icon" alt="yes"></td>
 					<td>
 						<p><strong>note:</strong> value in edit box announced as changed increase/decreased using arrow keys.</p>
 						<p>spin buttons included in button commands.</p>
@@ -1083,16 +1092,18 @@
 					<td>
 						<em>label content</em> "password edit"
 					</td>
-					<td><ul>
-					<li>List Edit Boxes 	<kbd>CTRL+INSERT+E</kbd></li>
-					<li>Move To Next Edit Box 	<kbd>E </kbd></li>
-					<li>Move to Prior Edit Box 	<kbd>SHIFT+E</kbd></li>
-					</ul>					      </td>
+					<td>
+						<ul>
+							<li>List Edit Boxes <kbd>CTRL+INSERT+E</kbd></li>
+							<li>Move To Next Edit Box <kbd>E </kbd></li>
+							<li>Move to Prior Edit Box <kbd>SHIFT+E</kbd></li>
+						</ul>
+					</td>
 					<td><audio preload="none" controls>
 					<source src="audio/input-type-password.mp3" type="audio/mpeg">
 					<source src="audio/input-type-password.ogg" type="audio/ogg">
 					</audio></td>
-					<td><img src="images/tick.png" width="16" height="16" alt="yes"></td>
+					<td><img src="images/tick.png" class="status-icon" alt="yes"></td>
 					<td><strong>note:</strong> keyboard character input announced as "star"</td>
 				</tr>
 				<tr>
@@ -1118,7 +1129,7 @@
 							<source src="audio/input-type-range.ogg" type="audio/ogg">
 						</audio>
 					</td>
-					<td><img src="images/tick.png" width="16" height="16" alt="yes"></td>
+					<td><img src="images/tick.png" class="status-icon" alt="yes"></td>
 					<td>
 						<p><strong>note:</strong> When slider has no accessible name (label) or is disabled or readonly, it is identified (incorrectly) as an edit box. - also depended on how it si navigated to (arrow keys, tab key or edit/form control navigation keys)</p>
 						<p>Slider value announced as it changes</p>
@@ -1141,7 +1152,7 @@
 							<source src="audio/input-type-radio.ogg" type="audio/ogg">
 						</audio>
 					</td>
-					<td><img src="images/tick.png" width="16" height="16" alt="yes"></td>
+					<td><img src="images/tick.png" class="status-icon" alt="yes"></td>
 					<td>&nbsp;</td>
 				</tr>
 				<tr>
@@ -1161,7 +1172,7 @@
 							<source src="audio/input-type-reset.ogg" type="audio/ogg">
 						</audio>
 					</td>
-					<td><img src="images/tick.png" width="16" height="16" alt="yes"></td>
+					<td><img src="images/tick.png" class="status-icon" alt="yes"></td>
 					<td>&nbsp;</td>
 				</tr>
 				<tr>
@@ -1201,7 +1212,7 @@
 							<source src="audio/input-type-submit.ogg" type="audio/ogg">
 						</audio>
 					</td>
-					<td><img src="images/tick.png" width="16" height="16" alt="yes"></td>
+					<td><img src="images/tick.png" class="status-icon" alt="yes"></td>
 					<td>&nbsp;</td>
 				</tr>
 				<tr>
@@ -1241,12 +1252,12 @@
 							<source src="audio/input-type-text.ogg" type="audio/ogg">
 						</audio>
 					</td>
-					<td><img src="images/tick.png" width="16" height="16" alt="yes"></td>
+					<td><img src="images/tick.png" class="status-icon" alt="yes"></td>
 					<td>&nbsp;</td>
 				</tr>
 				<tr>
-					<th scope="row"><a href="test-files/input--time.html"><code>input [time]</code></a></th>
-					<td>control for setting a specific <a data-anolis-xref="concept-time" href="http://www.w3.org/TR/html5/infrastructure.html#concept-time">time</a>.</td>
+					<th scope="row"><a href="test-files/input-time.html"><code>input [time]</code></a></th>
+					<td>control for setting a specific <a data-anolis-xref="concept-time" href="https://w3c.github.io/html/infrastructure.html#time">time</a>.</td>
 					<td>&nbsp;</td>
 					<td>&nbsp;</td>
 					<td>
@@ -1255,7 +1266,7 @@
 							<source src="audio/input-type-time.ogg" type="audio/ogg">
 						</audio>
 					</td>
-					<td><img src="images/tick.png" width="16" height="16" alt="yes"></td>
+					<td><img src="images/tick.png" class="status-icon" alt="yes"></td>
 					<td>&nbsp;</td>
 				</tr>
 				<tr>
@@ -1314,7 +1325,7 @@
 					<td>&nbsp;</td>
 					<td>No semantics conveyed</td>
 				</tr>
-				<tr>
+				<!-- <tr>
 					<th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/the-button-element.html#the-keygen-element"><code>keygen [no test]</code></a></th>
 					<td>Cryptographic key-pair generator form control</td>
 					<td>&nbsp;</td>
@@ -1322,7 +1333,7 @@
 					<td>&nbsp;</td>
 					<td>&nbsp;</td>
 					<td>&nbsp;</td>
-				</tr>
+				</tr> -->
 				<tr id="toc-l">
 					<th scope="row"><a href="test-files/label.html"><code>label</code></a></th>
 					<td>Caption for a form control</td>
@@ -1339,7 +1350,7 @@
 				</tr>
 				<tr>
 					<th scope="row"><a href="test-files/fieldset-legend.html"><code>legend</code></a></th>
-					<td>Caption for <a href="http://www.w3.org/TR/html5/forms.html#the-fieldset-element">fieldset</a></td>
+					<td>Caption for <a href="https://w3c.github.io/html/sec-forms.html#the-fieldset-element">fieldset</a></td>
 					<td>&nbsp;</td>
 					<td>&nbsp;</td>
 					<td>
@@ -1357,8 +1368,8 @@
 					<td>&nbsp;</td>
 					<td>
 						<ul>
-							<li> Next Item in a List <kbd>I</kbd></li>
-							<li> Previous Item in a List <kbd>SHIFT+I</kbd></li>
+							<li>Next Item in a List <kbd>I</kbd></li>
+							<li>Previous Item in a List <kbd>SHIFT+I</kbd></li>
 						</ul>
 					</td>
 					<td><audio preload="none" controls>
@@ -1369,7 +1380,7 @@
 					<td>&nbsp;</td>
 				</tr>
 				<tr>
-					<th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/semantics.html#the-link-element"><code>link [no test]</code></a></th>
+					<th scope="row"><a href="https://w3c.github.io/html/document-metadata.html#the-link-element"><code>link [no test]</code></a></th>
 					<td>Link metadata</td>
 					<td><em><strong>none expected</strong></em></td>
 					<td>No special commands</td>
@@ -1395,7 +1406,7 @@
 				</tr>
 				<tr>
 					<th scope="row"><a href="test-files/imagemap.html"><code>map</code></a></th>
-					<td><a href="http://www.w3.org/TR/html5/embedded-content-0.html#image-map">Image map</a></td>
+					<td><a href="https://w3c.github.io/html/semantics-embedded-content.html#image-map">Image map</a></td>
 					<td><em><strong>none expected</strong></em></td>
 					<td>No special commands</td>
 					<td>&nbsp;</td>
@@ -1437,7 +1448,7 @@
 					<td>&nbsp;</td>
 				</tr>-->
 				<tr>
-					<th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/semantics.html#the-meta-element"><code>meta [no test]</code></a></th>
+					<th scope="row"><a href="https://w3c.github.io/html/document-metadata.html#the-meta-element"><code>meta [no test]</code></a></th>
 					<td>Text metadata</td>
 					<td><em><strong>none expected</strong></em></td>
 					<td>No special commands</td>
@@ -1471,7 +1482,7 @@
 					<td><p>When navigating by this element, Window-Eyes will automatically  read the entire contents of the paragraph that gains focus. By default,  Window-Eyes also hides multiple blank lines that might separate one paragraph  from another. To see these lines, turn "Speak Blank Lines in Smart Paragraph  Mode" on inside the Browse Mode section of the Window-Eyes control panel. </p></td>
 				</tr>
 				<tr>
-					<th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/scripting-1.html#the-noscript-element"><code>noscript [no test]</code></a></th>
+					<th scope="row"><a href="https://w3c.github.io/html/textlevel-semantics.html#"><code>noscript [no test]</code></a></th>
 					<td>Fallback content for script</td>
 					<td><em>none expected</em></td>
 					<td>&nbsp;</td>
@@ -1481,11 +1492,11 @@
 				</tr>
 				<tr id="toc-o">
 					<th scope="row"><a href="test-files/object.html"><code>object</code></a></th>
-					<td>Image, <a href="http://www.w3.org/TR/html5/browsers.html#nested-browsing-context">nested browsing context</a>, or <a href="http://www.w3.org/TR/html5/infrastructure.html#plugin">plugin</a></td>
+					<td>Image, <a href="https://w3c.github.io/html/browsers.html#sec-nested-browsing-contexts">nested browsing context</a>, or <a href="https://w3c.github.io/html/infrastructure.html#plugins">plugin</a></td>
 					<td>&nbsp;</td>
 					<td>
 						<ul>
-							<li>Next Object Tag 	<kbd>O</kbd></li>
+							<li>Next Object Tag <kbd>O</kbd></li>
 							<li>Previous Object Tag <kbd>SHIFT+O</kbd></li>
 						</ul>
 					</td>
@@ -1544,7 +1555,7 @@
 					<td>
 						<ul>
 							<li>List of Paragraphs <kbd>CTRL+INSERT+P</kbd></li>
-							<li>Next Paragraph 	<kbd>P</kbd></li>
+							<li>Next Paragraph <kbd>P</kbd></li>
 							<li>Previous Paragraph <kbd>SHIFT+P</kbd></li>
 						</ul>
 					</td>
@@ -1553,8 +1564,8 @@
 					<td>no aural semantics, conveyed via navigation and paragraph list.</td>
 				</tr>
 				<tr>
-					<th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/the-iframe-element.html#the-param-element"><code>param [no test]</code></a></th>
-					<td>Parameter for <a href="http://www.w3.org/TR/html5/embedded-content-0.html#the-object-element">object</a></td>
+					<th scope="row"><a href="https://w3c.github.io/html/semantics-embedded-content.html#the-param-element"><code>param [no test]</code></a></th>
+					<td>Parameter for <a href="https://w3c.github.io/html/semantics-embedded-content.html#the-object-element">object</a></td>
 					<td><em><strong>none expected</strong></em></td>
 					<td>No special commands</td>
 					<td>&nbsp;</td>
@@ -1562,7 +1573,7 @@
 					<td><strong>No UI</strong></td>
 				</tr>
 				<tr>
-					<th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/embedded-content.html#the-picture-element"><code>picture [no test</code></a></th>
+					<th scope="row"><a href="https://w3c.github.io/html/semantics-embedded-content.html#the-picture-element"><code>picture [no test</code></a></th>
 					<td>&nbsp;</td>
 					<td><em><strong>none expected</strong></em></td>
 					<td>No special commands</td>
@@ -1579,16 +1590,6 @@
 					<td>&nbsp;</td>
 					<td>No semantics conveyed</td>
 				</tr>
-				<!--<tr>
-					<th scope="row"><a href="http://www.w3.org/TR/xhtml2/mod-handler.html#edef_handler_preventDefault"><code>preventDefault</code></a></th>
-					<td><img src="images/cross.png" alt="no"></td>
-					<td><img src="images/cross.png" alt="no"></td>
-					<td><img src="images/cross.png" alt="no"></td>
-					<td><img src="images/cross.png" alt="no"></td>
-					<td><img src="images/cross.png" alt="no"></td>
-					<td><img src="images/cross.png" alt="no" /></td>
-					<td><img src="images/cross.png" alt="no" /></td>
-				</tr>-->
 				<tr>
 					<th scope="row"><a href="test-files/progress.html"><code>progress</code></a></th>
 					<td>Progress bar</td>
@@ -1609,7 +1610,7 @@
 				</tr>
 
 				<tr id="toc-r">
-					<th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-rb-element"><code>rb [no test]</code></a></th>
+					<th scope="row"><a href="https://w3c.github.io/html/textlevel-semantics.html#the-rb-element"><code>rb [no test]</code></a></th>
 					<td>&nbsp;</td>
 					<td><em>element content</em></td>
 					<td>No special commands</td>
@@ -1617,7 +1618,7 @@
 					<td>&nbsp;</td>
 					<td>No semantics conveyed</td>
 				</tr>
-				<tr>
+<!-- 				<tr>
 					<th scope="row"><a href="http://www.w3.org/TR/ruby/#rbc"><code>rbc [no test]</code></a></th>
 					<td>&nbsp;</td>
 					<td><em>element content</em></td>
@@ -1625,9 +1626,9 @@
 					<td>&nbsp;</td>
 					<td>&nbsp;</td>
 					<td>No semantics conveyed</td>
-				</tr>
+				</tr> -->
 				<tr>
-					<th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-rp-element"><code>rp [no test]</code></a></th>
+					<th scope="row"><a href="https://w3c.github.io/html/textlevel-semantics.html#the-rp-element"><code>rp [no test]</code></a></th>
 					<td>&nbsp;</td>
 					<td><em>element content</em></td>
 					<td>No special commands</td>
@@ -1636,7 +1637,7 @@
 					<td>No semantics conveyed</td>
 				</tr>
 				<tr>
-					<th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-rt-element"><code>rt [no test]</code></a></th>
+					<th scope="row"><a href="https://w3c.github.io/html/textlevel-semantics.html#the-rt-element"><code>rt [no test]</code></a></th>
 					<td>&nbsp;</td>
 					<td><em>element content</em></td>
 					<td>No special commands</td>
@@ -1645,7 +1646,7 @@
 					<td>No semantics conveyed</td>
 				</tr>
 				<tr>
-					<th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-rtc-element"><code>rtc [no test]</code></a></th>
+					<th scope="row"><a href="https://w3c.github.io/html/textlevel-semantics.html#the-rtc-element"><code>rtc [no test]</code></a></th>
 					<td>&nbsp;</td>
 					<td><em>element content</em></td>
 					<td>No special commands</td>
@@ -1654,7 +1655,7 @@
 					<td>No semantics conveyed</td>
 				</tr>
 				<tr>
-					<th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-ruby-element"><code>ruby[no test]</code></a></th>
+					<th scope="row"><a href="https://w3c.github.io/html/textlevel-semantics.html#the-ruby-element"><code>ruby[no test]</code></a></th>
 					<td>&nbsp;</td>
 					<td><em>element content</em></td>
 					<td>No special commands</td>
@@ -1673,7 +1674,7 @@
 				</tr>
 				<tr>
 					<th scope="row"><a href="test-files/s.html"><code>s</code></a></th>
-					<td>Innacurate text</td>
+					<td>Inaccurate text</td>
 					<td><em>element content</em></td>
 					<td>&nbsp;</td>
 					<td>&nbsp;</td>
@@ -1681,7 +1682,7 @@
 					<td>&nbsp;</td>
 				</tr>
 				<tr>
-					<th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/scripting-1.html#the-script-element"><code>script no test]</code></a></th>
+					<th scope="row"><a href="https://w3c.github.io/html/semantics-scripting.html#the-script-element"><code>script [no test]</code></a></th>
 					<td>Embedded script</td>
 					<td><em><strong>none expected</strong></em></td>
 					<td>No special commands</td>
@@ -1708,66 +1709,6 @@
 					<td>&nbsp;</td>
 					<td>&nbsp;</td>
 				</tr>
-				<!--<tr>
-					<th scope="row"><a href="http://www.w3.org/TR/xhtml2/mod-xforms.html#edef_xforms_select1"><code>select1</code></a></th>
-					<td><img src="images/cross.png" alt="no"></td>
-					<td><img src="images/cross.png" alt="no"></td>
-					<td><img src="images/cross.png" alt="no"></td>
-					<td><img src="images/cross.png" alt="no"></td>
-					<td><img src="images/cross.png" alt="no"></td>
-					<td><img src="images/cross.png" alt="no" /></td>
-					<td><img src="images/cross.png" alt="no" /></td>
-				</tr>-->
-				<!--<tr>
-					<th scope="row"><a href="http://www.w3.org/TR/xhtml2/mod-xforms.html#edef_xforms_send"><code>send</code></a></th>
-					<td><img src="images/cross.png" alt="no"></td>
-					<td><img src="images/cross.png" alt="no"></td>
-					<td><img src="images/cross.png" alt="no"></td>
-					<td><img src="images/cross.png" alt="no"></td>
-					<td><img src="images/cross.png" alt="no"></td>
-					<td><img src="images/cross.png" alt="no" /></td>
-					<td><img src="images/cross.png" alt="no" /></td>
-				</tr>-->
-				<!--<tr>
-					<th scope="row"><a href="http://www.w3.org/TR/xhtml2/mod-structural.html#edef_structural_separator"><code>separator</code></a></th>
-					<td><img src="images/cross.png" alt="no"></td>
-					<td><img src="images/cross.png" alt="no"></td>
-					<td><img src="images/cross.png" alt="no"></td>
-					<td><img src="images/cross.png" alt="no"></td>
-					<td><img src="images/cross.png" alt="no"></td>
-					<td><img src="images/cross.png" alt="no" /></td>
-					<td><img src="images/cross.png" alt="no" /></td>
-				</tr>-->
-				<!--<tr>
-					<th scope="row"><a href="http://www.w3.org/TR/xhtml2/mod-xforms.html#edef_xforms_setfocus"><code>setfocus</code></a></th>
-					<td><img src="images/cross.png" alt="no"></td>
-					<td><img src="images/cross.png" alt="no"></td>
-					<td><img src="images/cross.png" alt="no"></td>
-					<td><img src="images/cross.png" alt="no"></td>
-					<td><img src="images/cross.png" alt="no"></td>
-					<td><img src="images/cross.png" alt="no" /></td>
-					<td><img src="images/cross.png" alt="no" /></td>
-				</tr>-->
-				<!--<tr>
-				<th scope="row"><a href="http://www.w3.org/TR/xhtml2/mod-xforms.html#edef_xforms_setindex"><code>setindex</code></a></th>
-					<td><img src="images/cross.png" alt="no"></td>
-					<td><img src="images/cross.png" alt="no"></td>
-					<td><img src="images/cross.png" alt="no"></td>
-					<td><img src="images/cross.png" alt="no"></td>
-					<td><img src="images/cross.png" alt="no"></td>
-					<td><img src="images/cross.png" alt="no" /></td>
-					<td><img src="images/cross.png" alt="no" /></td>
-				</tr>-->
-				<!--<tr>
-				<th scope="row"><a href="http://www.w3.org/TR/xhtml2/mod-xforms.html#edef_xforms_setvalue"><code>setvalue</code></a></th>
-					<td><img src="images/cross.png" alt="no"></td>
-					<td><img src="images/cross.png" alt="no"></td>
-					<td><img src="images/cross.png" alt="no"></td>
-					<td><img src="images/cross.png" alt="no"></td>
-					<td><img src="images/cross.png" alt="no"></td>
-					<td><img src="images/cross.png" alt="no" /></td>
-					<td><img src="images/cross.png" alt="no" /></td>
-				</tr>-->
 				<tr>
 					<th scope="row"><a href="test-files/small.html"><code>small</code></a></th>
 					<td>Side comment</td>
@@ -1778,8 +1719,13 @@
 					<td>No semantics conveyed</td>
 				</tr>
 				<tr>
-					<th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/the-video-element.html#the-source-element"><code>source [no test]</code></a></th>
-					<td>Media source for <a href="http://www.w3.org/TR/html5/embedded-content-0.html#the-video-element">video</a> or <a href="http://www.w3.org/TR/html5/embedded-content-0.html#the-audio-element">audio</a></td>
+					<th scope="row"><a href="https://w3c.github.io/html/semantics-embedded-content.html#the-source-element"><code>source [no test]</code></a></th>
+					<td>
+						Media source for
+						<a href="https://w3c.github.io/html/semantics-embedded-content.html#the-video-element">video</a>
+						or
+						<a href="https://w3c.github.io/html/semantics-embedded-content.html#the-audio-element">audio</a>
+					</td>
 					<td><em>none expected</em></td>
 					<td>No special commands</td>
 					<td>&nbsp;</td>
@@ -1805,7 +1751,7 @@
 					<td>No semantics conveyed</td>
 				</tr>
 				<tr>
-					<th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/semantics.html#the-style-element"><code>style [mo test]</code></a></th>
+					<th scope="row"><a href="https://w3c.github.io/html/document-metadata.html#the-style-element"><code>style [no test]</code></a></th>
 					<td>Embedded styling information</td>
 					<td><em><strong>none expected</strong></em></td>
 					<td>No special commands</td>
@@ -1822,14 +1768,6 @@
 					<td>&nbsp;</td>
 					<td>No semantics conveyed</td>
 				</tr>
-				<!--<tr>
-					<th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/interactive-elements.html#the-summary-element"><code>summary</code></a></th>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-				</tr>-->
 				<tr>
 				  <th scope="row"><code><a href="test-files/details-summary.html">summary</a></code></th>
 				  <td>disclosure widget control/label</td>
@@ -1903,7 +1841,7 @@
 					<td>&nbsp;</td>
 				</tr>
 				<tr>
-					<th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/scripting-1.html#the-template-element"><code>template [no test]</code></a></th>
+					<th scope="row"><a href="https://w3c.github.io/html/semantics-scripting.html#the-template-element"><code>template [no test]</code></a></th>
 					<td>Template</td>
 					<td><em><strong>none expected</strong></em></td>
 					<td>No special commands</td>
@@ -1954,7 +1892,7 @@
 							<source src="audio/table-thead-tbody-th-tr-td-tfoot.ogg" type="audio/ogg">
 						</audio>
 					</td>
-					<td><img src="images/cross.png" width="16" height="16" alt="no"></td>
+					<td><img src="images/cross.png" class="status-icon" alt="no"></td>
 					<td>No semantics conveyed</td>
 				</tr>
 				<tr>
@@ -1968,11 +1906,11 @@
 							<source src="audio/time.ogg" type="audio/ogg">
 						</audio>
 					</td>
-					<td><img src="images/cross.png" width="16" height="16" alt="no"></td>
+					<td><img src="images/cross.png" class="status-icon" alt="no"></td>
 					<td>No semantics conveyed</td>
 				</tr>
 				<tr>
-					<th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/semantics.html#the-title-element"><code>title [no test]</code></a></th>
+					<th scope="row"><a href="https://w3c.github.io/html/document-metadata.html#the-title-element"><code>title [no test]</code></a></th>
 					<td>Document title</td>
 					<td><em>element content</em></td>
 					<td>Read Window Title <kbd>INSERT+T</kbd></td>
@@ -1989,7 +1927,7 @@
 							<li>Read Next Row <kbd>WINDOWS Key+ALT+DOWN ARROW</kbd></li>
 							<li>Read Prior Row <kbd>WINDOWS Key+ALT+UP ARROW </kbd></li>
 							<li>Read Current Row <kbd>ALT+WINDOWS Key+COMMA</kbd></li>
-							<li> Read from Beginning of Row to Current Cell <kbd>INSERT+SHIFT+HOME</kbd></li>
+							<li>Read from Beginning of Row to Current Cell <kbd>INSERT+SHIFT+HOME</kbd></li>
 							<li>Read from Current Cell to End of Row <kbd>INSERT+SHIFT+PAGE UP</kbd></li>
 						</ul>
 					</td>
@@ -1999,7 +1937,7 @@
 							<source src="audio/table-thead-tbody-th-tr-td-tfoot.ogg" type="audio/ogg">
 						</audio>
 					</td>
-					<td><img src="images/tick.png" width="16" height="16" alt="yes"></td>
+					<td><img src="images/tick.png" class="status-icon" alt="yes"></td>
 					<td>&nbsp;</td>
 				</tr>
 				<tr>
@@ -2028,7 +1966,7 @@
 							<source src="audio/u.ogg" type="audio/ogg">
 						</audio>
 					</td>
-					<td><img src="images/cross.png" width="16" height="16" alt="no"></td>
+					<td><img src="images/cross.png" class="status-icon" alt="no"></td>
 					<td>No semantics conveyed</td>
 				</tr>
 				<tr>
@@ -2050,7 +1988,7 @@
 							<source src="audio/ul-li.ogg" type="audio/ogg">
 						</audio>
 					</td>
-					<td><img src="images/tick.png" width="16" height="16" alt="yes"></td>
+					<td><img src="images/tick.png" class="status-icon" alt="yes"></td>
 					<td>&nbsp;</td>
 				</tr>
 				<tr id="toc-v">
@@ -2064,7 +2002,7 @@
 							<source src="audio/var.ogg" type="audio/ogg">
 						</audio>
 					</td>
-					<td><img src="images/cross.png" width="16" height="16" alt="no"></td>
+					<td><img src="images/cross.png" class="status-icon" alt="no"></td>
 					<td>No semantics conveyed</td>
 				</tr>
 				<tr>
@@ -2082,7 +2020,7 @@
 					<td>&nbsp;</td>
 				</tr>
 				<tr id="toc-w">
-					<th scope="row"><a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-wbr-element"><code>wbr [no test]</code></a></th>
+					<th scope="row"><a href="https://w3c.github.io/html/textlevel-semantics.html#the-wbr-element"><code>wbr [no test]</code></a></th>
 					<td>Line breaking opportunity</td>
 					<td><em><strong>none expected</strong></em></td>
 					<td>No special commands</td>
@@ -2093,11 +2031,9 @@
 			</tbody>
 		</table>
 
-
-    <h2 id="voiceover">&nbsp;</h2>
-    <footer>
-	  <h2>Acknowledgements</h2>
-		<p>L&eacute;onie Watson, Matthew Atkins</p>
-	</footer>
+		<footer>
+			<h2>Acknowledgements</h2>
+			<p>L&eacute;onie Watson, Matthew Atkins</p>
+		</footer>
 </body>
 </html>

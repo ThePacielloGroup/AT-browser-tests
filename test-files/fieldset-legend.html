@@ -66,6 +66,48 @@
 </form>
 			</div>
 		</div>
+        
+        <div class="test">
+			<h2 class="test-title" id="flgnd-002">
+				Test flgnd-002: <code>fieldset</code> element with
+			<code>legend</code> element containing a <code>h2</code> element </h2>
+
+			<div class="test-case">
+<form>
+	<fieldset id="fieldset-02">	
+		  <legend id="legend-02">
+		    <h2>Which version of HTML do you use?</h2>
+	      </legend>
+<input type="radio" name="html" id="html41" value="html4">
+		<label for="html41">HTML4</label>
+		<br>
+		<input type="radio" name="html" id="html51" value="html5">
+		<label for="html51">HTML5</label>
+	</fieldset>
+</form>
+			</div>
+		</div>
+<div class="test">
+			<h2 class="test-title" id="flgnd-003">
+				Test flgnd-003: <code>fieldset</code> element with <code>aria-labelledby</code>, with <code>legend</code> element
+			</h2>
+
+			<div class="test-case">
+<form>
+	<fieldset id="fieldset-03" aria-labelledby="instruction">
+		<legend id="legend-03">
+			Which version of HTML do you use?
+		</legend>
+        <p id="instruction"> some important text</p>
+		<input type="radio" name="html" id="html43" value="html4">
+		<label for="html43">HTML4</label>
+		<br>
+		<input type="radio" name="html" id="html53" value="html5">
+		<label for="html53">HTML5</label>
+	</fieldset>
+</form>
+			</div>
+	</div>
 
 		<script src="../scripts/test-scripts.js"></script>
 		<script>

@@ -302,7 +302,7 @@
 				Test sl-012: <code>select + option</code> elements
 				with explicit <code>label</code>,
 				<code>optgroup</code>
-				&amp; <code>multiple</code> attribute
+				&amp; <code>multiple</code> attributes
 			</h2>
 
 			<div class="test-case">
@@ -319,6 +319,25 @@
 		<option value="3">c</option>
 		<option value="4">d</option>
 	</optgroup>
+</select>
+			</div>
+		</div>
+
+		<div class="test">
+			<h2 class="test-title" id="sl-013">
+				Test sl-013: <code>select + option</code> elements
+				with <code>aria-label</code> attribute applied to
+				<code>option</code>s
+			</h2>
+
+			<div class="test-case">
+<label for="sl-13">
+	Choose
+</label>
+<br>
+<select id="sl-13">
+	<option value="1" aria-label="option 1">A</option>
+	<option value="2" aria-label="option 2">B</option>
 </select>
 			</div>
 		</div>

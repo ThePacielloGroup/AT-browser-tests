@@ -5,6 +5,13 @@
 		<title>test file: img element with alt attribute</title>
 		<link rel="stylesheet" href="../style/styles.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<style>
+			img[src="../images/HTML5_Logo.png"] {
+				height: 128px;
+				width: 128px;
+			}
+		</style>
 	</head>
 	<body>
 		<h1>
@@ -60,10 +67,10 @@
 			<div class="test-case">
 <img src="../images/HTML5_Logo.png"
 	id="img-01"
-	alt="HTML5 logo"
-	style="width: 128px; height: 128px;">
+	alt="HTML5 logo">
 			</div>
 		</div>
+
 	<div class="test">
 			<h2 class="test-title" id="img-002">
 				Test img-002: <code>img</code> element
@@ -72,20 +79,62 @@
 
 			<div class="test-case">
 <img src="../images/HTML5_Logo.png"
-	id="img-01" 
-	style="width: 128px; height: 128px;">
+	id="img-02">
 			</div>
 		</div>
 
-<div class="test">
+	<div class="test">
 			<h2 class="test-title" id="img-003">
 				Test img-003: <code>img</code> element
-			with <code>alt</code> and <code>aria-label</code> attribute </h2>
+			with <code>alt</code> and <code>aria-label</code> attributes </h2>
 
 			<div class="test-case">
 <img src="../images/HTML5_Logo.png"
-	id="img-01" alt="HTML5 logo" aria-label="aria-label HTML5 logo"
-	style="width: 128px; height: 128px;">
+	id="img-03" alt="HTML5 logo" aria-label="aria-label HTML5 logo">
+			</div>
+	</div>
+
+	<div class="test">
+			<h2 class="test-title" id="img-004">
+				Test img-004: <code>img</code> element
+			with <code>alt</code>, <code>title</code> and <code>aria-label</code> attributes </h2>
+
+			<div class="test-case">
+<img src="../images/HTML5_Logo.png"
+	id="img-04" alt="HTML5 logo" title="HTML5" aria-label="aria-label HTML5 logo">
+			</div>
+	</div>
+
+	<div class="test">
+			<h2 class="test-title" id="img-005">
+				Test img-005: <code>img</code> element
+			with <code>alt</code>, and <code>title</code> attributes </h2>
+
+			<div class="test-case">
+<img src="../images/HTML5_Logo.png"
+	id="img-05" alt="HTML5 logo" title="HTML5">
+			</div>
+	</div>
+
+	<div class="test">
+			<h2 class="test-title" id="img-006">
+				Test img-006: <code>img</code> element
+			with <code>title</code> attribute, and empty <code>alt</code> attribute </h2>
+
+			<div class="test-case">
+<img src="../images/HTML5_Logo.png"
+	id="img-06" alt="" title="HTML5">
+			</div>
+	</div>
+
+	<div class="test">
+			<h2 class="test-title" id="img-007">
+				Test img-007: <code>img</code> element
+			with <code>title</code> attribute, and no <code>alt</code> attribute </h2>
+
+			<div class="test-case">
+<img src="../images/HTML5_Logo.png"
+	id="img-07" title="HTML5">
 			</div>
 	</div>
 		<script src="../scripts/test-scripts.js"></script>

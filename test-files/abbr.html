@@ -78,7 +78,8 @@
 			</div>
 		</div>
 
-<div class="test">
+
+		<div class="test">
 			<h2 class="test-title" id="abb-004">
 			Test abb-004: <code>abbr</code> element with <code>aria-label</code> attribute and <code>aria-describedby</code> attribute </h2>
 
@@ -87,8 +88,36 @@
 	<abbr aria-label="world wide web" aria-describedby="desc1">WWW</abbr>
 </p>
 <p id="desc1">AKA the Internet</p>
-</div>
-	</div>
+			</div>
+		</div>
+
+
+		<div class="test">
+			<h2 class="test-title" id="abb-005">
+				Test abb-005: <code>abbr</code> element with <code>aria-label</code> and <code>title</code> attributes
+			</h2>
+
+			<div class="test-case">
+<p>
+	<abbr aria-label="world wide web" title="world wide web">WWW</abbr>
+</p>
+			</div>
+		</div>
+
+
+		<div class="test">
+			<h2 class="test-title" id="abb-006">
+				Test abb-006: <code>abbr</code> element with <code>aria-label</code> and <code>title</code> attributes with differing values
+			</h2>
+
+			<div class="test-case">
+<p>
+	<abbr aria-label="world wide web" title="the world wide web">WWW</abbr>
+</p>
+			</div>
+		</div>
+
+
 		<script src="../scripts/test-scripts.js"></script>
 		<script>
 			var test = [];

@@ -34,8 +34,8 @@
 			</div>
 		</div>
 
-		<div class="test">
-			<h2 class="test-title" id="ui-001">Test ui-001: Unlabelled input type="url"</h2>
+	<form>	<div class="test">
+			<h2 class="test-title" id="ui-001">Test ui-001: Unlabelled <code>input type="url"</code></h2>
 
 			<div class="test-case">
 <form>
@@ -45,7 +45,7 @@
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="ui-002">Test ui-002: Input type="url" with <code>aria-label</code></h2>
+			<h2 class="test-title" id="ui-002">Test ui-002: <code>Input type="url"</code> with <code>aria-label</code></h2>
 
 			<div class="test-case">
 <form>
@@ -59,7 +59,7 @@
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="ui-003">Test ui-003: Input type="url" with <code>aria-labelledby</code></h2>
+			<h2 class="test-title" id="ui-003">Test ui-003: <code>Input type="url"</code> with <code>aria-labelledby</code></h2>
 
 			<div class="test-case">
 <form>
@@ -74,7 +74,7 @@
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="ui-004">Test ui-004: Input type="url" with label</h2>
+			<h2 class="test-title" id="ui-004">Test ui-004: <code>Input type="url"</code> with <code>label</code></h2>
 
 			<div class="test-case">
 <form>
@@ -88,7 +88,7 @@
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="ui-005">Test ui-005: Input type="url" with <code>title</code> attribute</h2>
+			<h2 class="test-title" id="ui-005">Test ui-005: <code>Input type="url"</code> with <code>title</code> attribute</h2>
 
 			<div class="test-case">
 <form>
@@ -102,7 +102,7 @@
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="ui-006">Test ui-006: Input type="url" with <code>aria-describedby</code></h2>
+			<h2 class="test-title" id="ui-006">Test ui-006: <code>Input type="url"</code> with <code>aria-describedby</code></h2>
 
 			<div class="test-case">
 <form>
@@ -117,7 +117,7 @@
 		</div>
 
 		<div class="test">
-			<h2 class="test-title" id="ui-007">Test ui-007: Input type="url" with <code>label</code> element &amp; <code>title</code> attribute</h2>
+			<h2 class="test-title" id="ui-007">Test ui-007: <code>Input type="url"</code> with <code>label</code> element &amp; <code>title</code> attribute</h2>
 
 			<div class="test-case">
 <form>
@@ -130,8 +130,55 @@
 <p>Title should be used as accessible description</p>
 			</div>
 		</div>
+        <div class="test">
+				<h2 class="test-title" id="itext-008">
+					Test ui-008: <code>Input type="url"</code> element
+					with explicit <code>label</code>
+					&amp; <code>required</code> attribute
+				</h2>
 
-		<p><strong>Note:</strong> placeholder and aria-placeholder are tested as part of the <a href="placeholder-att.html">placeholder attribute</a> test.</p>
+				<div class="test-case">
+<label for="itext-08">
+	Web site
+</label>
+<input id="itext-08" type="url" required>
+		  </div>
+	</div>
+
+
+			<div class="test">
+			  <h2 class="test-title" id="itext-009">
+					Test ui-009: <code>Input type="url"</code> element
+					with explicit <code>label</code>,
+					&amp; <code>readonly</code> attribute
+				</h2>
+
+				<div class="test-case">
+<label for="itext-09">
+	Web site
+</label>
+<input id="itext-09" type="url" readonly>
+				</div>
+			</div>
+
+
+			<div class="test">
+			  <h2 class="test-title" id="itext-010">
+					Test ui-010: <code>Input type="url"</code> element
+					with explicit <code>label</code>,
+					&amp; <code>disabled</code> attribute
+				</h2>
+
+				<div class="test-case">
+<label for="itext-10">
+	Web site
+</label>
+<input id="itext-10" type="url" disabled>
+				</div>
+			</div>
+<input type="submit" value="Test Form Submission">
+</form>
+	<p><strong>Note:</strong> placeholder and aria-placeholder are tested as part of the <a href="placeholder-att.html">placeholder attribute</a> test.</p>
 
 		<script src="../scripts/test-scripts.js"></script>
 		<script>

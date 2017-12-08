@@ -75,19 +75,18 @@ var copyTest = function ( doc ) {
 	var tests = doc.querySelectorAll('.test');
 
 	for ( var i = 0; i < tests.length; i++ ) {
-		var codeHeading = doc.createElement('h3');
-		var codePre = doc.createElement('pre');
-		codePre.innerHTML = '<code class="code-block"></code>';
-		codeHeading.classList.add('code-title');
-		codeHeading.innerHTML = "Code";
-		tests[i].append(codeHeading);
-		tests[i].append(codePre);
+		var codeWrap = doc.createElement('div');
+		codeWrap.classList.add('code-wrap');
+		codeWrap.innerHTML = '<h3 class="code-title">Code</h3><pre><code class="code-block"></code></pre>';
+		// stick it in the DOM
+		tests[i].appendChild(codeWrap);
 
 		// after creating the code block, get the test-case
 		// code and re-print inside of it.
 		var codeBlock = tests[i].querySelector('.code-block');
 		var getCode = tests[i].querySelector('.test-case').innerHTML;
 
+		// escape the HTML so it doesn't re-render
 		codeBlock.innerHTML = escapeHtml(getCode).trim();
 	}
 }

@@ -14,7 +14,6 @@
 				<ul id="criteria-list">
 					<li id="basic-criteria">#1: Attribute is supported</li>
 					<li>#2: Correct HTML and Core Accessibility API mappings</li>
-					<li>#3: Used in Accessible Name and Description Calculation</li>
 				</ul>
 			</div>
 
@@ -27,12 +26,6 @@
 					<li>
 						<a href="https://w3c.github.io/html-aam/#att-placeholder">HTML Accessibility API Mappings for placeholder attribute</a>
 					</li>
-					<li>
-						<a href="https://w3c.github.io/html-aam/#input-type-text-input-type-password-input-type-search-input-type-tel-input-type-email-input-type-url-and-textarea-element-accessible-name-calculation">Accessible Name Calculation</a>
-					</li>
-					<li>
-						<a href="https://w3c.github.io/html-aam/#input-type-text-input-type-password-input-type-search-input-type-tel-input-type-email-input-type-url-and-textarea-element-accessible-description-calculation">Accessible Description Calculation</a>
-					</li>
 				</ul>
 			</div>
 		</div>
@@ -40,13 +33,12 @@
 		<div class="test">
 			<h2 class="test-title" id="ph-001">
 				Test ph-001: <code>placeholder</code>
-				without <code>label</code>
 			</h2>
 
 			<div class="test-case">
 <input id="input1" type="text" placeholder="placeholder text">
 <p>
-	Placeholder should be used as accessible name.
+	<code>placeholder</code> should be used in accessibility mapping.
 </p>
 			</div>
 		</div>
@@ -54,75 +46,30 @@
 		<div class="test">
 			<h2 class="test-title" id="ph-002">
 				Test ph-002: <code>placeholder</code>
-				with <code>label</code> associated via <code>for/id</code> attributes
+				with <code>aria-placeholder</code>
 			</h2>
 
 			<div class="test-case">
-<label for="input2">
-	Label text:
-</label>
-<input id="input2" type="text" placeholder="placeholder text" />
+<input id="input2" type="text" placeholder="placeholder text"
+                               aria-placeholder="aria-placeholder text" />
 <p>
-	Placeholder should be used as accessible description.
+	<code>placeholder</code> should be used in accessibility mapping.
 </p>
 			</div>
 		</div>
 
 		<div class="test">
 			<h2 class="test-title" id="ph-003">
-				Test ph-003: <code>placeholder</code>
-				with <code>label</code> wrapping <code>input</code>
-			</h2>
-
-			<div class="test-case">
-<label>Label text:
-	<input id="input3" type="text" placeholder="placeholder text" />
-</label>
-<p>Placeholder should be used as accessible description</p>
-			</div>
-		</div>
-
-		<div class="test">
-			<h2 class="test-title" id="ph-004">
-				Test ph-004: <code>placeholder</code>
-				and title attributes
-			</h2>
-
-			<div class="test-case">
-<input id="input4" type="text" placeholder="placeholder text" title="title text" />
-<p>
-	Placeholder should be used as accessible name.
-</p>
-			</div>
-		</div>
-
-		<div class="test">
-			<h2 class="test-title" id="ph-005">
-				Test ph-005: <code>placeholder</code>
-				with aria-placeholder
-			</h2>
-
-			<div class="test-case">
-<input id="input5" type="text" placeholder="placeholder text"
-                               aria-placeholder="aria-placeholder text" />
-<p>
-	Placeholder should be used as accessible name.
-</p>
-			</div>
-		</div>
-
-		<div class="test">
-			<h2 class="test-title" id="ph-006">
-				Test ph-006: Empty <code>placeholder</code>
+				Test ph-003: Empty <code>placeholder</code>
 				with <code>aria-placeholder</code>
 			</h2>
 
 			<div class="test-case">
-<input id="input6"
+<input id="input3"
 	type="text" placeholder=""
 	aria-placeholder="aria-placeholder text" />
 <p>
-	<code>aria-placeholder</code> should be used as accessible name.
+	<code>aria-placeholder</code> should be used in accessibility mapping.
 </p>
 			</div>
 		</div>

@@ -52,7 +52,7 @@
 
 			<div class="test-case">
 <p>
-	<del id="del-01">This text is deleted.</del>
+	<del id="del-001">This text is deleted.</del>
 </p>
 			</div>
 		</div>
@@ -65,7 +65,57 @@
 
 			<div class="test-case">
 <p>
-	<ins id="ins-01">This text is inserted.</ins>
+	<ins id="ins-001">This text is inserted.</ins>
+</p>
+			</div>
+		</div>
+
+		<div class="test">
+			<h2 class="test-title" id="del-002">
+				Test del-002: <code>del</code> element with <code>datetime</code> attribute
+			</h2>
+
+			<div class="test-case">
+<p>
+	<del id="del-002" datetime="2018-03-02 00:00Z">This text was deleted.</del>
+</p>
+			</div>
+		</div>
+
+
+		<div class="test">
+			<h2 class="test-title" id="ins-002">
+				Test ins-002: <code>ins</code> element with <code>datetime</code> attribute
+			</h2>
+
+			<div class="test-case">
+<p>
+	<ins id="ins-002" datetime="2015-03-16 00:00Z">This text was inserted.</ins>
+</p>
+			</div>
+		</div>
+
+			<div class="test">
+			<h2 class="test-title" id="del-003">
+				Test del-003: <code>del</code> element with <code>cite</code> attribute
+			</h2>
+
+			<div class="test-case">
+<p>
+	<del id="del-003" cite="#edited">This text was deleted.</del>
+</p>
+			</div>
+		</div>
+
+
+		<div class="test">
+			<h2 class="test-title" id="ins-003">
+				Test ins-003: <code>ins</code> element with <code>cite</code> attribute
+			</h2>
+
+			<div class="test-case">
+<p>
+	<ins id="ins-003" cite="#edited">This text was inserted.</ins>
 </p>
 			</div>
 		</div>
@@ -74,7 +124,7 @@
 		<script src="../scripts/test-scripts.js"></script>
 		<script>
 			var test = [];
-			var el = document.getElementById('del-01');
+			var el = document.getElementById('del-001');
 			var isSupported = (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
 
 			test.push({id: "basic-criteria", pass: isSupported});

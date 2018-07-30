@@ -128,6 +128,12 @@
 					<li>
 						<a href="https://w3c.github.io/html-aam/#el-colgroup">HTML Accessibility API Mappings for <code>colgroup</code> element</a>
 					</li>
+					<li>
+						<a href="https://w3c.github.io/html/tabular-data.html#the-col-element">HTML5 <code>col</code> element</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/html-aam/#el-col">HTML Accessibility API Mappings for <code>col</code> element</a>
+					</li>
 				</ul>
 			</div>
 		</div>
@@ -371,6 +377,84 @@
 </table>
 			</div>
 		</div>
+
+
+		<div class="test">
+			<h2 class="test-title" id="ctbl-004">
+				Test ctbl-004: Nuts and Bolts – complex table using <code>scope</code>, <code>colgroup</code>, <code>col</code> and <code>scope="rowgroup"</code>.
+			</h2>
+
+			<p>
+				This table provides information about the wholesale and
+				retail prices	for two sizes of brass and steel nuts and
+				bolts. There are two levels of row and column headers.
+			</p>
+
+			<div class="test-case">
+<table id="ctbl-004">
+	<caption>
+		Prices of Brass and Steel nuts and bolts
+	</caption>
+	<colgroup>
+		<col span="1">
+		<col span="1">
+	</colgroup>
+	<colgroup span="2">
+	</colgroup>
+	<thead>
+		<tr>
+			<td></td>
+			<th scope="colgroup" colspan="2">Brass</th>
+			<th scope="colgroup" colspan="2">Steel</th>
+		</tr>
+		<tr>
+			<td></td>
+			<th scope="col">Bolts</th>
+			<th scope="col">Nuts</th>
+			<th scope="col">Bolts</th>
+			<th scope="col">Nuts</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th scope="rowgroup" colspan="5">10cm</th>
+		</tr>
+		<tr>
+			<th scope="row">Wholesale</th>
+			<td>$1.00</td>
+			<td>$1.25</td>
+			<td>$1.20</td>
+			<td>$1.00</td>
+		</tr>
+		<tr>
+			<th scope="row">Retail</th>
+			<td>$2.00</td>
+			<td>$3.00</td>
+			<td>$1.80</td>
+			<td>$1.60</td>
+		</tr>
+		<tr>
+			<th scope="rowgroup" colspan="5">20cm</th>
+		</tr>
+		<tr>
+			<th scope="row">Wholesale</th>
+			<td>$1.20</td>
+			<td>$1.30</td>
+			<td>$1.00</td>
+			<td>$0.80</td>
+		</tr>
+		<tr>
+			<th scope="row">Retail</th>
+			<td>$1.60</td>
+			<td>$2.00</td>
+			<td>$2.00</td>
+			<td>$1.50</td>
+		</tr>
+	</tbody>
+</table>
+			</div>
+		</div>
+
 
 
 		<footer>

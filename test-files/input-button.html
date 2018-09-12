@@ -76,7 +76,69 @@
 <input id="ibtn-03" type="button" value="test" disabled>
 			</div>
 		</div>
+		
+		<div class="test">
+			<h2 class="test-title" id="ibtn-004">
+				Test ibtn-004: <code>input type=button</code> element
+				with <code>value="test"</code> and <code>title="desc"</code>
+			</h2>
 
+			<div class="test-case">
+<input id="ibtn-04" type="button" value="test" title="desc">
+			</div>
+		</div>
+		
+		<div class="test">
+			<h2 class="test-title" id="ibtn-005">
+				Test ibtn-005: <code>input type=button</code> element
+				with <code>title="bar"</code> and <code>label/for</code> wrapped.
+			</h2>
+
+			<div class="test-case">
+			<label for="ibtn-05">foo <input id="ibtn-05" type="button" name="test" title="bar"> baz</label>
+			</div>
+		</div>
+		
+		<div class="test">
+			<h2 class="test-title" id="ibtn-006">
+				Test ibtn-006: <code>input type=button</code> element
+				with <code>title="bar"</code> and <code>label</code> wrapped no <code>for</code>.
+			</h2>
+
+			<div class="test-case">
+			<label>foo <input id="ibtn-06" type="button" name="test" title="bar"> baz</label>
+			</div>
+		</div>
+        <div class="test">
+			<h2 class="test-title" id="ibtn-007">
+				Test ibtn-007: <code>input type=button</code> element
+				with <code>title="bar"</code> and <code>label/for</code> not wrapped.
+			</h2>
+
+			<div class="test-case">
+			<label for="ibtn-07">foo baz</label> <input id="ibtn-07" type="button" name="test" title="bar"> 
+			</div>
+		</div>
+		 <div class="test">
+			<h2 class="test-title" id="ibtn-008">
+				Test ibtn-008: <code>input type=button</code> element
+				with <code>aria-label="boom"</code>, <code>title="bar"</code> and <code>label/for</code> not wrapped.
+			</h2>
+
+			<div class="test-case">
+			<label for="ibtn-08">foo baz</label> <input id="ibtn-08" type="button" name="test" aria-label="boom" title="bar"> 
+			</div>
+		</div>
+		<div class="test">
+			<h2 class="test-title" id="ibtn-009">
+				Test ibtn-009: <code>input type=button</code> element
+				with <code>value="boom"</code>, <code>title="bar"</code> and <code>label/for</code> wrapped.
+			</h2>
+
+			<div class="test-case">
+			<label for="ibtn-09">foo <input id="ibtn-09" type="button" name="test" value="boom" title="bar"> baz</label>
+			</div>
+		</div>
 		<script src="../scripts/test-scripts.js"></script>
 		<script>
 			var test = [];

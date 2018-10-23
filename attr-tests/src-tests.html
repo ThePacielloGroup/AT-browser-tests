@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Test file: elements with src attribute</title>
+		<style>
+			h2 {
+				border-bottom: 2px solid transparent;
+				margin-top: 1em;
+				border-top: 1px solid;
+				padding-top: 1em;
+			}
+			h2:focus {
+				border-bottom-color: #111;
+			}
+
+			video,
+			embed {
+				border: 1px solid;
+				max-width: 600px;
+				width: 100%;
+			}
+
+			.script {
+				display: block;
+				border: 1px solid;
+				max-width: 100px;
+				min-height: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Elements with <code>src</code> attribute</h1>
+		<ul>
+			<li><a href="#audio"><code>audio</code> tests</a></li>
+			<li><a href="#embed"><code>embed</code> tests</a></li>
+			<li><a href="#iframe"><code>iframe</code> tests</a></li>
+			<li><a href="#img"><code>img</code> tests</a></li>
+			<li><a href="#input"><code>input</code> tests</a></li>
+			<li><a href="#script"><code>script</code> tests</a></li>
+			<li><a href="#video"><code>video</code> tests</a></li>
+			<!--
+				Note: source and track are tested with audio/video
+			-->
+		</ul>
+
+
+		<div>
+			<h2 id="audio" tabindex="-1"><code>audio</code> element</h2>
+			<p>with <code>src</code></p>
+			<audio src="../audio/button.mp3" controls></audio>
+
+			<p>with child elements with <code>src</code> attributes</p>
+			<audio controls>
+				<source src="../audio/button.mp3" type="audio/mpeg">
+				<source src="../audio/button.ogg" type="audio/ogg">
+			</audio>
+
+			<p>with out <code>src</code></p>
+			<audio controls></audio>
+		</div>
+
+		<div>
+			<h2 id="embed" tabindex="-1"><code>embed</code> element</h2>
+			<p>with <code>src</code></p>
+			<embed src="assets/bumble.swf">
+
+			<p>with out <code>src</code></p>
+			<embed>
+		</div>
+
+		<div>
+			<h2 id="iframe" tabindex="-1"><code>iframe</code> element</h2>
+			<p>with <code>src</code>, no <code>title</code></p>
+			<iframe src="assets/iframe-src.html"></iframe>
+			<p>with <code>src</code>, with <code>title</code></p>
+			<iframe src="assets/iframe-src.html" title="With src"></iframe>
+			<p>with out <code>src</code>, no <code>title</code></p>
+			<iframe></iframe>
+			<p>with out <code>src</code>, with <code>title</code></p>
+			<iframe title="No src"></iframe>
+		</div>
+
+		<div>
+			<h2 id="img" tabindex="-1"><code>img</code> element</h2>
+			<p>with <code>src</code> with <code>alt</code></p>
+			<img src="assets/html5.png" alt="HTML5">
+			<p>with <code>src</code> no <code>alt</code></p>
+			<img src="assets/html5.png">
+			<p>with out <code>src</code> with <code>alt</code></p>
+			<img alt="no src">
+			<p>with out <code>src</code> no <code>alt</code></p>
+			<img>
+		</div>
+
+		<div>
+			<h2 id="input" tabindex="-1"><code>input</code> element</h2>
+			<p>with <code>src</code></p>
+			<input type="image" src="assets/html5.png" alt="HTML5">
+			<p>with <code>src</code> no <code>alt</code></p>
+			<input type="image" src="assets/html5.png" alt="HTML5">
+
+			<p>with out <code>src</code> with <code>alt</code></p>
+			<input type="image" alt="no src">
+			<p>with out <code>src</code> no <code>alt</code></p>
+			<input type="image">
+		</div>
+
+		<div>
+			<h2 id="script" tabindex="-1"><code>script</code> element</h2>
+			<p>with <code>src</code></p>
+			<script src="assets/test-script.js"></script>
+			<script src="assets/test-script.js" class="script"></script>
+			<p>with out <code>src</code></p>
+			<script>
+				/* hallo */
+			</script>
+			<script class="script">
+				/* this script is set to display block */
+			</script>
+		</div>
+
+
+
+		<div>
+			<h2 id="video" tabindex="-1"><code>video</code> element</h2>
+			<p>with child elements with <code>src</code> attributes</p>
+			<video controls>
+				<source src="../video/ElephantsDream.mp4" type="video/mp4">
+				<track kind="subtitles"
+					srclang="en"
+					src="../video/subtitles-en.vtt"
+					label="English"
+					default>
+			</video>
+
+			<p>with <code>src</code> and no child elements</p>
+			<video src="assets/video.mp4" controls></video>
+
+			<p>with out <code>src</code></p>
+			<video controls></video>
+		</div>
+
+	</body>
+</html>

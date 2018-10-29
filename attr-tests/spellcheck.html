@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>spellcheck attribute tests</title>
+		<style>
+			h2 {
+				border-bottom: 2px solid transparent;
+				margin-top: 1em;
+				border-top: 1px solid;
+				padding-top: 1em;
+			}
+			h2:focus {
+				border-bottom-color: #111;
+			}
+
+			label {
+				display: inline-block;
+				min-width: 400px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Elements with and without <code>spellcheck</code> attribute</h1>
+
+		<details>
+			<summary>
+				HTML: User agents must only consider the following pieces of text as checkable for the purposes of this feature:
+			</summary>
+			<ul>
+		    <li>
+		    	The value of input elements whose type attributes are in the <cod>text</cod>, <code>search</code>, <code>url</code>, or <code>email</code> states and that are mutable (i.e., that do not have the <code>readonly</code> attribute specified and that are not <code>disabled</code>).
+		    </li>
+		    <li>
+		    	The value of textarea elements that do not have a readonly attribute and that are not disabled.
+		    </li>
+		    <li>
+		    	Text in text nodes that are children of editing hosts or editable elements.
+		    </li>
+		    <li>
+		    	Text in attributes of editable elements.
+		    </li>
+		  </ul>
+		</details>
+
+		<h2 id="d" tabindex="-1">Element</h2>
+		<p>with <code>spellcheck</code></p>
+		<p>
+			<label>
+				Check Text
+				<input id="t1a" type="text" spellcheck="true">
+			</label>
+			<label>
+				Check Text
+				<input id="t1b" type="text" spellcheck="true" value="banananas">
+			</label>
+		</p>
+		<p>
+			<label>
+				Check S
+				<input id="s1a" type="search" spellcheck="true">
+			</label>
+			<label>
+				Check S
+				<input id="s1b" type="search" spellcheck="true" value="banananas">
+			</label>
+		</p>
+		<p>
+			<label>
+				Check Url
+				<input id="u1a" type="url" spellcheck="true">
+			</label>
+			<label>
+				Check Url
+				<input id="u1b" type="url" spellcheck="true" value="banananas">
+			</label>
+		</p>
+		<p>
+			<label>
+				Check mail
+				<input id="e1a" type="email" spellcheck="true">
+			</label>
+			<label>
+				Check mail
+				<input id="e1b" type="email" spellcheck="true" value="banananas">
+			</label>
+		</p>
+		<p>
+			<label>
+				Check area
+				<textarea spellcheck="true" id="a1a"></textarea>
+			</label>
+			<label>
+				Check area
+				<textarea spellcheck="true" id="a1b" value="banananas"></textarea>
+			</label>
+		</p>
+
+		<p contenteditable="true" spellcheck="true">
+			This is editable content.
+			<span>I'm in a span</span>.
+		</p>
+
+		<p contenteditable="true" spellcheck="true">
+			This is reditable content.
+			<span>Imma in a span</span>.
+		</p>
+
+		<hr>
+
+		<p>with <code>disabled</code> and <code>readonly</code> attributes</p>
+		<p>
+			<label>Text rOnly
+				<input id="t3" type="text" readonly spellcheck="true">
+			</label>
+			<label>Text dis
+				<input id="t4" type="text" disabled spellcheck="true">
+			</label>
+		</p>
+		<p>
+			<label>S rOnly
+				<input id="s3" type="search" readonly spellcheck="true">
+			</label>
+			<label>S dis
+				<input id="s4" type="search" disabled spellcheck="true">
+			</label>
+		</p>
+		<p>
+			<label>Url rOnly
+				<input id="u3" type="url" readonly spellcheck="true">
+			</label>
+			<label>Url dis
+				<input id="u4" type="url" disabled spellcheck="true">
+			</label>
+		</p>
+		<p>
+			<label>Mail rOnly
+				<input id="e3" type="email" readonly spellcheck="true">
+			</label>
+			<label>Mail dis
+				<input id="e4" type="email" disabled spellcheck="true">
+			</label>
+		</p>
+		<p>
+			<label>
+				Area rOnly
+				<textarea readonly spellcheck="true" id="a3"></textarea>
+			</label>
+			<label>
+				Area dis
+				<textarea disabled spellcheck="true" id="a4"></textarea>
+			</label>
+		</p>
+
+		<hr>
+
+		<p>with out <code>spellcheck</code></p>
+		<p>
+			<label>Text normal
+				<input id="t2" type="text">
+			</label>
+		</p>
+			<label>S normal
+				<input id="s2" type="search">
+			</label>
+		</p>
+			<label>Url normal
+				<input id="u2" type="url">
+			</label>
+		</p>
+			<label>Mail normal
+				<input id="e2" type="email">
+			</label>
+		</p>
+			<label>Area normal
+				<textarea id="a2"></textarea>
+			</label>
+		</p>
+
+		<p>
+			This is not editable content
+		</p>
+
+		<p>
+			This is not reditable content
+		</p>
+
+	</body>
+</html>

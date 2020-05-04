@@ -197,11 +197,11 @@
 			<div class="test">
 				<h2 class="test-title" id="itext-009">
 					Test itext-009: <code>input</code> element
-					with <code>aria-label</code>
+					with only <code>placeholder</code> attribute
 				</h2>
 
 				<div class="test-case">
-<input id="itext-09" type="text" aria-label="Name">
+<input type="text" placeholder="First Name">
 				</div>
 				<input type="submit" value="Test Form Submission">
 			</div>
@@ -212,137 +212,152 @@
 			<div class="test">
 				<h2 class="test-title" id="itext-010">
 					Test itext-010: <code>input</code> element
+					with <code>aria-label</code>
+				</h2>
+
+				<div class="test-case">
+<input id="itext-10" type="text" aria-label="Name">
+				</div>
+				<input type="submit" value="Test Form Submission">
+			</div>
+		</form>
+
+
+		<form action="#itext-011">
+			<div class="test">
+				<h2 class="test-title" id="itext-011">
+					Test itext-011: <code>input</code> element
 					with <code>aria-labelledby</code>
 				</h2>
 
 				<div class="test-case">
-<span id="itext-010-label">
+<span id="itext-011-label">
 	Name
 </span>
-<input id="itext-10" type="text" aria-labelledby="itext-010-label">
+<input id="itext-11" type="text" aria-labelledby="itext-011-label">
 				</div>
 				<input type="submit" value="Test Form Submission">
 			</div>
 </form>
 
-	<form action="#itext-11">
+	<form action="#itext-12">
 			<div class="test">
-				<h2 class="test-title" id="itext-011">
-					Test itext-011: <code>input</code> element
+				<h2 class="test-title" id="itext-012">
+					Test itext-012: <code>input</code> element
 					with <code>pattern</code> attribute
 				</h2>
 
 				<div class="test-case">
-<label for="itext-11">
+<label for="itext-12">
 	3 letter pattern
 </label>
-<input id="itext-11" type="text" pattern="[A-Za-z]{3}">
+<input id="itext-12" type="text" pattern="[A-Za-z]{3}">
 				</div>
 				<input type="submit" value="Test Form Submission">
 			</div>
 		</form>
 
 
-		<form action="#itext-12">
+		<form action="#itext-13">
 			<div class="test">
-				<h2 class="test-title" id="itext-012">
-					Test itext-012: <code>input</code> element
+				<h2 class="test-title" id="itext-013">
+					Test itext-013: <code>input</code> element
 					with <code>size</code> attribute
 				</h2>
 
 				<div class="test-case">
-<label for="itext-12">
+<label for="itext-13">
 	Size=3 input
 </label>
-<input id="itext-12" type="text" size="3">
+<input id="itext-13" type="text" size="3">
 				</div>
 				<input type="submit" value="Test Form Submission">
 			</div>
 		</form>
-        
-        
-<form action="#itext-13">
+
+
+<form action="#itext-14">
 			<div class="test">
-				<h2 class="test-title" id="itext-013">
-					Test itext-013: <code>input</code> element
+				<h2 class="test-title" id="itext-014">
+					Test itext-014: <code>input</code> element
 					with <code>aria-autocomplete=list</code> attribute
 				</h2>
 
 				<div class="test-case">
-<label for="itext-13">
+<label for="itext-14">
 aria-autocomplete=list
 </label>
-<input id="itext-13" type="text" aria-autocomplete="list">
+<input id="itext-14" type="text" aria-autocomplete="list">
 				</div>
 				<input type="submit" value="Test Form Submission">
 			</div>
 		</form>
-        
-        <form action="#itext-14">
+
+        <form action="#itext-15">
 			<div class="test">
-				<h2 class="test-title" id="itext-014">
-					Test itext-014: <code>input</code> element
+				<h2 class="test-title" id="itext-015">
+					Test itext-015: <code>input</code> element
 					with <code>aria-autocomplete=inline</code> attribute
 				</h2>
 
 				<div class="test-case">
-<label for="itext-14">
+<label for="itext-15">
 	aria-autocomplete=inline
 </label>
-<input id="itext-14" type="text" aria-autocomplete="inline">
+<input id="itext-15" type="text" aria-autocomplete="inline">
 				</div>
 				<input type="submit" value="Test Form Submission">
 			</div>
 		</form>
 
 
-   <form action="#itext-15">
+   <form action="#itext-16">
 			<div class="test">
-				<h2 class="test-title" id="itext-015">
-					Test itext-015: <code>input</code> element
+				<h2 class="test-title" id="itext-016">
+					Test itext-016: <code>input</code> element
 					with <code>aria-autocomplete=both</code> attribute
 				</h2>
 
 				<div class="test-case">
-<label for="itext-15">
+<label for="itext-16">
 	aria-autocomplete=both
 </label>
-<input id="itext-15" type="text" aria-autocomplete="both">
+<input id="itext-16" type="text" aria-autocomplete="both">
 				</div>
 				<input type="submit" value="Test Form Submission">
 			</div>
 		</form>
-        
-        
-         <form action="#itext-16">
-			<div class="test">
-				<h2 class="test-title" id="itext-016">
-					Test itext-016: <code>input</code> element
-					with <code>aria-autocomplete=none</code> attribute
-				</h2>
 
-				<div class="test-case">
-<label for="itext-16">
-	aria-autocomplete=none
-</label>
-<input id="itext-16" type="text" aria-autocomplete="none">
-				</div>
-				<input type="submit" value="Test Form Submission">
-			</div>
-		</form>
-        
-         <form action="#itext-17">
+
+    <form action="#itext-17">
 			<div class="test">
 				<h2 class="test-title" id="itext-017">
 					Test itext-017: <code>input</code> element
-					with <code>aria-autocomplete=none</code> and <code>autocomplete=off</code> attributes
+					with <code>aria-autocomplete=none</code> attribute
 				</h2>
 
 				<div class="test-case">
 <label for="itext-17">
 	aria-autocomplete=none
 </label>
-<input id="itext-17" type="text" aria-autocomplete="none" autocomplete="off">
+<input id="itext-17" type="text" aria-autocomplete="none">
+				</div>
+				<input type="submit" value="Test Form Submission">
+			</div>
+		</form>
+
+    <form action="#itext-18">
+			<div class="test">
+				<h2 class="test-title" id="itext-018">
+					Test itext-018: <code>input</code> element
+					with <code>aria-autocomplete=none</code> and <code>autocomplete=off</code> attributes
+				</h2>
+
+				<div class="test-case">
+<label for="itext-18">
+	aria-autocomplete=none
+</label>
+<input id="itext-18" type="text" aria-autocomplete="none" autocomplete="off">
 				</div>
 				<input type="submit" value="Test Form Submission">
 			</div>

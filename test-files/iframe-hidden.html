@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>test file: iframe element hidden</title>
+		<link rel="stylesheet" href="../style/styles.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	</head>
+	<body>
+		<h1>
+			<code>iframe</code> element <i>hidden</i>
+		</h1>
+
+		<div class="meta">
+			<div class="criteria">
+				<h2>
+					Pass Criteria
+				</h2>
+				<ul id="criteria-list">
+					<li id="basic-criteria">#1: Element is supported</li>
+					<li>#2: Correct HTML and Core Accessibility API mappings</li>
+					<li>#3: Correct Accessible Name &amp; Description Calculation</li>
+				</ul>
+			</div>
+
+			<div class="reference">
+				<h2>
+					Reference
+				</h2>
+				<ul>
+					<li>
+						<a href="https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-iframe-element">HTML5 <code>iframe</code> element
+					</a>
+					<li>
+						<a href="https://w3c.github.io/html-aam/#el-iframe">HTML Accessibility API Mappings for <code>iframe</code> element</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+
+		<div class="test">
+			<h2 class="test-title" id="if-001">
+				Test if-001: <code>iframe</code> element no <code>title</code> attribute with <code>hidden</code> attribute
+			</h2>
+
+			<div class="test-case">
+<iframe id="if-01" style="max-width: 100%; width: 50%; height: 10em;" src="https://cdpn.io/stevef/debug/WNwwZmP" hidden></iframe>
+			</div>
+		</div>
+
+
+		<div class="test">
+			<h2 class="test-title" id="if-002">
+				Test if-002: <code>iframe</code> element
+				with no <code>title</code> attribute and <code>display:none</code>
+			</h2>
+
+			<div class="test-case">
+<iframe style="max-width: 100%; width: 50%; height: 10em; display:none" src="https://cdpn.io/stevef/debug/WNwwZmP"></iframe>
+			</div>
+		</div>
+<div class="test">
+			<h2 class="test-title" id="if-003">
+				Test if-003: <code>iframe</code> element
+				with <code>aria-hidden=true</code>, <code>tabindex=-1</code> and no <code>title</code> attribute
+			</h2>
+
+			<div class="test-case">
+<iframe style="max-width: 100%; width: 50%; height: 10em;" src="https://cdpn.io/stevef/debug/WNwwZmP" aria-hidden="true" tabindex="-1"></iframe>
+			</div>
+		</div>
+	<!--	<div class="test">
+			<h2 class="test-title" id="if-004">
+				Test if-004: <code>iframe</code> element
+				with <code>role=presentation</code> and <code>title</code> attribute
+			</h2>
+
+			<div class="test-case">
+<iframe style="max-width: 100%; width: 50%; height: 10em;" src="https://cdpn.io/stevef/debug/WNwwZmP" role="presentation" title="presentation iframe"></iframe>
+			</div>
+		</div>
+<div class="test">
+			<h2 class="test-title" id="if-005">
+				Test if-005: <code>iframe</code> element
+				with <code>title</code> attribute
+			</h2>
+
+			<div class="test-case">
+<iframe style="max-width: 100%; width: 50%; height: 10em;" src="https://cdpn.io/stevef/debug/WNwwZmP" title="name from title"></iframe>
+			</div>
+		</div>
+		<div class="test">
+			<h2 class="test-title" id="if-006">
+				Test if-006: <code>iframe</code> element
+				with no <code>title</code> attribute and <code>title</code> element in <code>iframe</code> document
+			</h2>
+
+			<div class="test-case">
+<iframe style="max-width: 100%; width: 50%; height: 10em;" src="https://cdpn.io/stevef/debug/eYZzNQq"></iframe>
+			</div>
+		</div> -->
+		<script src="../scripts/test-scripts.js"></script>
+		<script>
+			var test = [];
+			var el = document.getElementById('if-01');
+			var isSupported = (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
+
+			test.push({id: "basic-criteria", pass: isSupported});
+			displaySupportResults(test);
+		</script>
+	</body>
+</html>

@@ -166,8 +166,23 @@
 <p><code>title</code> should be used as accessible description.</p>
 			</div>
 </div>
+<div class="test">
+				<h2 class="test-title" id="itext-008">
+					Test tl-008: <code>input type=tel</code> element
+					with explicit <code>label</code>,
+					&amp; <code>required</code> attribute
+				</h2>
+<form>
+				<div class="test-case">
+<label for="itext-08">
+	number
+</label>
+<input id="itext-08" type="tel" required>
+				</div>
+				<input type="submit" value="Test Form Submission">
+			</form>
 
-		<p><strong>Note:</strong> placeholder and aria-placeholder are tested as part of the <a href="placeholder-att.html">placeholder attribute</a> test.</p>
+
 
 		<script src="../scripts/test-scripts.js"></script>
 		<script>
@@ -178,5 +193,6 @@
 			test.push({id: "basic-criteria", pass: isSupported});
 			displaySupportResults(test);
 		</script>
+				<p><strong>Note:</strong> placeholder and aria-placeholder are tested as part of the <a href="placeholder-att.html">placeholder attribute</a> test.</p>
 	</body>
 </html>

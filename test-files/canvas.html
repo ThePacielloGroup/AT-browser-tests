@@ -91,7 +91,26 @@
 </script>
 			</div>
 		</div>
+<div class="test">
+	<h2 class="test-title" id="cv-003">Test cv-003: Canvas element with <code>aria-label</code></h2>
 
+			<div class="test-case">
+<canvas id="myCanvas1" width="338" height="258" aria-label="Lady of Shalott">
+	
+</canvas>
+
+<script>
+	var canvas = document.getElementById('myCanvas1');
+	var context = canvas.getContext('2d');
+	var imageObj = new Image();
+
+	imageObj.onload = function() {
+		context.drawImage(imageObj, 0, 0);
+	};
+	imageObj.src = '../images/shalott.jpg';
+</script>
+			</div>
+		</div>
 
 		<script src="../scripts/test-scripts.js"></script>
 		<script>

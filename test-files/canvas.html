@@ -51,14 +51,14 @@
 </canvas>
 
 <script>
-	var canvas = document.getElementById('myCanvas');
-	var context = canvas.getContext('2d');
-	var imageObj1 = new Image();
+	var can = document.getElementById('myCanvas');
+	var con = can.getContext('2d');
+	var imageO = new Image();
 
-	imageObj1.onload = function() {
-		context.drawImage(imageObj1, 0, 0);
+	imageO.onload = function() {
+		con.drawImage(imageO, 0, 0);
 	};
-	imageObj1.src = '../images/shalott.jpg';
+	imageO.src = '../images/shalott.jpg';
 </script>
 			</div>
 		</div>
@@ -108,6 +108,27 @@
 		context.drawImage(imageObj, 0, 0);
 	};
 	imageObj.src = '../images/shalott.jpg';
+</script>
+			</div>
+		</div>
+		
+		<div class="test">
+	<h2 class="test-title" id="cv-004">Test cv-004: Canvas element with <code>role=img</code> + <code>aria-label</code></h2>
+
+			<div class="test-case">
+<canvas id="myCanvas2" width="338" height="258" role="img" aria-label="Lady of Shalott">
+	
+</canvas>
+
+<script>
+	var canv = document.getElementById('myCanvas2');
+	var cont = canv.getContext('2d');
+	var imageOb = new Image();
+
+	imageOb.onload = function() {
+		cont.drawImage(imageOb, 0, 0);
+	};
+	imageOb.src = '../images/shalott.jpg';
 </script>
 			</div>
 		</div>

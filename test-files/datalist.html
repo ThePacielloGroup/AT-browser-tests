@@ -58,8 +58,23 @@
 
 			<div class="test-case">
 <label>
-	Sites <input id="input1" type="text" list="datalist1" /></label>
+	Sites <input id="input1" type="text" list="datalist1"></label>
 <datalist id="datalist1">
+	<option value="https://www.google.com/" label="Google">Google</option>
+	<option value="https://www.reddit.com/" label="Reddit">Reddit</option>
+</datalist>
+			</div>
+		</div>
+		
+		<div class="test">
+			<h2 class="test-title" id="di-002">
+				Test di-002: <code>dataList</code> with <code>input</code> and <code>aria-label</code>
+			</h2>
+
+			<div class="test-case">
+<label>
+	Sites <input id="input2" type="text" list="datalist2"></label>
+<datalist id="datalist2" aria-label="label on data list">
 	<option value="https://www.google.com/" label="Google">Google</option>
 	<option value="https://www.reddit.com/" label="Reddit">Reddit</option>
 </datalist>

@@ -1,10 +1,7 @@
-AT-browser-tests
+HTML-browser-tests
 ================
-Mapping of HTML features Aural UI and how these features are conveyed to users of AT. We will test and record results for:
- * Firefox and Internet Explorer on Windows.
- * Safari and Chrome on OSX
  
-Results page: https://thepaciellogroup.github.io/AT-browser-tests/ 
+test pages: https://thepaciellogroup.github.io/AT-browser-tests/ 
 
 Test Files: https://github.com/ThePacielloGroup/AT-browser-tests/tree/gh-pages/test-files
 

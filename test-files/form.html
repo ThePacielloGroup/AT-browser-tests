@@ -51,6 +51,35 @@
 <form>
 	<label for="name">Name</label>
 	<input type="text" id="name" size="25">
+	<input type="submit" value="submit">
+</form>
+			</div>
+		</div>
+		
+		<div class="test">
+			<h2 class="test-title" id="form-002">
+				Test form-002: <code>form</code> element with <code>required</code> attribute on <code>input type="text"</code>.
+			</h2>
+
+			<div class="test-case">
+<form>
+	<label for="name1">Name</label>
+	<input type="text" id="name1" size="25" required>
+	<input type="submit" value="submit">
+</form>
+			</div>
+		</div>
+		
+		<div class="test">
+			<h2 class="test-title" id="form-003">
+				Test form-003: <code>form</code> element with <code>novalidate</code> attribute and <code>required</code> attribute on <code>input type="text"</code>.
+			</h2>
+
+			<div class="test-case">
+<form novalidate>
+	<label for="name2">Name</label>
+	<input type="text" id="name2" size="25" required>
+	<input type="submit" value="submit">
 </form>
 			</div>
 		</div>
@@ -58,7 +87,7 @@
 		<script src="../scripts/test-scripts.js"></script>
 		<script>
 			var test = [];
-			var el = document.getElementById('form-01');
+			var el = document.getElementById('form-001');
 			var isSupported = (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
 
 			test.push({id: "basic-criteria", pass: isSupported});

@@ -350,11 +350,11 @@ video {
 @media (min-width: 50em) {
 
 	html {
-		border-width: 1.25em;
+		border-width: 0.25em;
 	}
 
 	body {
-		margin: 3.5em auto;
+		margin: 0.5em auto;
 	}
 
 	.meta:after {

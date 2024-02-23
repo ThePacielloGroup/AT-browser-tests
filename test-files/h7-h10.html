@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>test file: h6-h9 elements</title>
+		<link rel="stylesheet" href="../style/styles.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	</head>
+	<body>
+		<h1>
+			<code>h1-h6</code> elements
+		</h1>
+
+		<div class="meta">
+			<div class="criteria">
+				<h2>
+					Pass Criteria
+				</h2>
+				<ul id="criteria-list">
+					<li id="basic-criteria">#1: Element is supported</li>
+					<li>#2: Correct HTML and Core Accessibility API mappings</li>
+					<li>#3: Correct Accessible Name &amp; Description Calculation</li>
+				</ul>
+			</div>
+
+			<div class="reference">
+				<h2>
+					Reference
+				</h2>
+				<ul>
+					<li>
+						<a href="https://html.spec.whatwg.org/multipage/sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements">HTML <code>h1-h6</code> elements</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/html-aam/#el-h1-h6">HTML Accessibility API Mappings for <code>h1-h6</code> elements</a>
+					</li>
+					<li>
+						<a href="https://www.w3.org/TR/core-aam-1.1/#role-map-heading">Core Accessibility API Mappings for <code>heading</code> role</a>
+					</li>
+					<li>
+						<a href="https://www.w3.org/TR/core-aam-1.1/#ariaLevel">Core Accessibility API Mappings for <code>aria-level</code> property</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+
+		<div class="test">
+			<h2 class="test-title" id="hd-001">
+				Test hd-001: <code>h1 - h6</code> elements
+			</h2>
+
+			<div class="test-case">
+<h1 id="hd-01" aria-level="7">h1 heading + aria-level="7"</h1>
+<h2 id="hd-02" aria-level="8">h2 heading aria-level="8"</h2>
+<h3 id="hd-03" aria-level="9">h3 heading + aria-level="9"</h3>
+<h4 id="hd-04" aria-level="10">h4 heading + aria-level="10"</h4>
+			</div>
+		</div>
+
+
+		<div class="test">
+			<h2 class="test-title" id="hd-002">
+				Test hd-002: <code>h1</code> element,
+				with <code>role="heading"</code> &amp;
+				<code>aria-level="7"</code>
+			</h2>
+
+			<div class="test-case">
+<h1 role="heading" aria-level="7">
+	Heading Level 7?
+</span>
+			</div>
+		</div>
+
+
+		<div class="test">
+			<h2 class="test-title" id="hd-003">
+				Test hd-003: <code>h2</code> element,
+				with <code>aria-level="1"</code>
+			</h2>
+
+			<div class="test-case">
+<h2 aria-level="8">
+	Heading Level 8?
+</h2>
+			</div>
+		</div>
+        
+        <div class="test">
+			<h2 class="test-title" id="hd-004">
+				Test hd-004: <code>h1 - h6 + aria-level 7 -12</code> elements with no content
+			</h2>
+
+			<div class="test-case">
+<h1 id="hda-01" aria-level="7"></h1>
+<h2 id="hda-02" aria-level="8"></h2>
+<h3 id="hda-03" aria-level="9"></h3>
+<h4 id="hda-04" aria-level="10"></h4>
+<h5 id="hda-05" aria-level="11"></h5>
+<h6 id="hda-06" aria-level="12"></h6>
+			</div>
+		</div>
+		
+		<div class="test">
+			<h2 class="test-title" id="hd-005">
+				Test hd-005: <code>h1 - h6</code> elements with <code>aria-label</code>
+			</h2>
+
+			<div class="test-case">
+<h1 id="hda-010" aria-label="Jonny" aria-level="7">poot7</h1>
+<h2 id="hda-020" aria-label="David" aria-level="8">poot8</h2>
+<h3 id="hda-030" aria-label="Patrick" aria-level="9">poot9</h3>
+<h4 id="hda-040" aria-label="Belton" aria-level="10">poot10</h4>
+<h5 id="hda-050" aria-label="Adrain" aria-level="11">poot11</h5>
+<h6 id="hda-060" aria-label="Leonie" aria-level="12">poot12</h6>
+			</div>
+		</div>
+
+		<script src="../scripts/test-scripts.js"></script>
+		<script>
+			var test = [];
+			var el = document.getElementById('hd-01');
+			var isSupported = (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
+
+			test.push({id: "basic-criteria", pass: isSupported});
+			displaySupportResults(test);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>test file: search element</title>
+		<link rel="stylesheet" href="../style/styles.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	</head>
+	<body>
+		<h1><code>search</code> element test</h1>
+		<div class="meta">
+			<div class="criteria">
+				<h2>Pass Criteria</h2>
+				<ul id="criteria-list">
+					<li id="basic-criteria">#1: Element is supported</li>
+					<li>#2: Correct HTML and Core Accessibility API mappings</li>
+					<li>#3: Correct Accessible Name &amp; Description Calculation</li>
+				</ul>
+			</div>
+			<div class="reference">
+				<h2>Reference</h2>
+				<ul>
+					<li>
+						<a href="https://html.spec.whatwg.org/multipage/sections.html#the-search-element">HTML <code>search</code> element</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/html-aam/#el-search">HTML Accessibility API Mappings for <code>search</code> element</a> 
+					</li>
+					<li>
+						<a href="https://w3c.github.io/core-aam/#role-map-search">Core Accessibility API Mappings for <code>search</code> role</a> 
+					</li>
+				
+					<li>
+						<a href="https://w3c.github.io/html-aam/#section-and-grouping-element-accessible-name-computation">Accessible Name Calculation</a>
+					</li>
+					<li>
+						<a href="https://w3c.github.io/html-aam/#accdesc-computation">Accessible Description Calculation</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="test">
+			<h2 class="test-title" id="ft-001">
+				Test ft-001: <code>search</code> element
+			</h2>
+
+			<div class="test-case">
+<search id="search1"><code>search</code> element</search>
+			</div>
+		</div>
+
+		<div class="test">
+			<h2 class="test-title" id="ft-003">
+				Test ft-003: <code>search</code>
+				with <code>aria-label</code>
+			</h2>
+
+			<div class="test-case">
+<article>
+	<search aria-label="aria-label attribute">
+		<p><code>aria-label</code> should be used as accessible name.</p>
+		<p>No accessible description.</p>
+	</search>
+</article>
+			</div>
+		</div>
+
+		<div class="test">
+			<h2 class="test-title" id="ft-004">
+				Test ft-004: <code>search</code>
+				with <code>aria-labelledby</code>
+			</h2>
+
+			<div class="test-case">
+<article>
+	<search aria-labelledby="ft-004-labelledby">
+		<small id="ft-004-labelledby">small referenced by aria-labelledby</small>
+		<p><code>aria-labelledby</code> should be used as accessible name.</p>
+		<p>No accessible description.</p>
+	</search>
+</article>
+			</div>
+		</div>
+
+		<div class="test">
+			<h2 class="test-title" id="ft-005">
+				Test ft-005: <code>search</code>
+				with <code>title</code> attribute.
+			</h2>
+
+			<div class="test-case">
+<article>
+	<search title="title attribute">
+		<p><code>title</code> should be used as accessible name.</p>
+		<p>No accessible description.</p>
+	</search>
+</article>
+			</div>
+		</div>
+
+
+		<div class="test">
+			<h2 class="test-title" id="ft-006">
+				Test ft-006: <code>search</code>
+				with <code>aria-describedby</code>
+			</h2>
+
+			<div class="test-case">
+<article>
+	<search aria-describedby="ft-006-describedby">
+		<small id="ft-006-describedby">
+			<code>small</code> referenced by <code>aria-describedby</code>
+		</small>
+		<p>
+			<code>aria-describedby</code> should be used as accessible description.
+		</p>
+		<p>No accessible name.</p>
+	</search>
+</article>
+			</div>
+		</div>
+
+		<div class="test">
+			<h2 class="test-title" id="ft-007">
+				Test ft-007: <code>search</code> with <code>aria-label</code> &amp; <code>title</code> attributes
+			</h2>
+
+			<div class="test-case">
+<article>
+	<search aria-label="aria-label attribute" title="title attribute">
+		<p><code>aria-label</code> should be used as accessible name.</p>
+		<p><code>title</code> should be used as accessible description.</p>
+	</search>
+</article>
+			</div>
+		</div>
+
+		<script src="../scripts/test-scripts.js"></script>
+		<script>
+			var test = [];
+			var el = document.getElementById('search1');
+			var isSupported = (el instanceof HTMLElement && !(el instanceof HTMLUnknownElement));
+
+			test.push({id: "basic-criteria", pass: isSupported});
+			displaySupportResults(test);
+		</script>
+	</body>
+</html>
